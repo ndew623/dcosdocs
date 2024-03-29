@@ -1,0 +1,162 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Configuring Edge-LB to Connect to Kubernetes - D2iQ Docs</title><meta name="description" content="Learn to connect to Kubernetes of top of your DC/OS Enterprise cluster using DC/OS' Edge-LB load balancer."><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Kubernetes Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.8.0-1.19.2/getting-started/config-edgelb-for-k8s">Kubernetes 2.8.0-1.19.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.7.0-1.18.6/getting-started/config-edgelb-for-k8s">Kubernetes 2.7.0-1.18.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.6.1-1.17.8/getting-started/config-edgelb-for-k8s">Kubernetes 2.6.1-1.17.8</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.6.0-1.17.7/getting-started/config-edgelb-for-k8s">Kubernetes 2.6.0-1.17.7</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.5.0-1.16.9/getting-started/config-edgelb-for-k8s">Kubernetes 2.5.0-1.16.9</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/getting-started/config-edgelb-for-k8s">Kubernetes 2.4.9-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/getting-started/config-edgelb-for-k8s">Kubernetes 2.4.8-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.7-1.15.10/getting-started/config-edgelb-for-k8s">Kubernetes 2.4.7-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.6-1.15.6/getting-started/config-edgelb-for-k8s">Kubernetes 2.4.6-1.15.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.5-1.15.5/getting-started/config-edgelb-for-k8s">Kubernetes 2.4.5-1.15.5</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/getting-started/config-edgelb-for-k8s">Kubernetes 2.4.4-1.15.4</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/getting-started/config-edgelb-for-k8s">Kubernetes 2.4.3-1.15.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.2-1.15.3/getting-started/config-edgelb-for-k8s">Kubernetes 2.4.2-1.15.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/getting-started/config-edgelb-for-k8s">Kubernetes 2.4.1-1.15.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.10-1.15.10/getting-started/config-edgelb-for-k8s">Kubernetes 2.4.10-1.15.10</a></li></ul><div class="toggle"><p><span class="title">Kubernetes</span><span class="version"> 2.4.3-1.15.3</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/overview/">Overview</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/getting-started/"><i data-feather="chevron-right"></i>Tutorial - Kubernetes on DC/OS Enterprise</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/getting-started/setting-up/">Setting Up</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/getting-started/installing-mke/">Installing MKE</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/getting-started/creating-clusters/">Creating Kubernetes clusters using MKE</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/getting-started/config-edgelb-for-k8s/">Configuring Edge-LB</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/getting-started/test-connect/">Testing Connections</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/"><i data-feather="chevron-right"></i>Operations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/cli/">CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/changelog/">Changelog</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/supported-versions/">Supported Versions</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Configuring Edge-LB to Connect to Kubernetes</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">Learn to connect to Kubernetes of top of your DC/OS Enterprise cluster using DC/OS' Edge-LB load balancer.</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/getting-started/config-edgelb-for-k8s/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>To connect to your Kubernetes cluster from outside your DC/OS cluster, you will now need to set up and configure the Edge-LB service for inbound load-balancing to your private Kubernetes cluster.</p>
+<p>To set up Edge-LB for DC/OS Kubernetes you will need to:</p>
+<ul>
+<li>Configure Edge-LB on your cluster and deploy the configured pool for Kubernetes including:
+<ul>
+<li>setting up a service account for Edge-LB</li>
+<li>installing Edge-LB, including the CLI plugin</li>
+</ul>
+</li>
+</ul>
+<h2 id="set-up-and-install-edge-lb-with-service-account"><a class="content__anchor" href="#set-up-and-install-edge-lb-with-service-account" aria-hidden="true"><i data-feather="bookmark"></i></a>Set up and Install Edge-LB with service account</h2>
+<ol>
+<li>
+<p><strong>First, add the Edge-LB repositories, replacing the download links with the <a href="https://support.mesosphere.com/s/downloads">latest available binaries</a>, this example links to DC/OS Edge-LB 1.2.3:</strong></p>
+<pre><code class="language-bash">dcos package repo add --index=0 edgelb https://&lt;insert download link&gt;/stub-universe-edgelb.json
+dcos package repo add --index=0 edgelb-pool https://&lt;insert download link&gt;/stub-universe-edgelb-pool.json
+</code></pre>
+ <p class="message--important"><strong>IMPORTANT: </strong>If you wish to download the repositories from the support site using your browser, you will need to be logged in with an enterprise customer service account.</p>
+</li>
+<li>
+<p><strong>Next, create an Edge-LB service account:</strong></p>
+<pre><code class="language-bash">dcos security org service-accounts keypair edge-lb-private-key.pem edge-lb-public-key.pem
+dcos security org service-accounts create -p edge-lb-public-key.pem -d &quot;Edge-LB service account&quot; edge-lb-principal
+dcos security org service-accounts show edge-lb-principal
+dcos security secrets create-sa-secret --strict edge-lb-private-key.pem edge-lb-principal dcos-edgelb/edge-lb-secret
+dcos security org groups add_user superusers edge-lb-principal
+</code></pre>
+</li>
+<li>
+<p><strong>Then, create an options JSON file to install Edge-LB with its service account.</strong></p>
+<p>Here we create <code>edge-lb-options.json</code> and add the following configuration snippet:</p>
+<pre><code class="language-json">{
+    &quot;service&quot;: {
+        &quot;secretName&quot;: &quot;dcos-edgelb/edge-lb-secret&quot;,
+        &quot;principal&quot;: &quot;edge-lb-principal&quot;,
+        &quot;mesosProtocol&quot;: &quot;https&quot;
+    }
+}
+</code></pre>
+<p>Save the file.</p>
+</li>
+<li>
+<p><strong>Lastly, install the</strong> <code>edgelb</code><strong> package on your DC/OS Enterprise cluster</strong>.</p>
+<p>In your CLI, enter:</p>
+<pre><code class="language-bash">dcos package install --options=edge-lb-options.json edgelb --yes
+</code></pre>
+</li>
+</ol>
+<h2 id="create-and-launch-an-edge-lb-configured-pool-deployment-for-your-kubernetes-services"><a class="content__anchor" href="#create-and-launch-an-edge-lb-configured-pool-deployment-for-your-kubernetes-services" aria-hidden="true"><i data-feather="bookmark"></i></a>Create and launch an Edge-LB configured pool deployment for your Kubernetes services</h2>
+<ol>
+<li>
+<p><strong>Next, save the following Kubernetes/Edge-LB Service configuration as </strong><code>edgelb.json</code><strong>.</strong></p>
+<p>Copy for your convenience:</p>
+<pre><code class="language-json">{
+    &quot;apiVersion&quot;: &quot;V2&quot;,
+    &quot;name&quot;: &quot;edgelb-kubernetes-cluster-proxy-basic&quot;,
+    &quot;count&quot;: 1,
+    &quot;autoCertificate&quot;: true,
+    &quot;haproxy&quot;: {
+        &quot;frontends&quot;: [{
+                &quot;bindPort&quot;: 6443,
+                &quot;protocol&quot;: &quot;HTTPS&quot;,
+                &quot;certificates&quot;: [
+                    &quot;$AUTOCERT&quot;
+                ],
+                &quot;linkBackend&quot;: {
+                    &quot;defaultBackend&quot;: &quot;kubernetes-cluster1&quot;
+                }
+            },
+            {
+                &quot;bindPort&quot;: 6444,
+                &quot;protocol&quot;: &quot;HTTPS&quot;,
+                &quot;certificates&quot;: [
+                    &quot;$AUTOCERT&quot;
+                ],
+                &quot;linkBackend&quot;: {
+                    &quot;defaultBackend&quot;: &quot;kubernetes-cluster2&quot;
+                }
+            }
+        ],
+        &quot;backends&quot;: [{
+                &quot;name&quot;: &quot;kubernetes-cluster1&quot;,
+                &quot;protocol&quot;: &quot;HTTPS&quot;,
+                &quot;services&quot;: [{
+                    &quot;mesos&quot;: {
+                        &quot;frameworkName&quot;: &quot;kubernetes-cluster1&quot;,
+                        &quot;taskNamePattern&quot;: &quot;kube-control-plane&quot;
+                    },
+                    &quot;endpoint&quot;: {
+                        &quot;portName&quot;: &quot;apiserver&quot;
+                    }
+                }]
+            },
+            {
+                &quot;name&quot;: &quot;kubernetes-cluster2&quot;,
+                &quot;protocol&quot;: &quot;HTTPS&quot;,
+                &quot;services&quot;: [{
+                    &quot;mesos&quot;: {
+                        &quot;frameworkName&quot;: &quot;kubernetes-cluster2&quot;,
+                        &quot;taskNamePattern&quot;: &quot;kube-control-plane&quot;
+                    },
+                    &quot;endpoint&quot;: {
+                        &quot;portName&quot;: &quot;apiserver&quot;
+
+                    }
+                }]
+            }
+        ],
+        &quot;stats&quot;: {
+            &quot;bindPort&quot;: 6090
+        }
+    }
+}
+</code></pre>
+<p>and paste in the file using your text editor.</p>
+</li>
+<li>
+<p><strong>Next, deploy the Edge-LB configured pool for your Kubernetes service:</strong></p>
+<p>In your CLI, enter:</p>
+<pre><code class="language-bash">dcos edgelb create edgelb.json
+</code></pre>
+</li>
+<li>
+<p><strong>List your Edge-LB configured pools.</strong></p>
+<pre><code class="language-bash">dcos edgelb list
+</code></pre>
+<p>and confirm your output looks similar to the following:</p>
+<pre><code class="language-bash">$ dcos edgelb list
+NAME                                   APIVERSION  COUNT  ROLE          PORTS
+edgelb-kubernetes-cluster-proxy-basic  V2          1      slave_public  6090, 6443, 6444
+</code></pre>
+</li>
+<li>
+<p><strong>Check that the status of your Edge-LB deployment is in</strong> <code>TASK_RUNNING</code><strong> state (under</strong> <code>STATE</code><strong>):</strong></p>
+<pre><code class="language-bash">dcos edgelb status edgelb-kubernetes-cluster-proxy-basic
+</code></pre>
+<p>The responding output should look like the following:</p>
+<pre><code class="language-bash">$ dcos edgelb status edgelb-kubernetes-cluster-proxy-basic
+NAME                  TASK ID                                                     STATE
+edgelb-pool-0-server  edgelb-pool-0-server__a6e4b1a1-e63c-4579-a27e-a54328f31321  TASK_RUNNING
+</code></pre>
+</li>
+<li>
+<p><strong>Find the public IP of the deployment:</strong></p>
+<pre><code class="language-bash">dcos task exec -it edgelb-pool-0-server curl ifconfig.co
+</code></pre>
+</li>
+<li>
+<p><strong>Save the IP as a variable:</strong></p>
+<pre><code class="language-bash">export EDGELB_PUBLIC_AGENT_IP=&lt;output_of_above&gt;
+</code></pre>
+</li>
+</ol>
+<!-- If the above commands do not work to find the public agent IP of the Edge-LB (maybe due to security reasons, etc.) we can determine the Public Agent IPs that we need by following the [Find Public Agent IP Guide here]() -->
+<h2 id="next-step-test-kubernetes-connections-and-view-the-kubernetes-dashboard"><a class="content__anchor" href="#next-step-test-kubernetes-connections-and-view-the-kubernetes-dashboard" aria-hidden="true"><i data-feather="bookmark"></i></a>Next Step: Test Kubernetes connections and view the Kubernetes dashboard</h2>
+<p>Now you have configured Edge-LB to connect to your Kubernetes clusters. In the last section, you will <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/getting-started/test-connect/">test connections and view the Kubernetes Dashboard</a> via a web proxy on your browser.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#set-up-and-install-edge-lb-with-service-account">Set up and Install Edge-LB with service account</a></li><li class="content__sections-item content__sections-item--h2"><a href="#create-and-launch-an-edge-lb-configured-pool-deployment-for-your-kubernetes-services">Create and launch an Edge-LB configured pool deployment for your Kubernetes services</a></li><li class="content__sections-item content__sections-item--h2"><a href="#next-step-test-kubernetes-connections-and-view-the-kubernetes-dashboard">Next Step: Test Kubernetes connections and view the Kubernetes dashboard</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

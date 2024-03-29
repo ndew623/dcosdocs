@@ -1,0 +1,271 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Package Registry - D2iQ Docs</title><meta name="description" content="Using the web interface or CLI to manage your package repositories"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.2"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/package-registry">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/administering-clusters/package-registry">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/administering-clusters/package-registry">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/administering-clusters/package-registry">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/sshcluster/">SSHing into Nodes</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/locate-public-agent/">Finding a Public Agent IP</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/multiple-clusters/"><i data-feather="chevron-right"></i>Multiple Clusters</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/component-management/">Component Management</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/backup-and-restore/"><i data-feather="chevron-right"></i>Backup and Restore</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/securing-your-cluster/">Securing a cluster</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/managing-aws/">Managing AWS</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/package-registry/">Package Registry</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/convert-agent-type/">Converting Agent Node Types</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/add-a-node/">Adding Agent Nodes</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/replacing-a-master-node/">Replace a master node</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/draining-a-node/">Draining a Node</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/delete-node/">Shut Down and Decommission Nodes</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/recovering-agent-disk-space/">Recovering Agent Disk Space</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/licenses/"><i data-feather="chevron-right"></i>Licenses</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/archives/">Access Documentation Archives</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Package Registry</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">Using the web interface or CLI to manage your package repositories</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.2/administering-clusters/package-registry/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- The source repo for this topic is https://github.com/dcos/dcos-docs-site -->
+<p>DC/OS comes pre-configured with the <a href="https://github.com/mesosphere/universe">Mesosphere Catalog</a> package repository as the provider of DC/OS packages. However this assumes Internet access, which isn’t always possible. For air gapped environments, DC/OS Enterprise offers a package registry for a flexible and seamless management of your packages.</p>
+<p>For a full list of the configuration options available for the DC/OS Package Registry, run the following command:</p>
+<pre><code class="language-bash">dcos package describe package-registry --config
+</code></pre>
+<p>You can find more information about the <code>dcos package</code> commands in the <a href="/dcosdocs/mesosphere/dcos/2.2/cli/command-reference/dcos-package/">CLI documentation</a>.</p>
+<p>For a detailed description of how to configure and deploy DC/OS Services, see <a href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/config-universe-service/">Configuring Catalog Services</a>.</p>
+<h1 id="default-installation"><a class="content__anchor" href="#default-installation" aria-hidden="true"><i data-feather="bookmark"></i></a>Default installation</h1>
+<p>Package registry can be activated out of box by executing the following command(s):</p>
+<pre><code class="language-bash"># Install the package-registry CLI
+dcos package install package-registry --cli --yes
+
+# Activate the package-registry with default options
+dcos registry activate
+</code></pre>
+<p>The <code>registry activate</code> command uses the default options, which are <strong>NOT recommended</strong> if you are installing in a production environment. Read through the rest of the sections to create an options file, and then activate the package registry by executing the following command:</p>
+<pre><code class="language-bash">dcos registry activate --options=&lt;custom-options-file&gt;
+</code></pre>
+<h1 id="configuration"><a class="content__anchor" href="#configuration" aria-hidden="true"><i data-feather="bookmark"></i></a>Configuration</h1>
+<p>If you have a configuration file from one of the previous installations, you can skip this section and continue to the next section of installing the package-registry.</p>
+<p>Package registry can be configured with the following options during deployment:</p>
+<ol>
+<li><a href="#storage-options">Storage Options</a> (Local storage OR Mount Volumes OR S3 Compatible Storage)</li>
+<li><a href="#service-namespacing-and-secrets">Service namespacing and secrets</a></li>
+</ol>
+<p>If you have a config file from one of the previous installations, you can skip this section and continue to the next section of installing the package-registry.</p>
+<h2 id="storage-options"><a class="content__anchor" href="#storage-options" aria-hidden="true"><i data-feather="bookmark"></i></a>Storage options</h2>
+<p>Package registry can be configured to use one of:</p>
+<ol>
+<li><a href="#local-storage">Local Storage</a></li>
+<li><a href="#mount-volume-option">Mount Volumes</a> OR</li>
+<li><a href="#s3-storage-option">S3 Compatible storage</a></li>
+</ol>
+<h3 id="local-storage"><a class="content__anchor" href="#local-storage" aria-hidden="true"><i data-feather="bookmark"></i></a>Local Storage</h3>
+<p>Package registry would use local storage by default, which is <strong>NOT recommended</strong> for production usage. Configure a persistent volume or S3-compatible storage for production usage. If you are using this for development purposes and wish to use local storage, skip to the next section.</p>
+<h3 id="mount-volume-option"><a class="content__anchor" href="#mount-volume-option" aria-hidden="true"><i data-feather="bookmark"></i></a>Mount volume option</h3>
+<p>To create mount volumes on DC/OS, refer to the <a href="/dcosdocs/mesosphere/dcos/2.2/storage/mount-disk-resources/">Mount Volume</a> documentation, which includes an example that creates a loopback device. The rest of this guide assumes you have a mount volume created at <code>/dcos/package-registry</code>. You must specify the <code>container-path</code> and a <code>pinned-hostname</code>, which refers to the hostname of the agent on which the volume is mounted. The following options can be used to configure <code>package-registry</code> to use a mount volume :</p>
+<pre><code class="language-json">{
+    &quot;registry&quot;: {
+        &quot;mount-volume&quot;: {
+            &quot;container-path&quot;: &quot;package-registry&quot;,
+            &quot;pinned-hostname&quot;: &quot;a.specific.node.com&quot;
+        }
+    }
+}
+</code></pre>
+<h3 id="s3-storage-option"><a class="content__anchor" href="#s3-storage-option" aria-hidden="true"><i data-feather="bookmark"></i></a>S3 Storage Option</h3>
+<p>Given the default configuration of the DC/OS Package Registry, DC/OS Packages are stored in a local persistent volume in the host file system. When using this default storage configuration, you are limited to one instance of the registry. Package Registry also supports a highly available configuration by storing DC/OS Packages on S3-compatible storage, which supports deploying more than one instance of the registry.</p>
+<p>To configure a DC/OS Package Registry to store DC/OS Packages using S3 storage, you must provide the following details:</p>
+<ol>
+<li>Specific S3 endpoint.</li>
+<li>S3 bucket name and path.</li>
+<li>S3 access key and secret key.</li>
+</ol>
+<h4 id="s3-endpoint-details"><a class="content__anchor" href="#s3-endpoint-details" aria-hidden="true"><i data-feather="bookmark"></i></a>S3 Endpoint details</h4>
+<p>When using Amazon S3, refer to <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region">Amazon S3 Regions &amp; Endpoints</a> for more details on possible endpoints. Package registry has been tested and known to work with Amazon S3 and Minio storage. It can work with any other S3 compatible storage. Contact Mesosphere support if you face problems connecting with other S3 compatible storage.</p>
+<h4 id="s3-bucket-name-and-path"><a class="content__anchor" href="#s3-bucket-name-and-path" aria-hidden="true"><i data-feather="bookmark"></i></a>S3 bucket name and path</h4>
+<p>The combination of an S3 bucket name and path inside the bucket should be unique to each deployment of Package registry. Multiple instances from each deployment will ensure synchronized access to this bucket.</p>
+<h4 id="upload-the-s3-credential-to-the-dcos-secret-store"><a class="content__anchor" href="#upload-the-s3-credential-to-the-dcos-secret-store" aria-hidden="true"><i data-feather="bookmark"></i></a>Upload the S3 credential to the DC/OS Secret store</h4>
+<p>Create (or use an existing file) an S3 credential file and use it to create a file based secret in DC/OS.</p>
+<pre><code class="language-bash">dcos security secrets create -f ~/.aws/credentials dcos-registry-s3-credential-file
+</code></pre>
+<p>For information on how to create an AWS Credential file, see the <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-config-files.html">AWS CLI User Guide</a>.</p>
+<p>The final <code>s3</code> config should look something like this:</p>
+<pre><code class="language-json">{
+    &quot;registry&quot;: {
+        &quot;s3&quot;: {
+            &quot;credential-secret-path&quot; : &quot;dcos-registry-s3-credential-file&quot;,
+            &quot;credential-profile-name&quot; : &quot;default&quot;,
+            &quot;bucket&quot; : &quot;my-bucket&quot;,
+            &quot;path&quot; : &quot;my-path-in-bucket&quot;,
+            &quot;endpoint&quot; : &quot;https://s3.us-east-1.amazonaws.com&quot;
+        }
+    }
+}
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>You must override the value for the properties <tt>bucket</tt>, <tt>path</tt> and <tt>endpoint</tt> to match the S3 configuration.</p>
+<h2 id="service-namespacing-and-secrets"><a class="content__anchor" href="#service-namespacing-and-secrets" aria-hidden="true"><i data-feather="bookmark"></i></a>Service namespacing and secrets</h2>
+<p>By default, package registry is installed as a marathon app with <code>dcos-registry</code> as its ID. This name has unique significance because the <code>dockerd</code> on agents are configured to trust the package registry instance at <code>dcos-registry.marathon.l4lb.thisdcos.directory:443</code>. If you decide to change this name, you need to configure the <code>dockerd</code> to trust the custom name your registry is deployed at <code>&lt;your-custom-name&gt;.marathon.l4lb.thisdcos.directory:443</code>. For example, if you install package registry under <code>/my/custom/dcos-registry</code> namespace, then ensure that the registry is accessible at <code>https://mycustomdcos-registry.marathon.l4lb.thisdcos.directory</code> (internal to cluster):</p>
+<pre><code class="language-bash">curl -k https://mycustomdcos-registry.marathon.l4lb.thisdcos.directory
+{&quot;checks&quot;:{&quot;/repo&quot;:{&quot;Healthy&quot;:{&quot;message&quot;:&quot;Able to find 0 package(s).&quot;}}}}
+</code></pre>
+<p>You must also require your <code>dockerd</code> to trust the above domain name. To configure <code>dockerd</code> to trust package registry at <code>mycustomdcos-registry.marathon.l4lb.thisdcos.directory</code>, execute the following command:</p>
+<pre><code class="language-bash">sudo mkdir -p /etc/docker/certs.d/mycustomdcos-registry.marathon.l4lb.thisdcos.directory
+sudo cp /run/dcos/pki/CA/ca-bundle.crt /etc/docker/certs.d/mycustomdcos-registry.marathon.l4lb.thisdcos.directory/ca.crt
+sudo systemctl restart docker
+</code></pre>
+<!-- TODO : Add more details on verification -->
+<h3 id="set-up-service-account-and-secret"><a class="content__anchor" href="#set-up-service-account-and-secret" aria-hidden="true"><i data-feather="bookmark"></i></a>Set Up Service Account and Secret</h3>
+<p>DC/OS Package Registry needs a service account to be able to run in DC/OS Enterprise. Use the following procedure to create a service account with minimum permissions.</p>
+<ol>
+<li>
+<p>Install the DC/OS Enterprise CLI:</p>
+<pre><code class="language-bash">dcos package install dcos-enterprise-cli --yes
+</code></pre>
+</li>
+<li>
+<p>Create a private/public key pair for the service account:</p>
+<pre><code class="language-bash">dcos security org service-accounts keypair private-key.pem public-key.pem
+</code></pre>
+</li>
+<li>
+<p>Create the service account:</p>
+<pre><code class="language-bash">dcos security org service-accounts create -p public-key.pem -d &quot;dcos_registry service account&quot; registry-account
+</code></pre>
+</li>
+<li>
+<p>Store private key in the Secret Store:</p>
+<pre><code class="language-bash">dcos security secrets create-sa-secret --strict private-key.pem registry-account registry-private-key
+</code></pre>
+</li>
+<li>
+<p>Give full permission to the service account:</p>
+<pre><code class="language-bash">dcos security org users grant registry-account dcos:adminrouter:ops:ca:rw full
+</code></pre>
+</li>
+</ol>
+<p class="message--important"><strong>IMPORTANT: </strong>The secret information associated with the service account is stored in a path called  <tt>registry-private-key</tt>  in the DC/OS Secret store. If using a different filename, substitute that for  <tt>registry-private-key</tt>. </p>
+<p class="message--warning"><strong>WARNING: </strong>These instructions create two sensitive files on the local file system: <tt>private-key.pem</tt> and <tt>public-key.pem</tt>. Make sure to save these files in a secure place or delete them. They're not needed after being stored in the DC/OS Secret Store. </p>
+<p>The service <code>instances</code>, <code>cpus</code>, <code>mem</code>, and <code>disk</code> can also be configured as needed. Execute the following command to view an exhaustive list of all configuration options:</p>
+<pre><code class="language-bash">dcos package describe package-registry --config
+</code></pre>
+<p>Here is a sample configuration file for the service:</p>
+<pre><code class="language-bash">&gt; cat package-registry-options.json
+{
+    &quot;registry&quot;: {
+        &quot;s3&quot;: {
+            &quot;credential-secret-path&quot; : &quot;dcos-registry-s3-credential-file&quot;,
+            &quot;credential-profile-name&quot; : &quot;default&quot;,
+            &quot;bucket&quot; : &quot;my-bucket&quot;,
+            &quot;path&quot; : &quot;my-path-in-bucket&quot;,
+            &quot;endpoint&quot; : &quot;https://s3.us-east-1.amazonaws.com&quot;
+        },
+        &quot;service-account-secret-path&quot; : &quot;registry-private-key&quot;
+    },
+    &quot;service&quot;: {
+        &quot;mem&quot; : 2048,
+        &quot;instances&quot; : 2
+    }
+    &quot;
+}
+</code></pre>
+<h1 id="installation"><a class="content__anchor" href="#installation" aria-hidden="true"><i data-feather="bookmark"></i></a>Installation</h1>
+<p>Now that you have successfully created the config file (referred to as <code>package-registry-options.json</code> from here on), you are ready to install the package registry. This can accomplished by following :</p>
+<pre><code class="language-bash">dcos package install package-registry --options=package-registry-options.json
+</code></pre>
+<p>This would launch the Marathon app for <code>package-registry</code>. This usually takes a couple of minutes. As soon as <code>package-registry</code> is healthy, you can add it as one of the package repositories in DC/OS. This can be done by:</p>
+<pre><code class="language-bash"># Change the repo name and URL if you need to customize
+dcos package repo add --index=0 &quot;Registry&quot; https://dcos-registry.marathon.l4lb.thisdcos.directory/repo
+</code></pre>
+<p>If you get errors in executing above command, wait for a couple of minutes (to account for the latency in <code>package-registry</code> being healthy and its DNS entry being propagated to all master nodes) and try again.</p>
+<h1 id="using-package-registry"><a class="content__anchor" href="#using-package-registry" aria-hidden="true"><i data-feather="bookmark"></i></a>Using package registry</h1>
+<p>After <code>package-registry</code> is installed, you can start adding packages to it. The two step process to use the package registry is as follows:</p>
+<ol>
+<li>Building the package files (<code>.dcos</code> files)</li>
+<li>Uploading the packages to <code>package-registry</code>.</li>
+</ol>
+<h2 id="building-the-packages"><a class="content__anchor" href="#building-the-packages" aria-hidden="true"><i data-feather="bookmark"></i></a>Building the packages</h2>
+<p>Mesosphere hosts all its certified packages at <a href="https://downloads.mesosphere.com/universe/packages/packages.html">downloads.mesosphere.com/universe/packages/packages.html</a>. If the packages you need are available there, you can download them and skip to the next section of uploading these <code>.dcos</code> files to your cluster. When a Catalog package is under development and you want to test it before creating a pull request, or if you want to build a non certified (community) package, this section is useful.</p>
+<h3 id="requirements"><a class="content__anchor" href="#requirements" aria-hidden="true"><i data-feather="bookmark"></i></a>Requirements</h3>
+<ol>
+<li>Make sure you have the valid Catalog package definition files (<a href="https://github.com/mesosphere/universe/tree/version-3.x/repo/meta/schema">Schema</a>). Note that <code>package-registry</code> only supports packages that are packaged with v4 or higher schemas of the Catalog packaging system. See <a href="https://github.com/mesosphere/universe#creating-a-package">Creating a package</a> for more details.</li>
+<li><code>docker</code> is installed in your system (<strong>if</strong> your package uses Docker images).</li>
+<li>The package registry CLI needs to be installed as well. There are two ways to accomplish this.
+<ol>
+<li>
+<p>Install <code>package-registry</code> CLI from a DC/OS cluster.</p>
+<pre><code class="language-bash"># Install CLI subcommand &quot;registry&quot;
+dcos package install --cli package-registry
+# Make sure the subcommand works
+dcos registry --help
+</code></pre>
+</li>
+<li>
+<p>If you don’t have access to a DC/OS Cluster (such as in CI/CD), download the <code>package-registry</code> CLI for <a href="https://downloads.mesosphere.io/package-registry/binaries/cli/linux/x86-64/latest/dcos-registry-linux">Linux</a>, <a href="https://downloads.mesosphere.io/package-registry/binaries/cli/darwin/x86-64/latest/dcos-registry-darwin">macOS</a> or <a href="https://downloads.mesosphere.io/package-registry/binaries/cli/windows/x86-64/latest/dcos-registry-windows.exe">Windows</a></p>
+<pre><code class="language-bash"># Change the URL based on macOS, linux or windows accordingly.
+curl -o dcos-registry https://downloads.mesosphere.io/package-registry/binaries/cli/darwin/x86-64/latest/dcos-registry-darwin
+# Give executable permissions to downloaded binary
+chmod +x dcos-registry
+# Make sure the executable works
+./dcos-registry registry --help
+# You can use this binary in the following manner:
+./dcos-registry registry --version
+./dcos-registry registry &lt;your-subcommand&gt;
+</code></pre>
+<p>In the rest of the instructions in this page, we assume you have downloaded the subcommand from an attached DC/OS Cluster. If that isn’t the case, replace <code>dcos</code> with <code>./dcos-registry</code> in your instructions whilst retaining the <code>registry</code> suffix.</p>
+<p class="message--note"><strong>NOTE: </strong> You must use the aforementioned binary with `./dcos-registry registry <your-subcommand>` style of syntax. Eliminating the <tt>registry</tt> suffix doesn't work.</p>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="instructions-to-generate-dcos-bundle"><a class="content__anchor" href="#instructions-to-generate-dcos-bundle" aria-hidden="true"><i data-feather="bookmark"></i></a>Instructions to generate <code>.dcos</code> bundle</h3>
+<p>The <code>package-registry</code> CLI can be used to bundle your package into a <code>.dcos</code> file that can be used by the <code>package-registry</code>. Assume that the Catalog package files are in a directory called <code>/path/to/package/</code>. It should contain the following package definition files:</p>
+<pre><code>➜ tree
+.
+├── config.json
+├── marathon.json.mustache
+├── package.json
+└── resource.json
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>All the assets URIs in the <tt>resource.json</tt> must be accessible to download from your environment. Relative file paths are also accepted.</p>
+<pre><code class="language-bash"># Create a temporary work directory to store the build definition and other files necessary to create the bundle.
+mkdir /path/to/output
+
+# `migrate` the unvierse package defintion to create a build defintion for the `.dcos` file.
+dcos registry migrate --package-directory=/path/to/package --output-directory=/path/to/output
+
+# `build` to download all the requrired assets and generate a `.dcos` file. This may take a while.
+dcos registry build --build-definition-file=/path/to/output/&lt;json-build-defintion-generated-above&gt; --output-directory=/path/to/output
+</code></pre>
+<p>If all these steps are completed successfully, your <code>/path/to/output</code> directory should look similar to the following:</p>
+<pre><code>➜ tree
+.
+├── &lt;package-name&gt;-&lt;package-version&gt;.dcos
+└── &lt;package-name&gt;-&lt;package-version&gt;.json
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>The <tt>lastUpdated</tt> property has been added <a href="https://github.com/mesosphere/universe/pull/2414">(#2414)</a> manually for many universe packages and this might cause schema errors during migration. In that case, please remove this property and try again.</p>
+<p>You can clean up the build definition .json file, as it is no longer needed. Both the <code>build</code> and <code>migrate</code> subcommands accept an optional <code>--json</code> flag to support automation.</p>
+<p>After executing all the above steps, you should have a brand new <code>.dcos</code> file.</p>
+<h2 id="uploading-the-packages-to-package-registry"><a class="content__anchor" href="#uploading-the-packages-to-package-registry" aria-hidden="true"><i data-feather="bookmark"></i></a>Uploading the packages to package-registry</h2>
+<p>Now that you have all the <code>.dcos</code> files you need, you can continue to execute :</p>
+<pre><code class="language-bash">dcos registry add --dcos-file &lt;your-file&gt;.dcos
+</code></pre>
+<p>This is asynchronous and takes couple of minutes for the package to be visible in your Catalog. Even if the above command errors out (which can happen even on a successful upload in slow network connections), you can track the status of the upload by executing:</p>
+<pre><code class="language-bash">dcos registry describe --package-name=&lt;package-name&gt; --package-version=&lt;package-version&gt;
+</code></pre>
+<p>Be patient and wait for couple minutes for the package to be uploaded, processed and made visible in the Catalog.</p>
+<p>See <code>dcos registry --help</code> for an exhaustive list of operations that you can use to manage the packages in Package registry. The <code>registry</code> subcommand allows you to <code>add</code>, <code>remove</code> and <code>describe</code> a package.</p>
+<p class="message--warning"><strong>WARNING: </strong>Removing a package while a service is still deployed may cause the service to stop working.</p>
+<p>After executing the above instructions, the rest of the flow is identical to packages fetched from Catalog. The only difference is that you don’t need Internet access (for customers with air gapped environments) to install packages from <code>package-registry</code>.</p>
+<h1 id="upgrading-package-registry-between-dcos-versions"><a class="content__anchor" href="#upgrading-package-registry-between-dcos-versions" aria-hidden="true"><i data-feather="bookmark"></i></a>Upgrading Package Registry between DC/OS versions.</h1>
+<p>Package Registry <em>must</em> be upgraded when DC/OS versions are changed. Package Registry contents aren’t preserved during upgrades and customers are <strong>strongly</strong> recommended to use persistent storage for production use.  It is also recommended to keep an inventory of any custom <strong>.dcos</strong> files uploaded which aren’t provided by D2iQ.</p>
+<h1 id="upgrading-package-registry-from-dcos-112-to-later-dcos-versions"><a class="content__anchor" href="#upgrading-package-registry-from-dcos-112-to-later-dcos-versions" aria-hidden="true"><i data-feather="bookmark"></i></a>Upgrading Package Registry from DC/OS 1.12 to later DC/OS versions</h1>
+<p>Customers upgrading from DC/OS 1.12 to 1.13 or later will encounter issues with Package Registry. This issue only affects customers who have services deployed via Package Registry starting at DC/OS 1.12. Customers who deploy applications via Package Registry starting from DC/OS 1.13 or later aren’t affected by this issue.</p>
+<p>The Package Registry was renamed from <code>registry</code> in DC/OS 1.12 to <code>dcos-registry</code> in DC/OS 1.13 to avoid a naming conflict with the Docker Registry Package also named <code>registry</code>.</p>
+<p>On DC/OS 1.12 Marathon Apps may have assets stored in the Package Registry with URIs such as the following:</p>
+<pre><code>https://registry.component.thisdcos.directory/resource/pmrg4ylnmurduitqmfrwwylhmuwxezlhnfzxi4tzeiwce5tfojzws33oei5cembogixdcljqfyzc4mjnguydoljvmizgkyzwgarh2/sha256:4e6e11aad54ae3c716a5607ee88d81f3f1e8b5b23ee474b0272dba351ee9f28a/jre-8u144-linux-x64.tar.gz
+</code></pre>
+<p>Upon upgrading to DC/OS 1.13 or later, with the rename from <code>registry</code> to <code>dcos-registry</code>, the above URI will no longer resolve. As a result, existing Marathon Apps deployed won’t be able to retrieve their assets from Package Registry’s configured storage on a DC/OS upgrade.</p>
+<p>To avoid this, it’s recommended to keep the same service-name for Package Registry between 1.12 and 1.13.
+The following minimal configuration options can be used:</p>
+<pre><code>echo '{
+    &quot;service&quot;: {
+        &quot;name&quot;: &quot;registry&quot;
+    },
+    &quot;registry&quot;: {
+        &quot;service-account-secret-path&quot;: &quot;dcos-registry-secret&quot;
+    }
+}' &gt; registry-options.json
+</code></pre>
+<p><strong>Note:</strong>  Customers should replace the value of <code>service-account-secret-path</code> with the appropriate in-deployment equivalent. The value <code>dcos-registry-secret</code> used in this example is what the default installation of Package Registry creates.</p>
+<ol>
+<li>Install Package Registry:<pre><code>dcos package install package-registry --options=registry-options.json --yes
+</code></pre>
+</li>
+<li>Ensure Package Registry is the first repository to source from:<pre><code>dcos package repo add --index=0 Registry https://registry.marathon.l4lb.thisdcos.directory/repo
+</code></pre>
+</li>
+<li>Add desired package to the repository, using Cassandra as an example:<pre><code>dcos registry add --name=registry --dcos-file cassandra-2.9.0-3.11.6.dcos
+</code></pre>
+</li>
+<li>Install package from package repository:<pre><code>dcos package install cassandra
+</code></pre>
+</li>
+</ol>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#default-installation">Default installation</a></li><li class="content__sections-item content__sections-item--h1"><a href="#configuration">Configuration</a></li><li class="content__sections-item content__sections-item--h2"><a href="#storage-options">Storage options</a></li><li class="content__sections-item content__sections-item--h2"><a href="#service-namespacing-and-secrets">Service namespacing and secrets</a></li><li class="content__sections-item content__sections-item--h1"><a href="#installation">Installation</a></li><li class="content__sections-item content__sections-item--h1"><a href="#using-package-registry">Using package registry</a></li><li class="content__sections-item content__sections-item--h2"><a href="#building-the-packages">Building the packages</a></li><li class="content__sections-item content__sections-item--h2"><a href="#uploading-the-packages-to-package-registry">Uploading the packages to package-registry</a></li><li class="content__sections-item content__sections-item--h1"><a href="#upgrading-package-registry-between-dcos-versions">Upgrading Package Registry between DC/OS versions.</a></li><li class="content__sections-item content__sections-item--h1"><a href="#upgrading-package-registry-from-dcos-112-to-later-dcos-versions">Upgrading Package Registry from DC/OS 1.12 to later DC/OS versions</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>使用 DC/OS 隧道 - D2iQ Docs</title><meta name="description" content="使用 DC/OS 隧道通过代理和 VPN 访问您的群集"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.1/developing-services">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/developing-services/tunnel">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/developing-services/tunnel">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/developing-services/tunnel">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/developing-services/cli-spec/">CLI 规范</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/developing-services/tunnel/">使用 DC/OS 隧道</a></li></ul></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">使用 DC/OS 隧道</h1></div><h4 class="content__header-description">使用 DC/OS 隧道通过代理和 VPN 访问您的群集</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.1/developing-services/tunnel/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p class="message--warning"><strong>警告：</strong>DC/OS 隧道<strong>仅</strong>.适用于开发、调试和测试。请勿在生产中使用 DC/OS 隧道。</p>
+<p class="message--important"><strong>重要信息：</strong>Mesosphere 不支持 Ubuntu 作为 DC/OS 的操作系统，即便是使用 Microsoft Azure 时。<p>
+<p>在 DC/OS 上开发服务时，您可能会发现通过 SOCKS 代理、HTTP 代理或 VPN，有助于在本地机器访问群集。例如，您可以在自己的开发环境中工作，并立即针对您的 DC/OS 群集进行测试。</p>
+<h1 id="socks"><a class="content__anchor" href="#socks" aria-hidden="true"><i data-feather="bookmark"></i></a>SOCKS</h1>
+<p>DC/OS 隧道可以通过 SSH 运行 SOCKS 代理到群集。SOCKS 代理适合任何协议，但客户端必须配置为使用默认在端口 1080 上运行的代理。</p>
+<h1 id="http"><a class="content__anchor" href="#http" aria-hidden="true"><i data-feather="bookmark"></i></a>HTTP</h1>
+<p>HTTP 代理可采用两种模式运行：透明和标准。</p>
+<h2 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>透明模式</h2>
+<p>在透明模式下，HTTP 代理在端口 80 上作为超级用户运行，不需要对应用程序进行修改。通过附加 <code>mydcos.directory</code> 域访问 URL。也可 <a href="#srv">将 DNS SRV 记录作为 URL 使用</a>。HTTP 代理当前无法采用透明模式访问 HTTPS。</p>
+<h2 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>标准模式</h2>
+<p>虽然必须配置客户端才能在标准模式下使用 HTTP 代理，但是它没有透明模式受到的任何限制。与透明模式一样，您可以将 <a href="#srv">DNS SRV</a> 记录作为 URL 使用。</p>
+<p><a name="srv"></a></p>
+<h3 id="srv"><a class="content__anchor" href="#srv" aria-hidden="true"><i data-feather="bookmark"></i></a>SRV 记录</h3>
+<p>SRV DNS 记录是从名称到 IP/端口对的映射。DC/OS 创建 SRV 记录，采用的形式为 <code>_&lt;port-name&gt;._&lt;service-name&gt;._tcp.marathon.mesos</code>. HTTP 代理将这些记录作为 URL 披露。此功能可用于与 DC/OS 服务进行通信。</p>
+<h1 id="vpn"><a class="content__anchor" href="#vpn" aria-hidden="true"><i data-feather="bookmark"></i></a>VPN</h1>
+<p>DC/OS 隧道可让您完全访问群集内的 DNS、管理节点和代理。OpenVPN 需要根权限才能配置这些路由。</p>
+<h1 id="dcos"><a class="content__anchor" href="#dcos" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS 隧道选项概述</h1>
+<table class="table">
+   <tr>
+      <th>&nbsp;</th>
+      <th>利</th>
+      <th>弊</th>
+   </tr>
+   <tr>
+      <th>SOCKS</th>
+      <td>
+         <ul>
+            <li>指定端口</li>
+            <li>所有协议</li>
+         </ul>
+      </td>
+      <td>
+         <ul>
+            <li>需要应用程序配置</li>
+         </ul>
+      </td>
+   </tr>
+   <tr>
+      <th>HTTP（透明）</th>
+      <td>
+         <ul>
+            <li>SRV 作为 URL</li>
+            <li>无应用程序配置</li>
+         </ul>
+      </td>
+      <td>
+         <ul>
+            <li>无法指定端口（除非通过 SRV 指定）</li>
+            <li>仅支持 HTTP</li>
+            <li>作为超级用户运行</li>
+         </ul>
+      </td>
+   </tr>
+   <tr>
+      <th>HTTP（标准）</th>
+      <td>
+         <ul>
+            <li>SRV 作为 URL</li>
+            <li>指定端口</li>
+         </ul>
+      </td>
+      <td>
+         <ul>
+            <li>需要应用程序配置</li>
+            <li>仅支持 HTTP/HTTPS</li>
+         </ul>
+      </td>
+   </tr>
+   <tr>
+      <th>VPN</th>
+      <td>
+         <ul>
+            <li>无应用程序配置</li>
+            <li>完整和直接访问群集</li>
+            <li>指定端口</li>
+            <li>所有协议</li>
+         </ul>
+      </td>
+      <td>
+         <ul>
+            <li>更多先决条件</li>
+            <li>作为超级用户运行</li>
+            <li><i>可能</i>需要手动重新配置 DNS</li>
+            <li>相对权重</li>
+         </ul>
+      </td>
+   </tr>
+</table>
+<h1 id="dcos-2"><a class="content__anchor" href="#dcos-2" aria-hidden="true"><i data-feather="bookmark"></i></a>使用 DC/OS 隧道</h1>
+<h2 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>前提条件</h2>
+<ul>
+<li>目前仅支持 Linux 和 macOS。</li>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/install/">DC/OS CLI</a>.</li>
+<li>DC/OS 隧道包。运行 <code>dcos package install tunnel-cli --cli</code>.</li>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/sshcluster/">SSH 访问</a> （仅限密钥认证）。</li>
+<li><a href="https://openvpn.net/index.php/open-source/downloads.html">OpenVPN 客户端</a> 用于 VPN 功能。</li>
+</ul>
+<h2 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>应用示例</h2>
+<p>所有示例都将参考此样本应用：</p>
+<ul>
+<li>服务名称：<code>myapp</code></li>
+<li>组：<code>mygroup</code></li>
+<li>端口：<code>555</code></li>
+<li>端口名称：<code>myport</code></li>
+</ul>
+<p><code>myapp</code> 是一个在端口 <code>555</code> 上进行侦听的 Web 服务器。我们将使用 <code>curl</code>
+作为客户端应用程序。所有成功的示例都将得到
+<code>myapp</code> 提供的作为文本输出的 HTML。</p>
+<h2 id="dcos-socks"><a class="content__anchor" href="#dcos-socks" aria-hidden="true"><i data-feather="bookmark"></i></a>使用 DC/OS 隧道运行 SOCKS 代理</h2>
+<ol>
+<li>
+<p>在 DC/OS CLI 中运行以下命令：</p>
+<pre><code>dcos tunnel socks
+
+## Example
+curl --proxy socks5h://127.0.0.1:1080 myapp-mygroup.marathon.agentip.dcos.thisdcos.directory:555
+</code></pre>
+</li>
+<li>
+<p>配置应用程序以使用端口 1080 上的代理。</p>
+</li>
+</ol>
+<h2 id="dcos-http"><a class="content__anchor" href="#dcos-http" aria-hidden="true"><i data-feather="bookmark"></i></a>使用 DC/OS 隧道运行 HTTP 代理</h2>
+<h3 id="-5"><a class="content__anchor" href="#-5" aria-hidden="true"><i data-feather="bookmark"></i></a>透明模式</h3>
+<ol>
+<li>
+<p>在 DC/OS CLI 中运行以下命令：</p>
+<pre><code>sudo dcos tunnel http
+
+## Example
+curl _myport._myapp.mygroup._tcp.marathon.mesos.mydcos.directory
+
+### Watch out!
+## This won't work because you can't specify a port in transparent mode
+curl myapp-mygroup.marathon.agentip.dcos.thisdcos.directory.mydcos.directory:555
+</code></pre>
+</li>
+<li>
+<p>在透明模式下，HTTP 代理通过端口转发开展工作。输入命令时，在域名末尾附加 <code>.mydcos.directory</code> 例如， <code>http://example.com/?query=hello</code> 变成 <code>http://example.com.mydcos.directory/?query=hello</code>.</p>
+</li>
+</ol>
+<p class="message--note"><strong>注意：</strong>在透明模式下，无法在 URL 中指定端口。</p>
+<h3 id="-6"><a class="content__anchor" href="#-6" aria-hidden="true"><i data-feather="bookmark"></i></a>标准模式</h3>
+<ol>
+<li>
+<p>如需不使用根权限，以标准模式运行 HTTP 代理，则请使用 <code>--port</code> 标记将代理配置为使用其他端口：</p>
+<pre><code>dcos tunnel http --port 8000
+
+## Example
+curl --proxy 127.0.0.1:8000 _myport._myapp.mygroup._tcp.marathon.mesos
+curl --proxy 127.0.0.1:8000 myapp-mygroup.marathon.agentip.dcos.thisdcos.directory:555
+</code></pre>
+</li>
+<li>
+<p>配置应用程序，在上文指定的端口上使用代理。</p>
+</li>
+</ol>
+<h3 id="srv-2"><a class="content__anchor" href="#srv-2" aria-hidden="true"><i data-feather="bookmark"></i></a>SRV 记录</h3>
+<p>HTTP 代理以 <code>_&lt;port-name&gt;._&lt;service-name&gt;._tcp.marathon.mesos.mydcos.directory</code>（透明模式）或 <code>_&lt;port-name&gt;._&lt;service-name&gt;._tcp.marathon.mesos</code>（标准模式）形式的 URL 揭示 DC/OS SRV 记录。</p>
+<h4 id="-7"><a class="content__anchor" href="#-7" aria-hidden="true"><i data-feather="bookmark"></i></a>查找服务名称</h4>
+<p><code>&lt;service-name&gt;</code> 是您从 DC/OS Web 界面创建的服务的** ID **字段中的条目，或 Marathon 应用定义中 <code>id</code> 字段的值。</p>
+<h4 id="dcos-web"><a class="content__anchor" href="#dcos-web" aria-hidden="true"><i data-feather="bookmark"></i></a>在 DC/OS Web 界面中添加指定端口</h4>
+<p>如需在 DC/OS Web 界面指定端口，请转到 <strong>服务 &gt; 服务</strong> 选项卡，单击服务名称，然后单击 <strong>编辑</strong>。在 <strong>网络</strong> 选项卡上输入端口的名称。</p>
+<h4 id="marathon"><a class="content__anchor" href="#marathon" aria-hidden="true"><i data-feather="bookmark"></i></a>在 Marathon 应用定义中添加指定港口</h4>
+<p>或者，可以添加 <code>name</code> 到Marathon 应用定义的 <code>portMappings</code> 或 <code>portDefinitions</code> 字段。使用 <code>portMappings</code> 还是 <code>portDefinitions</code> 取决于您使用的是 <code>BRIDGE</code> 还是 <code>HOST</code> 网络。<a href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/service-ports/">详细了解 Marathon 的网络和端口</a>.</p>
+<pre><code class="language-json">&quot;portMappings&quot;: [
+    {
+        &quot;name&quot;: &quot;&lt;my-port-name&gt;&quot;,
+        &quot;containerPort&quot;: 3000,
+        &quot;hostPort&quot;: 0,
+        &quot;servicePort&quot;: 10000,
+        &quot;labels&quot;: {
+             &quot;VIP_0&quot;: &quot;1.1.1.1:30000&quot;
+        }
+    }
+]
+</code></pre>
+<pre><code class="language-json">&quot;portDefinitions&quot;: [
+    {
+      &quot;name&quot;: &quot;&lt;my-port-name&gt;&quot;,
+      &quot;protocol&quot;: &quot;tcp&quot;,
+      &quot;port&quot;: 0,    
+    }
+  ]
+</code></pre>
+<h2 id="dcos-vpn"><a class="content__anchor" href="#dcos-vpn" aria-hidden="true"><i data-feather="bookmark"></i></a>使用 DC/OS 隧道运行 VPN</h2>
+<p>在 DC/OS CLI 中运行以下命令：</p>
+<pre><code>sudo dcos tunnel vpn
+
+## Example
+curl myapp-mygroup.marathon.agentip.dcos.thisdcos.directory:555
+</code></pre>
+<p>VPN 客户端试图自动配置 DNS，但此功能不适用 macOS。如需在 macOS 上使用 VPN 客户端，请按照 DC/OS 隧道的指示，<a href="https://support.apple.com/guide/mac-help/enter-dns-and-search-domain-settings-on-mac-mh14127/mac">添加 DNS 服务器</a></p>
+<p>使用 VPN 时，您通过虚拟的方式进入群集。可以直接访问
+管理节点和代理节点：</p>
+<pre><code>ping master.mesos
+ping slave.mesos
+</code></pre>
+<h3 id="macos-openvpn"><a class="content__anchor" href="#macos-openvpn" aria-hidden="true"><i data-feather="bookmark"></i></a>macOS OpenVPN 客户端安装</h3>
+<ul>
+<li>
+<p>如果使用 <a href="http://brew.sh/">homebrew</a>，就要安装：</p>
+<pre><code>brew install openvpn
+</code></pre>
+<p>然后在使用时：</p>
+<p>添加 <code>/usr/local/sbin</code> 到 <code>$PATH</code>,</p>
+<p>或添加如下标记 <code>--client=/usr/local/sbin/openvpn</code></p>
+<pre><code>sudo dcos tunnel vpn --client=/usr/local/sbin/openvpn
+</code></pre>
+</li>
+<li>
+<p>另一个选项是安装 <a href="https://tunnelblick.net/">TunnelBlick</a>
+（<strong>不要运行</strong>，安装它只是用于 <code>openvpn</code> 可执行文件）
+并添加如下标记 <code>--client=/Applications/Tunnelblick.app/Contents/Resources/openvpn/openvpn-*/openvpn</code></p>
+<pre><code>sudo dcos tunnel vpn --client=/Applications/Tunnelblick.app/Contents/Resources/openvpn/openvpn-*/openvpn
+</code></pre>
+</li>
+</ul>
+<h3 id="linux-openvpn"><a class="content__anchor" href="#linux-openvpn" aria-hidden="true"><i data-feather="bookmark"></i></a>Linux OpenVPN 客户端安装</h3>
+<p><code>openvpn</code> 应通过您的分发包管理器提供。</p>
+<p>例如：</p>
+<ul>
+<li>Ubuntu：<code>apt-get update &amp;&amp; apt-get install openvpn</code></li>
+<li>ArchLinux：<code>pacman -S openvpn</code></li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#socks">SOCKS</a></li><li class="content__sections-item content__sections-item--h1"><a href="#http">HTTP</a></li><li class="content__sections-item content__sections-item--h2"><a href="#透明模式">透明模式</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-2">标准模式</a></li><li class="content__sections-item content__sections-item--h1"><a href="#vpn">VPN</a></li><li class="content__sections-item content__sections-item--h1"><a href="#dcos">DC/OS 隧道选项概述</a></li><li class="content__sections-item content__sections-item--h1"><a href="#dcos-2">使用 DC/OS 隧道</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-3">前提条件</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-4">应用示例</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-socks">使用 DC/OS 隧道运行 SOCKS 代理</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-http">使用 DC/OS 隧道运行 HTTP 代理</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-vpn">使用 DC/OS 隧道运行 VPN</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

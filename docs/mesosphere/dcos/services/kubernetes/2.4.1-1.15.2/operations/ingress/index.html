@@ -1,0 +1,215 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>External Ingress - D2iQ Docs</title><meta name="description" content="Creating an Ingress controller for your Kubernetes cluster"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Kubernetes Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.8.0-1.19.2/operations/ingress">Kubernetes 2.8.0-1.19.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.7.0-1.18.6/operations/ingress">Kubernetes 2.7.0-1.18.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.6.1-1.17.8/operations/ingress">Kubernetes 2.6.1-1.17.8</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.6.0-1.17.7/operations/ingress">Kubernetes 2.6.0-1.17.7</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.5.0-1.16.9/operations/ingress">Kubernetes 2.5.0-1.16.9</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/ingress">Kubernetes 2.4.9-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/operations/ingress">Kubernetes 2.4.8-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.7-1.15.10/operations/ingress">Kubernetes 2.4.7-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.6-1.15.6/operations/ingress">Kubernetes 2.4.6-1.15.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.5-1.15.5/operations/ingress">Kubernetes 2.4.5-1.15.5</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/ingress">Kubernetes 2.4.4-1.15.4</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/ingress">Kubernetes 2.4.3-1.15.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.2-1.15.3/operations/ingress">Kubernetes 2.4.2-1.15.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/operations/ingress">Kubernetes 2.4.1-1.15.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.10-1.15.10/operations/ingress">Kubernetes 2.4.10-1.15.10</a></li></ul><div class="toggle"><p><span class="title">Kubernetes</span><span class="version"> 2.4.1-1.15.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/overview/">Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/getting-started/"><i data-feather="chevron-right"></i>Tutorial - Kubernetes on DC/OS Enterprise</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/operations/"><i data-feather="chevron-right"></i>Operations</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/operations/cluster-sizing/">Cluster Sizing</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/operations/kubernetes-dashboard/">Kubernetes Dashboard</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/operations/metrics-exporter/">Metrics Exporter</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/operations/ingress/">External Ingress</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/operations/authn-and-authz/">Authentication and Authorization</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/operations/customizing-install/">Customizing</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/operations/upgrade/">Upgrade</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/operations/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/operations/exposing-the-kubernetes-api/">Exposing the Kubernetes API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/operations/exposing-the-kubernetes-api-marathonlb-edgelb/">Exposing the Kubernetes API via Marathon-LB or Edge-LB</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/operations/connecting-clients/">Connecting Clients</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/operations/uninstall/">Uninstall</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/operations/private-docker-registry/">Use private Docker registry</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/operations/disaster-recovery/">Disaster Recovery</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/operations/troubleshooting/">Troubleshooting</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/cli/">CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/changelog/">Changelog</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/supported-versions/">Supported Versions</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">External Ingress</h1></div><h4 class="content__header-description">Creating an Ingress controller for your Kubernetes cluster</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/operations/ingress/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- This source repo for this topic is https://github.com/mesosphere/dcos-kubernetes-cluster -->
+<h1 id="running-an-ingress-controller"><a class="content__anchor" href="#running-an-ingress-controller" aria-hidden="true"><i data-feather="bookmark"></i></a>Running an Ingress controller</h1>
+<p>An Ingress is a collection of rules that allow inbound connections to reach the cluster services.
+In order to expose HTTP/S (L7) apps to the outside world - at least outside the DC/OS cluster - one can rely on <a href="https://kubernetes.io/docs/concepts/services-networking/ingress">Kubernetes <code>Ingress</code></a> resources.
+However, simply creating the resource will have no effect. An Ingress controller is needed to satisfy an Ingress.</p>
+<p>This package does not install or provide support for any specific Ingress controller, including <a href="#ingress-controllers">the ones listed below</a>. However, it does enable you to install any of your choosing.</p>
+<p>In future iterations of DC/OS Kubernetes, we will provide an Ingress controller that integrates with DC/OS.</p>
+<h2 id="requirements"><a class="content__anchor" href="#requirements" aria-hidden="true"><i data-feather="bookmark"></i></a>Requirements</h2>
+<ul>
+<li>The DC/OS cluster needs at least one available public DC/OS agent on which to run a public Kubernetes node.</li>
+<li>The abovementioned DC/OS agent(s) must have no running workloads that reserve and/or bind to ports <code>80</code> or <code>443</code>.</li>
+<li>The Kubernetes cluster must have at least one public Kubernetes node.</li>
+</ul>
+<p>With respect to the second bullet item, it is worth noting that port reservations in DC/OS work on an honor-system basis. This means that there may be workloads running on a public DC/OS agent that actually <strong>bind</strong> to ports <code>80</code> and/or <code>443</code> without actually <strong>reserving</strong> them. The reverse is also true - for example, DC/OS Kubernetes will <strong>reserve</strong> ports <code>80</code> and <code>443</code> on all public DC/OS agents where public Kubernetes nodes are deployed so that they can be used for ingress, but won’t actually <strong>bind</strong> to them.</p>
+<p>Based on your availability needs, it is advised to have multiple public Kubernetes nodes.
+In order to specify the number of public Kubernetes nodes, you must set the value of the <code>kubernetes.public_node_count</code> option, accordingly:</p>
+<pre><code class="language-json">{
+  &quot;kubernetes&quot;: {
+    &quot;public_node_count&quot;: &lt;number of desired Kubernetes nodes&gt;
+  }
+}
+</code></pre>
+<p class="message--important"><strong>IMPORTANT: </STRONG>Make sure to set a value that is less than or equal to the number of public DC/OS agents available. Failing to set this number properly may result in an incomplete Kubernetes cluster install. </p>
+<a id="ingress-controllers">
+<h2 id="some-ingress-controllers"><a class="content__anchor" href="#some-ingress-controllers" aria-hidden="true"><i data-feather="bookmark"></i></a>Some Ingress controllers</h2>
+<p>Below are listed a few open-source Ingress controllers:</p>
+<ul>
+<li><a href="https://docs.traefik.io/user-guide/kubernetes/">Traefik</a></li>
+<li><a href="https://github.com/kubernetes/ingress-nginx">NGINX</a></li>
+<li><a href="https://github.com/appscode/voyager">HAProxy</a></li>
+<li><a href="https://github.com/heptio/contour">Envoy</a></li>
+<li><a href="https://istio.io/docs/tasks/traffic-management/ingress.html">Istio</a></li>
+<li><a href="https://github.com/coreos/alb-ingress-controller">AWS ALB Ingress Controller</a></li>
+<li><a href="https://github.com/kubernetes/ingress-gce">Google Cloud GLBC</a></li>
+</ul>
+<p>Again, this package does not install or provide support for any specific Ingress controller.</p>
+<p>It is your responsibility to follow the respective official documentation, and report any issues to the controller authors.</p>
+<h2 id="using-the-traefik-ingress-controller"><a class="content__anchor" href="#using-the-traefik-ingress-controller" aria-hidden="true"><i data-feather="bookmark"></i></a>Using the Traefik Ingress controller</h2>
+<h3 id="installing-the-ingress-controller"><a class="content__anchor" href="#installing-the-ingress-controller" aria-hidden="true"><i data-feather="bookmark"></i></a>Installing the Ingress controller</h3>
+<p class="message--warning"><strong>WARNING: </strong>Mesosphere does not guarantee that these instructions will work for all configurations. For more information, please read <a href="https://docs.traefik.io/user-guide/kubernetes/">the official documentation for Traefik Kubernetes integration</a>.</p>
+<p>We will start by deploying the Traefik Ingress controller:</p>
+<pre><code class="language-shell">cat &lt;&lt;EOF | kubectl create -f -
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: traefik-ingress-controller
+rules:
+  - apiGroups:
+      - &quot;&quot;
+    resources:
+      - services
+      - endpoints
+      - secrets
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - extensions
+    resources:
+      - ingresses
+    verbs:
+      - get
+      - list
+      - watch
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: traefik-ingress-controller
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: traefik-ingress-controller
+subjects:
+- kind: ServiceAccount
+  name: traefik-ingress-controller
+  namespace: kube-system
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: traefik-ingress-controller
+  namespace: kube-system
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: traefik-ingress-controller
+  namespace: kube-system
+  labels:
+    k8s-app: traefik-ingress-lb
+spec:
+  selector:
+    matchLabels:
+      k8s-app: traefik-ingress-lb
+      name: traefik-ingress-lb
+  template:
+    metadata:
+      labels:
+        k8s-app: traefik-ingress-lb
+        name: traefik-ingress-lb
+    spec:
+      serviceAccountName: traefik-ingress-controller
+      terminationGracePeriodSeconds: 60
+      containers:
+      - image: traefik:v1.7.2
+        name: traefik-ingress-lb
+        ports:
+        - name: http
+          containerPort: 80
+          hostPort: 80
+        - name: admin
+          containerPort: 8080
+          hostPort: 8080
+        securityContext:
+          capabilities:
+            drop:
+            - ALL
+            add:
+            - NET_BIND_SERVICE
+        args:
+        - --api
+        - --kubernetes
+        - --logLevel=INFO
+      nodeSelector:
+        kubernetes.dcos.io/node-type: public
+      tolerations:
+      - key: &quot;node-type.kubernetes.dcos.io/public&quot;
+        operator: &quot;Exists&quot;
+        effect: &quot;NoSchedule&quot;
+EOF
+</code></pre>
+<p>Kubernetes will take care of setting up Traefik Ingress controller accordingly:</p>
+<ul>
+<li>Bind each Traefik pod port <code>TCP 80</code> port to the agent’s network - This is the most straightforward way to expose Traefik, since DC/OS firewall allows incoming traffic on public DC/OS agents’ port <code>TCP 80</code>. However, you are responsible for making sure that no other application is binding port <code>TCP 80</code> port on all public DC/OS agents where public Kubernetes nodes are scheduled onto, risking unpredictable failure.</li>
+<li>Make use of the Kubernetes <a href="https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#nodeselector"><code>nodeSelector</code> predicate</a> to force Traefik pods to be scheduled onto public Kubernetes nodes alone.</li>
+<li>Make use of the <code>node-type.kubernetes.dcos.io/public</code> <a href="https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/">node taint</a> so that the Traefik pods can actually be scheduled onto the public Kubernetes nodes.</li>
+</ul>
+<p>Assuming the Kubernetes cluster has two (2) public nodes, there should be two (2) instances of Traefik running:</p>
+<pre><code class="language-shell">$ kubectl -n kube-system get pods | grep traefik
+traefik-ingress-controller-rqgbq                                              1/1       Running   0          7m
+traefik-ingress-controller-z8rdb                                              1/1       Running   0          7m
+</code></pre>
+<h3 id="accessing-an-ingress-resource"><a class="content__anchor" href="#accessing-an-ingress-resource" aria-hidden="true"><i data-feather="bookmark"></i></a>Accessing an Ingress resource</h3>
+<p>Assuming the Kubernetes cluster only has one (1) single public Kubernetes node on public DC/OS agent <code>pa</code>, with public IP <code>pa-ip</code>, the Ingress controller will be made accessible at <code>http://&lt;pa-ip&gt;</code>.
+There’s no need to specify the port since the <code>http://</code> scheme already translates to <code>TCP 80</code>, and the <code>https://</code> scheme translates to <code>TCP 443</code>.</p>
+<p>We will now deploy an application and expose it through an Ingress.</p>
+<p>In this example, we will be exposing a simple HTTP server that responds to <code>GET /</code> requests with an <code>Hello from Kubernetes!</code> message:</p>
+<pre><code class="language-shell">cat &lt;&lt;EOF | kubectl create -f -
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world
+  labels:
+    app: hello-world
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hello-world
+  template:
+    metadata:
+      labels:
+        app: hello-world
+    spec:
+      containers:
+      - name: echo-server
+        image: hashicorp/http-echo
+        args:
+        - -listen=:80
+        - -text=&quot;Hello from Kubernetes!&quot;
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-world
+spec:
+  selector:
+    app: hello-world
+  ports:
+    - port: 80
+      targetPort: 80
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: traefik
+  name: hello-world
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /
+        backend:
+          serviceName: hello-world
+          servicePort: 80
+EOF
+</code></pre>
+<p>Notice the <code>kubernetes.io/ingress.class</code> annotation — that is how you specify the Ingress controller that will be responsible for satisfying an Ingress.
+This annotation may be optional.</p>
+<p>Once you have created this resource, open a browser and navigate to:</p>
+<pre><code>http://&lt;pa-ip&gt;
+</code></pre>
+<p>The visible result should be  the <code>Hello from Kubernetes!</code> message, meaning that the Ingress has been successfully satisfied by Traefik.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#running-an-ingress-controller">Running an Ingress controller</a></li><li class="content__sections-item content__sections-item--h2"><a href="#requirements">Requirements</a></li><li class="content__sections-item content__sections-item--h2"><a href="#some-ingress-controllers">Some Ingress controllers</a></li><li class="content__sections-item content__sections-item--h2"><a href="#using-the-traefik-ingress-controller">Using the Traefik Ingress controller</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

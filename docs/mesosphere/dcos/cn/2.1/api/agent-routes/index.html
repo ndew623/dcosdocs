@@ -1,0 +1,400 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>代理路由 - D2iQ Docs</title><meta name="description" content="在 DC/OS 代理节点上运行的 Admin Router。"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.1/api/agent-routes">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/api/agent-routes">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/api/agent-routes">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/api/agent-routes">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/api/"><i data-feather="chevron-right"></i>API 参考</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/api/access/">群集访问</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/api/versioning/">API 版本控制</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/api/master-routes/">管理节点路由</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/api/agent-routes/">代理路由</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">代理路由</h1></div><h4 class="content__header-description">在 DC/OS 代理节点上运行的 Admin Router。</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.1/api/agent-routes/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>在 DC/OS 代理节点上运行的 Admin Router 代理。它公开以下 API 路由。</p>
+<ul>
+<li>
+<p>Admin Router 代理侦听端口 <code>61001</code> (HTTP)。</p>
+</li>
+<li>
+<p>DC/OS Enterprise 添加了组件通信的可选 SSL 加密，选用之后，Admin Router 代理也会侦听端口 <code>61002</code>（HTTPS）。</p>
+</li>
+</ul>
+<p>有关 API 路由方式的详细信息，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/api/">DC/OS API 参考</a>.</p>
+<div id="ngindox">
+<div class="heading">
+<h1>
+<a id="routes" href="#routes" aria-hidden="true" class="toggle-route-group" data-id="routes">Routes</a>
+</h1>
+<span class="options"><a href="#routes" class="toggle-route-groups" data-state="visible">Show/Hide All</a> </span>
+</div>
+<div class="legend">
+<div class="heading">
+<div class="heading">
+<h2>
+<a id="legend" href="#legend" aria-hidden="true" class="toggle-route-group" data-id="legend">Legend</a>
+</h2>
+</div>
+</div>
+<ul>
+<li class="route route-type-proxy">
+<input type="checkbox" data-type="proxy" checked="checked">
+<label class="heading"><span class="route-type toggle-route-type">Proxy</span> <span class="route-desc">retrieves resources from another address.</span> </label>
+</input>
+</li>
+<li class="route route-type-file">
+<input type="checkbox" data-type="file" checked="checked">
+<label class="heading"><span class="route-type toggle-route-type">File</span> <span class="route-desc">retrieves static files.</span> </label>
+</input>
+</li>
+</ul>
+</div>
+<ul class="resources">
+<li id="resource-authentication" class="resource">
+<div class="heading">
+<h2>
+<a id="authentication" href="#authentication" aria-hidden="true" class="toggle-route-group" data-id="authentication">
+<div class="arrow arrow-right"></div>Authentication</a>
+</h2>
+<span class="options"><a href="#authentication" class="toggle-route-group" data-id="authentication">Show/Hide</a> </span>
+</div>
+<ul id="routes-authentication" class="routes">
+<li class="route route-type-proxy">
+<div class="heading">
+<h3>
+<span class="route-type">Proxy</span>
+<span class="route-path"><code>/internal/acs/api/v1/internal/policyquery</code></span>
+</h3>
+<span class="route-desc">Access Control Service policy query (internal-only)</span>
+</div>
+<div class="route-meta" style="display:none">
+<table>
+<tr>
+<td>
+Rewrite:
+</td>
+<td>
+<table>
+<tr>
+<td>
+Regex:
+</td>
+<td>
+<code>^/internal/(.*)</code>
+</td>
+</tr>
+<tr>
+<td>
+Replacement:
+</td>
+<td>
+<code>/$1</code>
+</td>
+</tr>
+<tr>
+<td>
+Type:
+</td>
+<td>
+<code>break</code>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+Proxy:
+</td>
+<td>
+<table>
+<tr>
+<td>
+Path:
+</td>
+<td>
+<code>$upstream_iam</code>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</li>
+<li id="resource-metadata" class="resource">
+<div class="heading">
+<h2>
+<a id="metadata" href="#metadata" aria-hidden="true" class="toggle-route-group" data-id="metadata">
+<div class="arrow arrow-right"></div>Metadata</a>
+</h2>
+<span class="options"><a href="#metadata" class="toggle-route-group" data-id="metadata">Show/Hide</a> </span>
+</div>
+<ul id="routes-metadata" class="routes">
+<li class="route route-type-file">
+<div class="heading">
+<h3>
+<span class="route-type">File</span>
+<span class="route-path"><code>/dcos-metadata/dcos-version.json</code></span>
+</h3>
+<span class="route-desc">DC/OS version (unauthenticated)</span>
+</div>
+<div class="route-meta" style="display:none">
+<table>
+<tr>
+<td>
+Path:
+</td>
+<td>
+<code>/opt/mesosphere/active/dcos-metadata/etc/dcos-version.json</code>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</li>
+<li id="resource-pkgpanda" class="resource">
+<div class="heading">
+<h2>
+<a id="pkgpanda" href="#pkgpanda" aria-hidden="true" class="toggle-route-group" data-id="pkgpanda">
+<div class="arrow arrow-right"></div>Pkgpanda</a>
+</h2>
+<span class="options"><a href="#pkgpanda" class="toggle-route-group" data-id="pkgpanda">Show/Hide</a> </span>
+</div>
+<ul id="routes-pkgpanda" class="routes">
+<li class="route route-type-proxy">
+<div class="heading">
+<h3>
+<span class="route-type">Proxy</span>
+<span class="route-path"><code>/pkgpanda/</code></span>
+</h3>
+<span class="route-desc">DC/OS component package management</span>
+</div>
+<div class="route-meta" style="display:none">
+<table>
+<tr>
+<td>
+Path:
+</td>
+<td>
+<code>http://$backend</code>
+</td>
+</tr>
+<tr>
+<td>
+Server:
+</td>
+<td>
+<code>unix:/run/dcos/pkgpanda-api.sock</code>
+</td>
+</tr>
+<tr>
+<td>
+Backend:
+</td>
+<td>
+DC/OS Component Package Manager (Pkgpanda)
+</td>
+</tr>
+<tr>
+<td>
+API Reference:
+</td>
+<td>
+<a href="https://docs.d2iq.com/dcosdocs/mesosphere/dcos/2.1/administering-clusters/component-management/">https://docs.d2iq.com/dcosdocs/mesosphere/dcos/2.1/administering-clusters/component-management/</a>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</li>
+<li id="resource-system" class="resource">
+<div class="heading">
+<h2>
+<a id="system" href="#system" aria-hidden="true" class="toggle-route-group" data-id="system">
+<div class="arrow arrow-right"></div>System</a>
+</h2>
+<span class="options"><a href="#system" class="toggle-route-group" data-id="system">Show/Hide</a> </span>
+</div>
+<ul id="routes-system" class="routes">
+<li class="route route-type-proxy">
+<div class="heading">
+<h3>
+<span class="route-type">Proxy</span>
+<span class="route-path"><code>/system/health/v1</code></span>
+</h3>
+<span class="route-desc">Component service status</span>
+</div>
+<div class="route-meta" style="display:none">
+<table>
+<tr>
+<td>
+Path:
+</td>
+<td>
+<code>http://$backend</code>
+</td>
+</tr>
+<tr>
+<td>
+Server:
+</td>
+<td>
+<code>unix:/run/dcos/dcos-diagnostics.sock</code>
+</td>
+</tr>
+<tr>
+<td>
+Backend:
+</td>
+<td>
+DC/OS Diagnostics
+</td>
+</tr>
+<tr>
+<td>
+API Reference:
+</td>
+<td>
+<a href="https://docs.d2iq.com/dcosdocs/mesosphere/dcos/2.1/monitoring/#system-health-http-api-endpoint">https://docs.d2iq.com/dcosdocs/mesosphere/dcos/2.1/monitoring/#system-health-http-api-endpoint</a>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li class="route route-type-proxy">
+<div class="heading">
+<h3>
+<span class="route-type">Proxy</span>
+<span class="route-path"><code>/system/v1/logs/</code></span>
+</h3>
+<span class="route-desc">Node, component service, and container (task) logs</span>
+</div>
+<div class="route-meta" style="display:none">
+<table>
+<tr>
+<td>
+Path:
+</td>
+<td>
+<code>http://$backend</code>
+</td>
+</tr>
+<tr>
+<td>
+Server:
+</td>
+<td>
+<code>unix:/run/dcos/dcos-log.sock</code>
+</td>
+</tr>
+<tr>
+<td>
+Backend:
+</td>
+<td>
+DC/OS Log
+</td>
+</tr>
+<tr>
+<td>
+API Reference:
+</td>
+<td>
+<a href="https://docs.d2iq.com/dcosdocs/mesosphere/dcos/2.1/monitoring/logging/logging-reference/">https://docs.d2iq.com/dcosdocs/mesosphere/dcos/2.1/monitoring/logging/logging-reference/</a>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li class="route route-type-proxy">
+<div class="heading">
+<h3>
+<span class="route-type">Proxy</span>
+<span class="route-path"><code>/system/v1/logs/v1/(?&lt;type&gt;range|stream)/framework/(?&lt;framework&gt;.*?)/executor/(?&lt;executor&gt;.*?)/container/(?&lt;container&gt;.*?)</code></span>
+</h3>
+<span class="route-desc">Container (task) logs</span>
+</div>
+<div class="route-meta" style="display:none">
+<table>
+<tr>
+<td>
+Path:
+</td>
+<td>
+<code>http://$backend</code>
+</td>
+</tr>
+<tr>
+<td>
+Server:
+</td>
+<td>
+<code>unix:/run/dcos/dcos-log.sock</code>
+</td>
+</tr>
+<tr>
+<td>
+Backend:
+</td>
+<td>
+DC/OS Log
+</td>
+</tr>
+<tr>
+<td>
+API Reference:
+</td>
+<td>
+<a href="https://docs.d2iq.com/dcosdocs/mesosphere/dcos/2.1/monitoring/logging/logging-reference/">https://docs.d2iq.com/dcosdocs/mesosphere/dcos/2.1/monitoring/logging/logging-reference/</a>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li class="route route-type-proxy">
+<div class="heading">
+<h3>
+<span class="route-type">Proxy</span>
+<span class="route-path"><code>/system/v1/metrics/</code></span>
+</h3>
+<span class="route-desc">Node, container, and application metrics</span>
+</div>
+<div class="route-meta" style="display:none">
+<table>
+<tr>
+<td>
+Path:
+</td>
+<td>
+<code>http://$backend</code>
+</td>
+</tr>
+<tr>
+<td>
+Server:
+</td>
+<td>
+<code>unix:/run/dcos/dcos-metrics-agent.sock</code>
+</td>
+</tr>
+<tr>
+<td>
+Backend:
+</td>
+<td>
+DC/OS Metrics
+</td>
+</tr>
+<tr>
+<td>
+API Reference:
+</td>
+<td>
+<a href="https://docs.d2iq.com/dcosdocs/mesosphere/dcos/2.1/metrics/metrics-api/">https://docs.d2iq.com/dcosdocs/mesosphere/dcos/2.1/metrics/metrics-api/</a>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#routes">Routes</a></li><li class="content__sections-item content__sections-item--h2"><a href="#legend">Legend</a></li><li class="content__sections-item content__sections-item--h2"><a href="#authentication">Authentication</a></li><li class="content__sections-item content__sections-item--h2"><a href="#metadata">Metadata</a></li><li class="content__sections-item content__sections-item--h2"><a href="#pkgpanda">Pkgpanda</a></li><li class="content__sections-item content__sections-item--h2"><a href="#system">System</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

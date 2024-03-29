@@ -1,0 +1,316 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Concepts - D2iQ Docs</title><meta name="description" content="Understanding DC/OS concepts and terms"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.2"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/overview/concepts">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/overview/concepts">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/overview/concepts">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/overview/concepts">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/overview/"><i data-feather="chevron-right"></i>Overview</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/overview/what-is-dcos/">What is DC/OS</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/overview/architecture/"><i data-feather="chevron-right"></i>Architecture</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/overview/features/">Features</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/overview/concepts/">Concepts</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/overview/high-availability/">High Availability</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/overview/design/"><i data-feather="chevron-right"></i>Design</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/overview/feature-maturity/">Feature Maturity</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/archives/">Access Documentation Archives</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Concepts</h1></div><h4 class="content__header-description">Understanding DC/OS concepts and terms</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.2/overview/concepts/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>DC/OS is made up of many open source components, several of which existed before DC/OS. The terms used in this document may be similar to pre-existing terms that you are familiar with; however, they might be used in a different way in DC/OS.
+<a name="dcos"></a></p>
+<h1 id="dcos"><a class="content__anchor" href="#dcos" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS</h1>
+<p>DC/OS is a <a href="https://en.wikipedia.org/wiki/Distributed_operating_system">distributed operating system</a> for the datacenter.</p>
+<p>Unlike traditional distributed operating systems, DC/OS is also a container platform that manages containerized tasks based on native executables or container images, like <a href="https://docs.docker.com/engine/tutorials/dockerimages/">Docker images</a>. Also unlike traditional <a href="https://en.wikipedia.org/wiki/Operating_system">operating systems</a>, DC/OS runs on a <a href="#cluster">cluster of nodes</a>, instead of a single machine. Each DC/OS node also has a <a href="#host-operating-system">host operating system</a> that manages the underlying machine.</p>
+<p>DC/OS is made up of many components, most notably a distributed systems kernel (<a href="#apache-mesos">Mesos</a>) and a container orchestration engine (<a href="#marathon">Marathon</a>).</p>
+<p>While DC/OS itself is open source, premium distributions like <a href="https://mesosphere.com/product/">Mesosphere DC/OS Enterprise</a> may include additional closed-source components and features such as multitenancy, fine-grained permissions, secrets management, and end-to-end encryption.</p>
+<p><a name="dcos-gui"></a></p>
+<h2 id="dcos-gui"><a class="content__anchor" href="#dcos-gui" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS GUI</h2>
+<p>The <a href="/dcosdocs/mesosphere/dcos/2.2/gui/">DC/OS graphical user interface (GUI)</a> is an interface for remotely controlling and managing a DC/OS cluster from a web browser. The GUI is also sometimes called the DC/OS UI or DC/OS web interface.</p>
+<p><a name="dcos-cli"></a></p>
+<h2 id="dcos-cli"><a class="content__anchor" href="#dcos-cli" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS CLI</h2>
+<p>The <a href="/dcosdocs/mesosphere/dcos/2.2/cli/">DC/OS command line interface (CLI)</a> is an interface for remotely controlling and managing a DC/OS cluster from a terminal.</p>
+<p><a name="dcos-cluster"></a></p>
+<h1 id="cluster"><a class="content__anchor" href="#cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>Cluster</h1>
+<p>A DC/OS cluster is a set of networked DC/OS nodes with a quorum of master nodes and any number of public and/or private agent nodes.</p>
+<p><a name="network"></a></p>
+<h1 id="network"><a class="content__anchor" href="#network" aria-hidden="true"><i data-feather="bookmark"></i></a>Network</h1>
+<p>DC/OS has two types of networks: infrastructure networks and virtual networks.</p>
+<p><a name="infrastructure-network"></a></p>
+<h2 id="infrastructure-network"><a class="content__anchor" href="#infrastructure-network" aria-hidden="true"><i data-feather="bookmark"></i></a>Infrastructure network</h2>
+<p>An infrastructure network is a physical or virtual network provided by the infrastructure on which DC/OS runs. DC/OS does not manage or control this networking layer, but requires it to exist in order for DC/OS nodes to communicate.</p>
+<p><a name="dcos-virtual-network"></a></p>
+<h2 id="virtual-network"><a class="content__anchor" href="#virtual-network" aria-hidden="true"><i data-feather="bookmark"></i></a>Virtual network</h2>
+<p>A DC/OS virtual network is specifically a virtual network internal to the cluster, that connects DC/OS components and containerized tasks running on DC/OS.</p>
+<ul>
+<li>The virtual network provided by DC/OS is VXLAN managed by the Virtual Network Service (Navstar).</li>
+<li>Virtual networks must be configured by an administrator before being used by tasks.</li>
+<li>Tasks on DC/OS may opt-in to being placed on a specific virtual network and given a container-specific IP.</li>
+<li>Virtual networks allow logical subdivision of the tasks running on DC/OS.</li>
+<li>Each task on a virtual network may be configured with optional address groups that virtually isolate communication to tasks on the same network and address group.</li>
+</ul>
+<p><a name="dcos-node"></a></p>
+<h1 id="nodes"><a class="content__anchor" href="#nodes" aria-hidden="true"><i data-feather="bookmark"></i></a>Nodes</h1>
+<p>A DC/OS node is a virtual or physical machine on which a Mesos agent and/or Mesos master process runs. DC/OS nodes are networked together to form a DC/OS cluster.</p>
+<p><a name="dcos-master-node"></a></p>
+<h2 id="master-nodes"><a class="content__anchor" href="#master-nodes" aria-hidden="true"><i data-feather="bookmark"></i></a>Master nodes</h2>
+<p>A DC/OS master node is a virtual or physical machine that runs a collection of DC/OS components that work together to manage the rest of the cluster.</p>
+<ul>
+<li>Each master node contains multiple DC/OS components, including most notably a <a href="#mesos-master">Mesos master</a> process.</li>
+<li>Master nodes work in a <a href="https://en.wikipedia.org/wiki/Quorum_%28distributed_computing%29">quorum</a> to provide consistency of cluster coordination. To avoid <a href="https://en.wikipedia.org/wiki/Split-brain_%28computing%29">split brain</a> cluster partitioning, clusters should always have an odd number of master nodes. For example, having three master nodes allows one to be down; having five master nodes allows two to be down, allowing for failure during a rolling update. Additional master nodes can be added for additional risk tolerance.</li>
+<li>A cluster with only one master node is usable for development, but is not highly available and may not be able to recover from failure.</li>
+</ul>
+<p><a name="dcos-agent-node"></a></p>
+<h2 id="agent-nodes"><a class="content__anchor" href="#agent-nodes" aria-hidden="true"><i data-feather="bookmark"></i></a>Agent nodes</h2>
+<p>A DC/OS agent node is a virtual or physical machine on which Mesos tasks are run.</p>
+<ul>
+<li>Each agent node contains multiple DC/OS components, including most notably a <a href="#mesos-agent">Mesos agent</a> process.</li>
+<li>Agent nodes can be <a href="#private-agent-node">private</a> or <a href="#public-agent-node">public</a>, depending on agent and network configuration.</li>
+</ul>
+<p>For more information, see <a href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/">Network Security</a> and <a href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/add-a-node/">Adding Agent Nodes</a>.</p>
+<p><a name="private-agent-node"></a></p>
+<h2 id="private-agent-nodes"><a class="content__anchor" href="#private-agent-nodes" aria-hidden="true"><i data-feather="bookmark"></i></a>Private agent nodes</h2>
+<p>A private agent node is an agent node that is on a network that <em>does not allow</em>* access from outside of the cluster via the cluster’s infrastructure networking.</p>
+<ul>
+<li>The Mesos agent on each private agent node is, by default, configured with none of its resources allocated to any specific Mesos roles (<code>*</code>).</li>
+<li>Most service packages install by default on private agent nodes.</li>
+<li>Clusters are generally comprised of mostly private agent nodes.</li>
+</ul>
+<p><a name="public-agent-node"></a></p>
+<h2 id="public-agent-nodes"><a class="content__anchor" href="#public-agent-nodes" aria-hidden="true"><i data-feather="bookmark"></i></a>Public agent nodes</h2>
+<p>A public agent node is an agent node that is on a network that <strong>allows</strong> access from outside of the cluster via the cluster’s infrastructure networking.</p>
+<ul>
+<li>The Mesos agent on each public agent node is configured with the <code>public_ip:true</code> agent attribute and all of its resources allocated to the <code>slave_public</code> role.</li>
+<li>Public agent nodes are used primarily for externally facing reverse proxy load balancers, like <a href="/dcosdocs/mesosphere/dcos/services/marathon-lb/latest/">Marathon-LB</a> or <a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.3/">Edge-LB</a>.</li>
+<li>Clusters generally have only a few public agent nodes, because a single load balancer can handle proxying multiple services.</li>
+</ul>
+<p>For more information, see <a href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/convert-agent-type/">Converting Agent Node Types</a>.</p>
+<p><a name="host-operating-system"></a></p>
+<h1 id="host-operating-system"><a class="content__anchor" href="#host-operating-system" aria-hidden="true"><i data-feather="bookmark"></i></a>Host operating system</h1>
+<p>A host operating system is the <a href="https://en.wikipedia.org/wiki/Operating_system">operating system</a> that runs on each DC/OS node underneath the DC/OS components, manages the local hardware and software resources, and provides common services for running other programs and services.</p>
+<ul>
+<li>
+<p>DC/OS currently supports the following host operating systems:</p>
+</li>
+<li>
+<p><a href="https://www.centos.org/">CentOS</a></p>
+</li>
+<li>
+<p><a href="https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux">RHEL</a></p>
+</li>
+<li>
+<p><a href="https://coreos.com/">CoreOS</a></p>
+</li>
+</ul>
+<p>While the host OS manages local tasks and machine resources, DC/OS manages cluster tasks and resources so that you do not need to interact with the host operating systems on the nodes.</p>
+<p><a name="bootstrap-machine"></a></p>
+<h1 id="bootstrap-machine"><a class="content__anchor" href="#bootstrap-machine" aria-hidden="true"><i data-feather="bookmark"></i></a>Bootstrap machine</h1>
+<p>A bootstrap machine is the machine on which the DC/OS installer artifacts are configured, built, and distributed.</p>
+<ul>
+<li>The bootstrap machine is not technically considered part of the cluster since it does not have DC/OS installed on it. For most installation methods, the bootstrap node must be accessible to and from the machines in the cluster via infrastructure networking.</li>
+<li>The bootstrap machine is sometimes used as a jumpbox to control SSH access into other nodes in the cluster for added security and logging.</li>
+<li>One method of allowing master nodes to change IPs involves running ZooKeeper with Exhibitor on the bootstrap machine. Other alternatives include using S3, DNS, or static IPs, with various tradeoffs. For more information, see the <a href="/dcosdocs/mesosphere/dcos/2.2/installing/production/advanced-configuration/configuration-reference/#exhibitor-storage-backend">exhibitor storage backend</a> parameter description.</li>
+<li>If a bootstrap machine is not required for managing master node IP changes or as an SSH jumpbox, it can be shut down after bootstrapping and spun up on demand to <a href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/add-a-node/">add new nodes</a> to the cluster.</li>
+</ul>
+<p>For more information, see the <a href="/dcosdocs/mesosphere/dcos/2.2/installing/production/system-requirements/">system requirements</a>.</p>
+<p><a name="dcos-service"></a></p>
+<h1 id="services"><a class="content__anchor" href="#services" aria-hidden="true"><i data-feather="bookmark"></i></a>Services</h1>
+<p>A DC/OS service is a set of one or more service instances that can be started and stopped as a group and restarted automatically if they exit before being stopped.</p>
+<ul>
+<li>Service is currently a DC/OS GUI abstraction that translates to Marathon apps and pods in the CLI and API. This distinction will change over time as the name “service” is pushed upstream into component APIs.</li>
+<li>Sometimes “service” may also refer to a <code>systemd</code> service on the host operating system. These are generally considered components and do not actually run on Marathon or Mesos.</li>
+<li>A service may be either a system service or a user service. This distinction is new and still evolving as namespacing is transformed into a system-wide first class pattern.</li>
+</ul>
+<p><a name="marathon-service"></a></p>
+<h2 id="marathon-service"><a class="content__anchor" href="#marathon-service" aria-hidden="true"><i data-feather="bookmark"></i></a>Marathon service</h2>
+<p>A Marathon service consists of zero or more containerized service instances. Each service instance consists of one or more containerized Mesos tasks.</p>
+<ul>
+<li>Marathon apps and pods are both considered services.
+<ul>
+<li>Marathon app instances map one-to-one with tasks.</li>
+<li>Marathon pod instances map one-to-many with tasks.</li>
+</ul>
+</li>
+<li>Service instances are restarted as a new Mesos Task when they exit prematurely.</li>
+<li>Service instances may be re-scheduled onto another agent node if they exit prematurely and the agent is down or does not have enough resources any more.</li>
+<li>Services can be installed directly via the <a href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/marathon-api/">DC/OS API (Marathon)</a> or indirectly via the <a href="#package-manager">DC/OS Package Manager (Cosmos)</a> from a <a href="#dcos-package-registry">package repository</a> like <a href="#mesosphere-universe">Mesosphere Catalog</a>. The <a href="#dcos-gui">DC/OS GUI</a> and <a href="#dcos-cli">DC/OS CLI</a> may be used to interact with the DC/OS Package Manager (Cosmos) more easily.</li>
+<li>A Marathon service may be a <a href="#dcos-scheduler">DC/OS scheduler</a>, but not all services are schedulers.</li>
+<li>A Marathon service is an abstraction around Marathon service instances which are an abstraction around Mesos tasks. Other schedulers such as DC/OS Jobs (Metronome) or Jenkins have their own names for abstractions around Mesos tasks.</li>
+</ul>
+<p><strong>Examples:</strong> Cassandra (scheduler), Marathon-on-Marathon, Kafka (scheduler), Nginx, Tweeter.</p>
+<p><a name="systemd-service"></a></p>
+<h2 id="operating-system-systemd-service"><a class="content__anchor" href="#operating-system-systemd-service" aria-hidden="true"><i data-feather="bookmark"></i></a>Operating system <code>systemd</code> service</h2>
+<p>A <code>systemd</code> service is a service that consists of a single, optionally containerized, machine operating system process, running on the master or agent nodes, managed by <code>systemd</code>, owned by DC/OS itself.</p>
+<ul>
+<li>All <code>systemd</code> services are currently either host OS service, DC/OS dependencies, DC/OS components, or services manually managed by the system administrator.</li>
+</ul>
+<p><strong>Examples:</strong> Most DC/OS components, (system) Marathon.</p>
+<p><a name="system-service"></a></p>
+<h2 id="admin-and-dcos-system-services"><a class="content__anchor" href="#admin-and-dcos-system-services" aria-hidden="true"><i data-feather="bookmark"></i></a>Admin and DC/OS system services</h2>
+<p>A system service is a service that implements or enhances the functionality of DC/OS itself, run as either a Marathon service or a <code>systemd</code> service, owned by the system (admin) user or DC/OS itself.</p>
+<ul>
+<li>A system service may require special permissions to interact with other system services.</li>
+<li>Permission to operate as a system service on a DC/OS Enterprise cluster requires specific fine-grained permissions, while on open DC/OS all logged in users have the same administrative permissions.</li>
+</ul>
+<p><strong>Examples:</strong> All DC/OS components.</p>
+<p><a name="user-service"></a></p>
+<h2 id="user-services"><a class="content__anchor" href="#user-services" aria-hidden="true"><i data-feather="bookmark"></i></a>User services</h2>
+<p>A user service is a Marathon service that is not a system service, owned by a user of the system.</p>
+<ul>
+<li>This distinction is new and still evolving as namespacing is transformed into a system-wide first class pattern and mapped to fine-grained user and user group permissions.</li>
+</ul>
+<p><strong>Examples:</strong> Jenkins, Cassandra, Kafka, Tweeter.</p>
+<p><a name="dcos-service-group"></a></p>
+<h2 id="service-groups"><a class="content__anchor" href="#service-groups" aria-hidden="true"><i data-feather="bookmark"></i></a>Service groups</h2>
+<p>A DC/OS service group is a hierarchical (path-like) set of DC/OS services for namespacing and organization.</p>
+<ul>
+<li>Service groups are currently only available for Marathon services, not <code>systemd</code> services.</li>
+<li>This distinction may change as namespacing is transformed into a system-wide first class pattern.</li>
+</ul>
+<p><a name="dcos-job"></a></p>
+<h1 id="jobs"><a class="content__anchor" href="#jobs" aria-hidden="true"><i data-feather="bookmark"></i></a>Jobs</h1>
+<p>A DC/OS job is a set of similar short-lived job instances, running as Mesos tasks, managed by the DC/OS Jobs (Metronome) component. A job can be created to run only once, or may run regularly on a schedule.</p>
+<p><a name="dcos-scheduler"></a></p>
+<h1 id="dcos-scheduler"><a class="content__anchor" href="#dcos-scheduler" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS scheduler</h1>
+<p>A DC/OS scheduler is a Mesos scheduler that runs as a <code>systemd</code> service on master nodes or Mesos task on agent nodes.</p>
+<p>The key differences between a DC/OS scheduler and Mesos scheduler are where it runs and how it is installed.</p>
+<ul>
+<li>Some schedulers come pre-installed as DC/OS components (e.g. Marathon, DC/OS Jobs (Metronome)).</li>
+<li>Some schedulers can be installed by users as user services (e.g Kafka, Cassandra).</li>
+<li>Some schedulers run as multiple service instances to provide high availability (e.g. Marathon).</li>
+</ul>
+<p>In certain security modes within DC/OS Enterprise, a DC/OS scheduler must authenticate and be authorized using a service account to register with Mesos as a framework.</p>
+<p><a name="dcos-scheduler-service"></a></p>
+<h2 id="dcos-scheduler-service"><a class="content__anchor" href="#dcos-scheduler-service" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS scheduler service</h2>
+<p>A DC/OS scheduler service is a long-running DC/OS scheduler that runs as a DC/OS service (Marathon or <code>systemd</code>). Since DC/OS schedulers can also be run as short-lived tasks, not all schedulers are services.</p>
+<p><a name="dcos-component"></a></p>
+<h2 id="dcos-service-component"><a class="content__anchor" href="#dcos-service-component" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS service component</h2>
+<p>A DC/OS component is a DC/OS system service that is distributed with DC/OS.</p>
+<ul>
+<li>Components may be <code>systemd</code> services or Marathon services.</li>
+<li>Components may be deployed in a high availability configuration.</li>
+</ul>
+<p>Most components run on the master nodes, but some (like mesos-agent) run on the agent nodes.</p>
+<p><strong>Examples:</strong> Mesos, Marathon, Mesos-DNS, Bouncer, Admin Router, DC/OS Package Manager (Cosmos), etc.</p>
+<p><a name="dcos-package"></a></p>
+<h1 id="packages"><a class="content__anchor" href="#packages" aria-hidden="true"><i data-feather="bookmark"></i></a>Packages</h1>
+<p>A DC/OS package is a bundle of metadata that describes how to configure, install, and uninstall a DC/OS service using Marathon.</p>
+<p><a name="dcos-package-manager"></a></p>
+<h2 id="package-manager"><a class="content__anchor" href="#package-manager" aria-hidden="true"><i data-feather="bookmark"></i></a>Package manager</h2>
+<p>The [DC/OS Package Manager (Cosmos)(https://github.com/dcos/cosmos)) is a component that manages installing and uninstalling packages on a DC/OS cluster.</p>
+<ul>
+<li>The DC/OS GUI and DC/OS CLI act as clients to interact with the DC/OS Package Manager.</li>
+<li>The <a href="https://github.com/dcos/cosmos">DC/OS Package Manager API</a> allows programmatic interaction.</li>
+</ul>
+<p><a name="dcos-package-registry"></a></p>
+<h2 id="package-registry"><a class="content__anchor" href="#package-registry" aria-hidden="true"><i data-feather="bookmark"></i></a>Package registry</h2>
+<p>A DC/OS package registry is a repository of DC/OS packages. The <a href="#dcos-package-manager">DC/OS Package Manager</a> may be configured to install packages from one or more package registries.</p>
+<p><a name="mesosphere-universe"></a></p>
+<h1 id="mesosphere-catalog"><a class="content__anchor" href="#mesosphere-catalog" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesosphere Catalog</h1>
+<p>The Mesosphere Catalog is a public package registry, managed by Mesosphere.</p>
+<p>For more information, see the <a href="https://github.com/mesosphere/universe">Catalog repository</a> on GitHub.</p>
+<p><a name="container-registry"></a></p>
+<h1 id="container-registry"><a class="content__anchor" href="#container-registry" aria-hidden="true"><i data-feather="bookmark"></i></a>Container registry</h1>
+<p>A container registry is a repository of pre-built container images. The <a href="#mesos-containerizer-universal-container-runtime">Universal Container Runtime</a> and <a href="#mesos-containerizer-docker-engine">Docker Engine</a> can both run Docker images from public or private Docker container registries.</p>
+<p><a name="cloud-template"></a></p>
+<h1 id="cloud-template"><a class="content__anchor" href="#cloud-template" aria-hidden="true"><i data-feather="bookmark"></i></a>Cloud template</h1>
+<p>A cloud template is an infrastructure-specific method of declaratively describing a DC/OS cluster.</p>
+<p>For more information about deploying using a cloud template, see <a href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/">Mesosphere installation methods</a>.</p>
+<p><a name="mesos-concepts"></a></p>
+<h1 id="mesos-concepts"><a class="content__anchor" href="#mesos-concepts" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesos concepts</h1>
+<p>The following terms are contextually correct when talking about Apache Mesos, but may be hidden by other abstraction within DC/OS.</p>
+<ul>
+<li><a href="#apache-mesos">Apache Mesos</a></li>
+<li><a href="#mesos-master">Master</a></li>
+<li><a href="#mesos-agent">Agent</a></li>
+<li><a href="#mesos-task">Task</a></li>
+<li><a href="#mesos-executor">Executor</a></li>
+<li><a href="#mesos-scheduler">Scheduler</a></li>
+<li><a href="#mesos-framework">Framework</a></li>
+<li><a href="#mesos-role">Role</a></li>
+<li><a href="#mesos-resource-offer">Resource Offer</a></li>
+<li><a href="#mesos-containerizer">Containerizer</a>
+<ul>
+<li><a href="#mesos-containerizer-universal-container-runtime">Universal Container Runtime</a></li>
+<li><a href="#mesos-containerizer-docker-engine">Docker Engine</a></li>
+</ul>
+</li>
+<li><a href="#mesos-exhibitor-zookeeper">Exhibitor &amp; ZooKeeper</a></li>
+<li><a href="#mesos-dns">Mesos-DNS</a></li>
+</ul>
+<p><a name="apache-mesos"></a></p>
+<h2 id="apache-mesos"><a class="content__anchor" href="#apache-mesos" aria-hidden="true"><i data-feather="bookmark"></i></a>Apache Mesos</h2>
+<p>Apache Mesos is a distributed systems kernel that manages cluster resources and tasks. Mesos is one of the core components of DC/OS that predates DC/OS itself, bringing maturity and stability to the platform.</p>
+<p>For more information, see the <a href="http://mesos.apache.org/">Mesos website</a>.</p>
+<p><a name="mesos-master"></a></p>
+<h2 id="mesos-master"><a class="content__anchor" href="#mesos-master" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesos master</h2>
+<p>A Mesos master is a process that runs on master nodes to coordinate cluster resource management and facilitate orchestration of tasks.</p>
+<ul>
+<li>The Mesos masters form a quorum and elect a leader.</li>
+<li>The lead Mesos master collects resources reported by Mesos agents and makes resource offers to Mesos schedulers. Schedulers then may accept resource offers and place tasks on their corresponding nodes.</li>
+</ul>
+<p><a name="mesos-agent"></a></p>
+<h2 id="mesos-agent"><a class="content__anchor" href="#mesos-agent" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesos agent</h2>
+<p>A Mesos agent is a process that runs on agent nodes to manage the executors, tasks, and resources of that node.</p>
+<ul>
+<li>The Mesos agent registers some or all of the node’s resources, which allows the lead Mesos master to offer those resources to schedulers, which decide on which node to run tasks.</li>
+<li>The Mesos agent reports task status updates to the lead Mesos master, which in turn reports them to the appropriate scheduler.</li>
+</ul>
+<p><a name="mesos-task"></a></p>
+<h2 id="mesos-task"><a class="content__anchor" href="#mesos-task" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesos task</h2>
+<p>A Mesos task is an abstract unit of work, lifecycle managed by a Mesos executor, that runs on a DC/OS agent node. Tasks are often processes or threads, but could just be inline code or items in a single-threaded queue, depending on how their executor is designed. The Mesos built-in command executor runs each task as a process that can be containerized by one of several <a href="#mesos-containerizer">Mesos containerizers</a>.</p>
+<p><a name="mesos-executor"></a></p>
+<h2 id="mesos-executor"><a class="content__anchor" href="#mesos-executor" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesos executor</h2>
+<p>A Mesos executor is a method by which Mesos agents launch tasks. Mesos tasks are defined by their scheduler to be run by a specific executor (or the default executor). Each executor runs in its own container.</p>
+<p>For more information about framework schedulers and executors, see the <a href="http://mesos.apache.org/documentation/latest/app-framework-development-guide/">Application Framework development guide</a>.</p>
+<p><a name="mesos-scheduler"></a></p>
+<h2 id="mesos-scheduler"><a class="content__anchor" href="#mesos-scheduler" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesos scheduler</h2>
+<p>A Mesos scheduler is a program that defines new Mesos tasks and assigns resources to them (placing them on specific nodes). A scheduler receives resource offers describing CPU, RAM, etc., and allocates them for discrete tasks that can be launched by Mesos agents. A scheduler must register with Mesos as a framework.</p>
+<p><strong>Examples:</strong> Kafka, Marathon, Cassandra.</p>
+<p><a name="mesos-framework"></a></p>
+<h2 id="mesos-framework"><a class="content__anchor" href="#mesos-framework" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesos framework</h2>
+<p>A Mesos framework consists of a scheduler, tasks, and optionally custom executors. The terms “framework” and “scheduler” are sometimes used interchangeably. We prefer “scheduler” within the context of DC/OS.</p>
+<p>For more information about framework schedulers and executors, see the <a href="http://mesos.apache.org/documentation/latest/app-framework-development-guide/">Application Framework development guide</a>.</p>
+<p><a name="mesos-role"></a></p>
+<h2 id="mesos-role"><a class="content__anchor" href="#mesos-role" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesos role</h2>
+<p>A Mesos role is a group of Mesos frameworks that share reserved resources, persistent volumes, and quota. These frameworks are also grouped together in Mesos’ hierarchical Dominant Resource Fairness (DRF) share calculations. Roles are often confused as groups of resources, because of the way they can be statically configured on the agents. The assignment is actually the inverse: resources are assigned to roles. Role resource allocation can be configured statically on the Mesos agent or changed at runtime using the Mesos API.</p>
+<p><a name="mesos-resource-offer"></a></p>
+<h2 id="mesos-resource-offer"><a class="content__anchor" href="#mesos-resource-offer" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesos resource offer</h2>
+<p>A Mesos resource offer provides a set of unallocated resources (such as CPU, disk, memory) from an agent to a scheduler so that the scheduler may allocate those resources to one or more tasks. Resource offers are constructed by the leading Mesos master, but the resources themselves are reported by the individual agents.</p>
+<p><a name="mesos-containerizer"></a></p>
+<h2 id="mesos-containerizer"><a class="content__anchor" href="#mesos-containerizer" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesos containerizer</h2>
+<p>A containerizer provides a containerization and resource isolation abstraction around a specific container runtime. The supported runtimes are</p>
+<ul>
+<li>Universal Container Runtime</li>
+<li>Docker Engine</li>
+</ul>
+<p><a name="mesos-containerizer-universal-container-runtime"></a></p>
+<h3 id="universal-container-runtime"><a class="content__anchor" href="#universal-container-runtime" aria-hidden="true"><i data-feather="bookmark"></i></a>Universal Container Runtime</h3>
+<p>The Universal Container Runtime launches Mesos containers from binary executables and Docker images. Mesos containers managed by the Universal Container Runtime do not use Docker Engine, even if launched from a Docker image.</p>
+<p><a name="mesos-containerizer-docker-engine"></a></p>
+<h3 id="docker-engine"><a class="content__anchor" href="#docker-engine" aria-hidden="true"><i data-feather="bookmark"></i></a>Docker Engine</h3>
+<p>The <a href="https://www.docker.com/products/docker-engine">Docker Engine</a> launches Docker containers from Docker images.</p>
+<p><a name="mesos-exhibitor-zookeeper"></a></p>
+<h2 id="exhibitor-and-zookeeper"><a class="content__anchor" href="#exhibitor-and-zookeeper" aria-hidden="true"><i data-feather="bookmark"></i></a>Exhibitor and ZooKeeper</h2>
+<p>Mesos depends on ZooKeeper, a high-performance coordination service to manage the cluster state. Exhibitor automatically configures and manages ZooKeeper on the <a href="#master-node">master nodes</a>.</p>
+<p><a name="mesos-dns"></a></p>
+<h2 id="mesos-dns"><a class="content__anchor" href="#mesos-dns" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesos-DNS</h2>
+<p>Mesos-DNS is a DC/OS component that provides service discovery within the cluster. Mesos-DNS allows applications and services that are running on Mesos to find each other by using the domain name system (DNS), similar to how services discover each other throughout the Internet.</p>
+<p>For more information, see the <a href="/dcosdocs/mesosphere/dcos/2.2/networking/DNS/mesos-dns/">Mesos-DNS documentation</a>.</p>
+<p><a name="marathon-concepts"></a></p>
+<h1 id="marathon-concepts"><a class="content__anchor" href="#marathon-concepts" aria-hidden="true"><i data-feather="bookmark"></i></a>Marathon concepts</h1>
+<p>The following terms are contextually correct when talking about Marathon, but may be hidden by other abstractions within DC/OS.</p>
+<ul>
+<li><a href="#marathon">Marathon</a></li>
+<li><a href="#marathon-application">Application</a></li>
+<li><a href="#marathon-pod">Pod</a></li>
+<li><a href="#marathon-group">Group</a></li>
+</ul>
+<p><a name="marathon"></a></p>
+<h2 id="marathon"><a class="content__anchor" href="#marathon" aria-hidden="true"><i data-feather="bookmark"></i></a>Marathon</h2>
+<p>Marathon is a container orchestration engine for Mesos and DC/OS. Marathon is one of the core components of DC/OS that predates DC/OS itself, bringing maturity and stability to the platform.</p>
+<p>For more information, see the <a href="https://mesosphere.github.io/marathon/">Marathon website</a>.</p>
+<p><a name="marathon-application"></a></p>
+<h2 id="marathon-application"><a class="content__anchor" href="#marathon-application" aria-hidden="true"><i data-feather="bookmark"></i></a>Marathon application</h2>
+<p>A Marathon application is a long-running service that may have one or more instances that map one to one with Mesos tasks. The user creates an application by providing Marathon with an application definition (JSON). Marathon then schedules one or more application instances as Mesos tasks, depending on how many the definition specified. Applications currently support the use of either</p>
+<ul>
+<li><a href="#mesos-containerizer-universal-container-runtime">Mesos Universal Container Runtime</a> or</li>
+<li>the <a href="#mesos-containerizer-docker-engine">Docker Runtime</a></li>
+</ul>
+<p><a name="marathon-pod"></a></p>
+<h2 id="marathon-pod"><a class="content__anchor" href="#marathon-pod" aria-hidden="true"><i data-feather="bookmark"></i></a>Marathon pod</h2>
+<p>A Marathon pod is a long-running service that may have one or more instances that map one to many with colocated Mesos tasks. You create a pod by providing Marathon with a pod definition in a JSON file format. Marathon then schedules one or more pod instances as Mesos tasks, depending on how many the definition specified.</p>
+<ul>
+<li>Pod instances may include one or more tasks that share certain resources (e.g. IPs, ports, volumes).</li>
+<li>Pods require the use of the <a href="#mesos-containerizer-universal-container-runtime">Mesos Universal Container Runtime</a>.</li>
+</ul>
+<p><a name="marathon-group"></a></p>
+<h2 id="marathon-group"><a class="content__anchor" href="#marathon-group" aria-hidden="true"><i data-feather="bookmark"></i></a>Marathon group</h2>
+<p>A Marathon group is a set of services (applications and/or pods) within a hierarchical directory <a href="https://en.wikipedia.org/wiki/Path_%28computing%29">path</a> structure for namespacing and organization.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#dcos">DC/OS</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-gui">DC/OS GUI</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-cli">DC/OS CLI</a></li><li class="content__sections-item content__sections-item--h1"><a href="#cluster">Cluster</a></li><li class="content__sections-item content__sections-item--h1"><a href="#network">Network</a></li><li class="content__sections-item content__sections-item--h2"><a href="#infrastructure-network">Infrastructure network</a></li><li class="content__sections-item content__sections-item--h2"><a href="#virtual-network">Virtual network</a></li><li class="content__sections-item content__sections-item--h1"><a href="#nodes">Nodes</a></li><li class="content__sections-item content__sections-item--h2"><a href="#master-nodes">Master nodes</a></li><li class="content__sections-item content__sections-item--h2"><a href="#agent-nodes">Agent nodes</a></li><li class="content__sections-item content__sections-item--h2"><a href="#private-agent-nodes">Private agent nodes</a></li><li class="content__sections-item content__sections-item--h2"><a href="#public-agent-nodes">Public agent nodes</a></li><li class="content__sections-item content__sections-item--h1"><a href="#host-operating-system">Host operating system</a></li><li class="content__sections-item content__sections-item--h1"><a href="#bootstrap-machine">Bootstrap machine</a></li><li class="content__sections-item content__sections-item--h1"><a href="#services">Services</a></li><li class="content__sections-item content__sections-item--h2"><a href="#marathon-service">Marathon service</a></li><li class="content__sections-item content__sections-item--h2"><a href="#operating-system-systemd-service">Operating system systemd service</a></li><li class="content__sections-item content__sections-item--h2"><a href="#admin-and-dcos-system-services">Admin and DC/OS system services</a></li><li class="content__sections-item content__sections-item--h2"><a href="#user-services">User services</a></li><li class="content__sections-item content__sections-item--h2"><a href="#service-groups">Service groups</a></li><li class="content__sections-item content__sections-item--h1"><a href="#jobs">Jobs</a></li><li class="content__sections-item content__sections-item--h1"><a href="#dcos-scheduler">DC/OS scheduler</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-scheduler-service">DC/OS scheduler service</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-service-component">DC/OS service component</a></li><li class="content__sections-item content__sections-item--h1"><a href="#packages">Packages</a></li><li class="content__sections-item content__sections-item--h2"><a href="#package-manager">Package manager</a></li><li class="content__sections-item content__sections-item--h2"><a href="#package-registry">Package registry</a></li><li class="content__sections-item content__sections-item--h1"><a href="#mesosphere-catalog">Mesosphere Catalog</a></li><li class="content__sections-item content__sections-item--h1"><a href="#container-registry">Container registry</a></li><li class="content__sections-item content__sections-item--h1"><a href="#cloud-template">Cloud template</a></li><li class="content__sections-item content__sections-item--h1"><a href="#mesos-concepts">Mesos concepts</a></li><li class="content__sections-item content__sections-item--h2"><a href="#apache-mesos">Apache Mesos</a></li><li class="content__sections-item content__sections-item--h2"><a href="#mesos-master">Mesos master</a></li><li class="content__sections-item content__sections-item--h2"><a href="#mesos-agent">Mesos agent</a></li><li class="content__sections-item content__sections-item--h2"><a href="#mesos-task">Mesos task</a></li><li class="content__sections-item content__sections-item--h2"><a href="#mesos-executor">Mesos executor</a></li><li class="content__sections-item content__sections-item--h2"><a href="#mesos-scheduler">Mesos scheduler</a></li><li class="content__sections-item content__sections-item--h2"><a href="#mesos-framework">Mesos framework</a></li><li class="content__sections-item content__sections-item--h2"><a href="#mesos-role">Mesos role</a></li><li class="content__sections-item content__sections-item--h2"><a href="#mesos-resource-offer">Mesos resource offer</a></li><li class="content__sections-item content__sections-item--h2"><a href="#mesos-containerizer">Mesos containerizer</a></li><li class="content__sections-item content__sections-item--h2"><a href="#exhibitor-and-zookeeper">Exhibitor and ZooKeeper</a></li><li class="content__sections-item content__sections-item--h2"><a href="#mesos-dns">Mesos-DNS</a></li><li class="content__sections-item content__sections-item--h1"><a href="#marathon-concepts">Marathon concepts</a></li><li class="content__sections-item content__sections-item--h2"><a href="#marathon">Marathon</a></li><li class="content__sections-item content__sections-item--h2"><a href="#marathon-application">Marathon application</a></li><li class="content__sections-item content__sections-item--h2"><a href="#marathon-pod">Marathon pod</a></li><li class="content__sections-item content__sections-item--h2"><a href="#marathon-group">Marathon group</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

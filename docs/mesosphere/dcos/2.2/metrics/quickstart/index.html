@@ -1,0 +1,196 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Metrics Quick Start - D2iQ Docs</title><meta name="description" content="Getting Started with metrics in DC/OS"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.2"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/metrics/quickstart">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/metrics/quickstart">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/metrics/quickstart">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/metrics/quickstart">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/metrics/architecture/">Metrics Plugin Architecture</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/metrics/quickstart/">Quick Start</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/metrics/mesos/">Mesos Metrics</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/metrics/datadog/">Export DC/OS Metrics to Datadog</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/metrics/metrics-api/">Metrics API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/metrics/reference/">Metrics Reference</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/archives/">Access Documentation Archives</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Metrics Quick Start</h1></div><h4 class="content__header-description">Getting Started with metrics in DC/OS</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.2/metrics/quickstart/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>This page explains how to get started with metrics in DC/OS. A metrics pipeline is natively integrated with DC/OS and no additional setup is required.</p>
+<p><strong>Prerequisites:</strong></p>
+<ul>
+<li>You must have the <a href="/dcosdocs/mesosphere/dcos/2.2/cli/install/">DC/OS CLI installed</a> and be logged in as a superuser via the <code>dcos auth login</code> command.</li>
+</ul>
+<ol>
+<li>
+<p>Optional: Deploy a sample Marathon app for use in this quick start guide. If you already have tasks running on DC/OS, you can skip this setup step.</p>
+<ol>
+<li>
+<p>Create the following Marathon app definition and save as <code>test-metrics.json</code>.</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/test-metrics&quot;,
+  &quot;cmd&quot;: &quot;./statsd-emitter&quot;,
+  &quot;fetch&quot;: [{&quot;uri&quot;: &quot;https://downloads.mesosphere.com/dcos-metrics/1.11.0/statsd-emitter&quot;, &quot;executable&quot;: true}],
+  &quot;cpus&quot;: 0.01,
+  &quot;instances&quot;: 1,
+  &quot;mem&quot;: 128
+}
+</code></pre>
+</li>
+<li>
+<p>Deploy the app with the following CLI command:</p>
+<pre><code class="language-bash">dcos marathon app add test-metrics.json
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p>To get the Mesos ID of the node that is running your app, run <code>dcos task</code> followed by <code>dcos node</code>.
+For example:</p>
+<ol>
+<li>
+<p>Running <code>dcos task</code> shows that host <code>10.0.0.193</code> is running the Marathon task <code>test-metrics.93fffc0c-fddf-11e6-9080-f60c51db292b</code>.</p>
+<pre><code class="language-bash">dcos task
+NAME          HOST        USER  STATE  ID                                                  
+test-metrics  10.0.0.193  root    R    test-metrics.93fffc0c-fddf-11e6-9080-f60c51db292b  
+</code></pre>
+</li>
+<li>
+<p>Running <code>dcos node</code> shows that host <code>10.0.0.193</code> has the Mesos ID <code>7749eada-4974-44f3-aad9-42e2fc6aedaf-S1</code>.</p>
+<pre><code class="language-bash">dcos node
+ HOSTNAME       IP                         ID                    
+10.0.0.193  10.0.0.193  7749eada-4974-44f3-aad9-42e2fc6aedaf-S1  
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p>View metrics.</p>
+<ul>
+<li>
+<p><strong><a name="container-metrics"></a>Container metrics for a specific task</strong></p>
+<p>For an overview of the resource consumption for a specific container, execute the following command:</p>
+<pre><code class="language-bash">dcos task metrics summary &lt;task-id&gt;
+</code></pre>
+<p>The output should resemble:</p>
+<pre><code class="language-bash">CPU           MEM              DISK
+0.17 (1.35%)  0.01GiB (6.46%)  0.00GiB (0.00%)
+</code></pre>
+<p>The metrics summary command displays a summary of raw and percentage utilization of CPU, Memory and Disk resources using the metrics documented in the <a href="/dcosdocs/mesosphere/dcos/2.2/metrics/reference/">metrics reference summary</a>.</p>
+<p>In particular, the following metrics and formula are used to compute the displayed values:</p>
+<ol>
+<li>CPU usage:</li>
+</ol>
+<pre><code class="language-bash">cpus.system_time_secs + cpus.user_time_secs (raw)
+(cpus.system_time_secs + cpus.user_time_secs) / cpus.throttled_time_secs (percentage)
+</code></pre>
+<ol start="2">
+<li>Memory usage:</li>
+</ol>
+<pre><code class="language-bash">mem.total_bytes (raw)
+mem.total_byes/mem.limit_bytes (percentage)
+</code></pre>
+<ol start="3">
+<li>Disk usage:</li>
+</ol>
+<pre><code class="language-bash">disk.used_bytes (raw)
+disk.used_bytes/disk.total_bytes (percentage) 
+</code></pre>
+</li>
+<li>
+<p><strong><a name="task-metrics"></a>All metrics for a specific task</strong></p>
+<p>To get a detailed list of all metrics related to a task, execute the following command:</p>
+<pre><code class="language-bash">dcos task metrics details &lt;task-id&gt;
+</code></pre>
+<p>The output is a combination of container resource utilization and metrics transmitted by the workload.
+For example:</p>
+<pre><code class="language-bash">NAME                      VALUE
+cpus.limit                0.20            
+cpus.nr_periods           1272            
+cpus.nr_throttled         8               
+cpus.system_time_secs     0.23            
+cpus.throttled_time_secs  0.45            
+cpus.user_time_secs       0.15            
+mem.anon_bytes            9359360         
+mem.cache_bytes           106496          
+mem.file_bytes            106496          
+mem.limit_bytes           44040192        
+mem.rss_bytes             9359360         
+mem.total_bytes           9465856      
+perf.timestamp            1556720487.68
+</code></pre>
+<p>The CPU, disk, and memory statistics come from container data supplied by Mesos. The <code>statsd_tester.time.uptime</code>
+statistic comes from the application itself.</p>
+</li>
+<li>
+<p><strong><a name="host-metrics"></a>Host level metrics</strong></p>
+<p>For task data, host-level metrics are available in the form of a summary or a detailed table.
+To view host-level metrics, execute the following command:</p>
+<pre><code class="language-bash">dcos node metrics details &lt;mesos-id&gt;
+</code></pre>
+<p>The output displays the statistics about available resources on the node and their utilization.
+For example:</p>
+<pre><code class="language-bash">NAME                       VALUE      TAGS
+cpu.idle                   99.56%
+cpu.system                 0.09%
+cpu.total                  0.34%
+cpu.user                   0.25%
+cpu.wait                   0.01%
+filesystem.capacity.free   134.75GiB  path: /
+filesystem.capacity.total  143.02GiB  path: /
+filesystem.capacity.used   2.33GiB    path: /
+filesystem.inode.free      38425263   path: /
+filesystem.inode.total     38504832   path: /
+filesystem.inode.used      79569      path: /
+load.15min                 0
+load.1min                  0
+load.5min                  0
+memory.buffers             0.08GiB
+memory.cached              2.41GiB
+memory.free                12.63GiB
+memory.total               15.67GiB
+process.count              175
+swap.free                  0.00GiB
+swap.total                 0.00GiB
+swap.used                  0.00GiB
+system.uptime              28627
+</code></pre>
+</li>
+<li>
+<p><strong><a name="script-metrics"></a>Programmatic use of metrics</strong></p>
+<p>All dcos-cli metrics commands can be executed with the <code>--json</code> for use in scripts.
+For example:</p>
+<pre><code class="language-bash">dcos node metrics summary &lt;mesos-id&gt; --json
+</code></pre>
+<p>The output displays the same data, but in JSON format, for convenient parsing:</p>
+<pre><code class="language-json">[
+  {
+    &quot;name&quot;: &quot;cpu.total&quot;,
+    &quot;timestamp&quot;: &quot;2018-04-09T23:46:16.834008315Z&quot;,
+    &quot;value&quot;: 0.32,
+    &quot;unit&quot;: &quot;percent&quot;
+  },
+  {
+    &quot;name&quot;: &quot;memory.total&quot;,
+    &quot;timestamp&quot;: &quot;2018-04-09T23:46:16.834650407Z&quot;,
+    &quot;value&quot;: 16830304256,
+    &quot;unit&quot;: &quot;bytes&quot;
+  },
+  {
+    &quot;name&quot;: &quot;memory.free&quot;,
+    &quot;timestamp&quot;: &quot;2018-04-09T23:46:16.834650407Z&quot;,
+    &quot;value&quot;: 13553008640,
+    &quot;unit&quot;: &quot;bytes&quot;
+  },
+  {
+    &quot;name&quot;: &quot;filesystem.capacity.total&quot;,
+    &quot;timestamp&quot;: &quot;2018-04-09T23:46:16.834373702Z&quot;,
+    &quot;value&quot;: 153567944704,
+    &quot;tags&quot;: {
+      &quot;path&quot;: &quot;/&quot;
+    },
+    &quot;unit&quot;: &quot;bytes&quot;
+  },
+  {
+    &quot;name&quot;: &quot;filesystem.capacity.used&quot;,
+    &quot;timestamp&quot;: &quot;2018-04-09T23:46:16.834373702Z&quot;,
+    &quot;value&quot;: 2498990080,
+    &quot;tags&quot;: {
+      &quot;path&quot;: &quot;/&quot;
+    },
+    &quot;unit&quot;: &quot;bytes&quot;
+  }
+]
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+</article></div></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

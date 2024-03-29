@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>部署本地目录 - D2iQ Docs</title><meta name="description" content="在本地目录数据中心安装和运行 DC/OS 服务"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.0/administering-clusters">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.0"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/deploying-a-local-dcos-universe">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/administering-clusters/deploying-a-local-dcos-universe">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.0</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/sshcluster/">通过 SSH 访问节点</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/multiple-clusters/"><i data-feather="chevron-right"></i>多群集</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/locate-public-agent/">查找公共代理 IP</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/component-management/">组件管理</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/securing-your-cluster/">保护群集</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/backup-and-restore/"><i data-feather="chevron-right"></i>备份和恢复</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/managing-aws/">管理 AWS</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/package-registry/">包注册表</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/convert-agent-type/">转换代理节点类型</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/replacing-a-master-node/">替换管理节点</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/add-a-node/">添加代理节点</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/draining-a-node/">排空节点</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/delete-node/">关闭和停用节点</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/recovering-agent-disk-space/">恢复代理磁盘空间</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/deploying-a-local-dcos-universe/">部署本地目录</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/licenses/"><i data-feather="chevron-right"></i>许可证</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">部署本地目录</h1></div><h4 class="content__header-description">在本地目录数据中心安装和运行 DC/OS 服务</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/deploying-a-local-dcos-universe/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p class="message--important"><strong></strong>重要信息：如果您正在使用 DC/OS&trade; Enterprise，使用 <tt>package-registry</tt> 无缝管理气隙环境中的包。本地 Catalog 支持已弃用。</p>
+<p>您可以通过使用本地 <a href="https://github.com/mesosphere/universe">Catalog</a> 在数据中心安装和运行 DC/OS 服务，无需互联网访问。您可以部署包含所有已认证包的本地 Catalog（基础），或包含所选包的本地 Catalog（高级）。</p>
+<p><strong>前提条件：</strong></p>
+<ul>
+<li>
+<p><a href="/dcosdocs/mesosphere/dcos/2.0/cli/install/">已安装 DC/OS CLI</a>。</p>
+</li>
+<li>
+<p>登录到 DC/OS CLI。在 DC/OS Enterprise 上，您必须以具有 <code>dcos:superuser</code> 权限的用户登录。</p>
+</li>
+</ul>
+<p class="message--note"><strong>注意：</strong>由于 Catalog tarball 大小超过 2 GB，将其下载到您的本地驱动器，并将其上传到每个管理节点可能需要一些时间。</p>
+<h1 id="catalog"><a class="content__anchor" href="#catalog" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="certified"></a>认证 Catalog 包</h1>
+<p>本节介绍如何部署包含已认证 Catalog 包的本地 Catalog。</p>
+<ol>
+<li>
+<p>从终端提示符中，使用以下命令将本地 Catalog 及其服务定义下载到您的本地驱动器。</p>
+<pre><code class="language-bash">curl -v https://s3.amazonaws.com/downloads.mesosphere.io/universe/public/local-universe.tar.gz -o local-universe.tar.gz
+curl -v https://raw.githubusercontent.com/mesosphere/universe/version-3.x/docker/local-universe/dcos-local-universe-http.service -o dcos-local-universe-http.service
+curl -v https://raw.githubusercontent.com/mesosphere/universe/version-3.x/docker/local-universe/dcos-local-universe-registry.service -o dcos-local-universe-registry.service
+</code></pre>
+</li>
+<li>
+<p>使用 <a href="https://linux.die.net/man/1/scp">安全副本</a> (scp) 将 Catalog 和注册表文件传输到管理节点，在发出以下命令之前将 <code>&lt;master-IP&gt;</code> 替换为管理节点的公共 IP 地址。（您可以在 DC/OS UI 的左上角找到管理节点的公用 IP 地址。）</p>
+<pre><code class="language-bash">scp local-universe.tar.gz core@&lt;master-IP&gt;:~
+scp dcos-local-universe-http.service core@&lt;master-IP&gt;:~
+scp dcos-local-universe-registry.service core@&lt;master-IP&gt;:~
+</code></pre>
+</li>
+<li>
+<p>使用以下命令 <a href="/dcosdocs/mesosphere/dcos/2.0/administering-clusters/sshcluster/">SSH</a> 至管理节点。将 <code>&lt;master-IP&gt;</code> 替换为先前命令中使用的 IP 地址。</p>
+<pre><code class="language-bash">ssh -A core@&lt;master-IP&gt;
+</code></pre>
+</li>
+<li>
+<p>确认文件已成功复制。</p>
+<pre><code class="language-text">ls
+</code></pre>
+</li>
+</ol>
+<p>您应该看到以下列出的文件。</p>
+<pre><code>```text
+dcos-local-universe-http.service  
+dcos-local-universe-registry.service  
+local-universe.tar.gz
+```
+</code></pre>
+<ol>
+<li>
+<p>将注册表文件移动到 <code>/etc/systemd/system/</code> 目录。</p>
+<pre><code class="language-bash">sudo mv dcos-local-universe-registry.service /etc/systemd/system/
+sudo mv dcos-local-universe-http.service /etc/systemd/system/
+</code></pre>
+</li>
+<li>
+<p>确认文件已成功复制到 <code>/etc/systemd/system/</code>。</p>
+<pre><code class="language-bash">ls -la /etc/systemd/system/dcos-local-universe-*
+</code></pre>
+</li>
+<li>
+<p>将 Catalog 加载到本地 Docker® 实例中。这可能需要一些时间才能完成。</p>
+<pre><code class="language-bash">sudo docker load &lt; local-universe.tar.gz
+</code></pre>
+</li>
+<li>
+<p>重新启动 <code>systemd</code> 守护程序。</p>
+<pre><code class="language-bash">sudo systemctl daemon-reload
+</code></pre>
+</li>
+<li>
+<p>启用并启动 <code>dcos-local-universe-http</code> 和 <code>dcos-local-universe-registry</code> 服务。</p>
+<pre><code class="language-bash">sudo systemctl enable dcos-local-universe-http
+sudo systemctl enable dcos-local-universe-registry
+sudo systemctl start dcos-local-universe-http
+sudo systemctl start dcos-local-universe-registry
+</code></pre>
+</li>
+<li>
+<p>使用以下命令确认服务现已启动和运行。</p>
+<pre><code class="language-bash">sudo systemctl status dcos-local-universe-http
+sudo systemctl status dcos-local-universe-registry
+</code></pre>
+</li>
+</ol>
+<p>##配置多个管理节点</p>
+<p>如果您只有一个管理节点，跳转到下面 <a href="#linking">将本地 Catalog 链接到管理节点</a>。如果您有多个管理节点，请继续执行以下程序。</p>
+<ol>
+<li>
+<p>使用以下命令发现所有管理节点的私有 IP 地址。识别现在从列表中通过 SSH 所进入的管理节点的私有 IP 地址。它将与在您的提示中 <code>core@ip-</code> 之后显示的路径匹配，其中连字符变为句号。</p>
+<pre><code class="language-bash">host master.mesos
+</code></pre>
+</li>
+<li>
+<p>使用 <a href="https://linux.die.net/man/1/scp">安全副本</a> 将 Catalog 和注册表文件传输到其他管理节点之一。将 <code>&lt;master-IP&gt;</code> 替换为另一个管理节点的 IP 地址。</p>
+<pre><code class="language-bash">scp local-universe.tar.gz core@&lt;master-IP&gt;:~
+scp /etc/systemd/system/dcos-local-universe-registry.service core@&lt;master-IP&gt;:~
+scp /etc/systemd/system/dcos-local-universe-http.service core@&lt;master-IP&gt;:~
+</code></pre>
+</li>
+<li>
+<p><a href="/dcosdocs/mesosphere/dcos/2.0/administering-clusters/sshcluster/">SSH</a> 至收到这些复制文件的管理节点中</p>
+<pre><code class="language-bash">ssh -A core@&lt;master_IP&gt;
+</code></pre>
+</li>
+<li>
+<p>确认文件已成功复制。</p>
+<pre><code class="language-bash">ls
+</code></pre>
+</li>
+</ol>
+<p>您应该看到以下列出的文件。</p>
+<pre><code>```text
+dcos-local-universe-http.service  dcos-local-universe-registry.service  local-universe.tar.gz
+```
+</code></pre>
+<ol start="5">
+<li>
+<p>将注册表文件移动到 <code>/etc/systemd/system/</code> 目录。</p>
+<pre><code class="language-bash">sudo mv dcos-local-universe-registry.service /etc/systemd/system/
+sudo mv dcos-local-universe-http.service /etc/systemd/system/
+</code></pre>
+</li>
+<li>
+<p>确认文件已成功复制到 <code>/etc/systemd/system/</code>。</p>
+<pre><code class="language-bash">ls -la /etc/systemd/system/dcos-local-universe-*
+</code></pre>
+</li>
+<li>
+<p>将 Catalog 加载到本地 Docker 实例中。这可能需要一些时间才能完成。</p>
+<pre><code class="language-bash">sudo docker load &lt; local-universe.tar.gz
+</code></pre>
+</li>
+<li>
+<p>重新启动 Docker 守护程序。</p>
+<pre><code class="language-bash">sudo systemctl daemon-reload
+</code></pre>
+</li>
+<li>
+<p>启动 <code>dcos-local-universe-http</code> 和 <code>dcos-local-universe-registry</code> 服务。</p>
+<pre><code class="language-bash">sudo systemctl start dcos-local-universe-http
+sudo systemctl start dcos-local-universe-registry
+</code></pre>
+</li>
+<li>
+<p>确认服务现已启动和运行。</p>
+<pre><code class="language-bash">sudo systemctl status dcos-local-universe-http
+sudo systemctl status dcos-local-universe-registry
+</code></pre>
+</li>
+</ol>
+<p>重复本部分操作，直到对所有管理节点完成这一程序。然后继续执行下面的将本地 Catalog 链接到管理节点部分。</p>
+<p><a name="linking"></a></p>
+<h2 id="catalog-2"><a class="content__anchor" href="#catalog-2" aria-hidden="true"><i data-feather="bookmark"></i></a>将本地 Catalog 链接到管理节点</h2>
+<ol>
+<li>
+<p>通过键入 <code>exit</code> 或打开新终端提示关闭 SSH 会话。如果有多个管理节点，您可能必须退出多个 SSH 会话。</p>
+</li>
+<li>
+<p>（可选）使用以下命令删除群集对默认 Catalog 的引用。如果要将默认 Catalog 保留在适当位置，只需将本地 Catalog 添加为附加存储库，跳至下一步。您还可以从 DC/OS Web 界面中的 <strong>设置</strong> &gt; <strong>包存储库</strong> 中删除对默认 Catalog 存储库的引用。</p>
+<pre><code class="language-bash">dcos package repo remove Catalog
+</code></pre>
+</li>
+</ol>
+<ol>
+<li>
+<p>使用以下命令添加对您已添加到每个管理节点的本地 Catalog 的引用。</p>
+<pre><code class="language-bash">dcos package repo add local-Catalog http://master.mesos:8082/repo
+</code></pre>
+</li>
+<li>
+<p><a href="/dcosdocs/mesosphere/dcos/2.0/administering-clusters/sshcluster/">SSH 至您的代理节点之一。</a></p>
+<pre><code class="language-bash">dcos node ssh --master-proxy --mesos-id=&lt;mesos-id&gt;
+</code></pre>
+</li>
+<li>
+<p>使用以下命令下载 DC/OS 证书副本到本地，并将其设置为可信任。</p>
+<pre><code class="language-bash">sudo mkdir -p /etc/docker/certs.d/master.mesos:5000
+sudo curl -o /etc/docker/certs.d/master.mesos:5000/ca.crt http://master.mesos:8082/certs/domain.crt
+sudo systemctl restart docker
+</code></pre>
+</li>
+<li>
+<p>配置 Apache® Mesos® 提取程序以信任下载的 Docker 证书。</p>
+</li>
+</ol>
+<ul>
+<li>复制证书：<pre><code>sudo cp /etc/docker/certs.d/master.mesos:5000/ca.crt /var/lib/dcos/pki/tls/certs/docker-registry-ca.crt
+</code></pre>
+</li>
+<li>生成哈希值：<pre><code class="language-bash">cd /var/lib/dcos/pki/tls/certs/
+openssl x509 -hash -noout -in docker-registry-ca.crt
+</code></pre>
+</li>
+<li>创建软链接。您需要在公共代理创建 <code>/pki/tls/certs</code> 目录。<pre><code class="language-bash">sudo ln -s /var/lib/dcos/pki/tls/certs/docker-registry-ca.crt /var/lib/dcos/pki/tls/certs/&lt;hash_number&gt;.0
+</code></pre>
+</li>
+</ul>
+<ol>
+<li>通过键入 <code>exit</code> 或打开新终端提示关闭 SSH 会话。在每个代理节点上重复这些步骤。</li>
+<li>要验证操作成功，登录 DC/OS Web 界面，单击 <strong>Catalog</strong> 选项卡。您会看到已认证包列表。安装其中一个包。</li>
+</ol>
+<h3 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>常见问题</h3>
+<ul>
+<li><strong>我无法安装 CLI 子命令</strong></li>
+</ul>
+<p>包托管于 <code>master.mesos:8082</code>。如果您无法从您的 DC/OS CLI 安装解析或连接到 <code>master.mesos:8082</code>，您无法安装 CLI 子命令。如果您可以在管理节点上连接到端口 8082，将其中一个管理节点 IP 添加到 <code>/etc/hosts</code>。</p>
+<ul>
+<li><strong>镜像破损</strong></li>
+</ul>
+<p>所有 Catalog 组件都托管在您的群集中，包括镜像。组件由 <code>master.mesos:8082</code>提供。如果您已经连接到该 IP，您可以将其添加到 <code>/etc/hosts</code> 并让镜像工作。</p>
+<ul>
+<li><strong>我没有看到我在找的包</strong></li>
+</ul>
+<p>默认情况下，仅捆绑已认证的包。如果您想获得其他包，请参阅下一节中的说明。</p>
+<h1 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="build"></a>选定的包</h1>
+<p><strong>先决条件：</strong> <a href="https://git-scm.com/">Git</a>。在 UNIX®/Linux® 上，查看这些 <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank">安装说明</a>。</p>
+<p>要部署包含您自己的包集合的本地 Catalog，必须构建自定义本地 Catalog Docker 镜像。</p>
+<ol>
+<li>
+<p>克隆 Catalog 存储库：</p>
+<pre><code class="language-bash">git clone https://github.com/mesosphere/universe.git --branch version-3.x
+</code></pre>
+</li>
+<li>
+<p>构建 <code>universe-base</code> 镜像：</p>
+<pre><code class="language-bash">cd universe/docker/local-universe/
+sudo make base
+</code></pre>
+</li>
+<li>
+<p>构建 <code>mesosphere/universe</code> Docker 镜像并将其压缩至 <code>local-universe.tar.gz</code>
+文件。使用 <code>DCOS_PACKAGE_INCLUDE</code>
+变量指定逗号分隔的包名和版本列表。要最大程度地减少容器尺寸和下载时间，您可以仅选择所需的内容。如果您不使用 <code>DCOS_PACKAGE_INCLUDE</code> 变量，所有已认证 Catalog 包都会
+。要查看哪些包已获得认证，单击 DC/OS Web 界面中的
+<strong>目录</strong> 选项卡。</p>
+<pre><code class="language-bash">sudo make DCOS_VERSION=1.13 DCOS_PACKAGE_INCLUDE=&quot;cassandra:1.0.25-3.0.10,marathon:1.4.2&quot; local-universe
+</code></pre>
+</li>
+<li>
+<p>执行 <a href="#certified">已认证 Catalog 包</a> 中描述的所有步骤。</p>
+</li>
+</ol>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#catalog">认证 Catalog 包</a></li><li class="content__sections-item content__sections-item--h2"><a href="#catalog-2">将本地 Catalog 链接到管理节点</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-2">选定的包</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

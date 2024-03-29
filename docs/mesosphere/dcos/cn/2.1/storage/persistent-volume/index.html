@@ -1,0 +1,401 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>本地持久卷 - D2iQ Docs</title><meta name="description" content="使用本地持久卷"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.1/storage/persistent-volume">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/persistent-volume">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/storage/persistent-volume">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/storage/persistent-volume">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/"><i data-feather="chevron-right"></i>安全</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/"><i data-feather="chevron-right"></i>存储</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/mount-disk-resources/">挂载磁盘资源</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/nfs/">NFS 服务器</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/persistent-volume/">本地持久卷</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/external-storage/">外部持久卷</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">本地持久卷</h1></div><h4 class="content__header-description">使用本地持久卷</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.1/storage/persistent-volume/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>当您指定本地卷时，任务及其关联的数据将“固定”到首次启动的节点，如果它们终止，将在该节点上重新启动。还保留应用程序所需的资源。除了您指定为应用定义一部分的沙盒 <code>persistent.size</code> 大小外，Marathon 将隐式保留适当的磁盘空间（通过 <code>disk</code> 在卷中声明）。</p>
+<h1 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>使用本地持久卷的好处</h1>
+<ul>
+<li>动态保留有状态服务运行任务所需的所有资源，因此，确保在需要时使用相同的卷在同一节点上重新启动任务的能力。</li>
+<li>您不需要约束，就可将任务固定到其数据所在的特定代理程序。</li>
+<li>您仍可以使用约束来指定分发逻辑。</li>
+<li>Marathon 使您可以在不再需要的情况下找到和销毁未使用的持久卷。</li>
+</ul>
+<h1 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>使用本地持久卷创建应用定义</h1>
+<h2 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>配置卷</h2>
+<p>使用以下选项配置持久卷:</p>
+<pre><code class="language-json">{
+  &quot;containerPath&quot;: &quot;data&quot;,
+  &quot;mode&quot;: &quot;RW&quot;,
+  &quot;persistent&quot;: {
+    &quot;type&quot;: &quot;root&quot;,
+    &quot;size&quot;: 10,
+    &quot;constraints&quot;: []
+  }
+}
+</code></pre>
+<ul>
+<li><code>containerPath</code>：应用程序读写数据的路径。这必须是相对于容器的单层路径；不能包含正斜杠 (<code>/</code>)。（<code>&quot;data&quot;</code>，但不是 <code>&quot;/data&quot;</code>、<code>&quot;/var/data&quot;</code> 或 <code>&quot;var/data&quot;</code>).</li>
+<li><code>mode</code>：卷的访问模式。目前， <code>&quot;RW&quot;</code> 是唯一可能的值，它将允许您的应用程序从卷中读取及写入卷。</li>
+<li><code>persistent.type</code>：要使用的 Mesos 磁盘资源类型；有效选项为 <code>root</code>、<code>path</code> 和 <code>mount</code>，对应于<a href="http://mesos.apache.org/documentation/latest/multiple-disk/">有效的 Mesos 多磁盘资源类型</a>。</li>
+<li><code>persistent.size</code>：持久卷的大小 (MiB)。</li>
+<li><code>persistent.profileName</code>：（上文未见）存储<a href="/dcosdocs/mesosphere/dcos/cn/services/storage/latest/terminology-and-concepts/#volume-profile">卷配置文件</a>。仅使用具有指定配置文件的卷来启动应用程序。如果未给出此选项，任何卷（有或无配置文件）将用于启动。</li>
+<li><code>persistent.maxSize</code>：（上文未见）对于 <code>root</code> Mesos 磁盘资源，要考虑的专属挂载卷的可选最大大小。</li>
+<li><code>persistent.constraints</code>：限制应该在何处创建新持久卷的约束。目前，只能通过正常表达式约束磁盘资源的路径。</li>
+</ul>
+<h2 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>配置有状态应用程序</h2>
+<p>若要设置有状态应用程序，请将 <code>unreachableStrategy</code> 设置为“禁用”。</p>
+<pre><code class="language-json">&quot;unreachableStrategy&quot;: &quot;disabled&quot;,
+</code></pre>
+<p><a name="abs-paths"></a></p>
+<h2 id="-5"><a class="content__anchor" href="#-5" aria-hidden="true"><i data-feather="bookmark"></i></a>指定不受支持的容器路径</h2>
+<p>为了允许您将本地持久卷动态地添加到正在运行的容器中并确保跨操作系统的一致性，<code>containerPath</code> 的值必须是相对的。然而，您的应用程序可能需要绝对容器路径或带有斜杠的相对容器路径。如果您的应用程序确实需要不受支持的 <code>containerPath</code>，则可以通过配置两个卷来处理此限制。第一个卷具有您需要的绝对容器路径，并且没有 <code>persistent</code> 参数。第一个卷的 <code>hostPath</code> 参数必须与第二个卷的相对 <code>containerPath</code> 相匹配。</p>
+<pre><code class="language-json">{
+  &quot;containerPath&quot;: &quot;/var/lib/data&quot;,
+  &quot;hostPath&quot;: &quot;mydata&quot;,
+  &quot;mode&quot;: &quot;RW&quot;
+}
+</code></pre>
+<p>第二个卷是持久卷，具有与第一个卷 <code>containerPath</code> 相匹配的 <code>hostPath</code></p>
+<pre><code class="language-json">{
+  &quot;containerPath&quot;: &quot;mydata&quot;,
+  &quot;mode&quot;: &quot;RW&quot;,
+  &quot;persistent&quot;: {
+    &quot;size&quot;: 1000
+  }
+}
+</code></pre>
+<p>如需完整示例，请参阅 <a href="#stateful-sql">在 Marathon 上运行有状态 MySQL</a>。</p>
+<h1 id="dcos-web"><a class="content__anchor" href="#dcos-web" aria-hidden="true"><i data-feather="bookmark"></i></a>通过 DC/OS Web 界面创建有状态应用程序</h1>
+<ol>
+<li>单击 <strong>Services</strong> 选项卡，然后 <strong>RUN A SERVICE</strong>。</li>
+<li>单击 <strong>Volumes</strong> 选项卡。</li>
+<li>选择要使用的卷的大小。确保您选择符合应用程序需求的卷大小；启动应用程序后，您将无法修改此大小。</li>
+<li>指定应用程序将读写数据的容器路径。容器路径必须非嵌套的，且不能包含斜杠，如 <code>data</code>，但不是 <code>../../../etc/opt</code> 或 <code>/user/data/</code>。如果您的应用程序需要此类容器路径，请<a href="#abs-path">使用此配置</a>。</li>
+<li>单击 <strong>Create</strong>。</li>
+</ol>
+<h1 id="-6"><a class="content__anchor" href="#-6" aria-hidden="true"><i data-feather="bookmark"></i></a>扩展有状态的应用程序</h1>
+<p>当您为应用程序减容时，与已终止实例关联的卷将被分离，但仍保留所有资源。此时，您可以通过 Marathon API 删除任务，这将释放保留的资源并销毁持久卷。</p>
+<p>由于在分离卷时仍然保留应用程序所需的所有资源，因此您可能希望销毁分离的卷以允许其他应用程序和框架使用这些资源。但是，如果您认为您将再次为您的应用程序增容，您可能希望将它们保持在分离状态；卷上的数据仍然存在。如果您的应用程序被销毁，任何关联的卷和保留资源也将被删除。Mesos 目前不会删除数据，但将来可能会这样做。</p>
+<h1 id="-7"><a class="content__anchor" href="#-7" aria-hidden="true"><i data-feather="bookmark"></i></a>升级或重新启动有状态的应用程序</h1>
+<p>有状态应用程序的默认 <code>UpgradeStrategy</code> 为 <code>minimumHealthCapacity</code> 的 <code>0.5</code> 以及 <code>maximumOverCapacity</code> 的 <code>0</code>. 如果覆盖此默认值，则您的定义必须保持低于这些值才能通过验证。<code>UpgradeStrategy</code> 必须保持低于这些价值，因为 Marathon 需要能够在开始新的任务之前终止旧任务，以便新版本可以接管保留和卷，并且 Marathon 无法创建其他任务（因为 <code>maximumOverCapacity &gt; 0</code> 会诱导）以防止其他卷创建。</p>
+<p>对于有状态的应用程序，Marathon 将永远不会启动比 <code>UpgradeStrategy</code> 中指定实例更多的实例，并且会在升级或重新启动期间终止旧实例而不是创建新实例。</p>
+<h1 id="pod-beta"><a class="content__anchor" href="#pod-beta" aria-hidden="true"><i data-feather="bookmark"></i></a>创建具有本地持久卷的 pod <span class="badge badge--shortcode badge--large badge--block badge--beta">Beta</span></h1>
+<h2 id="-8"><a class="content__anchor" href="#-8" aria-hidden="true"><i data-feather="bookmark"></i></a>配置卷</h2>
+<p>使用以下选项配置持久卷:</p>
+<pre><code class="language-json">&quot;volumes&quot;: [
+  {
+    &quot;name&quot;: &quot;pst&quot;,
+    &quot;persistent&quot;: {
+      &quot;type&quot;: &quot;root&quot;,
+      &quot;size&quot;: 10,
+      &quot;constraints&quot;: []
+    }
+  }
+]
+</code></pre>
+<p>其中</p>
+<ul>
+<li><code>name</code>：pod 级别卷的名称</li>
+<li><code>persistent.type</code>：要使用的 Mesos 磁盘资源类型；有效选项为 <code>root</code>、<code>path</code> 和 <code>mount</code>，对应于<a href="http://mesos.apache.org/documentation/latest/multiple-disk/">有效的 Mesos 多磁盘资源类型</a>。</li>
+<li><code>persistent.size</code>：持久卷的大小 (MiB)。</li>
+<li><code>persistent.maxSize</code>：（上文未见）对于 <code>root</code> Mesos 磁盘资源，要考虑的专属挂载卷的可选最大大小。</li>
+<li><code>persistent.profileName</code>：（上文未见）存储<a href="/dcosdocs/mesosphere/dcos/cn/services/storage/latest/terminology-and-concepts/#volume-profile">卷配置文件</a>。仅使用具有指定配置文件的卷来启动应用程序。如果未给出此选项，任何卷（有或无配置文件）将用于启动。</li>
+<li><code>persistent.constraints</code>：限制应该在何处创建新持久卷的约束。目前，只能通过正常表达式约束磁盘资源的路径。</li>
+</ul>
+<h2 id="pod"><a class="content__anchor" href="#pod" aria-hidden="true"><i data-feather="bookmark"></i></a>配置有状态的 pod</h2>
+<p>若要设置有状态 pod，请将 <code>unreachableStrategy</code> 设置为“禁用”。</p>
+<pre><code class="language-json">&quot;unreachableStrategy&quot;: &quot;disabled&quot;,
+</code></pre>
+<h2 id="-9"><a class="content__anchor" href="#-9" aria-hidden="true"><i data-feather="bookmark"></i></a>指定卷挂载参数</h2>
+<pre><code class="language-json">&quot;volumeMounts&quot;: [
+  {
+    &quot;name&quot;: &quot;pst&quot;,
+    &quot;mountPath&quot;: &quot;pst1&quot;,
+    &quot;readOnly&quot;: false
+  }
+]
+</code></pre>
+<p>其中</p>
+<ul>
+<li><code>name</code>：要引用的卷的名称。</li>
+<li><code>mountPath</code>：卷所挂载的容器内的路径。</li>
+<li><code>readOnly</code>：卷是否以只读方式挂载。</li>
+</ul>
+<h1 id="-10"><a class="content__anchor" href="#-10" aria-hidden="true"><i data-feather="bookmark"></i></a>在后台</h1>
+<p>Marathon 利用三种 Mesos 功能来运行有状态应用程序：<a href="http://mesos.apache.org/documentation/latest/reservation/">动态预留</a>、预留标签和<a href="http://mesos.apache.org/documentation/latest/persistent-volume/">持久卷</a>。</p>
+<p>与静态保留相反，动态预留在运行时为给定角色创建，并使用预留标签将资源与 <code>frameworkId</code> 和 <code>taskId</code> 的组合相关联。这允许 Marathon 在由于某种原因终止后重新启动有状态任务，因为相关资源将不会提供给未配置为使用此角色的框架。有关更多信息，请参阅<a href="#non-unique-roles">非唯一角色</a>。</p>
+<p>Mesos 创建持久卷以保存应用程序的状态数据。由于持久卷是代理程序本地的，因此使用此数据的有状态任务将固定到最初启动的代理程序上，并且将在需要时在此节点上重新启动。您无需为此指定任何约束：当 Marathon 需要启动任务时，它将接受匹配的 Mesos 服务提供，动态保留任务所需的资源，创建持久卷，并确保使用这些保留的资源始终重新启动任务，以便它可以访问现有的数据。</p>
+<p>当使用持久卷的任务已终止时，将保留其元数据。此元数据将用于在需要时启动替换任务。</p>
+<p>例如，如果从 5 个实例减容到 3 个实例，您将看到处于 <code>Waiting</code> 状态的 2 个任务以及关于任务所使用的持久卷和任务所在代理的信息。Marathon 不会取消保留这些资源，也不会销毁这些资源。当您再次增容时，Marathon 将在获得包含标记资源的 Mesos 服务提供时尝试启动使用这些现有保留和卷的任务。Marathon 将仅在以下情况下安排取消保留/销毁操作：</p>
+<ul>
+<li>应用程序被删除（在这种情况下，其所有任务的卷都将被销毁，并且所有预留都将被删除）。</li>
+<li>您可以通过 <code>wipe=true</code> 标志明确删除一个或多个暂停任务。</li>
+</ul>
+<p>如果预留资源或创建持久卷失败，则创建的任务将在配置 <code>task_reservation_timeout</code>（默认：20 秒）后超时，并且将进行新的预留尝试。如果任务 <code>LOST</code>（因为其代理程序断开链接或崩溃），预留和卷不会超时，您需要手动删除并擦除任务以让 Marathon 启动新的任务。</p>
+<h1 id="-11"><a class="content__anchor" href="#-11" aria-hidden="true"><i data-feather="bookmark"></i></a>潜在缺陷</h1>
+<p>在使用动态预留和持久卷的 Marathon 中使用有状态应用程序时，请注意以下问题和限制。</p>
+<h2 id="-12"><a class="content__anchor" href="#-12" aria-hidden="true"><i data-feather="bookmark"></i></a>资源要求</h2>
+<p>目前，在部署了应用定义后，将 <strong>无法</strong> 更改有状态应用程序的资源要求卷大小、CPU 使用率、内存要求等。</p>
+<h2 id="-13"><a class="content__anchor" href="#-13" aria-hidden="true"><i data-feather="bookmark"></i></a>复制和备份</h2>
+<p>由于持久卷被固定到节点，因此如果节点与群集断开连接（例如，由于网络分区或崩溃的代理程序），则不可再访问它们。如果有状态服务本身不处理数据复制，则需要手动设置复制或备份策略，以防止网络分区或崩溃的代理程序导致的数据丢失。</p>
+<p>如果代理程序重新注册群集并提供其资源，Marathon 最终能够重新启动任务。如果节点不重新注册群集，Marathon 将永远等待接收预期的服务提供，因为其目标是重新使用现有数据。如果预计代理程序不会返回，您可以通过添加 <code>wipe=true</code> 标志手动删除相关任务，Marathon 最终将在另一代理程序上使用新卷启动新任务。</p>
+<h2 id="-14"><a class="content__anchor" href="#-14" aria-hidden="true"><i data-feather="bookmark"></i></a>磁盘消耗</h2>
+<p>从 Mesos 0.28 起，销毁持久卷不会清理或销毁数据。Mesos 删除所提及的有关卷的元数据，但数据仍保留在磁盘上。为防止磁盘消耗，您应当在不再需要时手动删除数据。</p>
+<p><a name="non-unique-roles"></a></p>
+<h2 id="-15"><a class="content__anchor" href="#-15" aria-hidden="true"><i data-feather="bookmark"></i></a>非唯一角色</h2>
+<p>Mesos 中的静态和动态预留均与角色绑定，而不是与框架或框架实例绑定。如上所述，Marathon 添加标签，以声称已为 <code>frameworkId</code> 和 <code>taskId</code> 的组合保留了资源。但是，这些标签不能防止其他框架或旧 Marathon 实例（1.0 之前）的误用。注册给定角色的每个 Mesos 框架最终都会收到服务提供，其包含为该角色保留的资源。</p>
+<p>但是，如果另一个框架不遵守预期的标签和语义的存在并使用它们，则 Marathon 无法为初始目的回收这些资源。如果其中一个框架使用动态预留，我们建议不要对不同的框架使用相同的角色。HA 模式下的 Marathon 实例不需要具有唯一角色，因为它们在设计上使用相同的角色。</p>
+<h3 id="the-mesos"><a class="content__anchor" href="#the-mesos" aria-hidden="true"><i data-feather="bookmark"></i></a>The Mesos 沙盒</h3>
+<p>临时 Mesos  沙盒仍然是 <code>stdout</code> 和 <code>stderr</code> 日志的目标。要查看这些日志，请转到 DC/OS GUI 的 Marathon 窗格。</p>
+<h1 id="-16"><a class="content__anchor" href="#-16" aria-hidden="true"><i data-feather="bookmark"></i></a>示例</h1>
+<p><a name="stateful-sql"></a></p>
+<h2 id="marathon-mysql"><a class="content__anchor" href="#marathon-mysql" aria-hidden="true"><i data-feather="bookmark"></i></a>Marathon 上有状态的 MySQL</h2>
+<p>默认 MySQL Docker 镜像不允许您更改数据文件夹。由于我们无法使用绝对嵌套的 <code>containerPath</code>（如 <code>/var/lib/mysql</code>）定义持久卷，因此我们配置了一个解决方法来设置从 hostPath <code>mysqldata</code>（相对于 Mesos 沙盒）到 <code>/var/lib/mysql</code>（MySQL 尝试读/写的路径）的 Docker 挂载：</p>
+<pre><code class="language-json">{
+  &quot;containerPath&quot;: &quot;/var/lib/mysql&quot;,
+  &quot;hostPath&quot;: &quot;mysqldata&quot;,
+  &quot;mode&quot;: &quot;RW&quot;
+}
+</code></pre>
+<p>除此之外，我们还使用 containerPath <code>mysqldata</code> 配置持久卷，它将本地持久卷作为 <code>mysqldata</code> 挂载到 Docker 容器中：</p>
+<pre><code class="language-json">{
+  &quot;containerPath&quot;: &quot;mysqldata&quot;,
+  &quot;mode&quot;: &quot;RW&quot;,
+  &quot;persistent&quot;: {
+    &quot;type&quot;: &quot;root&quot;,
+    &quot;size&quot;: 1000
+  }
+}
+</code></pre>
+<p>完整的 JSON 应用定义如下所示：</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/mysql&quot;,
+  &quot;cpus&quot;: 1,
+  &quot;mem&quot;: 512,
+  &quot;disk&quot;: 0,
+  &quot;instances&quot;: 1,
+  &quot;networks&quot;: [
+    {
+      &quot;mode&quot;: &quot;container/bridge&quot;
+    }
+  ],
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;DOCKER&quot;,
+    &quot;volumes&quot;: [
+      {
+        &quot;containerPath&quot;: &quot;mysqldata&quot;,
+        &quot;mode&quot;: &quot;RW&quot;,
+        &quot;persistent&quot;: {
+          &quot;type&quot;: &quot;root&quot;,
+          &quot;size&quot;: 1000
+        }
+      },
+      {
+        &quot;containerPath&quot;: &quot;/var/lib/mysql&quot;,
+        &quot;hostPath&quot;: &quot;mysqldata&quot;,
+        &quot;mode&quot;: &quot;RW&quot;
+      }
+    ],
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;mysql&quot;,
+      &quot;forcePullImage&quot;: false
+    },
+    &quot;portMappings&quot;: [
+      {
+        &quot;containerPort&quot;: 3306,
+        &quot;hostPort&quot;: 0,
+        &quot;servicePort&quot;: 10000,
+        &quot;protocol&quot;: &quot;tcp&quot;
+      }
+    ]
+  },
+  &quot;env&quot;: {
+    &quot;MYSQL_USER&quot;: &quot;wordpress&quot;,
+    &quot;MYSQL_PASSWORD&quot;: &quot;secret&quot;,
+    &quot;MYSQL_ROOT_PASSWORD&quot;: &quot;supersecret&quot;,
+    &quot;MYSQL_DATABASE&quot;: &quot;wordpress&quot;
+  },
+  &quot;unreachableStrategy&quot;: &quot;disabled&quot;,
+  &quot;upgradeStrategy&quot;: {
+    &quot;minimumHealthCapacity&quot;: 0,
+    &quot;maximumOverCapacity&quot;: 0
+  }
+}
+</code></pre>
+<p><a name="stateful-postgres"></a></p>
+<h2 id="marathon-postgresql"><a class="content__anchor" href="#marathon-postgresql" aria-hidden="true"><i data-feather="bookmark"></i></a>Marathon 上有状态的 PostgreSQL</h2>
+<p>在 Marathon 上为 PostgreSQL 创建应用定义类似于为 MySQL 创建定义。为防止 Postgres 将数据存储在非持久的 <code>/pgdata</code> 文件夹或必须归 <code>root</code> 所有的位置，应避免使用 <code>$PGDATA</code> 环境变量。相反，可以使用应用定义来配置两个持久卷，其设置类似于以下内容：</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/postgres&quot;,
+  &quot;cpus&quot;: 1,
+  &quot;instances&quot;: 1,
+  &quot;mem&quot;: 512,
+  &quot;networks&quot;: [
+    {
+      &quot;mode&quot;: &quot;container/bridge&quot;
+    }
+  ],
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;DOCKER&quot;,
+    &quot;volumes&quot;: [
+      {
+        &quot;containerPath&quot;: &quot;pgdata&quot;,
+        &quot;mode&quot;: &quot;RW&quot;,
+        &quot;persistent&quot;: {
+          &quot;type&quot;: &quot;mount&quot;,
+          &quot;size&quot;: 524288,
+          &quot;maxSize&quot;: 1048576,
+          &quot;constraints&quot;: [[&quot;path&quot;, &quot;LIKE&quot;, &quot;/mnt/ssd-.+&quot;]]
+        }
+      }
+    ],
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;postgres:latest&quot;
+    },
+    &quot;portMappings&quot;: [
+      {
+        &quot;containerPort&quot;: 5432,
+        &quot;hostPort&quot;: 0,
+        &quot;protocol&quot;: &quot;tcp&quot;,
+        &quot;name&quot;: &quot;postgres&quot;
+      }
+    ]
+  },
+  &quot;env&quot;: {
+    &quot;POSTGRES_PASSWORD&quot;: &quot;password&quot;,
+    &quot;PGDATA&quot;: &quot;pgdata&quot;
+  },
+  &quot;unreachableStrategy&quot;: &quot;disabled&quot;,
+  &quot;upgradeStrategy&quot;: {
+    &quot;maximumOverCapacity&quot;: 0,
+    &quot;minimumHealthCapacity&quot;: 0
+  }
+}
+</code></pre>
+<h2 id="pod-2"><a class="content__anchor" href="#pod-2" aria-hidden="true"><i data-feather="bookmark"></i></a>含有持久卷的 Pod</h2>
+<p>以下示例将创建含有两个容器和一个共享持久卷的 Pod。另请参见 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/pods/">Pod</a>.</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/persistent-volume-pod&quot;,
+  &quot;volumes&quot;: [
+    {
+      &quot;name&quot;: &quot;pst&quot;,
+      &quot;persistent&quot;: {
+        &quot;type&quot;: &quot;root&quot;,
+        &quot;size&quot;: 10,
+        &quot;constraints&quot;: []
+      }
+    }
+  ],
+  &quot;scaling&quot;: {
+    &quot;kind&quot;: &quot;fixed&quot;,
+    &quot;instances&quot;: 1
+  },
+  &quot;scheduling&quot;: {
+    &quot;unreachableStrategy&quot;: &quot;disabled&quot;,
+    &quot;upgrade&quot;: {
+      &quot;minimumHealthCapacity&quot;: 0,
+      &quot;maximumOverCapacity&quot;: 0
+    }
+  },
+  &quot;containers&quot;: [
+    {
+      &quot;name&quot;: &quot;container1&quot;,
+      &quot;exec&quot;: {
+        &quot;command&quot;: {
+          &quot;shell&quot;: &quot;cd $MESOS_SANDBOX &amp;&amp; echo 'hello' &gt;&gt; pst1/foo &amp;&amp; /opt/mesosphere/bin/python -m http.server $EP_HOST_HTTPCT1&quot;
+        }
+      },
+      &quot;resources&quot;: {
+        &quot;cpus&quot;: 0.1,
+        &quot;mem&quot;: 128
+      },
+      &quot;endpoints&quot;: [
+        {
+          &quot;name&quot;: &quot;httpct1&quot;,
+          &quot;hostPort&quot;: 0,
+          &quot;protocol&quot;: [
+            &quot;tcp&quot;
+          ]
+        }
+      ],
+      &quot;volumeMounts&quot;: [
+        {
+          &quot;name&quot;: &quot;pst&quot;,
+          &quot;mountPath&quot;: &quot;pst1&quot;,
+          &quot;readOnly&quot;: false
+        }
+      ],
+      &quot;lifecycle&quot;: {
+        &quot;killGracePeriodSeconds&quot;: 60
+      }
+    },
+    {
+      &quot;name&quot;: &quot;container2&quot;,
+      &quot;exec&quot;: {
+        &quot;command&quot;: {
+          &quot;shell&quot;: &quot;cd $MESOS_SANDBOX &amp;&amp; /opt/mesosphere/bin/python -m http.server $EP_HOST_HTTPCT2&quot;
+        }
+      },
+      &quot;resources&quot;: {
+        &quot;cpus&quot;: 0.1,
+        &quot;mem&quot;: 128
+      },
+      &quot;endpoints&quot;: [
+        {
+          &quot;name&quot;: &quot;httpct2&quot;,
+          &quot;hostPort&quot;: 0,
+          &quot;protocol&quot;: [
+            &quot;tcp&quot;
+          ]
+        }
+      ],
+      &quot;volumeMounts&quot;: [
+        {
+          &quot;name&quot;: &quot;pst&quot;,
+          &quot;mountPath&quot;: &quot;pst2&quot;,
+          &quot;readOnly&quot;: false
+        }
+      ],
+      &quot;lifecycle&quot;: {
+        &quot;killGracePeriodSeconds&quot;: 60
+      }
+    }
+  ],
+  &quot;networks&quot;: [
+    {
+      &quot;mode&quot;: &quot;host&quot;
+    }
+  ]
+}
+</code></pre>
+<h2 id="-17"><a class="content__anchor" href="#-17" aria-hidden="true"><i data-feather="bookmark"></i></a>检查/删除暂停的有状态任务</h2>
+<p>要销毁和清理持久卷，并释放与任务相关联的保留资源，请执行以下两个步骤：</p>
+<ol>
+<li>找到包含持久卷的代理程序并删除其中的数据。</li>
+<li>向 Marathon 发送包含 <code>wipe=true</code> 标记的 HTTP DELETE 请求。</li>
+</ol>
+<p>若要查找代理程序，请检查 Marathon UI，并检查 <strong>Volumes</strong>选项卡上的分离卷。或者，查询 <code>/v2/apps</code> 端点，该端点提供有关 <code>host</code> 和 Mesos <code>slaveId</code>. 的信息。</p>
+<pre><code>http GET http://dcos/service/marathon/v2/apps/postgres/tasks
+</code></pre>
+<p>响应：</p>
+<pre><code class="language-json">{
+  &quot;appId&quot;: &quot;/postgres&quot;,
+  &quot;host&quot;: &quot;10.0.0.168&quot;,
+  &quot;id&quot;: &quot;postgres.53ab8733-fd96-11e5-8e70-76a1c19f8c3d&quot;,
+  &quot;localVolumes&quot;: [
+    {
+      &quot;containerPath&quot;: &quot;pgdata&quot;,
+      &quot;persistenceId&quot;: &quot;postgres#pgdata#53ab8732-fd96-11e5-8e70-76a1c19f8c3d&quot;
+    }
+  ],
+  &quot;slaveId&quot;: &quot;d935ca7e-e29d-4503-94e7-25fe9f16847c-S1&quot;
+}
+</code></pre>
+<p class="message--note"><strong>注意：</strong>除上述信息外，正在运行的任务还将显示 <code>stagedAt</code>、<code>startedAt</code> 和<code>版本</code></p>
+<p>然后，您可以</p>
+<ol>
+<li>
+<p>通过 <code>ssh'ing</code> 进入代理程序并运行 <code>rm -rf &lt;volume-path&gt;/*</code> 命令。</p>
+</li>
+<li>
+<p>使用 <code>wipe=true</code> 删除任务，这将从 Marathon 内部存储库中删除任务信息，最终销毁卷并取消保留以前与任务关联的资源：</p>
+<pre><code>http DELETE http://dcos/service/marathon/v2/apps/postgres/tasks/postgres.53ab8733-fd96-11e5-8e70-76a1c19f8c3d?wipe=true
+</code></pre>
+</li>
+</ol>
+<h2 id="-18"><a class="content__anchor" href="#-18" aria-hidden="true"><i data-feather="bookmark"></i></a>查看应用程序状态</h2>
+<p>您可以使用持久本地卷查看应用程序的状态。在创建应用程序后，单击应用程序详细视图的 <strong>Volumes</strong> 选项卡以获取有关应用程序实例和关联卷的详细信息。</p>
+<p>状态列会告诉您应用程序实例是否连接到卷。如果您对应用程序进行了减容，则应用程序实例将显示为“已分离”。目前唯一可用的操作类型为读/写 (RW)。</p>
+<p>单击卷查看卷详细信息页面，您可以在其中查看有关各个卷的信息。</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#使用本地持久卷的好处">使用本地持久卷的好处</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-2">使用本地持久卷创建应用定义</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-3">配置卷</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-4">配置有状态应用程序</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-5">指定不受支持的容器路径</a></li><li class="content__sections-item content__sections-item--h1"><a href="#dcos-web">通过 DC/OS Web 界面创建有状态应用程序</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-6">扩展有状态的应用程序</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-7">升级或重新启动有状态的应用程序</a></li><li class="content__sections-item content__sections-item--h1"><a href="#pod-beta">创建具有本地持久卷的 pod Beta</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-8">配置卷</a></li><li class="content__sections-item content__sections-item--h2"><a href="#pod">配置有状态的 pod</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-9">指定卷挂载参数</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-10">在后台</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-11">潜在缺陷</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-12">资源要求</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-13">复制和备份</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-14">磁盘消耗</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-15">非唯一角色</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-16">示例</a></li><li class="content__sections-item content__sections-item--h2"><a href="#marathon-mysql">Marathon 上有状态的 MySQL</a></li><li class="content__sections-item content__sections-item--h2"><a href="#marathon-postgresql">Marathon 上有状态的 PostgreSQL</a></li><li class="content__sections-item content__sections-item--h2"><a href="#pod-2">含有持久卷的 Pod</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-17">检查/删除暂停的有状态任务</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-18">查看应用程序状态</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

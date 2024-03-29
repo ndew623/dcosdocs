@@ -1,0 +1,189 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Deploying a Load-Balanced Data Pipeline - D2iQ Docs</title><meta name="description" content="Tutorial - Building a complete load-balanced data pipeline on DC/OS"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.2"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/tutorials/iot_pipeline">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/tutorials/iot_pipeline">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/tutorials/iot_pipeline">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/tutorials/iot_pipeline">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/dcos-101/"><i data-feather="chevron-right"></i>DC/OS 101</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/create-service/">Creating and Running a Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/stateful-services/">Running Stateful Services on DC/OS</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/autoscaling/"><i data-feather="chevron-right"></i>Autoscaling with Marathon</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/iot_pipeline/">Deploying a Load-Balanced Data Pipeline</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/deploy-on-marathon/">Deploying Marathon Apps with Jenkins</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/task-labels/">Labeling Tasks and Jobs</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/dcos-debug/"><i data-feather="chevron-right"></i>Debugging Applications on DC/OS</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/archives/">Access Documentation Archives</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Deploying a Load-Balanced Data Pipeline</h1></div><h4 class="content__header-description">Tutorial - Building a complete load-balanced data pipeline on DC/OS</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.2/tutorials/iot_pipeline/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- This disclaimer should be included at the beginning of each page of a tutorial. -->
+<p class="message--important"><strong>IMPORTANT: </strong>Tutorials are intended to give you hands-on experience working with a limited set of DC/OS features with no implied or explicit warranty of any kind. None of the information provided--including sample scripts, commands, or applications--is officially supported by Mesosphere. You should not use this information in a production environment without independent testing and validation.</p>
+<p>This tutorial demonstrates how you can build a complete load-balanced data pipeline on DC/OS in about 15 minutes!</p>
+<h1 id="overview"><a class="content__anchor" href="#overview" aria-hidden="true"><i data-feather="bookmark"></i></a>Overview</h1>
+<p>In this tutorial you will install and deploy a containerized Ruby on Rails app named Tweeter. Tweeter is an app similar to Twitter that you can use to post 140-character messages to the internet. Then, you use Zeppelin to perform real-time analytics on the data created by Tweeter.</p>
+<p>You will learn:</p>
+<ul>
+<li>How to install DC/OS services</li>
+<li>How to add apps to DC/OS Marathon</li>
+<li>How to route public traffic to the private application with Marathon-LB</li>
+<li>How your apps are discovered</li>
+<li>How to scale your apps</li>
+</ul>
+<p>This tutorial uses DC/OS to launch and deploy these microservices to your cluster:</p>
+<h3 id="cassandra"><a class="content__anchor" href="#cassandra" aria-hidden="true"><i data-feather="bookmark"></i></a>Cassandra</h3>
+<p>The <a href="/dcosdocs/mesosphere/dcos/services/cassandra/latest/">Cassandra</a> database is used on the back-end to store the Tweeter app data.</p>
+<h3 id="kafka"><a class="content__anchor" href="#kafka" aria-hidden="true"><i data-feather="bookmark"></i></a>Kafka</h3>
+<p>The <a href="/dcosdocs/mesosphere/dcos/services/kafka/latest/">Kafka</a> publish-subscribe message service receives tweets from Cassandra and routes them to Zeppelin for real-time analytics.</p>
+<h3 id="marathon-lb"><a class="content__anchor" href="#marathon-lb" aria-hidden="true"><i data-feather="bookmark"></i></a>Marathon-LB</h3>
+<p><a href="/dcosdocs/mesosphere/dcos/services/marathon-lb/latest/">Marathon-LB</a> is an HAProxy based load balancer for Marathon only. It is useful when you require external routing or layer 7 load balancing features.</p>
+<h3 id="zeppelin"><a class="content__anchor" href="#zeppelin" aria-hidden="true"><i data-feather="bookmark"></i></a>Zeppelin</h3>
+<p><a href="http://zeppelin.apache.org/">Zeppelin</a> is an interactive analytics notebook that works with DC/OS Spark on the back-end to enable interactive analytics and visualization. Because it is possible for Spark and Zeppelin to consume all of your cluster resources, you must specify a maximum number of cores for the Zeppelin service.</p>
+<h3 id="tweeter"><a class="content__anchor" href="#tweeter" aria-hidden="true"><i data-feather="bookmark"></i></a>Tweeter</h3>
+<p>Tweeter stores tweets in the DC/OS Cassandra service, streams tweets to the DC/OS Kafka service in real-time, and performs real-time analytics with the DC/OS <a href="/dcosdocs/mesosphere/dcos/services/spark/latest/">Spark</a> and Zeppelin services.</p>
+<h1 id="prepare-and-deploy-tweeter-on-dcos-cluster"><a class="content__anchor" href="#prepare-and-deploy-tweeter-on-dcos-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>Prepare and deploy Tweeter on DC/OS Cluster</h1>
+<h2 id="prerequisites"><a class="content__anchor" href="#prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h2>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/latest/installing/">DC/OS</a> or <a href="/dcosdocs/mesosphere/dcos/latest/installing/">DC/OS Enterprise</a> installed with at least 5 <a href="/dcosdocs/mesosphere/dcos/2.2/overview/concepts/">private agents</a> and 1 <a href="/dcosdocs/mesosphere/dcos/2.2/overview/concepts/">public agent</a>.</li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.2/cli/install/">DC/OS CLI</a> installed.</li>
+<li>The public IP address of your public agent node. After you have installed DC/OS with a public agent node declared, you can <a href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/locate-public-agent/">navigate to the public IP address</a> of your public agent node.</li>
+<li>Git:
+<ul>
+<li><strong>macOS:</strong> Get the installer from <a href="http://git-scm.com/download/mac">Git downloads</a>.</li>
+<li><strong>Unix/Linux:</strong> See these <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">installation instructions</a>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="install-dcos-services"><a class="content__anchor" href="#install-dcos-services" aria-hidden="true"><i data-feather="bookmark"></i></a>Install DC/OS services</h2>
+<p>In this step you install Cassandra, Kafka, Marathon-LB, and Zeppelin from the DC/OS web interface <a href="/dcosdocs/mesosphere/dcos/2.2/gui/catalog/"><strong>Catalog</strong></a> tab. You can also install DC/OS packages from the DC/OS CLI with the <a href="/dcosdocs/mesosphere/dcos/2.2/cli/command-reference/"><code>dcos package install</code></a> command.</p>
+<ol>
+<li>
+<p>Find and click the <strong>cassandra</strong> package, click <strong>REVIEW &amp; RUN</strong>, and accept the default installation, by clicking <strong>REVIEW &amp; RUN</strong> again, then <strong>RUN SERVICE</strong>. Cassandra spins up to 3 nodes. When prompted by the modal alert, click <strong>OPEN SERVICE</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>Catalog</strong> tab. Find and click the <strong>kafka</strong> package, click the <strong>REVIEW &amp; RUN</strong> button, then again, then <strong>RUN SERVICE</strong>. Kafka spins up 3 brokers. When prompted by the modal alert, click <strong>OPEN SERVICE</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>Catalog</strong> tab. Find and click the <strong>marathon-lb</strong> package, click the <strong>REVIEW &amp; RUN</strong> button, then again, then <strong>RUN SERVICE</strong>. When prompted by the modal alert, click <strong>OPEN SERVICE</strong>.</p>
+</li>
+</ol>
+<p>If you are having trouble getting Marathon-LB up and running on an Enterprise cluster, try installing it following <a href="/dcosdocs/mesosphere/dcos/services/marathon-lb/latest/mlb-install/">these instructions</a>. Depending on your <a href="/dcosdocs/mesosphere/dcos/2.2/security/ent/#security-modes">security mode</a>, Marathon-LB may require service authentication for access to DC/OS.</p>
+<ol start="4">
+<li>
+<p>Click the <strong>Catalog</strong> tab. Click the <strong>zeppelin</strong> package, then click the <strong>REVIEW &amp; RUN</strong> button.</p>
+<ol>
+<li>Click the <strong>spark</strong> tab on the left and set <code>cores_max</code> to <code>8</code>.</li>
+<li>Click <strong>REVIEW AND RUN</strong> and click <strong>RUN</strong>. Click <strong>OPEN SERVICE</strong>.</li>
+</ol>
+</li>
+<li>
+<p>Click the <strong>Services</strong> tab to watch as your microservices are deployed on DC/OS. You will see the Health status go from Idle to Unhealthy, and finally to Healthy as the nodes come online. This may take several minutes.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/tweeter-services6-ee.png" alt="Services tab with all services shown."></p>
+<p>Figure 1. Services tab showing Tweeter services</p>
+</li>
+</ol>
+<h2 id="deploy-the-containerized-app"><a class="content__anchor" href="#deploy-the-containerized-app" aria-hidden="true"><i data-feather="bookmark"></i></a>Deploy the containerized app</h2>
+<p>In this step you deploy the containerized Tweeter app to a public node.</p>
+<ol>
+<li>
+<p>Navigate to the <a href="https://github.com/mesosphere/tweeter/">Tweeter</a> GitHub repository and save the <code>/tweeter/tweeter.json</code> Marathon app definition file.</p>
+</li>
+<li>
+<p>Add the <code>HAPROXY_0_VHOST</code> definition with the public IP address of your <a href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/locate-public-agent/">public agent</a> node to your <code>tweeter.json</code> file.</p>
+<table class=“table” bgcolor=#858585>
+<tr>
+<td align=justify style=color:white><strong>Important:</strong> You must remove the leading "http://" and the trailing "/".
+</td>
+</tr>
+</table>
+<pre><code class="language-json">...
+  ],
+  &quot;labels&quot;: {
+    &quot;HAPROXY_GROUP&quot;: &quot;external&quot;,
+    &quot;HAPROXY_0_VHOST&quot;: &quot;&lt;public-agent-IP&gt;&quot;
+  }
+...
+</code></pre>
+<p>In this example, a DC/OS cluster is running on AWS:</p>
+<pre><code class="language-bash">...
+  ],
+  &quot;labels&quot;: {
+    &quot;HAPROXY_GROUP&quot;: &quot;external&quot;,
+    &quot;HAPROXY_0_VHOST&quot;: &quot;52.34.136.22&quot;
+  }
+...
+</code></pre>
+</li>
+<li>
+<p>Navigate to the directory that includes your modified <code>tweeter.json</code> file. Install and deploy Tweeter to your DC/OS cluster.</p>
+<pre><code class="language-bash">dcos marathon app add tweeter.json
+</code></pre>
+<p>The <code>instances</code> parameter in <code>tweeter.json</code> specifies the number of app instances. Use the following command to scale your app up or down:</p>
+<pre><code class="language-bash">dcos marathon app update tweeter instances=&lt;number_of_desired_instances&gt;
+</code></pre>
+<p>The service talks to Cassandra via cluster node <code>node-0.cassandra.mesos:9042</code>, and Kafka via cluster node <code>broker-0.kafka.mesos:9557</code>, in this example. Traffic is routed via Marathon-LB because of the <code>HAPROXY_0_VHOST</code> definition in the <code>tweeter.json</code> app definition file.</p>
+</li>
+<li>
+<p>Go to the <strong>Services</strong> tab to verify your app is up and healthy.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/tweeter-services7.png" alt="Tweeter deployed"></p>
+<p>Figure 2. Tweeter deployed</p>
+</li>
+<li>
+<p>Navigate to the <a href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/locate-public-agent/">public agent</a> node endpoint to see the Tweeter UI and post a tweet. In this example, you would point the browser at <code>52.34.136.22</code>.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/tweeter.png" alt="Tweeter"></p>
+<p>Figure 3. “Hello world” tweet</p>
+</li>
+</ol>
+<h2 id="post-100k-tweets"><a class="content__anchor" href="#post-100k-tweets" aria-hidden="true"><i data-feather="bookmark"></i></a>Post 100K tweets</h2>
+<p>In this step you deploy an app that automatically posts a large number of tweets from Shakespeare. The app will post more than 100k tweets one by one, so you’ll see them coming in steadily when you refresh the page.</p>
+<ol>
+<li>
+<p>Navigate to the <a href="https://github.com/mesosphere/tweeter/">Tweeter</a> GitHub repository and save the <code>tweeter/post-tweets.json</code> Marathon app definition file.</p>
+</li>
+<li>
+<p>Deploy the <code>post-tweets.json</code> Marathon app definition file.</p>
+<pre><code class="language-bash">dcos marathon app add post-tweets.json
+</code></pre>
+</li>
+<li>
+<p>After the <code>post-tweets.json</code> is running, refresh your browser to see the incoming Shakespeare tweets.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/tweeter-shakespeare.png" alt="Shakespeare tweets"></p>
+<p>Figure 4. Shakespeare tweets</p>
+</li>
+</ol>
+<p>The <code>post-tweets</code> app works by streaming to the VIP <code>1.1.1.1:30000</code>. This address is declared in the <code>cmd</code> parameter of the <code>post-tweets.json</code> app definition.</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/post-tweets&quot;,
+  &quot;cmd&quot;: &quot;bin/tweet shakespeare-tweets.json http://1.1.1.1:30000&quot;,
+...
+}
+</code></pre>
+<p>The Tweeter app uses the service discovery and load balancer service that is installed on every DC/OS node. This address is defined in the <code>tweeter.json</code> definition <code>VIP_0</code>.</p>
+<pre><code class="language-json">...
+{
+  &quot;containerPort&quot;: 3000,
+  &quot;hostPort&quot;: 0,
+  &quot;servicePort&quot;: 10000,
+  &quot;labels&quot;: {
+    &quot;VIP_0&quot;: &quot;1.1.1.1:30000&quot;
+    }
+}
+...
+</code></pre>
+<p>If you are using a DC/OS Enterprise cluster, click the <strong>Networking</strong> -&gt; <strong>Service Addresses</strong> tab in the DC/OS web interface and select the <code>1.1.1.1:30000</code> virtual network to see the load balancing in action:</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/tweeter-services8-ee.png" alt="Tweeter scaled"></p>
+<p>Figure 5. Scaled tweets</p>
+<h2 id="add-streaming-analytics"><a class="content__anchor" href="#add-streaming-analytics" aria-hidden="true"><i data-feather="bookmark"></i></a>Add streaming analytics</h2>
+<p>In this last step, youv will perform real-time analytics on the stream of tweets coming in from Kafka.</p>
+<ol>
+<li>
+<p>Navigate to the <a href="https://github.com/mesosphere/tweeter/">Tweeter</a> GitHub repository and save the <code>tweeter/post-tweets.json</code> Marathon app definition file.</p>
+</li>
+<li>
+<p>Navigate to Zeppelin at <code>https://&lt;master_ip&gt;/service/zeppelin/</code>.  Your master IP address is the URL of the DC/OS web interface.</p>
+</li>
+<li>
+<p>Click <strong>Import Note</strong> and import <code>tweeter-analytics.json</code>. Zeppelin is preconfigured to execute Spark jobs on the DC/OS cluster, so there is no further configuration or setup required. Be sure to use <code>https://</code>, not <code>http://</code>.</p>
+</li>
+<li>
+<p>Navigate to <strong>Notebook</strong> -&gt; <strong>Tweeter Analytics</strong>.</p>
+</li>
+<li>
+<p>Run the <strong>Load Dependencies</strong> step to load the required libraries into Zeppelin.</p>
+</li>
+<li>
+<p>Run the <strong>Spark Streaming</strong> step, which reads the tweet stream from ZooKeeper and puts them into a temporary table that can be queried using SparkSQL.</p>
+</li>
+<li>
+<p>Run the <strong>Top tweeters</strong> SQL query, which counts the number of tweets per user using the table created in the previous step. The table updates continuously as new tweets come in, so re-running the query produces a different result every time.</p>
+</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/top-tweeters.png" alt="Top Tweeters"></p>
+<p>Figure 6. Top Tweeters</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#overview">Overview</a></li><li class="content__sections-item content__sections-item--h1"><a href="#prepare-and-deploy-tweeter-on-dcos-cluster">Prepare and deploy Tweeter on DC/OS Cluster</a></li><li class="content__sections-item content__sections-item--h2"><a href="#prerequisites">Prerequisites</a></li><li class="content__sections-item content__sections-item--h2"><a href="#install-dcos-services">Install DC/OS services</a></li><li class="content__sections-item content__sections-item--h2"><a href="#deploy-the-containerized-app">Deploy the containerized app</a></li><li class="content__sections-item content__sections-item--h2"><a href="#post-100k-tweets">Post 100K tweets</a></li><li class="content__sections-item content__sections-item--h2"><a href="#add-streaming-analytics">Add streaming analytics</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

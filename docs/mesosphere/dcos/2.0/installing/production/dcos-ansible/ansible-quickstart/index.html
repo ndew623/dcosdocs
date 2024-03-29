@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>DC/OS Ansible Quickstart Guide - D2iQ Docs</title><meta name="description" content="Guided walkthrough of installing DC/OS using Ansible."><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/production/dcos-ansible/ansible-quickstart">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.0"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/installing/production/dcos-ansible/ansible-quickstart">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/installing/production/dcos-ansible/ansible-quickstart">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/installing/production/dcos-ansible/ansible-quickstart">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/installing/production/dcos-ansible/ansible-quickstart">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.0</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/installing/"><i data-feather="chevron-right"></i>Installing</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/installing/evaluation/"><i data-feather="chevron-right"></i>Cloud Installation</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/installing/production/"><i data-feather="chevron-right"></i>On-Prem Installation</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/installing/production/virt-infra/">Virtual Infrastructure</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/installing/production/system-requirements/"><i data-feather="chevron-right"></i>System Requirements</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/installing/production/deploying-dcos/"><i data-feather="chevron-right"></i>Deploying DC/OS</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/installing/production/advanced-configuration/"><i data-feather="chevron-right"></i>Advanced Configuration</a></li><li class="active"><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/installing/production/dcos-ansible/"><i data-feather="chevron-right"></i>DC/OS with Ansible</a></li><ul><li class="active active-on"><a class="d3" href="/dcosdocs/mesosphere/dcos/2.0/installing/production/dcos-ansible/ansible-quickstart/">Ansible Quickstart</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.0/installing/production/dcos-ansible/ansible-faq/">DC/OS Ansible FAQ</a></li></ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/installing/production/patching/">Patching</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/installing/production/upgrading/">Upgrading</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/installing/production/uninstalling/">Uninstalling</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/installing/installation-faq/">Frequently Asked Questions</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/installing/troubleshooting/">Troubleshooting</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">DC/OS Ansible Quickstart Guide</h1></div><h4 class="content__header-description">Guided walkthrough of installing DC/OS using Ansible.</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.0/installing/production/dcos-ansible/ansible-quickstart/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>If you’re new to Ansible and/or want to deploy DC/OS using Ansible quickly and effortlessly - please follow this guide. We’ll walk you through step-by-step on how to:</p>
+<ul>
+<li>Download DC/OS Ansible Content</li>
+<li>Configure Ansible for DC/OS</li>
+<li>Create a DC/OS cluster with Ansible</li>
+<li>Upgrade the cluster to a newer version of DC/OS</li>
+</ul>
+<h2 id="prerequisites-and-setup"><a class="content__anchor" href="#prerequisites-and-setup" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites and Setup</h2>
+<ol>
+<li>
+<ol>
+<li>You will need to have <a href="https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html">Ansible</a> with a minimum version of <code>2.9.0</code> installed. See links for additional installation information.
+With Mac you can brew install:</li>
+</ol>
+<pre><code class="language-bash">brew install ansible
+</code></pre>
+<p>Or, you can use pip to install Ansible:</p>
+<pre><code class="language-bash">pip install 'ansible&gt;=2.9.0'
+</code></pre>
+<p>For windows installation please refer to the <a href="https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#control-machine-requirements">Ansible documentation</a> for more information on how to install ansible on windows, or you can SSH to the bootstrap host (see below) and deploy and run ansible from there.</p>
+</li>
+<li>
+<p>A list of your cluster nodes configured with SSH access. You will need a minimum of 4 nodes (CentOS or RedHat), available with SSH connectivity via a user with root level privileges:</p>
+<ul>
+<li>1 Bootstrap</li>
+<li>1 Master</li>
+<li>1 Private Agent</li>
+<li>1 Public Agent</li>
+</ul>
+</li>
+</ol>
+<p>Please see the <a href="/dcosdocs/mesosphere/dcos/2.0/installing/production/system-requirements/">minimum system requirements</a> and supported CentOS and Redhat Enterprise Linux (RHEL) <a href="/dcosdocs/mesosphere/dcos/version-policy/#dcos-platform-version-compatibility-matrix/">versions for your nodes</a>, especially when planning for production environments.
+For more information on setting up SSH connections for Ansible see the <a href="https://docs.ansible.com/ansible/latest/user_guide/intro_getting_started.html#remote-connection-information">remote connections documentation</a>.
+If you are installing DC/OS Enterprise Edition, you will also need an appropriate license key.</p>
+<p class="message--note"><strong>Note: </strong>Registered Enterprise customers can access the DC/OS Enterprise configuration file from the <a href="https://support.mesosphere.com/s/downloads">support website</a>. For new customers, please contact your sales representative or <a href="mailto:sales@mesosphere.io">sales@mesosphere.io</a> for more information.</p>
+<h2 id="downloading-the-content"><a class="content__anchor" href="#downloading-the-content" aria-hidden="true"><i data-feather="bookmark"></i></a>Downloading the Content</h2>
+<p>We maintain and host our <a href="https://galaxy.ansible.com/dcos/cluster">DC/OS Ansible project on the Ansible Galaxy</a> for easy consumption. Currently we, as well as RedHat, propose using the <code>ansible-galaxy</code> tool for downloading all the necessary content locally to your machine. For more information on the <code>ansible-galaxy</code> tool and how to configure it see the <a href="https://docs.ansible.com/ansible/latest/cli/ansible-galaxy.html">project docs here</a>.</p>
+<ol>
+<li>
+<p>Issue the following command to download the content:</p>
+<pre><code class="language-bash">ansible-galaxy collection install dcos.cluster
+</code></pre>
+<p>This will install content in <code>~/.ansible/collections/ansible_collections</code> by default. However, if you have an older version of <code>mazer</code> or have a different content path set in your <code>mazer.yml</code>, it will install there. You can issue <code>mazer version</code> to find location your config file for mazer.</p>
+</li>
+<li>
+<p>In your content path, switch to the dcos_ansible roles.</p>
+<pre><code class="language-bash">cd ~/.ansible/collections/ansible_collections/dcos/cluster
+</code></pre>
+</li>
+<li>
+<p>Mazer will download your roles by version in this directory, for example <code>dcos-ansible-0.51.0</code>. Locate the version and switch directories to the desired version for the next steps:</p>
+<pre><code class="language-bash">cd dcos-ansible-0.51.0
+</code></pre>
+</li>
+</ol>
+<h2 id="configuring-ansible-for-your-dcos-cluster"><a class="content__anchor" href="#configuring-ansible-for-your-dcos-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>Configuring Ansible for your DC/OS cluster</h2>
+<p>Once you have downloaded the content locally, you can begin modifying it to fit your specific needs. You will need to configure the following files to get started:</p>
+<ul>
+<li>Inventory file (<code>inventory</code>) - You will specify your which of your nodes will be used as bootstrap, master(s), private agent(s) or public agent(s).</li>
+<li>Group Variables file (<code>/group_vars/all/dcos.yml</code>) - This file is used to manage OS prereqs as well as how to install and configure DC/OS.</li>
+<li>Ansible Config (<code>ansible.cfg</code>) - How you prefer Ansible to run in your environment. Most likely defaults are good here except for <code>remote_user</code>.</li>
+</ul>
+<p>You may use DC/OS Ansible to install both DC/OS and DC/OS Enterprise. Please follow the below instructions and adjust according to your variant where noted. Here, we will install version <code>2.0.1</code>.</p>
+<ol>
+<li>
+<p>Within the <code>~/.ansible/collections/ansible_collections/dcos/cluster</code> directory, rename the inventory and group variables example files to new files:</p>
+<pre><code class="language-bash">mv inventory.example inventory &amp;&amp; \
+mv group_vars/all/dcos.yaml.example group_vars/all/dcos.yml
+</code></pre>
+</li>
+<li>
+<p>Open the <code>inventory</code> file. List each of your corresponding node IPs, as mentioned in the prerequisites, under the desired groups for <code>[bootstrap]</code>, <code>[masters]</code>, <code>[agents_private]</code> and <code>[agents_public]</code>. If you are deploying on a public cloud, those are the external IPs of the nodes.</p>
+</li>
+<li>
+<p>In the variables file (<code>group_vars/all/dcos.yml</code>), set the following values under <code>dcos</code> according to your variant:</p>
+<p><span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></p>
+<pre><code class="language-yaml"># ...
+download: &quot;https://downloads.mesosphere.com/dcos-enterprise/stable/2.0.1/dcos_generate_config.ee.sh&quot;
+# ...
+</code></pre>
+<p><span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--oss">Open Source</span></span></p>
+<pre><code class="language-yaml"># ...
+download: &quot;https://downloads.dcos.io/dcos/stable/2.0.1/dcos_generate_config.sh&quot;
+version: &quot;2.0.1&quot;
+enterprise_dcos: false
+# ...
+</code></pre>
+</li>
+<li>
+<p>Also in the variables file, set the following values under <code>config</code>. Enterprise users add your license key here. (Optional: specify a special script for your environment in <code>ip_detect_contents</code> or <code>ip_detect_public_contents</code> you can find the defaults here <a href="https://github.com/dcos/dcos-ansible/blob/master/roles/dcos_bootstrap/templates/onprem/ip-detect.j2">ip-detect</a> <a href="https://github.com/dcos/dcos-ansible/blob/master/roles/dcos_bootstrap/templates/onprem/ip-detect-public.j2">ip-detect-public</a>):</p>
+<pre><code class="language-yaml"># ...
+cluster_name: &lt;your-cluster-name&gt;
+
+# The Hostname or IP of you bootstrap node at port 8080 (If you are deploying on a public cloud, this is the private IPs of the node)
+bootstrap_url: &lt;bootstrap-IP-or-hostname&gt;:8080
+
+# Change the value(s) list to the IP(s) of your master node(s) used in the [master] inventory group. (If you are deploying on a public cloud, those are the private IPs of the node)
+master_list:
+  - IP1
+  - IP2
+
+# Add and uncomment this line for enterprise; paste or pass in your license key here
+# license_key_contents: “YOUR_ENT_LICENSE_CONTENTS”
+#
+# This is an ip-detect script example which also stands for ip_detect_public_contents
+# more info about ip-detect can be found here: /dcosdocs/mesosphere/dcos/2.0/installing/production/deploying-dcos/installation/#create-an-ip-detection-script
+# ip_detect_contents: |
+#   #!/bin/sh
+#   set -o nounset -o errexit
+#   ip addr show dev eth1 primary | awk '/(inet .*\/)/ { print $2 }' | cut -d'/' -f1
+</code></pre>
+</li>
+<li>
+<p>(Optional) In <code>ansible.cfg</code>, set the appropriate <code>remote_user</code> to the user that you will connect as on your nodes. The default is set to <code>centos</code>.</p>
+</li>
+</ol>
+<h2 id="confirming-your-setup"><a class="content__anchor" href="#confirming-your-setup" aria-hidden="true"><i data-feather="bookmark"></i></a>Confirming your setup</h2>
+<p>To test that you have everything set up correctly, use the ping module and ensure connectivity to all of your nodes:</p>
+<pre><code class="language-bash">ansible -m ping all
+</code></pre>
+<p>Which should return:</p>
+<pre><code class="language-bash">bootstrap | SUCCESS =&gt; {
+    &quot;changed&quot;: false,
+    &quot;ping&quot;: &quot;pong&quot;
+}
+master | SUCCESS =&gt; {
+    &quot;changed&quot;: false,
+    &quot;ping&quot;: &quot;pong&quot;
+}
+private-agent | SUCCESS =&gt; {
+    &quot;changed&quot;: false,
+    &quot;ping&quot;: &quot;pong&quot;
+}
+public-agent | SUCCESS =&gt; {
+    &quot;changed&quot;: false,
+    &quot;ping&quot;: &quot;pong&quot;
+}
+</code></pre>
+<h2 id="creating-the-dcos-cluster"><a class="content__anchor" href="#creating-the-dcos-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>Creating the DC/OS Cluster</h2>
+<p>We have provided a simple playbook to run the entire process of installing and managing DC/OS including all prerequisites based on your OS. The version of DC/OS that will be installed is based on the value you have configured in your variables file for <code>download</code> and <code>version</code>. The values are the most important to installing and upgrading your cluster.</p>
+<p>To install DC/OS run the following command to execute the playbook.</p>
+<pre><code class="language-bash">ansible-playbook dcos.yml
+</code></pre>
+<p><strong>Note: Prior to DC/OS Install you will be required to either press ENTER to continue with install or CTRL-C to cancel install.</strong></p>
+<pre><code class="language-bash">TASK [DCOS.bootstrap : Double check the prefix/cluster name and version]
+****************************************************************************************************************
+[DCOS.bootstrap : Double check the prefix/cluster name and version]
+Please double check the prefix/cluster name and version of this cluster:
+
+  Cluster: dcosansible
+  Version: 2.0.1 -&gt; 2.0.1
+  Commit:  None
+  via:     http://downloads.mesosphere.com/dcos-enterprise/stable/2.0.1/dcos_generate_config.ee.sh
+
+PRESS *ENTER* OR CANCEL NOW IF IT ISN'T CORRECT
+</code></pre>
+<p>When ansible is completed, you should see an output with no errors like below:</p>
+<pre><code class="language-bash">PLAY RECAP ****************************************************************************************************************
+bootstrap                  : ok=24   changed=5    unreachable=0    failed=0
+master                     : ok=24   changed=5    unreachable=0    failed=0
+private_agent              : ok=24   changed=5    unreachable=0    failed=0
+public_agent               : ok=24   changed=5    unreachable=0    failed=0
+</code></pre>
+<p>With very little effort we have created a DC/OS version running version 2.0.1. You can now access DC/OS via your master node(s) at: <code>http://master-node-ip</code></p>
+<h2 id="logging-in"><a class="content__anchor" href="#logging-in" aria-hidden="true"><i data-feather="bookmark"></i></a>Logging In</h2>
+<p>To access the user interface, you will be asked to log in.</p>
+<p>If you installed DC/OS Enterprise, you can login with default demo credentials. <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></p>
+<ul>
+<li><code>username: bootstrapuser</code></li>
+<li><code>password: deleteme</code></li>
+</ul>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/dcos-ee-login.png" alt="enterprise-Login-Page"></p>
+<p>If you installed DC/OS Open Source, select the OAuth provider of your choice. <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--oss">Open Source</span></span></p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/dcos-oe-login.png" alt="oss-login-page"></p>
+<h2 id="upgrading-and-managing-your-cluster"><a class="content__anchor" href="#upgrading-and-managing-your-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>Upgrading and managing your cluster</h2>
+<p>Upgrading your cluster to a newer version of DC/OS and making configuration changes is incredibly easy with Ansible. The modules have been designed to automatically detect the state of your cluster and nodes, and automatically get them to the newer declared state. It is even possible to change your agents configuration and upgrade DC/OS at the same time.</p>
+<ol>
+<li>
+<p>For example, to upgrade: in the variables file (<code>group_vars/all/dcos.yml</code>), set the following values under <code>dcos</code> according to your variant:</p>
+<p><span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></p>
+<pre><code class="language-bash"># ...
+download: “http://downloads.mesosphere.com/dcos-enterprise/stable/2.0.1/dcos_generate_config.ee.sh”`
+# ...
+</code></pre>
+<p><span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--oss">Open Source</span></span></p>
+<pre><code class="language-bash"># ...
+download: “https://downloads.dcos.io/dcos/stable/2.0.1/dcos_generate_config.sh”
+version: “2.0.1&quot;
+enterprise_dcos: false
+# ...
+</code></pre>
+</li>
+<li>
+<p>To add extra agents: First get them spun up and available. Then, open the <code>inventory</code> file. List each of your corresponding node IPs, as mentioned in the prerequisites, under the desired groups for <code>[agents_private]</code> and <code>[agents_public]</code>.</p>
+</li>
+<li>
+<p>Save all changes and run the playbook again to update your cluster. The ansible modules will automatically calculate the changes and execute them in order.</p>
+<pre><code class="language-bash">ansible-playbook dcos.yml
+</code></pre>
+</li>
+</ol>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#prerequisites-and-setup">Prerequisites and Setup</a></li><li class="content__sections-item content__sections-item--h2"><a href="#downloading-the-content">Downloading the Content</a></li><li class="content__sections-item content__sections-item--h2"><a href="#configuring-ansible-for-your-dcos-cluster">Configuring Ansible for your DC/OS cluster</a></li><li class="content__sections-item content__sections-item--h2"><a href="#confirming-your-setup">Confirming your setup</a></li><li class="content__sections-item content__sections-item--h2"><a href="#creating-the-dcos-cluster">Creating the DC/OS Cluster</a></li><li class="content__sections-item content__sections-item--h2"><a href="#logging-in">Logging In</a></li><li class="content__sections-item content__sections-item--h2"><a href="#upgrading-and-managing-your-cluster">Upgrading and managing your cluster</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

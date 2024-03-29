@@ -1,0 +1,219 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Backup and Restore CLI - D2iQ Docs</title><meta name="description" content="Backing up and restoring your cluster using the CLI"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.2"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/backup-and-restore/backup-restore-cli">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/administering-clusters/backup-and-restore/backup-restore-cli">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/administering-clusters/backup-and-restore/backup-restore-cli">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/administering-clusters/backup-and-restore/backup-restore-cli">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/sshcluster/">SSHing into Nodes</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/locate-public-agent/">Finding a Public Agent IP</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/multiple-clusters/"><i data-feather="chevron-right"></i>Multiple Clusters</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/component-management/">Component Management</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/backup-and-restore/"><i data-feather="chevron-right"></i>Backup and Restore</a></li><ul><li class="active active-on"><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/backup-and-restore/backup-restore-cli/">Backup and Restore CLI</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/backup-and-restore/backup-restore-api/">Backup and Restore API</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/securing-your-cluster/">Securing a cluster</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/managing-aws/">Managing AWS</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/package-registry/">Package Registry</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/convert-agent-type/">Converting Agent Node Types</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/add-a-node/">Adding Agent Nodes</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/replacing-a-master-node/">Replace a master node</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/draining-a-node/">Draining a Node</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/delete-node/">Shut Down and Decommission Nodes</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/recovering-agent-disk-space/">Recovering Agent Disk Space</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/licenses/"><i data-feather="chevron-right"></i>Licenses</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/archives/">Access Documentation Archives</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Backup and Restore CLI</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">Backing up and restoring your cluster using the CLI</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.2/administering-clusters/backup-and-restore/backup-restore-cli/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>You can use the CLI to create and restore backups of your cluster. You can also choose to back up and restore the state of <a href="#zookeeper">ZooKeeper</a> running inside a DC/OS cluster.</p>
+<h1 id="prerequisites"><a class="content__anchor" href="#prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h1>
+<ul>
+<li>A DC/OS Enterprise cluster</li>
+<li>The <a href="/dcosdocs/mesosphere/dcos/2.2/cli/install/">DC/OS CLI</a> installed</li>
+<li>The <a href="/dcosdocs/mesosphere/dcos/2.2/cli/enterprise-cli/">DC/OS Enterprise CLI</a> installed</li>
+</ul>
+<p class="message--important"><strong>IMPORTANT: </strong>See the <a href="/dcosdocs/mesosphere/dcos/latest/administering-clusters/backup-and-restore/#limitations">Limitations</a> section of Backup and Restore.</p>
+<h1 id="backing-up-a-cluster"><a class="content__anchor" href="#backing-up-a-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>Backing up a cluster</h1>
+<p>Backups are stored on the local file system of the master node. The backup state is maintained by a service running in the cluster, and backup/restore operations are initiated by hitting this service directly.</p>
+<ol>
+<li>
+<p>Create a backup and assign it a meaningful label. The label has the following restrictions:</p>
+<ul>
+<li>It must be between 3 and 25 characters in length.</li>
+<li>It cannot start with <code>..</code>.</li>
+<li>It must be composed of the following characters: [A-Za-z0-9_.-].</li>
+</ul>
+<pre><code class="language-bash">dcos backup create --label=&lt;backup-label&gt;
+</code></pre>
+</li>
+<li>
+<p>Verify that your backup has been created.</p>
+<pre><code class="language-bash">dcos backup list
+</code></pre>
+<p>Or use the following command to restrict your search results to the label you used when you created the backup.</p>
+<pre><code class="language-bash">dcos backup list [label]
+</code></pre>
+<p>The backup will initially transition into the <code>STATUS_BACKING_UP</code> state, and should eventually arrive at <code>STATUS_READY</code>. If something goes wrong, it will show a state of <code>STATUS_ERROR</code>. Use <code>dcos backup show &lt;backup-id&gt;</code> to discover why Marathon errored out during the course of the backup.</p>
+</li>
+<li>
+<p>Use the ID produced by <code>dcos backup list</code> to refer to your backup in subsequent commands. A backup ID will resemble <code>&lt;backup-label&gt;-ea6b49f5-79a8-4767-ae78-3f874c90e3da</code>.</p>
+</li>
+</ol>
+<h2 id="deleting-a-backup"><a class="content__anchor" href="#deleting-a-backup" aria-hidden="true"><i data-feather="bookmark"></i></a>Deleting a backup</h2>
+<p>Delete an unneeded backup.</p>
+<pre><code class="language-bash">dcos backup delete &lt;backup-id&gt;
+</code></pre>
+<h1 id="restoring-a-cluster"><a class="content__anchor" href="#restoring-a-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>Restoring a cluster</h1>
+<ol>
+<li>
+<p>List the available backups, choose the backup you want to restore to, and make a note of the backup ID.</p>
+<pre><code class="language-bash">dcos backup list
+</code></pre>
+</li>
+<li>
+<p>Restore from the selected backup.</p>
+<pre><code class="language-bash">dcos backup restore &lt;backup-id&gt;
+</code></pre>
+</li>
+<li>
+<p>Monitor the status of the restore operation.</p>
+<pre><code class="language-bash">dcos backup show &lt;backup-id&gt;
+</code></pre>
+<p>The <code>restores.component_status.marathon</code> parameter of the JSON output will show <code>STATUS_RESTORING</code>, and then <code>STATUS_READY</code>.</p>
+</li>
+</ol>
+<p><a name="zookeeper"></a></p>
+<h1 id="zookeeper-backup-and-restore"><a class="content__anchor" href="#zookeeper-backup-and-restore" aria-hidden="true"><i data-feather="bookmark"></i></a>ZooKeeper backup and restore</h1>
+<p>This section describes the process of backing up and restoring the state of ZooKeeper running inside a DC/OS cluster.</p>
+<p>Backing up ZooKeeper will allow you to return a cluster to a known good state. Therefore we highly recommend that you back up your ZooKeeper state regularly, to be prepared for the worst-case scenario. When performing maintenance operations, such as an upgrade or downgrade, you may wish to back up the ZooKeeper state before beginning the maintenance.</p>
+<p class="message--important"><strong>IMPORTANT: </strong>
+Restoring ZooKeeper from a backup should be the last resort to recover a DC/OS cluster. It is only applicable after confirming that the cluster has suffered permanent data loss, including the ZooKeeper state.
+</p>
+<h2 id="backing-up-a-zookeeper-cluster"><a class="content__anchor" href="#backing-up-a-zookeeper-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>Backing up a ZooKeeper cluster</h2>
+<p>The ZooKeeper cluster within DC/OS is a system that provides distributed consensus between member nodes. An instance of ZooKeeper is running on each master node and these instances service the entire cluster. The ZooKeeper state can only progress once all nodes in the cluster have seen and agreed on a certain value. This implies that state of any one ZooKeeper node will contain the entire state information up until a certain point in time. Therefore backing up only one ZooKeeper node is sufficient to get reasonably close to the latest state for a ZooKeeper cluster backup. Creating the backup takes time and therefore the live system at the end of the backup will most likely no longer reflect the current state. However, the data available at the beginning of the procedure will be captured.</p>
+<h3 id="prerequisites-2"><a class="content__anchor" href="#prerequisites-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h3>
+<ul>
+<li>Make sure there is enough disk space available to temporarily store the ZooKeeper backup on a particular master node.</li>
+<li>Any shell commands must be issued as a privileged Linux user.</li>
+</ul>
+<ol>
+<li>
+<p>Stop the ZooKeeper instance on only one particular master node via the Exhibitor <code>systemd</code> unit.</p>
+<pre><code class="language-bash">systemctl stop dcos-exhibitor
+</code></pre>
+</li>
+<li>
+<p>Create a ZooKeeper backup via the provided DC/OS ZooKeeper backup script on the same master node.</p>
+<pre><code class="language-bash">/opt/mesosphere/bin/dcos-shell dcos-zk backup &lt;backup-tar-archive-path&gt; -v
+</code></pre>
+</li>
+<li>
+<p>Start the previously stopped ZooKeeper instance again on the same master node.</p>
+<pre><code class="language-bash">systemctl start dcos-exhibitor
+</code></pre>
+</li>
+<li>
+<p>Download the created ZooKeeper backup tar archive from this master node to a safe location outside of the DC/OS cluster.</p>
+</li>
+<li>
+<p>Remove the ZooKeeper backup tar archive from the master node.</p>
+</li>
+</ol>
+<h2 id="restoring-from-a-zookeeper-backup"><a class="content__anchor" href="#restoring-from-a-zookeeper-backup" aria-hidden="true"><i data-feather="bookmark"></i></a>Restoring from a ZooKeeper backup</h2>
+<p>You can restore from a single ZooKeeper node backup that is physically replicated to all ZooKeeper nodes in the cluster.
+This ensures that all nodes return to operation from the same state that was recorded up until the point when the backup procedure  finished. Restoring requires all ZooKeeper nodes to be stopped, meaning this is only an option when an outage is tolerable or ongoing.</p>
+<ol>
+<li>
+<p>Copy the previously created single ZooKeeper backup tar archive to every master node’s file system.</p>
+</li>
+<li>
+<p>Stop the ZooKeeper instances on every master node via the Exhibitor <code>systemd</code> unit.</p>
+<pre><code class="language-bash">systemctl stop dcos-exhibitor
+</code></pre>
+</li>
+<li>
+<p>Initiate the restore procedure via the provided DC/OS ZooKeeper restore script on every master node.</p>
+<pre><code class="language-bash">/opt/mesosphere/bin/dcos-shell dcos-zk restore &lt;backup-tar-archive-path&gt; -v
+</code></pre>
+</li>
+<li>
+<p>Start the previously stopped ZooKeeper instances again on every master node.</p>
+<pre><code class="language-bash">systemctl start dcos-exhibitor
+</code></pre>
+</li>
+<li>
+<p>Monitor the Exhibitor state of the DC/OS cluster via the Exhibitor cluster status API endpoint (no authentication required).</p>
+<pre><code class="language-bash">curl https://&lt;master-host-ip&gt;/exhibitor/exhibitor/v1/cluster/status
+[
+  {
+    &quot;code&quot;: 3,
+    &quot;description&quot;: &quot;serving&quot;,
+    &quot;hostname&quot;: &quot;172.31.12.169&quot;,
+    &quot;isLeader&quot;: true
+  },
+  {
+    &quot;code&quot;: 3,
+    &quot;description&quot;: &quot;serving&quot;,
+    &quot;hostname&quot;: &quot;172.31.13.255&quot;,
+    &quot;isLeader&quot;: false
+  },
+  {
+    &quot;code&quot;: 3,
+    &quot;description&quot;: &quot;serving&quot;,
+    &quot;hostname&quot;: &quot;172.31.17.144&quot;,
+    &quot;isLeader&quot;: false
+  }
+]
+</code></pre>
+</li>
+</ol>
+<p>The restore procedure is successful when all instances are in <code>serving</code> state and a leader has been elected.</p>
+<h2 id="limitations-to-zookeeper-backups"><a class="content__anchor" href="#limitations-to-zookeeper-backups" aria-hidden="true"><i data-feather="bookmark"></i></a>Limitations to ZooKeeper backups</h2>
+<ul>
+<li>Backing up the ZooKeeper state in the current form requires stopping one ZooKeeper node. In cases where you are using 3 master nodes, this significantly reduces the tolerance of master node outages for a DC/OS cluster while a backup is taken, and impacts the resilience to a lesser degree when using 5 master nodes.</li>
+<li>Restoring from a ZooKeeper backup requires stopping all ZooKeeper instances within DC/OS. Hence this is only recommended as a last resort for restoring an otherwise non-recoverable cluster.</li>
+</ul>
+<h1 id="etcd-backup-and-restore"><a class="content__anchor" href="#etcd-backup-and-restore" aria-hidden="true"><i data-feather="bookmark"></i></a>etcd backup and restore</h1>
+<p>This section describes the process of backing up and restoring the state of etcd running inside a DC/OS cluster.</p>
+<p>Backing up etcd will allow you to return a cluster to a known good state. Therefore we highly recommend that you back up your etcd state regularly, to be prepared for the worst-case scenario. When performing maintenance operations, such as an upgrade or downgrade, you may wish to back up the etcd state before beginning the maintenance.</p>
+<p class="message--important"><strong>IMPORTANT: </strong>
+Restoring etcd from a backup should be the last resort to recover a DC/OS cluster. It is only applicable after confirming that the cluster has suffered permanent data loss, including the etcd state.
+</p>
+<h2 id="backing-up-an-etcd-cluster"><a class="content__anchor" href="#backing-up-an-etcd-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>Backing up an etcd cluster</h2>
+<p>The etcd cluster within DC/OS is a system that provides distributed consensus between member nodes. An instance of etcd is running on each master node and these instances service the entire cluster. The etcd state can only progress once all nodes in the cluster have seen and agreed on a certain value. This implies that state of any one etcd node will contain the entire state information up until a certain point in time. Therefore backing up only one etcd node is sufficient to get reasonably close to the latest state for a etcd cluster backup. Creating the backup takes time and therefore the live system at the end of the backup will most likely no longer reflect the current state. However, the data available at the beginning of the procedure will be captured.</p>
+<h3 id="prerequisites-3"><a class="content__anchor" href="#prerequisites-3" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h3>
+<ul>
+<li>Make sure there is enough disk space available to temporarily store the etcd backup on a particular master node.</li>
+<li>Any shell commands must be issued as a privileged Linux user.</li>
+</ul>
+<ol>
+<li>
+<p>SSH to the master node which is the current Mesos leader. To discover which node is the correct leader, run this command on any cluster node. The IP that is shown is the IP of the current leader:</p>
+<pre><code class="language-bash">ping leader.mesos
+</code></pre>
+</li>
+<li>
+<p>Run this command to create the backup:</p>
+<pre><code class="language-bash">sudo /opt/mesosphere/bin/dcos-shell dcos-etcdctl backup &lt;backup-tar-archive-path&gt;
+</code></pre>
+</li>
+</ol>
+<h2 id="restoring-from-an-etcd-backup"><a class="content__anchor" href="#restoring-from-an-etcd-backup" aria-hidden="true"><i data-feather="bookmark"></i></a>Restoring from an etcd backup</h2>
+<ol>
+<li>
+<p>Copy the previously created single etcd backup tar archive to all master nodes.</p>
+</li>
+<li>
+<p>Stop the etcd instances on all master nodes:</p>
+<pre><code class="language-bash">sudo systemctl stop dcos-etcd
+</code></pre>
+</li>
+<li>
+<p>Create a copy of the etcd data directory on all master nodes:</p>
+<pre><code class="language-bash">sudo cp -R /var/lib/dcos/etcd/default.etcd &lt;backup-directory-path&gt;
+</code></pre>
+</li>
+<li>
+<p>Initiate the restore procedure using the provided DC/OS etcd restore script on all master nodes:</p>
+<pre><code class="language-bash">sudo /opt/mesosphere/bin/dcos-shell dcos-etcdctl restore &lt;backup-tar-archive-path&gt;
+</code></pre>
+</li>
+<li>
+<p>Start the previously stopped etcd instance on all master nodes:</p>
+<pre><code class="language-bash">sudo systemctl start dcos-etcd
+</code></pre>
+</li>
+<li>
+<p>Check the etcd cluster status on all master nodes:</p>
+<pre><code class="language-bash">sudo /opt/mesosphere/bin/dcos-shell dcos-etcdctl diagnostic
+</code></pre>
+</li>
+</ol>
+<p>The above command presents the results of etcdctl subcommands <code>endpoint health</code> and <code>member list -w json</code>. A healthy etcd cluster should meet the following requirements given the output of the commands:</p>
+<ul>
+<li><code>endpoint health</code> checks the healthiness of on the current etcd instance, which should report as “healthy”.</li>
+<li><code>member list -w json</code> returns the cluster members, which should include all master nodes.</li>
+</ul>
+<h2 id="limitations-to-etcd-backups"><a class="content__anchor" href="#limitations-to-etcd-backups" aria-hidden="true"><i data-feather="bookmark"></i></a>Limitations to etcd backups</h2>
+<ul>
+<li>Restoring from an etcd backup requires stopping all etcd instances within DC/OS. Hence this is only recommended as a last resort for restoring an otherwise non-recoverable cluster.</li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#prerequisites">Prerequisites</a></li><li class="content__sections-item content__sections-item--h1"><a href="#backing-up-a-cluster">Backing up a cluster</a></li><li class="content__sections-item content__sections-item--h2"><a href="#deleting-a-backup">Deleting a backup</a></li><li class="content__sections-item content__sections-item--h1"><a href="#restoring-a-cluster">Restoring a cluster</a></li><li class="content__sections-item content__sections-item--h1"><a href="#zookeeper-backup-and-restore">ZooKeeper backup and restore</a></li><li class="content__sections-item content__sections-item--h2"><a href="#backing-up-a-zookeeper-cluster">Backing up a ZooKeeper cluster</a></li><li class="content__sections-item content__sections-item--h2"><a href="#restoring-from-a-zookeeper-backup">Restoring from a ZooKeeper backup</a></li><li class="content__sections-item content__sections-item--h2"><a href="#limitations-to-zookeeper-backups">Limitations to ZooKeeper backups</a></li><li class="content__sections-item content__sections-item--h1"><a href="#etcd-backup-and-restore">etcd backup and restore</a></li><li class="content__sections-item content__sections-item--h2"><a href="#backing-up-an-etcd-cluster">Backing up an etcd cluster</a></li><li class="content__sections-item content__sections-item--h2"><a href="#restoring-from-an-etcd-backup">Restoring from an etcd backup</a></li><li class="content__sections-item content__sections-item--h2"><a href="#limitations-to-etcd-backups">Limitations to etcd backups</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

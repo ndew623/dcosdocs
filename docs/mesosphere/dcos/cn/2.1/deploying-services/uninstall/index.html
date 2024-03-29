@@ -1,0 +1,161 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>卸载服务 - D2iQ Docs</title><meta name="description" content="在 CLI 中卸载 DC/OS 服务"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/uninstall">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/uninstall">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/uninstall">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/uninstall">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/marathon-parameters/">Marathon 配置参考</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/install/">安装服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/task-handling/"><i data-feather="chevron-right"></i>任务处理</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/creating-services/"><i data-feather="chevron-right"></i>创建服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/config-universe-service/">配置服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/marathon-constraints/">Marathon 布局约束</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/scale-service/">扩展服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/service-groups/">授权访问服务和组</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/fault-domain-awareness/">故障域感知和容量扩展</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/update-user-service/">更新用户创建的服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/service-ports/">服务端口</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/service-endpoints/">服务端点</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/monitor-services/">监控服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/private-docker-registry/">使用专用 Docker 注册表</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/expose-service/">公开服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/deployments/">部署</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/uninstall/">卸载服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/package-api/">包管理 API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/marathon-on-marathon/"><i data-feather="chevron-right"></i>使用自定义 Marathon</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/marathon-api/">Marathon  API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/containerizers/"><i data-feather="chevron-right"></i>使用容器化工具</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/pods/"><i data-feather="chevron-right"></i>Pod</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/multi-tenancy-primitives/">多租户原始文件</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/gpu/">使用 GPU</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/faq/">常见问题</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">卸载服务</h1></div><h4 class="content__header-description">在 CLI 中卸载 DC/OS 服务</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/uninstall/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>可在 CLI 中卸载服务。如果 Catalog 服务有任何不能通过正常卸载过程清理的保留资源，也可能需要运行框架清理器脚本。<a href="#framework-cleaner">框架清理器脚本</a> 从 ZooKeeper 中删除服务实例以及与其关联的任何数据。</p>
+<h1 id="catalog"><a class="content__anchor" href="#catalog" aria-hidden="true"><i data-feather="bookmark"></i></a>卸载 Catalog 服务</h1>
+<h2 id="cli"><a class="content__anchor" href="#cli" aria-hidden="true"><i data-feather="bookmark"></i></a>CLI</h2>
+<p>使用以下命令卸载数据中心服务：</p>
+<pre><code class="language-bash">dcos package uninstall &lt;servicename&gt;
+</code></pre>
+<p>例如，如需卸载 Chronos：</p>
+<pre><code class="language-bash">dcos package uninstall chronos
+</code></pre>
+<h2 id="web"><a class="content__anchor" href="#web" aria-hidden="true"><i data-feather="bookmark"></i></a>Web 界面</h2>
+<p>可在 DC/OS Web 界面的 <strong>服务</strong> 选项卡中卸载服务。“服务”选项卡为本地 DC/OS Marathon 实例提供了完整的功能界面。</p>
+<ol>
+<li>
+<p>导航至 DC/OS Web 界面中的 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/gui/services/"><strong>服务</strong></a> 选项卡。</p>
+</li>
+<li>
+<p>选择服务，单击最右的垂直省略号，然后选择<strong>删除</strong>。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/service-delete.png" alt="Destroy app"></p>
+<p>图 1. 删除服务</p>
+</li>
+<li>
+<p>复制并运行显示的命令。</p>
+</li>
+</ol>
+<h2 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>故障排除</h2>
+<p>卸载显示以下错误消息时可能失败：</p>
+<pre><code>Incomplete uninstall of package [chronos] due to Mesos unavailability
+</code></pre>
+<p>该服务可能处于非活动状态，并且不会显示在 DC/OS UI 中，但可以通过使用以下 CLI 命令查找：</p>
+<pre><code class="language-bash">dcos service --inactive
+NAME          HOST     ACTIVE  TASKS  CPU  MEM  DISK  ID
+chronos    10.0.6.138  False     0    0.0  0.0  0.0   7c0a7bd4-3649-4ec1-866c-5db8f2292bf2-0001
+</code></pre>
+<p>可以使用以下指定服务 ID 的 CLI 命令关闭服务，然后运行 [框架清理器](#framework-cleaner），从而完成卸载：</p>
+<pre><code class="language-bash">dcos service shutdown 7c0a7bd4-3649-4ec1-866c-5db8f2292bf2-0001
+</code></pre>
+<h1 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>卸载用户创建的服务</h1>
+<h3 id="cli-2"><a class="content__anchor" href="#cli-2" aria-hidden="true"><i data-feather="bookmark"></i></a>CLI</h3>
+<p>使用以下命令卸载用户创建的服务：</p>
+<pre><code class="language-bash">dcos marathon app remove [--force] &lt;app-id&gt;
+</code></pre>
+<p>如需更多信息，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/command-reference/#dcos-marathon">命令名称</a>.</p>
+<h3 id="web-2"><a class="content__anchor" href="#web-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Web 界面</h3>
+<p>可在 <strong>服务</strong> 选项卡中打开 DC/OS Web 界面，并从中卸载服务。“服务”选项卡为本地 DC/OS Marathon 实例提供了完整的功能界面。</p>
+<h3 id="services"><a class="content__anchor" href="#services" aria-hidden="true"><i data-feather="bookmark"></i></a>Services 选项卡</h3>
+<ol>
+<li>导航至 DC/OS Web 界面中的 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/gui/services/"><strong>服务</strong></a> 选项卡。</li>
+<li>单击 <strong>已安装</strong> 选项卡查看已安装的服务。</li>
+<li>将光标悬停在要卸载的包的名称上，然后就会看到右侧的红色“卸载”链接。单击此链接卸载包。</li>
+</ol>
+<h2 id="zookeeper"><a class="content__anchor" href="#zookeeper" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="framework-cleaner"></a>清理资源和 ZooKeeper</h2>
+<h3 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>关于清理</h3>
+<p>如果服务有保留资源，并且没有自动清理对其进行彻底清理，您可以使用框架清理器的 Docker 镜像——<code>mesosphere/janitor</code>，从 ZooKeeper 中删除服务实例并销毁与其关联的所有数据，简化该流程。<strong>在 DC/OS 1.10+ 群集上，仅在极少数情况下（例如卸载失败）需要该流程。</strong> 包的文档可能在“卸载”部分有附加信息。</p>
+<p>运行框架清理器脚本的方法有两种。首选方法是通过 DC/OS CLI 运行。如果没有 CLI ，也可以将镜像作为自行删除 Marathon 任务运行。</p>
+<h3 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>配置清理</h3>
+<p>脚本采用以下标记：</p>
+<ul>
+<li><code>-r &lt;role&gt;</code>：要删除的资源的角色</li>
+<li><code>-z &lt;zk-node&gt;</code>：要删除的配置 zookeeper 节点</li>
+</ul>
+<p>命令运行如下：</p>
+<pre><code class="language-bash">docker run mesosphere/janitor /janitor.py -r &lt;service_name&gt;-role -z dcos-service-&lt;service_name&gt;
+</code></pre>
+<p>如果您正在使用严格模式群集，就必须提供执行清理所需的附加参数：</p>
+<ul>
+<li><code>-a &lt;token&gt;</code>：用于认证的令牌</li>
+<li><code>--username &lt;username&gt;</code> 和 <code>--password &lt;password&gt;</code>：用于认证的用户名和密码</li>
+</ul>
+<p>例如，可以使用含有以下内容的认证令牌运行命令：</p>
+<pre><code class="language-bash">docker run mesosphere/janitor /janitor.py -r &lt;service_name&gt;-role -z dcos-service-&lt;service_name&gt; -a &lt;content of &quot;dcos config show core.dcos_acs_token&quot;&gt;
+</code></pre>
+<h3 id="dcos-cli"><a class="content__anchor" href="#dcos-cli" aria-hidden="true"><i data-feather="bookmark"></i></a>通过 DC/OS CLI 运行</h3>
+<p>连接到首要实例并启动脚本：</p>
+<ol>
+<li>
+<p>打开群集首要实例的 SSH 会话。</p>
+<pre><code> your-machine$ dcos node ssh --master-proxy --leader
+</code></pre>
+</li>
+<li>
+<p>运行 <code>mesosphere/janitor</code> 镜像，该镜像带有为服务配置的角色和 ZooKeeper 节点，并且在严格模式群集中还带有认证令牌：</p>
+<pre><code> docker run mesosphere/janitor /janitor.py -r sample-role -z sample-zk [-a auth-token]
+</code></pre>
+</li>
+</ol>
+<h3 id="marathon"><a class="content__anchor" href="#marathon" aria-hidden="true"><i data-feather="bookmark"></i></a>通过 Marathon 运行</h3>
+<p>在 DC/OS <a href="/dcosdocs/mesosphere/dcos/cn/2.1/gui/"><strong>服务</strong></a> 选项卡中，使用 JSON 编辑器将以下内容添加为 Marathon 任务。根据需要清理的内容，替换传递到 <code>-r</code>/<code>-z</code> 的值。</p>
+<pre><code>{
+  &quot;id&quot;: &quot;janitor&quot;,
+  &quot;cmd&quot;: &quot;/janitor.py -r sample-role -z dcos-service-sample&quot;,
+  “CPU”: 1,
+  &quot;mem&quot;: 128,
+  &quot;disk&quot;: 1,
+  &quot;instances&quot;: 1,
+  &quot;container&quot;: {
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;mesosphere/janitor:latest&quot;,
+      &quot;network&quot;: &quot;HOST&quot;
+    },
+    &quot;type&quot;: &quot;DOCKER&quot;
+  }
+}
+</code></pre>
+<p>当框架清理器完成工作后，就会自动从 Marathon 中移除，确保仅运行一次。移除操作即便已经成功完成，通常也会导致清理任务出现 <code>TASK_KILLED</code> 甚至是 <code>TASK_FAILED</code> 的结果。清理任务还会从“服务”和“仪表板”选项卡中迅速消失。</p>
+<h3 id="-5"><a class="content__anchor" href="#-5" aria-hidden="true"><i data-feather="bookmark"></i></a>验证结果</h3>
+<p>如需查看脚本的结果，请前往 Mesos（<code>http://your-cluster.com/mesos</code>） 并查看任务的 <code>stdout</code> 内容。如果 <code>stdout</code> 缺少内容，请手动运行以下命令：</p>
+<pre><code># 确定运行 Docker 任务的代理 ID。示例如下：
+
+your-machine$ dcos node ssh --master-proxy --mesos-id=c62affd0-ce56-413b-85e7-32e510a7e131-S3
+
+agent-node$ docker ps -a
+容器 ID        镜像                       命令             ...
+828ee17b5fd3        mesosphere/janitor:latest   /bin/sh -c /janito  ...
+
+agent-node$ docker logs 828ee17b5fd3
+</code></pre>
+<h3 id="-6"><a class="content__anchor" href="#-6" aria-hidden="true"><i data-feather="bookmark"></i></a>示例结果</h3>
+<p>以下是成功运行样本安装的输出示例：</p>
+<pre><code>your-machine$ dcos node ssh --master-proxy --leader
+
+leader-node$ docker run mesosphere/janitor /janitor.py -r sample_role -z dcos-service-sample
+[... docker 下载 ...]
+管理节点： http://leader.mesos:5050/master/ Exhibitor: http://leader.mesos:8181/ Role: sample_role ZK Path: sample
+
+正在销毁卷...
+Mesos version: 0.28.1 =&gt; 28
+在从节点 3ce447e3-2894-4c61-bd0f-be97e4d99ee9-S5 上找到 1 个“sample_role”卷，正在删除：
+200
+在从节点 3ce447e3-2894-4c61-bd0f-be97e4d99ee9-S4 上找到 1 个“sample_role” 卷，正在删除...
+200
+从节点 3ce447e3-2894-4c61-bd0f-be97e4d99ee9-S3 未保留资源给任何角色
+从节点 3ce447e3-2894-4c61-bd0f-be97e4d99ee9-S2 未保留资源给任何角色
+在从节点 3ce447e3-2894-4c61-bd0f-be97e4d99ee9-S1 上找到 1 个“sample_role” 卷，正在删除...
+200
+从节点 3ce447e3-2894-4c61-bd0f-be97e4d99ee9-S0 未保留资源给任何角色。已知角色为：[slave_public]
+
+不会保留资源...
+在从节点 3ce447e3-2894-4c61-bd0f-be97e4d99ee9-S5 上找到 4 个角色“sample_role” 的资源，正在删除...
+200
+在从节点 3ce447e3-2894-4c61-bd0f-be97e4d99ee9-S4 上找到 4 个角色“sample_role” 的资源，正在删除...
+200
+从节点 3ce447e3-2894-4c61-bd0f-be97e4d99ee9-S3 未保留资源给任何角色
+从节点 3ce447e3-2894-4c61-bd0f-be97e4d99ee9-S2 未保留资源给任何角色
+在从节点  3ce447e3-2894-4c61-bd0f-be97e4d99ee9-S1 上找到 4 个角色“sample_role” 的资源，正在删除...
+200
+从节点 3ce447e3-2894-4c61-bd0f-be97e4d99ee9-S0 未保留资源给任何角色。已知角色为：[slave_public]
+
+正在删除 zk 节点...
+成功删除存在的 z 节点 'dcos-service-sample' (代码=200)。
+顺利完成清理。
+</code></pre>
+<p>如果通过 Marathon 运行脚本，您还会看到以下输出：</p>
+<pre><code>从 Marathon 删除自己以免运行环路：/janitor
+已成功从 Marathon 删除自己（代码=200）：/janitor
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#catalog">卸载 Catalog 服务</a></li><li class="content__sections-item content__sections-item--h2"><a href="#cli">CLI</a></li><li class="content__sections-item content__sections-item--h2"><a href="#web">Web 界面</a></li><li class="content__sections-item content__sections-item--h2"><a href="#故障排除">故障排除</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-2">卸载用户创建的服务</a></li><li class="content__sections-item content__sections-item--h2"><a href="#zookeeper">清理资源和 ZooKeeper</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

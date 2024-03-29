@@ -1,0 +1,308 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>DC/OS Overlay - D2iQ Docs</title><meta name="description" content="Understanding DC/OS Overlay"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.2"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/networking/SDN/dcos-overlay">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/networking/SDN/dcos-overlay">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/networking/SDN/dcos-overlay">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/networking/SDN/dcos-overlay">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/networking/"><i data-feather="chevron-right"></i>Networking</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/networking/load-balancing-vips/"><i data-feather="chevron-right"></i>Load Balancing and Virtual IPs (VIPs)</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/networking/SDN/"><i data-feather="chevron-right"></i>Software Defined Networks</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/networking/SDN/calico/">Calico</a></li><li class="active active-on"><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/networking/SDN/dcos-overlay/">DC/OS Overlay</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/networking/SDN/usage/">Using SDNs</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/networking/SDN/cni-plugins/">CNI Plugin Support</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/networking/DNS/"><i data-feather="chevron-right"></i>DNS</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/archives/">Access Documentation Archives</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">DC/OS Overlay</h1></div><h4 class="content__header-description">Understanding DC/OS Overlay</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.2/networking/SDN/dcos-overlay/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>DC/OS Overlay is an SDN solution for UCR and Docker containers that comes pre-packaged with DC/OS and is enabled by default. DC/OS Overlay can run multiple virtual network instances in a given DC/OS cluster. Starting with DC/OS 1.11, DC/OS Overlay has support for creating IPv6 networks.</p>
+<p class="message--note"><strong>NOTE: </strong>IPv6 support is available only for Docker containers.</p>
+<p>Features provided by DC/OS Overlay are:</p>
+<ul>
+<li>Both Mesos and Docker containers can communicate from within a single node and between nodes on a cluster.</li>
+<li>Services can be created such that their traffic is isolated from other traffic coming from any other virtual network or host in the cluster.</li>
+<li>Removes the need to worry about potentially overlapping ports in applications, or the need to use nonstandard ports for services to avoid overlapping.</li>
+<li>You can generate any number of instances of a class of tasks and have them all listen on the same port so that clients do not have to do port discovery.</li>
+<li>You can run applications that require intra-cluster connectivity, like Cassandra, HDFS, and Riak.</li>
+<li>You can create multiple virtual networks to isolate different portions of your organization, for instance, development, marketing, and production.</li>
+</ul>
+<p>Details about the design and implementation of DC/OS Overlay can be found in the <a href="/dcosdocs/mesosphere/dcos/2.2/overview/design/overlay/">Overlay introduction</a>. The default configuration of DC/OS Overlay provides an IPv4 virtual network, <code>dcos</code>, and an IPv6 virtual network <code>dcos6</code> whose YAML configuration is as follows:</p>
+<pre><code class="language-yaml"> dcos_overlay_network :
+   vtep_subnet: 44.128.0.0/20
+   vtep_subnet6: fd01:a::/64
+   vtep_mac_oui: 70:B3:D5:00:00:00
+   overlays:
+     - name: dcos
+       subnet: 9.0.0.0/8
+       prefix: 24
+     - name: dcos6
+       subnet6: fd01:b::/64
+       prefix6: 80
+</code></pre>
+<p>Each virtual network is identified by a canonical <code>name</code> (see <a href="#limitations">limitations</a> for constraints on naming virtual networks). Containers launched on a virtual network get an IP address from the subnet allocated to the virtual network. To remove the dependency on a global IPAM, the overlay subnet is further split into smaller subnets. Each of the smaller subnets is allocated to an agent. The agents can then use a host-local IPAM to allocate IP addresses from their respective subnets to containers launched on the agent and attached to the given overlay. The <code>prefix</code> determines the size of the subnet (carved from the overlay subnet) allocated to each agent and thus defines the number of agents on which the overlay can run. For instance, in the default configuration above the virtual network <code>dcos</code> is allocated a /8 subnet (in the “subnet” field), which is then divided into /26 container subnets to be used on each host that will be part of the network (in the “prefix” field) as shown:</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/overlay-network-address-space.png" alt="Virtual network address space"></p>
+<p>Figure 1. Virtual network address space</p>
+<p>The bits reserved for <strong>ContainerID</strong> (6 in this example) are then subdivided into two equal groups (of 5 bits, in this example) that are used for Mesos containers and Docker containers respectively. With the default configuration, each agent will be able to host a maximum of 2^5=32 Mesos containers and 32 docker containers. With this specific configuration, if a service tries to launch more than 32 tasks on the Mesos containerizer or the Docker containerizer, it will receive a <code>TASK_FAILED</code>. Consult the <a href="#limitations">limitations</a> section of the main Virtual Networks page to learn more about this constraint.</p>
+<p>While the above example is specifically for an IPv4 virtual network, the same logic can be applied to the IPv6 virtual network <code>dcos6</code> as well. The only difference is that currently IPv6 is supported only for Docker containers.</p>
+<p class="message--warning"><strong>WARNING: </strong>Trying to launch a UCR container on <code> dcos6</code> will result in a container launch failure.</p>
+<p>You can modify the default virtual network configuration and can add more virtual networks if needed. Currently, you can only add or delete a virtual network at install time.</p>
+<h1 id="adding-virtual-networks-during-installation"><a class="content__anchor" href="#adding-virtual-networks-during-installation" aria-hidden="true"><i data-feather="bookmark"></i></a>Adding virtual networks during installation</h1>
+<p>DC/OS virtual networks can only be added and configured at install time. To replace or add another virtual network, <a href="#replace">reinstall DC/OS according to these instructions</a>.</p>
+<p>The default network can be overriden, or additional virtual networks can be configured, by modifying the <code>config.yaml</code> file:</p>
+<pre><code class="language-yaml">    agent_list:
+    - 10.10.0.117
+    - 10.10.0.116
+    # Use this bootstrap_url value unless the DC/OS installer assets have been moved.
+    bootstrap_url: file:///opt/dcos_install_tmp
+    cluster_name: &amp;lt;cluster-name&amp;gt;
+    master_discovery: static
+    master_list:
+    - 10.10.0.120
+    - 10.10.0.119
+    - 10.10.0.118
+    resolvers:
+    - 8.8.4.4
+    - 8.8.8.8
+    ssh_port: 22
+    ssh_user: centos
+    dcos_overlay_network:
+      vtep_subnet: 44.128.0.0/20
+      vtep_mac_oui: 70:B3:D5:00:00:00
+      overlays:
+        - name: dcos
+          subnet: 9.0.0.0/8
+          prefix: 26
+        - name: dcos-1
+          subnet: 192.168.0.0/16
+          prefix: 24
+</code></pre>
+<p>In the above example, two virtual networks have been defined. The virtual network <code>dcos</code> retains the default virtual network, and another virtual network called <code>dcos-1</code> with subnet range <code>192.168.0.0/16</code> has been added. In DC/OS Overlay, virtual networks must be associated with a name and a subnet. That name is used to launch Marathon tasks and other Mesos framework tasks using this specific virtual network (see <a href="/dcosdocs/mesosphere/dcos/2.2/networking/SDN/usage/">usage</a>). Due to restrictions on the size of Linux device names, the virtual network name must be less than thirteen characters. Consult the <a href="#limitations">limitations</a> section of the main Virtual Networks page to learn more.</p>
+<h1 id="retrieving-virtual-network-state"><a class="content__anchor" href="#retrieving-virtual-network-state" aria-hidden="true"><i data-feather="bookmark"></i></a>Retrieving virtual network state</h1>
+<p>After DC/OS installation is complete, the virtual network configuration can be obtained from <code>https://leader.mesos:5050/overlay-master/state</code> endpoint. The <code>network</code> section, in below snippet, lists the current overlay configuration and the <code>agents</code> section is a list showing how overlays are split across the Mesos agents. The following shows the network state when there is a single overlay in the cluster named <code>dcos</code>.</p>
+<pre><code class="language-json">
+  &quot;agents&quot;: [
+    {
+      &quot;ip&quot;: &quot;172.17.0.2&quot;,
+      &quot;overlays&quot;: [
+        {
+          &quot;backend&quot;: {
+            &quot;vxlan&quot;: {
+              &quot;vni&quot;: 1024,
+              &quot;vtep_ip&quot;: &quot;44.128.0.1/20&quot;,
+              &quot;vtep_ip6&quot;: &quot;fd01:a::1/64&quot;,
+              &quot;vtep_mac&quot;: &quot;70:b3:d5:80:00:01&quot;,
+              &quot;vtep_name&quot;: &quot;vtep1024&quot;
+            }
+          },
+          &quot;info&quot;: {
+            &quot;name&quot;: &quot;dcos&quot;,
+            &quot;prefix&quot;: 24,
+            &quot;subnet&quot;: &quot;9.0.0.0/8&quot;
+          },
+          &quot;state&quot;: {
+            &quot;status&quot;: &quot;STATUS_OK&quot;
+          },
+          &quot;subnet&quot;: &quot;9.0.0.0/24&quot;
+        },
+        {
+          &quot;backend&quot;: {
+            &quot;vxlan&quot;: {
+              &quot;vni&quot;: 1024,
+              &quot;vtep_ip&quot;: &quot;44.128.0.1/20&quot;,
+              &quot;vtep_ip6&quot;: &quot;fd01:a::1/64&quot;,
+              &quot;vtep_mac&quot;: &quot;70:b3:d5:80:00:01&quot;,
+              &quot;vtep_name&quot;: &quot;vtep1024&quot;
+            }
+          },
+          &quot;info&quot;: {
+            &quot;name&quot;: &quot;dcos6&quot;,
+            &quot;prefix6&quot;: 80,
+            &quot;subnet6&quot;: &quot;fd01:b::/64&quot;
+          },
+          &quot;state&quot;: {
+            &quot;status&quot;: &quot;STATUS_OK&quot;
+          },
+          &quot;subnet6&quot;: &quot;fd01:b::/80&quot;
+        }
+      ]
+    },
+    {
+      &quot;ip&quot;: &quot;172.17.0.4&quot;,
+      &quot;overlays&quot;: [
+        {
+          &quot;backend&quot;: {
+            &quot;vxlan&quot;: {
+              &quot;vni&quot;: 1024,
+              &quot;vtep_ip&quot;: &quot;44.128.0.2/20&quot;,
+              &quot;vtep_ip6&quot;: &quot;fd01:a::2/64&quot;,
+              &quot;vtep_mac&quot;: &quot;70:b3:d5:80:00:02&quot;,
+              &quot;vtep_name&quot;: &quot;vtep1024&quot;
+            }
+          },
+          &quot;docker_bridge&quot;: {
+            &quot;ip&quot;: &quot;9.0.1.128/25&quot;,
+            &quot;name&quot;: &quot;d-dcos&quot;
+          },
+          &quot;info&quot;: {
+            &quot;name&quot;: &quot;dcos&quot;,
+            &quot;prefix&quot;: 24,
+            &quot;subnet&quot;: &quot;9.0.0.0/8&quot;
+          },
+          &quot;mesos_bridge&quot;: {
+            &quot;ip&quot;: &quot;9.0.1.0/25&quot;,
+            &quot;name&quot;: &quot;m-dcos&quot;
+          },
+          &quot;state&quot;: {
+            &quot;status&quot;: &quot;STATUS_OK&quot;
+          },
+          &quot;subnet&quot;: &quot;9.0.1.0/24&quot;
+        },
+        {
+          &quot;backend&quot;: {
+            &quot;vxlan&quot;: {
+              &quot;vni&quot;: 1024,
+              &quot;vtep_ip&quot;: &quot;44.128.0.2/20&quot;,
+              &quot;vtep_ip6&quot;: &quot;fd01:a::2/64&quot;,
+              &quot;vtep_mac&quot;: &quot;70:b3:d5:80:00:02&quot;,
+              &quot;vtep_name&quot;: &quot;vtep1024&quot;
+            }
+          },
+          &quot;docker_bridge&quot;: {
+            &quot;ip6&quot;: &quot;fd01:b::1:8000:0:0/81&quot;,
+            &quot;name&quot;: &quot;d-dcos6&quot;
+          },
+          &quot;info&quot;: {
+            &quot;name&quot;: &quot;dcos6&quot;,
+            &quot;prefix6&quot;: 80,
+            &quot;subnet6&quot;: &quot;fd01:b::/64&quot;
+          },
+          &quot;mesos_bridge&quot;: {
+            &quot;ip6&quot;: &quot;fd01:b:0:0:1::/81&quot;,
+            &quot;name&quot;: &quot;m-dcos6&quot;
+          },
+          &quot;state&quot;: {
+            &quot;status&quot;: &quot;STATUS_OK&quot;
+          },
+          &quot;subnet6&quot;: &quot;fd01:b:0:0:1::/80&quot;
+        }
+      ]
+    },
+    {
+      &quot;ip&quot;: &quot;172.17.0.3&quot;,
+      &quot;overlays&quot;: [
+        {
+          &quot;backend&quot;: {
+            &quot;vxlan&quot;: {
+              &quot;vni&quot;: 1024,
+              &quot;vtep_ip&quot;: &quot;44.128.0.3/20&quot;,
+              &quot;vtep_ip6&quot;: &quot;fd01:a::3/64&quot;,
+              &quot;vtep_mac&quot;: &quot;70:b3:d5:80:00:03&quot;,
+              &quot;vtep_name&quot;: &quot;vtep1024&quot;
+            }
+          },
+          &quot;docker_bridge&quot;: {
+            &quot;ip&quot;: &quot;9.0.2.128/25&quot;,
+            &quot;name&quot;: &quot;d-dcos&quot;
+          },
+          &quot;info&quot;: {
+            &quot;name&quot;: &quot;dcos&quot;,
+            &quot;prefix&quot;: 24,
+            &quot;subnet&quot;: &quot;9.0.0.0/8&quot;
+          },
+          &quot;mesos_bridge&quot;: {
+            &quot;ip&quot;: &quot;9.0.2.0/25&quot;,
+            &quot;name&quot;: &quot;m-dcos&quot;
+          },
+          &quot;state&quot;: {
+            &quot;status&quot;: &quot;STATUS_OK&quot;
+          },
+          &quot;subnet&quot;: &quot;9.0.2.0/24&quot;
+        },
+        {
+          &quot;backend&quot;: {
+            &quot;vxlan&quot;: {
+              &quot;vni&quot;: 1024,
+              &quot;vtep_ip&quot;: &quot;44.128.0.3/20&quot;,
+              &quot;vtep_ip6&quot;: &quot;fd01:a::3/64&quot;,
+              &quot;vtep_mac&quot;: &quot;70:b3:d5:80:00:03&quot;,
+              &quot;vtep_name&quot;: &quot;vtep1024&quot;
+            }
+          },
+          &quot;docker_bridge&quot;: {
+            &quot;ip6&quot;: &quot;fd01:b::2:8000:0:0/81&quot;,
+            &quot;name&quot;: &quot;d-dcos6&quot;
+          },
+          &quot;info&quot;: {
+            &quot;name&quot;: &quot;dcos6&quot;,
+            &quot;prefix6&quot;: 80,
+            &quot;subnet6&quot;: &quot;fd01:b::/64&quot;
+          },
+          &quot;mesos_bridge&quot;: {
+            &quot;ip6&quot;: &quot;fd01:b:0:0:2::/81&quot;,
+            &quot;name&quot;: &quot;m-dcos6&quot;
+          },
+          &quot;state&quot;: {
+            &quot;status&quot;: &quot;STATUS_OK&quot;
+          },
+          &quot;subnet6&quot;: &quot;fd01:b:0:0:2::/80&quot;
+        }
+      ]
+    }
+  ],
+  &quot;network&quot;: {
+    &quot;overlays&quot;: [
+      {
+        &quot;name&quot;: &quot;dcos&quot;,
+        &quot;prefix&quot;: 24,
+        &quot;subnet&quot;: &quot;9.0.0.0/8&quot;
+      },
+      {
+        &quot;name&quot;: &quot;dcos6&quot;,
+        &quot;prefix6&quot;: 80,
+        &quot;subnet6&quot;: &quot;fd01:b::/64&quot;
+      }
+    ],
+    &quot;vtep_mac_oui&quot;: &quot;70:B3:D5:00:00:00&quot;,
+    &quot;vtep_subnet&quot;: &quot;44.128.0.0/20&quot;,
+    &quot;vtep_subnet6&quot;: &quot;fd01:a::/64&quot;
+  }
+}
+</code></pre>
+<h1 id="deleting-virtual-networks"><a class="content__anchor" href="#deleting-virtual-networks" aria-hidden="true"><i data-feather="bookmark"></i></a>Deleting Virtual Networks</h1>
+<p>To delete a virtual network, uninstall DC/OS, then delete the overlay replicated log on the master nodes and the iptable rules on the agent nodes that are associated with the virtual networks.</p>
+<h2 id="the-overlay-replicated-log"><a class="content__anchor" href="#the-overlay-replicated-log" aria-hidden="true"><i data-feather="bookmark"></i></a>The Overlay Replicated Log</h2>
+<p>DC/OS Overlay uses a replicated log to persist the virtual network state across Mesos master reboots and to recover overlay state when a new Mesos master is elected. The overlay replicated log is stored at <code>/var/lib/dcos/mesos/master/overlay_replicated_log</code>. The overlay replicated log is <strong>not</strong> removed when DC/OS is uninstalled from the cluster, so you need to delete this log manually before reinstalling DC/OS. Otherwise, the Mesos master will try to reconcile the existing overlay replicated log during startup and will fail if it finds a virtual network that was not configured.</p>
+<p class="message--note"><strong>NOTE: </strong>The overlay replicated log is different from the <a href="http://mesos.apache.org/documentation/latest/replicated-log-internals/"> master's replicated log</a>, which is stored at <code>/var/lib/dcos/mesos/master/replicated_log</code>. Removing the overlay replicated log will have no effect on the master's recovery semantics.</p>
+<h2 id="iptables"><a class="content__anchor" href="#iptables" aria-hidden="true"><i data-feather="bookmark"></i></a>iptables</h2>
+<p>The virtual networks install IPMASQ rules to allow containers to talk outside the virtual network. When you delete or replace virtual networks, you must remove the rules associated with the previous virtual networks. To remove the IPMASQ rules associated with each overlay, remove the IPMASQ rule from the POSTROUTING change of the NAT table that corresponds to the virtual networks subnet. Remove these rules on each agent node.</p>
+<p><a name="replace"></a></p>
+<h1 id="replacing-or-adding-new-virtual-networks"><a class="content__anchor" href="#replacing-or-adding-new-virtual-networks" aria-hidden="true"><i data-feather="bookmark"></i></a>Replacing or Adding New Virtual Networks</h1>
+<p>To replace your virtual network, uninstall DC/OS and delete the overlay replicated log on the master nodes and the iptable rules on the agent nodes. Then, reinstall with the desired networks specified in your <code>config.yaml</code> file.</p>
+<h1 id="troubleshooting"><a class="content__anchor" href="#troubleshooting" aria-hidden="true"><i data-feather="bookmark"></i></a>Troubleshooting</h1>
+<p>The <strong>Networking</strong> tab of the DC/OS web interface provides information helpful for troubleshooting. It contains information about the virtual networks from DC/OS Overlay that a container is associated with and the IP address of the container on that virtual network.</p>
+<p class="message--note"><strong>NOTE: </strong>The network tab currently displays information about containers that are associated with virtual networks managed by DC/OS Overlay. It does not have information about containers running on virtual networks managed by any other CNI/CNM provider`.</p>
+<p><a name="limitations"></a></p>
+<h3 id="limitations"><a class="content__anchor" href="#limitations" aria-hidden="true"><i data-feather="bookmark"></i></a>Limitations</h3>
+<ul>
+<li>
+<p>DC/OS Overlay supports IPv6 networks only for Docker containers. Launching UCR containers on an IPv6 network will result in a container launch failure. To keep it future-proof, however, when a subnet is allocated to an agent, IPv6 subnets are pre-allocated to MesosContainerizer and DockerContainerizer following the same logic used for IPv4 networks.</p>
+</li>
+<li>
+<p>DC/OS Overlay does not allow services to reserve IP addresses that result in ephemeral addresses for containers across multiple incarnations on the virtual network. This restriction ensures that a given client connects to the correct service.</p>
+</li>
+</ul>
+<p>DC/OS provides FQDNs in different <a href="/dcosdocs/mesosphere/dcos/2.2/networking/DNS/">zones</a> that offer a clean way of accessing services through predictable URLs. If you are using DC/OS Overlay, you should use one of the FQDNs provided by the DC/OS DNS service to make it easy for clients to discover the location of your service.</p>
+<ul>
+<li>
+<p>The limitation on the total number of containers on DC/OS Overlay is the same value as the number of IP addresses available on the overlay subnet. However, the limitation on the number of containers on an agent depends on the subnet (which will be a subset of the overlay subnet) allocated to the agent. For a given agent subnet, half the address space is allocated to the <code>MesosContainerizer</code> and the other half is allocated to the <code>DockerContainerizer</code>.</p>
+</li>
+<li>
+<p>In DC/OS Overlay, the subnet of a virtual network is sliced into smaller subnets and these smaller subnets are allocated to agents. When an agent has exhausted its allocated address range and a service tries to launch a container on the virtual network on this agent, the container launch will fail and the service will receive a <code>TASK_FAILED</code> message.</p>
+<p>Since there is no API to report the exhaustion of addresses on an agent, it is up to the service to conclude that containers cannot be launched on a virtual network due to lack of IP addresses on the agent. This limitation has a direct impact on the behavior of services, such as Marathon, that try to launch services with a specified number of instances. Due to this limitation, services such as Marathon might not be able to complete their obligation of launching a service on a virtual network if they try to launch instances of a service on an agent that has exhausted its allocated IP address range.</p>
+<p>Keep this limitation in mind when debugging issues on frameworks that use a virtual network and you see the <code>TASK_FAILED</code> message.</p>
+</li>
+<li>
+<p>DC/OS Overlay uses Linux bridge devices on agents to connect Mesos and Docker containers to the virtual network. The names of these bridge devices are derived from the virtual network name. Since Linux has a limitation of fifteen characters on network device names, there is a character limit of thirteen characters for the virtual network name (two characters are used to distinguish between a CNI bridge and a Docker bridge on the virtual network).</p>
+</li>
+<li>
+<p>Certain names are reserved and cannot be used as DC/OS Overlay names. The is because DC/OS Overlay uses Docker networking underneath to connect Docker containers to the overlay, which in turn reserves certain network names. The reserved names are: <code>host</code>, <code>bridge</code> and <code>default</code>.</p>
+</li>
+<li>
+<p><a href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/creating-services/health-checks/">Marathon health checks</a> will not work with certain DC/OS Overlay configurations. If you are not using the default DC/OS Overlay configuration and Marathon is isolated from the virtual network, health checks will fail consistently even if the service is healthy.</p>
+<p>Marathon health checks will work in any of the following circumstances:</p>
+<ul>
+<li>You are using the default DC/OS Overlay configuration.</li>
+<li>Marathon has access to the virtual network.</li>
+<li>You use a <a href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/creating-services/health-checks/"><code>command</code> health check</a>.</li>
+</ul>
+</li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#adding-virtual-networks-during-installation">Adding virtual networks during installation</a></li><li class="content__sections-item content__sections-item--h1"><a href="#retrieving-virtual-network-state">Retrieving virtual network state</a></li><li class="content__sections-item content__sections-item--h1"><a href="#deleting-virtual-networks">Deleting Virtual Networks</a></li><li class="content__sections-item content__sections-item--h2"><a href="#the-overlay-replicated-log">The Overlay Replicated Log</a></li><li class="content__sections-item content__sections-item--h2"><a href="#iptables">iptables</a></li><li class="content__sections-item content__sections-item--h1"><a href="#replacing-or-adding-new-virtual-networks">Replacing or Adding New Virtual Networks</a></li><li class="content__sections-item content__sections-item--h1"><a href="#troubleshooting">Troubleshooting</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

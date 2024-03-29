@@ -1,0 +1,278 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>暴露 Kubernetes API - D2iQ Docs</title><meta name="description" content="设置代理以暴露 Kubernetes API"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Kubernetes文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li><li class="chooser-list-item"><a href="/dkp/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services/kubernetes">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__item"><a href="/dkp/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><div class="toggle"><p><span class="title">Kubernetes</span><span class="version"> 1.2.1-1.10.6</span></p></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/install/">安装和自定义</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/advanced-install/">高级安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/quick-start/">快速启动</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/uninstall/">卸载</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/cluster_sizing/">群集大小</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/upgrade/">已升级</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/limitations/">限制</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/exposing-the-kubernetes-api/">暴露 Kubernetes API</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/exposing-the-kubernetes-api-marathonlb/">通过 Marathon-LB 或 Edge-LB 暴露 Kubernetes API</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/connecting-clients/">连接客户端</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/kubernetes-dashboard/">Kubernetes 仪表板</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/authn-and-authz/">授权</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/troubleshooting-etcd/">故障排除</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/disaster-recovery/">灾难恢复</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/ingress/">外部入口</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/supported-versions/">支持的版本</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/release-notes/">版本注释</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">暴露 Kubernetes API</h1></div><h4 class="content__header-description">设置代理以暴露 Kubernetes API</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/master/pages/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/exposing-the-kubernetes-api/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://dcos-community.slack.com/" target="_blank"><i class="actions__icon" data-feather="slack"></i><span class="actions__text">Discuss</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+暴露+Kubernetes API&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/exposing-the-kubernetes-api&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><h2 id="kubernetes-api"><a class="content__anchor" href="#kubernetes-api" aria-hidden="true"><i data-feather="bookmark"></i></a>暴露 Kubernetes API</h2>
+<p>DC/OS Kubernetes 不会自动在 DC/OS 集群外部暴露
+Kubernetes API。因此，要从 DC/OS 集群外部访问 Kubernetes API，
+您必须设置可以到达 DC/OS VIP（
+在 DC/OS 集群内暴露 Kubernetes API）的代理。</p>
+<p>此 VIP 为 <code>apiserver. &lt;SERVICE_NAME&gt;.l4lb.thisdcos.directory:6443</code>，其中，
+<code>&lt;SERVICE_NAME&gt;</code> 是安装包时您所提供的
+服务名称。默认为 <code>&lt;SERVICE_NAME&gt;</code> is <code>kubernetes</code>，所以，默认情况下，
+VIP 是 <code>apiserver.kubernetes.l4lb.thisdcos.directory:6443</code>。</p>
+<p>在接下来的部分中，我们将介绍您可以遵循的两个示例，以便
+将 Kubernetes API 暴露于 DC/OS 集群之外。第一个示例
+提供了快速尝试 DC/OS Kubernetes 的方式，而无需担心
+建立信任。第二个示例是对第一个示例的扩展，以便
+建立完全安全的设置。</p>
+<p>另外，如果您在 DC/OS 集群中运行 Marathon-LB 和/或 Edge-LB，您可以通过其中的一个暴露 Kubernetes API。有关操作的详细信息记录于 <a href="../exposing-the-kubernetes-api-marathonlb">此处</a>。</p>
+<p>为了让用户成功遵循示例，其 DC/OS 集群
+<strong>必须</strong>至少有一个
+<a href="/dcosdocs/mesosphere/dcos/cn/1.11/overview/architecture/node-types/#public-agent-nodes">共用代理</a>
+（例如，网络上一个代理，允许从
+集群外部 ingress）。在示例中，<code>&lt;ip-of-public-agent&gt;</code> 代表 IP 地址，
+通过该地址可以找到此公用代理。用户 <strong>必须</strong>也可以从其工作站
+通过 SSH 来访问此 DC/OS 公用代理。最终，用户
+将得到以下类似设置：</p>
+<p><img src="../img/haproxy.png" alt="使用 HAProxy 暴露 Kubernetes API" title="Exposing the Kubernetes API using HAProxy"></p>
+<p>图 1. 使用 HAProxy 暴露 Kubernetes API</p>
+<p><a name="example-1"></a></p>
+<h2 id="1-haproxy"><a class="content__anchor" href="#1-haproxy" aria-hidden="true"><i data-feather="bookmark"></i></a>示例 1：使用 HAProxy 和自签名证书</h2>
+<div class="message--note">
+<p><strong>警告</strong></p>
+<p>本示例旨在提供一种快速、简单的方式来将
+Kubernetes API 暴露于 DC/OS 集群（即开即用）外部。对于
+暴露 Kubernetes API 的问题，这不是一个完全安全的解决方案，
+<strong>不得</strong> 用于生产。</p>
+</div>
+<p>此示例侧重于在 DC/OS 集群外暴露 Kubernetes API，
+将 HAProxy 作为中间代理，并使用自签名通配符证书，
+已确保用户和 HAProxy 之间的通信。</p>
+<h3 id="1"><a class="content__anchor" href="#1" aria-hidden="true"><i data-feather="bookmark"></i></a>步骤 1：创建自签名通配符证书</h3>
+<p>要保持 HAProxy 与用户之间的连接，必须
+获得 TLS 证书和私钥。因为此示例仅适用于
+在没有任何其他安全问题的情况下暴露 Kubernetes API，
+自签名通配符证书会被生成和使用。为了实现
+此目的，用户可以使用 <code>openssl</code>：</p>
+<pre><code># openssl genrsa 2048 &gt; haproxy-key.pem
+# openssl req -new -x509 -nodes -sha1 -days 3650 -key haproxy-key.pem \
+    -subj &quot;/C=US/ST=CA/L=SF/O=Mesosphere/OU=dcos-kubernetes/CN=*&quot; &gt; haproxy-crt.pem
+# cat haproxy-crt.pem haproxy-key.pem &gt; haproxy.pem
+</code></pre>
+<p>运行这些命令将在用户的当前目录中创建 <code>haproxy.pem</code> 文件，
+随后会用到该文件。</p>
+<h3 id="2-haproxy"><a class="content__anchor" href="#2-haproxy" aria-hidden="true"><i data-feather="bookmark"></i></a>步骤 2：创建 HAProxy 配置</h3>
+<p>您现在可以运行以下命令（根据需要替换 <code>&lt;SERVICE_NAME&gt;</code>
+占位符），以创建有效的 HAProxy 配置：</p>
+<pre><code># cat &lt;&lt;EOF &gt; haproxy.conf
+global
+    log 127.0.0.1 local0
+    # Sets the maximum size of the Diffie-Hellman parameters used for generating
+    # the ephemeral/temporary Diffie-Hellman key in case of DHE key exchange.
+    tune.ssl.default-dh-param 2048
+    # Enables debug mode which dumps to stdout all exchanges.
+    # This should be disabled in production, as tokens will also be logged.
+    debug
+
+defaults
+    log global
+    mode http
+    option httplog
+    option dontlognull
+    # Set appropriate values for timeouts. This is important so that calls such
+    # as &quot;kubectl exec&quot; or &quot;kubectl logs -f&quot; do not exit prematurely due to
+    # inactivity in the connection.
+    timeout connect 10s
+    timeout client 86400s
+    timeout server 86400s
+    timeout tunnel 86400s
+
+frontend frontend_all
+    bind :6443 ssl crt /haproxy/haproxy.pem
+    mode http
+    default_backend backend_kube_apiserver
+
+backend backend_kube_apiserver
+    mode http
+    balance leastconn
+    server kube-apiserver apiserver.&lt;SERVICE_NAME&gt;.l4lb.thisdcos.directory:6443 check ssl verify none
+EOF
+</code></pre>
+<p>运行此命令将在当前的目录中创建 <code>haproxy.conf</code> 文件
+随后会用到该文件。</p>
+<h3 id="3-haproxy"><a class="content__anchor" href="#3-haproxy" aria-hidden="true"><i data-feather="bookmark"></i></a>步骤 3：将证书和 HAProxy 配置复制到公用代理</h3>
+<p>HAProxy 将从 DC/OS 公用代理文件系统的目录
+中读取其配置以及所需的 TLS 材料。这可以是任何目录，只要
+HAProxy 进程可以稍后访问（在以下步骤中
+<code>&lt;path-to-haproxy-config-directory&gt;表示为</code> ）。要通过 SSH 将
+所需的 TLS 材料复制到 DC/OS 公用代理，您可以运行
+以下命令（根据需要替换占位符）：</p>
+<pre><code># ssh &lt;user&gt;@&lt;ip-of-public-agent&gt; \
+    mkdir &lt;path-to-haproxy-config-directory&gt;
+# scp haproxy.pem \
+    haproxy.conf \
+    &lt;user&gt;@&lt;ip-of-public-agent&gt;:&lt;path-to-haproxy-config-directory&gt;
+haproxy.pem     100%    2985    16.9KB/s    00:00
+haproxy.conf    100%    1041     5.9KB/s    00:00
+</code></pre>
+<h3 id="4-haproxy"><a class="content__anchor" href="#4-haproxy" aria-hidden="true"><i data-feather="bookmark"></i></a>步骤 4：运行 HAProxy</h3>
+<p>在此步骤中，HAProxy 被配置为在
+DC/OS 公用代理上运行的 Marathon 应用程序。要实现此目的，可以使用以下命令（根据需要替换 <code>&lt;path-to-haproxy-config-directory&gt;</code>）：</p>
+<pre><code># cat &lt;&lt;EOF &gt; marathon.json
+{
+  &quot;id&quot;: &quot;/kubernetes-haproxy&quot;,
+  &quot;acceptedResourceRoles&quot;: [
+    &quot;slave_public&quot;
+  ],
+  &quot;cmd&quot;: &quot;/usr/local/sbin/haproxy -f /haproxy/haproxy.conf&quot;,
+  &quot;constraints&quot;: [
+    [
+      &quot;hostname&quot;,
+      &quot;UNIQUE&quot;
+    ]
+  ],
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;MESOS&quot;,
+    &quot;volumes&quot;: [
+      {
+        &quot;containerPath&quot;: &quot;/haproxy&quot;,
+        &quot;hostPath&quot;: &quot;&lt;path-to-haproxy-config-directory&gt;&quot;,
+        &quot;mode&quot;: &quot;RO&quot;
+      }
+    ],
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;haproxy:1.7&quot;,
+      &quot;forcePullImage&quot;: false,
+      &quot;parameters&quot;: []
+    }
+  },
+  &quot;cpus&quot;: 0.1,
+  &quot;instances&quot;: 1,
+  &quot;mem&quot;: 128,
+  &quot;networks&quot;: [
+    {
+      &quot;mode&quot;: &quot;host&quot;
+    }
+  ],
+  &quot;portDefinitions&quot;: [
+    {
+      &quot;protocol&quot;: &quot;tcp&quot;,
+      &quot;port&quot;: 6443
+    }
+  ],
+  &quot;requirePorts&quot;: true
+}
+EOF
+</code></pre>
+<pre><code># dcos marathon app add marathon.json
+</code></pre>
+<p>部署 HAProxy 后，您应该能够看到以下内容：</p>
+<pre><code># dcos task
+NAME                HOST        USER    STATE  ID                                                       MESOS ID                                 REGION    ZONE
+(...)
+kubernetes-haproxy  10.138.0.7  root    R      kubernetes-haproxy.beaca041-5e7c-11e8-8c11-ce5fc4b24b83  cc965893-270f-4809-9617-e190904dae27-S0  us-west1  us-west1-b
+</code></pre>
+<p>现在可以访问 Kubernetes API：</p>
+<pre><code># curl -k https://&lt;ip-of-public-agent&gt;:6443
+{
+  &quot;kind&quot;: &quot;Status&quot;,
+  &quot;apiVersion&quot;: &quot;v1&quot;,
+  &quot;metadata&quot;: {
+
+  },
+  &quot;status&quot;: &quot;Failure&quot;,
+  &quot;message&quot;: &quot;forbidden: User \&quot;system:anonymous\&quot; cannot get path \&quot;/\&quot;&quot;,
+  &quot;reason&quot;: &quot;Forbidden&quot;,
+  &quot;details&quot;: {
+
+  },
+  &quot;code&quot;: 403
+}
+</code></pre>
+<p>要配置 <code>kubectl</code>，以使用此设置访问 Kubernetes API，
+您现在应遵循
+<a href="../connecting-clients">连接客户端</a>页面中“无 TSL 验证”小节所述的
+步骤。</p>
+<h2 id="2-haproxy-2"><a class="content__anchor" href="#2-haproxy-2" aria-hidden="true"><i data-feather="bookmark"></i></a>示例 2：使用 HAProxy 并建立信任</h2>
+<p><a href="#example-1">实例 1</a> 中提供的解决方案有几个缺点：</p>
+<ol>
+<li>Kubernetes API 向 HAProxy 提供的证书未经验证。</li>
+<li>HAProxy 向用户提供的证书太宽泛（而且也未
+验证）。</li>
+<li>此外，它还假设 Kubernetes API 将在
+DC/OS 公用代理的 IP 地址上被访问。</li>
+<li>它假设 HAProxy 会将 <strong>所有</strong> 传入流量路由至
+Kubernetes API VIP。</li>
+</ol>
+<p>在生产场景中，您可能想要解决所有这些
+缺点，以提高解决方案的整体安全性，
+并且能够使用相同的 HAProxy 实例暴露多个服务/
+端点。此示例基于前一个示例，侧重于解决所有
+这些缺点。</p>
+<h3 id="1-kubernetes-api"><a class="content__anchor" href="#1-kubernetes-api" aria-hidden="true"><i data-feather="bookmark"></i></a>步骤 1：验证 Kubernetes API 证书</h3>
+<p>要完全保持 HAProxy 与 Kubernetes API 之间
+的连接，必须告知 HAProxy 如何信任由
+Kubernetes API 提供的 TSL 证书。这可以通过告诉 HAProxy
+签署 TLS 证书的签署单位值得信赖来完成。为了实现
+此目的，您必须联系 TLS 证书签署单位：</p>
+<pre><code># dcos task exec kube-apiserver-0-instance cat ca-crt.pem &gt; dcos-kubernetes-ca.pem
+</code></pre>
+<p>运行此命令将在当前的目录中创建 <code>dcos-kubernetes-ca.pem</code> 文件，
+该文件现在必须复制到
+<code>&lt;path-to-haproxy-config-directory&gt;DC/OS 公用代理中的</code> 目录。
+您还必须根据以下示例更新 HAProxy 配置，
+并将更新的配置复制到 DC/OS 公用代理：</p>
+<pre><code>backend backend_kube_apiserver
+    (...)
+    server kube-apiserver apiserver.&lt;SERVICE_NAME&gt;.l4lb.thisdcos.directory:6443 check ssl verify required ca-file /haproxy/dcos-kubernetes-ca.pem
+</code></pre>
+<h3 id="2-haproxy-3"><a class="content__anchor" href="#2-haproxy-3" aria-hidden="true"><i data-feather="bookmark"></i></a>步骤 2：验证 HAProxy 证书</h3>
+<p>在 <a href="#example-1">实例 1</a> 中，自签名、通配符证书被使用。在
+生产场景中，您需要使用由
+知名、可信任的证书签署单位签署的有效证书。您可能还想使用一个域名（
+例如，<code>kube-apiserver.example.com</code>），而不是 IP 地址，来访问
+Kubernetes API。为了完成此步骤，您必须
+确保：</p>
+<ul>
+<li>您拥有对于
+<code>kube-apiserver.example.com</code> 域有效的证书（和匹配的私钥）；</li>
+<li>位于 <code>example.com</code> 的 DNS 以此方式配置，以便
+<code>kube-apiserver.example.com</code> 解析为 DC/OS 代理（HAProxy 在运行）
+的 IP 地址；</li>
+<li>您选择拥有证书签署单位（
+签署过上述证书）签发的证书（以防还未被
+操作系统信任）；</li>
+</ul>
+<p>如何解决这三项，高度依赖于您的设置。在本示例的其余部分中，假设这些项已解决。</p>
+<p>当您拥有证书和私钥（针对
+将被使用的域）后（在这种情况下，<code>kube-apiserver.example.com</code>），您
+必须把在 <a href="#example-1">实例 1</a> 中创建的 <code>haproxy.pem</code> 文件替换为
+<strong>同时</strong> 包含新证书和私钥（按特定
+顺序）的新文件，并将该文件通过 SSH 复制到 DC/OS 代理。您还必须
+将包含证书签署单位证书的文件作为
+<code>ca.pem</code> 通过 SSH 复制到 DC/OS 代理。最后，您必须根据以下示例更新 HAProxy
+配置：</p>
+<pre><code>frontend frontend_all
+    # /haproxy/haproxy.pem contains the certificate and key for kube-apiserver.example.com
+    # /haproxy/ca.pem contains the certificate(s) of the certificate authority that signed
+    # haproxy.pem. This is only required if the CA is not already trusted by the operating
+    # system.
+    bind :6443 ssl crt /haproxy/haproxy.pem ca-file /haproxy/ca.pem
+    (...)
+</code></pre>
+<p>此时，您应遵循“有 TLS”中所述的步骤
+<a href="../connecting-clients">连接客户端</a>页面中“无 TSL 验证”小节所述的
+步骤。</p>
+<h3 id="3-haproxy-2"><a class="content__anchor" href="#3-haproxy-2" aria-hidden="true"><i data-feather="bookmark"></i></a>步骤 3：使用 HAProxy 服务多个服务/端点</h3>
+<p>如上所述，用户可能希望使用正在部署的相同 HAproxy 实例
+来暴露其他服务或端点。为了实现这一目的，
+您可以使用
+<a href="https://en.wikipedia.org/wiki/Server_Name_Indication">服务器名称指示</a>。
+然后，接收请求，HAProxy 将根据所请求的域名决定
+使用哪个后端。</p>
+<p>要将请求转发至 <code>kube-apiserver.example.com</code>，然后再转发至一直使用的 Kubernetes API VIP，
+您必须根据以下示例来
+更新 HAProxy 配置：</p>
+<pre><code>frontend frontend_all
+    (...)
+    # Inspect the SNI field from incoming TLS connections so we can forward to
+    # the appropriate backend based on the server name.
+    use_backend backend_kube_apiserver if { ssl_fc_sni kube-apiserver.example.com }
+
+</code></pre>
+<p>可根据需要为其他域设置额外的转发规则。举个
+更多信息，请参阅
+<a href="https://cbonte.github.io/haproxy-dconv/1.7/configuration.html">HAProxy 文档</a>。</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#kubernetes-api">暴露 Kubernetes API</a></li><li class="content__sections-item content__sections-item--h2"><a href="#1-haproxy">示例 1：使用 HAProxy 和自签名证书</a></li><li class="content__sections-item content__sections-item--h2"><a href="#2-haproxy-2">示例 2：使用 HAProxy 并建立信任</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

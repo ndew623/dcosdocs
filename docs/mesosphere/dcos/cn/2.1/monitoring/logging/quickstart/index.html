@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>日志记录快速入门 - D2iQ Docs</title><meta name="description" content="DC/OS 日志记录快速入门"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.1/monitoring/logging/quickstart">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/quickstart">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/logging/quickstart">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/logging/quickstart">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/performance-monitoring/"><i data-feather="chevron-right"></i>性能监控</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/"><i data-feather="chevron-right"></i>日志记录</a></li><ul><li class="active active-on"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/quickstart/">快速入门</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/access-component-logs/">访问系统和组件日志</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/access-task-logs/">控制对任务日志的访问</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/configure-task-logs/">配置任务日志输出和保留</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/aggregating/"><i data-feather="chevron-right"></i>日志聚合</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/logging-reference/">日志记录参考</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/logging-api-examples/">日志记录 API 示例</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/debugging/"><i data-feather="chevron-right"></i>调试</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">日志记录快速入门</h1></div><h4 class="content__header-description">DC/OS 日志记录快速入门</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/quickstart/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>使用本指南开始使用 DC/OS 日志记录。此处使用的许多命令在 [CLI 命令参考]中有更全面的描述。(/dcosdocs/mesosphere/dcos/cn/2.1/cli/command-reference/dcos-task/).</p>
+<p><strong>前提条件：</strong></p>
+<ul>
+<li>
+<p>您必须 [安装了] DC/OS 和 DC/OS CLI。(/dcosdocs/mesosphere/dcos/cn/2.1/installing/).</p>
+</li>
+<li>
+<p>您必须以超级用户身份登录，或者已被授予对日志记录的用户访问权限。如需更多信息，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/access-component-logs/">访问系统和组件日志</a> 和 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/access-task-logs/">访问任务日志</a>.</p>
+</li>
+</ul>
+<h1 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>部署一个示例应用程序</h1>
+<p>部署一个示例 Marathon 应用程序供在本快速入门指南中使用。</p>
+<ol>
+<li>
+<p>创建以下 Marathon 应用定义并另存为 <code>test-log.json</code>.</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/test-log&quot;,
+  &quot;cmd&quot;: &quot;while true;do echo stdout;echo stderr &gt;&amp;2;sleep 1;done&quot;,
+  &quot;cpus&quot;: 0.001,
+  &quot;instances&quot;: 1,
+  &quot;mem&quot;: 128
+}
+</code></pre>
+</li>
+<li>
+<p>使用此 CLI 命令部署该应用程序：</p>
+<pre><code class="language-bash">dcos marathon app add test-log.json
+</code></pre>
+</li>
+<li>
+<p>验证应用程序是否已成功部署，并记下任务 ID：</p>
+<pre><code class="language-bash">dcos task test-log
+</code></pre>
+<p>输出应类似于：</p>
+<pre><code class="language-bash">NAME      HOST        USER  STATE  ID
+test-log  10.0.1.105  root    R    test-log.e69c4b2f-c255-11e6-a451-aa711cbcaa78
+</code></pre>
+</li>
+</ol>
+<h1 id="mesos-dcos"><a class="content__anchor" href="#mesos-dcos" aria-hidden="true"><i data-feather="bookmark"></i></a>查看 Mesos 和 DC/OS 日志</h1>
+<p>您可以通过 DC/OS CLI <code>stderr</code> 命令来本地访问 Mesos <code>stdout</code> 和 <code>dcos task log</code> 日志。此例中，启动了一个任务，并访问 <code>stderr</code> 和 Mesos <code>stdout</code> 日志。</p>
+<ol>
+<li>
+<p>运行此命令以查看 <code>stdout</code> 日志，其中 <code>&lt;task_id&gt;</code> 是任务 ID：</p>
+<pre><code class="language-bash">dcos task log &lt;task_id&gt;
+</code></pre>
+<p>输出应类似于：</p>
+<pre><code class="language-bash">Thu Dec 15 00:49:10 2016 ip-10-0-1-177.us-west-2.compute.internal Command Executor (Task: test-log.2fc56009-c25d-11e6-81b2-9a5d88789ccd) (Command: sh -c 'while true;d...') [7131] stdout
+Thu Dec 15 00:49:11 2016 ip-10-0-1-177.us-west-2.compute.internal Command Executor (Task: test-log.2fc56009-c25d-11e6-81b2-9a5d88789ccd) (Command: sh -c 'while true;d...') [7131] stdout
+</code></pre>
+</li>
+<li>
+<p>运行此命令以追踪日志，其中 <code>&lt;task_id&gt;</code> 是任务 ID：</p>
+<pre><code class="language-bash">dcos task log --follow &lt;task_id&gt;
+</code></pre>
+<p>这将创建一个与此类似的日志流：</p>
+<pre><code class="language-bash">Wed Dec 14 16:50:12 2016 ip-10-0-1-177.us-west-2.compute.internal Command Executor (Task: test-log.2fc56009-c25d-11e6-81b2-9a5d88789ccd) (Command: sh -c 'while true;d...') [7131]: stdout
+Wed Dec 14 16:50:13 2016 ip-10-0-1-177.us-west-2.compute.internal Command Executor (Task: test-log.2fc56009-c25d-11e6-81b2-9a5d88789ccd) (Command: sh -c 'while true;d...') [7131]: stdout
+</code></pre>
+</li>
+<li>
+<p>运行此命令以获取最后 5 个日志条目：</p>
+<pre><code class="language-bash">dcos task log &lt;task_id&gt; --lines=5
+</code></pre>
+<p>输出应类似于：</p>
+<pre><code class="language-bash">Thu Dec 15 00:51:27 2016 ip-10-0-1-177.us-west-2.compute.internal Command Executor (Task: test-log.2fc56009-c25d-11e6-81b2-9a5d88789ccd) (Command: sh -c 'while true;d...') [7131] stdout
+Thu Dec 15 00:51:28 2016 ip-10-0-1-177.us-west-2.compute.internal Command Executor (Task: test-log.2fc56009-c25d-11e6-81b2-9a5d88789ccd) (Command: sh -c 'while true;d...') [7131] stdout
+Thu Dec 15 00:51:29 2016 ip-10-0-1-177.us-west-2.compute.internal Command Executor (Task: test-log.2fc56009-c25d-11e6-81b2-9a5d88789ccd) (Command: sh -c 'while true;d...') [7131] stdout
+Thu Dec 15 00:51:30 2016 ip-10-0-1-177.us-west-2.compute.internal Command Executor (Task: test-log.2fc56009-c25d-11e6-81b2-9a5d88789ccd) (Command: sh -c 'while true;d...') [7131] stdout
+Thu Dec 15 00:51:31 2016 ip-10-0-1-177.us-west-2.compute.internal Command Executor (Task: test-log.2fc56009-c25d-11e6-81b2-9a5d88789ccd) (Command: sh -c 'while true;d...') [7131] stdout
+</code></pre>
+</li>
+</ol>
+<h1 id="mesos"><a class="content__anchor" href="#mesos" aria-hidden="true"><i data-feather="bookmark"></i></a>查看 Mesos 任务和系统日志</h1>
+<p>您可以使用 <code>dcos node log</code> 命令，查看任务或主机系统的日志。关于这些命令的更多信息可在 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/command-reference/dcos-node/">CLI 命令参考</a> 部分找到。</p>
+<ol>
+<li>
+<p>运行此命令以查看领导 Mesos 管理节点日志：</p>
+<pre><code class="language-bash">dcos node log --leader --lines 3
+</code></pre>
+<p>输出应类似于：</p>
+<pre><code class="language-bash">Thu Dec 15 00:29:28 2016 ip-10-0-6-165.us-west-2.compute.internal [10530] ip-10-0-6-165.us-west-2.compute.internal nginx: 10.0.6.72 - - [15/Dec/2016:00:29:28 +0000] &quot;GET /service/marathon/v2/groups?_timestamp=1481761768409&amp;embed=group.groups&amp;embed=group.apps&amp;embed=group.pods&amp;embed=group.apps.deployments&amp;embed=group.apps.counts&amp;embed=group.apps.tasks&amp;embed=group.apps.taskStats&amp;embed=group.apps.lastTaskFailure HTTP/1.1&quot; 200 1941 &quot;http://joel-logg-elasticl-m6yuis5u674t-297942863.us-west-2.elb.amazonaws.com/&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.98 Safari/537.36&quot;
+Thu Dec 15 00:29:29 2016 ip-10-0-6-165.us-west-2.compute.internal nginx [2929] 2016/12/15 00:29:29 [notice] 10530#0: *1136 [lua] auth.lua:131: validate_jwt_or_exit(): UID from valid JWT: `email@email.io`, client: 10.0.6.72, server: dcos.*, request: &quot;GET /system/v1/logs/v1/range/?skip_prev=3 HTTP/1.1&quot;, host: &quot;joel-logg-elasticl-m6yuis5u674t-297942863.us-west-2.elb.amazonaws.com&quot;
+Thu Dec 15 00:29:29 2016 ip-10-0-6-165.us-west-2.compute.internal dcos-oauth [1505] time=&quot;2016-12-15T00:29:29Z&quot; level=info msg=&quot;HTTP request received&quot; method=GET uri=&quot;/acs/api/v1/users/youremail@email.io&quot;
+</code></pre>
+</li>
+<li>
+<p>运行此命令以查看 Mesos 代理节点 日志，其中节点 ID  (<code>&lt;node_id&gt;</code>) 已指定：</p>
+<pre><code class="language-bash">dcos node log --mesos-id=&lt;node_id&gt; --lines 3
+</code></pre>
+<p>运行 <code>dcos task</code> 以确定哪个节点正在运行应用程序，然后运行 <code>dcos node</code> 以获取节点 ID。</p>
+<p>输出应类似于：</p>
+<pre><code class="language-bash">Thu Dec 15 00:46:18 2016 ip-10-0-1-175.us-west-2.compute.internal mesos-agent [3284] I1215 00:46:18.794333  3315 http.cpp:288] HTTP GET for /slave(1)/state from 10.0.1.175:44661 with User-Agent='Mesos-State / Host: ip-10-0-1-175, Pid: 3023'
+Thu Dec 15 00:46:20 2016 ip-10-0-1-175.us-west-2.compute.internal mesos-agent [3284] I1215 00:46:20.800422  3319 http.cpp:288] HTTP GET for /slave(1)/state from 10.0.1.175:44661 with User-Agent='Mesos-State / Host: ip-10-0-1-175, Pid: 3023'
+Thu Dec 15 00:46:22 2016 ip-10-0-1-175.us-west-2.compute.internal spartan-env [2621] 00:46:22.575 [error] Lager event handler error_logger_lager_h exited with reason {'EXIT',,{wait_for_query,{state,#Port&lt;0.9301&gt;,{spartan_tcp_listener,{198,51,100,3}},ranch_tcp,&lt;0.27148.0&gt;}},exit,tcp_closed,state_functions,[{gen_statem,loop_event_result,9,[{file,&quot;gen_statem.erl&quot;},{line,978}]},{proc_lib,init_p_do_apply,3,[{file,&quot;proc_lib.erl&quot;},{line,247}]}]]},[{error_logger_lager_h,log_event,2,[{file,&quot;/pkg/src/spartan/_build/default/lib/lager/src/error_logger_lager_h.erl&quot;},{line,155}]},{gen_event,server_update,4,[{file,...},...]},...]}}
+</code></pre>
+</li>
+<li>
+<p>运行这些命令以查看在领导者或代理节点上运行的组件的列表：</p>
+<ul>
+<li>
+<p>领导者节点：</p>
+<pre><code class="language-bash">dcos node list-components --leader
+</code></pre>
+<p>输出应类似于：</p>
+<pre><code class="language-bash">dcos-diagnostics.service
+dcos-adminrouter.service
+dcos-cosmos.service
+dcos-epmd.service
+dcos-exhibitor.service
+dcos-gen-resolvconf.service
+dcos-gen-resolvconf.timer
+...
+</code></pre>
+</li>
+<li>
+<p>代理节点，其中您的节点 ID (<code>&lt;mesos-id&gt;</code>) 已指定：</p>
+<pre><code class="language-bash">dcos node list-components --mesos-id=&lt;mesos-id&gt;
+</code></pre>
+<p>输出应类似于：</p>
+<pre><code class="language-bash">dcos-diagnostics.service
+dcos-diagnostics.socket
+dcos-adminrouter-agent.service
+dcos-docker-gc.service
+dcos-docker-gc.timer
+dcos-epmd.service
+dcos-gen-resolvconf.service
+...
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>运行此命令以查看 DC/OS 组件的领导管理节点组件日志。此例中，查询了 Marathon 组件日志：</p>
+<pre><code class="language-bash">dcos node log --leader --component dcos-marathon.service
+</code></pre>
+<p>输出应类似于：</p>
+<pre><code class="language-bash">Thu Dec 15 00:34:08 2016 ip-10-0-6-165.us-west-2.compute.internal java [2541] [2016-12-15 00:34:08,121] INFO  Received status update for task test-log.2fc56009-c25d-11e6-81b2-9a5d88789ccd: TASK_RUNNING (Reconciliation: Latest task state) (mesosphere.marathon.MarathonScheduler$$EnhancerByGuice$$28056dde:Thread-296)
+Thu Dec 15 00:34:08 2016 ip-10-0-6-165.us-west-2.compute.internal java [2541] [2016-12-15 00:34:08,121] INFO  Received status update for task test-log.2fc56009-c25d-11e6-81b2-9a5d88789ccd: TASK_RUNNING (Reconciliation: Latest task state) (mesosphere.marathon.MarathonScheduler$$EnhancerByGuice$$28056dde:Thread-297)
+...
+</code></pre>
+</li>
+</ol>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#部署一个示例应用程序">部署一个示例应用程序</a></li><li class="content__sections-item content__sections-item--h1"><a href="#mesos-dcos">查看 Mesos 和 DC/OS 日志</a></li><li class="content__sections-item content__sections-item--h1"><a href="#mesos">查看 Mesos 任务和系统日志</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

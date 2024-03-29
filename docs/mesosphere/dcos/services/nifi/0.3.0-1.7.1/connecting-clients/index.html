@@ -1,0 +1,177 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Connecting Clients - D2iQ Docs</title><meta name="description" content="Connecting clients through service discovery"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Nifi Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/1.0.1-1.9.2/connecting-clients">NiFi 1.0.1-1.9.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/1.0.0-1.9.2/connecting-clients">NiFi 1.0.0-1.9.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.5.0-1.9.2/connecting-clients">NiFi 0.5.0-1.9.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.4.1-1.8.0/connecting-clients">NiFi 0.4.1-1.8.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.4.0-1.8.0/connecting-clients">NiFi 0.4.0-1.8.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/connecting-clients">NiFi 0.3.0-1.7.1</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.2.0-1.5.0/connecting-clients">NiFi 0.2.0-1.5.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.1.0-1.5.0/connecting-clients">NiFi 0.1.0-1.5.0</a></li></ul><div class="toggle"><p><span class="title">Nifi</span><span class="version"> 0.3.0-1.7.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/overview/">Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/install/">Installing and Customizing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/deploy-best-practice/">Deployment Best Practices</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/managing/">Operations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/uninstall/">Uninstalling</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/security/">Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/secret-upload/">Secret Upload</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/command-reference/"><i data-feather="chevron-right"></i>Command Reference</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/connecting-clients/">Connecting Clients</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/api-reference/">API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/troubleshooting/"><i data-feather="chevron-right"></i>Troubleshooting</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/supported-versions/">Supported Versions</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Connecting Clients</h1></div><h4 class="content__header-description">Connecting clients through service discovery</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/connecting-clients/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>One of the benefits of running containerized services is that they can be placed anywhere on the cluster. Since they can be deployed anywhere on the cluster, clients need a way to find the service. This is where service discovery comes in.</p>
+<h1 id="discovering-endpoints"><a class="content__anchor" href="#discovering-endpoints" aria-hidden="true"><i data-feather="bookmark"></i></a>Discovering Endpoints</h1>
+<p>Once the service is running, you may view information about its endpoints via either of the following methods:</p>
+<p>CLI:</p>
+<ul>
+<li>
+<p>List endpoint types:</p>
+<pre><code class="language-shell">dcos nifi endpoints
+</code></pre>
+</li>
+<li>
+<p>View endpoints for an endpoint type:</p>
+<pre><code class="language-shell">dcos nifi endpoints &lt;endpoint&gt;
+</code></pre>
+</li>
+</ul>
+<p>API:</p>
+<ul>
+<li>
+<p>List endpoint types:</p>
+<pre><code class="language-shell">&lt;dcos-url&gt;/service/nifi/v1/endpoints
+</code></pre>
+</li>
+<li>
+<p>View endpoints for an endpoint type:</p>
+<pre><code class="language-shell">&lt;dcos-url&gt;/service/nifi/v1/endpoints/&lt;endpoint&gt;
+</code></pre>
+</li>
+</ul>
+<p>Returned endpoints will include the following:</p>
+<ul>
+<li><code>.autoip.dcos.thisdcos.directory</code> hostnames for each instance that will follow them if they are moved within the DC/OS cluster.</li>
+<li>A HA-enabled VIP hostname for accessing any of the instances (optional).</li>
+<li>A direct IP address for accessing the service if <code>.autoip.dcos.thisdcos.directory</code> hostnames are not resolvable.</li>
+<li>If your service is on a virtual network such as the <code>dcos</code> overlay network, then the IP will be from the subnet allocated to the host that the task is running on. It will not be the host IP. To resolve the host IP use Mesos DNS (<code>&lt;task&gt;.&lt;service&gt;.mesos</code>).</li>
+</ul>
+<p>In general, the <code>.autoip.dcos.thisdcos.directory</code> endpoints will only work from within the same DC/OS cluster. From outside the cluster you can either use direct IPs or set up a proxy service that acts as a frontend to your nifi instance. For development and testing purposes, you can use <a href="/dcosdocs/mesosphere/dcos/latest/administering-clusters/sshcluster/">DC/OS Tunnel</a> to access services from outside the cluster, but this option is not suitable for production use.</p>
+<h1 id="connection-response"><a class="content__anchor" href="#connection-response" aria-hidden="true"><i data-feather="bookmark"></i></a>Connection Response</h1>
+<p>The response, for both the CLI and the REST API is as follows:</p>
+<pre><code class="language-json">{
+  &quot;address&quot;: [
+    &quot;10.0.1.120:1025&quot;,
+    &quot;10.0.1.128:1025&quot;
+  ],
+  &quot;dns&quot;: [
+    &quot;nifi-0-node.nifi.autoip.dcos.thisdcos.directory:1025&quot;,
+    &quot;nifi-1-node.nifi.autoip.dcos.thisdcos.directory:1025&quot;
+  ],
+  &quot;vip&quot;: &quot;node.nifi.l4lb.thisdcos.directory:8080&quot;
+}
+</code></pre>
+<p>This JSON array contains a list of valid nodes that the client can use to connect to the <code>nifi</code> cluster. For availability reasons, it is best to specify multiple nodes in configuration of the client. Use the VIP to address any one of the <code>nifi</code> nodes in the cluster.</p>
+<p>When TLS is enabled, an endpoint named <code>node-tls</code> should also be listed. To verify a TLS connection from a client, the DC/OS trust bundle with a CA certificate is required.</p>
+<h1 id="accessing-the-dcos-nifi-ui-with-edge-lb-configuration"><a class="content__anchor" href="#accessing-the-dcos-nifi-ui-with-edge-lb-configuration" aria-hidden="true"><i data-feather="bookmark"></i></a>Accessing the DC/OS NiFi UI with Edge-LB configuration</h1>
+<h3 id="assumptions"><a class="content__anchor" href="#assumptions" aria-hidden="true"><i data-feather="bookmark"></i></a>Assumptions</h3>
+<ul>
+<li>DC/OS NiFi is installed on DC/OS without TLS and Kerberos</li>
+<li>Edge-LB is installed (with service account and service account secret in strict mode)</li>
+</ul>
+<h2 id="steps"><a class="content__anchor" href="#steps" aria-hidden="true"><i data-feather="bookmark"></i></a>Steps</h2>
+<p>Following are the steps for Edge-LB Pool configuration:</p>
+<ol>
+<li>
+<p>Install the <code>edgelb cli</code></p>
+<pre><code class="language-shell">dcos package install --cli edgelb --yes
+</code></pre>
+</li>
+<li>
+<p>Get the DNS address using the following:</p>
+<pre><code class="language-shell">dcos nifi endpoints node --name=&lt;service_name&gt;
+</code></pre>
+</li>
+<li>
+<p>Create the configuration file <code>edgelb-pool-config.json</code> with required parameters to access <code>nifi</code> on the web.</p>
+<p>Example without TLS and Kerberos:</p>
+<pre><code class="language-json">{
+&quot;apiVersion&quot;: &quot;V2&quot;,
+&quot;name&quot;: &quot;nifiproxy&quot;,
+&quot;count&quot;: 1,
+&quot;haproxy&quot;: {
+  &quot;frontends&quot;: [
+    {
+      &quot;bindPort&quot;: 8080,
+      &quot;protocol&quot;: &quot;HTTP&quot;,
+      &quot;linkBackend&quot;: {
+        &quot;defaultBackend&quot;: &quot;nifiservice&quot;
+      }
+    }
+  ],
+  &quot;backends&quot;: [
+    {
+      &quot;name&quot;: &quot;nifiservice&quot;,
+      &quot;protocol&quot;: &quot;HTTP&quot;,
+      &quot;services&quot;: [
+        {
+          &quot;endpoint&quot;: {
+            &quot;type&quot;: &quot;ADDRESS&quot;,
+            &quot;address&quot;: &quot;&lt;dns adress obtained from Step 2&gt;&quot;,
+            &quot;port&quot;: &lt;port obtained from Step 2&gt;
+          }
+        }
+      ]
+    }
+  ]
+}
+}
+</code></pre>
+<p>Example with TLS and Kerberos:</p>
+<pre><code class="language-json">{
+&quot;apiVersion&quot;: &quot;V2&quot;,
+&quot;name&quot;: &quot;nifiproxy&quot;,
+&quot;count&quot;: 1,
+&quot;autoCertificate&quot;: true,
+&quot;haproxy&quot;: {
+    &quot;frontends&quot;: [
+      {
+          &quot;bindPort&quot;: 8443,
+          &quot;protocol&quot;: &quot;HTTPS&quot;,
+          &quot;certificates&quot;: [
+            &quot;$AUTOCERT&quot;
+          ],
+          &quot;linkBackend&quot;: {
+            &quot;defaultBackend&quot;: &quot;nifiservice&quot;
+          }
+      }
+    ],
+    &quot;backends&quot;: [
+      {
+          &quot;name&quot;: &quot;nifiservice&quot;,
+          &quot;protocol&quot;: &quot;HTTPS&quot;,
+          &quot;rewriteHttp&quot;: {
+            &quot;host&quot;: &lt;dns adress obtained from Step 2&gt;,
+            &quot;path&quot;: {
+                &quot;fromPath&quot;: &quot;/nifi&quot;,
+                &quot;toPath&quot;: &quot;/nifi&quot;
+            },
+            &quot;request&quot;: {
+                &quot;forwardfor&quot;: true,
+                &quot;xForwardedPort&quot;: true,
+                &quot;xForwardedProtoHttpsIfTls&quot;: true,
+                &quot;setHostHeader&quot;: true,
+                &quot;rewritePath&quot;: true
+            }
+          },
+          &quot;services&quot;: [
+            {
+                &quot;endpoint&quot;: {
+                  &quot;type&quot;: &quot;ADDRESS&quot;,
+                  &quot;address&quot;: &lt;dns adress obtained from Step 2&gt;,
+                  &quot;port&quot;: &lt;port obtained from Step 2&gt;
+                }
+            }
+          ]
+      }
+    ]
+}
+}
+
+</code></pre>
+</li>
+<li>
+<p>Create <code>edge-pool</code> using the above <code>edgelb-pool-config.json</code> file.</p>
+<pre><code class="language-shell">dcos edgelb create edgelb-pool-config.json
+</code></pre>
+</li>
+<li>
+<p>Access <code>nifi</code>:</p>
+<pre><code class="language-shell">http://&lt;Public IP of the Public Node of the cluster&gt;&gt;:8443/nifi
+</code></pre>
+</li>
+</ol>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#discovering-endpoints">Discovering Endpoints</a></li><li class="content__sections-item content__sections-item--h1"><a href="#connection-response">Connection Response</a></li><li class="content__sections-item content__sections-item--h1"><a href="#accessing-the-dcos-nifi-ui-with-edge-lb-configuration">Accessing the DC/OS NiFi UI with Edge-LB configuration</a></li><li class="content__sections-item content__sections-item--h2"><a href="#steps">Steps</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

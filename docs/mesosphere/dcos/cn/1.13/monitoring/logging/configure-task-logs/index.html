@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>配置任务日志输出和保留 - D2iQ Docs</title><meta name="description" content="影响日志记录的任务环境变量"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/1.13/monitoring/logging/configure-task-logs">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/configure-task-logs">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/logging/configure-task-logs">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/logging/configure-task-logs">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/performance-monitoring/"><i data-feather="chevron-right"></i>性能监控</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/logging/"><i data-feather="chevron-right"></i>日志记录</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/logging/quickstart/">快速入门</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/logging/access-component-logs/">访问系统和组件日志</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/logging/access-task-logs/">控制对任务日志的访问</a></li><li class="active active-on"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/logging/configure-task-logs/">配置任务日志输出和保留</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/logging/aggregating/"><i data-feather="chevron-right"></i>日志聚合</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/logging/logging-reference/">日志记录参考</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/logging/logging-api-examples/">日志记录 API 示例</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/debugging/"><i data-feather="chevron-right"></i>调试</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">配置任务日志输出和保留</h1></div><h4 class="content__header-description">影响日志记录的任务环境变量</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/logging/configure-task-logs/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>您可以修改任务日志的目标和日志保留
+通过在其中指定以下任何环境变量修改
+任务定义：</p>
+<table>
+<thead>
+<tr>
+<th>环境变量</th>
+<th>默认</th>
+<th>简述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CONTAINER_LOGGER_DESTINATION_TYPE</code></td>
+<td><code>logrotate</code></td>
+<td>任务日志的指向：任务的沙盒或日志。</td>
+</tr>
+<tr>
+<td><code>CONTAINER_LOGGER_LOGROTATE_MAX_STDOUT_SIZE</code></td>
+<td><code>2MB</code></td>
+<td>沙盒中 stdout 文件在触发日志轮换之前的最大大小。</td>
+</tr>
+<tr>
+<td><code>CONTAINER_LOGGER_LOGROTATE_STDOUT_OPTIONS</code></td>
+<td><code>rotate 9</code></td>
+<td>轮换 stdout 文件时传递给 <code>logrotate</code> 的选项。</td>
+</tr>
+<tr>
+<td><code>CONTAINER_LOGGER_LOGROTATE_MAX_STDERR_SIZE</code></td>
+<td><code>2MB</code></td>
+<td>沙盒中 stderr 文件在触发日志轮换之前的最大大小。</td>
+</tr>
+<tr>
+<td><code>CONTAINER_LOGGER_LOGROTATE_STDERR_OPTIONS</code></td>
+<td><code>rotate 9</code></td>
+<td>轮换 stderr 文件时传递给 <code>logrotate</code> 的选项。</td>
+</tr>
+<tr>
+<td><code>CONTAINER_LOGGER_EXTRA_LABELS</code></td>
+<td><code>&quot;{}&quot;</code></td>
+<td>在输出到 journald 时标记每个日志行的额外密钥值对。</td>
+</tr>
+</tbody>
+</table>
+<h1 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>详细信息</h1>
+<p class="message--warning"><strong>警告：</strong>为这些选项指定无效值将导致该任务
+启动失败。</p>
+<h2 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>目标类型</h2>
+<p><code>CONTAINER_LOGGER_DESTINATION_TYPE</code> 可能采用三个自变量：</p>
+<ul>
+<li><code>logrotate</code> (默认)</li>
+<li><code>journald</code></li>
+<li><code>journald+logrotate</code></li>
+</ul>
+<p><strong>不推荐</strong> 使用 <code>journald</code> 选项，这是因为
+<a href="https://github.com/systemd/systemd/issues/5102">journald 性能问题</a>.
+启用后，日志会直接通过管道传输到节点的日志中，同时还有
+<code>AGENT_ID``EXECUTOR_ID</code> 和 <code>CONTAINER_ID</code>. 等一些标签</p>
+<p><code>logrotate</code> 选项将放置日志（名为 <code>stdout</code> 和 <code>stderr</code>)
+在任务沙盒内并创建附加文件，用于轮换这些
+日志 (<code>*.logrotate.conf</code> 和 <code>*.logrotate.state</code>).</p>
+<p>请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/logging/logging-reference/">记录参考</a>
+了解如何读取这些日志的信息。</p>
+<h2 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>最大大小</h2>
+<p><code>CONTAINER_LOGGER_LOGROTATE_MAX_STDOUT_SIZE</code> 和
+<code>CONTAINER_LOGGER_LOGROTATE_MAX_STDERR_SIZE</code> 选项控制
+这些日志文件的最大大小。达到此阈值后，日志轮换
+就会被触发。</p>
+<p>大小必须为小于 2^64 的整数，且后缀必须带有
+<code>B</code>（字节）、<code>KB</code>、<code>MB</code>、<code>GB</code> 或 <code>TB</code>. 的等单位。不应该在
+整数和单位之间留有空格。</p>
+<p>示例：</p>
+<ul>
+<li><code>2MB</code></li>
+<li><code>1234B</code></li>
+<li><code>1TB</code></li>
+</ul>
+<p class="message--important"><strong>重要信息：</strong>大小的规定上限为 2^64 字节。尝试指定更高的
+值（例如 2^64 TB）将导致未确定的结果。</p>
+<h2 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>日志轮换选项</h2>
+<p class="message--important"><strong>重要信息：</strong>
+截止 DC/OS 1.13.0，这些自定义选项已禁用以防止滥用
+<code>postrotate</code> 条款和其他注入攻击。
+请参阅 <a href="https://issues.apache.org/jira/browse/MESOS-9564">MESOS-9564</a>
+以获取更多信息。</p>
+<p><code>CONTAINER_LOGGER_LOGROTATE_STDOUT_OPTIONS</code> 和
+<code>CONTAINER_LOGGER_LOGROTATE_STDERR_OPTIONS</code> 选项控制每次轮换
+传递至 <code>logrotate</code> 的参数。自变量
+没有限制。请参阅 <a href="https://linux.die.net/man/8/logrotate">手册页</a>
+了解可能的值。</p>
+<p>每条日志轮换规则均应以换行符 (<code>\n</code>) 隔开。例如：</p>
+<ul>
+<li><code>rotate 10\ncompress\ndelaycompress</code></li>
+<li><code>daily\nmaxage 10\nnomail</code></li>
+</ul>
+<p>有些规则是不必要的，或者将被覆盖：</p>
+<ul>
+<li><code>size</code> 将会被值
+<code>CONTAINER_LOGGER_LOGROTATE_MAX_STDOUT_SIZE</code>
+或  覆盖。<code>CONTAINER_LOGGER_LOGROTATE_MAX_STDERR_SIZE</code>.</li>
+<li>无法如期运行基于时间的轮换。轮换的触发
+纯粹基于写入的量。所以如果
+在 2MB 时触发轮换，但写入量少于 2MB，则轮换永远
+都不会发生。</li>
+<li>不需要 * <code>copy</code> 和 <code>copytruncate</code>，因为在轮换时
+不会写入日志文件。这意味着没有日志行
+会丢失（尽管可以将太长的行切割成不同的文件）。</li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#详细信息">详细信息</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-2">目标类型</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-3">最大大小</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-4">日志轮换选项</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

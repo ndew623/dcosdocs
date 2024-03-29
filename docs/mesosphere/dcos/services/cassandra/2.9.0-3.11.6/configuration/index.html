@@ -1,0 +1,367 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Configuring Cassandra - D2iQ Docs</title><meta name="description" content="Installation options, configuration regions, node settings, and more information"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Cassandra Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services/cassandra">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/configuration">Cassandra 2.9.0-3.11.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/cassandra/2.4.0-3.0.16/configuration">Cassandra 2.4.0-3.0.16</a></li></ul><div class="toggle"><p><span class="title">Cassandra</span><span class="version"> 2.9.0-3.11.6</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/getting-started/">Getting Started</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/operations/">Operations</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/configuration/">Configuring</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/advanced/">Advanced</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/updates/">Update</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/security/">Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/uninstall/">Uninstall</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/troubleshooting/">Troubleshooting</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/api-reference/">API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/support-policy/">Support Policy</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Configuring Cassandra</h1></div><h4 class="content__header-description">Installation options, configuration regions, node settings, and more information</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/configuration/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- This file is usually found in the Configuration section. -->
+<p>The default DC/OS Apache Cassandra installation provides reasonable defaults for trying out the service, but may not be sufficient for production use. You may require a different configuration depending on the context of the deployment.</p>
+<h2 id="installing-with-custom-configuration"><a class="content__anchor" href="#installing-with-custom-configuration" aria-hidden="true"><i data-feather="bookmark"></i></a>Installing with Custom Configuration</h2>
+<p>The following are some examples of how to customize the installation of your Apache Cassandra instance.</p>
+<p>In each case, you would create a new Apache Cassandra instance using the custom configuration as follows:</p>
+<pre><code class="language-bash">dcos package install cassandra --options=sample-cassandra.json
+</code></pre>
+<p>We recommend that you store your custom configuration in source control.</p>
+<h3 id="installing-multiple-instances"><a class="content__anchor" href="#installing-multiple-instances" aria-hidden="true"><i data-feather="bookmark"></i></a>Installing multiple instances</h3>
+<p>By default, the Apache Cassandra service is installed with a service name of <code>cassandra</code>. You may specify a different name using a custom service configuration as follows:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;name&quot;: &quot;cassandra-other&quot;
+  }
+}
+</code></pre>
+<p>When the above JSON configuration is passed to the <code>package install cassandra</code> command via the <code>--options</code> argument, the new service will use the name specified in that JSON configuration:</p>
+<pre><code class="language-bash">dcos package install cassandra --options=cassandra-other.json
+</code></pre>
+<p>Multiple instances of Apache Cassandra may be installed into your DC/OS cluster by customizing the name of each instance. For example, you might have one instance of Apache Cassandra named <code>cassandra-staging</code> and another named <code>cassandra-prod</code>, each with its own custom configuration.</p>
+<p>After specifying a custom name for your instance, it can be reached using <code>dcos cassandra</code> CLI commands or directly over HTTP as described <a href="#addressing-named-instances">below</a>.</p>
+<p class="message--warning"><strong>WARNING: </strong>The service name <strong>cannot</strong> be changed after initial install. Changing the service name would require installing a new instance of the service against the new name, then copying over any data as necessary to the new instance.</p>
+<h3 id="installing-into-folders"><a class="content__anchor" href="#installing-into-folders" aria-hidden="true"><i data-feather="bookmark"></i></a>Installing into folders</h3>
+<p>In DC/OS 1.10 and later, services may be installed into folders by specifying a slash-delimited service name. For example:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;name&quot;: &quot;/foldered/path/to/cassandra&quot;
+  }
+}
+</code></pre>
+<p>The above example will install the service under a path of <code>foldered</code> =&gt; <code>path</code> =&gt; <code>to</code> =&gt; <code>cassandra</code>. It can then be reached using <code>dcos cassandra</code> CLI commands or directly over HTTP as described <a href="#addressing-named-instances">below</a>.</p>
+<p class="message--warning"><strong>WARNING: </strong>The service folder location <strong>cannot</strong> be changed after initial install. Changing the folder location would require installing a new instance of the service against the new name, then copying over any data as necessary to the new instance.</p>
+<h3 id="addressing-named-instances"><a class="content__anchor" href="#addressing-named-instances" aria-hidden="true"><i data-feather="bookmark"></i></a>Addressing named instances</h3>
+<p>After you’ve installed the service under a custom name or under a folder, it may be accessed from all <code>dcos cassandra</code> CLI commands using the <code>--name</code> argument. By default, the <code>--name</code> value defaults to the name of the package, or <code>cassandra</code>.</p>
+<p>For example, if you had an instance named <code>cassandra-dev</code>, the following command would invoke a <code>pod list</code> command against it:</p>
+<pre><code class="language-bash">dcos cassandra --name=cassandra-dev pod list
+</code></pre>
+<p>The same query would be over HTTP as follows:</p>
+<pre><code class="language-bash">curl -H &quot;Authorization:token=$auth_token&quot; &lt;dcos_url&gt;/service/cassandra-dev/v1/pod
+</code></pre>
+<p>Likewise, if you had an instance in a folder like <code>/foldered/path/to/cassandra</code>, the following command would invoke a <code>pod list</code> command against it:</p>
+<pre><code class="language-bash">dcos cassandra --name=/foldered/path/to/cassandra pod list
+</code></pre>
+<p>Similarly, it could be queried directly over HTTP as follows:</p>
+<pre><code class="language-bash">curl -H &quot;Authorization:token=$auth_token&quot; &lt;dcos_url&gt;/service/foldered/path/to/cassandra-dev/v1/pod
+</code></pre>
+<p>You may add a <code>-v</code> (verbose) argument to any <code>dcos cassandra</code> command to see the underlying HTTP queries that are being made. This can be a useful tool to see where the CLI is getting its information. In practice, <code>dcos cassandra</code> commands are a thin wrapper around an HTTP interface provided by the DC/OS Apache Cassandra Service itself.</p>
+<h3 id="integration-with-dcos-access-controls"><a class="content__anchor" href="#integration-with-dcos-access-controls" aria-hidden="true"><i data-feather="bookmark"></i></a>Integration with DC/OS access controls</h3>
+<p>In Enterprise DC/OS, DC/OS access controls can be used to restrict access to your service. To give a non-superuser complete access to a service, grant them the following list of permissions:</p>
+<pre><code>dcos:adminrouter:service:marathon full
+dcos:service:marathon:marathon:&lt;service-name&gt; full
+dcos:service:adminrouter:&lt;service-name&gt; full
+dcos:adminrouter:ops:mesos full
+dcos:adminrouter:ops:slave full
+</code></pre>
+<p>Where <code>&lt;service-name&gt;</code> is your full service name, including the folder if it is installed in one.</p>
+<!-- Use this file in the Configuration section. -->
+<h2 id="create-a-custom-configuration-file"><a class="content__anchor" href="#create-a-custom-configuration-file" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="create-json"></a>Create a Custom Configuration File</h2>
+<p>Create a custom configuration file that will be used to install Apache Cassandra and save as <code>config.json</code>. Specify the service account (<code>&lt;service_account_id&gt;</code>) and a secret path (<code>cassandra/&lt;secret-name&gt;</code>).</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;service_account&quot;: &quot;&lt;service_account_id&gt;&quot;,
+    &quot;service_account_secret&quot;: &quot;cassandra/&lt;secret-name&gt;&quot;
+  }
+}
+</code></pre>
+<h2 id="service-settings"><a class="content__anchor" href="#service-settings" aria-hidden="true"><i data-feather="bookmark"></i></a>Service Settings</h2>
+<h3 id="placement-constraints"><a class="content__anchor" href="#placement-constraints" aria-hidden="true"><i data-feather="bookmark"></i></a>Placement Constraints</h3>
+<p>Placement constraints allow you to customize where a service is deployed in the DC/OS cluster. Placement constraints  use the <a href="http://mesosphere.github.io/marathon/docs/constraints.html">Marathon operators</a> syntax. For example, <code>[[&quot;hostname&quot;, &quot;UNIQUE&quot;]]</code> ensures that at most one pod instance is deployed per agent.</p>
+<p>A common task is to specify a list of whitelisted systems to deploy to. To achieve this, use the following syntax for the placement constraint:</p>
+<pre><code>[[&quot;hostname&quot;, &quot;LIKE&quot;, &quot;10.0.0.159|10.0.1.202|10.0.3.3&quot;]]
+</code></pre>
+<p class="message--important"><strong>IMPORTANT: </strong>Be sure to include excess capacity in such a scenario so that if one of the whitelisted systems goes down, there is still enough capacity to repair your service.</p>
+<h4 id="updating-placement-constraints"><a class="content__anchor" href="#updating-placement-constraints" aria-hidden="true"><i data-feather="bookmark"></i></a>Updating Placement Constraints</h4>
+<p>Clusters change, and as such so will your placement constraints. However, already running service pods will <strong>not</strong> be affected by changes in placement constraints. This is because altering a placement constraint might invalidate the current placement of a running pod, and the pod will not be relocated automatically as doing so is a destructive action. We recommend using the following procedure to update the placement constraints of a pod:</p>
+<ul>
+<li>Update the placement constraint definition in the service.</li>
+<li>For each affected pod, one at a time, perform a <code>pod replace</code>. This will (destructively) move the pod to be in accordance with the new placement constraints.</li>
+</ul>
+<h3 id="zones-enterprise"><a class="content__anchor" href="#zones-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>Zones <span class="badge badge--shortcode badge--large badge--block badge--enterprise">Enterprise</span></h3>
+<p><strong>Requires:</strong> DC/OS 1.11 Enterprise or later.</p>
+<p>Placement constraints can be applied to DC/OS zones by referring to the <code>@zone</code> key. For example, one could spread pods across a minimum of three different zones by including this constraint:</p>
+<pre><code>[[&quot;@zone&quot;, &quot;GROUP_BY&quot;, &quot;3&quot;]]
+</code></pre>
+<p>For the @zone constraint to be applied correctly, DC/OS must have <a href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/fault-domain-awareness/">Fault Domain Awareness</a> enabled and configured.</p>
+<p class="message--warning"><strong>WARNING: </strong>A service installed without a zone constraint cannot be updated to have one, and a service installed with a zone constraint may not have it removed.</p>
+<h3 id="virtual-networks"><a class="content__anchor" href="#virtual-networks" aria-hidden="true"><i data-feather="bookmark"></i></a>Virtual networks</h3>
+<p>DC/OS Apache Cassandra supports deployment on <a href="/dcosdocs/mesosphere/dcos/latest/networking/SDN/dcos-overlay/">virtual networks</a> on DC/OS (including the <code>dcos</code> overlay network), allowing each container (task) to have its own IP address and not use port resources on the agent machines. This can be specified by passing the following configuration during installation:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;virtual_network_enabled&quot;: true
+  }
+}
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>Once the service is deployed on a virtual network, it cannot be updated to use the host network.</p>
+<h3 id="user"><a class="content__anchor" href="#user" aria-hidden="true"><i data-feather="bookmark"></i></a>User</h3>
+<p>By default, all pods’ containers will be started as system user “nobody”. If your system configured for using over system user (for instance, you may have externally mounted persistent volumes with root’s permissions), you can define the user by defining a custom value for the service’s property “user”, for example:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;properties&quot;: {
+      &quot;user&quot;: &quot;root&quot;
+    }
+  }
+}
+</code></pre>
+<h3 id="regions"><a class="content__anchor" href="#regions" aria-hidden="true"><i data-feather="bookmark"></i></a>Regions</h3>
+<p>The service parameter <code>region</code> can be used to deploy the service in an alternate region. By default the service is deployed in the “local” region, which is the region the DC/OS masters are running in. To install a service in a specific reason, include in its options:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;region&quot;: &quot;&lt;region&gt;&quot;
+  }
+}
+</code></pre>
+<p class="message--warning"><strong>WARNING: </strong>A service may not be moved between regions.</p>
+<h2 id="cassandra-node-settings"><a class="content__anchor" href="#cassandra-node-settings" aria-hidden="true"><i data-feather="bookmark"></i></a>Cassandra Node Settings</h2>
+<p>Adjust the following settings to customize the amount of resources allocated to each node. DC/OS Apache Cassandra’s <a href="http://cassandra.apache.org/doc/latest/operating/hardware.html">system requirements</a> should be taken into consideration when adjusting these values. Reducing these values below those requirements may result in adverse performance and/or failures while using the service.</p>
+<p>Each of the following settings can be customized under the <strong>node</strong> configuration section.</p>
+<h3 id="node-count"><a class="content__anchor" href="#node-count" aria-hidden="true"><i data-feather="bookmark"></i></a>Node Count</h3>
+<p>Customize the <code>Node Count</code> setting (default 3) under the <strong>node</strong> configuration section. Read the Apache Cassandra documentation for minimum node count requirements.</p>
+<ul>
+<li><strong>In DC/OS CLI options.json</strong>: <code>count</code>: integer (default: <code>3</code>)</li>
+<li><strong>DC/OS web interface</strong>: <code>NODES</code>: <code>integer</code></li>
+</ul>
+<h3 id="cpu"><a class="content__anchor" href="#cpu" aria-hidden="true"><i data-feather="bookmark"></i></a>CPU</h3>
+<p>You can customize the amount of CPU allocated to each node. A value of 1.0 is equivalent to one full dedicated CPU core on a machine, although all cores are made available via time slicing. Change this value by editing the <strong>cpus</strong> value under the <strong>node</strong> configuration section. Setting the CPU value too low will result in throttled tasks.</p>
+<p class="message--note"><strong>NOTE: </strong>each Cassandra node will use an additional 1.0 CPU for sidecar services such as backup and nodetool. </p>
+<p>When provisioning three CPUS for each Cassandra node, the actual usage will be four CPUs, and this should be taken into account when configuring Cassandra to maximize resource utilization on an agent.</p>
+<ul>
+<li><strong>In DC/OS CLI options.json</strong>: <code>cpus</code>: number (default: <code>0.5</code>)</li>
+<li><strong>DC/OS web interface</strong>: <code>CASSANDRA_CPUS</code>: <code>number</code></li>
+</ul>
+<h3 id="memory"><a class="content__anchor" href="#memory" aria-hidden="true"><i data-feather="bookmark"></i></a>Memory</h3>
+<p>You can customize the amount of RAM allocated to each node. You can change this value by editing the <strong>mem</strong> value (in MB) under the <strong>node</strong> configuration section. Setting this too low will result in out of memory errors. The <code>heap.size</code> setting must also be less than this value to prevent out of memory errors, which can result when the Java Virtual Machine attempts to allocate more memory than is available to the Cassandra process.</p>
+<ul>
+<li><strong>In DC/OS CLI options.json</strong>: <code>mem</code>: integer (default: <code>10240</code>)</li>
+<li><strong>DC/OS web interface</strong>: <code>CASSANDRA_MEMORY_MB</code>: <code>integer</code></li>
+</ul>
+<h3 id="jmx-port"><a class="content__anchor" href="#jmx-port" aria-hidden="true"><i data-feather="bookmark"></i></a>JMX Port</h3>
+<p>You can customize the port that Apache Cassandra listens on for JMX requests, such as those issued by <code>nodetool</code>.</p>
+<ul>
+<li><strong>In DC/OS CLI options.json</strong>: <code>jmx_port</code>: integer (default: <code>7199</code>)</li>
+<li><strong>DC/OS web interface</strong>: <code>TASKCFG_ALL_JMX_PORT</code>: <code>integer</code></li>
+</ul>
+<h3 id="storage-port"><a class="content__anchor" href="#storage-port" aria-hidden="true"><i data-feather="bookmark"></i></a>Storage Port</h3>
+<p>You can customize the port that Apache Cassandra listens on for inter-node communication.</p>
+<ul>
+<li><strong>In DC/OS CLI options.json</strong>: <code>storage_port</code>: integer (default: <code>7000</code>)</li>
+<li><strong>DC/OS web interface</strong>: <code>TASKCFG_ALL_CASSANDRA_STORAGE_PORT</code>: <code>integer</code></li>
+</ul>
+<h3 id="ssl-storage-port"><a class="content__anchor" href="#ssl-storage-port" aria-hidden="true"><i data-feather="bookmark"></i></a>SSL Storage Port</h3>
+<p>You can customize the port that Apache Cassandra listens on for inter-node communication over SSL.</p>
+<ul>
+<li><strong>In DC/OS CLI options.json</strong>: <code>ssl_storage_port</code>: integer (default: <code>7001</code>)</li>
+<li><strong>DC/OS web interface</strong>: <code>TASKCFG_ALL_CASSANDRA_SSL_STORAGE_PORT</code>: <code>integer</code></li>
+</ul>
+<h3 id="native-transport-port"><a class="content__anchor" href="#native-transport-port" aria-hidden="true"><i data-feather="bookmark"></i></a>Native Transport Port</h3>
+<p>You can customize the port that Apache Cassandra listens on for CQL queries.</p>
+<ul>
+<li><strong>In DC/OS CLI options.json</strong>: <code>native_transport_port</code>: integer (default: <code>9042</code>)</li>
+<li><strong>DC/OS web interface</strong>: <code>TASKCFG_ALL_CASSANDRA_NATIVE_TRANSPORT_PORT</code>: <code>integer</code></li>
+</ul>
+<h3 id="rpc-port"><a class="content__anchor" href="#rpc-port" aria-hidden="true"><i data-feather="bookmark"></i></a>RPC Port</h3>
+<p>You can customize the port that Apache Cassandra listens on for Thrift RPC requests.</p>
+<ul>
+<li><strong>In DC/OS CLI options.json</strong>: <code>rpc_port</code>: integer (default: <code>9160</code>)</li>
+<li><strong>DC/OS web interface</strong>: <code>TASKCFG_ALL_CASSANDRA_RPC_PORT</code>: <code>integer</code></li>
+</ul>
+<h3 id="native-authentication-and-authorization"><a class="content__anchor" href="#native-authentication-and-authorization" aria-hidden="true"><i data-feather="bookmark"></i></a>Native Authentication and Authorization</h3>
+<p>To use Cassandra’s native <code>PasswordAuthenticator</code> and <code>CassandraAuthorizer</code>, set the following configurations:</p>
+<pre><code>{
+  &quot;service&quot;: {
+    &quot;security&quot;: {
+      &quot;authentication&quot;: {
+        &quot;enabled&quot;: true,
+        &quot;superuser&quot;: {
+          &quot;name&quot;: &quot;&lt;superuser-name&gt;&quot;,
+          &quot;password_secret_path&quot;: &quot;&lt;service-name&gt;/password&quot;
+        }
+      },
+      &quot;authorization&quot;: {
+        &quot;enabled&quot;: true
+      }
+    }
+  }
+}
+
+</code></pre>
+<p>This will deploy your Cassandra cluster with enhanced security protection, which includes disabling the native cassandra superuser and replacing it with the superuser that you specify.</p>
+<ul>
+<li>
+<p class="message--note"><strong>NOTE: </strong> The <code>password_secret_path</code> is the defined path to the superuser password in the secret store.</p>
+</li>
+</ul>
+<h3 id="custom-authentication-and-authorization"><a class="content__anchor" href="#custom-authentication-and-authorization" aria-hidden="true"><i data-feather="bookmark"></i></a>Custom Authentication and Authorization</h3>
+<p>Support for custom authenticators and authorizers is also possible via <code>base64</code> encoded YAML.</p>
+<p>Add your custom YAML when installing Apache Cassandra. You must <code>base64</code> encode your block of YAML and enter this string into the <code>authentication_custom_cassandra_yml</code> field.</p>
+<p>You can do this <code>base64</code> encoding as part of your automated workflow, or you can do it manually with an <a href="https://www.base64encode.org">online converter</a>.</p>
+<p>For example, the custom configurations are represented as follows:</p>
+<pre><code>{
+  &quot;service&quot;: {
+    &quot;security&quot;: {
+      &quot;authentication&quot;: {
+        &quot;enabled&quot;: true,
+        &quot;authenticator&quot;: &quot;com.abc.cassandra.auth.AbcAuthenticator&quot;,
+        &quot;role_manager&quot;: &quot;com.abc.cassandra.auth.AbcRoleManager&quot;,
+        &quot;authentication_custom_cassandra_yml&quot;: &quot;YXV0aGVudGljYXRpb25fb3B0aW9uczoKICAgIGVuYWJsZWQ6IGZhbHNlCiAgICBkZWZhdWx0X3NjaGVtZTogaW50ZXJuYWwKICAgIGFsbG93X2RpZ2VzdF93aXRoX2tlcmJlcm9zOiB0cnVlCiAgICBwbGFpbl90ZXh0X3dpdGhvdXRfc3NsOiB3YXJuCiAgICB0cmFuc2l0aW9uYWxfbW9kZTogZGlzYWJsZWQKICAgIG90aGVyX3NjaGVtZXM6CiAgICBzY2hlbWVfcGVybWlzc2lvbnM6IGZhbHNl&quot;
+      },
+      &quot;authorization&quot;: {
+        &quot;enabled&quot;: true,
+        &quot;authorizer&quot;: &quot;com.abc.cassandra.auth.AbcAuthorizer&quot;
+      }
+    }
+  }
+}
+</code></pre>
+<h3 id="disks"><a class="content__anchor" href="#disks" aria-hidden="true"><i data-feather="bookmark"></i></a>Disks</h3>
+<h4 id="volume-type"><a class="content__anchor" href="#volume-type" aria-hidden="true"><i data-feather="bookmark"></i></a>Volume Type</h4>
+<p>The service supports the following two volume types:</p>
+<ul>
+<li><code>ROOT</code> volumes are an isolated directory on the root volume, sharing IO/spindles with the rest of the host system.</li>
+<li><code>MOUNT</code> volumes are a dedicated device or partition on a separate volume with dedicated IO/spindles.</li>
+</ul>
+<p>Using <code>MOUNT</code> volumes requires <a href="/dcosdocs/mesosphere/dcos/latest/storage/mount-disk-resources/">additional configuration on each DC/OS agent system</a>, so the service currently uses <code>ROOT</code> volumes by default. To ensure reliable and consistent performance in a production environment, you should configure <code>MOUNT</code> volumes on the machines that will run the service in your cluster, and then configure the following as <code>MOUNT</code> volumes:</p>
+<p>Use the following to configure the disk type:</p>
+<ul>
+<li><strong>In DC/OS CLI options.json</strong>: <code>disk_type</code>: string (default: <code>ROOT</code>)</li>
+<li><strong>DC/OS web interface</strong>: <code>CASSANDRA_DISK_TYPE</code>: <code>string</code></li>
+</ul>
+<h4 id="disk-scheduler"><a class="content__anchor" href="#disk-scheduler" aria-hidden="true"><i data-feather="bookmark"></i></a>Disk Scheduler</h4>
+<p>It is <a href="http://docs.datastax.com/en/landing_page/doc/landing_page/recommendedSettings.html#recommendedSettings__optimizing-ssds">recommended</a> that you pre-configure your storage hosts to use the deadline IO scheduler in production environments.</p>
+<h2 id="zonerack-aware-placement-and-replication"><a class="content__anchor" href="#zonerack-aware-placement-and-replication" aria-hidden="true"><i data-feather="bookmark"></i></a>Zone/Rack-Aware Placement and Replication</h2>
+<p>Cassandra’s “rack”-based fault domain support is automatically enabled when specifying a placement constraint that uses the <code>@zone</code> key. For example, you could spread Cassandra nodes across a minimum of three different zones/racks by specifying the constraint <code>[[&quot;@zone&quot;, &quot;GROUP_BY&quot;, &quot;3&quot;]]</code>. When a placement constraint specifying <code>@zone</code> is used, Cassandra nodes will be automatically configured with <code>rack</code>s that match the names of the zones. If no placement constraint referencing <code>@zone</code> is configured, all nodes will be configured with a default rack of <code>rack1</code>.</p>
+<p>In addition to placing the tasks on different zones/racks, the zone/rack information will be included in Cassandra’s cassandra-rackdc.properties file. This enables Cassandra to ensure data is replicated between zones/racks and not to two nodes in the same zone/rack.</p>
+<h2 id="apache-cassandra-configuration"><a class="content__anchor" href="#apache-cassandra-configuration" aria-hidden="true"><i data-feather="bookmark"></i></a>Apache Cassandra Configuration</h2>
+<p>Apache Cassandra’s configuration is configurable via the <code>cassandra</code> section of the service schema. Read the service schema for a complete listing of available configuration.</p>
+<h2 id="multi-datacenter-deployment"><a class="content__anchor" href="#multi-datacenter-deployment" aria-hidden="true"><i data-feather="bookmark"></i></a>Multi-datacenter deployment</h2>
+<p>To replicate data across data centers, Apache Cassandra requires that you configure each cluster with the addresses of the seed nodes from every remote cluster. Use the following steps to learn how to start a multi-data center Apache Cassandra deployment running inside of a single DC/OS cluster.</p>
+<h3 id="launch-two-cassandra-clusters"><a class="content__anchor" href="#launch-two-cassandra-clusters" aria-hidden="true"><i data-feather="bookmark"></i></a>Launch two Cassandra clusters</h3>
+<ol>
+<li>
+<p>Launch the first cluster with the default configuration.</p>
+<pre><code class="language-shell">dcos package install cassandra
+</code></pre>
+</li>
+<li>
+<p>Create an <code>options.json</code> file for the second cluster that specifies a different service name and data center name.</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;name&quot;: &quot;cassandra2&quot;,
+    &quot;data_center&quot;: &quot;dc2&quot;
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>Launch the second cluster with the following custom options.</p>
+<pre><code>dcos package install cassandra --options=&lt;options.json&gt;
+</code></pre>
+</li>
+</ol>
+<h3 id="get-the-seed-node-ip-addresses"><a class="content__anchor" href="#get-the-seed-node-ip-addresses" aria-hidden="true"><i data-feather="bookmark"></i></a>Get the seed node IP addresses</h3>
+<p class="message--note"><strong>NOTE: </strong>You must set up a proxying layer to route traffic only if your Cassandra clusters are not on the same network.</p>
+<ol>
+<li>
+<p>Get the list of seed node addresses for the first cluster.</p>
+<pre><code class="language-shell">dcos cassandra --name=cassandra endpoints native-client
+</code></pre>
+<p>Alternatively, you can get the list of seed node addresses from the scheduler HTTP API.</p>
+<pre><code class="language-json">DCOS_AUTH_TOKEN=$(dcos config show core.dcos_acs_token)
+DCOS_URL=$(dcos config show core.dcos_url)
+curl -H &quot;authorization:token=$DCOS_AUTH_TOKEN&quot; $DCOS_URL/service/cassandra/v1/endpoints/native-client
+</code></pre>
+<p>The output should look like this:</p>
+<pre><code>{
+  &quot;address&quot;: [
+    &quot;10.0.3.88:9042&quot;,
+    &quot;10.0.0.162:9042&quot;,
+    &quot;10.0.0.189:9042&quot;
+  ],
+  &quot;dns&quot;: [
+    &quot;node-0-server.cassandra.autoip.dcos.thisdcos.directory:9042&quot;,
+    &quot;node-1-server.cassandra.autoip.dcos.thisdcos.directory:9042&quot;,
+    &quot;node-2-server.cassandra.autoip.dcos.thisdcos.directory:9042&quot;
+  ]
+}
+</code></pre>
+<p>Note the IPs in the <code>address</code> field.</p>
+</li>
+<li>
+<p>Run the same command for your second Cassandra cluster and note the IPs in the <code>address</code> field:</p>
+<pre><code>dcos cassandra --name=cassandra2 endpoints native-client
+</code></pre>
+</li>
+</ol>
+<h3 id="update-configuration-for-both-clusters"><a class="content__anchor" href="#update-configuration-for-both-clusters" aria-hidden="true"><i data-feather="bookmark"></i></a>Update configuration for both clusters</h3>
+<ol>
+<li>
+<p>Create an <code>options2.json</code> file with the IP addresses of the first cluster (<code>cassandra</code>):</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;remote_seeds&quot;: &quot;10.0.3.88:9042,10.0.0.162:9042,10.0.0.189:9042&quot;
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>Update the configuration of the second cluster.</p>
+<pre><code>dcos cassandra --name=cassandra2 update start --options=options2.json
+</code></pre>
+</li>
+<li>
+<p>Perform the same operation on the first cluster, creating an <code>options.json</code> which contains the IP addresses of the second cluster (<code>cassandra2</code>)'s seed nodes in the <code>service.remote_seeds</code> field.</p>
+</li>
+<li>
+<p>Then, update the first cluster’s configuration: <code>dcos cassandra --name=cassandra update start --options=options.json</code>.</p>
+</li>
+</ol>
+<p>Both schedulers will restart after each receives the configuration update, and each cluster will communicate with the seed nodes from the other cluster to establish a multi-data center topology. Repeat this process for each new cluster you add.</p>
+<h3 id="monitoring-your-progress"><a class="content__anchor" href="#monitoring-your-progress" aria-hidden="true"><i data-feather="bookmark"></i></a>Monitoring your progress</h3>
+<p>You can monitor the progress of the update for the first cluster using the following command:</p>
+<pre><code class="language-shell">dcos cassandra --name=cassandra update status
+</code></pre>
+<p>You can monitor the progress of the update for the second cluster using the following command:</p>
+<pre><code class="language-shell">dcos cassandra --name=cassandra2 update status
+</code></pre>
+<p>The output should look like this:</p>
+<pre><code class="language-shell">deploy (IN_PROGRESS)
+└─ node-deploy (IN_PROGRESS)
+   ├─ node-0:[server] (COMPLETE)
+   ├─ node-1:[server] (COMPLETE)
+   └─ node-2:[server] (PREPARED)
+</code></pre>
+<h3 id="test-your-multi-datacenter-configuration"><a class="content__anchor" href="#test-your-multi-datacenter-configuration" aria-hidden="true"><i data-feather="bookmark"></i></a>Test your multi-datacenter configuration</h3>
+<p>Make sure to test your deployment using a Cassandra client.</p>
+<h2 id="using-volume-profiles"><a class="content__anchor" href="#using-volume-profiles" aria-hidden="true"><i data-feather="bookmark"></i></a>Using Volume Profiles</h2>
+<p>Volume profiles are used to classify volumes. For example, users can group SSDs into a “fast” profile and group HDDs into a “slow” profile.</p>
+<p class="message--note"><strong>NOTE: </strong>Volume profiles are immutable and therefore cannot contain references to specific devices, nodes or other ephemeral identifiers.</p> 
+<p>DC/OS Storage Service (DSS) is a service that manages volumes, volume profiles, volume providers, and storage devices in a DC/OS cluster.</p>
+<p>If you want to deploy Cassandra with DSS, please follow <a href="/dcosdocs/mesosphere/dcos/services/storage/1.0.0/tutorials/cassandra-dss-volumes/">this tutorial</a></p>
+<p>Once the DC/OS cluster is running and volume profiles are created, you can deploy Cassandra with the following configs:</p>
+<pre><code class="language-bash">cat &gt; cassandra-options.json &lt;&lt;EOF
+{
+    &quot;nodes&quot;: {
+        &quot;volume_profile&quot;: &quot;cassandra&quot;,
+        &quot;disk_type&quot;: &quot;MOUNT&quot;
+    }
+}
+EOF
+</code></pre>
+<pre><code>dcos package install cassandra --options=cassandra-options.json
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>Cassandra will be configured to look for <code>MOUNT</code> volumes with the <code>cassandra</code> profile.</p> 
+<p>Once the Cassandra service finishes deploying its tasks will be running with the specified volume profiles.</p>
+<pre><code class="language-bash">dcos cassandra update status
+deploy (serial strategy) (COMPLETE)
+└─ node-deploy (serial strategy) (COMPLETE)
+   ├─ node-0:[server] (COMPLETE)
+   ├─ node-0:[init_system_keyspaces] (COMPLETE)
+   ├─ node-1:[server] (COMPLETE)
+   └─ node-2:[server] (COMPLETE)
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#installing-with-custom-configuration">Installing with Custom Configuration</a></li><li class="content__sections-item content__sections-item--h2"><a href="#create-a-custom-configuration-file">Create a Custom Configuration File</a></li><li class="content__sections-item content__sections-item--h2"><a href="#service-settings">Service Settings</a></li><li class="content__sections-item content__sections-item--h2"><a href="#cassandra-node-settings">Cassandra Node Settings</a></li><li class="content__sections-item content__sections-item--h2"><a href="#zonerack-aware-placement-and-replication">Zone/Rack-Aware Placement and Replication</a></li><li class="content__sections-item content__sections-item--h2"><a href="#apache-cassandra-configuration">Apache Cassandra Configuration</a></li><li class="content__sections-item content__sections-item--h2"><a href="#multi-datacenter-deployment">Multi-datacenter deployment</a></li><li class="content__sections-item content__sections-item--h2"><a href="#using-volume-profiles">Using Volume Profiles</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

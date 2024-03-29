@@ -1,0 +1,159 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>教程 - 创建和运行服务 - D2iQ Docs</title><meta name="description" content="创建和部署服务及容器化服务"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.1/tutorials/create-service">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/create-service">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/tutorials/create-service">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/dcos-101/"><i data-feather="chevron-right"></i>DC/OS 101</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/create-service/">创建和运行服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/stateful-services/">在 DC/OS 上运行有状态服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/autoscaling/"><i data-feather="chevron-right"></i>使用 Marathon 自动扩展</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/iot_pipeline/">部署负载均衡数据管道</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/deploy-on-marathon/">使用 Jenkins 部署 Marathon 应用程序</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/task-labels/">标记任务和作业</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/dcos-debug/"><i data-feather="chevron-right"></i>调试 DC/OS 上的应用程序</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">教程 - 创建和运行服务</h1></div><h4 class="content__header-description">创建和部署服务及容器化服务</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/create-service/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- This disclaimer should be included at the beginning of each page of a tutorial. -->
+<p class="message--important"><strong>IMPORTANT: </strong>Tutorials are intended to give you hands-on experience working with a limited set of DC/OS features with no implied or explicit warranty of any kind. None of the information provided--including sample scripts, commands, or applications--is officially supported by Mesosphere. You should not use this information in a production environment without independent testing and validation.</p>
+<p>本教程介绍如何使用 DC/OS Web 界面和 CLI 创建和部署简单的单命令服务和容器化服务。</p>
+<h2 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>先决条件</h2>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/">DC/OS 群集</a></li>
+</ul>
+<h1 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>单命令服务</h1>
+<h2 id="dcos-web"><a class="content__anchor" href="#dcos-web" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS Web 界面</h2>
+<p>从 DC/OS Web 界面创建和运行简单的服务：</p>
+<ol>
+<li>
+<p>单击 DC/OS Web 界面的 <strong>Services</strong> 选项卡，然后单击 <strong>RUN A SERVICE</strong>。</p>
+</li>
+<li>
+<p>单击 <strong>Single Container</strong>。</p>
+<ol>
+<li>
+<p>在 <strong>SERVICE ID</strong> 字段，输入服务名称。</p>
+</li>
+<li>
+<p>在 <strong>COMMAND</strong> 字段，输入 <code>sleep 10</code>。</p>
+</li>
+<li>
+<p>单击 <strong>MORE SETTINGS</strong>，然后选择容器运行时间。</p>
+<ul>
+<li><strong>DOCKER ENGINE</strong> 如果您需要 Docker 软件包的特定功能，请使用此选项。如果选择此选项，则必须在 <strong>CONTAINER IMAGE</strong> 字段中指定 Docker 容器镜像。</li>
+<li><strong>UNIVERSAL CONTAINER RUNTIME (UCR)</strong> Universal Container Runtime (UCR) 使用本地 Mesos 引擎。支持 Docker 文件格式、多个容器 (pod) 以及 GPU 资源。如果选择此选项，则可选择在 <strong>CONTAINER IMAGE</strong> 字段中指定 Docker 容器镜像。</li>
+</ul>
+<p>如需更多信息，请参阅<a href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/containerizers/">使用容器化工具</a>.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>单击<strong>查看和运行</strong>和<strong>运行服务</strong>。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/deploy-svs-ui.png" alt="在 DC/OS UI 中创建服务"></p>
+<p>图 1. 在 Web 界面中创建服务</p>
+</li>
+<li>
+<p>单击 <strong>Services</strong> 视图中的服务名称，以查看其运行情况并监控运行状况。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/GUI-Services-Running_Services_View-1_12.png" alt="在 DC/OS UI 中运行服务"></p>
+<p>图 2. 在 Web 界面中查看运行的服务</p>
+</li>
+</ol>
+<h2 id="dcos-cli"><a class="content__anchor" href="#dcos-cli" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS CLI</h2>
+<p>从 DC/OS CLI 创建和运行简单服务：</p>
+<ol>
+<li>
+<p>使用以下内容创建名为 <code>my-app-cli.json</code> 的 JSON 文件：</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/my-app-cli&quot;,
+  &quot;cmd&quot;: &quot;sleep 10&quot;,
+  &quot;instances&quot;: 1,
+  &quot;cpus&quot;: 1,
+  &quot;mem&quot;: 128,
+  &quot;portDefinitions&quot;: [
+    {
+      &quot;protocol&quot;: &quot;tcp&quot;,
+      &quot;port&quot;: 10000
+    }
+  ],
+  &quot;requirePorts&quot;: false
+}
+</code></pre>
+</li>
+<li>
+<p>使用以下命令运行服务。</p>
+<pre><code class="language-bash">dcos marathon app add my-app-cli.json
+</code></pre>
+</li>
+<li>
+<p>运行以下命令以验证您的服务是否正在运行：</p>
+<pre><code class="language-bash">dcos marathon app list
+</code></pre>
+<p>您还可以单击 DC/OS Web 界面的 <strong>Services</strong> 视图中的服务名称，以查看其运行情况并监控运行状况。</p>
+</li>
+</ol>
+<h1 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>容器化服务</h1>
+<h2 id="dcos-web-2"><a class="content__anchor" href="#dcos-web-2" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS Web 界面</h2>
+<p>从 DC/OS Web 界面创建和运行容器化的服务：</p>
+<ol>
+<li>
+<p>转到 <a href="https://hub.docker.com/r/mesosphere/hello-dcos/tags/">Mesosphere Docker Hub 存储库</a> 的 <code>hello-dcos</code> 页面，并记下最新的图像标签。</p>
+</li>
+<li>
+<p>单击 DC/OS Web 界面的 <strong>Services</strong> 选项卡，然后单击 <strong>RUN A SERVICE</strong>。</p>
+</li>
+<li>
+<p>单击 <strong>Single Container</strong>，在 <strong>SERVICE ID</strong> 字段中输入您的服务名称。</p>
+</li>
+<li>
+<p>单击 <strong>Container Settings</strong> 选项卡，在 <strong>CONTAINER IMAGE</strong> 字段中输入以下内容：<code>mesosphere/hello-dcos:&lt;image-tag&gt;</code>。使用您在步骤 1 中复制的标记替换 <code>&lt;image-tag&gt;</code>。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/deploy-container-ui.png" alt="DC/OS UI 中的容器化服务"></p>
+<p>图 3. Web 界面中的容器化服务</p>
+</li>
+<li>
+<p>单击<strong>查看和运行</strong>和<strong>运行服务</strong>。</p>
+</li>
+<li>
+<p>在 <strong>Services</strong> 选项卡中，单击服务名称，然后选择任务实例之一。单击 <strong>Logs</strong>，然后切换到 <strong>STDERR</strong> 和 <strong>STDOUT</strong> 以查看服务的输出。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/container-running-ui.png" alt="在 DC/OS UI 中运行容器化服务"></p>
+<p>图 4. 在 Web 界面中查看容器化服务</p>
+</li>
+</ol>
+<h2 id="dcos-cli-2"><a class="content__anchor" href="#dcos-cli-2" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS CLI</h2>
+<p>从 CLI 创建并运行容器化服务：</p>
+<ol>
+<li>
+<p>转到 <a href="https://hub.docker.com/r/mesosphere/hello-dcos/tags/">Mesosphere Docker Hub 存储库</a> 的 <code>hello-dcos</code> 页面，并记下最新的图像标签。</p>
+</li>
+<li>
+<p>使用以下内容创建名为 <code>hello-dcos-cli.json</code> 的 JSON 文件。将 <code>docker:image</code> 字段中的 <code>&lt;image-tag&gt;</code> 替换为您在步骤 1 中复制的标记。</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/hello-dcos-cli&quot;,
+  &quot;instances&quot;: 1,
+  &quot;cpus&quot;: 1,
+  &quot;mem&quot;: 128,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;DOCKER&quot;,
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;mesosphere/hello-dcos:&lt;image-tag&gt;&quot;,
+      &quot;forcePullImage&quot;: false,
+      &quot;privileged&quot;: false
+    }
+  },
+  &quot;acceptedResourceRoles&quot;: [&quot;slave_public&quot;],
+  &quot;portDefinitions&quot;: [
+    {
+      &quot;protocol&quot;: &quot;tcp&quot;,
+      &quot;port&quot;: 10001
+    }
+  ],
+  &quot;requirePorts&quot;: false
+}
+</code></pre>
+</li>
+<li>
+<p>使用以下命令运行服务。</p>
+<pre><code class="language-bash">dcos marathon app add hello-dcos-cli.json
+</code></pre>
+</li>
+<li>
+<p>运行以下命令以验证您的服务是否正在运行：</p>
+<pre><code class="language-bash">dcos marathon app list
+</code></pre>
+</li>
+<li>
+<p>在 DC/OS Web 的 <strong>Services</strong> 选项卡中，单击服务名称，然后选择任务实例之一。</p>
+</li>
+<li>
+<p>单击 <strong>Logs</strong>，然后切换到 <strong>STDERR (STDOUT)</strong> 视图以查看服务的输出。</p>
+</li>
+</ol>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#先决条件">先决条件</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-2">单命令服务</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-web">DC/OS Web 界面</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-cli">DC/OS CLI</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-3">容器化服务</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-web-2">DC/OS Web 界面</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-cli-2">DC/OS CLI</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

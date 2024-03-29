@@ -1,0 +1,492 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>高级安装 - D2iQ Docs</title><meta name="description" content="高级安装选项"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Kubernetes文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li><li class="chooser-list-item"><a href="/dkp/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services/kubernetes">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__item"><a href="/dkp/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><div class="toggle"><p><span class="title">Kubernetes</span><span class="version"> 1.2.1-1.10.6</span></p></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/install/">安装和自定义</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/advanced-install/">高级安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/quick-start/">快速启动</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/uninstall/">卸载</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/cluster_sizing/">群集大小</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/upgrade/">已升级</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/limitations/">限制</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/exposing-the-kubernetes-api/">暴露 Kubernetes API</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/exposing-the-kubernetes-api-marathonlb/">通过 Marathon-LB 或 Edge-LB 暴露 Kubernetes API</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/connecting-clients/">连接客户端</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/kubernetes-dashboard/">Kubernetes 仪表板</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/authn-and-authz/">授权</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/troubleshooting-etcd/">故障排除</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/disaster-recovery/">灾难恢复</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/ingress/">外部入口</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/supported-versions/">支持的版本</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/release-notes/">版本注释</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">高级安装</h1></div><h4 class="content__header-description">高级安装选项</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/master/pages/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/advanced-install/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://dcos-community.slack.com/" target="_blank"><i class="actions__icon" data-feather="slack"></i><span class="actions__text">Discuss</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+高级安装&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/advanced-install&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><!-- This source repo for this topic is https://github.com/mesosphere/dcos-kubernetes -->
+<p>默认的 DC/OS Kubernetes 包安装为尝试服务提供合理的默认设置。
+此页面描述了许多选项，可以启用选择性功能或允许您更改
+分配给 Kubernetes 集群的资源。</p>
+<h2 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>先决条件</h2>
+<p>为了使用默认参数运行框架，您的集群至少必须有一个专用代理以及运行下表所述任务所需的可用资源：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>每个集群的实例</th>
+<th>每个 CPU 的实例</th>
+<th>每个实例的 Mem (MB)</th>
+<th>每个实例的磁盘空间 (MB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Package scheduler</td>
+<td>1</td>
+<td>1</td>
+<td>1024</td>
+<td>-</td>
+</tr>
+<tr>
+<td>etcd</td>
+<td>1</td>
+<td>0.5</td>
+<td>1024</td>
+<td>3072 for data, 512 for logs</td>
+</tr>
+<tr>
+<td>kube-apiserver</td>
+<td>1</td>
+<td>0.5</td>
+<td>1024</td>
+<td>-</td>
+</tr>
+<tr>
+<td>kube-scheduler</td>
+<td>1</td>
+<td>0.5</td>
+<td>512</td>
+<td>-</td>
+</tr>
+<tr>
+<td>kube-controller-manager</td>
+<td>1</td>
+<td>0.5</td>
+<td>512</td>
+<td>-</td>
+</tr>
+<tr>
+<td>kube-proxy</td>
+<td>1</td>
+<td>0.1</td>
+<td>512</td>
+<td>-</td>
+</tr>
+<tr>
+<td>kubelet</td>
+<td>1</td>
+<td>3</td>
+<td>3072</td>
+<td>10240</td>
+</tr>
+</tbody>
+</table>
+<p>如果需要高可用性，则必须启用<code>kubernetes.high_availability</code>包选项，且建议至少使用三个私有代理。在高可用性模式运行任务需以下资源：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>每个集群的实例</th>
+<th>每个 CPU 的实例</th>
+<th>每个实例的 Mem (MB)</th>
+<th>每个实例的磁盘空间 (MB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>包调度器</td>
+<td>1</td>
+<td>1</td>
+<td>1024</td>
+<td>-</td>
+</tr>
+<tr>
+<td>etcd</td>
+<td>3</td>
+<td>0.5</td>
+<td>1024</td>
+<td>3072 用于数据，512 用于日志</td>
+</tr>
+<tr>
+<td>kube-apiserver</td>
+<td>3</td>
+<td>0.5</td>
+<td>1024</td>
+<td>-</td>
+</tr>
+<tr>
+<td>kube-scheduler</td>
+<td>3</td>
+<td>0.5</td>
+<td>512</td>
+<td>-</td>
+</tr>
+<tr>
+<td>kube-controller-manager</td>
+<td>3</td>
+<td>0.5</td>
+<td>512</td>
+<td>-</td>
+</tr>
+<tr>
+<td>kube-proxy</td>
+<td>1</td>
+<td>0.1</td>
+<td>512</td>
+<td>-</td>
+</tr>
+<tr>
+<td>kubelet</td>
+<td>1</td>
+<td>3</td>
+<td>3072</td>
+<td>10240</td>
+</tr>
+</tbody>
+</table>
+<h2 id="kubernetes"><a class="content__anchor" href="#kubernetes" aria-hidden="true"><i data-feather="bookmark"></i></a>更改 Kubernetes 节点资源规格</h2>
+<p>如上表所示，默认是 3 个 CPU、3GB RAM 和 10GB 磁盘。但是，<code>kubelet</code> 和容器运行时将保留 1 个 CPU 和 1GB RAM。这意味着每个 Kubernetes 节点都有 2 个 CPU、2GB RAM 和 10GB 磁盘，可分配给 Kubernetes pod。</p>
+<p>有关详细信息，请阅读 <a href="https://kubernetes.io/docs/tasks/administer-cluster/reserve-compute-resources/#node-allocatable">Kubernetes node-allocatable 的官方文档</a>。</p>
+<p>DC/OS Kubernetes 允许您单独指定公用节点和专用节点的资源。</p>
+<p>例如，我们要请求两个带 1 个 CPU、1 GB RAM 和 512 MB 磁盘的专用 Kubernetes 节点以及一个带 1 个 CPU、1GB RAM 和 512MB 磁盘的公用 Kubernetes 节点 。</p>
+<p class="message--note"><strong>注意：</strong> 这需要至少两个 DC/OS 专用代理和一个 DC/OS 公用代理，每个代理至少带有2 个 RAM、2 GB RAM 和 512 MB 磁盘，不分配给任何其他任务。额外资源由 Kubernetes 系统守护程序（如 `kubelet` 和容器运行时）进行使用。</p>
+<p>创建 JSON 选项文件，或编辑现有的文件：</p>
+<pre><code class="language-json">{
+  &quot;kubernetes&quot;: {
+    &quot;node_count&quot;: 2,
+    &quot;reserved_resources&quot;: {
+      &quot;kube_cpus&quot;: 1,
+      &quot;kube_mem&quot;: 1024,
+      &quot;kube_disk&quot;: 512
+    },
+    &quot;public_node_count&quot;: 1,
+    &quot;public_reserved_resources&quot;: {
+      &quot;kube_cpus&quot;: 1,
+      &quot;kube_mem&quot;: 1024,
+      &quot;kube_disk&quot;: 512
+    },  
+  }
+}
+</code></pre>
+<p>假设您将文件保存为 <code>options.json</code>，按如下方式安装包：</p>
+<pre><code class="language-shell">dcos package install kubernetes --options=options.json
+</code></pre>
+<h2 id="kubernetes-2"><a class="content__anchor" href="#kubernetes-2" aria-hidden="true"><i data-feather="bookmark"></i></a>更改 Kubernetes 节点数量</h2>
+<p>DC/OS Kubernetes 允许您指定集群中的专用和公用 Kubernetes 节点数量。</p>
+<h3 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>专用节点</h3>
+<p>默认的专用节点计数为 1。要更改此值，请在 JSON 选项文件中指定 <code>kubernetes.node_count</code>，如下所示。</p>
+<p>例如，我们要请求 10 个专用 Kubernetes 节点。</p>
+<p class="message--note"><strong>注意：</strong> 这需要至少 10 个 DC/OS 代理，每个代理有 3 个 CPU、3 GB RAM 和 10 GB 磁盘空间。</p>
+<p>创建 JSON 选项文件，或编辑现有的文件：</p>
+<pre><code class="language-json">{
+  &quot;kubernetes&quot;: {
+    &quot;node_count&quot;: 10
+  }
+}
+</code></pre>
+<p>假设您将文件保存为 <code>options.json</code>，按如下方式安装包：</p>
+<pre><code class="language-shell">dcos package install kubernetes --options=options.json
+</code></pre>
+<h3 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>公用节点</h3>
+<p>默认的公用节点计数为 0。要更改此值，请在 JSON 选项文件中指定 <code>kubernetes.public_node_count</code>，如下所示。</p>
+<p>例如，我们要在之前前 10 个专用 Kubernetes 节点的基础上请求 2 个额外的 Kubernetes 节点。</p>
+<p class="message--note"><strong>注意：</strong> 默认资源设置与专用节点定义的设置相同。
+因此，这需要至少两个公用 DC/OS 代理和 10 个专用代理，每个代理有 3 个 CPU、3GB RAM 和 10GB 磁盘空间。</p>
+<p>按如下方式编辑现有选项文件：</p>
+<pre><code class="language-json">{
+  &quot;kubernetes&quot;: {
+    &quot;node_count&quot;: 10,
+    &quot;public_node_count&quot;: 2
+  }
+}
+</code></pre>
+<h2 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>布局约束</h2>
+<p>布局约束允许您自定义 DC/OS 集群中部署服务的位置。布局约束使用 <a href="http://mesosphere.github.io/marathon/docs/constraints.html">Marathon 运营商</a> 语法。例如，<code>[[&quot;hostname&quot;, &quot;UNIQUE&quot;]]</code> 确保每个代理最多部署一个 Pod。</p>
+<p>通用任务是指定要对其进行部署的白名单系统列表。为此，请使用以下语法用于布局约束：</p>
+<p><code>[[&quot;hostname&quot;, &quot;LIKE&quot;, &quot;10.0.0.159|10.0.1.202|10.0.3.3&quot;]]</code></p>
+<p class="message--note"><strong>注意：</strong>请务必在这种情境中包括超额容量，以便如果白名单系统中的一个系统性能下降，还有足够的容量修复您的服务。</p>
+<p>选项示例：</p>
+<pre><code class="language-json">{
+  &quot;kubernetes&quot;: {
+    &quot;control_plane_placement&quot;: &quot;[[\&quot;disk\&quot;,\&quot;IS\&quot;,\&quot;fast-ssd\&quot;]]&quot;,
+    &quot;node_placement&quot;: &quot;[\&quot;hostname\&quot;,\&quot;UNIQUE\&quot;]&quot;,
+    &quot;public_node_placement&quot;: &quot;[\&quot;hostname\&quot;,\&quot;UNIQUE\&quot;]&quot;
+  }
+}
+</code></pre>
+<p class="message--note"><strong>注意：</strong>强制执行代理级别的任务反关联性，意味着没有相同类型的任务，例如， `kube-node-kube-proxy` 将在一个有其他 `kube-node-kube-proxy` 正在运行的代理上运行。</p>
+<h3 id="-5"><a class="content__anchor" href="#-5" aria-hidden="true"><i data-feather="bookmark"></i></a>更新布局约束</h3>
+<p>集群更改，那么您的布局约束也会更改。但是，已经运行的 pod 将不会受到布局约束变化的影响。这是因为更改布局约束可能使正在运行的 pod 的当前布局失效，而且 pod 不会被自动迁移，因为这种操作具有破坏性。我们建议使用以下程序更新 Pod 的布局约束：</p>
+<ul>
+<li>更新服务中的布局约束定义。</li>
+<li>针对每个受影响的 pod，一次执行一个 pod 替换。这将（破坏性地）移动 Pod 使其符合新的布局约束。</li>
+</ul>
+<h2 id="tls"><a class="content__anchor" href="#tls" aria-hidden="true"><i data-feather="bookmark"></i></a>TLS</h2>
+<p>该包可在可能的情况下为共同身份认证和通信加密强制执行 TLS。如下，您可以找到有关它何地、何时、如何发生的更多详细信息。</p>
+<h3 id="-6"><a class="content__anchor" href="#-6" aria-hidden="true"><i data-feather="bookmark"></i></a>加密和共同身份认证</h3>
+<p>用于共同身份认证和通信加密的 TLS 实施为：</p>
+<ul>
+<li><code>etcd</code> 集群 peer - 仅启用加密，而不是共同身份认证，因为 <code>etcd</code>
+不会基于所提供的主机名，而是基于 IP 地址上验证 peer 证书
+peer 视为 peer 或 DC/OS 不支持的 DNS SRV 发现。</li>
+<li><code>etcd</code> client-server - 同时启用加密和共同身份认证。唯一就位的客户端
+是 <code>kube-apiserver</code>，这意味着 Kubernetes API
+和 <code>etcd</code> 之间的通信可靠。</li>
+<li>所有 Kubernetes 组件均启用加密和共同身份认证，包括
+<code>kube-apiserver</code>、<code>kube-scheduler</code>、<code>kube-controller-manager</code>、<code>kube-proxy</code> 和 <code>kubelet</code>。</li>
+<li>所有都包含（必须）插件，包括按需备份/恢复，尊重针对
+Kubernetes API 的共同身份认证。</li>
+</ul>
+<p class="message--note"><strong>注意：</strong> 我们暴露了一个不安全的 Kubernetes API 端点。这是提供外部应用程序的临时解决方案 - 在此包的范围之外 - 访问 Kubernetes API。目前用于提供 <a href="../kubernetes-dashboard">Kubernetes 仪表板</a> 的访问权限。这是一项 beta 特性，并且在未来版本的 Kubernetes 包中将被弃用。</>
+<h3 id="tls-vs-dcos"><a class="content__anchor" href="#tls-vs-dcos" aria-hidden="true"><i data-feather="bookmark"></i></a>TLS 开源 vs 企业 DC/OS</h3>
+<p>TLS 工件，如密钥对（私和公）以及证书的创建、签名和交换，是用于证明实体（例如，人、组织、应用程序等等）的身份，目的在于建立信任。要建立此信任，则需要<a href="https://en.wikipedia.org/wiki/Public_key_infrastructure">公钥基础架构或 PKI</a>。过去，此包只有在 DC/OS Enterprise 上运行时才完全支持 TLS，因为只有此版本提供 PKI 所需的机制：</p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/1.11/security/ent/tls-ssl/">DC/OS CA</a> - 集中化证书授权
+(CA) 用于验证和最终签署证书签名请求 (CSR)。</li>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/1.11/security/ent/secrets/">DC/OS 密码</a> - 一种向包组件分配
+TLS 工件的集中、安全方式，例如，Kubernetes 组件和
+在同一 DC/OS 集群中的其他应用程序。</li>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/1.11/security/ent/service-auth/">DC/OS 服务帐户</a> - 我们的包和
+应用程序所需，以对上述服务进行身份认证。</li>
+</ul>
+<p>开源 DC/OS 不提供此类功能。问题是我们如何在开源 DC/OS 上实施 TLS？ 答案如下图所示：</p>
+<p><img src="../img/tls.png" alt="alt text" title="TLS 设计"></p>
+<p>图 1. TLS 设计</p>
+<h3 id="dcos-pki"><a class="content__anchor" href="#dcos-pki" aria-hidden="true"><i data-feather="bookmark"></i></a>利用企业 DC/OS PKI</h3>
+<p>为了在设置 TLS 时充分利用 DC/OS Enterprise PKI 基础架构，需要有权限管理 CA 和密码的 <a href="/dcosdocs/mesosphere/dcos/cn/1.11/security/ent/service-auth/">服务账户</a>。在安装 Kubernetes 包之前， <strong>必须</strong> 进行配置。</p>
+<p>为了配置此类服务帐户，首先需要安装 <a href="/dcosdocs/mesosphere/dcos/cn/1.11/cli/enterprise-cli/">DC/OS Enterprise CLI</a>。然后，执行以下操作：</p>
+<pre><code class="language-shell">dcos security org service-accounts keypair private-key.pem public-key.pem
+dcos security org service-accounts delete kubernetes
+dcos security org service-accounts create -p public-key.pem -d 'Kubernetes service account' kubernetes
+dcos security secrets delete kubernetes/sa
+dcos security secrets create-sa-secret private-key.pem kubernetes kubernetes/sa
+dcos security org groups add_user superusers kubernetes
+</code></pre>
+<p>下一步，您需要 <a href="/dcosdocs/mesosphere/dcos/cn/1.11/security/ent/perms-management/">授予</a> 服务帐户正确的权限。</p>
+<p>所需权限为：</p>
+<pre><code class="language-shell">dcos:mesos:master:framework:role:&lt;service name&gt;-role create
+dcos:mesos:master:task:user:root create
+dcos:mesos:agent:task:user:root create
+dcos:mesos:master:reservation:role:&lt;service name&gt;-role create
+dcos:mesos:master:reservation:principal:&lt;service name&gt; delete
+dcos:mesos:master:volume:role:&lt;service name&gt;-role create
+dcos:mesos:master:volume:principal:&lt;service name&gt; delete
+
+dcos:service:marathon:marathon:services:/ create
+dcos:service:marathon:marathon:services:/ delete
+
+dcos:secrets:default:/&lt;service name&gt;/* full
+dcos:secrets:list:default:/&lt;service name&gt; read
+dcos:adminrouter:ops:ca:rw full
+dcos:adminrouter:ops:ca:ro full
+
+dcos:mesos:master:framework:role:slave_public/&lt;service name&gt;-role create
+dcos:mesos:master:framework:role:slave_public/&lt;service name&gt;-role read
+dcos:mesos:master:reservation:role:slave_public/&lt;service name&gt;-role create
+dcos:mesos:master:volume:role:slave_public/&lt;service name&gt;-role create
+dcos:mesos:master:framework:role:slave_public read
+dcos:mesos:agent:framework:role:slave_public read
+</code></pre>
+<!-- is the name of the service to be installed -->
+<p>其中 <code>&lt;service name&gt;</code> 是要安装的服务的名称, e.g. <code>kubernetes</code>。</p>
+<p>最后，您需要告诉包安装程序您刚刚创建的服务帐户，以及
+如何查找其凭据。创建 JSON 选项文件，或编辑现有的文件：</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;service_account&quot;: &quot;kubernetes&quot;,
+    &quot;service_account_secret&quot;: &quot;kubernetes/sa&quot;
+  }
+}
+</code></pre>
+<p>假设您将文件保存为 <code>options.json</code>，按如下方式安装包：</p>
+<pre><code class="language-shell">dcos package install kubernetes --options=options.json
+</code></pre>
+<h2 id="-7"><a class="content__anchor" href="#-7" aria-hidden="true"><i data-feather="bookmark"></i></a>当您有代理时</h2>
+<p>某些用户可以在其 DC/OS 集群和互联网之间进行代理设置。这导致安装此包出现问题，即无法运行 <code>kube-dns</code> 以及其他插件 pod。以下是此类故障的示例:</p>
+<pre><code>Normal Created 5m (x2502 over 8d) kubelet, kube-node-5-kubelet.kubernetes.mesos Created container
+Normal Started 5m (x2502 over 8d) kubelet, kube-node-5-kubelet.kubernetes.mesos Started container
+Normal Pulled 5m (x2501 over 8d) kubelet, kube-node-5-kubelet.kubernetes.mesos Container image &quot;gcr.io/google_containers/k8s-dns-dnsmasq-nanny-amd64:1.14.5&quot; already present on machine
+Warning BackOff 3m (x32719 over 8d) kubelet, kube-node-5-kubelet.kubernetes.mesos Back-off restarting failed container
+Warning Unhealthy 3m (x10009 over 8d) kubelet, kube-node-5-kubelet.kubernetes.mesos Liveness probe failed: Get http://9.0.6.3:10054/healthcheck/dnsmasq: net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+Normal Pulled 3m (x2645 over 8d) kubelet, kube-node-5-kubelet.kubernetes.mesos Container image &quot;gcr.io/google_containers/k8s-dns-sidecar-amd64:1.14.5&quot; already present on machine
+Normal Created 3m (x2646 over 8d) kubelet, kube-node-5-kubelet.kubernetes.mesos Created container
+Normal Killing 3m (x2502 over 8d) kubelet, kube-node-5-kubelet.kubernetes.mesos Killing container with id docker://dnsmasq:pod &quot;kube-dns-2102953216-qwvtn_kube-system(fd285861-ce3a-11e7-9ca9-005056945d21)&quot; container &quot;dnsmasq&quot; is unhealthy, it will be killed and re-created.
+(...)
+</code></pre>
+<p>这里的问题是，<code>kubelet</code> 无法 HTTP GET <code>kube-dns</code> 用于活跃度和准备度探测的端点，因此容器始终在重新启动。但为什么会发生这种情况呢？ 设置 <code>HTTP_PROXY</code> 和/或
+DC/OS 代理上的 <code>HTTPS_PROXY</code> 导致 <code>kubelet</code> 任务继承相同的值，因此强制 <code>kubelet</code> 尝试和使用代理来进入其管理的容器。</p>
+<p>解决方案是，指定另一个环境变量，<code>NO_PROXY</code>，以便 <code>kubelet</code> 知道不应该使用 Kubernetes pod 容器的 HTTP GET 代理，例如，将 <code>NO_PROXY</code> 值设置到 Kubernetes pod 覆盖子网，<code>NO_PROXY=9.0.0.0/8</code>。</p>
+<h2 id="101000016"><a class="content__anchor" href="#101000016" aria-hidden="true"><i data-feather="bookmark"></i></a>当使用 10.100.0.0/16 时</h2>
+<p>默认情况下，Kubernetes 集群将使用 <code>10.100.0.0/16</code> 作为服务 CIDR。
+如果是这种情况，则需要对 Kubernetes 集群服务 CIDR 进行更改。</p>
+<p>创建 JSON 选项文件，或编辑现有的文件：</p>
+<pre><code class="language-json">{
+  &quot;kubernetes&quot;: {
+    &quot;service_cidr&quot;: &quot;&lt;YOUR_CIDR_HERE&gt;&quot;
+  }
+}
+</code></pre>
+<!-- above with a CIDR block that is not already assigned somewhere in your network -->
+<p class="message--note"><strong>注意：</strong> 将上面的 `<YOUR_CIDR_HERE>` 用有一个尚未分配到网络中的CIDR块替换, 例如： `10.90.0.0/16`。</p>
+<p>假设您将文件保存为 <code>options.json</code>，按如下方式安装包：</p>
+<pre><code class="language-shell">dcos package install kubernetes --options=options.json
+</code></pre>
+<h2 id="-8"><a class="content__anchor" href="#-8" aria-hidden="true"><i data-feather="bookmark"></i></a>启用云提供商集成</h2>
+<p>Kubernetes 为选择性集成提供许多公用和专用云提供商。</p>
+<p>目前，此包支持：</p>
+<ul>
+<li><a href="https://kubernetes.io/docs/concepts/cluster-administration/cloud-providers/#aws">AWS</a></li>
+</ul>
+<p>以下，您将找到有关如何选择性地让您的 Kubernetes 集群
+与云提供商集成。</p>
+<h3 id="aws"><a class="content__anchor" href="#aws" aria-hidden="true"><i data-feather="bookmark"></i></a>AWS</h3>
+<h4 id="iam"><a class="content__anchor" href="#iam" aria-hidden="true"><i data-feather="bookmark"></i></a>IAM 政策和标签</h4>
+<p class="message--important"><strong>警告: </strong>这些指令<strong>必须</strong>在安装 Kubernetes 包之前执行。</p>
+<p>每个节点的 IAM 策略需要针对 Kubernetes 正确就位，以利用
+与 AWS 集成的优势。</p>
+<p>以下是允许您成功集成的 IAM 政策示例：</p>
+<pre><code class="language-json">{
+    &quot;Resource&quot;: &quot;*&quot;,
+    &quot;Action&quot;: [
+        &quot;ec2:CreateTags&quot;,
+        &quot;ec2:DescribeInstances&quot;,
+        &quot;ec2:CreateVolume&quot;,
+        &quot;ec2:DeleteVolume&quot;,
+        &quot;ec2:AttachVolume&quot;,
+        &quot;ec2:DetachVolume&quot;,
+        &quot;ec2:DescribeVolumes&quot;,
+        &quot;ec2:DescribeVolumeStatus&quot;,
+        &quot;ec2:DescribeVolumeAttribute&quot;,
+        &quot;ec2:CreateSnapshot&quot;,
+        &quot;ec2:CopySnapshot&quot;,
+        &quot;ec2:DeleteSnapshot&quot;,
+        &quot;ec2:DescribeSnapshots&quot;,
+        &quot;ec2:DescribeSnapshotAttribute&quot;,
+        &quot;ec2:AuthorizeSecurityGroupIngress&quot;,
+        &quot;ec2:CreateRoute&quot;,
+        &quot;ec2:CreateSecurityGroup&quot;,
+        &quot;ec2:DeleteSecurityGroup&quot;,
+        &quot;ec2:DeleteRoute&quot;,
+        &quot;ec2:DescribeRouteTables&quot;,
+        &quot;ec2:DescribeSubnets&quot;,
+        &quot;ec2:DescribeSecurityGroups&quot;,
+        &quot;ec2:ModifyInstanceAttribute&quot;,
+        &quot;ec2:RevokeSecurityGroupIngress&quot;,
+        &quot;elasticloadbalancing:AttachLoadBalancerToSubnets&quot;,
+        &quot;elasticloadbalancing:ApplySecurityGroupsToLoadBalancer&quot;,
+        &quot;elasticloadbalancing:CreateLoadBalancer&quot;,
+        &quot;elasticloadbalancing:CreateLoadBalancerPolicy&quot;,
+        &quot;elasticloadbalancing:CreateLoadBalancerListeners&quot;,
+        &quot;elasticloadbalancing:ConfigureHealthCheck&quot;,
+        &quot;elasticloadbalancing:DeleteLoadBalancer&quot;,
+        &quot;elasticloadbalancing:DeleteLoadBalancerListeners&quot;,
+        &quot;elasticloadbalancing:DescribeLoadBalancers&quot;,
+        &quot;elasticloadbalancing:DescribeLoadBalancerAttributes&quot;,
+        &quot;elasticloadbalancing:DetachLoadBalancerFromSubnets&quot;,
+        &quot;elasticloadbalancing:DeregisterInstancesFromLoadBalancer&quot;,
+        &quot;elasticloadbalancing:ModifyLoadBalancerAttributes&quot;,
+        &quot;elasticloadbalancing:RegisterInstancesWithLoadBalancer&quot;,
+        &quot;elasticloadbalancing:SetLoadBalancerPoliciesForBackendServer&quot;
+    ],
+    &quot;Effect&quot;: &quot;Allow&quot;
+}
+</code></pre>
+<p>另外，需要指定标签以及密钥 <code>KubernetesCluster</code>。
+确保此标签的值在 AWS 帐户的所有标签中都是唯一值
+并应用到与节点关联的自动扩展和安全组：</p>
+<pre><code class="language-json">{
+    &quot;Tags&quot; : [
+        {
+          &quot;Key&quot; : &quot;KubernetesCluster&quot;,
+          &quot;Value&quot; : &quot;kubernetes-cluster&quot;
+        }
+    ]
+}
+</code></pre>
+<p>为了启用 AWS 云提供商集成，您必须将 <code>kubernetes.cloud_provider</code>
+选项添加到包选项 JSON 文件：</p>
+<pre><code class="language-json">{
+  &quot;kubernetes&quot;: {
+    &quot;cloud_provider&quot;: &quot;aws&quot;
+  }
+}
+</code></pre>
+<p>假设您将文件保存为 <code>options.json</code>，按如下方式安装包：</p>
+<pre><code class="language-shell">dcos package install kubernetes --options=options.json
+</code></pre>
+<h4 id="storageclass"><a class="content__anchor" href="#storageclass" aria-hidden="true"><i data-feather="bookmark"></i></a>配置 <code>StorageClass</code></h4>
+<p>为了能够为您的 pod 请求存储，您必须在安装包之后至少创建一个 <code>StorageClass</code>
+资源。在执行此操作之前，强烈建议您要大体上
+熟悉 <a href="https://aws.amazon.com/ebs/?nc1=h_ls">Amazon EBS</a>、Kubernetes
+<a href="https://kubernetes.io/docs/concepts/storage/storage-classes/">存储类</a>，
+而且要对
+<a href="https://kubernetes.io/docs/concepts/storage/storage-classes/#aws">AWS 特定选项</a>
+特别熟悉。</p>
+<p>举个例子，要使用
+<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">通用固态硬盘</a>
+卷作为您集群中卷的默认存储类型，您必须创建
+以下 <code>StorageClass</code> 资源：</p>
+<pre><code class="language-yaml">apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: ssd
+  annotations:
+    storageclass.kubernetes.io/is-default-class: &quot;true&quot;
+  labels:
+    kubernetes.io/cluster-service: &quot;true&quot;
+provisioner: kubernetes.io/aws-ebs
+parameters:
+  type: gp2
+</code></pre>
+<p><code>storageclass.kubernetes.io/is-default-class: &quot;true&quot;</code> 注解
+保证每个没有特性存储类的 <code>PersistentVolumeClaim</code>
+会使用您刚刚定义的 <code>ssd</code> 类。当然，
+除默认设置外，您可以根据需要创建多个存储类。举个
+例子，要为非频繁访问的数据创建类，您可以创建
+以下 <code>StorageClass</code> 资源：</p>
+<pre><code class="language-yaml">apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: cold-hdd
+  labels:
+    kubernetes.io/cluster-service: &quot;true&quot;
+provisioner: kubernetes.io/aws-ebs
+parameters:
+  type: sc1
+</code></pre>
+<p>要使用 pod 中的 <code>cold-hdd</code> 存储类，您必须首先创建
+参照该存储类的 <code>PersistentVolumeClaim</code>：</p>
+<pre><code class="language-yaml">apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: http-archive
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 500Gi
+  storageClassName: cold-hdd
+</code></pre>
+<p>最后，您必须参照 pod 中的 <code>PersistentVolumeClaim</code>，您将
+准备就绪：</p>
+<pre><code class="language-yaml">apiVersion: v1
+kind: Pod
+metadata:
+  name: http-archive
+spec:
+  containers:
+    - name: nginx
+      image: nginx:1.12.2-alpine
+      ports:
+        - containerPort: 80
+          name: http
+      volumeMounts:
+        - mountPath: &quot;/usr/share/nginx/html&quot;
+          name: data
+  volumes:
+    - name: data
+      persistentVolumeClaim:
+       claimName: http-archive
+</code></pre>
+<h4 id="ingress"><a class="content__anchor" href="#ingress" aria-hidden="true"><i data-feather="bookmark"></i></a><code>Ingress</code> 支持</h4>
+<p><code>Ingress</code> 资源在 Kubernetes 中很特别，并不包含管理它的
+内置控制器。这与
+<code>PersistentVolumeClaim</code> 或 <code>LoadBalancer</code>-类型 <code>Service</code> 等资源相反，
+其 Kubernetes 包含内置控制器和与云提供商的集成。
+因此，要使用 <code>Ingress</code> AWS 中的资源，您必须部署自定义
+ingress 控制器。请参阅
+<a href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/ingress/">Ingress</a>
+文档，以了解有关在您的
+集群中设置 ingress 的示例和重要信息。</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#先决条件">先决条件</a></li><li class="content__sections-item content__sections-item--h2"><a href="#kubernetes">更改 Kubernetes 节点资源规格</a></li><li class="content__sections-item content__sections-item--h2"><a href="#kubernetes-2">更改 Kubernetes 节点数量</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-4">布局约束</a></li><li class="content__sections-item content__sections-item--h2"><a href="#tls">TLS</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-7">当您有代理时</a></li><li class="content__sections-item content__sections-item--h2"><a href="#101000016">当使用 10.100.0.0/16 时</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-8">启用云提供商集成</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Local Persistent Volumes - D2iQ Docs</title><meta name="description" content="Using local persistent volumes"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.2"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/storage/persistent-volume">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/storage/persistent-volume">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/storage/persistent-volume">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/storage/persistent-volume">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/security/"><i data-feather="chevron-right"></i>Security</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/storage/"><i data-feather="chevron-right"></i>Storage</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/storage/mount-disk-resources/">Mount Disk Resources</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/storage/nfs/">NFS Server</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/storage/persistent-volume/">Local Persistent Volumes</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/storage/external-storage/"><i data-feather="chevron-right"></i>External Storage</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/archives/">Access Documentation Archives</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Local Persistent Volumes</h1></div><h4 class="content__header-description">Using local persistent volumes</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.2/storage/persistent-volume/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>When you specify a local volume or volumes, tasks and their associated data are “pinned” to the node they are first launched on and will be relaunched on that node if they terminate. The resources the application requires are also reserved. Marathon will implicitly reserve an appropriate amount of disk space (as declared in the volume via <code>persistent.size</code>) in addition to the sandbox <code>disk</code> size you specify as part of your application definition.</p>
+<h1 id="benefits-of-using-local-persistent-volumes"><a class="content__anchor" href="#benefits-of-using-local-persistent-volumes" aria-hidden="true"><i data-feather="bookmark"></i></a>Benefits of using local persistent volumes</h1>
+<ul>
+<li>All resources needed to run tasks of your stateful service are dynamically reserved, thus ensuring the ability to relaunch the task on the same node using the same volume when needed.</li>
+<li>You do not need constraints to pin a task to a particular agent where its data resides.</li>
+<li>You can still use constraints to specify distribution logic.</li>
+<li>Marathon lets you locate and destroy an unused persistent volume if you do not need it anymore.</li>
+</ul>
+<h1 id="creating-an-application-definition-with-a-local-persistent-volume"><a class="content__anchor" href="#creating-an-application-definition-with-a-local-persistent-volume" aria-hidden="true"><i data-feather="bookmark"></i></a>Creating an application definition with a local persistent volume</h1>
+<h2 id="configure-the-volume"><a class="content__anchor" href="#configure-the-volume" aria-hidden="true"><i data-feather="bookmark"></i></a>Configure the volume</h2>
+<p>Configure a persistent volume with the following options:</p>
+<pre><code class="language-json">{
+  &quot;containerPath&quot;: &quot;data&quot;,
+  &quot;mode&quot;: &quot;RW&quot;,
+  &quot;persistent&quot;: {
+    &quot;type&quot;: &quot;root&quot;,
+    &quot;size&quot;: 10,
+    &quot;constraints&quot;: []
+  }
+}
+</code></pre>
+<ul>
+<li><code>containerPath</code>: The path where your application will read and write data. This must be a single-level path relative to the container; it cannot contain a forward slash (<code>/</code>). (<code>&quot;data&quot;</code>, but not <code>&quot;/data&quot;</code>, <code>&quot;/var/data&quot;</code> or <code>&quot;var/data&quot;</code>).</li>
+<li><code>mode</code>: The access mode of the volume. Currently, <code>&quot;RW&quot;</code> is the only possible value and will let your application read from and write to the volume.</li>
+<li><code>persistent.type</code>: The type of Mesos disk resource to use; the valid options are <code>root</code>, <code>path</code>, and <code>mount</code>, corresponding to the <a href="http://mesos.apache.org/documentation/latest/multiple-disk/">valid Mesos multi-disk resource types</a>.</li>
+<li><code>persistent.size</code>: The size of the persistent volume in MiBs.</li>
+<li><code>persistent.profileName</code>: (not seen above) The storage <a href="/dcosdocs/mesosphere/dcos/services/storage/latest/terminology-and-concepts/#volume-profile">volume profile</a>. Only volumes with the specified profile are used to launch an application. It this option is not given, any volume (with or without a profile) will be used for launching.</li>
+<li><code>persistent.maxSize</code>: (not seen above) For <code>root</code> Mesos disk resources, the optional maximum size of an exclusive mount volume to be considered.</li>
+<li><code>persistent.constraints</code>: Constraints restricting where new persistent volumes should be created. Currently, it is only possible to constrain the path of the disk resource by regular expression.</li>
+</ul>
+<h2 id="configure-stateful-application"><a class="content__anchor" href="#configure-stateful-application" aria-hidden="true"><i data-feather="bookmark"></i></a>Configure stateful application</h2>
+<p>To set up a stateful application, set <code>unreachableStrategy</code> to “disabled”.</p>
+<pre><code class="language-json">&quot;unreachableStrategy&quot;: &quot;disabled&quot;,
+</code></pre>
+<p><a name="abs-paths"></a></p>
+<h2 id="specify-an-unsupported-container-path"><a class="content__anchor" href="#specify-an-unsupported-container-path" aria-hidden="true"><i data-feather="bookmark"></i></a>Specify an unsupported container path</h2>
+<p>To allow you to dynamically add a local persistent volume to a running container and to ensure consistency across operating systems, the value of <code>containerPath</code> must be relative. However, your application may require an absolute container path or a relative one with slashes. If your application does require an unsupported <code>containerPath</code>, you can work around this restriction by configuring two volumes. The first volume has the absolute container path you need and does not have the <code>persistent</code> parameter. The <code>hostPath</code> parameter of the first volume must match the relative <code>containerPath</code> of the second volume.</p>
+<pre><code class="language-json">{
+  &quot;containerPath&quot;: &quot;/var/lib/data&quot;,
+  &quot;hostPath&quot;: &quot;mydata&quot;,
+  &quot;mode&quot;: &quot;RW&quot;
+}
+</code></pre>
+<p>The second volume is a persistent volume with a <code>containerPath</code> that matches the <code>hostPath</code> of the first volume.</p>
+<pre><code class="language-json">{
+  &quot;containerPath&quot;: &quot;mydata&quot;,
+  &quot;mode&quot;: &quot;RW&quot;,
+  &quot;persistent&quot;: {
+    &quot;size&quot;: 1000
+  }
+}
+</code></pre>
+<p>For a complete example, see <a href="#stateful-sql">Running stateful MySQL on Marathon</a>.</p>
+<h1 id="create-a-stateful-application-via-the-dcos-web-interface"><a class="content__anchor" href="#create-a-stateful-application-via-the-dcos-web-interface" aria-hidden="true"><i data-feather="bookmark"></i></a>Create a stateful application via the DC/OS web interface</h1>
+<ol>
+<li>Click the <strong>Services</strong> tab, then <strong>RUN A SERVICE</strong>.</li>
+<li>Click the <strong>Volumes</strong> tab.</li>
+<li>Choose the size of the volume or volumes you will use. Be sure that you choose a volume size that will fit the needs of your application; you will not be able to modify this size after you launch your application.</li>
+<li>Specify the container path from which your application will read and write data. The container path must be non-nested and cannot contain slashes e.g. <code>data</code>, but not  <code>../../../etc/opt</code> or <code>/user/data/</code>. If your application requires such a container path, <a href="#abs-paths">use this configuration</a>.</li>
+<li>Click <strong>Create</strong>.</li>
+</ol>
+<h1 id="scale-stateful-applications"><a class="content__anchor" href="#scale-stateful-applications" aria-hidden="true"><i data-feather="bookmark"></i></a>Scale stateful applications</h1>
+<p>When you scale your app down, the volumes associated with the terminated instances are detached but all resources are still reserved. At this point, you may delete the tasks via the Marathon API, which will free reserved resources and destroy the persistent volumes.</p>
+<p>Since all the resources your application needs are still reserved when a volume is detached, you may wish to destroy detached volumes to allow other applications and frameworks to use the resources. You may wish to leave them in the detached state, however, if you think you will be scaling your app up again; the data on the volume will still be there. If your app is destroyed, any associated volumes and reserved resources will also be deleted. Mesos will currently not remove the data but might do so in the future.</p>
+<h1 id="upgrade-or-restart-stateful-applications"><a class="content__anchor" href="#upgrade-or-restart-stateful-applications" aria-hidden="true"><i data-feather="bookmark"></i></a>Upgrade or restart stateful applications</h1>
+<p>The default <code>UpgradeStrategy</code> for a stateful application is a <code>minimumHealthCapacity</code> of <code>0.5</code> and a <code>maximumOverCapacity</code> of <code>0</code>. If you override this default, your definition must stay below these values to pass validation. The <code>UpgradeStrategy</code> must stay below these values because Marathon needs to be able to kill old tasks before starting new ones so that the new versions can take over reservations and volumes and Marathon cannot create additional tasks (as a <code>maximumOverCapacity &gt; 0</code> would induce) to prevent additional volume creation.</p>
+<p>For a stateful application, Marathon will never start more instances than specified in the <code>UpgradeStrategy</code>, and will kill old instances rather than create new ones during an upgrade or restart.</p>
+<h1 id="create-a-pod-with-a-local-persistent-volume-beta"><a class="content__anchor" href="#create-a-pod-with-a-local-persistent-volume-beta" aria-hidden="true"><i data-feather="bookmark"></i></a>Create a pod with a local persistent volume <span class="badge badge--shortcode badge--large badge--block badge--beta">Beta</span></h1>
+<h2 id="configure-the-volume-2"><a class="content__anchor" href="#configure-the-volume-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Configure the volume</h2>
+<p>Configure a persistent volume with the following options:</p>
+<pre><code class="language-json">&quot;volumes&quot;: [
+  {
+    &quot;name&quot;: &quot;pst&quot;,
+    &quot;persistent&quot;: {
+      &quot;type&quot;: &quot;root&quot;,
+      &quot;size&quot;: 10,
+      &quot;constraints&quot;: []
+    }
+  }
+]
+</code></pre>
+<p>where</p>
+<ul>
+<li><code>name</code>: Name of the pod level volume</li>
+<li><code>persistent.type</code>: The type of Mesos disk resource to use; the valid options are <code>root</code>, <code>path</code>, and <code>mount</code>, corresponding to the <a href="http://mesos.apache.org/documentation/latest/multiple-disk/">valid Mesos multi-disk resource types</a>.</li>
+<li><code>persistent.size</code>: The size of the persistent volume in MiBs.</li>
+<li><code>persistent.maxSize</code>: (not seen above) For <code>root</code> Mesos disk resources, the optional maximum size of an exclusive mount volume to be considered.</li>
+<li><code>persistent.profileName</code>: (not seen above) The storage <a href="/dcosdocs/mesosphere/dcos/services/storage/latest/terminology-and-concepts/#volume-profile">volume profile</a>. Only volumes with the specified profile are used to launch an application. It this option is not given, any volume (with or without a profile) will be used for launching.</li>
+<li><code>persistent.constraints</code>: Constraints restricting where new persistent volumes should be created. Currently, it is only possible to constrain the path of the disk resource by regular expression.</li>
+</ul>
+<h2 id="configure-stateful-pod"><a class="content__anchor" href="#configure-stateful-pod" aria-hidden="true"><i data-feather="bookmark"></i></a>Configure stateful pod</h2>
+<p>To set up a stateful pod, set <code>unreachableStrategy</code> to “disabled”.</p>
+<pre><code class="language-json">&quot;unreachableStrategy&quot;: &quot;disabled&quot;,
+</code></pre>
+<h2 id="specify-the-volume-mount-parameters"><a class="content__anchor" href="#specify-the-volume-mount-parameters" aria-hidden="true"><i data-feather="bookmark"></i></a>Specify the volume mount parameters</h2>
+<pre><code class="language-json">&quot;volumeMounts&quot;: [
+  {
+    &quot;name&quot;: &quot;pst&quot;,
+    &quot;mountPath&quot;: &quot;pst1&quot;,
+    &quot;readOnly&quot;: false
+  }
+]
+</code></pre>
+<p>where</p>
+<ul>
+<li><code>name</code>: The name of the volume to reference.</li>
+<li><code>mountPath</code>: The path inside the container at which the volume is mounted.</li>
+<li><code>readOnly</code>: If the volume is mounted as read-only or not.</li>
+</ul>
+<h1 id="under-the-hood"><a class="content__anchor" href="#under-the-hood" aria-hidden="true"><i data-feather="bookmark"></i></a>Under the hood</h1>
+<p>Marathon leverages three Mesos features to run stateful applications: <a href="http://mesos.apache.org/documentation/latest/reservation/">dynamic reservations</a>, reservation labels, and <a href="http://mesos.apache.org/documentation/latest/persistent-volume/">persistent volumes</a>.</p>
+<p>In contrast to static reservations, dynamic reservations are created at runtime for a given role and associate resources with a combination of <code>frameworkId</code> and <code>taskId</code> using reservation labels. This allows Marathon to restart a stateful task after it has terminated for some reason, since the associated resources will not be offered to frameworks that are not configured to use this role. Consult <a href="#non-unique-roles">non-unique roles</a> for more information.</p>
+<p>Mesos creates persistent volumes to hold your application’s stateful data. Because persistent volumes are local to an agent, the stateful task using this data will be pinned to the agent it was initially launched on, and will be relaunched on this node whenever needed. You do not need to specify any constraints for this to work: when Marathon needs to launch a task, it will accept a matching Mesos offer, dynamically reserve the resources required for the task, create persistent volumes, and make sure the task is always restarted using these reserved resources so that it can access the existing data.</p>
+<p>When a task that used persistent volumes has terminated, its metadata will be kept. This metadata will be used to launch a replacement task when needed.</p>
+<p>For example, if you scale down from five to three instances, you will see two tasks in the <code>Waiting</code> state, along with the information about the persistent volumes the tasks were using and the agents on which they are placed. Marathon will not unreserve those resources and will not destroy the volumes. When you scale up again, Marathon will attempt to launch tasks that use those existing reservations and volumes as soon as it gets a Mesos offer containing the labeled resources. Marathon will only schedule unreserve/destroy operations when:</p>
+<ul>
+<li>The application is deleted (in which case volumes of all its tasks are destroyed, and all reservations are deleted).</li>
+<li>You explicitly delete one or more suspended tasks with a <code>wipe=true</code> flag.</li>
+</ul>
+<p>If reserving resources or creating persistent volumes fails, the created task will time out after the configured <code>task_reservation_timeout</code> (default: 20 seconds) and a new reservation attempt will be made. In case a task is <code>LOST</code> (because its agent is disconnected or crashed), the reservations and volumes will not timeout and you need to manually delete and wipe the task to let Marathon launch a new one.</p>
+<h1 id="potential-pitfalls"><a class="content__anchor" href="#potential-pitfalls" aria-hidden="true"><i data-feather="bookmark"></i></a>Potential pitfalls</h1>
+<p>Be aware of the following issues and limitations when using stateful applications in Marathon that make use of dynamic reservations and persistent volumes.</p>
+<h2 id="resource-requirements"><a class="content__anchor" href="#resource-requirements" aria-hidden="true"><i data-feather="bookmark"></i></a>Resource requirements</h2>
+<p>Currently, the resource requirements–volume size, cpu usage, memory requirements, and so forth–of a stateful application <strong>cannot</strong> be changed once you have deployed the app definition.</p>
+<h2 id="replication-and-backups"><a class="content__anchor" href="#replication-and-backups" aria-hidden="true"><i data-feather="bookmark"></i></a>Replication and backups</h2>
+<p>Because persistent volumes are pinned to nodes, they are no longer reachable if the node is disconnected from the cluster, for example, due to a network partition or a crashed agent. If the stateful service does not take care of data replication on its own, you need to manually setup a replication or backup strategy to guard against data loss from a network partition or from a crashed agent.</p>
+<p>If an agent re-registers with the cluster and offers its resources, Marathon is eventually able to relaunch a task there. If a node does not re-register with the cluster, Marathon will wait forever to receive expected offers, as its goal is to re-use the existing data. If the agent is not expected to come back, you can manually delete the relevant tasks by adding a <code>wipe=true</code> flag and Marathon will eventually launch a new task with a new volume on another agent.</p>
+<h2 id="disk-consumption"><a class="content__anchor" href="#disk-consumption" aria-hidden="true"><i data-feather="bookmark"></i></a>Disk consumption</h2>
+<p>As of Mesos 0.28, destroying a persistent volume does not clean up or destroy data. Mesos deletes metadata about the volume in question, but the data remains on disk. To prevent disk consumption, you should manually remove data when you no longer need it.</p>
+<p><a name="non-unique-roles"></a></p>
+<h2 id="non-unique-roles"><a class="content__anchor" href="#non-unique-roles" aria-hidden="true"><i data-feather="bookmark"></i></a>Non-unique roles</h2>
+<p>Both static and dynamic reservations in Mesos are bound to roles, not to frameworks or framework instances. Marathon adds labels to claim that resources have been reserved for a combination of <code>frameworkId</code> and <code>taskId</code>, as noted above. However, these labels do not protect from misuse by other frameworks or old Marathon instances (prior to 1.0). Every Mesos framework that registers for a given role will eventually receive offers containing resources that have been reserved for that role.</p>
+<p>However, if another framework does not respect the presence of labels and the semantics as intended and uses them, Marathon is unable to reclaim these resources for the initial purpose. We recommend never using the same role for different frameworks if one of them uses dynamic reservations. Marathon instances in HA mode do not need to have unique roles, though, because they use the same role by design.</p>
+<h3 id="the-mesos-sandbox"><a class="content__anchor" href="#the-mesos-sandbox" aria-hidden="true"><i data-feather="bookmark"></i></a>The Mesos sandbox</h3>
+<p>The temporary Mesos sandbox is still the target for the <code>stdout</code> and <code>stderr</code> logs. To view these logs, go to the Marathon pane of the DC/OS GUI.</p>
+<h1 id="examples"><a class="content__anchor" href="#examples" aria-hidden="true"><i data-feather="bookmark"></i></a>Examples</h1>
+<p><a name="stateful-sql"></a></p>
+<h2 id="stateful-mysql-on-marathon"><a class="content__anchor" href="#stateful-mysql-on-marathon" aria-hidden="true"><i data-feather="bookmark"></i></a>Stateful MySQL on Marathon</h2>
+<p>The default MySQL Docker image does not allow you to change the data folder. Since we cannot define a persistent volume with an absolute nested <code>containerPath</code> like <code>/var/lib/mysql</code>, we configure a workaround to set up a Docker mount from hostPath <code>mysqldata</code> (relative to the Mesos sandbox) to <code>/var/lib/mysql</code> (the path that MySQL attempts to read/write):</p>
+<pre><code class="language-json">{
+  &quot;containerPath&quot;: &quot;/var/lib/mysql&quot;,
+  &quot;hostPath&quot;: &quot;mysqldata&quot;,
+  &quot;mode&quot;: &quot;RW&quot;
+}
+</code></pre>
+<p>In addition to that, we configure a persistent volume with a containerPath <code>mysqldata</code>, which will mount the local persistent volume as <code>mysqldata</code> into the Docker container:</p>
+<pre><code class="language-json">{
+  &quot;containerPath&quot;: &quot;mysqldata&quot;,
+  &quot;mode&quot;: &quot;RW&quot;,
+  &quot;persistent&quot;: {
+    &quot;type&quot;: &quot;root&quot;,
+    &quot;size&quot;: 1000
+  }
+}
+</code></pre>
+<p>The complete JSON application definition reads as follows:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/mysql&quot;,
+  &quot;cpus&quot;: 1,
+  &quot;mem&quot;: 512,
+  &quot;disk&quot;: 0,
+  &quot;instances&quot;: 1,
+  &quot;networks&quot;: [
+    {
+      &quot;mode&quot;: &quot;container/bridge&quot;
+    }
+  ],
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;DOCKER&quot;,
+    &quot;volumes&quot;: [
+      {
+        &quot;containerPath&quot;: &quot;mysqldata&quot;,
+        &quot;mode&quot;: &quot;RW&quot;,
+        &quot;persistent&quot;: {
+          &quot;type&quot;: &quot;root&quot;,
+          &quot;size&quot;: 1000
+        }
+      },
+      {
+        &quot;containerPath&quot;: &quot;/var/lib/mysql&quot;,
+        &quot;hostPath&quot;: &quot;mysqldata&quot;,
+        &quot;mode&quot;: &quot;RW&quot;
+      }
+    ],
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;mysql&quot;,
+      &quot;forcePullImage&quot;: false
+    },
+    &quot;portMappings&quot;: [
+      {
+        &quot;containerPort&quot;: 3306,
+        &quot;hostPort&quot;: 0,
+        &quot;servicePort&quot;: 10000,
+        &quot;protocol&quot;: &quot;tcp&quot;
+      }
+    ]
+  },
+  &quot;env&quot;: {
+    &quot;MYSQL_USER&quot;: &quot;wordpress&quot;,
+    &quot;MYSQL_PASSWORD&quot;: &quot;secret&quot;,
+    &quot;MYSQL_ROOT_PASSWORD&quot;: &quot;supersecret&quot;,
+    &quot;MYSQL_DATABASE&quot;: &quot;wordpress&quot;
+  },
+  &quot;unreachableStrategy&quot;: &quot;disabled&quot;,
+  &quot;upgradeStrategy&quot;: {
+    &quot;minimumHealthCapacity&quot;: 0,
+    &quot;maximumOverCapacity&quot;: 0
+  }
+}
+</code></pre>
+<p><a name="stateful-postgres"></a></p>
+<h2 id="stateful-postgresql-on-marathon"><a class="content__anchor" href="#stateful-postgresql-on-marathon" aria-hidden="true"><i data-feather="bookmark"></i></a>Stateful PostgreSQL on Marathon</h2>
+<p>Creating an app definition for PostgreSQL on Marathon is similar to creating a defintion for MySQL. To prevent Postgres from storing data in a <code>/pgdata</code> folder that is not persisted or in a location that must be owned by <code>root</code>, you should avoid using the <code>$PGDATA</code> environment variable. Instead, you can use the app definition to configure two persistent volumes with settings similar to the following:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/postgres&quot;,
+  &quot;cpus&quot;: 1,
+  &quot;instances&quot;: 1,
+  &quot;mem&quot;: 512,
+  &quot;networks&quot;: [
+    {
+      &quot;mode&quot;: &quot;container/bridge&quot;
+    }
+  ],
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;DOCKER&quot;,
+    &quot;volumes&quot;: [
+      {
+        &quot;containerPath&quot;: &quot;pgdata&quot;,
+        &quot;mode&quot;: &quot;RW&quot;,
+        &quot;persistent&quot;: {
+          &quot;type&quot;: &quot;mount&quot;,
+          &quot;size&quot;: 524288,
+          &quot;maxSize&quot;: 1048576,
+          &quot;constraints&quot;: [[&quot;path&quot;, &quot;LIKE&quot;, &quot;/mnt/ssd-.+&quot;]]
+        }
+      }
+    ],
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;postgres:latest&quot;
+    },
+    &quot;portMappings&quot;: [
+      {
+        &quot;containerPort&quot;: 5432,
+        &quot;hostPort&quot;: 0,
+        &quot;protocol&quot;: &quot;tcp&quot;,
+        &quot;name&quot;: &quot;postgres&quot;
+      }
+    ]
+  },
+  &quot;env&quot;: {
+    &quot;POSTGRES_PASSWORD&quot;: &quot;password&quot;,
+    &quot;PGDATA&quot;: &quot;pgdata&quot;
+  },
+  &quot;unreachableStrategy&quot;: &quot;disabled&quot;,
+  &quot;upgradeStrategy&quot;: {
+    &quot;maximumOverCapacity&quot;: 0,
+    &quot;minimumHealthCapacity&quot;: 0
+  }
+}
+</code></pre>
+<h2 id="pod-with-persistent-volume"><a class="content__anchor" href="#pod-with-persistent-volume" aria-hidden="true"><i data-feather="bookmark"></i></a>Pod with persistent volume</h2>
+<p>The following example will create a pod with two containers and one shared persistent volume. Also see <a href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/pods/">Pods</a>.</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/persistent-volume-pod&quot;,
+  &quot;volumes&quot;: [
+    {
+      &quot;name&quot;: &quot;pst&quot;,
+      &quot;persistent&quot;: {
+        &quot;type&quot;: &quot;root&quot;,
+        &quot;size&quot;: 10,
+        &quot;constraints&quot;: []
+      }
+    }
+  ],
+  &quot;scaling&quot;: {
+    &quot;kind&quot;: &quot;fixed&quot;,
+    &quot;instances&quot;: 1
+  },
+  &quot;scheduling&quot;: {
+    &quot;unreachableStrategy&quot;: &quot;disabled&quot;,
+    &quot;upgrade&quot;: {
+      &quot;minimumHealthCapacity&quot;: 0,
+      &quot;maximumOverCapacity&quot;: 0
+    }
+  },
+  &quot;containers&quot;: [
+    {
+      &quot;name&quot;: &quot;container1&quot;,
+      &quot;exec&quot;: {
+        &quot;command&quot;: {
+          &quot;shell&quot;: &quot;cd $MESOS_SANDBOX &amp;&amp; echo 'hello' &gt;&gt; pst1/foo &amp;&amp; /opt/mesosphere/bin/python -m http.server $EP_HOST_HTTPCT1&quot;
+        }
+      },
+      &quot;resources&quot;: {
+        &quot;cpus&quot;: 0.1,
+        &quot;mem&quot;: 128
+      },
+      &quot;endpoints&quot;: [
+        {
+          &quot;name&quot;: &quot;httpct1&quot;,
+          &quot;hostPort&quot;: 0,
+          &quot;protocol&quot;: [
+            &quot;tcp&quot;
+          ]
+        }
+      ],
+      &quot;volumeMounts&quot;: [
+        {
+          &quot;name&quot;: &quot;pst&quot;,
+          &quot;mountPath&quot;: &quot;pst1&quot;,
+          &quot;readOnly&quot;: false
+        }
+      ],
+      &quot;lifecycle&quot;: {
+        &quot;killGracePeriodSeconds&quot;: 60
+      }
+    },
+    {
+      &quot;name&quot;: &quot;container2&quot;,
+      &quot;exec&quot;: {
+        &quot;command&quot;: {
+          &quot;shell&quot;: &quot;cd $MESOS_SANDBOX &amp;&amp; /opt/mesosphere/bin/python -m http.server $EP_HOST_HTTPCT2&quot;
+        }
+      },
+      &quot;resources&quot;: {
+        &quot;cpus&quot;: 0.1,
+        &quot;mem&quot;: 128
+      },
+      &quot;endpoints&quot;: [
+        {
+          &quot;name&quot;: &quot;httpct2&quot;,
+          &quot;hostPort&quot;: 0,
+          &quot;protocol&quot;: [
+            &quot;tcp&quot;
+          ]
+        }
+      ],
+      &quot;volumeMounts&quot;: [
+        {
+          &quot;name&quot;: &quot;pst&quot;,
+          &quot;mountPath&quot;: &quot;pst2&quot;,
+          &quot;readOnly&quot;: false
+        }
+      ],
+      &quot;lifecycle&quot;: {
+        &quot;killGracePeriodSeconds&quot;: 60
+      }
+    }
+  ],
+  &quot;networks&quot;: [
+    {
+      &quot;mode&quot;: &quot;host&quot;
+    }
+  ]
+}
+</code></pre>
+<h2 id="inspectdelete-suspended-stateful-tasks"><a class="content__anchor" href="#inspectdelete-suspended-stateful-tasks" aria-hidden="true"><i data-feather="bookmark"></i></a>Inspect/delete suspended stateful tasks</h2>
+<p>To destroy and clean up persistent volumes and free the reserved resources associated with a task, perform two steps:</p>
+<ol>
+<li>Locate the agent containing the persistent volume and remove the data inside it.</li>
+<li>Send an HTTP DELETE request to Marathon that includes the <code>wipe=true</code> flag.</li>
+</ol>
+<p>To locate the agent, inspect the Marathon UI and check out the detached volumes on the <strong>Volumes</strong> tab. Or, query the <code>/v2/apps</code> endpoint, which provides information about the <code>host</code> and Mesos <code>slaveId</code>.</p>
+<pre><code>http GET http://dcos/service/marathon/v2/apps/postgres/tasks
+</code></pre>
+<p>response:</p>
+<pre><code class="language-json">{
+  &quot;appId&quot;: &quot;/postgres&quot;,
+  &quot;host&quot;: &quot;10.0.0.168&quot;,
+  &quot;id&quot;: &quot;postgres.53ab8733-fd96-11e5-8e70-76a1c19f8c3d&quot;,
+  &quot;localVolumes&quot;: [
+    {
+      &quot;containerPath&quot;: &quot;pgdata&quot;,
+      &quot;persistenceId&quot;: &quot;postgres#pgdata#53ab8732-fd96-11e5-8e70-76a1c19f8c3d&quot;
+    }
+  ],
+  &quot;slaveId&quot;: &quot;d935ca7e-e29d-4503-94e7-25fe9f16847c-S1&quot;
+}
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>A running task will show <code>stagedAt</code>, <code>startedAt</code>, and <code>version</code> in addition to the information provided above.</p>
+<p>You can then</p>
+<ol>
+<li>
+<p>Remove the data on disk by <code>ssh'ing</code> into the agent and running the <code>rm -rf &lt;volume-path&gt;/*</code> command.</p>
+</li>
+<li>
+<p>Delete the task with <code>wipe=true</code>, which will expunge the task information from the Marathon internal repository and eventually destroy the volume and unreserve the resources previously associated with the task:</p>
+<pre><code>http DELETE http://dcos/service/marathon/v2/apps/postgres/tasks/postgres.53ab8733-fd96-11e5-8e70-76a1c19f8c3d?wipe=true
+</code></pre>
+</li>
+</ol>
+<h2 id="view-application-status"><a class="content__anchor" href="#view-application-status" aria-hidden="true"><i data-feather="bookmark"></i></a>View application status</h2>
+<p>You can view the status of your application with persistent local volumes. After you have created your application, click the <strong>Volumes</strong> tab of the application detail view to get detailed information about your app instances and associated volumes.</p>
+<p>The Status column tells you if your app instance is attached to the volume or not. The app instance will read as “detached” if you have scaled down your application. Currently the only Operation Type available is read/write (RW).</p>
+<p>Click a volume to view the Volume Detail Page, where you can see information about the individual volume.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#benefits-of-using-local-persistent-volumes">Benefits of using local persistent volumes</a></li><li class="content__sections-item content__sections-item--h1"><a href="#creating-an-application-definition-with-a-local-persistent-volume">Creating an application definition with a local persistent volume</a></li><li class="content__sections-item content__sections-item--h2"><a href="#configure-the-volume">Configure the volume</a></li><li class="content__sections-item content__sections-item--h2"><a href="#configure-stateful-application">Configure stateful application</a></li><li class="content__sections-item content__sections-item--h2"><a href="#specify-an-unsupported-container-path">Specify an unsupported container path</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-a-stateful-application-via-the-dcos-web-interface">Create a stateful application via the DC/OS web interface</a></li><li class="content__sections-item content__sections-item--h1"><a href="#scale-stateful-applications">Scale stateful applications</a></li><li class="content__sections-item content__sections-item--h1"><a href="#upgrade-or-restart-stateful-applications">Upgrade or restart stateful applications</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-a-pod-with-a-local-persistent-volume-beta">Create a pod with a local persistent volume Beta</a></li><li class="content__sections-item content__sections-item--h2"><a href="#configure-the-volume-2">Configure the volume</a></li><li class="content__sections-item content__sections-item--h2"><a href="#configure-stateful-pod">Configure stateful pod</a></li><li class="content__sections-item content__sections-item--h2"><a href="#specify-the-volume-mount-parameters">Specify the volume mount parameters</a></li><li class="content__sections-item content__sections-item--h1"><a href="#under-the-hood">Under the hood</a></li><li class="content__sections-item content__sections-item--h1"><a href="#potential-pitfalls">Potential pitfalls</a></li><li class="content__sections-item content__sections-item--h2"><a href="#resource-requirements">Resource requirements</a></li><li class="content__sections-item content__sections-item--h2"><a href="#replication-and-backups">Replication and backups</a></li><li class="content__sections-item content__sections-item--h2"><a href="#disk-consumption">Disk consumption</a></li><li class="content__sections-item content__sections-item--h2"><a href="#non-unique-roles">Non-unique roles</a></li><li class="content__sections-item content__sections-item--h1"><a href="#examples">Examples</a></li><li class="content__sections-item content__sections-item--h2"><a href="#stateful-mysql-on-marathon">Stateful MySQL on Marathon</a></li><li class="content__sections-item content__sections-item--h2"><a href="#stateful-postgresql-on-marathon">Stateful PostgreSQL on Marathon</a></li><li class="content__sections-item content__sections-item--h2"><a href="#pod-with-persistent-volume">Pod with persistent volume</a></li><li class="content__sections-item content__sections-item--h2"><a href="#inspectdelete-suspended-stateful-tasks">Inspect/delete suspended stateful tasks</a></li><li class="content__sections-item content__sections-item--h2"><a href="#view-application-status">View application status</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

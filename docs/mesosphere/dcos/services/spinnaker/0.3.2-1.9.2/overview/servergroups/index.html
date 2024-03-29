@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Applications and Server Groups - D2iQ Docs</title><meta name="description" content="Using Spinnaker applications and server groups"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Spinnaker Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/overview/servergroups">Spinnaker 0.3.2-1.9.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.1-1.9.2/overview/servergroups">Spinnaker 0.3.1-1.9.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.0-1.9.2/overview/servergroups">Spinnaker 0.3.0-1.9.2</a></li></ul><div class="toggle"><p><span class="title">Spinnaker</span><span class="version"> 0.3.2-1.9.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/getting-started/">DC/OS Setup</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/overview/"><i data-feather="chevron-right"></i>Overview</a></li><ul><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/overview/servergroups/">Server Groups</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/overview/pipelines/">Pipelines</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/overview/edgelb/">Edge-LB</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/overview/kubernetes/">Kubernetes</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/configuration/">Configuration</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/operations/">Operations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/security/">Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/uninstall/">Uninstall</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/troubleshooting/">Troubleshooting</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/supported-versions/">Supported Versions</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Applications and Server Groups</h1></div><h4 class="content__header-description">Using Spinnaker applications and server groups</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/overview/servergroups/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><h1 id="concepts"><a class="content__anchor" href="#concepts" aria-hidden="true"><i data-feather="bookmark"></i></a>Concepts</h1>
+<p>The following three concept pictures are from Will Gorman’s<a href="http://events.linuxfoundation.org/sites/events/files/slides/Continuous%20Delivery%20for%20DC%3AOS%20%20with%20Spinnaker.pdf">Mesoscon presentation</a>. They introduce the key concepts that we will use in the following section.</p>
+<p>A Spinnaker <strong>application</strong> contains <strong>(0-n)</strong> <strong>clusters</strong>.</p>
+<p><a href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs-c01.png"><img src="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs-c01.png"/></a></p>
+<p>Figure 1. Spinnaker application concept</p>
+<p>A Spinnaker <strong>cluster</strong> contains <strong>(1-n)</strong> <strong>server groups</strong>, and each <strong>server group</strong> contains <strong>(0-n)</strong> <strong>service instances</strong>. Each server group represents a new version of the cluster.</p>
+<p><a href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs-c02.png"><img src="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs-c02.png"/></a></p>
+<p>Figure 2. Spinnaker cluster view</p>
+<p>A Spinnaker <strong>server group</strong> maps (1-1) to a DC/OS <strong>service</strong> (aka Marathon app).</p>
+<p><a href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs-c03.png"><img src="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs-c03.png"/></a></p>
+<p>Figure 3. Spinnaker server group</p>
+<h1 id="applications-and-server-groups"><a class="content__anchor" href="#applications-and-server-groups" aria-hidden="true"><i data-feather="bookmark"></i></a>Applications and Server Groups</h1>
+<p>This section contains instructions for</p>
+<ul>
+<li><a href="#creating-an-application">Creating an Application</a></li>
+<li><a href="#creating-a-server-group">Creating a Server Group</a></li>
+<li><a href="#creating-a-new-server-group-version">Creating a Server Group Version</a></li>
+</ul>
+<h2 id="creating-an-application"><a class="content__anchor" href="#creating-an-application" aria-hidden="true"><i data-feather="bookmark"></i></a>Creating an Application</h2>
+<ol>
+<li>On the Spinnaker home page, select the <strong>Applications</strong> screen. There you select the <strong>Create Application</strong> action.</li>
+</ol>
+<p><a href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs01.png"><img src="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs01.png"/></a></p>
+<p>Figure 4. Applications screen</p>
+<ol start="2">
+<li>In the <strong>New Application</strong> dialog type <code>myapp</code> for the <strong>Name</strong> and <code>xxx@yyy.zzz</code> for the <strong>Owner Email</strong>.</li>
+</ol>
+<p><a href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs02.png"><img src="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs02.png"/></a></p>
+<p>Figure 5. New application dialog</p>
+<p>The new Application <code>myapp</code> shows up in the <strong>Applications</strong> list. Select <code>myapp</code> to open the app.</p>
+<p><a href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs03.png"><img src="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs03.png"/></a></p>
+<p>Figure 6. New app in Applications screen</p>
+<p><a name="creating-a-server-group"></a></p>
+<h2 id="creating-a-server-group"><a class="content__anchor" href="#creating-a-server-group" aria-hidden="true"><i data-feather="bookmark"></i></a>Creating a Server Group</h2>
+<p>A server group is a DC/OS service (or Marathon app), so most of the information you have to fill in below will be familiar to you from creating Marathon <code>json</code> definitions.</p>
+<ol>
+<li>In the <strong>myapp &gt; Clusters</strong> view select the <strong>Create Server Group</strong> button.</li>
+</ol>
+<p><a href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs04.png"><img src="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs04.png"/></a></p>
+<p>Figure 7. Clusters view screen</p>
+<ol start="2">
+<li>Under <strong>Basic Settings</strong>, enter the <strong>dcos Account</strong> and <strong>dcos Region</strong> you want to create the server group in.</li>
+</ol>
+<p><a href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs05.png"><img src="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs05.png"/></a></p>
+<p>Figure 8. Basic Settings screen</p>
+<ol start="3">
+<li>
+<p>Select the name of the <strong>Stack</strong>. The Spinnaker application name plus stack name make the cluster name, in our case <code>myapp-prod</code>.</p>
+</li>
+<li>
+<p>In <strong>Container Settings</strong> select <code>nginx:1.11</code> for the image to use.</p>
+</li>
+</ol>
+<p><a href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs06.png"><img src="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs06.png"/></a></p>
+<p>Figure 9. Container Settings screen</p>
+<ol start="5">
+<li>In <strong>Network</strong> select <code>Bridge</code> for <strong>Network Type</strong> and port <code>80</code> for <strong>Container Port</strong>. Set <code>web</code> for service endpoint <strong>Name</strong>.</li>
+</ol>
+<p><a href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs07.png"><img src="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs07.png"/></a></p>
+<p>Figure 10. Network Settings screen</p>
+<ol start="6">
+<li>In <strong>Health Checks</strong> define a health check specifying <code>/</code> for <strong>Path</strong> and <code>0</code> for <strong>Port Index</strong>.</li>
+</ol>
+<p><a href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs08.png"><img src="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs08.png"/></a></p>
+<p>Figure 11. Health Checks screen</p>
+<ol start="7">
+<li>Select <strong>Create</strong> to create the server group.</li>
+</ol>
+<p>In the <strong>myapp &gt; Clusters</strong> view, you will see the new cluster with one server group containing one instance, that is, one <strong>nginx</strong> server running in our sample.</p>
+<p><a href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs09.png"><img src="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs09.png"/></a></p>
+<p>Figure 12. New cluster with server group</p>
+<h2 id="creating-a-server-group-version"><a class="content__anchor" href="#creating-a-server-group-version" aria-hidden="true"><i data-feather="bookmark"></i></a>Creating a Server Group Version</h2>
+<ol>
+<li>Repeat steps 1 - 4 in <a href="#creating-a-server-group">Creating a Server Group</a>. Choose the same <strong>dcos Account</strong>, same <strong>dcos Region</strong>, and same name for <strong>Stack</strong> as before.</li>
+<li>In <strong>Container Settings</strong>, select <code>nginx:1.12</code> for the image.</li>
+<li>For the other sections, choose the same settings we used in <a href="#creating-a-server-group">Creating a Server Group</a>.</li>
+<li>Choose <strong>Create</strong> to create another version of the server group.</li>
+</ol>
+<p><a href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs10.png"><img src="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs10.png"/></a></p>
+<p>Figure 13. New server group version Container Image</p>
+<p>The <strong>myapp &gt; Clusters</strong> view now shows that our cluster runs two server group versions, <code>V000</code> and <code>V001</code>. Later, we will show how you can leverage this capability in blue-green deployments.</p>
+<p><a href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs11.png"><img src="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs11.png"/></a></p>
+<p>Figure 14. New server group version</p>
+<p>The following image shows how our two server group versions look on the DC/OS web interface. They are now running as DC/OS services, with the name made of the combined cluster name and version number; in this example they are <code>myapp-prod-V000</code> and <code>myapp-prod-v001</code>.</p>
+<p><a href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs12.png"><img src="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/img/acs12.png"/></a></p>
+<p>Figure 15. Spinnaker server groups on DC/OS web interface</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#concepts">Concepts</a></li><li class="content__sections-item content__sections-item--h1"><a href="#applications-and-server-groups">Applications and Server Groups</a></li><li class="content__sections-item content__sections-item--h2"><a href="#creating-an-application">Creating an Application</a></li><li class="content__sections-item content__sections-item--h2"><a href="#creating-a-server-group">Creating a Server Group</a></li><li class="content__sections-item content__sections-item--h2"><a href="#creating-a-server-group-version">Creating a Server Group Version</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

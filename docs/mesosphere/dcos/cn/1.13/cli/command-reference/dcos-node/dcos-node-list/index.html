@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>dcos node list - D2iQ Docs</title><meta name="description" content="显示 DC/OS 节点信息"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/1.13/cli/command-reference/dcos-node/dcos-node-list">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/command-reference/dcos-node/dcos-node-list">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/cli/command-reference/dcos-node/dcos-node-list">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-node/dcos-node-list">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/install/">安装 CLI</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/configure/">配置CLI</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/update/">更新 CLI</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/uninstall/">卸载 CLI</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/plugins/">CLI 插件</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/enterprise-cli/">DC/OS Enterprise CLI</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/autocompletion/">CLI 自动完成</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/"><i data-feather="chevron-right"></i>Command Reference</a></li><ul><li class="active"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos/">dcos</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-auth/"><i data-feather="chevron-right"></i>dcos auth</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-backup/"><i data-feather="chevron-right"></i>dcos backup</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-cluster/"><i data-feather="chevron-right"></i>dcos cluster</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-config/"><i data-feather="chevron-right"></i>dcos config</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-help/">dcos help</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-job/"><i data-feather="chevron-right"></i>dcos job</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-license/"><i data-feather="chevron-right"></i>dcos license</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-marathon/"><i data-feather="chevron-right"></i>dcos marathon</a></li><li class="active"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-node/"><i data-feather="chevron-right"></i>dcos node</a></li><ul><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-node/dcos-node-decommission/">dcos node decommission</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-node/dcos-node-diagnostics/">dcos node diagnostics</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-node/dcos-node-diagnostics-create/">dcos node diagnostics create</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-node/dcos-node-diagnostics-delete/">dcos node diagnostics delete</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-node/dcos-node-diagnostics-download/">dcos node diagnostics download</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-node/dcos-node-dns/">dcos node dns</a></li><li class="active active-on"><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-node/dcos-node-list/">dcos node list</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-node/dcos-node-list-components/">dcos node list-components</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-node/dcos-node-log/">dcos node log</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-node/dcos-node-metrics-details/">dcos node metrics details</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-node/dcos-node-metrics-summary/">dcos node metrics summary</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-node/dcos-node-ssh/">dcos node ssh</a></li></ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-package/"><i data-feather="chevron-right"></i>dcos package</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-plugin/"><i data-feather="chevron-right"></i>dcos plugin</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-security/"><i data-feather="chevron-right"></i>dcos security</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-service/"><i data-feather="chevron-right"></i>dcos service</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-task/"><i data-feather="chevron-right"></i>dcos task</a></li></ul></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">dcos node list</h1></div><h4 class="content__header-description">显示 DC/OS 节点信息</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-node/dcos-node-list/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><h1 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>说明</h1>
+<p><code>dcos node list</code> 命令显示具有识别信息的 DC/OS 管理和代理节点列表，包括：</p>
+<ul>
+<li>主机名</li>
+<li>IP 地址</li>
+<li>公共 IP 地址</li>
+<li>唯一标识符</li>
+<li>节点类型</li>
+<li>群集区域</li>
+<li>可用分区</li>
+</ul>
+<p>如果在公共云提供程序（例如，AWS、Google Cloud 或 Azure）上部署 DC/OS，则可以使用此命令查找公共代理 IP 地址。如果 DC/OS 安装在内部网络（本地）或专用云上，则节点通常不具有独立的公共和专用 IP 地址。对于内部网络或专用云上的节点，公共 IP 地址通常与 DNS 命名空间中为服务器定义的 IP 地址相同。</p>
+<p>在大多数情况下，您可以使用此命令返回每个节点的专用和公共 IP 地址。但是，您应该记住，如果 Edge-LB 池使用虚拟网络，则返回的公共和专用 IP 地址可能不准确。</p>
+<h1 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>使用</h1>
+<pre><code class="language-bash">dcos node list [OPTION]
+</code></pre>
+<h1 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>选项</h1>
+<table>
+<thead>
+<tr>
+<th>名称，简写</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--field name</code></td>
+<td>指定要包含在 dcos node 命令输出中的一个或多个其他字段的名称。您可以多次包含此选项以添加多个字段。</td>
+</tr>
+<tr>
+<td><code>--help, h</code></td>
+<td>显示用法。</td>
+</tr>
+<tr>
+<td><code>--info</code></td>
+<td>显示该子命令的简短描述。</td>
+</tr>
+<tr>
+<td><code>--json</code></td>
+<td>显示 JSON 格式的数据。</td>
+</tr>
+<tr>
+<td><code>--version</code></td>
+<td>显示版本信息。</td>
+</tr>
+</tbody>
+</table>
+<h1 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>权限</h1>
+<p>运行此命令要求您的服务或用户帐户具有以下管理权限：</p>
+<p>
+<code>dcos:adminrouter:ops:mesos full<br> 
+dcos:adminrouter:ops:mesos-dns full</code>
+</p>
+<p>如果您没有至少这些权限的帐户，命令将返回错误。</p>
+<p>要使用此命令返回面向公众的 IP 地址，您的服务或用户帐户必须具有以下管理权限：</p>
+<p>
+<code>dcos:adminrouter:ops:networking full</code>
+</p>
+<p>如果您在没有此权限的情况下运行 <code>dcos node list</code> 命令，命令会返回节点信息，但在输出中不包括公共 IP 地址列。有关设置和管理权限的更多信息，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/perms-management/">权限管理</a> 和 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/perms-reference/">权限参考</a>.</p>
+<h1 id="-5"><a class="content__anchor" href="#-5" aria-hidden="true"><i data-feather="bookmark"></i></a>父命令</h1>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-node/">dcos node</a></td>
+<td>查看 DC/OS 节点信息。</td>
+</tr>
+</tbody>
+</table>
+<h1 id="-6"><a class="content__anchor" href="#-6" aria-hidden="true"><i data-feather="bookmark"></i></a>示例</h1>
+<p>以下示例说明了如何使用此命令查找小群集中节点面向公众的 IP 地址：</p>
+<pre><code class="language-bash">dcos node list
+
+dcos node list 
+    HOSTNAME         IP      PUBLIC IP(S)                     ID                          TYPE           REGION           ZONE       
+  10.0.2.148     10.0.2.148                 69e4f34a-e5c4-4271-85b5-b6609056bcde-S1  agent            aws/us-west-2  aws/us-west-2a  
+  10.0.4.118     10.0.4.118  52.34.156.169  69e4f34a-e5c4-4271-85b5-b6609056bcde-S0  agent (public)   aws/us-west-2  aws/us-west-2a  
+  master.mesos.  10.0.7.51   54.202.215.97  69e4f34a-e5c4-4271-85b5-b6609056bcde     master (leader)  aws/us-west-2  aws/us-west-2a  
+</code></pre>
+<p>以下示例说明了将端口信息添加到命令的输出中：</p>
+<pre><code class="language-bash">dcos node list --field port
+
+    HOSTNAME         IP      PUBLIC IP(S)                     ID                          TYPE           REGION           ZONE       PORT  
+  10.0.2.148     10.0.2.148                 69e4f34a-e5c4-4271-85b5-b6609056bcde-S1  agent            aws/us-west-2  aws/us-west-2a  5051  
+  10.0.4.118     10.0.4.118  52.34.156.169  69e4f34a-e5c4-4271-85b5-b6609056bcde-S0  agent (public)   aws/us-west-2  aws/us-west-2a  5051  
+  master.mesos.  10.0.7.51   54.202.215.97  69e4f34a-e5c4-4271-85b5-b6609056bcde     master (leader)  aws/us-west-2  aws/us-west-2a        
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#说明">说明</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-2">使用</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-3">选项</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-4">权限</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-5">父命令</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-6">示例</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

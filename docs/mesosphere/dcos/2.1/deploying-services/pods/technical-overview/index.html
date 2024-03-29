@@ -1,0 +1,238 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Technical Overview - D2iQ Docs</title><meta name="description" content="Understanding pods"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/pods/technical-overview">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/pods/technical-overview">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/pods/technical-overview">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/pods/technical-overview">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/deploying-services/pods/technical-overview">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/install/">Installing Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/marathon-parameters/">Marathon Configuration Reference</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/creating-services/"><i data-feather="chevron-right"></i>Creating Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/task-handling/"><i data-feather="chevron-right"></i>Task Handling</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/config-universe-service/">Configuring Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/fault-domain-awareness/">Fault Domain Awareness and Capacity Extension</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/service-groups/">Granting Access to Services and Groups</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/marathon-constraints/">Marathon Placement Constraints</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/monitor-services/">Monitoring Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/scale-service/">Scaling a Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/service-endpoints/">Service Endpoints</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/service-ports/">Service Ports</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/update-user-service/">Updating a User-Created Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/private-docker-registry/">Using a Private Docker Registry</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/deployments/">Deployments</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/expose-service/">Exposing a Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/uninstall/">Uninstalling Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/package-api/">Package Management API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/marathon-on-marathon/"><i data-feather="chevron-right"></i>Using Custom Marathon</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/marathon-api/">Marathon API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/containerizers/"><i data-feather="chevron-right"></i>Using Containerizers</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/pods/"><i data-feather="chevron-right"></i>Pods</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/pods/quickstart/">Quick Start</a></li><li class="active active-on"><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/pods/technical-overview/">Technical Overview</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/pods/using-pods/">Using Pods</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/pods/examples/">Pod Examples</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/multi-tenancy-primitives/">Multi-Tenancy Primitives</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/gpu/">Using GPUs</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/faq/">Frequently Asked Questions</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Technical Overview</h1></div><h4 class="content__header-description">Understanding pods</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.1/deploying-services/pods/technical-overview/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>A pod is a special kind of Mesos task group, and the tasks or containers in the pod are the group members. A pod instance’s containers are launched together, atomically, via the <a href="https://github.com/apache/mesos/blob/cfeabec58fb2a87076f0a2cf4d46cdd02510bce4/docs/executor-http-api.md#launch-group">Mesos LAUNCH_GROUP</a> call.</p>
+<p>DC/OS handles and represents pods as single services. Containers in pods share networking namespace and ephemeral volumes. You configure a pod via a pod definition, which is similar to a Marathon application definition. There are nonetheless some differences between pod and application definitions. For instance:</p>
+<ul>
+<li>You must specify an endpoint (not a port number) in order for other applications to communicate with your pod.</li>
+<li>Pods have a separate REST API.</li>
+<li>Pods support only Mesos-level health checks.</li>
+</ul>
+<h1 id="networking"><a class="content__anchor" href="#networking" aria-hidden="true"><i data-feather="bookmark"></i></a>Networking</h1>
+<p>Marathon pods only support the <a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/containerizers/">DC/OS Universal container runtime</a>, which supports multiple image formats, including Docker.</p>
+<p>The Universal container runtime simplifies networking by allowing the containers of each pod instance to share a network namespace and communicate over a VLAN or private network. If you specify a container network without a name in a pod definition, it will be assigned to the default network. If you have installed DC/OS using <a href="/dcosdocs/mesosphere/dcos/2.1/installing/evaluation/aws/">AWS templates</a>, the default network is <code>dcos</code>.</p>
+<p>If other applications need to communicate with your pod, specify an endpoint in your pod definition. Other applications will communicate with your pod by addressing those endpoints. See <a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/pods/examples/">the Examples section</a> for more information.</p>
+<p>In your pod definition, you can declare a <code>host</code> or <code>container</code> network type. Pods created with <code>host</code> type share the network namespace of the host. Pods created with <code>container</code> type use virtual networking. If you specify the <code>container</code> network type and Marathon was not configured to have a default network name, you must also declare a virtual network name in the <code>name</code> field. See the <a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/pods/examples/">Examples</a> section for the full JSON.</p>
+<h1 id="ephemeral-storage"><a class="content__anchor" href="#ephemeral-storage" aria-hidden="true"><i data-feather="bookmark"></i></a>Ephemeral Storage</h1>
+<p>Containers within a pod share ephemeral storage. Volumes are declared at the pod-level and referenced by <code>name</code> when mounting them into specific containers.</p>
+<h1 id="pod-events-and-state"><a class="content__anchor" href="#pod-events-and-state" aria-hidden="true"><i data-feather="bookmark"></i></a>Pod Events and State</h1>
+<p>When you update a pod that has already launched, the new version of the pod will only be available when redeployment is complete. If you query the system to learn which version is deployed before redeployment is complete, you may get the previous version as a response. The same is true for the status of a pod: if you update a pod, the change in status will not be reflected in a query until redeployment is complete.</p>
+<p>History is permanently tied to <code>pod_id</code>. If you delete a pod and then reuse the ID, even if the details of the pod are different, the new pod will have the previous history (such as version information).</p>
+<h1 id="pod-definitions"><a class="content__anchor" href="#pod-definitions" aria-hidden="true"><i data-feather="bookmark"></i></a>Pod Definitions</h1>
+<p>Pods are configured via a JSON pod definition, which is similar to a Marathon <a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/creating-services/">application definition</a>. You must declare the resources required by each container in the pod because Mesos, not Marathon, determines how and when to perform isolation for all resources requested by a pod. See the <a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/pods/examples/">Examples</a> section for complete pod definitions.</p>
+<h1 id="environment-variables"><a class="content__anchor" href="#environment-variables" aria-hidden="true"><i data-feather="bookmark"></i></a>Environment variables</h1>
+<p>Environment variables defined at the pod level are propagated to all pod containers. Pod-level environment variables are overridden by environment variables defined at the pod container level.</p>
+<p>Environment variables for ports are defined using the pod container endpoint names (i.e, ENDPOINT_&lt;ENDPOINT_NAME&gt;=<PORT>).</p>
+<p>Below are example environment variables reflecting the <a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/pods/examples/#multi-pod">multi-pod JSON pod definition example</a>.</p>
+<pre><code>MESOS_EXECUTOR_ID=instance-test-pod.c2b47e5c-d1f5-11e6-a247-a65e72d2dda4
+MARATHON_CONTAINER_RESOURCE_DISK=32.0
+SHLVL=1
+EP_CONTAINER_HTTPENDPOINT=8080
+PYTHON_PIP_VERSION=9.0.1
+MARATHON_CONTAINER_RESOURCE_MEM=32.0
+ENDPOINT_HTTPENDPOINT=8080
+GPG_KEY=97FC712E4C024BBEA48A61ED3A5CA953F73C700D
+EP_HOST_HTTPENDPOINT2=21529
+MARATHON_APP_ID=/test-pod
+EP_CONTAINER_HTTPENDPOINT2=8081
+ENDPOINT_HTTPENDPOINT2=8081
+MARATHON_CONTAINER_RESOURCE_CPUS=0.1
+PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+MESOS_SANDBOX=/mnt/mesos/sandbox
+MARATHON_CONTAINER_RESOURCE_GPUS=0
+HOST=10.0.1.60
+PYTHON_VERSION=3.5.2
+MARATHON_APP_VERSION=2017-01-03T20:46:54.497Z
+MARATHON_APP_LABELS=
+MARATHON_CONTAINER_ID=healthtask1
+PWD=/mnt/mesos/sandbox
+EP_HOST_HTTPENDPOINT=21528
+</code></pre>
+<h1 id="resource-requests-and-limits"><a class="content__anchor" href="#resource-requests-and-limits" aria-hidden="true"><i data-feather="bookmark"></i></a>Resource Requests and Limits</h1>
+<p>Each container in a pod will require some resources to execute. The <code>resources</code> field contains an object with fields specifying the quantities of various resources required by the container. These quantities are known as the resource “requests”, and the container is guaranteed to have access to at least these amounts of each resource. In addition, DC/OS has the concept of CPU and memory “limits” which allow you to specify the maximum amount of CPU or memory that the app may consume. The resource limit must be equal to or greater than the request; in addition, the limit may be given the value of “unlimited”, meaning the app’s use of that resource is not constrained at all. The app below has an infinite CPU limit and a memory limit of 4096 MB:</p>
+<pre><code class="language-json">{
+     &quot;resources&quot;: {
+         &quot;cpus&quot;: 2,
+         &quot;mem&quot;: 1024,
+         &quot;disk&quot;: 10240,
+         &quot;gpus&quot;: 2
+     },
+     &quot;resourceLimits&quot;: {
+         &quot;cpus&quot;: &quot;unlimited&quot;,
+         &quot;mem&quot;: 4096
+     }
+}
+</code></pre>
+<p>If no special configuration has been applied to the DC/OS cluster during installation, then tasks which do not set explicit CPU limits will have their limit implicitly set to the value of the CPU request. Changing the value of the <a href="/dcosdocs/mesosphere/dcos/2.1/installing/production/advanced-configuration/configuration-reference/#mesos_cgroups_enable_cfs">mesos_cgroups_enable_cfs</a> DC/OS installation parameter to <code>false</code> means that these implicit limits will not be set.</p>
+<h2 id="executor-resources"><a class="content__anchor" href="#executor-resources" aria-hidden="true"><i data-feather="bookmark"></i></a>Executor Resources</h2>
+<p>The executor runs on each node to manage the pods. By default, the executor reserves 32 MB and 0.1 CPUs per pod for overhead. Take this overhead into account when declaring resource needs for the containers in your pod. You can modify the executor resources in the <code>executorResources</code> field of your pod definition.</p>
+<pre><code class="language-json">{
+    &quot;executorResources&quot;: {
+        &quot;cpus&quot;: 0.1,
+        &quot;mem&quot;: 64,
+        &quot;disk&quot;: 10
+    }
+}
+</code></pre>
+<h2 id="secrets"><a class="content__anchor" href="#secrets" aria-hidden="true"><i data-feather="bookmark"></i></a>Secrets</h2>
+<p>Specify a secret in the <code>secrets</code> field of your pod definition. The argument should be the fully qualified path to the secret in the store.</p>
+<pre><code class="language-json">{
+    &quot;secrets&quot;: {
+        &quot;someSecretName&quot;: { &quot;source&quot;: &quot;/fully/qualified/path&quot; }
+    }
+}
+</code></pre>
+<h2 id="volumes"><a class="content__anchor" href="#volumes" aria-hidden="true"><i data-feather="bookmark"></i></a>Volumes</h2>
+<p>Pods support ephemeral volumes, which are defined at the pod level. Your pod definition must include a <code>volumes</code> field that specifies at least the name of the volume and a <code>volumeMounts</code> field that specifies at least the name and mount path of the volume.</p>
+<pre><code class="language-json">{
+	&quot;volumes&quot;: [
+		{
+			&quot;name&quot;: &quot;etc&quot;
+		}
+	]
+}
+</code></pre>
+<pre><code class="language-json">{
+	&quot;volumeMounts&quot;: [
+		{
+			&quot;name&quot;: &quot;env&quot;,
+			&quot;mountPath&quot;: &quot;/mnt/etc&quot;
+		}
+	]
+}
+</code></pre>
+<p>Pods also support host volumes. A pod volume parameter can declare a <code>host</code> field that references a pre-existing file or directory on the agent.</p>
+<pre><code class="language-json">{
+	&quot;volumes&quot;: [
+		{
+			&quot;name&quot;: &quot;local&quot;,
+			&quot;host&quot;: &quot;/user/local&quot;
+		}
+	]
+}
+</code></pre>
+<p class="message--note"></strong>NOTE: </strong>Data does not persist if pods are restarted.</p>
+<h2 id="shared-memory"><a class="content__anchor" href="#shared-memory" aria-hidden="true"><i data-feather="bookmark"></i></a>Shared Memory</h2>
+<p>As tasks in a pod are running on the same agent, it is possible to define a shared memory segment for tasks. Tasks can have either their own private shared memory, or can use a shared memory segment defined by the executor:</p>
+<p>It is possible to define a <code>linuxInfo</code> object on the container and/or executor, defining a <code>ipcInfo</code> with a <code>mode</code> and <code>shmSize</code>.</p>
+<p>The rules are generally:</p>
+<p>For <code>mode</code></p>
+<ul>
+<li>PRIVATE: The container/executor has a private shared memory segment</li>
+<li>SHARE_PARENT: The container/executor uses the shared memory segment of its respective parent.</li>
+</ul>
+<p class="message--note"></strong>NOTE: </strong>If SHARE_PARENT is used on an executor, the shared memory namespace is shared with the agent. <b>This may be forbidden in the Mesos configuration and may not always work.</b></p>
+<p>For <code>shmSize</code></p>
+<ul>
+<li>Can only be used if the mode is PRIVATE</li>
+<li>Allows you to define the size of the shared memory segment in megabytes</li>
+</ul>
+<h3 id="private-shared-memory-segement-for-task"><a class="content__anchor" href="#private-shared-memory-segement-for-task" aria-hidden="true"><i data-feather="bookmark"></i></a>Private shared memory segement for task</h3>
+<p>This example defines a pod with one container that has a private shared memory segment with a size of 16MB.</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/pod&quot;,
+  &quot;containers&quot;: [
+    {
+      &quot;name&quot;: &quot;container0&quot;,
+      &quot;resources&quot;: {
+        &quot;cpus&quot;: 0.1,
+        &quot;mem&quot;: 32
+      },
+      &quot;image&quot;: {
+        &quot;kind&quot;: &quot;DOCKER&quot;,
+        &quot;id&quot;: &quot;private/image&quot;
+      },
+      &quot;linuxInfo&quot;: {
+        &quot;ipcInfo&quot;: {
+          &quot;mode&quot;: &quot;PRIVATE&quot;,
+          &quot;shmSize&quot;: 16
+        }
+      },
+      &quot;exec&quot;: {
+        &quot;command&quot;: {
+          &quot;shell&quot;: &quot;sleep 1000&quot;
+        }
+      }
+    }
+  ]
+}
+</code></pre>
+<h3 id="shared-between-tasks"><a class="content__anchor" href="#shared-between-tasks" aria-hidden="true"><i data-feather="bookmark"></i></a>Shared between tasks</h3>
+<p>To share the IPC namespace, it’s required to define the shared memory setting and size on the executor (which is the the parent container for the tasks). The tasks itself need to have the mode set to <code>SHARE_PARENT</code>.</p>
+<p>This example defines a pod with two containers that have a shared memory that is defined on the executor and can therefore be accessed by both containers.</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/pod&quot;,
+  &quot;containers&quot;: [
+    {
+      &quot;name&quot;: &quot;container0&quot;,
+      &quot;resources&quot;: {
+        &quot;cpus&quot;: 0.1,
+        &quot;mem&quot;: 32
+      },
+      &quot;image&quot;: {
+        &quot;kind&quot;: &quot;DOCKER&quot;,
+        &quot;id&quot;: &quot;private/image&quot;
+      },
+      &quot;linuxInfo&quot;: {
+        &quot;ipcInfo&quot;: {
+          &quot;mode&quot;: &quot;SHARE_PARENT&quot;
+        }
+      },
+      &quot;exec&quot;: {
+        &quot;command&quot;: {
+          &quot;shell&quot;: &quot;sleep 1000&quot;
+        }
+      }
+    },
+    {
+      &quot;name&quot;: &quot;container1&quot;,
+      &quot;resources&quot;: {
+        &quot;cpus&quot;: 0.1,
+        &quot;mem&quot;: 32
+      },
+      &quot;image&quot;: {
+        &quot;kind&quot;: &quot;DOCKER&quot;,
+        &quot;id&quot;: &quot;private/image&quot;
+      },
+      &quot;linuxInfo&quot;: {
+        &quot;ipcInfo&quot;: {
+          &quot;mode&quot;: &quot;SHARE_PARENT&quot;
+        }
+      },
+      &quot;exec&quot;: {
+        &quot;command&quot;: {
+          &quot;shell&quot;: &quot;sleep 1000&quot;
+        }
+      }
+    }
+  ],
+  &quot;linuxInfo&quot;: {
+    &quot;ipcInfo&quot;: {
+      &quot;mode&quot;: &quot;PRIVATE&quot;,
+      &quot;shmSize&quot;: 16
+    }
+  }
+}
+</code></pre>
+<h2 id="containerizers"><a class="content__anchor" href="#containerizers" aria-hidden="true"><i data-feather="bookmark"></i></a>Containerizers</h2>
+<p>Marathon pods support the <a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/containerizers/">DC/OS Universal container runtime</a>. The Universal container runtime <a href="http://mesos.apache.org/documentation/latest/container-image/">supports multiple images, such as Docker</a>.</p>
+<p>The following JSON specifies a Docker image for a pod:</p>
+<pre><code class="language-json">{  
+   &quot;image&quot;:{  
+      &quot;id&quot;:&quot;mesosphere/marathon:latest&quot;,
+      &quot;kind&quot;:&quot;DOCKER&quot;,
+      &quot;forcePull&quot;:false
+   }
+}
+</code></pre>
+<h1 id="limitations"><a class="content__anchor" href="#limitations" aria-hidden="true"><i data-feather="bookmark"></i></a>Limitations</h1>
+<ul>
+<li>Only Mesos-based health checks are currently supported.</li>
+<li>Readiness checks are not supported.</li>
+<li>Service ports are not supported.</li>
+<li>Dependencies cannot be configured.</li>
+<li>Generic environmental variables, such as <code>$PORT0</code>, are not passed.</li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#networking">Networking</a></li><li class="content__sections-item content__sections-item--h1"><a href="#ephemeral-storage">Ephemeral Storage</a></li><li class="content__sections-item content__sections-item--h1"><a href="#pod-events-and-state">Pod Events and State</a></li><li class="content__sections-item content__sections-item--h1"><a href="#pod-definitions">Pod Definitions</a></li><li class="content__sections-item content__sections-item--h1"><a href="#environment-variables">Environment variables</a></li><li class="content__sections-item content__sections-item--h1"><a href="#resource-requests-and-limits">Resource Requests and Limits</a></li><li class="content__sections-item content__sections-item--h2"><a href="#executor-resources">Executor Resources</a></li><li class="content__sections-item content__sections-item--h2"><a href="#secrets">Secrets</a></li><li class="content__sections-item content__sections-item--h2"><a href="#volumes">Volumes</a></li><li class="content__sections-item content__sections-item--h2"><a href="#shared-memory">Shared Memory</a></li><li class="content__sections-item content__sections-item--h2"><a href="#containerizers">Containerizers</a></li><li class="content__sections-item content__sections-item--h1"><a href="#limitations">Limitations</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

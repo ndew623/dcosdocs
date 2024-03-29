@@ -1,0 +1,438 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Calico - D2iQ Docs</title><meta name="description" content="了解 DC/OS Calico 集成"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.1/networking/SDN/calico">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/SDN/calico">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/networking/SDN">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/networking/SDN">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/"><i data-feather="chevron-right"></i>网络</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/load-balancing-vips/"><i data-feather="chevron-right"></i>负载均衡和虚拟 IP (VIP)</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/SDN/"><i data-feather="chevron-right"></i>软件定义网络</a></li><ul><li class="active active-on"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/SDN/calico/">Calico</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/SDN/dcos-overlay/">DC/OS 覆盖</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/SDN/usage/">使用 SDS</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/SDN/cni-plugins/">CNI 插件支持</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/DNS/"><i data-feather="chevron-right"></i>DNS</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Calico</h1></div><h4 class="content__header-description">了解 DC/OS Calico 集成</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.1/networking/SDN/calico/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><h2 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>概述</h2>
+<p>该包提供 DC/OS Calico 组件，以支持 DC/OS 中的 Calico 网络连接容器和网络策略。</p>
+<h2 id="dcos-calico"><a class="content__anchor" href="#dcos-calico" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS Calico 组件</h2>
+<p>DC/OS Calico 组件通过提供用于 Mesos 通用容器运行时的 Calico CNI 插件和用于 Docker 引擎的 Calico libnetwork 插件，将 <a href="https://www.projectcalico.org">Calico 网络连接</a> 集成到 DC/OS 中。此外，calico 控制面板还提供为 DC/OS 工作负载配置网络策略的功能。</p>
+<h3 id="dcos-calico-2"><a class="content__anchor" href="#dcos-calico-2" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS Calico 服务</h3>
+<p>DC/OS Calico 将 Calico 集成到 DC/OS 中，用于管理容器网络连接和网络安全，并引入了三种服务：</p>
+<ul>
+<li><code>dcos-calico-bird.service</code>：BGP 客户端，可以在主机之间为 Calico 交换路由信息。 <a href="https://github.com/projectcalico/bird">(来源)</a></li>
+<li><code>dcos-calico-confd.service</code>：confd 模板引擎可以动态监控 etcd 数据存储，并动态地生成和重新加载 bird 配置。<a href="https://github.com/projectcalico/node">(来源)</a></li>
+<li><code>dcos-calico-felix.service</code>：Calico 网络连接的控制面板，用于为容器计划路由和 ACL。 <a href="https://github.com/projectcalico/node">(来源)</a></li>
+<li><code>dcos-calico-libntwork-plugin.service</code>：Docker 的网络插件，为 Docker 引擎提供 Calico 网络连接。<a href="https://github.com/projectcalico/libnetwork-plugin">(来源)</a></li>
+</ul>
+<h3 id="dcos-calico-cli"><a class="content__anchor" href="#dcos-calico-cli" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS Calico CLI</h3>
+<p>DC/OS 命令行包括允许从群集外部运行 <code>calicoctl</code> 命令的 <code>calico</code> 插件。要运行任何 <code>calicoctl</code> 命令，则应将其作为 <code>dcos calico</code> 运行，如 <code>dcos calico get nodes</code>：</p>
+<pre><code class="language-sh">dcos calico get nodes
+NAME
+172.16.0.23
+172.16.2.241
+172.16.21.4
+172.16.9.234
+
+</code></pre>
+<h2 id="dcos"><a class="content__anchor" href="#dcos" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS 配置参考（网络连接）</h2>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>calico_network_cidr</td>
+<td>分配给 calico 的子网。由 <code>calico_network_cidr</code> 指定的子网不得与为 VXLAN 后端定义的子网或为 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/advanced-configuration/configuration-reference/#dcos-overlay-enable">DC/OS 虚拟网络</a> 定义的虚拟网络重叠。[ 默认：172.29.0.0/16 ]</td>
+</tr>
+<tr>
+<td>calico_vxlan_enabled</td>
+<td>不管是 IP-in-IP 还是 VXLAN 模式被用于 calico，建议使用 Control，而不是默认的 VXLAN。对于不支持 IP in IP 的环境（例如，Azure），<code>calico_vxlan_enabled</code> 应该设置为“true”。[默认：“ture”]</td>
+</tr>
+<tr>
+<td>calico_ipinip_mtu</td>
+<td>在 Calico IPIP 隧道设备上设置的 MTU。当 calico_vxlan_enabled 设置为 false 时，此配置会起作用。请参阅 <a href="https://docs.projectcalico.org/networking/mtu">calico 文档</a>，以了解合适的 MTU 配置。[默认：1480]</td>
+</tr>
+<tr>
+<td>calico_vxlan_port</td>
+<td>用于 calico VXLAN 的 UDP 端口。当 calico_vxlan_enabled 设置为 true 时，此配置会起作用。[默认：4789]</td>
+</tr>
+<tr>
+<td>calico_vxlan_vni</td>
+<td>用于 calico VXLAN 的虚拟网络 ID。当 calico_vxlan_enabled 设置为 true 时，此配置会起作用。[默认：4096]</td>
+</tr>
+<tr>
+<td>calico_vxlan_mtu</td>
+<td>在 Calico VXLAN 隧道设备上设置的 MTU。当 calico_vxlan_enabled 设置为 true 时，此配置会起作用。请参阅 <a href="https://docs.projectcalico.org/networking/mtu">calico 文档</a>，以了解合适的 MTU 配置 [默认：1450]</td>
+</tr>
+<tr>
+<td>calico_veth_mtu</td>
+<td>在 veth pair 设备上设置的 MTU，例如，容器接口和主机端接口。请参阅 <a href="https://docs.projectcalico.org/networking/mtu">calico 文档</a>，以了解合适的 MTU 配置 [默认：1500]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="calico"><a class="content__anchor" href="#calico" aria-hidden="true"><i data-feather="bookmark"></i></a>Calico 网络连接（通用容器运行时）</h3>
+<p>要使用 Calico 网络连接容器，您只需要将网络名称指定为 <code>calico</code>。</p>
+<p>以下 Marathon 应用定义示例将使用 <em>Mesos UCR engine</em> 启动容器，并将其插入 <code>calico</code> 网络：</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/calico-ucr&quot;,
+  &quot;instances&quot;: 1,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;MESOS&quot;,
+    &quot;volumes&quot;: [],
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;mesosphere/id-server:2.1.0&quot;
+    },
+    &quot;portMappings&quot;: []
+  },
+  &quot;cpus&quot;: 0.1,
+  &quot;mem&quot;: 128,
+  &quot;requirePorts&quot;: false,
+  &quot;networks&quot;: [
+    {
+      &quot;mode&quot;: &quot;container&quot;,
+      &quot;name&quot;: &quot;calico&quot;
+    }
+  ],
+  &quot;healthChecks&quot;: [],
+  &quot;fetch&quot;: [],
+  &quot;constraints&quot;: []
+}
+</code></pre>
+<h3 id="calico-docker"><a class="content__anchor" href="#calico-docker" aria-hidden="true"><i data-feather="bookmark"></i></a>Calico 网络连接（Docker 引擎）</h3>
+<p>与之前的示例相似，以下 Marathon 应用定义示例将使用 <em>Docker Engine</em> 启动容器，并将其插入 <code>calico</code> 网络：</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/calico-docker&quot;,
+  &quot;instances&quot;: 1,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;DOCKER&quot;,
+    &quot;volumes&quot;: [],
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;mesosphere/id-server:2.1.0&quot;
+    },
+    &quot;portMappings&quot;: []
+  },
+  &quot;cpus&quot;: 0.1,
+  &quot;mem&quot;: 128,
+  &quot;requirePorts&quot;: false,
+  &quot;networks&quot;: [
+    {
+      &quot;mode&quot;: &quot;container&quot;,
+      &quot;name&quot;: &quot;calico&quot;
+    }
+  ],
+  &quot;healthChecks&quot;: [],
+  &quot;fetch&quot;: [],
+  &quot;constraints&quot;: []
+}
+</code></pre>
+<h2 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>管理主题</h2>
+<h3 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>网络策略</h3>
+<p>网络策略提供了根据标签选择器指定的应用于端点的有序规则集来控制网络流量的功能，请参阅 <a href="https://docs.projectcalico.org/reference/resources/networkpolicy">calico 文档</a>，以了解有关策略规则定义和标签选择器语法的详细说明。</p>
+<p>在 DC/OS 中，Calico 网络策略直接向操作人员公开，以便操作人员能够根据不同的情境来管理其流量控制。</p>
+<p>DC/OS 中的网络策略限制：</p>
+<ul>
+<li>Calico 网络策略是一个命名空间资源，但现在，我们仅支持 DC/OS 中的 <code>default</code> 命名空间，并且所有命名空间 Calico 资源应该在 <code>default</code> 命名空间下进行定义。</li>
+<li>Calico 网络策略仅在 Calico 网络连接容器上生效，这意味着，在非 Calico 网络连接容器（例如，<code>hostnetwork</code>、<code>dcos</code> 和 <code>bridge</code>）上设置的标签不会计入 Calico 网络策略。</li>
+<li>要让网络策略标签生效，则必须将其设置在 Mesos 上的 <code>NetworkInfo.Labels</code> 中，对于 Marathon 而言，标签应设置在 <code>networks.[].labels</code> 中，例如：</li>
+</ul>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/client&quot;,
+  &quot;instances&quot;: 1,
+   ...
+  &quot;networks&quot;: [
+    {
+      &quot;mode&quot;: &quot;container&quot;,
+      &quot;name&quot;: &quot;calico&quot;,
+      &quot;labels&quot;: {
+        &quot;role&quot;: &quot;client&quot;
+      }
+    }
+  ],
+  ...
+}
+</code></pre>
+<h3 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>默认配置文件</h3>
+<p>Calico 配置文件对继承配置文件中所定义的标签的端点进行分组，例如，每个命名空间都有一个相应的配置文件，以将标签授予该命名空间中的 Pod。Calico 配置文件支持流量控制的策略规则，但不建议使用，我们更侧向于灵活的 NetworkPolicy 和 GlobalNetworkPolicy 资源。</p>
+<p>就我们而言，<code>calico</code> 默认情况下，所有 Calico 网络连接容器都会被分配与 CNI 网络的名称相同的默认配置文件，此配置文件<strong>仅</strong>允许从一个 Calico 容器网络到另一个 Calico 容器网络的请求，这意味着 L4LB 和 L7 代理请求（其中源 IP 地址被转换到 Calico 所生成的隧道接口的地址(NATed)）最后会被丢弃。该配置文件可以在以下 YAML 定义中找到。</p>
+<pre><code class="language-yaml">apiVersion: projectcalico.org/v3
+kind: Profile
+metadata:
+  creationTimestamp: 2019-12-23T04:16:55Z
+  name: calico
+  resourceVersion: &quot;75&quot;
+  uid: 0e105ecb-253b-11ea-9e52-065b6833052c
+spec:
+  egress:
+  - action: Allow
+    destination: {}
+    source: {}
+  ingress:
+  - action: Allow
+    destination: {}
+    source:
+      selector: has(calico)
+  labelsToApply:
+    calico: &quot;&quot;
+</code></pre>
+<p>为了解决该问题，Calico 配置文件 <code>calico</code> 在默认情况下由 <code>dcos-calico-felix</code> 初始化，并允许所有流量进出 Calico 网络连接容器，而且 <code>calico</code> 是现在受支持并在所有 Calico 网络连接容器中共享的唯一个配置文件。
+有关 Calico 配置文件的更详细描述，请阅读 <a href="https://docs.projectcalico.org/reference/resources/profile">Calico 文档</a>。</p>
+<h3 id="-5"><a class="content__anchor" href="#-5" aria-hidden="true"><i data-feather="bookmark"></i></a>网络策略示例</h3>
+<p>在以下业务隔离示例中，我们有三个应用程序定义，如下所示，bookstore-frontend 和 bookstore-server 都被标记为 <code>&quot;biz_type&quot;: &quot;bookstore&quot;</code>，而 fruitstore-frontend 被标记为 <code>&quot;biz_type&quot;: &quot;fruitstore&quot;</code>。在此，我们将创建一个网络策略，以拒绝从 fruitstore-frontend 到 bookstore-server 的请求，而允许从 bookstore-frontend 到 bookstore-server 的请求。</p>
+<pre><code>+----------------------+      +------------------------+
+|                      |      |                        |
+|  bookstore-frontend  |      |   fruitstore-frontend  |
+|                      |      |                        |
++-----------------+----+      +----+-------------------+
+                  |                |
+                  |                |
+                  |                x
+                  |                |
+             +----v----------------v--+
+             |                        |
+             |   bookstore-server     |
+             |                        |
+             +------------------------+
+</code></pre>
+<h4 id="531-marathon"><a class="content__anchor" href="#531-marathon" aria-hidden="true"><i data-feather="bookmark"></i></a>5.3.1. 启动 Marathon 应用程序</h4>
+<p>bookstore-frontend 的 Marathon 应用程序定义（带有策略标签 <code>&quot;biz_type&quot;: &quot;bookstore&quot;</code>）：</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/bookstore-frontend&quot;,
+  &quot;instances&quot;: 1,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;MESOS&quot;,
+    &quot;volumes&quot;: [],
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;mesosphere/id-server:2.1.0&quot;
+    },
+    &quot;portMappings&quot;: []
+  },
+  &quot;cpus&quot;: 0.1,
+  &quot;mem&quot;: 128,
+  &quot;requirePorts&quot;: false,
+  &quot;networks&quot;: [
+    {
+      &quot;mode&quot;: &quot;container&quot;,
+      &quot;name&quot;: &quot;calico&quot;,
+      &quot;labels&quot;: {
+        &quot;biz_type&quot;: &quot;bookstore&quot;
+      }
+    }
+  ],
+  &quot;healthChecks&quot;: [],
+  &quot;fetch&quot;: [],
+  &quot;constraints&quot;: []
+}
+</code></pre>
+<p>bookstore-server 的 Marathon 应用程序定义（带有策略标签 <code>&quot;biz_type&quot;: &quot;bookstore&quot;</code> 和 <code>&quot;role&quot;: &quot;server&quot;</code>），在端口 80 上可用：</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/bookstore-server&quot;,
+  &quot;instances&quot;: 1,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;MESOS&quot;,
+    &quot;volumes&quot;: [],
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;mesosphere/id-server:2.1.0&quot;
+    },
+    &quot;portMappings&quot;: []
+  },
+  &quot;cpus&quot;: 0.1,
+  &quot;mem&quot;: 128,
+  &quot;requirePorts&quot;: false,
+  &quot;networks&quot;: [
+    {
+      &quot;mode&quot;: &quot;container&quot;,
+      &quot;name&quot;: &quot;calico&quot;,
+      &quot;labels&quot;: {
+        &quot;biz_type&quot;: &quot;bookstore&quot;,
+        &quot;role&quot;: &quot;server&quot;
+      }
+    }
+  ],
+  &quot;healthChecks&quot;: [],
+  &quot;fetch&quot;: [],
+  &quot;constraints&quot;: []
+}
+</code></pre>
+<p>fruitstore-frontend 的 Marathon 应用程序定义（带有策略标签 <code>&quot;biz_type&quot;: &quot;fruitstore&quot;</code>）：</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/fruitstore-frontend&quot;,
+  &quot;instances&quot;: 1,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;MESOS&quot;,
+    &quot;volumes&quot;: [],
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;mesosphere/id-server:2.1.0&quot;
+    },
+    &quot;portMappings&quot;: []
+  },
+  &quot;cpus&quot;: 0.1,
+  &quot;mem&quot;: 128,
+  &quot;requirePorts&quot;: false,
+  &quot;networks&quot;: [
+    {
+      &quot;mode&quot;: &quot;container&quot;,
+      &quot;name&quot;: &quot;calico&quot;,
+      &quot;labels&quot;: {
+        &quot;biz_type&quot;: &quot;fruitstore&quot;
+      }
+    }
+  ],
+  &quot;healthChecks&quot;: [],
+  &quot;fetch&quot;: [],
+  &quot;constraints&quot;: []
+}
+</code></pre>
+<p>通过执行 <code>dcos marathon app add ${app_definition_yaml_file}</code> 来启动以上三个 Marathon 应用程序，然后我们会获得三个运行中的 Marathon 应用程序，如下所示：</p>
+<pre><code class="language-sh">dcos task list
+         NAME              HOST      USER     STATE                                         ID                                                    AGENT ID                  REGION  ZONE
+  fruitstore-frontend  172.16.2.233  root  TASK_RUNNING  fruitstore-frontend.instance-8a3ed6db-2a47-11ea-91b3-66db602e14f5._app.1  0a1399a2-fe1f-4613-a618-f45159e12f2a-S0  N/A     N/A
+  bookstore-server     172.16.29.45  root  TASK_RUNNING  bookstore-server.instance-825bcbda-2a47-11ea-91b3-66db602e14f5._app.1     0a1399a2-fe1f-4613-a618-f45159e12f2a-S1  N/A     N/A
+  bookstore-frontend   172.16.2.233  root  TASK_RUNNING  bookstore-frontend.instance-79853919-2a47-11ea-91b3-66db602e14f5._app.1   0a1399a2-fe1f-4613-a618-f45159e12f2a-S0  N/A     N/A
+</code></pre>
+<h4 id="-6"><a class="content__anchor" href="#-6" aria-hidden="true"><i data-feather="bookmark"></i></a>前端和服务器连接测试</h4>
+<p>在应用网络策略之前，从 bookstore-frontend 和 fruitstore-frontend 到 bookstore-server 的请求已成功，我们期待 FQDN <code>bookstore-server.marathon.containerip.dcos.thisdcos.directory</code> 返回 bookstore-server 容器 IP 地址：</p>
+<pre><code class="language-sh">dcos task exec fruitstore-frontend wget -qO- bookstore-server.marathon.containerip.dcos.thisdcos.directory:80/id
+hubfeu2yculh%
+
+dcos task exec bookstore-frontend wget -qO- bookstore-server.marathon.containerip.dcos.thisdcos.directory:80/id
+hubfeu2yculh%
+</code></pre>
+<h4 id="-7"><a class="content__anchor" href="#-7" aria-hidden="true"><i data-feather="bookmark"></i></a>应用网络策略</h4>
+<p>该网络策略在 bookstore-server 上生效，并允许来自标签 <code>biz_type</code> 设置为 <code>bookstore</code> 应用程序的请求，而拒绝来自标签 <code>biz_type</code> 设置为 <code>fruitstore</code> 的应用程序的请求：</p>
+<pre><code class="language-yaml">apiVersion: projectcalico.org/v3
+kind: NetworkPolicy
+metadata:
+  name: allow-bookstore-cliient-to-server
+spec:
+  selector: biz_type == 'bookstore' &amp;&amp; role == 'server'
+  types:
+  - Ingress
+  ingress:
+  - action: Allow
+    protocol: TCP
+    source:
+      selector:  biz_type == 'bookstore'
+    destination:
+      ports:
+      - 80
+  - action: Deny
+    protocol: TCP
+    source:
+      selector: biz_type == 'fruitstore'
+    destination:
+      ports:
+      - 80
+</code></pre>
+<p>我们可以临时登录到 DC/OS 节点，并通过执行 <code>dcos calico apply -f ${network_policy_yaml_file}</code> 来应用网络策略。</p>
+<p>来自 bookstore-frontend 的请求如期成功：</p>
+<pre><code class="language-sh">dcos task exec bookstore-frontend wget -qO- bookstore-server.marathon.containerip.dcos.thisdcos.directory:80/id
+hubfeu2yculh%
+</code></pre>
+<p>来自 fruitstore-frontend 的请求超时，因为数据包丢失。</p>
+<pre><code class="language-sh">dcos task exec fruitstore-frontend wget -qO- --timeout=5 bookstore-server.marathon.containerip.dcos.thisdcos.directory:80/id
+wget: can't connect to remote host (192.168.219.133): Connection timed out
+</code></pre>
+<h3 id="-8"><a class="content__anchor" href="#-8" aria-hidden="true"><i data-feather="bookmark"></i></a>添加网络配置文件</h3>
+<p>在大多数用例中，单个 Calico 配置文件已经足够。但是，如果出于任何原因需要创建更多网络，则应注意一些特殊情况。</p>
+<blockquote>
+<p>⚠️ 注意：<code>calico-libnetwork-plugin</code> （到 Docker 运行时的网络接口）将 IP 池默示链接到与相应 calico docker 网络相关联的 calico 配置文件。</p>
+</blockquote>
+<p>也就是说，要添加网络配置文件，您应该：</p>
+<ol>
+<li>创建新的 IP 池。例如：</li>
+</ol>
+<pre><code class="language-yaml">apiVersion: projectcalico.org/v3
+kind: IPPool
+metadata:
+  name: &lt;network-name&gt;
+spec:
+  cidr: 10.1.0.0/16
+  natOutgoing: true
+  disabled: false
+</code></pre>
+<p>将上述 yaml 保存到 <code>ip.yml</code>，然后运行：</p>
+<pre><code class="language-sh">dcos calico create -f ip.yml
+</code></pre>
+<ol start="2">
+<li>创建新的 Calico 配置文件。例如：</li>
+</ol>
+<pre><code class="language-yaml">apiVersion: projectcalico.org/v3
+kind: Profile
+metadata:
+  name: &lt;profile-name&gt;
+spec:
+  egress:
+  - action: Allow
+    destination: {}
+    source: {}
+  ingress:
+  - action: Allow
+    destination: {}
+    source: {}
+  labelsToApply:
+    calico: &quot;&quot;
+</code></pre>
+<p>将上述 yaml 保存到 <code>profile.yml</code>，然后运行：</p>
+<pre><code class="language-sh">dcos calico create -f profile.yml
+</code></pre>
+<ol start="3">
+<li>在 <strong>每个代理</strong> 上，创建一个新的 docker 网络，并使用新的配置文件。您可以使用以下命令，确保子网与池中的 cidr 匹配：</li>
+</ol>
+<pre><code class="language-sh">docker network create \
+    --opt org.projectcalico.profile=&lt;profile-name&gt; \
+    --driver calico \
+    --ipam-driver calico-ipam \
+    --subnet=10.1.0.0/16 \
+    &lt;network-name&gt;
+</code></pre>
+<h2 id="dcos-calico-3"><a class="content__anchor" href="#dcos-calico-3" aria-hidden="true"><i data-feather="bookmark"></i></a>将应用程序从 DC/OS 覆盖迁移到 Calico</h2>
+<p>无法自动迁移 DC/OS 群集中现有的所有服务。可以通过各种 Apache Mesos 框架启动服务，包括经生产验证的平台 <a href="https://mesosphere.github.io/marathon/">Marathon</a>、构建于 [dcos-common](https://github.com/mesosphere/dcos-commons. This includes existing, stateful services such as <a href="https://docs.d2iq.com/dcosdocs/mesosphere/dcos/services/cassandra">Cassandra</a> 和 <a href="https://docs.d2iq.com/dcosdocs/mesosphere/dcos/services/spark">Spark</a> 之上的服务以及从您的环境中托管的服务。</p>
+<h3 id="marathon-aka-dcos"><a class="content__anchor" href="#marathon-aka-dcos" aria-hidden="true"><i data-feather="bookmark"></i></a>Marathon 应用程序（aka DC/OS 服务）</h3>
+<p>至少有两种方法让 Marathon 应用程序的变更生效：</p>
+<ul>
+<li>DC/OS CLI
+更新应用程序定义，以将网络名称从 <code>dcos</code> 变更为 <code>calico</code>。
+<code>dcos app update calico_network_app.json</code></li>
+</ul>
+<p>对于此方法，相应的文件 <code>calico_network_app.json</code> 包含不同于 DC/OS 网络应用程序的 Calico 网络应用程序的定义，如下所示：</p>
+<pre><code class="language-json">  {
+   &quot;networks&quot;: [
+     {
+       &quot;mode&quot;: &quot;container&quot;,
+-      &quot;name&quot;: &quot;dcos&quot;
++      &quot;name&quot;: &quot;calico&quot;
+     }
+   ]
+  }
+</code></pre>
+<ul>
+<li>DC/OS GUI</li>
+</ul>
+<p>导航至服务的“网络连接”选项卡，并将网络类型从 <code>Virtual Network: dcos</code> 变更为 <code>Virtual Network: calico</code>。</p>
+<h3 id="dcos-common-dcos"><a class="content__anchor" href="#dcos-common-dcos" aria-hidden="true"><i data-feather="bookmark"></i></a>构建于 dcos-common 之上的 DC/OS 服务</h3>
+<p>通常，DC/OS 服务中有两个组件：</p>
+<ul>
+<li>调度器 - 执行一个计划以启动 Pod 的 Marathon 应用程序</li>
+<li>Pod - 履行服务职责的工人应用程序。</li>
+</ul>
+<p>由于调度器和 Pod 被定义为发布包，并且为了在调度器和 Pod 使用虚拟网络的情况下进行永久性更改，我们必须在执行以下更改后生成新版本的 DC/OS 服务：</p>
+<ul>
+<li>
+<p>对于调度器
+调度器的 Marathon 应用程序定义在包定义中被定义为模板 marathon.json.mustache，并由操作人员根据 <code>config.json</code> 中定义的变量来填写。启用虚拟网络时，操作员应确保 <code>VIRTUAL_NETWORK_NAME</code> 为 <code>calico</code>。</p>
+</li>
+<li>
+<p>对于 Pod
+<code>dcos-common</code> 允许 Pod 加入虚拟网络，并且默认情况下可使用 <code>dcos</code> 虚拟网络。将应用程序从 <code>dcos</code> 迁移至 <code>calico</code>，需要进行如下更改：</p>
+</li>
+</ul>
+<pre><code class="language-yaml">pods:
+  pod-on-virtual-network:
+    count: 
+    networks:
+-     dcos:
++     calico:
+    tasks:
+      ...
+  pod-on-host:
+    count: 
+    tasks:
+      ...
+</code></pre>
+<h2 id="-9"><a class="content__anchor" href="#-9" aria-hidden="true"><i data-feather="bookmark"></i></a>故障排除</h2>
+<p>诊断信息（包括 Calico 资源、组件日志和 BGP peer 状态）被收集在 DC/OS 节点诊断捆绑包中，要调试 Calico 网络连接问题，请执行 <code>dcos node diagnostic create</code> 以创建诊断捆绑包，然后通过执行 <code>dcos node diagnostic download &lt;diagnostic-bundle-name&gt;</code> 下载诊断捆绑包。</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#概述">概述</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-calico">DC/OS Calico 组件</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos">DC/OS 配置参考（网络连接）</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-2">管理主题</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-calico-3">将应用程序从 DC/OS 覆盖迁移到 Calico</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-9">故障排除</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

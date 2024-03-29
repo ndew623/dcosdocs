@@ -1,0 +1,338 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>多租户原始文件 - D2iQ Docs</title><meta name="description" content="DC/OS 中多租户的引物"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/multi-tenancy-primitives">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/multi-tenancy-primitives">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/multi-tenancy-primitives">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/multi-tenancy-primitives">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/marathon-parameters/">Marathon 配置参考</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/install/">安装服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/task-handling/"><i data-feather="chevron-right"></i>任务处理</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/creating-services/"><i data-feather="chevron-right"></i>创建服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/config-universe-service/">配置服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/marathon-constraints/">Marathon 布局约束</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/scale-service/">扩展服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/service-groups/">授权访问服务和组</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/fault-domain-awareness/">故障域感知和容量扩展</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/update-user-service/">更新用户创建的服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/service-ports/">服务端口</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/service-endpoints/">服务端点</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/monitor-services/">监控服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/private-docker-registry/">使用专用 Docker 注册表</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/expose-service/">公开服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/deployments/">部署</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/uninstall/">卸载服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/package-api/">包管理 API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/marathon-on-marathon/"><i data-feather="chevron-right"></i>使用自定义 Marathon</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/marathon-api/">Marathon  API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/containerizers/"><i data-feather="chevron-right"></i>使用容器化工具</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/pods/"><i data-feather="chevron-right"></i>Pod</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/multi-tenancy-primitives/">多租户原始文件</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/gpu/">使用 GPU</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/faq/">常见问题</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">多租户原始文件</h1></div><h4 class="content__header-description">DC/OS 中多租户的引物</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/multi-tenancy-primitives/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><h1 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>概述</h1>
+<p>可以使用角色、预留、配额和权重的组合来保留 DC/OS 中的资源并确定其优先级。这些功能由 Apache Mesos 提供，位于 DC/OS 的核心，称为 <code>Primitives</code>，因为它们只能通过 API 访问，尚未集成到 DC/OS UI 或 CLI 中。在使用配额，预留和权重时，用户需要良好的监控来代替可用/已用的资源。</p>
+<p>这一环境中的资源管理是指诸如代理上的资源预留、资源配额和框架的权重（优先级）等概念。这些对于许多场景都非常有用，例如配置多租户环境，其中有多个团队或项目在同一个 DC/OS 群集上共存，并且必须划分可用资源（CPU、RAM、磁盘和端口）并保证每个群集具有可靠的配额。其次，在单个群集上混合工作负载，其中一类框架可能具有比另一类更高的权重（优先级），具有高优先级的资源，且其部署速度应当高于较低权重框架。</p>
+<p>本页面涵盖多租户原始文档：多租户配额管理原始文档、实际场景的两个示例、实施指令和参考链接。</p>
+<h1 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>多租户配额管理原始文档</h1>
+<p>多租户原始文档的主要概念包括：</p>
+<h2 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>角色</h2>
+<p>角色指群集内的资源使用者。资源使用者可以代表组织内的用户，但也可以代表团队、组或服务。它通常是指正在运行的一级或一类活动。在 DC/OS 中，调度程序订阅一个或多个角色，以便代表他们正在服务的资源使用者接收资源并调度工作。调度程序包括 Marathon、Kubernetes 以及 DC/OS 目录中的许多经过认证的框架（例如 Kafka 和 Cassandra）Catalog，它们都是为了纳入自己的调度程序而构建的。</p>
+<p>框架将订阅两个默认角色：</p>
+<ul>
+<li><code>*</code>- 专用代理上的</li>
+<li><code>slave_public</code>- 公共代理上的</li>
+</ul>
+<p>Catalog 中的框架采用自己的角色进行部署，并且可以按需创建唯一角色。</p>
+<h2 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>保留</h2>
+<p>保留是指针对特定角色在目标公共和专用代理上保留资源的位置。代理（公共/专用）启动需应用静态保留资源，如果不重新启动代理，则无法修改其他角色。动态保留资源使运营商和授权框架能够在代理启动后按需保留和取消保留资源。所有基于 SDK 的框架，如 Kafka 和 Cassandra（DC/OS Catalog 中列出的认证框架），都利用动态保留来保留他们打算在部署中使用的资源。</p>
+<h2 id="-5"><a class="content__anchor" href="#-5" aria-hidden="true"><i data-feather="bookmark"></i></a>配额</h2>
+<p>配额是指保证角色将获得特定数量资源的机制。如今，配额是最大配额；如果定义了配额并且部署了角色的任务，那么这些资源将立即保留，无论任务是否扩展到需要使用它们。其他任务将无法使用这些资源，即使它们可能并未被提供的任务使用过。动态配额，其中的任务将仅使用当时所需的配额，但保证为未来发布内容规划配额、可撤销资源和超额订阅。</p>
+<h2 id="-6"><a class="content__anchor" href="#-6" aria-hidden="true"><i data-feather="bookmark"></i></a>权重</h2>
+<p>权重是指使一个角色优先于另一个角色的机制，以允许分配给该角色的所有任务比具有较低权重的其他角色收到更多（资源）offer。这样可以加快部署、实现扩展和任务更换。</p>
+<h1 id="-7"><a class="content__anchor" href="#-7" aria-hidden="true"><i data-feather="bookmark"></i></a>示例</h1>
+<p>基于现有客户用例的两个真实场景描述了这些概念。</p>
+<h2 id="spark"><a class="content__anchor" href="#spark" aria-hidden="true"><i data-feather="bookmark"></i></a>具有加权 Spark 角色的分析平台</h2>
+<p>此示例基于客户的分析管道用例。主要工作负载是 Spark，有标记了角色的三个层级 Spark 作业；“低级”- 1，“中级”- 2 和“高级”- 3，相应地表示优先级和权重。</p>
+<p>在实践中，高级角色获得分配的 offer （资源）是中级角色公平份额的三倍，而中级角色所得份额则是低级角色的两倍。除权重外，高优先级 Spark 角色获得 <code>x</code> 的 CPU 份额和 <code>y</code> 的 RAM。</p>
+<p>在部署 Spark 作业时，高优先级 Spark 作业会比中低级角色优先接收 offer。假定中优先级角色和低优先级角色没有应用配额，中级角色将会比低优先级角色早收到 offer，但中级没有配额，因此如果中级角色需要的 <code>z</code> 核心不可用，但是它将收到当时可用的其余所有核心。</p>
+<h2 id="marathon-on-marathon-jenkins"><a class="content__anchor" href="#marathon-on-marathon-jenkins" aria-hidden="true"><i data-feather="bookmark"></i></a>Marathon on Marathon 中的 Jenkins</h2>
+<p>在此示例中，客户将 Jenkins (CI/CD 管道) 作为一项具有数百个实例的服务运行，每个需要运行一项服务的开发团队都需要一个实例。</p>
+<p>在 DC/OS 群集中，还有其他应用程序即服务部署为 Marathon 任务。包括 Jenkins 在内的每个应用程序都在他们自己的 Marathon 实例中被分组（被称为 Marathon on Marathon 或 MoM），在 DC/OS 文档中被归为非本地 Marathon - 本地 Marathon 是 DC/OS 附带的默认 Marathon。从概念上讲，Marathon 上有一个本地 Marathon 和非本地 Marathon，专门用于分组其他任务。</p>
+<p>每个 MoM 都会托管一个应用程序组，并且每个都已附加角色和配额。每个角色和配额都提供了一种方法来保证其中一个角色经常获得扩展，比如 Jenkins 会根据需要为新构建程序扩展代理，以获得必要资源。如果 Jenkins 需要更多资源，可以通过动态修改配额来提供。MoM 的另一种常见用途是在一个具有强大资源和访问管理功能的 DC/OS 群集上对开发、测试和暂存等环境进行分组。</p>
+<p>总而言之，Jenkins 即服务是非常动态的工作负载，有数百个 Jenkins 代理按需运行。充分了解可用资源并了解何时达到配额是保障调整、可用性和增长的重要参数。Spark 示例测量高级角色任务运行的速度比低级速度快多少，从而指示调整权重。</p>
+<h1 id="-8"><a class="content__anchor" href="#-8" aria-hidden="true"><i data-feather="bookmark"></i></a>实现</h1>
+<p>您可以使用以下资源来学习如何实现 Marathon on Marathon 和 Spark 配额：</p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/marathon-on-marathon/">部署非本地 Marathon 实例</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/services/spark/latest/job-scheduling/#quota-for-drivers-and-executors">Spark 配额</a></li>
+</ul>
+<p>在下面的示例中，建议从安装了 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/">DC / OS CLI</a> 的主机运行应用程序。</p>
+<h2 id="-9"><a class="content__anchor" href="#-9" aria-hidden="true"><i data-feather="bookmark"></i></a>角色</h2>
+<p><a href="https://mesos.apache.org/documentation/latest/roles/">角色</a> 指的是分配给框架、任务或代理的标记或标签。默认角色名为 <sup> <code>*</code> </sup>，群集中的所有现有角色都可以通过 Mesos UI 查看：<code>https://&lt;cluster-name-or-IP&gt;/mesos/#/roles</code>.</p>
+<p>在以下示例中，在运行时将名为 <code>high</code> 的角色分配给 Spark 任务。可以执行 Spark 任务的多个实例，确保它们都能从与  相关联的资源管理中受益。<code>high</code>.</p>
+<ul>
+<li>
+<p><code>spark.mesos.role=high</code>  DC/OS Catalog 中的应用程序（如 Kafka 和 Cassandra）将使用通用角色名称自动部署，而用户不可配置该角色名称。</p>
+</li>
+<li>
+<p><code>confluent_kafka_role</code>  角色不需要明确管理，比如配置新角色并将其分配给任务。它们在部署任务或配置权重或配额时按需创建。同样也不应删除角色，它们要在群集的持续时间内一直存在。</p>
+</li>
+</ul>
+<h2 id="-10"><a class="content__anchor" href="#-10" aria-hidden="true"><i data-feather="bookmark"></i></a>保留</h2>
+<p><a href="https://mesos.apache.org/documentation/latest/reservation/">预留</a>可以手动配置并由 SDK 框架使用。在这两种情况下都必须声明授权用户，称为主体/框架或操作者。对于 DC/OS 中的 SDK 框架，这也称为服务帐户。</p>
+<h3 id="-11"><a class="content__anchor" href="#-11" aria-hidden="true"><i data-feather="bookmark"></i></a>添加</h3>
+<p>在 ID 为 <code>312dc1dc-9b39-474f-8295-87fc43872e7c-S0</code> 的特定代理上为低级角色添加预留资源，保证 <code>four</code> CPU 份额和 <code>512MB</code> RAM。当具有低请求角色的任何任务提供与此代理程序预留的资源匹配时，该任务在代理本身的资源空间将会得到保证。</p>
+<p class="message--note"><strong>注意：</strong><code>bootstrapuser</code> 的主体对每个用户都不相同。在此示例中，<code>bootstrapuser</code> 的主体是我的超级用户帐户。</p>
+<p>必须更改群集上代理 ID 的 <code>agent_id</code> 使用 <code>dcos node</code> 查找代理 ID。</p>
+<p class="message--note"><strong>注意：</strong>在复制和粘贴到编辑器或终端时，需要清除下面的 JSON 示例中的所有双引号。</p>
+<pre><code class="language-json">tee add-reservation.json &lt;&lt; EOF
+{
+  &quot;type&quot;: &quot;RESERVE_RESOURCES&quot;,
+  &quot;reserve_resources&quot;: {
+    &quot;agent_id&quot;: {
+      &quot;value&quot;: &quot;312dc1dc-9b39-474f-8295-87fc43872e7c-S0&quot;
+    },
+    &quot;resources&quot;: [
+      {
+        &quot;type&quot;: &quot;SCALAR&quot;,
+        &quot;name&quot;: &quot;cpus&quot;,
+        &quot;reservation&quot;: {
+          &quot;principal&quot;: &quot;bootstrapuser&quot;
+        },
+        &quot;role&quot;: &quot;confluent-kafka-role&quot;,
+        &quot;scalar&quot;: {
+          &quot;value&quot;: 4.0
+        }
+      },
+      {
+        &quot;type&quot;: &quot;SCALAR&quot;,
+                &quot;name&quot;: &quot;mem&quot;,
+        &quot;reservation&quot;: {
+          &quot;principal&quot;: &quot;bootstrapuser&quot;
+        },
+        &quot;role&quot;: &quot;confluent-kafka-role&quot;,
+        &quot;scalar&quot;: {
+          &quot;value&quot;: 512.0
+        }
+      },
+      {
+        &quot;type&quot;: &quot;RANGES&quot;,
+        &quot;name&quot;: &quot;ports&quot;,
+        &quot;reservation&quot;: {
+          &quot;principal&quot;: &quot;bootstrapuser&quot;
+        },
+        &quot;role&quot;: &quot;confluent-kafka-role&quot;,
+        &quot;ranges&quot;: {
+          &quot;range&quot;: [
+            {
+              &quot;begin&quot;: 8112,
+              &quot;end&quot;: 8114
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+EOF
+
+
+
+curl -i -k \
+      -H &quot;Authorization: token=`dcos config show core.dcos_acs_token`&quot; \
+      -H &quot;Content-Type: application/json&quot; \
+      -H &quot;Accept: application/json&quot; \
+      -d @add-reservation.json \
+-X POST &quot;`dcos config show core.dcos_url`/mesos/api/v1&quot;
+</code></pre>
+<p>成功之后，预计会有 <code>HTTP 202</code> 响应。</p>
+<p>如果资源不可用于预订，预计响应内容为 <code>HTTP 409</code>，并且无法在该代理上预留资源。可能已经有运行的任务消耗了这些资源。</p>
+<h3 id="-12"><a class="content__anchor" href="#-12" aria-hidden="true"><i data-feather="bookmark"></i></a>检查</h3>
+<p>最好通过 Mesos UI 针对您应用预留的特定代理或借助 <code>state.json</code> 解析 <code>jq</code>. 来实现检查。</p>
+<pre><code class="language-shell">https://&lt;cluster-URL&gt;/mesos/#/agents/&lt;agent-id&gt;
+</code></pre>
+<h3 id="-13"><a class="content__anchor" href="#-13" aria-hidden="true"><i data-feather="bookmark"></i></a>删除</h3>
+<p>删除需要修改输入 <code>JSON</code>，从而仅引用以下格式的资源：</p>
+<p class="message--note"><strong>注意：</strong>更改 <code>agent_id</code> 以匹配群集上的代理 ID（如上例所示）。</p>
+<pre><code class="language-json">tee remove-reservation.json &lt;&lt; EOF
+{
+  &quot;type&quot;: &quot;UNRESERVE_RESOURCES&quot;,
+  &quot;unreserve_resources&quot;: {
+    &quot;agent_id&quot;: {
+      &quot;value&quot;: &quot;312dc1dc-9b39-474f-8295-87fc43872e7c-S0&quot;
+    },
+    &quot;resources&quot;: [
+      {
+        &quot;type&quot;: &quot;SCALAR&quot;,
+        &quot;name&quot;: &quot;cpus&quot;,
+        &quot;reservation&quot;: {
+          &quot;principal&quot;: &quot;bootstrapuser&quot;
+        },
+        &quot;role&quot;: &quot;confluent-kafka-role&quot;,
+        &quot;scalar&quot;: {
+          &quot;value&quot;: 4.0
+        }
+      },
+      {
+        &quot;type&quot;: &quot;SCALAR&quot;,
+        &quot;name&quot;: &quot;mem&quot;,
+        &quot;reservation&quot;: {
+          &quot;principal&quot;: &quot;bootstrapuser&quot;
+        },
+        &quot;role&quot;: &quot;confluent-kafka-role&quot;,
+        &quot;scalar&quot;: {
+          &quot;value&quot;: 512.0
+        }
+      },
+      {
+        &quot;type&quot;: &quot;RANGES&quot;,
+        &quot;name&quot;: &quot;ports&quot;,
+        &quot;reservation&quot;: {
+          &quot;principal&quot;: &quot;bootstrapuser&quot;
+        },
+        &quot;role&quot;: &quot;confluent-kafka-role&quot;,
+        &quot;ranges&quot;: {
+          &quot;range&quot;: [
+            {
+              &quot;begin&quot;: 8112,
+              &quot;end&quot;: 8114
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+EOF
+
+curl -i -k \
+      -H &quot;Authorization: token=`dcos config show core.dcos_acs_token`&quot; \
+      -H &quot;Content-Type: application/json&quot; \
+      -H &quot;Accept: application/json&quot; \
+      -d @remove-reservation.json \
+-X POST &quot;`dcos config show core.dcos_url`/mesos/api/v1&quot;
+</code></pre>
+<p>还有其他选项，涉及动态和静态操作，以及修改参考链接中包含的现有预留。</p>
+<h2 id="-14"><a class="content__anchor" href="#-14" aria-hidden="true"><i data-feather="bookmark"></i></a>配额</h2>
+<p><a href="https://mesos.apache.org/documentation/latest/quota/">配额</a> 指定角色保证接收的最小资源量（除非群集中的总资源少于配置的配额资源，而这种情况通常表示配置错误）。</p>
+<h3 id="-15"><a class="content__anchor" href="#-15" aria-hidden="true"><i data-feather="bookmark"></i></a>添加</h3>
+<p>配额一旦应用就无法更新，必须将其删除然后重新添加。以下示例将 <code>two</code> CPU 份额和 <code>4GB</code> RAM 的配额应用于名为 <code>high</code>. 的角色。</p>
+<pre><code class="language-json">tee set-quota.json &lt;&lt; EOF
+{
+  &quot;type&quot;: &quot;SET_QUOTA&quot;,
+  &quot;set_quota&quot;: {
+    &quot;quota_request&quot;: {
+      &quot;force&quot;: true,
+      &quot;guarantee&quot;: [
+        {
+          &quot;name&quot;: &quot;cpus&quot;,
+          &quot;role&quot;: &quot;*&quot;,
+          &quot;scalar&quot;: {
+            &quot;value&quot;: 2.0
+          },
+          &quot;type&quot;: &quot;SCALAR&quot;
+        },
+        {
+          &quot;name&quot;: &quot;mem&quot;,
+          &quot;role&quot;: &quot;*&quot;,
+          &quot;scalar&quot;: {
+            &quot;value&quot;: 4096.0
+          },
+          &quot;type&quot;: &quot;SCALAR&quot;
+        }
+      ],
+      &quot;role&quot;: &quot;high&quot;
+    }
+  }
+}
+EOF
+
+curl -i -k \
+      -H &quot;Authorization: token=`dcos config show core.dcos_acs_token`&quot; \
+      -H &quot;Content-Type: application/json&quot; \
+      -H &quot;Accept: application/json&quot; \
+      -d @set-quota.json \
+-X POST &quot;`dcos config show core.dcos_url`/mesos/api/v1&quot;
+</code></pre>
+<p>成功之后，预计会有 <code>HTTP/1.1 200 OK</code> 响应。</p>
+<h3 id="-16"><a class="content__anchor" href="#-16" aria-hidden="true"><i data-feather="bookmark"></i></a>检查</h3>
+<pre><code class="language-json">tee get-quota.json &lt;&lt; EOF
+{
+  &quot;type&quot;: &quot;GET_QUOTA&quot;
+}
+EOF
+
+curl -i -k \
+      -H &quot;Authorization: token=`dcos config show core.dcos_acs_token`&quot; \
+      -H &quot;Content-Type: application/json&quot; \
+      -H &quot;Accept: application/json&quot; \
+      -d @get-quota.json \
+-X POST &quot;`dcos config show core.dcos_url`/mesos/api/v1&quot;
+
+HTTP/1.1 200 OK
+Server: openresty
+Date: Fri, 21 Sep 2018 15:35:09 GMT
+Content-Type: application/json
+Content-Length: 224
+Connection: keep-alive
+
+{&quot;type&quot;:&quot;GET_QUOTA&quot;,&quot;get_quota&quot;:{&quot;status&quot;:{&quot;infos&quot;:[{&quot;role&quot;:&quot;high&quot;,&quot;principal&quot;:&quot;bootstrapuser&quot;,&quot;guarantee&quot;:[{&quot;name&quot;:&quot;cpus&quot;,&quot;type&quot;:&quot;SCALAR&quot;,&quot;scalar&quot;:{&quot;value&quot;:2.0}},{&quot;name&quot;:&quot;mem&quot;,&quot;type&quot;:&quot;SCALAR&quot;,&quot;scalar&quot;:{&quot;value&quot;:128.0}}]}]}}}
+</code></pre>
+<h3 id="-17"><a class="content__anchor" href="#-17" aria-hidden="true"><i data-feather="bookmark"></i></a>删除</h3>
+<pre><code class="language-json">tee remove-quota.json &lt;&lt; EOF
+{
+  &quot;type&quot;: &quot;REMOVE_QUOTA&quot;,
+  &quot;remove_quota&quot;: {
+    &quot;role&quot;: &quot;high&quot;
+  }
+}
+EOF
+curl -i -k \
+      -H &quot;Authorization: token=`dcos config show core.dcos_acs_token`&quot; \
+      -H &quot;Content-Type: application/json&quot; \
+      -H &quot;Accept: application/json&quot; \
+      -d @remove-quota.json \
+-X POST &quot;`dcos config show core.dcos_url`/mesos/api/v1&quot;
+
+HTTP/1.1 200 OK
+Server: openresty
+Date: Fri, 21 Sep 2018 15:38:15 GMT
+Content-Length: 0
+Connection: keep-alive
+</code></pre>
+<p>成功之后，预计会有 <code>HTTP/1.1 200 OK</code> 响应。</p>
+<h2 id="-18"><a class="content__anchor" href="#-18" aria-hidden="true"><i data-feather="bookmark"></i></a>权重</h2>
+<p><a href="https://mesos.apache.org/documentation/latest/weights/">权重</a> 用于控制提供给不同角色的群集资源的相对份额。</p>
+<h3 id="-19"><a class="content__anchor" href="#-19" aria-hidden="true"><i data-feather="bookmark"></i></a>应用</h3>
+<p>该设置会应用权重 <code>five</code> 到角色 <code>perf</code>.</p>
+<pre><code class="language-json">tee set-weight.json &lt;&lt; EOF
+{
+  &quot;type&quot;: &quot;UPDATE_WEIGHTS&quot;,
+  &quot;update_weights&quot;: {
+    &quot;weight_infos&quot;: [
+      {
+        &quot;role&quot;: &quot;perf&quot;,
+        &quot;weight&quot;: 5.0
+      }
+    ]
+  }
+}
+EOF
+
+curl -i -k \
+      -H &quot;Authorization: token=`dcos config show core.dcos_acs_token`&quot; \
+      -H &quot;Content-Type: application/json&quot; \
+      -H &quot;Accept: application/json&quot; \
+      -d @set-weight.json \
+-X POST &quot;`dcos config show core.dcos_url`/mesos/api/v1&quot;
+</code></pre>
+<p>成功之后，预计会有 <code>HTTP/1.1 200 OK</code> 响应。</p>
+<h3 id="-20"><a class="content__anchor" href="#-20" aria-hidden="true"><i data-feather="bookmark"></i></a>检查</h3>
+<pre><code class="language-json">tee get-weight.json &lt;&lt; EOF
+{
+  &quot;type&quot;: &quot;GET_WEIGHTS&quot;
+}
+EOF
+
+curl -i -k \
+      -H &quot;Authorization: token=`dcos config show core.dcos_acs_token`&quot; \
+      -H &quot;Content-Type: application/json&quot; \
+      -H &quot;Accept: application/json&quot; \
+      -d @get-weight.json \
+-X POST &quot;`dcos config show core.dcos_url`/mesos/api/v1&quot;
+
+HTTP/1.1 200 OK
+Server: openresty
+Date: Fri, 21 Sep 2018 15:25:25 GMT
+Content-Type: application/json
+Content-Length: 84
+Connection: keep-alive
+{&quot;type&quot;:&quot;GET_WEIGHTS&quot;,&quot;get_weights&quot;:{&quot;weight_infos&quot;:[{&quot;weight&quot;:5.0,&quot;role&quot;:&quot;perf&quot;}]}}
+</code></pre>
+<h3 id="-21"><a class="content__anchor" href="#-21" aria-hidden="true"><i data-feather="bookmark"></i></a>删除</h3>
+<p>权重一旦设置就无法删除，但可以使用与更新权重相同的方法进行修改。如果您希望重置角色的权重，可以将其设置回 <code>two</code>，其权重与默认角色 <sup> <code>*</code> </sup>. 相同。</p>
+<h2 id="marathon-on-marathon"><a class="content__anchor" href="#marathon-on-marathon" aria-hidden="true"><i data-feather="bookmark"></i></a>Marathon on Marathon</h2>
+<p>DC/OS Catalog 包括 Marathon，可用于部署 MoM。应该注意，这仅适用于 DC/OS OSS 安装，但不提供对严格模式、密钥或 ACL 的支持。请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/marathon-on-marathon/basic/">Marathon on Marathon 文档</a>.</p>
+<p>要安装 DC/OS Enterprise MoM，您必须联系 Mesosphere 服务支持以获取 Enterprise MoM tarball，然后使用根 Marathon 进行部署。请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/marathon-on-marathon/advanced/">自定义非本地 Marathon 文档</a>.</p>
+<h1 id="-22"><a class="content__anchor" href="#-22" aria-hidden="true"><i data-feather="bookmark"></i></a>其他资源</h1>
+<p>您可以使用以下附加资源进一步了解：</p>
+<ul>
+<li><a href="https://mesos.apache.org/documentation/latest/oversubscription/">超额订阅</a></li>
+<li><a href="https://mesos.apache.org/documentation/latest/authorization/">授权</a></li>
+<li><a href="https://mesos.apache.org/documentation/latest/operator-http-api/">Mesos API</a></li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#概述">概述</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-2">多租户配额管理原始文档</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-3">角色</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-4">保留</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-5">配额</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-6">权重</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-7">示例</a></li><li class="content__sections-item content__sections-item--h2"><a href="#spark">具有加权 Spark 角色的分析平台</a></li><li class="content__sections-item content__sections-item--h2"><a href="#marathon-on-marathon-jenkins">Marathon on Marathon 中的 Jenkins</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-8">实现</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-9">角色</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-10">保留</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-14">配额</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-18">权重</a></li><li class="content__sections-item content__sections-item--h2"><a href="#marathon-on-marathon">Marathon on Marathon</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-22">其他资源</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

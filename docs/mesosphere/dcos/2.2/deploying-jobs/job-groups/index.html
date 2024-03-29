@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Granting Access to Jobs - D2iQ Docs</title><meta name="description" content="Granting access to jobs using the CLI or the UI"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.2"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/job-groups">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/deploying-jobs/job-groups">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/deploying-jobs/job-groups">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/deploying-jobs/job-groups">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/metronome-constraints/">Metronome Placement Constraints</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/running-jobs-in-remote-regions/">Running Jobs in Remote Regions</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/quickstart/">Creating Jobs</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/examples/">Examples</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/job-groups/">Granting Access to Jobs</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/archives/">Access Documentation Archives</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Granting Access to Jobs</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">Granting access to jobs using the CLI or the UI</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/job-groups/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+Granting+Access+to+Jobs&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/job-groups&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><p>You can implement fine-grained user access to jobs by using either the DC/OS UI, the CLI or <a href="/dcosdocs/mesosphere/dcos/2.2/security/ent/iam-api/">the API</a>. The <a href="/dcosdocs/mesosphere/dcos/2.2/security/ent/perms-reference/#marathon-metronome">Metronome permissions</a> allow you to restrict a user’s access to jobs on either a per job or a per job group basis. This section walks you through the steps to accomplish this.</p>
+<p><strong>Prerequisites:</strong></p>
+<ul>
+<li>You must have the <a href="/dcosdocs/mesosphere/dcos/2.2/cli/install/">DC/OS CLI installed</a> and be logged in as a superuser.</li>
+<li>A <a href="/dcosdocs/mesosphere/dcos/2.2/security/ent/users-groups/">user account</a> to assign permissions to.</li>
+</ul>
+<p><a name="job-group-access-via-ui"></a></p>
+<h1 id="via-the-dcos-ui"><a class="content__anchor" href="#via-the-dcos-ui" aria-hidden="true"><i data-feather="bookmark"></i></a>Via the DC/OS UI</h1>
+<ol>
+<li>
+<p>Log into the DC/OS UI as a user with the <code>superuser</code> permission.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/LOGIN-EE-Modal_View-1_12.png" alt="Login"></p>
+<p>Figure 1. DC/OS UI login</p>
+</li>
+<li>
+<p>Select <strong>Organization</strong> and choose <strong>Users</strong> or <strong>Groups</strong>.</p>
+</li>
+<li>
+<p>Select the name of the user or group to grant the permission to.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/GUI-Organization-Users-Users_List_View_w_Users-1_12.png" alt="Add permission cory"></p>
+<p>Figure 2. Choose user or group to add permissions to</p>
+</li>
+<li>
+<p>From the <strong>Permissions</strong> tab, click <strong>ADD PERMISSION</strong>.</p>
+</li>
+<li>
+<p>Click <strong>INSERT PERMISSION STRING</strong> to toggle the dialog.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/GUI-Organization-Users-User_Alice_Add_Gen_Perms-1_12.png" alt="Add permission"></p>
+<p>Figure 3. Add permissions</p>
+</li>
+<li>
+<p>Copy and paste the permission in the <strong>Permissions Strings</strong> field. Choose the permission strings based on your <a href="/dcosdocs/mesosphere/dcos/2.2/security/ent/#security-modes">security mode</a>.</p>
+<h3 id="permissive"><a class="content__anchor" href="#permissive" aria-hidden="true"><i data-feather="bookmark"></i></a>Permissive</h3>
+<ul>
+<li>
+<p><strong>DC/OS jobs access:</strong></p>
+<p>Specify your job group (<code>&lt;job-group&gt;</code>), job name (<code>&lt;job-name&gt;</code>), and action (<code>&lt;action&gt;</code>). Actions can be either <code>create</code>, <code>read</code>, <code>update</code>, <code>delete</code>, or <code>full</code>. To permit more than one operation, use a comma to separate them, for example: <code>dcos:service:metronome:metronome:jobs:&lt;job-group&gt;/&lt;job-name&gt; read,update</code>.</p>
+<pre><code class="language-bash">dcos:adminrouter:service:metronome full
+dcos:service:metronome:metronome:jobs:&lt;job-group&gt;/&lt;job-name&gt; &lt;action&gt;
+</code></pre>
+</li>
+<li>
+<p><strong>DC/OS service tasks and logs:</strong></p>
+<pre><code class="language-bash">dcos:adminrouter:ops:mesos full
+dcos:adminrouter:ops:slave full
+</code></pre>
+</li>
+</ul>
+<h3 id="strict"><a class="content__anchor" href="#strict" aria-hidden="true"><i data-feather="bookmark"></i></a>Strict</h3>
+<ul>
+<li>
+<p><strong>DC/OS jobs access:</strong></p>
+<p>Specify your job group (<code>&lt;job-group&gt;</code>), job name (<code>&lt;job-name&gt;</code>), and action (<code>&lt;action&gt;</code>). Actions can be either <code>create</code>, <code>read</code>, <code>update</code>, <code>delete</code>, or <code>full</code>. To permit more than one operation, use a comma to separate them, for example: <code>dcos:service:metronome:metronome:jobs:&lt;job-group&gt;/&lt;job-name&gt; read,update</code>.</p>
+<pre><code class="language-bash">dcos:adminrouter:service:metronome full
+dcos:service:metronome:metronome:jobs:&lt;job-group&gt;/&lt;job-name&gt; &lt;action&gt;
+</code></pre>
+</li>
+<li>
+<p><strong>DC/OS service tasks and logs:</strong></p>
+<pre><code class="language-bash">dcos:adminrouter:ops:mesos full
+dcos:adminrouter:ops:slave full
+dcos:mesos:master:framework:role:* read
+dcos:mesos:master:executor:app_id:/&lt;job-group&gt;/&lt;job-name&gt; read
+dcos:mesos:master:task:app_id:/&lt;job-group&gt;/&lt;job-name&gt; read
+dcos:mesos:agent:framework:role:* read
+dcos:mesos:agent:executor:app_id:/&lt;job-group&gt;/&lt;job-name&gt; read
+dcos:mesos:agent:task:app_id:/&lt;job-group&gt;/&lt;job-name&gt; read
+dcos:mesos:agent:sandbox:app_id:/&lt;job-group&gt;/&lt;job-name&gt; read
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>ADD PERMISSIONS</strong> and then <strong>Close</strong>.</p>
+</li>
+</ol>
+<h1 id="via-the-cli"><a class="content__anchor" href="#via-the-cli" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="job-group-access-via-cli"></a>Via the CLI</h1>
+<p><strong>Prerequisites:</strong></p>
+<ul>
+<li>You must have the <a href="/dcosdocs/mesosphere/dcos/2.2/cli/install/">DC/OS CLI installed</a> and be logged in as a superuser.</li>
+</ul>
+<p><strong>Tips:</strong></p>
+<ul>
+<li>To grant permissions to a group instead of a user, replace <code>users grant &lt;user-name&gt;</code> with <code>groups grant &lt;gid&gt;</code>.</li>
+</ul>
+<h3 id="permissive-2"><a class="content__anchor" href="#permissive-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Permissive</h3>
+<ul>
+<li>
+<p><strong>DC/OS jobs access:</strong></p>
+<ol>
+<li>
+<p>Grant the permission to job group (<code>&lt;job-group&gt;</code>) and job name (<code>&lt;job-name&gt;</code>).</p>
+<pre><code class="language-bash">dcos security org users grant &lt;user-name&gt; adminrouter:service:metronome full --description &quot;Controls access to Metronome services&quot;
+dcos security org users grant &lt;user-name&gt; service:metronome:metronome:jobs:&lt;job-group&gt;/&lt;job-name&gt; full --description &quot;Controls access to &lt;job-group&gt;/&lt;job-name&gt;&quot;
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>DC/OS service tasks and logs:</strong></p>
+<ol>
+<li>
+<p>Grant the permission to a user (<code>&lt;user-name&gt;</code>).</p>
+<pre><code class="language-bash">dcos security org users grant &lt;user-name&gt; adminrouter:ops:mesos full --description &quot;Grants access to the Mesos master API/UI and task details&quot;
+dcos security org users grant &lt;user-name&gt; adminrouter:ops:slave full --description &quot;Grants access to the Mesos agent API/UI and task details such as logs&quot;
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="strict-2"><a class="content__anchor" href="#strict-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Strict</h3>
+<ul>
+<li>
+<p><strong>DC/OS jobs access:</strong></p>
+<ol>
+<li>
+<p>Grant the permission to job group (<code>&lt;job-group&gt;</code>) and job name (<code>&lt;job-name&gt;</code>).</p>
+<pre><code class="language-bash">dcos security org users grant &lt;user-name&gt; adminrouter:service:metronome full --description &quot;Controls access to Metronome services&quot;
+dcos security org users grant &lt;user-name&gt; service:metronome:metronome:jobs:&lt;job-group&gt;/&lt;job-name&gt; full --description &quot;Controls access to &lt;job-group&gt;/&lt;job-name&gt;&quot;
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>DC/OS service tasks and logs:</strong></p>
+<ol>
+<li>
+<p>Grant the permission to the user (<code>&lt;user-name&gt;</code>) and group (<code>&lt;job-group&gt;</code>).</p>
+<pre><code class="language-bash">dcos security org users grant &lt;user-name&gt; adminrouter:ops:mesos full --description &quot;Grants access to the Mesos master API/UI and task details&quot;
+dcos security org users grant &lt;user-name&gt; adminrouter:ops:slave full --description &quot;Grants access to the Mesos agent API/UI and task details such as logs&quot;
+dcos security org users grant &lt;user-name&gt; mesos:master:framework:role:* read --description &quot;Controls access to frameworks registered with the Mesos default role&quot;
+dcos security org users grant &lt;user-name&gt; mesos:master:executor:app_id:/&lt;job-group&gt;/&lt;job-name&gt; read --description &quot;Controls access to executors running inside &lt;job-group&gt;/&lt;job-name&gt;&quot;
+dcos security org users grant &lt;user-name&gt; mesos:master:task:app_id:/&lt;job-group&gt;/&lt;job-name&gt; read --description &quot;Controls access to tasks running inside &lt;job-group&gt;/&lt;job-name&gt;&quot;
+dcos security org users grant &lt;user-name&gt; mesos:agent:framework:role:* read --description &quot;Controls access to information about frameworks registered under the Mesos default role&quot;
+dcos security org users grant &lt;user-name&gt; mesos:agent:executor:app_id:/&lt;job-group&gt;/&lt;job-name&gt; read --description &quot;Controls access to executors running inside &lt;job-group&gt;/&lt;job-name&gt;&quot;
+dcos security org users grant &lt;user-name&gt; mesos:agent:task:app_id:/&lt;job-group&gt;/&lt;job-name&gt; read --description &quot;Controls access to tasks running inside &lt;job-group&gt;/&lt;job-name&gt;&quot;
+dcos security org users grant &lt;user-name&gt; mesos:agent:sandbox:app_id:/&lt;gid&gt;/ read --description &quot;Controls access to the sandboxes of &lt;job-group&gt;/&lt;job-name&gt;&quot;
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#via-the-dcos-ui">Via the DC/OS UI</a></li><li class="content__sections-item content__sections-item--h1"><a href="#via-the-cli">Via the CLI</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Get Started - D2iQ Docs</title><meta name="description" content="Get started with Kafka"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Beta Kafka Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><div class="toggle"><p><span class="title">Beta Kafka</span><span class="version"> 2.10.0-2.4.0-beta</span></p></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-kafka/2.10.0-2.4.0-beta/release-notes/">Release Notes</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-kafka/2.10.0-2.4.0-beta/started/">Get Started</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-kafka/2.10.0-2.4.0-beta/operations/">Operations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-kafka/2.10.0-2.4.0-beta/configuration/">Configuration</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-kafka/2.10.0-2.4.0-beta/updates/">Update</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-kafka/2.10.0-2.4.0-beta/security/">Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-kafka/2.10.0-2.4.0-beta/uninstall/">Uninstall Kafka</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-kafka/2.10.0-2.4.0-beta/troubleshooting/">Diagnose Kafka</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-kafka/2.10.0-2.4.0-beta/advanced/">Advanced</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-kafka/2.10.0-2.4.0-beta/reference/">API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-kafka/2.10.0-2.4.0-beta/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-kafka/2.10.0-2.4.0-beta/policy/">Support Policy</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Get Started</h1><p class="badge badge--content-header badge--beta">BETA</p></div><h4 class="content__header-description">Get started with Kafka</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/beta-kafka/2.10.0-2.4.0-beta/started/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- This source repo for this topic is https://github.com/mesosphere/dcos-commons -->
+<p>Apache Kafka is available from the DC/OS Catalog and can be installed using either the DC/OS UI or the DC/OS CLI.</p>
+<h1 id="prerequisites"><a class="content__anchor" href="#prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="install-enterprise"></a>Prerequisites</h1>
+<ul>
+<li>
+<p>Depending on your security mode in Enterprise DC/OS, you may <a href="/dcosdocs/mesosphere/dcos/services/beta-kafka/kafka-auth/">need to provision a service account</a> before installing Kafka. You will need a <code>superuser</code> permission to create the service account. The following is a list of <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/#security-modes">security modes</a>:</p>
+<ul>
+<li><code>strict</code> security mode requires a service account.</li>
+<li><code>permissive</code> security mode a service account is optional.</li>
+<li><code>disabled</code> security mode does not require a service account.</li>
+</ul>
+</li>
+<li>
+<p>Your cluster must have at least three private nodes.</p>
+</li>
+</ul>
+<h1 id="types-of-installation-methods"><a class="content__anchor" href="#types-of-installation-methods" aria-hidden="true"><i data-feather="bookmark"></i></a>Types of Installation Methods</h1>
+<p>There are four types of installation methods:</p>
+<ol>
+<li>Default installation is the basic installation method. This method is used to install Kafka on a DC/OS cluster using CLI commands.</li>
+<li>Minimal installation is used to install Kafka on a local C/OS cluster using <a href="https://github.com/mesosphere/dcos-vagrant">dcos-vagrant</a> and is specific for development purposes.</li>
+<li>Custom installation is used to install Kafka on DC/OS cluster using a customized JSON file.</li>
+<li>Multiple Kafka cluster installation is used to install multiple Kafka clusters using custom configurations.</li>
+</ol>
+<h2 id="default-installation"><a class="content__anchor" href="#default-installation" aria-hidden="true"><i data-feather="bookmark"></i></a>Default Installation</h2>
+<p>To start a basic test cluster with three brokers, run the following command on the DC/OS CLI. Enterprise DC/OS users must follow additional instructions. <a href="#install-enterprise">More information about installing Kafka on Enterprise DC/OS</a>.</p>
+<pre><code class="language-bash">dcos package install beta-kafka
+</code></pre>
+<p>This command creates a new Kafka cluster with the default name <code>kafka</code>. Two clusters cannot share the same name, so installing additional clusters beyond the default cluster requires <a href="#custom-installation">customizing the <code>name</code> at install time</a> for each additional instance.</p>
+<p>All <code>dcos kafka</code> CLI commands have a <code>--name</code> argument allowing the user to specify which Kafka instance to query. If you do not specify a service name, the CLI assumes the default value, <code>kafka</code>. The default value for <code>--name</code> can be customized via the DC/OS CLI configuration:</p>
+<pre><code class="language-bash">dcos kafka --name=&lt;kafka-dev&gt; &lt;cmd&gt;
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>Alternatively, you can <a href="/dcosdocs/mesosphere/dcos/latest/deploying-services/install/">install Kafka from the DC/OS web interface</a>. If you install Kafka from the web interface, you must install the Kafka DC/OS CLI subcommands separately. </p>
+<p>Enter the following command from the DC/OS CLI:</p>
+<pre><code class="language-bash">dcos package install beta-kafka --cli
+</code></pre>
+<h2 id="minimal-installation"><a class="content__anchor" href="#minimal-installation" aria-hidden="true"><i data-feather="bookmark"></i></a>Minimal Installation</h2>
+<p>For development purposes, you can use <a href="https://github.com/mesosphere/dcos-vagrant">dcos-vagrant</a> to install Kafka on a local DC/OS cluster.</p>
+<p>To start a minimal cluster with a single broker, create a JSON options file named <code>sample-kafka-minimal.json</code>:</p>
+<pre><code class="language-json">{
+    &quot;brokers&quot;: {
+        &quot;count&quot;: 1,
+        &quot;mem&quot;: 512,
+        &quot;disk&quot;: 1000
+    }
+}
+</code></pre>
+<p>The command below creates a cluster using <code>sample-kafka-minimal.json</code>:</p>
+<pre><code class="language-bash">dcos package install beta-kafka  --options=sample-kafka-minimal.json 
+</code></pre>
+<h2 id="custom-installation"><a class="content__anchor" href="#custom-installation" aria-hidden="true"><i data-feather="bookmark"></i></a>Custom Installation</h2>
+<p>Customize the defaults by creating a JSON file. Then, pass it to <code>dcos package install</code> using the <code>--options</code> parameter.</p>
+<p>A sample JSON options file is named as sample-kafka-custom.json:</p>
+<pre><code class="language-json">{
+    &quot;service&quot;: {
+        &quot;name&quot;: &quot;sample-kafka-custom&quot;,
+        &quot;placement_strategy&quot;: &quot;NODE&quot;
+    },
+    &quot;brokers&quot;: {
+        &quot;count&quot;: 10,
+        &quot;kill_grace_period&quot;: 30
+    },
+    &quot;kafka&quot;: {
+        &quot;delete_topic_enable&quot;: true,
+        &quot;log_retention_hours&quot;: 128
+    }
+}
+</code></pre>
+<p>The following command creates a cluster using <code>sample-kafka.json</code>:</p>
+<pre><code class="language-bash">dcos package install --options=sample-kafka-custom.json beta-kafka
+</code></pre>
+<p class="message--important"><strong>IMPORTANT: </strong>It is highly recommended to store your custom configuration in source control.</p>
+<p>See <a href="#configuration-options">Configuration Options</a> for a list of fields that can be customized via an JSON options file when the Kafka cluster is created.</p>
+<h2 id="multiple-kafka-cluster-installation"><a class="content__anchor" href="#multiple-kafka-cluster-installation" aria-hidden="true"><i data-feather="bookmark"></i></a>Multiple Kafka cluster installation</h2>
+<p>Installing multiple Kafka clusters is identical to installing Kafka clusters with custom configurations as described above. The only requirement on the operator is that a unique <code>name</code> is specified for each installation.</p>
+<p>See the following example:</p>
+<pre><code>cat kafka1.json
+{
+    &quot;service&quot;: {
+        &quot;name&quot;: &quot;kafka1&quot;
+    }
+}
+
+dcos package install beta-kafka --options=kafka1.json
+</code></pre>
+<h1 id="changing-configuration-at-runtime"><a class="content__anchor" href="#changing-configuration-at-runtime" aria-hidden="true"><i data-feather="bookmark"></i></a>Changing Configuration at Runtime</h1>
+<p>You can customize your cluster in-place when it is up and running.</p>
+<p>The Kafka scheduler runs as a Marathon process and can be reconfigured by changing values from the DC/OS web interface.</p>
+<p>Use the following steps to change configurations at runtime:</p>
+<ol>
+<li>Go to the <code>Services</code> tab of the DC/OS web interface.</li>
+<li>Select the name of the Kafka service to be updated.</li>
+<li>Within the Kafka instance details view, select the menu in the upper right, then choose <strong>Edit</strong>.</li>
+<li>In the dialog that appears, select the <strong>Environment</strong> tab and update any fields to their desired values. For example, to <a href="#broker-count">increase the number of Brokers</a>, edit the value for <code>BROKER_COUNT</code>. Do not edit the value for <code>FRAMEWORK_NAME</code> or <code>BROKER_DISK</code>.</li>
+<li>Choose a <code>DEPLOY_STRATEGY</code>: serial, serial-canary, parallel-canary, or parallel. See the SDK Developer guide for more information on <a href="https://mesosphere.github.io/dcos-commons/developer-guide.html#plans">deployment plan strategies</a>. <!-- I'm not sure I like this solution, since users aren't going to have the context for the dev guide). --></li>
+<li>Select <strong>REVIEW &amp; RUN</strong> to apply any changes and cleanly reload the Kafka scheduler. The Kafka cluster itself will persist across the change.</li>
+</ol>
+<h2 id="configuration-update-rest-api"><a class="content__anchor" href="#configuration-update-rest-api" aria-hidden="true"><i data-feather="bookmark"></i></a>Configuration Update REST API</h2>
+<p>Make the REST request below to view the current deployment plan. See the REST API Authentication part of the <a href="../reference">REST API Reference</a> topic for information on how this request must be authenticated.</p>
+<pre><code class="language-bash">curl -H &quot;Authorization: token=$auth_token&quot; &quot;&lt;dcos_url&gt;/service/kafka/v1/plan&quot;
+
+{
+    &quot;phases&quot;: [
+        {
+            &quot;id&quot;: &quot;b6180a4e-b25f-4307-8855-0b37d671fd46&quot;,
+            &quot;name&quot;: &quot;Deployment&quot;,
+            &quot;steps&quot;: [
+                {
+                    &quot;id&quot;: &quot;258f19a4-d6bc-4ff1-8685-f314924884a1&quot;,
+                    &quot;status&quot;: &quot;COMPLETE&quot;,
+                    &quot;name&quot;: &quot;kafka-0:[broker]&quot;,
+                    &quot;message&quot;: &quot;com.mesosphere.sdk.scheduler.plan.DeploymentStep: 'kafka-0:[broker] [258f19a4-d6bc-4ff1-8685-f314924884a1]' has status: 'COMPLETE'.&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;e59fb2a9-22e2-4900-89e3-bda24041639f&quot;,
+                    &quot;status&quot;: &quot;COMPLETE&quot;,
+                    &quot;name&quot;: &quot;kafka-1:[broker]&quot;,
+                    &quot;message&quot;: &quot;com.mesosphere.sdk.scheduler.plan.DeploymentStep: 'kafka-1:[broker] [e59fb2a9-22e2-4900-89e3-bda24041639f]' has status: 'COMPLETE'.&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;0b5a5048-fd3a-4b2c-a9b5-746045176d29&quot;,
+                    &quot;status&quot;: &quot;COMPLETE&quot;,
+                    &quot;name&quot;: &quot;kafka-2:[broker]&quot;,
+                    &quot;message&quot;: &quot;com.mesosphere.sdk.scheduler.plan.DeploymentStep: 'kafka-2:[broker] [0b5a5048-fd3a-4b2c-a9b5-746045176d29]' has status: 'COMPLETE'.&quot;
+                }
+            ],
+            &quot;status&quot;: &quot;COMPLETE&quot;
+        }
+    ],
+    &quot;errors&quot;: [],
+    &quot;status&quot;: &quot;COMPLETE&quot;
+}
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>After a configuration update, you may see an error from Mesos-DNS; this will go away 10 seconds after the update.</p>
+<p>Enter the <code>continue</code> command to execute the first step:</p>
+<pre><code class="language-bash">curl -X PUT -H &quot;Authorization: token=$auth_token&quot; &quot;&lt;dcos_url&gt;/service/kafka/v1/plan?cmd=continue&quot;
+PUT &lt;dcos_url&gt;/service/kafka/v1/continue HTTP/1.1
+
+{
+    &quot;Result&quot;: &quot;Received cmd: continue&quot;
+}
+</code></pre>
+<p>After you execute the continue operation, you will be see the following code block:</p>
+<pre><code class="language-bash">curl -H &quot;Authorization: token=$auth_token&quot; &quot;&lt;dcos_url&gt;/service/kafka/v1/plan&quot;
+GET &lt;dcos_url&gt;/service/kafka/v1/plan HTTP/1.1
+
+{
+    &quot;phases&quot;: [
+    {
+        &quot;id&quot;: &quot;9f8927de-d0df-4f72-bd0d-55e3f2c3ab21&quot;,
+        &quot;name&quot;: &quot;Reconciliation&quot;,
+        &quot;steps&quot;: [
+        {
+            &quot;id&quot;: &quot;2d137273-249b-455e-a65c-3c83228890b3&quot;,
+            &quot;status&quot;: &quot;COMPLETE&quot;,
+            &quot;name&quot;: &quot;Reconciliation&quot;,
+            &quot;message&quot;: &quot;Reconciliation complete&quot;
+        }
+        ],
+        &quot;status&quot;: &quot;COMPLETE&quot;
+    },
+    {
+        &quot;id&quot;: &quot;a7742963-f7e1-4640-8bd0-2fb28dc04045&quot;,
+        &quot;name&quot;: &quot;Update to: 6092e4ec-8ffb-49eb-807b-877a85ef8859&quot;,
+        &quot;steps&quot;: [
+        {
+            &quot;id&quot;: &quot;b4453fb0-b4cc-4996-a05c-762673f75e6d&quot;,
+            &quot;status&quot;: &quot;IN_PROGRESS&quot;,
+            &quot;name&quot;: &quot;broker-0&quot;,
+            &quot;message&quot;: &quot;Broker-0 is IN_PROGRESS&quot;
+        },
+        {
+            &quot;id&quot;: &quot;b8a8de9f-8758-4d0f-b785-0a38751a2c94&quot;,
+            &quot;status&quot;: &quot;WAITING&quot;,
+            &quot;name&quot;: &quot;broker-1&quot;,
+            &quot;message&quot;: &quot;Broker-1 is WAITING&quot;
+        },
+        {
+            &quot;id&quot;: &quot;49e85522-1bcf-4edb-9456-712e8a537dbc&quot;,
+            &quot;status&quot;: &quot;PENDING&quot;,
+            &quot;name&quot;: &quot;broker-2&quot;,
+            &quot;message&quot;: &quot;Broker-2 is PENDING&quot;
+        }
+        ],
+        &quot;status&quot;: &quot;IN_PROGRESS&quot;
+    }
+    ],
+    &quot;errors&quot;: [],
+    &quot;status&quot;: &quot;IN_PROGRESS&quot;
+}
+</code></pre>
+<p>If you enter <code>continue</code> a second time, the rest of the plan will be executed without further interruption. If you want to interrupt a configuration update that is in progress, enter the <code>interrupt</code> command:</p>
+<pre><code class="language-bash">curl -X PUT -H &quot;Authorization: token=$auth_token&quot;  &quot;&lt;dcos_url&gt;/service/kafka/v1/plan?cmd=interrupt&quot;
+PUT &lt;dcos_url&gt;/service/kafka/v1/interrupt HTTP/1.1
+
+{
+    &quot;Result&quot;: &quot;Received cmd: interrupt&quot;
+}
+</code></pre>
+<p class="message--warning"><strong>WARNING: </strong>The interrupt command cannot terminate a step that is `InProgress`, but it will stop the change on the subsequent steps.</p>
+<h1 id="configuration-options"><a class="content__anchor" href="#configuration-options" aria-hidden="true"><i data-feather="bookmark"></i></a>Configuration Options</h1>
+<p>The following describes the most commonly used features of the Kafka service and how to configure them via the DC/OS CLI and from the DC/OS web interface. View the <a href="https://github.com/mesosphere/universe/tree/version-3.x/repo/packages/K/kafka/39">default <code>config.json</code> in DC/OS Universe</a> to see all possible configuration options.</p>
+<h2 id="service-name"><a class="content__anchor" href="#service-name" aria-hidden="true"><i data-feather="bookmark"></i></a>Service Name</h2>
+<p>A Service Name is the name of the Kafka instance in DC/OS. This is an option that cannot be changed once the Kafka cluster is started: it can only be configured via the DC/OS CLI <code>--options</code> flag when the Kafka instance is created.</p>
+<ul>
+<li><strong>In DC/OS CLI options.json</strong>: <code>name</code>: string (default: <code>kafka</code>)</li>
+<li><strong>DC/OS web interface</strong>: The service name cannot be changed after the cluster has started.</li>
+</ul>
+<h2 id="kill-grace-period"><a class="content__anchor" href="#kill-grace-period" aria-hidden="true"><i data-feather="bookmark"></i></a>Kill Grace Period</h2>
+<p>The kill grace period is the number of seconds each broker has to cleanly shut
+down in response to SIGTERM. If a broker exceeds this time, it will be killed.
+Use the <code>brokers.kill_grace_period</code> configuration option to set a kill grace period.</p>
+<p>The graceful shutdown feature is especially important for large-scale deployments.
+Use the graceful shutdown configuraiton option to provide the broker sufficient
+time during shutdown. This ensure that all in-memory data is flushed to disk and
+all state is replicated. When a broker has sufficient time to shut down, the
+subsequent restart will be nearly as fast as the first startup. This is a large
+contributor to the Kafka service’s high availability.</p>
+<p>You can observe the graceful shutdown feature via the following log entries:</p>
+<ol>
+<li>The task launch log line contains <code>kill_policy { grace_period { nanoseconds: 30000000000 } }</code>.</li>
+<li>The task graceful shutdown log line contains SIGTERM as well as the grace time granted.</li>
+<li>The underlying Kafka logging of shutdown operations includes a stream of subsystem shutdowns prior to the overarching system
+shutdown indicated by the entry <code>[Kafka Server 1], shut down completed (kafka.server.KafkaServer)</code>.</li>
+<li>The presence (or not) of a SIGKILL log line indicating that the underlying Kafka broker did not shutdown cleanly within the
+allotted grace period.</li>
+<li>The task status update marked by <code>TASK_KILLED</code>, indicating the end of the shutdown activity.</li>
+</ol>
+<h2 id="broker-count"><a class="content__anchor" href="#broker-count" aria-hidden="true"><i data-feather="bookmark"></i></a>Broker Count</h2>
+<p>Configure the number of brokers running in a given Kafka cluster. The default count at installation is three brokers. This number may be increased, but not decreased, after installation.</p>
+<ul>
+<li><strong>In DC/OS CLI options.json</strong>: <code>broker-count</code>: integer (default: <code>3</code>)</li>
+<li><strong>DC/OS web interface</strong>: <code>BROKER_COUNT</code>: <code>integer</code></li>
+</ul>
+<h2 id="broker-port"><a class="content__anchor" href="#broker-port" aria-hidden="true"><i data-feather="bookmark"></i></a>Broker Port</h2>
+<p>Configure the port number that the brokers listen on. If the <code>brokers.port</code> is set to a particular value, this will be the port used by all brokers. Note that this requires that <code>placement-strategy</code> be set to <code>NODE</code> to take effect, since having every broker listening on the same port requires that they be placed on different hosts. By default the port is set to <code>0</code> indicating that each Broker will have a random port from the port range offered by the Mesos Agent between <code>1025</code> and <code>32000</code></p>
+<ul>
+<li><strong>In DC/OS CLI options.json</strong>: <code>brokers.port</code>: integer (default: <code>0</code>)</li>
+<li><strong>DC/OS web interface</strong>: <code>Port</code>: <code>integer</code></li>
+</ul>
+<p>Apache Kafka brokers also get assigned a VIP hostname for load-balancing purposes. This VIP is <code>broker.&lt;SERVICE_NAME&gt;.l4lb.thisdcos.directory:9092</code>, where <code>&lt;SERVICE_NAME&gt;</code> is the service name you have provided when creating the Kafka cluster. By default the <code>&lt;SERVICE_NAME&gt;</code> is <code>kafka</code>, so, by default, the VIP is <code>broker.kafka.l4lb.thisdcos.directory:9092</code>.</p>
+<p>When <code>security.transport_encryption.enabled</code> is <code>true</code> the VIP hostname uses the port <code>9093</code></p>
+<h2 id="configure-broker-placement-strategy"><a class="content__anchor" href="#configure-broker-placement-strategy" aria-hidden="true"><i data-feather="bookmark"></i></a>Configure Broker Placement Strategy <!-- replace this with a discussion of PLACEMENT_CONSTRAINTS? --></h2>
+<p><code>ANY</code> allows brokers to be placed on any node with sufficient resources, while <code>NODE</code> ensures that all brokers within a given Kafka cluster are never colocated on the same node. This is an option that cannot be changed once the Kafka cluster is started: it can only be configured via the DC/OS CLI <code>--options</code> flag when the Kafka instance is created.</p>
+<ul>
+<li><strong>In DC/OS CLI options.json</strong>: <code>placement-strategy</code>: <code>ANY</code> or <code>NODE</code> (default: <code>ANY</code>)</li>
+<li><strong>DC/OS web interface</strong>: <code>PLACEMENT_STRATEGY</code>: <code>ANY</code> or <code>NODE</code></li>
+</ul>
+<h2 id="configure-kafka-broker-properties"><a class="content__anchor" href="#configure-kafka-broker-properties" aria-hidden="true"><i data-feather="bookmark"></i></a>Configure Kafka Broker Properties</h2>
+<p>Kafka Brokers are configured through settings in a server.properties file deployed with each Broker. The settings here can be specified at installation time or during a post-deployment configuration update. They are set in the DC/OS Universe’s config.json as options such as:</p>
+<pre><code class="language-json">    &quot;log_retention_hours&quot;: {
+        &quot;title&quot;: &quot;log.retention.hours&quot;,
+        &quot;description&quot;: &quot;Override log.retention.hours: The number of hours to keep a log file before deleting it (in hours), tertiary to log.retention.ms property&quot;,
+        &quot;type&quot;: &quot;integer&quot;,
+        &quot;default&quot;: 168
+    },
+</code></pre>
+<p>The defaults can be overridden at install time by specifying an options.json file with the following format:</p>
+<pre><code class="language-json">    {
+        &quot;kafka&quot;: {
+            &quot;log_retention_hours&quot;: 100
+        }
+    }
+</code></pre>
+<p>These same values are also represented as environment variables for the scheduler in the form <code>KAFKA_OVERRIDE_LOG_RETENTION_HOURS</code> and may be modified through the DC/OS web interface and deployed during a rolling upgrade as described in <a href="#changing-configuration-at-runtime">changing configuration at runtime</a>.</p>
+<p><a name="disk-type"></a></p>
+<h2 id="disk-type"><a class="content__anchor" href="#disk-type" aria-hidden="true"><i data-feather="bookmark"></i></a>Disk Type</h2>
+<p>The type of disks that can be used for storing broker data are: <code>ROOT</code> (default) and <code>MOUNT</code>.  The type of disk may only be specified at install time.</p>
+<ul>
+<li><code>ROOT</code>: Broker data is stored on the same volume as the agent work directory. Broker tasks will use the configured amount of disk space.</li>
+<li><code>MOUNT</code>: Broker data will be stored on a dedicated volume attached to the agent. Dedicated MOUNT volumes have performance advantages and a disk error on these MOUNT volumes will be correctly reported to Kafka.</li>
+</ul>
+<p>Configure Kafka service to use dedicated disk volumes, as follows:</p>
+<ul>
+<li><strong>DC/OS cli options.json</strong>:</li>
+</ul>
+<pre><code class="language-json">    {
+        &quot;brokers&quot;: {
+            &quot;disk_type&quot;: &quot;MOUNT&quot;
+        }
+    }
+</code></pre>
+<ul>
+<li><strong>DC/OS web interface</strong>: Set the environment variable <code>DISK_TYPE</code>: <code>MOUNT</code></li>
+</ul>
+<p>When configured to <code>MOUNT</code> disk type, the scheduler selects a disk on an agent whose capacity is equal to or greater than the configured <code>disk</code> value.</p>
+<h2 id="jvm-heap-size"><a class="content__anchor" href="#jvm-heap-size" aria-hidden="true"><i data-feather="bookmark"></i></a>JVM Heap Size</h2>
+<p>Kafka service allows configuration of JVM Heap Size for the broker JVM process. Use the following configuration options:</p>
+<pre><code class="language-json">    {
+        &quot;brokers&quot;: {
+            &quot;heap&quot;: {
+                &quot;size&quot;: 2000
+            }
+        }
+    }
+</code></pre>
+<ul>
+<li><strong>DC/OS web interface</strong>: Set the environment variable <code>BROKER_HEAP_MB</code>: <code>2000</code></li>
+</ul>
+<p class="message--note"><strong>NOTE: </strong>The total memory allocated for the Mesos task is specified by the <code>BROKER_MEM</code> configuration parameter. The value for <code>BROKER_HEAP_MB</code> should not be greater than <code>BROKER_MEM</code> value. Also, if <code>BROKER_MEM</code> is greater than <code>BROKER_HEAP_MB</code> then the Linux operating system will use <code>BROKER_MEM</code> - <code>BROKER_HEAP_MB</code> for [PageCache](https://en.wikipedia.org/wiki/Page_cache).</p>
+<h2 id="alternate-zookeeper"><a class="content__anchor" href="#alternate-zookeeper" aria-hidden="true"><i data-feather="bookmark"></i></a>Alternate ZooKeeper</h2>
+<p>By default the Kafka framework uses the ZooKeeper ensemble made available on the Mesos masters of a DC/OS cluster. You can configure an alternate ZooKeeper at install time.</p>
+<p>Use the following configuration options:</p>
+<ul>
+<li><strong>DC/OS CLI options.json</strong>:</li>
+</ul>
+<pre><code class="language-json">    {
+        &quot;kafka&quot;: {
+            &quot;kafka_zookeeper_uri&quot;: &quot;zookeeper.marathon.autoip.dcos.thisdcos.directory:2181&quot;
+        }
+    }
+</code></pre>
+<p>This configuration option cannot be changed after installation.</p>
+<h2 id="recovery-and-health-checks"><a class="content__anchor" href="#recovery-and-health-checks" aria-hidden="true"><i data-feather="bookmark"></i></a>Recovery and Health Checks</h2>
+<p>You can enable automated replacement of brokers and configure the circumstances under which they are replaced.</p>
+<h3 id="enable-broker-replacement"><a class="content__anchor" href="#enable-broker-replacement" aria-hidden="true"><i data-feather="bookmark"></i></a>Enable Broker Replacement</h3>
+<p>To enable automated replacement using the following options:</p>
+<ul>
+<li><strong>DC/OS CLI options.json</strong>:</li>
+</ul>
+<pre><code class="language-json">    {
+        &quot;enable_replacement&quot;:{
+            &quot;description&quot;:&quot;Enable automated replacement of Brokers. WARNING: May cause data loss. See documentation.&quot;,
+            &quot;type&quot;:&quot;boolean&quot;,
+            &quot;default&quot;:false
+        }
+    }
+</code></pre>
+<ul>
+<li><strong>DC/OS web interface</strong>: Set the environment variable <code>ENABLE_REPLACEMENT</code>: <code>true</code> to enable replacement.</li>
+</ul>
+<p class="message--warning"><strong>WARNING: </strong>The replacement mechanism is not aware of whether the broker has been destructively replaced with the latest copy of data. You may lose data depending on your replication policy, the degree, and duration of the permanent failures.</p>
+<p>The following configuration options control the circumstances under which a broker is replaced.</p>
+<h3 id="minumum-grace-period"><a class="content__anchor" href="#minumum-grace-period" aria-hidden="true"><i data-feather="bookmark"></i></a>Minumum Grace Period</h3>
+<p>Configure the minimum amount of time before a broker should be replaced.</p>
+<ul>
+<li><strong>DC/OS CLI options.json</strong>:</li>
+</ul>
+<pre><code class="language-json">    {
+        &quot;recover_in_place_grace_period_secs&quot;:{
+            &quot;description&quot;:&quot;The minimum amount of time (in minutes) which must pass before a Broker may be destructively replaced.&quot;,
+            &quot;type&quot;:&quot;number&quot;,
+            &quot;default&quot;:1200
+        }
+    }
+</code></pre>
+<ul>
+<li><strong>DC/OS web interface</strong>: Set the environment variable <code>RECOVERY_GRACE_PERIOD_SEC</code>: <code>1200</code></li>
+</ul>
+<h3 id="minumum-delay-between-replacements"><a class="content__anchor" href="#minumum-delay-between-replacements" aria-hidden="true"><i data-feather="bookmark"></i></a>Minumum Delay Between Replacements</h3>
+<p>Configure the minimum amount of time between broker replacements.</p>
+<pre><code class="language-json">    {
+        &quot;min_delay_between_recovers_secs&quot;:{
+            &quot;description&quot;:&quot;The minimum amount of time (in seconds) which must pass between destructive replacements of Brokers.&quot;,
+            &quot;type&quot;:&quot;number&quot;,
+            &quot;default&quot;:600
+        }
+    }
+</code></pre>
+<ul>
+<li><strong>DC/OS web interface</strong>: Set the environment variable <code>REPLACE_DELAY_SEC</code>: <code>600</code></li>
+</ul>
+<p>The following configurations control the health checks that determine when a broker has failed:</p>
+<h3 id="enable-health-check"><a class="content__anchor" href="#enable-health-check" aria-hidden="true"><i data-feather="bookmark"></i></a>Enable Health Check</h3>
+<p>Enable health checks on brokers.</p>
+<pre><code class="language-json">    {
+        &quot;enable_health_check&quot;:{
+            &quot;description&quot;:&quot;Enable automated detection of Broker failures which did not result in a Broker process exit.&quot;,
+            &quot;type&quot;:&quot;boolean&quot;,
+            &quot;default&quot;:true
+        }
+    }
+</code></pre>
+<ul>
+<li><strong>DC/OS web interface</strong>: Set the environment variable <code>ENABLE_BROKER_HEALTH_CHECK</code>: <code>true</code></li>
+</ul>
+<h3 id="health-check-delay"><a class="content__anchor" href="#health-check-delay" aria-hidden="true"><i data-feather="bookmark"></i></a>Health Check Delay</h3>
+<p>Set the amount of time before the health check begins.</p>
+<pre><code class="language-json">    {
+        &quot;health_check_delay_sec&quot;:{
+            &quot;description&quot;:&quot;The period of time (in seconds) waited before the health-check begins execution.&quot;,
+            &quot;type&quot;:&quot;number&quot;,
+            &quot;default&quot;:15
+        }
+    }
+</code></pre>
+<ul>
+<li><strong>DC/OS web interface</strong>: Set the environment variable <code>BROKER_HEALTH_CHECK_DELAY_SEC</code>: <code>15</code></li>
+</ul>
+<h3 id="health-check-interval"><a class="content__anchor" href="#health-check-interval" aria-hidden="true"><i data-feather="bookmark"></i></a>Health Check Interval</h3>
+<p>Set the interval between health checks.</p>
+<pre><code class="language-json">    {
+        &quot;health_check_interval_sec&quot;:{
+            &quot;description&quot;:&quot;The period of time (in seconds) between health-check executions.&quot;,
+            &quot;type&quot;:&quot;number&quot;,
+            &quot;default&quot;:10
+        }
+    }
+</code></pre>
+<ul>
+<li><strong>DC/OS web interface</strong>: Set the environment variable <code>BROKER_HEALTH_CHECK_INTERVAL_SEC</code>: <code>10</code></li>
+</ul>
+<h3 id="health-check-timeout"><a class="content__anchor" href="#health-check-timeout" aria-hidden="true"><i data-feather="bookmark"></i></a>Health Check Timeout</h3>
+<p>Set the time a health check can take to complete before it is considered a failed check.</p>
+<pre><code class="language-json">    {
+        &quot;health_check_timeout_sec&quot;:{
+            &quot;description&quot;:&quot;The duration (in seconds) allowed for a health-check to complete before it is considered a failure.&quot;,
+            &quot;type&quot;:&quot;number&quot;,
+            &quot;default&quot;:20
+        }
+    }
+</code></pre>
+<ul>
+<li><strong>DC/OS web interface</strong>: Set the environment variable <code>BROKER_HEALTH_CHECK_TIMEOUT_SEC</code>: <code>20</code></li>
+</ul>
+<h3 id="health-check-grace-period"><a class="content__anchor" href="#health-check-grace-period" aria-hidden="true"><i data-feather="bookmark"></i></a>Health Check Grace Period</h3>
+<p>Set the amount of time after the delay before health check failures count toward the maximum number of consecutive failures.</p>
+<pre><code class="language-json">    {
+        &quot;health_check_grace_period_sec&quot;:{
+            &quot;description&quot;:&quot;The period of time after the delay (in seconds) before health-check failures count towards the maximum consecutive failures.&quot;,
+            &quot;type&quot;:&quot;number&quot;,
+            &quot;default&quot;:10
+        }
+    }
+</code></pre>
+<ul>
+<li><strong>DC/OS web interface</strong>: Set the environment variable <code>BROKER_HEALTH_CHECK_GRACE_SEC</code>: <code>10</code></li>
+</ul>
+<h3 id="maximum-consecutive-health-check-failures"><a class="content__anchor" href="#maximum-consecutive-health-check-failures" aria-hidden="true"><i data-feather="bookmark"></i></a>Maximum Consecutive Health Check Failures</h3>
+<pre><code class="language-json">    {
+        &quot;health_check_max_consecutive_failures&quot;:{
+            &quot;description&quot;:&quot;The number of consecutive failures which cause a Broker process to exit.&quot;,
+            &quot;type&quot;:&quot;number&quot;,
+            &quot;default&quot;:3
+        }
+    }
+</code></pre>
+<ul>
+<li><strong>DC/OS web interface</strong>: Set the environment variable <code>BROKER_HEALTH_CHECK_MAX_FAILURES</code>: <code>3</code></li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#prerequisites">Prerequisites</a></li><li class="content__sections-item content__sections-item--h1"><a href="#types-of-installation-methods">Types of Installation Methods</a></li><li class="content__sections-item content__sections-item--h2"><a href="#default-installation">Default Installation</a></li><li class="content__sections-item content__sections-item--h2"><a href="#minimal-installation">Minimal Installation</a></li><li class="content__sections-item content__sections-item--h2"><a href="#custom-installation">Custom Installation</a></li><li class="content__sections-item content__sections-item--h2"><a href="#multiple-kafka-cluster-installation">Multiple Kafka cluster installation</a></li><li class="content__sections-item content__sections-item--h1"><a href="#changing-configuration-at-runtime">Changing Configuration at Runtime</a></li><li class="content__sections-item content__sections-item--h2"><a href="#configuration-update-rest-api">Configuration Update REST API</a></li><li class="content__sections-item content__sections-item--h1"><a href="#configuration-options">Configuration Options</a></li><li class="content__sections-item content__sections-item--h2"><a href="#service-name">Service Name</a></li><li class="content__sections-item content__sections-item--h2"><a href="#kill-grace-period">Kill Grace Period</a></li><li class="content__sections-item content__sections-item--h2"><a href="#broker-count">Broker Count</a></li><li class="content__sections-item content__sections-item--h2"><a href="#broker-port">Broker Port</a></li><li class="content__sections-item content__sections-item--h2"><a href="#configure-broker-placement-strategy">Configure Broker Placement Strategy</a></li><li class="content__sections-item content__sections-item--h2"><a href="#configure-kafka-broker-properties">Configure Kafka Broker Properties</a></li><li class="content__sections-item content__sections-item--h2"><a href="#disk-type">Disk Type</a></li><li class="content__sections-item content__sections-item--h2"><a href="#jvm-heap-size">JVM Heap Size</a></li><li class="content__sections-item content__sections-item--h2"><a href="#alternate-zookeeper">Alternate ZooKeeper</a></li><li class="content__sections-item content__sections-item--h2"><a href="#recovery-and-health-checks">Recovery and Health Checks</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

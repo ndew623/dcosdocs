@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>排空节点 - D2iQ Docs</title><meta name="description" content="排空活跃 DC/OS 群集中的代理节点"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.1/administering-clusters/draining-a-node">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/draining-a-node">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/draining-a-node">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/administering-clusters">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/sshcluster/">SSH 至节点</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/multiple-clusters/"><i data-feather="chevron-right"></i>多群集</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/locate-public-agent/">查找公共代理 IP</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/component-management/">组件管理</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/securing-your-cluster/">保护群集</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/backup-and-restore/"><i data-feather="chevron-right"></i>备份和恢复</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/managing-aws/">管理 AWS</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/package-registry/">包注册表</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/convert-agent-type/">转换代理节点类型</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/replacing-a-master-node/">替换管理节点</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/add-a-node/">添加代理节点</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/draining-a-node/">排空节点</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/delete-node/">关闭和停用节点</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/recovering-agent-disk-space/">恢复代理磁盘空间</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/licenses/"><i data-feather="chevron-right"></i>许可证</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">排空节点</h1></div><h4 class="content__header-description">排空活跃 DC/OS 群集中的代理节点</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/draining-a-node/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>您可以从活跃 DC/OS 群集中的代理节点排空任务，以便取下节点以进行维护或从群集中永久移除。节点可以排空，并且其进度可以通过 DC/OS CLI 或 UI 进行监控。</p>
+<p class="message--warning"><strong>警告：</strong>启动排空时，代理节点上运行的所有任务都将被关闭。请谨慎使用此功能！</p>
+<p class="message--warning"><strong>警告：</strong>当指定 <code>-停用</code> 选项时，节点上的所有本地持久数据将丢失！</p>
+<p>启动排空会导致目标代理节点上的所有任务立即收到关闭事件（假设代理节点目前可以访问）。如果代理节点无法访问，关闭事件的启动将被延迟，直到代理节点可再次被管理节点访问。当任务收到关闭事件时，将向任务发送一个 SIGTERM 信号以开始关闭进程。根据具体任务的行为，此信号可能足以将其终止。某些任务可能使用此信号来开始优雅终止的过程，这可能需要一些时间。延迟后，SIGKILL 信号将发送至任务，它会在任务仍运行时强行将其终止。SIGTERM 和 SIGKILL 信号之间的延迟取决于该任务的结束宽限期长短。如果没有为任务设置宽限期，将根据配置使用默认的数秒值。</p>
+<h3 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>先决条件：</h3>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/">已安装并配置 DC/OS CLI</a>。</li>
+<li>有足够 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/perms-reference">权限</a> 排空节点（仅限 Enterprise DC/OS）。</li>
+</ul>
+<h3 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>最大宽限期</h3>
+<p>排空时可以设置最大宽限期，它可对关闭宽限期的持续时间设置上限。进行此项设置时，在关闭任务时将使用最小的任务宽限期和最大宽限期。</p>
+<h3 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>排空后停用代理节点</h3>
+<p>某些情况下，例如随后缩小的自动缩放云实例，您可能知道在节点排空并取下之后，它永远不会再回来。每个代理节点都由其硬盘上的元数据唯一性标识，即使未来会扩展其他实例，如果它们不保留上一个实例的持续元数据，则会被 DC/OS 群集视为新节点。</p>
+<p>如果唯一代理节点在从群集中排空并移除之后不会返回，您可以指定一个选项，该选项将在完成排空后自动停用节点，这将从群集中删除代理节点的元数据。如果未指定此选项，群集将记住代理节点，以防它以后重新注册到群集中。</p>
+<h2 id="cli"><a class="content__anchor" href="#cli" aria-hidden="true"><i data-feather="bookmark"></i></a>使用 CLI 排空</h2>
+<p>要通过 DC/OS CLI 排空一个节点，首先应在下列命令输出的 <code>ID</code> 列找到该节点的 Mesos 代理节点 ID：</p>
+<pre><code class="language-bash">dcos node list
+</code></pre>
+<p>然后结合 <code>dcos node drain</code> 命令使用该 ID：</p>
+<pre><code class="language-bash">dcos node drain &lt;mesos-agent-id&gt;
+</code></pre>
+<p>可以指定最大宽限期和/或停用选项，例如：</p>
+<pre><code class="language-bash">dcos node drain &lt;mesos-agent-id&gt; --max-grace-period=10m --decommission
+</code></pre>
+<p>一旦代理节点开始排空，您便可以通过运行以下内容来监控该节点上的任务：</p>
+<pre><code class="language-bash">dcos task list --agent-id=&lt;mesos-agent-id&gt;
+</code></pre>
+<p>可以使用以下命令来监控节点上排空的总体进度：</p>
+<pre><code class="language-bash">dcos node list --mesos-id=&lt;mesos-agent-id&gt;
+</code></pre>
+<p>找到 <code>STATUS</code> 字段：节点的常规状态是 <code>ACTIVE</code>。在节点上启动排空时，它将转为 <code>DRAINING</code>。一旦所有任务关闭且终端状态更新已由相关服务确认，并且节点上的所有资源操作都完成后，它将转为 <code>DRAINED</code>。当节点处于 <code>DRAINED</code> 状态时，排空完成。</p>
+<p>如果 <code>--decommission</code> 选项包含在初始排空命令中，则在排空完成时，节点的元数据将自动从群集中移除。需要注意的是，停用节点还会导致该节点上的所有本地持久数据丢失。如果未指定停用选项，当任何计划内维护或其他更新程序完成时，群集将等待节点被手动重新激活。</p>
+<p>在执行维护前，应停止节点上的 <code>dcos-mesos-slave</code> systemd 单元（或 <code>dcos-mesos-slave-public</code> 对于公共代理），使代理节点不再尝试向管理节点注册：</p>
+<pre><code class="language-bash">systemctl stop dcos-mesos-slave
+</code></pre>
+<h2 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>维护后重新激活代理节点</h2>
+<p>维护完成后，您已准备好重新激活节点并允许其重新加入群集时，可以使用以下命令完成此操作：</p>
+<pre><code class="language-bash">dcos node reactivate &lt;mesos-agent-id&gt;
+</code></pre>
+<p>在节点上执行以下命令，启动 <code>dcos-mesos-slave</code> systemd 单元（或 <code>dcos-mesos-slave-public</code> 对于公共代理），代理将重新加入群集：</p>
+<pre><code class="language-bash">systemctl start dcos-mesos-slave
+</code></pre>
+<h2 id="ui"><a class="content__anchor" href="#ui" aria-hidden="true"><i data-feather="bookmark"></i></a>通过 UI 监控排空情况</h2>
+<p>还可以通过 DC/OS UI 来监控代理节点的排空情况。要这样做，请导航到 <code>Nodes</code>“概览”窗格。<code>Status</code> 列将列出 <code>Active</code>、<code>Draining</code> 或 <code>Drained</code>，与 CLI 的 <code>node list</code> 命令输出相似。</p>
+<h2 id="-5"><a class="content__anchor" href="#-5" aria-hidden="true"><i data-feather="bookmark"></i></a>关于节点排空的注释</h2>
+<p>排空在代理节点上启动后将无法取消。应谨慎使用此命令，尤其是通过 <code>--decommission</code> 选项执行时，因为这会导致在排空完成后，节点永久从群集中移除。</p>
+<p>如果某个节点卡在 <code>DRAINING</code> 状态并且在经过预计持续时间（<code>--max-grace-period</code> 自变量中规定的持续时间，或节点上运行的任务的最长关闭宽限期）之后未过渡到 <code>DRAINED</code>，则应检查节点以确定原因。节点处于 <code>DRAINING</code> 状态后，无需再次发出 <code>dcos node drain</code> 命令，因为这无效。如果节点上的所有任务都已终止，则可能相关服务尚未确认终端任务状态更新，或者该节点上的资源操作未完成。为排除前者，应检查在节点上运行任务的相关服务，并确保它们正在运行且可用。您可以列出节点上的任务，以确定哪些服务可能尚未确认其终端更新：</p>
+<pre><code class="language-bash">dcos task list --agent-id=&lt;mesos-agent-id&gt;
+</code></pre>
+<p>为排除后者，可在代理节点上使用 <a href="http://mesos.apache.org/documentation/latest/operator-http-api/#get_operations-1"><code>GET_OPERATIONS</code></a> 调用，以检查当前未完成的资源操作。如果资源操作仍处于 <code>Pending</code> 状态，则该操作可能长时间运行，需要一些时间来完成，或者由于实际执行该操作的存储后端存在某些问题而会被卡住。</p>
+<h2 id="-6"><a class="content__anchor" href="#-6" aria-hidden="true"><i data-feather="bookmark"></i></a>手动排空代理节点</h2>
+<p>虽然上述自动排空程序很可能适用于大多数使用情形，但是当需要对排空过程有更大控制时，也可以手动排空节点。为此，首先取消激活该节点：</p>
+<pre><code class="language-bash">dcos node deactivate &lt;mesos-agent-id&gt;
+</code></pre>
+<p>这将停止在该代理节点上启动任何新工作负载。此时，个别服务公开的 API 可用于关闭节点上运行的任何任务。例如，对于通过 DC/OS UI 启动的典型应用程序和 pod，<a href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/marathon-api/">Marathon 容器编排器的 API</a> 可用于终止相关任务。关闭节点上的所有任务后，可以取下节点进行维护，然后在维护完成后再重新激活：</p>
+<pre><code class="language-bash">dcos node reactivate &lt;mesos-agent-id&gt;
+</code></pre>
+<h2 id="dcos"><a class="content__anchor" href="#dcos" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS 控制台中的排空</h2>
+<p>要排空节点，使用 DC/OS 基于 Web 的控制台：</p>
+<ol>
+<li>
+<p>打开网页浏览器并使用管理用户名和密码登录。</p>
+</li>
+<li>
+<p>单击“节点”显示关于代理节点的信息。</p>
+</li>
+<li>
+<p>向右滚动以显示要排空的活动节点的操作菜单。</p>
+</li>
+<li>
+<p>单击“排空”，将显示一个对话框。</p>
+<p>最大宽限期可在排空对话框中指定。这表示任务正常终止所允许的最长时间，并覆盖默认值数秒。</p>
+</li>
+</ol>
+  <p>
+    <img src="/dcosdocs/mesosphere/dcos/2.1/img/draining-ui-actions.png" alt="Draining or deactivating a node">
+  </p>
+<p>节点概述中的状态列将更改以反映节点的维护状态。</p>
+<h2 id="-7"><a class="content__anchor" href="#-7" aria-hidden="true"><i data-feather="bookmark"></i></a>停用节点</h2>
+<p>排空节点时，在排空完成后，您可以选择 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/delete-node/">停用</a> 它。</p>
+<p class="message--important"><strong>重要信息：</strong>如果在排空时启用了“停用”选项，节点将全部从节点概览表中删除，并且无法重新加入群集</p>
+<h2 id="-8"><a class="content__anchor" href="#-8" aria-hidden="true"><i data-feather="bookmark"></i></a>停用/重新激活节点以进行手动排空</h2>
+<p>也可以使用操作菜单 <a href="#draining-an-agent-node-manually">停用节点</a> 以进行手动排空。当维护完成且已准备好重新激活该节点并允许其重新加入群集时，请从菜单中单击“重新激活”操作：</p>
+<p>
+  <img src="/dcosdocs/mesosphere/dcos/2.1/img/draining-ui-reactivate.png" alt="Reactivating a node">
+</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#cli">使用 CLI 排空</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-4">维护后重新激活代理节点</a></li><li class="content__sections-item content__sections-item--h2"><a href="#ui">通过 UI 监控排空情况</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-5">关于节点排空的注释</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-6">手动排空代理节点</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos">DC/OS 控制台中的排空</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-7">停用节点</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-8">停用/重新激活节点以进行手动排空</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

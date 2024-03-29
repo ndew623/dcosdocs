@@ -1,0 +1,200 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>服务端口 - D2iQ Docs</title><meta name="description" content="使用虚拟 IP 管理服务端口"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/1.13/deploying-services/service-ports">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/service-ports">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/service-ports">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/service-ports">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/marathon-parameters/">Marathon 配置参考</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/install/">安装服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/task-handling/"><i data-feather="chevron-right"></i>任务处理</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/creating-services/"><i data-feather="chevron-right"></i>创建服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/config-universe-service/">配置服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/marathon-constraints/">Marathon 布局约束</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/scale-service/">扩展服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/service-groups/">授权访问服务和组</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/fault-domain-awareness/">故障域感知和容量扩展</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/update-user-service/">更新用户创建的服务</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/service-ports/">服务端口</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/service-endpoints/">服务端点</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/monitor-services/">监控服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/private-docker-registry/">使用专用 Docker 注册表</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/expose-service/">公开服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/deployments/">部署</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/uninstall/">卸载服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/package-api/">包管理 API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/marathon-on-marathon/"><i data-feather="chevron-right"></i>使用自定义 Marathon</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/marathon-api/">Marathon  API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/containerizers/"><i data-feather="chevron-right"></i>使用容器化工具</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/pods/"><i data-feather="chevron-right"></i>Pod</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/multi-tenancy-primitives/">多租户原始文件</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/gpu/">使用 GPU</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/faq/">常见问题</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">服务端口</h1></div><h4 class="content__header-description">使用虚拟 IP 管理服务端口</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/service-ports/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>可以使用 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/networking/load-balancing-vips/virtual-ip-addresses/">虚拟地址 (VIP)</a> 简化端口管理工作。VIP 简化了应用间通信，并实施可靠的服务导向型架构。VIP 将流量从单个虚拟地址映射到多个 IP 地址和端口。</p>
+<h1 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>定义</h1>
+<p><strong>containerPort</strong>：容器端口指定容器内的端口。只有在使用 <code>BRIDGE</code> 或 <code>USER</code> 模式构建具有 Docker 容器的网络时，才需要在端口映射中加入该定义。</p>
+<p><strong>hostPort</strong>：主机端口指定要绑定到的主机上的端口。在使用 <code>BRIDGE</code> 或 <code>USER</code> 模式构建网络时，您将端口映射从主机端口指定到容器端口。在 <code>HOST</code> 构建网络时，请求的端口默认为主机端口。请注意，只有主机端口可通过环境变量供任务使用。</p>
+<p><strong>BRIDGE networking</strong>：用于指定 <code>BRIDGE</code> 模式网络的 Docker 应用程序。在这一模式下，容器端口会被映射到主机端口。在这一模式下，应用程序绑定到容器内的指定端口，Docker 网络则被绑定到主机上的指定端口。</p>
+<p><strong>USER networking</strong>：用于指定 <code>USER</code> 模式网络的 Docker 应用程序。在这一模式下，容器端口会被映射到主机端口。在这一模式下，应用程序绑定到容器内的指定端口，Docker 网络则被绑定到主机上的指定端口。 <code>USER</code> 在与“用户定义”Docker 网络集成时，预计网络模式会很实用。在 Mesos 领域，通常可通过与 Mesos CNI 网络隔离器配合使用的 CNI 插件访问该网络。</p>
+<p><strong>HOST networking</strong>：用于非 Docker Marathon 应用程序和使用 <code>HOST</code> 模式网络的 Docker 应用程序。在这一模式下，应用程序直接绑定到主机上的一个或多个端口。</p>
+<p><strong>portMapping</strong>：在 Docker <code>BRIDGE</code> 模式下，能够从容器外访问的所有端口都需要进行端口映射。端口映射是一个包含主机端口、容器端口、服务端口和协议的元组。可为 Marathon 应用指定多端口映射；未指定的 <code>hostPort</code> 默认为 <code>0</code> （表示 Marathon 会随机分配该值）。在 Docker <code>USER</code> 模式下，<code>hostPort</code> 的语义稍有变化：<code>hostPort</code> 模式不需要 <code>USER</code>，并且如果未指定，Marathon 也不会随机自动分配该值。这样可以将容器部署于 <code>USER</code> 包含 <code>containerPort</code> 和发现信息的网络，但请勿在主机网络上披露这些端口（并且暗示不会占用主机端口资源）。</p>
+<p><strong>ports</strong>：端口阵列用于定义在 <code>HOST</code> 模式下应被视为包含在资源供应中的端口 。仅在未指定端口映射时才需要端口。一个应用只能定义 ports 和 portDefinitions 两者中的一个。</p>
+<p><strong>portDefinitions</strong>：portDefinitions 阵列用于定义应被视为资源供应一部分的端口。只有在您正在使用 <code>HOST</code> 网络且未指定端口映射时，才有必要定义这一阵列。此阵列用于替换端口阵列，并且可以指定端口名称、协议和标签。一个应用只能定义 ports 和 portDefinitions 两者中的一个。</p>
+<p><strong>protocol</strong>：协议指定为端口指定互联网协议（例如，<code>tcp</code>、 <code>udp</code> 或同时用于两者的 <code>udp,tcp</code> 只有在使用 <code>BRIDGE</code> 或 <code>USER</code> 模式构建具有 Docker 容器的网络时，才需要在端口映射中加入该定义。</p>
+<p><strong>requirePorts</strong>：requirePorts 属性可指定 Marathon 是否应在其收到的资源供应中专门寻找指定端口。这能确保可以将这些端口免费绑定在 Mesos 代理节点上。该属性不适用于 <code>BRIDGE</code> 或 <code>USER</code> 模式网络。</p>
+<p><strong>servicePort</strong>：在 Marathon 中（通过 REST API 或前端）创建新应用程序时，可以为它分配一个或多个服务端口。可以指定所有有效的端口数作为服务端口，也可以使用 0 表示 Marathon 应自动分配免费服务端口。如果的确选择了自己的服务端口，就必须确保该端口在所有应用程序中都是唯一的。</p>
+<h1 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>随机端口分配</h1>
+<p>使用 <code>0</code> 值设置任何端口，都会告知 Marathon 您希望获得随机分配的端口。但是，如果 <code>containerPort</code> 中的 <code>0</code> 设置为 <code>portMapping</code>，则将该值设置为与 <code>hostPort</code>. 相同的值。</p>
+<h1 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>环境变量</h1>
+<p>每个 <strong>host port</strong> 值都通过环境变量 <code>$PORT0</code>、<code>$PORT1</code> 等披露给正在运行的应用实例。每个 Marathon 应用程序默认获得单个端口，所以 <code>$PORT0</code> 始终可用。在 Marathon 运行的 Docker 容器内也可以使用这些变量。此外，命名为 <code>NAME</code> 的端口也可通过环境变量 <code>$PORT_NAME</code>. 进行访问。</p>
+<p>使用 <code>BRIDGE</code> 或 <code>USER</code> 模式网络时，务必将应用程序绑定到 <code>containerPort</code> 中指定的  <code>portMapping</code> 但是，如果已将 <code>containerPort</code> 设置为 0，就与 <code>hostPort</code> 相同，而且可以使用 <code>$PORT</code> 环境变量。</p>
+<h1 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>示例配置</h1>
+<h2 id="-5"><a class="content__anchor" href="#-5" aria-hidden="true"><i data-feather="bookmark"></i></a>主机模式</h2>
+<p>主机模式网络是 Docker 容器的默认网络模式，也是非 Docker 应用程序的唯一网络模式。请注意，不需要在 Dockerfile 中 <code>EXPOSE</code> （披露）端口。</p>
+<h3 id="-6"><a class="content__anchor" href="#-6" aria-hidden="true"><i data-feather="bookmark"></i></a>启用主机模式</h3>
+<p>容器默认启用主机模式。若要做到明确，也可以通过 <code>network</code> 属性手动指定：</p>
+<pre><code class="language-json">  &quot;container&quot;: {
+    &quot;type&quot;: &quot;DOCKER&quot;,
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;my-image:1.0&quot;,
+      &quot;network&quot;: &quot;HOST&quot;
+    }
+  },
+</code></pre>
+<p>无需为非 Docker 应用程序指定任何内容。</p>
+<h3 id="-7"><a class="content__anchor" href="#-7" aria-hidden="true"><i data-feather="bookmark"></i></a>指定端口</h3>
+<p>可通过 <code>ports</code> 阵列指定可用端口：</p>
+<pre><code class="language-json">    &quot;ports&quot;: [
+        0, 0, 0
+    ],
+</code></pre>
+<p>或通过 <code>portDefinitions</code> 阵列指定：</p>
+<pre><code class="language-json">    &quot;portDefinitions&quot;: [
+      {&quot;port&quot;: 0}, {&quot;port&quot;: 0}, {&quot;port&quot;: 0}
+    ],
+</code></pre>
+<p>在此示例中，我们指定了三个随机分配的主机端口，制定后即可通过环境变量 <code>$PORT0</code>、<code>$PORT1</code> 和 <code>$PORT2</code>. 用于我们的命令。除了这三个主机端口外， Marathon 还会随机分配三个服务端口。</p>
+<p>还可以指定特定的服务端口：</p>
+<pre><code class="language-json">    &quot;ports&quot;: [
+        2001, 2002, 3000
+    ],
+</code></pre>
+<p>或：</p>
+<pre><code class="language-json">    &quot;portDefinitions&quot;: [
+        {&quot;port&quot;: 2001}, {&quot;port&quot;: 2002}, {&quot;port&quot;: 3000}
+    ],
+</code></pre>
+<p>此时，主机端口 <code>$PORT0</code>、<code>$PORT1</code> 和 <code>$PORT3</code> 继续接受随机分配。然而，此应用程序的三个服务端口现在是 <code>2001</code>、<code>2002</code> 和 <code>3000</code>. 与之前的示例一样，必须使用 HAProxy 等服务发现解决方案，从服务端口到主机端口的代理请求。如果您希望应用程序服务端口等同于其主机端口，可以将 <code>requirePorts</code> 设置为 <code>true</code> （<code>requirePorts</code> 默认为 <code>false</code> 这会告诉 Marathon 仅在有这些端口可用的代理上安排此应用程序：</p>
+<pre><code class="language-json">    &quot;ports&quot;: [
+        2001, 2002, 3000
+    ],
+    &quot;requirePorts&quot; : true
+</code></pre>
+<p>服务端口和主机端口（包括环境变量 <code>$PORT0</code>、 <code>$PORT1</code> 和 <code>$PORT2</code>）现在都是 <code>2001</code>、 <code>2002</code> 和 <code>3000</code>. 如果不使用服务发现解决方案来从服务端口到主机端口代理请求，则此属性非常有用。</p>
+<p>定义 <code>portDefinitions</code> 阵列帮助您为每个端口指定协议、名称和标签。启动
+新任务时， Marathon 会把这个元数据传递给 Mesos。Mesos 会在任务的 <code>discovery</code> 字段披露
+这一信息。自定义网络发现解决方案可以占用此字段。</p>
+<p>请求动态 <code>tcp</code> 端口的示例，名称为 <code>http</code>，标签 <code>VIP_0</code> 设置为 <code>10.0.0.1:80</code>:</p>
+<pre><code class="language-json">    &quot;portDefinitions&quot;: [
+        {
+            &quot;port&quot;: 0,
+            &quot;protocol&quot;: &quot;tcp&quot;,
+            &quot;name&quot;: &quot;http&quot;,
+            &quot;labels&quot;: {&quot;VIP_0&quot;: &quot;10.0.0.1:80&quot;}
+        }
+    ],
+</code></pre>
+<p><code>port</code> 字段为必填字段。<code>protocol``name</code> 和 <code>labels</code> 字段为可选字段。仅设置了
+<code>port</code> 字段的端口定义相当于 <code>ports</code> 阵列的一个元素。</p>
+<p>请注意， 只有 <code>ports</code> 阵列和 <code>portDefinitions</code> 阵列不应同时指定，除非其所有
+都相等。</p>
+<h3 id="-8"><a class="content__anchor" href="#-8" aria-hidden="true"><i data-feather="bookmark"></i></a>引用端口</h3>
+<p>可以引用 Dockerfile 中的主机端口，用于如下虚拟应用程序：</p>
+<pre><code class="language-sh">CMD ./my-app --http-port=$PORT0 --https-port=$PORT1 --monitoring-port=$PORT2
+</code></pre>
+<p>或者，如果在 Marathon 应用定义中不使用 Docker 或已经指定 <code>cmd</code>，则其原理相同：</p>
+<pre><code class="language-json">    &quot;cmd&quot;: &quot;./my-app --http-port=$PORT0 --https-port=$PORT1 --monitoring-port=$PORT2&quot;
+</code></pre>
+<h2 id="-9"><a class="content__anchor" href="#-9" aria-hidden="true"><i data-feather="bookmark"></i></a>桥接模式</h2>
+<p>桥接模式网络帮助您将主机端口映射到容器内的端口，并且仅适用于 Docker 容器。如果您使用的容器镜像具有无法修改的固定端口分配，这一模式就会特别有用。请注意，不需要在 Dockerfile 中 <code>EXPOSE</code> （披露）端口。</p>
+<h3 id="-10"><a class="content__anchor" href="#-10" aria-hidden="true"><i data-feather="bookmark"></i></a>启用桥接模式</h3>
+<p>需要通过 <code>network</code> 属性指定桥接模式：</p>
+<pre><code class="language-json">  &quot;container&quot;: {
+    &quot;type&quot;: &quot;DOCKER&quot;,
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;my-image:1.0&quot;,
+      &quot;network&quot;: &quot;BRIDGE&quot;
+    }
+  },
+</code></pre>
+<h3 id="-11"><a class="content__anchor" href="#-11" aria-hidden="true"><i data-feather="bookmark"></i></a>启用用户模式</h3>
+<p>需要通过 <code>network</code> 属性指定用户模式：</p>
+<pre><code class="language-json">  &quot;container&quot;: {
+    &quot;type&quot;: &quot;DOCKER&quot;,
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;my-image:1.0&quot;,
+      &quot;network&quot;: &quot;USER&quot;
+    }
+  },
+  &quot;ipAddress&quot;: {
+    &quot;networkName&quot;: &quot;someUserNetwork&quot;
+  }
+</code></pre>
+<h3 id="-12"><a class="content__anchor" href="#-12" aria-hidden="true"><i data-feather="bookmark"></i></a>指定端口</h3>
+<p>端口映射类似于将 -p 传递到 Docker 命令行，并指定主机上与容器内的端口之间的关系。此时使用<code>portMappings</code> 阵列， <strong>而非</strong>在主机模式下使用的 <code>ports</code> 或 <code>portDefinitions</code> 阵列。</p>
+<p>在 <code>portMappings</code> 对象内为 <code>container</code>: 容器指定端口映射：</p>
+<pre><code class="language-json">&quot;networks&quot;: [
+      { &quot;mode&quot;: &quot;container/bridge&quot; }
+],
+&quot;container&quot;: {
+  &quot;type&quot;: &quot;DOCKER&quot;,
+  &quot;docker&quot;: {
+    &quot;image&quot;: &quot;my-image:1.0&quot;,
+  },
+  &quot;portMappings&quot;: [
+    { &quot;containerPort&quot;: 0, &quot;hostPort&quot;: 0 },
+    { &quot;containerPort&quot;: 0, &quot;hostPort&quot;: 0 },
+    { &quot;containerPort&quot;: 0, &quot;hostPort&quot;: 0 }
+  ]
+}
+</code></pre>
+<p>在本示例中，我们指定了 3 个映射。值为 0 时，会要求 Marathon 为  随机分配一个值。<code>hostPort</code>. 此时，将 <code>containerPort</code> 设置为 0 会使其具有与 <code>hostPort</code>. 相同的值。这些值可在容器内分别作为 <code>$PORT0</code>、 <code>$PORT1</code> 和 <code>$PORT2</code> 提供。</p>
+<p>另外，如果我们在容器中运行的流程有固定端口，就可能会执行如下操作：</p>
+<pre><code class="language-json">&quot;networks&quot;: [
+      { &quot;mode&quot;: &quot;container/bridge&quot; }
+],
+&quot;container&quot;: {
+  &quot;type&quot;: &quot;DOCKER&quot;,
+  &quot;docker&quot;: {
+    &quot;image&quot;: &quot;my-image:1.0&quot;
+  },
+  &quot;portMappings&quot;: [
+    { &quot;containerPort&quot;: 80, &quot;hostPort&quot;: 0 },
+    { &quot;containerPort&quot;: 443, &quot;hostPort&quot;: 0 },
+    { &quot;containerPort&quot;: 4000, &quot;hostPort&quot;: 0 }
+  ]
+}
+</code></pre>
+<p>此时， Marathon 将随机分配主机端口并将其映射到端口 <code>80</code>、 <code>443</code> 和 <code>4000</code> 必须注意 <code>$PORT</code> 变量指主机端口。此时， 将为第一次及后续映射设置 <code>$PORT0</code> 为 <code>hostPort</code></p>
+<h4 id="-13"><a class="content__anchor" href="#-13" aria-hidden="true"><i data-feather="bookmark"></i></a>指定协议</h4>
+<p>也可以为这些端口映射指定协议。默认为 <code>tcp</code>:</p>
+<pre><code class="language-json">&quot;networks&quot;: [
+  { &quot;mode&quot;: &quot;container/bridge&quot; }
+],
+&quot;container&quot;: {
+  &quot;type&quot;: &quot;DOCKER&quot;,
+  &quot;docker&quot;: {
+    &quot;image&quot;: &quot;my-image:1.0&quot;
+  },
+  &quot;portMappings&quot;: [
+    { &quot;containerPort&quot;: 80, &quot;hostPort&quot;: 0, &quot;protocol&quot;: &quot;tcp&quot; },
+    { &quot;containerPort&quot;: 443, &quot;hostPort&quot;: 0, &quot;protocol&quot;: &quot;tcp&quot; },
+    { &quot;containerPort&quot;: 4000, &quot;hostPort&quot;: 0, &quot;protocol&quot;: &quot;udp&quot; }
+  ]
+}
+</code></pre>
+<h4 id="-14"><a class="content__anchor" href="#-14" aria-hidden="true"><i data-feather="bookmark"></i></a>指定服务端口</h4>
+<p>Marathon 将默认为每个端口创建服务端口，并为其分配随机值。服务端口供服务发现解决方案使用，通常建议将这些端口设置为众所周知的值。可以通过为每个映射设置一个 <code>servicePort</code> 来实现：</p>
+<pre><code class="language-json">&quot;networks&quot;: [
+  { &quot;mode&quot;: &quot;container/bridge&quot; }
+],
+&quot;container&quot;: {
+  &quot;type&quot;: &quot;DOCKER&quot;,
+  &quot;docker&quot;: {
+    &quot;image&quot;: &quot;my-image:1.0&quot;
+  },
+  &quot;portMappings&quot;: [
+    { &quot;containerPort&quot;: 80, &quot;hostPort&quot;: 0, &quot;protocol&quot;: &quot;tcp&quot;, &quot;servicePort&quot;: 2000 },
+    { &quot;containerPort&quot;: 443, &quot;hostPort&quot;: 0, &quot;protocol&quot;: &quot;tcp&quot;, &quot;servicePort&quot;: 2001 },
+    { &quot;containerPort&quot;: 4000, &quot;hostPort&quot;: 0, &quot;protocol&quot;: &quot;udp&quot;, &quot;servicePort&quot;: 3000 }
+  ]
+}
+</code></pre>
+<p>在本示例中，主机端口 <code>$PORT0</code>、<code>$PORT1</code> 和 <code>$PORT3</code> 继续接受随机分配。但是此应用程序的服务端口现在为 <code>2001</code>、 <code>2002</code> 和 <code>3000</code>. HAProxy 等外部代理应配置为从服务端口路由到主机端口。</p>
+<h3 id="-15"><a class="content__anchor" href="#-15" aria-hidden="true"><i data-feather="bookmark"></i></a>引用端口</h3>
+<p>如果将 <code>containerPort</code> 设为 0，就应该在 Dockerfile 中为虚拟应用程序指定如下端口：</p>
+<pre><code class="language-sh">CMD ./my-app --http-port=$PORT0 --https-port=$PORT1 --monitoring-port=$PORT2
+</code></pre>
+<p>但是，如果已指定 <code>containerPort</code> 值，则只需在 Dockerfile 中使用相同的值：</p>
+<pre><code class="language-sh">CMD ./my-app --http-port=80 --https-port=443 --monitoring-port=4000
+</code></pre>
+<p>或者，可以在 Marathon 应用定义中指定 <code>cmd</code>，其原理和之前相同：</p>
+<pre><code class="language-json">    &quot;cmd&quot;: &quot;./my-app --http-port=$PORT0 --https-port=$PORT1 --monitoring-port=$PORT2&quot;
+</code></pre>
+<p>或者，如果使用了固定值：</p>
+<pre><code class="language-json">    &quot;cmd&quot;: &quot;./my-app --http-port=80 --https-port=443 --monitoring-port=4000&quot;
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#定义">定义</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-2">随机端口分配</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-3">环境变量</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-4">示例配置</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-5">主机模式</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-9">桥接模式</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

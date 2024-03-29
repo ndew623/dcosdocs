@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>在 Azure 上运行 DC/OS - D2iQ Docs</title><meta name="description" content="使用 Azure 资源管理器模板安装 DC/OS 群集"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.1/installing/evaluation">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/evaluation/community-supported-methods/azure">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/evaluation/community-supported-methods/azure">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/community-supported-methods/azure">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/"><i data-feather="chevron-right"></i>概述</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/"><i data-feather="chevron-right"></i>安装</a></li><ul><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/evaluation/"><i data-feather="chevron-right"></i>云安装</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/evaluation/aws/"><i data-feather="chevron-right"></i>AWS</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/evaluation/azure/"><i data-feather="chevron-right"></i>Azure</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/evaluation/gcp/"><i data-feather="chevron-right"></i>GCP</a></li><li class="active"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/evaluation/community-supported-methods/"><i data-feather="chevron-right"></i>其他安装方法</a></li><ul><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/evaluation/community-supported-methods/aws/"><i data-feather="chevron-right"></i>AWS</a></li><li class="active active-on"><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/evaluation/community-supported-methods/azure/">Azure</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/evaluation/community-supported-methods/packet/">Packet</a></li></ul></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/"><i data-feather="chevron-right"></i>本地安装</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/installation-faq/">常见问题</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/troubleshooting/">故障排除</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">在 Azure 上运行 DC/OS</h1><p class="badge badge--content-header badge--oss">OPEN SOURCE</p></div><h4 class="content__header-description">使用 Azure 资源管理器模板安装 DC/OS 群集</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.1/installing/evaluation/community-supported-methods/azure/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p class="message--warning"><strong>免责声明：</strong>这是社区推动的项目，未正式获得 Mesosphere 支持。这种安装方法用于快速演示和验证概念。本页面说明如何使用 Azure 资源管理器模板在 Azure 上安装 DC/OS 群集。该方法仅供参考，不推荐用于生产用途。下列安装方法不支持升级。</p>
+<p class="message--note"><strong>注意：</strong>联系<a href="https://groups.google.com/a/dcos.io/forum/#!forum/users">邮寄列表</a>或 <a href="http://chat.dcos.io/?_ga=2.226911897.58407594.1533244861-1110201164.1520633201">Slack 渠道</a>，获取社区支持。要获得有关 Azure Marketplace 相关问题的支持，请查看 <a href="https://docs.microsoft.com/en-us/azure/marketplace/support-azure-marketplace">Azure Marketplace 的支持选项</a>。</p>
+<h1 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>系统要求</h1>
+<h2 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>硬件</h2>
+<p>要使用 DC/OS 中提供的所有服务，您应该使用 <code>Standard_D2</code><a href="https://azure.microsoft.com/en-us/pricing/details/virtual-machines/">虚拟机</a> 选择至少五个 Mesos 代理节点，这是 DC/OS Azure 市场提供的默认大小。建议不要选择较小的 VM，而选择较少的 VM 可能会导致某些资源密集型服务（如分布式数据存储）无法正常工作（从安装问题到操作限制问题）。</p>
+<h3 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>生产就绪群集配置</h3>
+<p>这些建议的依据是多年来多个 DC/OS 群集的运行，以及在实时生产负载下扩展各种有状态和无状态服务等的经验。您的服务组合可能执行方式不同，但本文讨论的原则和经验仍然适用。</p>
+<h4 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>通用机器配置</h4>
+<p>我们建议在 VM 上禁用交换。Azure Linux 图像通常默认启用交换。我们发现使用临时固态硬盘交换（通过 WAAgent 配置）
+可能与 <code>D</code> 系列 VM 的磁盘缓存配置发生冲突。其他 VM 系列（如 <code>L</code> 系列）可以使用 SSD 进行交换和其他用途。有关磁盘配置的详细信息，请参阅以下部分。</p>
+<p>应使用监控（例如具有 Prometheus 的 Node Exporter）
+识别和警告工作负载接近新建 Azure 定义的限制范围的情况。</p>
+<h4 id="-5"><a class="content__anchor" href="#-5" aria-hidden="true"><i data-feather="bookmark"></i></a>网络</h4>
+<p>Azure 上的原始网络性能大致由 VM 大小决定。
+<code>Standard_D8_v3</code> 等具有 8 个或更多芯核的 VM，可以用于
+<a href="https://docs.microsoft.com/en-us/azure/virtual-network/create-vm-accelerated-networking-cli">Azure 加速网络 (SR-IOV)</a>.
+我们发现，相对于依靠 Azure hypervisor vswitches，使用 SR-IOV 能够显著降低延迟
+且使带宽更加充裕稳定。
+例如，在我们的测试中，不带 SR-IOV 的<code>Standard_D16s_v3</code>
+可以在两个 VM 之间推送大约 450MB/s 的数据，而
+相同大小的机器在使用 SR-IOV 后，可推送接近 1000MB/s 的数据。
+因此，应当尽可能采用 SR-IOV，并且应当确定
+实例大小的基准（例如，使用 <a href="https://github.com/esnet/iperf">iperf3</a>），以确保满足网络
+要求。</p>
+<p>此外，尽管支持在每台虚拟支持机配置多个 NIC，
+但是带宽的数量是按照 VM 分配的，而非按照 NIC 分配。因此，尽管将
+您的网络划分到控制和数据板块（或其他网络）
+可能对组织或安全目的有用，但必须进行 Linux 级流量整形，
+才能实现带宽控制。</p>
+<h4 id="-6"><a class="content__anchor" href="#-6" aria-hidden="true"><i data-feather="bookmark"></i></a>磁盘配置</h4>
+<p>为了在 Azure 上实现可靠的高性能群集操作，
+推荐在特定磁盘配置中使用优质固态硬盘。
+托管磁盘 (MD) 优于非托管磁盘 (UMD)，
+更能避免存储帐户的限制。
+Azure fabric 将适当地放置托管磁盘，以满足
+SLA 保证条件。
+UMD 的存储帐户限制已记录在
+<a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-performance-checklist">此处</a>.</p>
+<p>Azure 中的优质固态硬盘具有的潜在同步 IOP 数量有限，
+受到底层磁盘结构延迟的限制。
+Etcd、 Zookeeper 和使用
+预写式日志 (WAL) 的数据库等服务对这种 I/O 配置特别敏感。
+因此，本文所述的很多系统工程都关注
+尽量减少和/或消除 Azure 磁盘上的 I/O 争用。</p>
+<p>另外，超过机器上的 I/O 分配将导致
+限流。建议用户详细学习 <a href="https://blogs.technet.microsoft.com/xiangwu/2017/05/14/azure-vm-storage-performance-and-throttling-demystify/">本文章</a>
+理解
+本文所提供建议的理论背景。</p>
+<p>鉴于需要分开同步和异步 I/O 负载
+以保持性能，推荐采用以下磁盘安装
+配置：</p>
+<ul>
+<li>管理节点：
+<ul>
+<li>/ - P10</li>
+<li>/var/lib/etcd -（用于运行 etcd 的节点） - P10</li>
+<li>/var/log - P10</li>
+<li>/var/lib/dcos/exhibitor - P10</li>
+</ul>
+</li>
+<li>公共代理：
+<ul>
+<li>/ - P10</li>
+<li>/var/log - P10</li>
+<li>/var/lib/docker - P10</li>
+<li>/var/lib/mesos/slave - P10</li>
+</ul>
+</li>
+<li>专用代理：
+<ul>
+<li>/ - P10</li>
+<li>/var/log - P10</li>
+<li>/var/lib/docker - P10</li>
+<li>/var/lib/mesos/slave - P20</li>
+</ul>
+</li>
+</ul>
+<p>运行具有较小和/或较少磁盘的群集是很可行的，
+但用于生产时，经验证明上述配置具有显著优势，
+适用于任何容量较大的群集。另外，我们建议用 Mesos MOUNT 磁盘资源，将适当的
+优质固态硬盘附加到 <code>/dcos/volume0 ... /dcos/volumeN</code>
+然后优质固态硬盘即可专门用于数据
+密集型服务，不会发生 I/O 争用。</p>
+<p>对于 Postgres 或 mysql 等数据密集型服务，应考虑
+将 LVM RAID 条带附加到 MOUNT 资源，增加
+每秒数据库可处理的处理记录。</p>
+<p>关于配置磁盘缓存，请遵守以下一般规则：</p>
+<ul>
+<li>操作系统磁盘应设置为 <code>ReadWrite</code>.</li>
+<li>具有混合或读取重负载（数据库大宗存储等）的数据磁盘应该
+设置为 <code>ReadOnly</code>.</li>
+<li>具有高顺序写入负载的数据磁盘（WAL 磁盘）应设置为 <code>None</code>.</li>
+</ul>
+<h2 id="-7"><a class="content__anchor" href="#-7" aria-hidden="true"><i data-feather="bookmark"></i></a>软件</h2>
+<p>需要一个活跃的 <a href="https://azure.microsoft.com/en-us/pricing/purchase-options/">Azure 订阅</a> 以通过 Azure 市场安装 DC/OS。</p>
+<p>另外，如需在 DC/OS 群集中访问节点，则要安装和配置 <code>ssh</code></p>
+<h1 id="dcos"><a class="content__anchor" href="#dcos" aria-hidden="true"><i data-feather="bookmark"></i></a>安装 DC/OS</h1>
+<h2 id="-8"><a class="content__anchor" href="#-8" aria-hidden="true"><i data-feather="bookmark"></i></a>部署模板</h2>
+<p>要在 Azure 上安装 DC/OS 1.12，请使用提供的 <a href="https://downloads.dcos.io/dcos/stable/azure.html">Azure 资源管理器模板</a>。</p>
+<p>关于模板配置的一些说明：</p>
+<ul>
+<li>选择 <code>East US</code> 作为位置，因为模板的某些资源可能无法在其他位置提供。</li>
+<li>若要通过 OAuth 登录 DC/OS 仪表板，则将 <code>Oauth Enabled</code> 设为真。</li>
+<li>填写 <code>Agent Endpoint DNS Name Prefix</code> 和 <code>Master Endpoint DNS Name Prefix</code>.</li>
+<li>输入您的 <code>SSH RSA Public Key</code>.</li>
+</ul>
+<h2 id="dcos-2"><a class="content__anchor" href="#dcos-2" aria-hidden="true"><i data-feather="bookmark"></i></a>访问 DC/OS</h2>
+<ol>
+<li>在部署的输出中查找 <code>MASTERFQDN</code> 要查找该值，单击 <code>Last deployment</code> 下面的链接（就是这里的 <code>4/15/2016 (Succeeded)</code>），您将看到：</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/dcos-azure-marketplace-step2a.png" alt="Deployment history"></p>
+<p>图 1. 部署历史记录</p>
+<ol start="2">
+<li>单击最新部署并复制 <code>MASTERFQDN</code> 到 <code>Outputs</code> 部分。</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/dcos-azure-marketplace-step2b.png" alt="Deployment output"></p>
+<p>图 2. 输出部分</p>
+<ol start="3">
+<li>
+<p>记下您在图 2 <code>MASTERFQDN</code> 部分找到的 <code>Outputs</code> 值，并在以下步骤中使用。出于安全考虑，您无法默认直接访问 Azure 中的 DC/OS 仪表板。</p>
+</li>
+<li>
+<p>选择以下一种解决方案，访问 Azure 中的 DC/OS 仪表板：</p>
+</li>
+</ol>
+<h3 id="1"><a class="content__anchor" href="#1" aria-hidden="true"><i data-feather="bookmark"></i></a>案例 1：</h3>
+<p>为了访问 DC/OS 仪表板，您需要访问管理节点的 TCP 端口 80 或 443。可以添加入站安全规则和入站 NAT 规则。</p>
+<ol>
+<li>查找管理节点的网络安全组资源，</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/dcos-azure-step2case1a.png" alt="Resource - Master Node Network Security Group"></p>
+<p>图 3. 管理节点网络安全组</p>
+<ol start="2">
+<li>单击左侧的 <strong>入站安全规则</strong> 选项卡。</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/dcos-azure-step2case1b.png" alt="Inbound Security Rules"></p>
+<p>图 4. 入站安全规则</p>
+<ol start="3">
+<li>添加入站安全规则。</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/dcos-azure-step2case1c.png" alt="Add Inbound Security Rules"></p>
+<p>图 5. 添加入站安全规则</p>
+<ol start="4">
+<li>查找管理节点的负载均衡器资源。</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/dcos-azure-step2case1d.png" alt="Resource - Master Node Load balancer"></p>
+<p>图 6. 管理节点负载均衡器</p>
+<ol start="5">
+<li>单击左侧的 <strong>入站 NAT 规则</strong> 选项卡，</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/dcos-azure-step2case1e.png" alt="Inbound NAT Rules"></p>
+<p>图 7. 入站 NAT 规则</p>
+<ol start="6">
+<li>添加入站 NAT 规则。</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/dcos-azure-step2case1f.png" alt="Add Inbound NAT Rules"></p>
+<p>图 8. 添加入站 NAT 规则</p>
+<p>现在您可以访问 <code>http://$MASTERFQDN</code> 并查看 DC/OS 仪表板。</p>
+<h3 id="2-ssh"><a class="content__anchor" href="#2-ssh" aria-hidden="true"><i data-feather="bookmark"></i></a>案例 2：使用 ssh 隧道</h3>
+<p>此时需要设置 SSH 隧道，将 Azure 群集上管理节点的 TCP 端口 80 转发到本地机器的 8000 端口。</p>
+<p>复制您在上一步中找到的 <code>MASTERFQDN</code> 值并粘贴到以下命令中：</p>
+<pre><code class="language-bash">ssh azureuser@$MASTERFQDN -L 8000:localhost:80
+</code></pre>
+<p>例如：</p>
+<pre><code class="language-bash">ssh azureuser@dcosmaster.westus.cloudapp.azure.com -L 8000:localhost:80
+</code></pre>
+<p>现在您可以在本地机器上访问 <code>http://localhost:8000</code> 并查看 DC/OS 仪表板。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/dcos-gui.png" alt="DC/OS dashboard"></p>
+<p>图 9. DC/OS 仪表板</p>
+<h3 id="-9"><a class="content__anchor" href="#-9" aria-hidden="true"><i data-feather="bookmark"></i></a>注意事项</h3>
+<p>有关 SSH 访问的一些注意事项：</p>
+<ul>
+<li>要连接至 <code>http://localhost:8000</code> 进行操作，SSH 命令必须在本地机器上运行，而不是在虚拟机内运行。</li>
+<li>在上述示例中，假设端口 <code>8000</code> 在本地机器上可用。</li>
+<li>所显示的 SSH 命令仅可在 Mac 或 Linux 上运行。对于 Windows，请使用具有类似端口转发配置的 <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY</a>，另请参阅 <a href="https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-ssh-from-windows/">如何在 Azure 上使用带有 Windows 的 SSH</a>.</li>
+<li>如需了解有关 SSH 密钥生成的更多信息，请参阅 <a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/">GitHub 教程</a>.</li>
+</ul>
+<p>通过 SSH 隧道连接时，DC/OS UI 不会显示正确的 IP 地址或 CLI 安装命令。</p>
+<h2 id="dcos-cli"><a class="content__anchor" href="#dcos-cli" aria-hidden="true"><i data-feather="bookmark"></i></a>运行 DC/OS CLI</h2>
+<p>以下命令可用于直接在管理节点上运行 DC/OS CLI。</p>
+<pre><code class="language-bash"># Connect to master node with ssh
+ssh azureuser@$MASTERFQDN
+
+# Install CLI on the master node and configure with http://localhost
+curl https://downloads.dcos.io/binaries/cli/linux/x86-64/dcos-/dcos -o dcos &amp;&amp;
+sudo mv dcos /usr/local/bin &amp;&amp;
+sudo chmod +x /usr/local/bin/dcos &amp;&amp;
+dcos cluster setup http://localhost &amp;&amp;
+dcos
+
+# Now you can use the DC/OS CLI:
+dcos package search
+</code></pre>
+<h2 id="dcos-3"><a class="content__anchor" href="#dcos-3" aria-hidden="true"><i data-feather="bookmark"></i></a>卸下 DC/OS 群集</h2>
+<p>如果在部署步骤中创建了新的资源组，就很容易卸下群集并释放所有资源：只需删除资源组即可。如果已将群集部署到现有资源组，您需要确定属于 DC/OS 群集的所有资源，并手动删除它们。</p>
+<h2 id="-10"><a class="content__anchor" href="#-10" aria-hidden="true"><i data-feather="bookmark"></i></a>后续步骤</h2>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/security/ent/users-groups/">添加用户到群集</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/cli/install/">安装 DC/OS 命令行界面 (CLI)</a></li>
+<li><a href="https://azure.microsoft.com/en-us/documentation/articles/best-practices-auto-scaling/">扩展注意事项</a></li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#系统要求">系统要求</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-2">硬件</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-7">软件</a></li><li class="content__sections-item content__sections-item--h1"><a href="#dcos">安装 DC/OS</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-8">部署模板</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-2">访问 DC/OS</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-cli">运行 DC/OS CLI</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-3">卸下 DC/OS 群集</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-10">后续步骤</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

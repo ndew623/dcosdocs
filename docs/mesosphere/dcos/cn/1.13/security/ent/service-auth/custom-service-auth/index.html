@@ -1,0 +1,128 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>认证 DC/OS 服务 - D2iQ Docs</title><meta name="description" content="为自定义应用程序和 pod 配置身份认证"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/1.13/security/ent/service-auth/custom-service-auth">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/service-auth/custom-service-auth">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/service-auth/custom-service-auth">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/service-auth/custom-service-auth">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/networking/"><i data-feather="chevron-right"></i>网络</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/"><i data-feather="chevron-right"></i>安全</a></li><ul><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/"><i data-feather="chevron-right"></i>DC/OS Enterprise 安全性</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/users-groups/"><i data-feather="chevron-right"></i>管理用户和组</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/gui-permissions/"><i data-feather="chevron-right"></i>授予访问 UI 的权限</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/perms-management/">权限管理</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/perms-reference/">权限参考</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/ldap/"><i data-feather="chevron-right"></i>LDAP 身份认证</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/secrets/"><i data-feather="chevron-right"></i>密钥</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/sso/"><i data-feather="chevron-right"></i>基于身份提供程序的身份认证</a></li><li class="active"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/service-auth/"><i data-feather="chevron-right"></i>服务认证</a></li><ul><li class="active active-on"><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/service-auth/custom-service-auth/">认证 DC/OS 服务</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/service-auth/auth-tokens/">管理 JSON Web 令牌</a></li></ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/restrict-service-access/">限制对 DC/OS 服务组的访问</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/hardening/">强化</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/iam-api/">身份和访问管理 API</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/tls-ssl/"><i data-feather="chevron-right"></i>确保与 TLS 通信的安全</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/oss/"><i data-feather="chevron-right"></i>DC/OS 开源安全</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">认证 DC/OS 服务</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">为自定义应用程序和 pod 配置身份认证</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/service-auth/custom-service-auth/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+认证+DC/OS+服务&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/service-auth/custom-service-auth&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><!-- The source repository for this topic is https://github.com/dcos/dcos-docs-site -->
+<p>本主题详细介绍了如何为在 DC/OS 上启动的自定义应用程序和 Pod 配置身份认证。</p>
+<p><strong>前提条件：</strong></p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/install/">已安装 DC/OS CLI</a> 并以超级用户身份登录。</li>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/enterprise-cli/#ent-cli-install">已安装 DC/OS Enterprise CLI 0.4.14 或更高版本</a>.</li>
+<li>必须 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/tls-ssl/get-cert/">获取根证书</a> 才能在本部分发出 <code>curl</code> 命令。</li>
+</ul>
+<h1 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="create-a-keypair"></a>创建密钥对</h1>
+<p>使用 DC/OS Enterprise CLI 创建 2048 位 RSA 公私密钥对。将每个值保存到当前目录中的单独文件中。</p>
+<pre><code class="language-bash">dcos security org service-accounts keypair &lt;private-key&gt;.pem &lt;public-key&gt;.pem
+</code></pre>
+<p>使用 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/secrets/">DC/OS 密钥存储库</a> 保护钥匙对。</p>
+<h1 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="create-a-service-account"></a>创建服务帐户</h1>
+<p>您可以使用 DC/OS Enterprise CLI 或 DC/OS Web 界面创建服务帐户。</p>
+<h2 id="dcos-enterprise-cli"><a class="content__anchor" href="#dcos-enterprise-cli" aria-hidden="true"><i data-feather="bookmark"></i></a>使用 DC/OS Enterprise CLI</h2>
+<p>从终端提示创建包含包含公钥 (<code>&lt;service-account-id&gt;</code>) 的新服务帐户 (<code>&lt;your-public-key&gt;.pem</code>).</p>
+<pre><code class="language-bash">dcos security org service-accounts create -p &lt;your-public-key&gt;.pem -d &quot;&lt;description&gt;&quot; &lt;service-account-id&gt;
+</code></pre>
+<p>使用以下命令验证您的新服务帐户。</p>
+<pre><code class="language-bash">dcos security org service-accounts show &lt;service-account-id&gt;
+</code></pre>
+<h2 id="web"><a class="content__anchor" href="#web" aria-hidden="true"><i data-feather="bookmark"></i></a>使用 Web 界面</h2>
+<ol>
+<li>
+<p>在 DC/OS Web 界面，导航至 <strong>Organization</strong> -&gt; <strong>Service Accounts</strong> 选项卡。</p>
+</li>
+<li>
+<p>单击右上方的 <strong>+</strong> 图标。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/1.13/img/GUI-Organization-Service_Accounts_View-1_12.png" alt="单击服务帐户创建按钮"></p>
+<p>图 1. 单击服务帐户创建按钮</p>
+</li>
+<li>
+<p>输入描述并在 <strong>ID</strong> 字段中输入服务帐户 ID。</p>
+</li>
+<li>
+<p>将与帐户相关联的公钥粘贴到 <strong>PUBLIC KEY</strong> 字段中。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/1.13/img/create-service-account.png" alt="创建服务帐户 UI"></p>
+<p>图 2. 创建新服务帐户</p>
+</li>
+</ol>
+<h1 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>创建密钥</h1>
+<p>使用您的服务帐户 (<code>service-account-id&gt;</code>) 和指定的私钥 (<code>&lt;private-key&gt;.pem</code>) 创建密码(<code>&lt;secret-name&gt;</code>)。</p>
+<h2 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>宽容</h2>
+<pre><code class="language-bash">dcos security secrets create-sa-secret &lt;private-key&gt;.pem &lt;service-account-id&gt; &lt;secret-name&gt;
+</code></pre>
+<h2 id="-5"><a class="content__anchor" href="#-5" aria-hidden="true"><i data-feather="bookmark"></i></a>严格</h2>
+<p>在严格模式下，服务帐户名称 (<code>&lt;service-account-id&gt;</code>) 必须与框架 <code>principal</code>. 中指定的名称相匹配。</p>
+<pre><code class="language-bash">dcos security secrets create-sa-secret --strict &lt;private-key&gt;.pem &lt;service-account-id&gt; &lt;secret-name&gt;
+</code></pre>
+<p>使用此命令列出密钥：</p>
+<pre><code class="language-bash">dcos security secrets list /
+</code></pre>
+<h1 id="-6"><a class="content__anchor" href="#-6" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="give-perms"></a>创建和分配权限</h1>
+<h2 id="-7"><a class="content__anchor" href="#-7" aria-hidden="true"><i data-feather="bookmark"></i></a>确定所需权限</h2>
+<p>使用此程序确定服务帐户所需的访问权限。这将允许您排除可能由错误权限导致的任何功能问题。</p>
+<ol>
+<li>
+<p><a href="/dcosdocs/mesosphere/dcos/cn/1.13/administering-clusters/sshcluster/">SSH 到您的节点</a>.</p>
+<pre><code class="language-bash">dcos node ssh --master-proxy --mesos-id=&lt;mesos-id&gt;
+</code></pre>
+</li>
+<li>
+<p>运行此 <code>grep</code> 命令以查看服务帐户 (<code>deny</code>) 的 <code>&lt;service-account-id&gt;</code>). 日志。</p>
+<pre><code class="language-bash">journalctl -u &quot;dcos-*&quot; |grep &quot;audit&quot; |grep &quot;&lt;service-account-id&gt;&quot; |grep &quot;deny&quot;
+</code></pre>
+<p>此命令将返回由于权限不足或令牌不良而拒绝访问服务时生成的审核日志列表。拒绝消息应包括缺失的权限。您可能需要多次重复此过程，以确定所需权限的完整列表。</p>
+</li>
+</ol>
+<h3 id="-8"><a class="content__anchor" href="#-8" aria-hidden="true"><i data-feather="bookmark"></i></a>故障排除</h3>
+<p>您可以授予服务超级用户权限以排除任何功能问题。所有有效的服务都应该能够以超级用户身份运行。</p>
+<pre><code class="language-bash">curl -x put --cacert dcos-ca.crt \
+-h &quot;authorization: token=$(dcos config show core.dcos_acs_token)&quot; $(dcos config show core.dcos_url)/acs/api/v1/acls/dcos:superuser/users/&lt;service-account-id&gt;/full
+</code></pre>
+<p>如需更多信息，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/perms-reference/">权限参考</a>.</p>
+<h2 id="-9"><a class="content__anchor" href="#-9" aria-hidden="true"><i data-feather="bookmark"></i></a>分配权限</h2>
+<p>使用 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/perms-reference/">权限参考</a> 和日志输出，为您的服务分配权限。所有 CLI 命令也可通过 [IAM API]执行。(/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/iam-api/).</p>
+<h3 id="cli"><a class="content__anchor" href="#cli" aria-hidden="true"><i data-feather="bookmark"></i></a>使用 CLI</h3>
+<p>您可以使用 CLI 分配权限。例如，为将在 DC/OS 上卸载的 <a href="/dcosdocs/mesosphere/dcos/cn/services/cassandra/cass-auth/">Cassandra 服务</a>授权：</p>
+<p>授予权限 (<code>dcos:mesos:master:framework:role:cassandra-role</code>) 和允许的操作 (<code>create</code>).</p>
+<pre><code class="language-bash">dcos security org users grant &lt;service-account-id&gt; dcos:mesos:master:framework:role:cassandra-role create --description &quot;Controls the ability of cassandra-role to register as a framework with the Mesos master&quot;
+</code></pre>
+<h3 id="web-2"><a class="content__anchor" href="#web-2" aria-hidden="true"><i data-feather="bookmark"></i></a>使用 Web 界面</h3>
+<ol>
+<li>
+<p>以具有超级用户权限的用户身份登录 DC/OS Web 界面。</p>
+</li>
+<li>
+<p>选择 <strong>Organization &gt; Service Accounts</strong>。</p>
+</li>
+<li>
+<p>选择要授予权限的服务账户名称。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/1.13/img/GUI-Organization-Service_Accounts_No_Tooltip-1_12.png" alt="选择服务帐户"></p>
+<p>图 3. 选择服务帐户</p>
+</li>
+<li>
+<p>在<strong>权限</strong>选项卡上，单击<strong>添加权限</strong>。</p>
+</li>
+<li>
+<p>单击<strong>插入权限字符串</strong>以切换对话框。</p>
+</li>
+<li>
+<p>在<strong>权限字符串</strong>字段中复制并粘贴权限。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/1.13/img/service-account-permission-string.png" alt="服务帐户权限字符串"></p>
+<p>图 4. 服务帐户权限字符串</p>
+</li>
+</ol>
+<h1 id="-10"><a class="content__anchor" href="#-10" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="req-auth-tok"></a>请求认证令牌</h1>
+<p>生成 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/service-auth/">服务登录令牌</a>，其中指定了服务帐户（<code>&lt;service-account-id&gt;</code>）和私钥（<code>&lt;private-key&gt;.pem</code></p>
+<pre><code class="language-bash">dcos auth login --username=&lt;service-account-id&gt; --private-key=&lt;private-key&gt;.pem
+</code></pre>
+<h1 id="-11"><a class="content__anchor" href="#-11" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="pass-tok"></a>在后续请求中传递认证令牌</h1>
+<p>服务成功登录后，将创建一个<a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/service-auth/">认证令牌</a> 认证令牌应在后续对 DC/OS 端点的请求中使用。您可以将认证令牌引用为 shell 变量，例如：</p>
+<pre><code>curl -H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot;
+</code></pre>
+<h1 id="-12"><a class="content__anchor" href="#-12" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="refresh-tok"></a>刷新认证令牌</h1>
+<p>默认情况下，认证令牌在五天后过期。您的服务将需要在到期之前或之后续订其令牌。令牌本身包含到期时间，因此您的服务可以使用此信息主动刷新令牌。或者，您可以等待从 DC/OS 获取 <code>401</code>，然后刷新。</p>
+<p>若要刷新认证令牌，只需重复 <a href="#req-auth-tok">请求认证令牌</a> 中讨论的过程。</p>
+<h1 id="dcos"><a class="content__anchor" href="#dcos" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="dcos-native-service-accounts"></a>DC/OS 本机服务帐户</h1>
+<p>DC/OS 本机服务帐户的凭据是 DC/OS 专用账户，不得由第三方软件（例如，临时脚本）使用。</p>
+<p><strong>背景</strong>：在 DC/OS 升级程序中，授予 DC/OS 本机服务帐户的权限可能会发生变化。也就是说，在 DC/OS 升级期间，除 DC/OS 本机服务以外的消费者可能遭到中断。值得注意的是，第三方软件不得改变与 DC/OS 本机服务帐户相关的权限（可以在任何时间点恢复此类变动）。</p>
+<p><code>dcos_marathon</code> 和 <code>dcos_metronome</code> 服务帐户是例外，它将保留已修改的权限，因为在 <code>strict</code> 安全模式下，DC/OS Enterprise 的某些用户授予 <code>dcos_marathon</code> 和 <code>dcos_metronome</code> 权限，以便这些服务可以运行除 <code>nobody</code>. 以外的 Unix 用户的任务。</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#创建密钥对">创建密钥对</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-2">创建服务帐户</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-enterprise-cli">使用 DC/OS Enterprise CLI</a></li><li class="content__sections-item content__sections-item--h2"><a href="#web">使用 Web 界面</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-3">创建密钥</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-4">宽容</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-5">严格</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-6">创建和分配权限</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-7">确定所需权限</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-9">分配权限</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-10">请求认证令牌</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-11">在后续请求中传递认证令牌</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-12">刷新认证令牌</a></li><li class="content__sections-item content__sections-item--h1"><a href="#dcos">DC/OS 本机服务帐户</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

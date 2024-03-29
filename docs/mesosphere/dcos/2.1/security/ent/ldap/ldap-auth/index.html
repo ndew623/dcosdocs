@@ -1,0 +1,179 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Specifying Authentication and Parameters - D2iQ Docs</title><meta name="description" content="Specifying authentication method and parameters for your LDAP directory"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/ldap/ldap-auth">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/security/ent/ldap/ldap-auth">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/security/ent/ldap/ldap-auth">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/security/ent/ldap/ldap-auth">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/security/ent/ldap/ldap-auth">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/security/"><i data-feather="chevron-right"></i>Security</a></li><ul><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/"><i data-feather="chevron-right"></i>DC/OS Enterprise Security</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/users-groups/"><i data-feather="chevron-right"></i>Managing users and groups</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/gui-permissions/"><i data-feather="chevron-right"></i>Granting Access to the UI</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/perms-management/">Permissions Management</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/perms-reference/">Permissions Reference</a></li><li class="active"><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/ldap/"><i data-feather="chevron-right"></i>LDAP authentication</a></li><ul><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/ldap/ldap-conn/">Connection</a></li><li class="active active-on"><a class="d3" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/ldap/ldap-auth/">Specifying Authentication and Parameters</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/ldap/ldap-verify/">Verification</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/ldap/ldap-sync/">Synchronization</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/ldap/ldap-troubleshooting/">Troubleshooting LDAP errors</a></li></ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/secrets/"><i data-feather="chevron-right"></i>Secrets</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/sso/"><i data-feather="chevron-right"></i>Identity provider-based authentication</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/service-auth/"><i data-feather="chevron-right"></i>Service Authentication</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/restrict-service-access/">Restricting Access to DC/OS Service Groups</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/hardening/">Hardening</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/iam-api/">Identity and Access Management API</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/tls-ssl/"><i data-feather="chevron-right"></i>Securing Communication with TLS</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/security/oss/"><i data-feather="chevron-right"></i>DC/OS Open Source Security</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Specifying Authentication and Parameters</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">Specifying authentication method and parameters for your LDAP directory</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.1/security/ent/ldap/ldap-auth/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- The source repository for this topic is https://github.com/dcos/dcos-docs-site -->
+<p>In this section you will set up the authentication method and parameters for your LDAP directory. There are two bind types and two authentication methods you can use.</p>
+<h1 id="bind-types"><a class="content__anchor" href="#bind-types" aria-hidden="true"><i data-feather="bookmark"></i></a>Bind Types</h1>
+<p>Bind operations are used to authenticate clients to the directory server, establish an authorization identity that will be used for subsequent operations processed on that connection, and to specify the LDAP protocol version that the client will use.</p>
+<p>There are two bind types available to you:</p>
+<ul>
+<li>Anonymous Bind - Uses a simple bind or a search bind. Anyone can connect to the LDAP server. This bind type does not require a <strong>Lookup DN</strong> or <strong>Lookup Password</strong>.</li>
+<li>LDAP Credentials - Requires a <strong>Lookup DN</strong> and <strong>Lookup Password</strong>. LDAP credentials must be previously established.</li>
+</ul>
+<h1 id="authentication-methods"><a class="content__anchor" href="#authentication-methods" aria-hidden="true"><i data-feather="bookmark"></i></a>Authentication methods</h1>
+<p>There are two authentication methods available to you.</p>
+<ul>
+<li>
+<p>Simple bind. Authentication by simple bind is the most common way to authenticate an LDAP client, but you can also choose a search bind authentication method. You can either bind Anonymously, or you can provide LDAP credentials such as a lookup DN and lookup password. In either case, you must provide a user DN template. Choose Simple bind if your LDAP user name is part of your <a href="https://www.ldap.com/ldap-dns-and-rdns">distinguished name (DN)</a>.</p>
+</li>
+<li>
+<p>Search bind. While the simple bind connection takes place in a single step, the search/bind operation requires two steps. First the directory is searched for the user name attribute. If located, a bind operation ensues to check the user’s credentials against the external directory. You must specify a user search base and a user search filter template. In some methods, you must also specify a lookup DN and lookup password. Choose Search bind if you have an LDAP user name that is <strong>not</strong> a part of the <a href="https://www.ldap.com/ldap-dns-and-rdns">distinguished name (DN)</a>.</p>
+</li>
+</ul>
+<h2 id="anonymous-bind-with-simple-bind"><a class="content__anchor" href="#anonymous-bind-with-simple-bind" aria-hidden="true"><i data-feather="bookmark"></i></a>Anonymous Bind with Simple Bind</h2>
+<p>When you choose Anonymous Bind with Simple Bind, you must provide a <strong>User DN Template</strong>.</p>
+<ol>
+<li>
+<p>In the <strong>Add Directory</strong> window, click <strong>Authentication</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Bind Type</strong>, click on <strong>Anonymous Bind</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Authentication Method</strong>, click on <strong>Simple Bind</strong>.</p>
+</li>
+<li>
+<p>Enter a DN template that the external LDAP directory can use to locate user accounts in the <strong>User DN Template</strong> field. This string must include <code>%(username)s</code>, which DC/OS will replace with the user name provided by the user at login. Some examples are:</p>
+<pre><code class="language-bash">cn=%(username)s,dc=los-pollos,dc=io
+uid=%(username)s,cn=users,cn=accounts,dc=demo1,dc=freeipa,dc=org
+uid=%(username)s,ou=users,dc=example,dc=com
+</code></pre>
+</li>
+<li>
+<p>When you have completed your entries, the dialog should look like the following.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.1/img/GUI-LDAP-anonymous-simple-bind.png" alt="Simple bind parameters"></p>
+<p>Figure 1. Anonymous Bind with Simple Bind parameters</p>
+</li>
+<li>
+<p>Click <strong>Add Directory</strong>.</p>
+</li>
+<li>
+<p><a href="/dcosdocs/mesosphere/dcos/2.1/security/ent/ldap/ldap-verify/">Verify your connection</a>.</p>
+</li>
+</ol>
+<h2 id="anonymous-bind-with-search-bind"><a class="content__anchor" href="#anonymous-bind-with-search-bind" aria-hidden="true"><i data-feather="bookmark"></i></a>Anonymous Bind with Search Bind</h2>
+<p>When you choose Anonymous Bind with Search Bind, you must provide a <strong>User Search Base</strong> and a <strong>User Search Filter Template</strong>.</p>
+<ol>
+<li>
+<p>In the <strong>Add Directory</strong> window, click <strong>Authentication</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Bind Type</strong>, click on <strong>Anonymous Bind</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Authentication Method</strong>, click on <strong>Search Bind</strong>.</p>
+</li>
+<li>
+<p>In the <strong>User Search Base</strong> field, specify where in the directory to begin the search for the LDAP user name. This should be the DN of the <a href="https://technet.microsoft.com/en-us/library/cc978021.aspx">search base object</a>. An example would be:</p>
+<pre><code class="language-bash">cn=Users,dc=example,dc=com 
+</code></pre>
+</li>
+<li>
+<p>Specify the template for translating the LDAP user name to a valid LDAP search filter in the <strong>User Search Filter Template</strong> field. This entry must contain the following placeholder: <code>%(username)s</code>. Some examples would be:</p>
+<pre><code class="language-bash">(sAMAccountName=%(username)s)
+(uid=%(username)s)
+</code></pre>
+</li>
+<li>
+<p>When you have completed your entries, the dialog should look like the following:</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.1/img/GUI-LDAP-anonymous-search-bind.png" alt="Anonymous Bind with Search"></p>
+<p>Figure 2. Anonymous Bind with Search Bind parameters</p>
+</li>
+<li>
+<p>Click <strong>Add Directory</strong>.</p>
+</li>
+<li>
+<p><a href="/dcosdocs/mesosphere/dcos/2.1/security/ent/ldap/ldap-verify/">Verify your connection</a>.</p>
+</li>
+</ol>
+<h2 id="ldap-credentials-with-simple-bind"><a class="content__anchor" href="#ldap-credentials-with-simple-bind" aria-hidden="true"><i data-feather="bookmark"></i></a>LDAP Credentials with Simple Bind</h2>
+<p>When you choose <strong>LDAP Credentials</strong> as your bind type, and <strong>Simple Bind</strong> as your Authentication type, you must supply the <strong>Lookup DN</strong>, <strong>Lookup Password</strong>, and <strong>User DN Template</strong>.</p>
+<ol>
+<li>
+<p>In the <strong>Add Directory</strong> window, click <strong>Authentication</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Bind Type</strong>, click on <strong>LDAP Credentials</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Authentication Method</strong>, click <strong>Simple bind</strong>.</p>
+</li>
+<li>
+<p>Provide the full DN of the user account you will use to connect to the LDAP server to import users, groups, and check user credentials in the <strong>Lookup DN</strong> field. A few examples are:</p>
+<pre><code class="language-bash">    cn=read-only-user,dc=los-pollos,dc=io
+    uid=read-only-user,cn=users,cn=accounts,dc=demo1,dc=freeipa,dc=org
+    uid=read-only-user,ou=users,dc=example,dc=com
+</code></pre>
+ <p class="message--note"><strong>NOTE: </strong>We recommend a read-only user account.</p>
+</li>
+<li>
+<p>Provide the password of the account in the <strong>Lookup Password</strong> field.</p>
+</li>
+<li>
+<p>Enter a DN template that the external LDAP directory can use to locate user accounts in the <strong>User DN Template</strong> field. This string must include <code>%(username)s</code>, which DC/OS will replace with the user name provided by the user at login. Some examples are:</p>
+<pre><code class="language-bash">cn=%(username)s,dc=los-pollos,dc=io
+uid=%(username)s,cn=users,cn=accounts,dc=demo1,dc=freeipa,dc=org
+uid=%(username)s,ou=users,dc=example,dc=com
+</code></pre>
+</li>
+<li>
+<p>When you have completed your entries, the dialog should look like the following.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.1/img/GUI-LDAP-credentials-simple.png" alt="Simple bind parameters"></p>
+<p>Figure 3. LDAP Credentials with Simple Bind parameters</p>
+</li>
+<li>
+<p>Click <strong>Add Directory</strong>.</p>
+</li>
+<li>
+<p><a href="/dcosdocs/mesosphere/dcos/2.1/security/ent/ldap/ldap-verify/">Verify your connection</a>.</p>
+</li>
+</ol>
+<h2 id="ldap-credentials-with-search-bind"><a class="content__anchor" href="#ldap-credentials-with-search-bind" aria-hidden="true"><i data-feather="bookmark"></i></a>LDAP Credentials with Search Bind</h2>
+<p>When you choose <strong>LDAP Credentials</strong> as your bind type, and <strong>Search Bind</strong> as your Authentication type, you must supply the <strong>Lookup DN</strong>, <strong>Lookup Password</strong>, <strong>User Search Base</strong> and <strong>User Search Filter Template</strong>.</p>
+<ol>
+<li>
+<p>In the <strong>Add Directory</strong> window, click <strong>Authentication</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Bind Type</strong>, click on <strong>LDAP Credentials</strong>.</p>
+</li>
+<li>
+<p>Provide the full DN of the user account you will use to connect to the LDAP server to import users, groups, and check user credentials in the <strong>Lookup DN</strong> field. A few examples are:</p>
+<pre><code class="language-bash">    cn=read-only-user,dc=los-pollos,dc=io
+    uid=read-only-user,cn=users,cn=accounts,dc=demo1,dc=freeipa,dc=org
+    uid=read-only-user,ou=users,dc=example,dc=com
+</code></pre>
+ <p class="message--note"><strong>NOTE: </strong>We recommend a read-only user account.</p>
+</li>
+<li>
+<p>Provide the password of the account in the <strong>Lookup Password</strong> field.</p>
+</li>
+<li>
+<p>Under <strong>Authentication Method</strong>, click <strong>Search bind</strong>.</p>
+</li>
+<li>
+<p>In the <strong>User Search Base</strong> field, specify where in the directory to begin the search for the LDAP user name. This should be the DN of the search base object. An example would be:</p>
+<pre><code class="language-bash">cn=Users,dc=example,dc=com 
+</code></pre>
+</li>
+<li>
+<p>Specify the template for translating the LDAP user name to a valid LDAP search filter in the <strong>User Search Filter Template</strong> field. This entry must contain the following placeholder: <code>%(username)s</code>. Some examples would be:</p>
+<pre><code class="language-bash">(sAMAccountName=%(username)s)
+(uid=%(username)s)
+</code></pre>
+</li>
+<li>
+<p>When you have completed your entries, the dialog should look like the following:</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.1/img/GUI-LDAP-credentials-search.png" alt="LDAP Credentials with Search"></p>
+<p>Figure 4. LDAP Credentials with Search Bind parameters</p>
+</li>
+<li>
+<p>Click <strong>Add Directory</strong>.</p>
+</li>
+<li>
+<p><a href="/dcosdocs/mesosphere/dcos/2.1/security/ent/ldap/ldap-verify/">Verify your connection</a>.</p>
+</li>
+</ol>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#bind-types">Bind Types</a></li><li class="content__sections-item content__sections-item--h1"><a href="#authentication-methods">Authentication methods</a></li><li class="content__sections-item content__sections-item--h2"><a href="#anonymous-bind-with-simple-bind">Anonymous Bind with Simple Bind</a></li><li class="content__sections-item content__sections-item--h2"><a href="#anonymous-bind-with-search-bind">Anonymous Bind with Search Bind</a></li><li class="content__sections-item content__sections-item--h2"><a href="#ldap-credentials-with-simple-bind">LDAP Credentials with Simple Bind</a></li><li class="content__sections-item content__sections-item--h2"><a href="#ldap-credentials-with-search-bind">LDAP Credentials with Search Bind</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

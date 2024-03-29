@@ -1,0 +1,332 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Configuration - D2iQ Docs</title><meta name="description" content="Configuring DSE"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Dse Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/dse/3.2.0-6.7.7/configuration">DSE 3.2.0-6.7.7</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/dse/2.4.0-5.1.10/configuration">DSE 2.4.0-5.1.10</a></li></ul><div class="toggle"><p><span class="title">Dse</span><span class="version"> 3.2.0-6.7.7</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/dse/3.2.0-6.7.7/release-notes/">Release Notes</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/dse/3.2.0-6.7.7/configuration/">Configuration</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/dse/3.2.0-6.7.7/advanced/">Advanced Features</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/dse/3.2.0-6.7.7/operations/">Operations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/dse/3.2.0-6.7.7/updates/">Updating</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/dse/3.2.0-6.7.7/security/">Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/dse/3.2.0-6.7.7/uninstall/">Uninstalling</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/dse/3.2.0-6.7.7/troubleshooting/">Troubleshooting</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/dse/3.2.0-6.7.7/api-reference/">API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/dse/3.2.0-6.7.7/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/dse/3.2.0-6.7.7/support-policy/">Support Policy</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Configuration</h1></div><h4 class="content__header-description">Configuring DSE</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/dse/3.2.0-6.7.7/configuration/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- This file is usually found in the Configuration section. -->
+<p>The default DC/OS DataStax Enterprise installation provides reasonable defaults for trying out the service, but may not be sufficient for production use. You may require a different configuration depending on the context of the deployment.</p>
+<h2 id="installing-with-custom-configuration"><a class="content__anchor" href="#installing-with-custom-configuration" aria-hidden="true"><i data-feather="bookmark"></i></a>Installing with Custom Configuration</h2>
+<p>The following are some examples of how to customize the installation of your DataStax Enterprise instance.</p>
+<p>In each case, you would create a new DataStax Enterprise instance using the custom configuration as follows:</p>
+<pre><code class="language-bash">dcos package install datastax-dse --options=sample-datastax-dse.json
+</code></pre>
+<p>We recommend that you store your custom configuration in source control.</p>
+<h3 id="installing-multiple-instances"><a class="content__anchor" href="#installing-multiple-instances" aria-hidden="true"><i data-feather="bookmark"></i></a>Installing multiple instances</h3>
+<p>By default, the DataStax Enterprise service is installed with a service name of <code>datastax-dse</code>. You may specify a different name using a custom service configuration as follows:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;name&quot;: &quot;datastax-dse-other&quot;
+  }
+}
+</code></pre>
+<p>When the above JSON configuration is passed to the <code>package install datastax-dse</code> command via the <code>--options</code> argument, the new service will use the name specified in that JSON configuration:</p>
+<pre><code class="language-bash">dcos package install datastax-dse --options=datastax-dse-other.json
+</code></pre>
+<p>Multiple instances of DataStax Enterprise may be installed into your DC/OS cluster by customizing the name of each instance. For example, you might have one instance of DataStax Enterprise named <code>datastax-dse-staging</code> and another named <code>datastax-dse-prod</code>, each with its own custom configuration.</p>
+<p>After specifying a custom name for your instance, it can be reached using <code>dcos datastax-dse</code> CLI commands or directly over HTTP as described <a href="#addressing-named-instances">below</a>.</p>
+<p class="message--warning"><strong>WARNING: </strong>The service name <strong>cannot</strong> be changed after initial install. Changing the service name would require installing a new instance of the service against the new name, then copying over any data as necessary to the new instance.</p>
+<h3 id="installing-into-folders"><a class="content__anchor" href="#installing-into-folders" aria-hidden="true"><i data-feather="bookmark"></i></a>Installing into folders</h3>
+<p>In DC/OS 1.10 and later, services may be installed into folders by specifying a slash-delimited service name. For example:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;name&quot;: &quot;/foldered/path/to/datastax-dse&quot;
+  }
+}
+</code></pre>
+<p>The above example will install the service under a path of <code>foldered</code> =&gt; <code>path</code> =&gt; <code>to</code> =&gt; <code>datastax-dse</code>. It can then be reached using <code>dcos datastax-dse</code> CLI commands or directly over HTTP as described <a href="#addressing-named-instances">below</a>.</p>
+<p class="message--warning"><strong>WARNING: </strong>The service folder location <strong>cannot</strong> be changed after initial install. Changing the folder location would require installing a new instance of the service against the new name, then copying over any data as necessary to the new instance.</p>
+<h3 id="addressing-named-instances"><a class="content__anchor" href="#addressing-named-instances" aria-hidden="true"><i data-feather="bookmark"></i></a>Addressing named instances</h3>
+<p>After you’ve installed the service under a custom name or under a folder, it may be accessed from all <code>dcos datastax-dse</code> CLI commands using the <code>--name</code> argument. By default, the <code>--name</code> value defaults to the name of the package, or <code>datastax-dse</code>.</p>
+<p>For example, if you had an instance named <code>datastax-dse-dev</code>, the following command would invoke a <code>pod list</code> command against it:</p>
+<pre><code class="language-bash">dcos datastax-dse --name=datastax-dse-dev pod list
+</code></pre>
+<p>The same query would be over HTTP as follows:</p>
+<pre><code class="language-bash">curl -H &quot;Authorization:token=$auth_token&quot; &lt;dcos_url&gt;/service/datastax-dse-dev/v1/pod
+</code></pre>
+<p>Likewise, if you had an instance in a folder like <code>/foldered/path/to/datastax-dse</code>, the following command would invoke a <code>pod list</code> command against it:</p>
+<pre><code class="language-bash">dcos datastax-dse --name=/foldered/path/to/datastax-dse pod list
+</code></pre>
+<p>Similarly, it could be queried directly over HTTP as follows:</p>
+<pre><code class="language-bash">curl -H &quot;Authorization:token=$auth_token&quot; &lt;dcos_url&gt;/service/foldered/path/to/datastax-dse-dev/v1/pod
+</code></pre>
+<p>You may add a <code>-v</code> (verbose) argument to any <code>dcos datastax-dse</code> command to see the underlying HTTP queries that are being made. This can be a useful tool to see where the CLI is getting its information. In practice, <code>dcos datastax-dse</code> commands are a thin wrapper around an HTTP interface provided by the DC/OS DataStax Enterprise Service itself.</p>
+<h3 id="integration-with-dcos-access-controls"><a class="content__anchor" href="#integration-with-dcos-access-controls" aria-hidden="true"><i data-feather="bookmark"></i></a>Integration with DC/OS access controls</h3>
+<p>In Enterprise DC/OS, DC/OS access controls can be used to restrict access to your service. To give a non-superuser complete access to a service, grant them the following list of permissions:</p>
+<pre><code>dcos:adminrouter:service:marathon full
+dcos:service:marathon:marathon:&lt;service-name&gt; full
+dcos:service:adminrouter:&lt;service-name&gt; full
+dcos:adminrouter:ops:mesos full
+dcos:adminrouter:ops:slave full
+</code></pre>
+<p>Where <code>&lt;service-name&gt;</code> is your full service name, including the folder if it is installed in one.</p>
+<h2 id="datastax-opscenter"><a class="content__anchor" href="#datastax-opscenter" aria-hidden="true"><i data-feather="bookmark"></i></a>DataStax OpsCenter</h2>
+<p>The DC/OS DataStax OpsCenter can be installed from the <code>datastax-ops</code> package. It is managed identically to <code>datastax-dse</code>. This guide primarily covers <code>datastax-dse</code> for conciseness. See the later sections of the guide for any configuration specifics of DC/OS DataStax OpsCenter.</p>
+<h2 id="service-settings"><a class="content__anchor" href="#service-settings" aria-hidden="true"><i data-feather="bookmark"></i></a>Service Settings</h2>
+<h3 id="placement-constraints"><a class="content__anchor" href="#placement-constraints" aria-hidden="true"><i data-feather="bookmark"></i></a>Placement Constraints</h3>
+<p>Placement constraints allow you to customize where a service is deployed in the DC/OS cluster. Placement constraints  use the <a href="http://mesosphere.github.io/marathon/docs/constraints.html">Marathon operators</a> syntax. For example, <code>[[&quot;hostname&quot;, &quot;UNIQUE&quot;]]</code> ensures that at most one pod instance is deployed per agent.</p>
+<p>A common task is to specify a list of whitelisted systems to deploy to. To achieve this, use the following syntax for the placement constraint:</p>
+<pre><code>[[&quot;hostname&quot;, &quot;LIKE&quot;, &quot;10.0.0.159|10.0.1.202|10.0.3.3&quot;]]
+</code></pre>
+<p class="message--important"><strong>IMPORTANT: </strong>Be sure to include excess capacity in such a scenario so that if one of the whitelisted systems goes down, there is still enough capacity to repair your service.</p>
+<h4 id="updating-placement-constraints"><a class="content__anchor" href="#updating-placement-constraints" aria-hidden="true"><i data-feather="bookmark"></i></a>Updating Placement Constraints</h4>
+<p>Clusters change, and as such so will your placement constraints. However, already running service pods will <strong>not</strong> be affected by changes in placement constraints. This is because altering a placement constraint might invalidate the current placement of a running pod, and the pod will not be relocated automatically as doing so is a destructive action. We recommend using the following procedure to update the placement constraints of a pod:</p>
+<ul>
+<li>Update the placement constraint definition in the service.</li>
+<li>For each affected pod, one at a time, perform a <code>pod replace</code>. This will (destructively) move the pod to be in accordance with the new placement constraints.</li>
+</ul>
+<h3 id="zones-enterprise"><a class="content__anchor" href="#zones-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>Zones <span class="badge badge--shortcode badge--large badge--block badge--enterprise">Enterprise</span></h3>
+<p><strong>Requires:</strong> DC/OS 1.11 Enterprise or later.</p>
+<p>Placement constraints can be applied to DC/OS zones by referring to the <code>@zone</code> key. For example, one could spread pods across a minimum of three different zones by including this constraint:</p>
+<pre><code>[[&quot;@zone&quot;, &quot;GROUP_BY&quot;, &quot;3&quot;]]
+</code></pre>
+<p>For the @zone constraint to be applied correctly, DC/OS must have <a href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/fault-domain-awareness/">Fault Domain Awareness</a> enabled and configured.</p>
+<p class="message--warning"><strong>WARNING: </strong>A service installed without a zone constraint cannot be updated to have one, and a service installed with a zone constraint may not have it removed.</p>
+<h3 id="virtual-networks"><a class="content__anchor" href="#virtual-networks" aria-hidden="true"><i data-feather="bookmark"></i></a>Virtual networks</h3>
+<p>DC/OS DataStax Enterprise supports deployment on <a href="/dcosdocs/mesosphere/dcos/latest/networking/SDN/dcos-overlay/">virtual networks</a> on DC/OS (including the <code>dcos</code> overlay network), allowing each container (task) to have its own IP address and not use port resources on the agent machines. This can be specified by passing the following configuration during installation:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;virtual_network_enabled&quot;: true
+  }
+}
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>Once the service is deployed on a virtual network, it cannot be updated to use the host network.</p>
+<h3 id="user"><a class="content__anchor" href="#user" aria-hidden="true"><i data-feather="bookmark"></i></a>User</h3>
+<p>By default, all pods’ containers will be started as system user “nobody”. If your system configured for using over system user (for instance, you may have externally mounted persistent volumes with root’s permissions), you can define the user by defining a custom value for the service’s property “user”, for example:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;properties&quot;: {
+      &quot;user&quot;: &quot;root&quot;
+    }
+  }
+}
+</code></pre>
+<h2 id="best-practices"><a class="content__anchor" href="#best-practices" aria-hidden="true"><i data-feather="bookmark"></i></a>Best Practices</h2>
+<ul>
+<li>Use Mesosphere Enterprise DC/OS’s placement rules to map your DSE cluster nodes or DC to different availability zones to achieve high resiliency.</li>
+<li>Set up a routine backup service using OpsCenter to back up your business critical data on a regular basis. The data can be stored on the DSE nodes themselves, or on AWS S3 buckets, depending on your IT policy or business needs.</li>
+<li>Set up a routine repair service using OpsCenter to ensure that all data on a replica is consistent within your DSE clusters.</li>
+</ul>
+<h2 id="node-settings"><a class="content__anchor" href="#node-settings" aria-hidden="true"><i data-feather="bookmark"></i></a>Node Settings</h2>
+<p>The following settings may be adjusted to customize the amount of resources allocated to each DSE Node. DataStax’s minimum system requirements must be taken into consideration when adjusting these values. Reducing these values may result in adverse performance and possibly even task failures.</p>
+<p>Each of the following settings may be customized under the <strong>dsenode</strong> configuration section.</p>
+<h3 id="node-count"><a class="content__anchor" href="#node-count" aria-hidden="true"><i data-feather="bookmark"></i></a>Node Count</h3>
+<p>Customize the <code>Node Count</code> setting (default 3). Consult the DSE documentation for minimum node requirements.</p>
+<h3 id="cpu"><a class="content__anchor" href="#cpu" aria-hidden="true"><i data-feather="bookmark"></i></a>CPU</h3>
+<p>The amount of CPU allocated to each DSE Node may be customized. A value of <code>1.0</code> equates to one full CPU core on a machine. This value may be customized by editing the <code>cpus</code> value under the <strong>dsenode</strong> configuration section.</p>
+<h3 id="memory"><a class="content__anchor" href="#memory" aria-hidden="true"><i data-feather="bookmark"></i></a>Memory</h3>
+<p>The amount of RAM allocated to each DSE Node may be customized. This value may be customized by editing the <code>mem</code> value (in MB) under the <strong>dsenode</strong> configuration section.</p>
+<p>If the allocated memory is customized, you must also update the <code>heap</code> value under that section as well. As a rule of thumb we recommend that <code>heap</code> be set to half of <code>mem</code>. For example, for a <code>mem</code> value of <code>32000</code>, <code>heap</code> should be <code>16000</code>. If you do not do this, you may see restarted <code>dse-#-node</code> tasks due to memory errors.</p>
+<h3 id="ports"><a class="content__anchor" href="#ports" aria-hidden="true"><i data-feather="bookmark"></i></a>Ports</h3>
+<p>Each port exposed by DSE components may be customized via the service configuration. If you wish to install multiple instances of DSE and have them colocate on the same machines, you must ensure that <strong>no</strong> ports are common between those instances. You only need to customize ports if you require multiple instances sharing a single machine. This customization is optional otherwise.</p>
+<p>Each component’s ports may be customized in the following configuration sections:</p>
+<ul>
+<li>DSE Nodes (as a group): <code>Node placement constraint</code> under <strong>dsenode</strong>.</li>
+<li>OpsCenter (if built-in instance is enabled): <code>OpsCenter placement constraint</code> under OpsCenter.</li>
+</ul>
+<p class="message--note"><strong>NOTE: </strong>In a multi-DC environment, all DataStax Enterprise DCs within a DSE Cluster <strong>must</strong> share the same port configuration. Co-location of DSE nodes within the same DSE Cluster is not supported.</p>
+<h3 id="storage-volumes"><a class="content__anchor" href="#storage-volumes" aria-hidden="true"><i data-feather="bookmark"></i></a>Storage Volumes</h3>
+<p>The DSE DC/OS service supports two volume types:</p>
+<ul>
+<li><code>ROOT</code> volumes are effectively an isolated directory on the root volume, sharing IO/spindles with the rest of the host system.</li>
+<li><code>MOUNT</code> volumes are a dedicated device or partition on a separate volume, with dedicated IO/spindles.</li>
+</ul>
+<p><code>MOUNT</code> volumes require <a href="/dcosdocs/mesosphere/dcos/latest/storage/mount-disk-resources/">additional configuration on each DC/OS agent system</a>, so the service currently uses <code>ROOT</code> volumes by default. To ensure reliable and consistent performance in a production environment, you must configure <strong>two MOUNT volumes</strong> on the machines which will run DSE in your cluster, and then configure the following as <code>MOUNT</code> volumes under <strong>dsenode</strong>:</p>
+<ul>
+<li>Persistent data volume type = <code>MOUNT</code></li>
+<li>Persistent Solr volume type (if <code>DSE Search</code> is enabled) = <code>MOUNT</code>
+Using <code>ROOT</code> volumes for these is not supported in production.</li>
+</ul>
+<h3 id="separate-volume-for-commit-log-data"><a class="content__anchor" href="#separate-volume-for-commit-log-data" aria-hidden="true"><i data-feather="bookmark"></i></a>Separate volume for commit log data</h3>
+<p>If you are using non-magnetic disks, then a good approach is to keep your commit log data files on the same volume as your DSE data. This is the default configuration.  If you need to keep commit log data on a separate volume, you can do so.  The service install provides options for enabling that feature and provisioning a separate mount point for commit log data.  Be aware that if you choose to use a separate volume, you will not be able to change it back later.</p>
+<h3 id="placement-constraints-2"><a class="content__anchor" href="#placement-constraints-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Placement Constraints</h3>
+<p>Placement constraints allow you to customize where a DSE instance is deployed in the DC/OS cluster. Placement constraints may be configured separately for each of the node types in the following locations:</p>
+<ul>
+<li>DSE Nodes (as a group): <code>Node placement constraint</code> under <strong>dsenode</strong>.</li>
+<li>OpsCenter (if built-in instance is enabled): <code>OpsCenter placement constraint</code> under OpsCenter.</li>
+</ul>
+<p>Placement constraints support all <a href="http://mesosphere.github.io/marathon/docs/constraints.html">Marathon operators (reference)</a> with this syntax: <code>field:OPERATOR[:parameter]</code>. For example, if the reference lists <code>[[&quot;hostname&quot;, &quot;UNIQUE&quot;]]</code>, you should  use <code>hostname:UNIQUE</code>.</p>
+<p>A common task is to specify a list of whitelisted systems to deploy to. To achieve this, use the following syntax for the placement constraint:</p>
+<pre><code>hostname:LIKE:10.0.0.159|10.0.1.202|10.0.3.3
+</code></pre>
+<p>You must include spare capacity in this list so that if one of the whitelisted systems goes down, there is still enough room to repair your service without that system.</p>
+<h2 id="rack-aware-placement"><a class="content__anchor" href="#rack-aware-placement" aria-hidden="true"><i data-feather="bookmark"></i></a>Rack-Aware Placement</h2>
+<p>DSE’s “rack”-based fault domain support may be enabled by specifying a placement constraint that uses the <code>@zone</code> key. For example, you  could spread DSE nodes across a minimum of three different zones/racks by specifying the constraint <code>@zone:GROUP_BY:3</code>. When a placement constraint specifying <code>@zone</code> is used, DSE nodes will be automatically configured with <code>rack</code>s that match the names of the zones. If no placement constraint referencing <code>@zone</code> is configured, all nodes will be configured with a default rack of <code>rack1</code>.</p>
+<h3 id="dseyaml-and-cassandrayaml-settings"><a class="content__anchor" href="#dseyaml-and-cassandrayaml-settings" aria-hidden="true"><i data-feather="bookmark"></i></a>dse.yaml and cassandra.yaml settings</h3>
+<p>Nearly all settings for <code>dse.yaml</code> and <code>cassandra.yaml</code> are exposed as configuration options, allowing them to be deployed and updated automatically by the service.</p>
+<ul>
+<li><code>dse.yaml</code> options are listed under the DSE section</li>
+<li><code>cassandra.yaml</code> options are listed under the Cassandra section</li>
+</ul>
+<p>For more information on each setting, view DataStax’s documentation for <a href="https://docs.datastax.com/en/latest-dse/datastax_enterprise/config/configDseYaml.html">dse.yaml</a> and <a href="https://docs.datastax.com/en/cassandra/3.0/cassandra/configuration/configCassandra_yaml.html">cassandra.yaml</a>.</p>
+<h2 id="use-built-in-or-external-opscenter"><a class="content__anchor" href="#use-built-in-or-external-opscenter" aria-hidden="true"><i data-feather="bookmark"></i></a>Use Built-In or External OpsCenter</h2>
+<p>DSE DC/OS provides the <strong>datastax-ops</strong> package, which you can install to get a default OpsCenter dashboard.  If you prefer to use an external OpsCenter instance, you can configure the DSE service to point to an externally managed OpsCenter.</p>
+<p>Follow these steps to configure DSE to use an external OpsCenter (in the OpsCenter section of the DSE installation screen).</p>
+<ol>
+<li>Check the <strong>ENABLE DATASTAX OPSCENTER</strong> checkbox.</li>
+<li>Set the <strong>OPSCENTER HOST NAME</strong> field to the hostname of your external OpsCenter instance.</li>
+</ol>
+<p>If you choose to run an instance of the datastax-ops package, this field can be populated as <code>opscenter-0-node.&lt;service-name&gt;.autoip.dcos.thisdcos.directory</code>. For example <code>opscenter-0-node.datastax-ops-1.autoip.dcos.thisdcos.directory</code> if the datastax-ops service is named <code>datastax-ops-1</code></p>
+<h2 id="installation-with-dse-multi-datacenter"><a class="content__anchor" href="#installation-with-dse-multi-datacenter" aria-hidden="true"><i data-feather="bookmark"></i></a>Installation with DSE Multi-Datacenter</h2>
+<p>Each DSE Datacenter must be configured with the seed nodes of the other DSE Datacenters. For example, let’s deploy three Datacenters (as separate DC/OS services in DC/OS terms), named <code>datastax-dse-1</code>, <code>datastax-dse-2</code>, and <code>datastax-dse-3</code>, and then link them all together. Here is an example timeline from start to finish:</p>
+<p class="message--note"><strong>NOTE: </strong>These instructions are an example and should be vetted by DataStax for the correct ordering of operations (when to add seed nodes, etc.).</p>
+<p><a name="1.10-and-later"></a></p>
+<h3 id="dcos-110-and-later"><a class="content__anchor" href="#dcos-110-and-later" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS 1.10 and later</h3>
+<p>Follow these instructions for DC/OS 1.10 and later. If you are using DC/OS 1.9 or earlier, follow <a href="#1.9-and-earlier">these instructions</a>.</p>
+<ol>
+<li>
+<p>Add a DSE service from the DC/OS Catalog. Deploy <code>datastax-dse-1</code> with the following customizations:</p>
+<ul>
+<li>In <strong>service</strong>, set <code>Service Name</code> = <code>datastax-dse-1</code></li>
+<li>In <strong>cluster</strong>, set <code>DSE Datacenter</code> = <code>dc_datastax_1</code></li>
+</ul>
+</li>
+<li>
+<p>Wait for <code>datastax-dse-1</code> to finish deploying before continuing with the other DCs.</p>
+</li>
+<li>
+<p>Add a second DSE service from the DC/OS Catalog. Deploy <code>datastax-dse-2</code> with the following customizations:</p>
+<ul>
+<li>In <strong>service</strong>, set:
+<ul>
+<li><code>Service Name</code> = <code>datastax-dse-2</code></li>
+</ul>
+</li>
+<li>In <strong>cluster</strong>, set:
+<ul>
+<li><code>DSE Datacenter</code> = <code>dc_datastax_2</code></li>
+<li><code>External Seed Nodes</code> = <code>dse-0-node.datastax-dse-1.autoip.dcos.thisdcos.directory,dse-1-node.datastax-dse-1.autoip.dcos.thisdcos.directory</code> (point <code>datastax-dse-2</code> to <code>datastax-dse-1</code>'s seeds)</li>
+</ul>
+</li>
+<li>In OpsCenter, set:
+<ul>
+<li><code>OPSCENTER HOSTNAME</code> = <code>opscenter-0-node.datastax-dse-1.autoip.dcos.thisdcos.directory</code> (point <code>datastax-dse-2</code> to <code>datastax-dse-1</code>'s OpsCenter)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Add a third DSE service from the DC/OS Catalog. Deploy <code>datastax-dse-3</code> with the following customizations:</p>
+<ul>
+<li>In <strong>service</strong>, set:
+<ul>
+<li><code>Service Name</code> = <code>datastax-dse-3</code></li>
+</ul>
+</li>
+<li>In <strong>cluster</strong>, set:
+<ul>
+<li><code>DSE Datacenter</code> = <code>dc_datastax_3</code></li>
+<li><code>External Seed Nodes</code> = <code>dse-0-node.datastax-dse-1.autoip.dcos.thisdcos.directory,dse-1-node.datastax-dse-1.autoip.dcos.thisdcos.directory</code> (point <code>datastax-dse-3</code> to <code>datastax-dse-1</code>'s seeds)</li>
+</ul>
+</li>
+<li>In OpsCenter, set:
+<ul>
+<li><code>OPSCENTER HOSTNAME</code> = <code>opscenter-0-node.datastax-dse-1.autoip.dcos.thisdcos.directory</code> (point <code>datastax-dse-3</code> to <code>datastax-dse-1</code>'s OpsCenter)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Wait for <code>datastax-dse-2</code> and <code>datastax-dse-3</code> to finish deploying. Then, update the seed nodes across all the instances:</p>
+<ol>
+<li>
+<p>Create a local file called <code>dse-1-options.json</code>. Paste the following into the file.</p>
+<pre><code class="language-json">{
+  &quot;cluster&quot;: {
+    &quot;external_seeds&quot;: &quot;dse-0-node.datastax-dse-2.autoip.dcos.thisdcos.directory,dse-1-node.datastax-dse-2.autoip.dcos.thisdcos.directory,dse-0-node.datastax-dse-3.autoip.dcos.thisdcos.directory,dse-1-node.datastax-dse-3.autoip.dcos.thisdcos.directory&quot;
+  },
+}
+</code></pre>
+<p>This points <code>datastax-dse-1</code> to <code>datastax-dse-2</code> and <code>datastax-dse-3</code>.</p>
+</li>
+<li>
+<p>From the DC/OS CLI, update the service to the new configuration.</p>
+<pre><code class="language-json">dcos datastax-dse update start --options=dse-1-options.json
+</code></pre>
+</li>
+<li>
+<p>Wait for the seed update to roll out across <code>datastax-dse-1</code> nodes.</p>
+</li>
+<li>
+<p>Perform the same operation for <code>datastax-dse-2</code> and <code>datastax-dse-3</code>.</p>
+<ul>
+<li>For <code>datastax-dse-2</code>, set <code>cluster.external_seeds</code> to <code>dse-0-node.datastax-dse-1.autoip.dcos.thisdcos.directory,dse-1-node.datastax-dse-1.autoip.dcos.thisdcos.directory,dse-0-node.datastax-dse-3.autoip.dcos.thisdcos.directory,dse-1-node.datastax-dse-3.autoip.dcos.thisdcos.directory</code>.</li>
+<li>For <code>datastax-dse-3</code>, set <code>cluster.external_seeds</code> to <code>dse-0-node.datastax-dse-2.autoip.dcos.thisdcos.directory,dse-2-node.datastax-dse-1.autoip.dcos.thisdcos.directory,dse-0-node.datastax-dse-3.autoip.dcos.thisdcos.directory,dse-1-node.datastax-dse-3.autoip.dcos.thisdcos.directory</code>.</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>Now, each of the three DCs has seed nodes configured for the other DCs. Because we used <code>.autoip.dcos.thisdcos.directory</code> hostnames, which automatically update to follow the tasks, we won’t need to reconfigure seeds if they’re moved between systems in the DC/OS cluster.</p>
+</li>
+</ol>
+<p><a name="1.9-and-earlier"></a></p>
+<h3 id="dcos-19-and-earlier"><a class="content__anchor" href="#dcos-19-and-earlier" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS 1.9 and earlier</h3>
+<ol>
+<li>Add a DSE service from the DC/OS Catalog. Deploy <code>datastax-dse-1</code> with the following customizations:
+<ul>
+<li>In <strong>service</strong>, set <code>Service Name</code> = <code>datastax-dse-1</code></li>
+<li>In <strong>cluster</strong>, set <code>DSE Datacenter</code> = <code>dc_datastax_1</code></li>
+</ul>
+</li>
+<li>Wait for <code>datastax-dse-1</code> to finish deploying before continuing with the other DCs.</li>
+<li>Add a second DSE service from the DC/OS Catalog. Deploy <code>datastax-dse-2</code> with the following customizations:
+<ul>
+<li>In <strong>service</strong>, set:
+<ul>
+<li><code>Service Name</code> = <code>datastax-dse-2</code></li>
+</ul>
+</li>
+<li>In <strong>cluster</strong>, set:
+<ul>
+<li><code>DSE Datacenter</code> = <code>dc_datastax_2</code></li>
+<li><code>External Seed Nodes</code> = <code>dse-0-node.datastax-dse-1.autoip.dcos.thisdcos.directory,dse-1-node.datastax-dse-1.autoip.dcos.thisdcos.directory</code> (point <code>datastax-dse-2</code> to <code>datastax-dse-1</code>'s seeds)</li>
+</ul>
+</li>
+<li>In OpsCenter, set:
+<ul>
+<li><code>OPSCENTER HOSTNAME</code> = <code>opscenter-0-node.datastax-dse-1.autoip.dcos.thisdcos.directory</code> (point <code>datastax-dse-2</code> to <code>datastax-dse-1</code>'s OpsCenter)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Add a third DSE service from the DC/OS Catalog. Deploy <code>datastax-dse-3</code> with the following customizations:
+<ul>
+<li>In <strong>service</strong>, set:
+<ul>
+<li><code>Service Name</code> = <code>datastax-dse-3</code></li>
+</ul>
+</li>
+<li>In <strong>cluster</strong>, set:
+<ul>
+<li><code>DSE Datacenter</code> = <code>dc_datastax_3</code></li>
+<li><code>External Seed Nodes</code> = <code>dse-0-node.datastax-dse-1.autoip.dcos.thisdcos.directory,dse-1-node.datastax-dse-1.autoip.dcos.thisdcos.directory</code> (point <code>datastax-dse-3</code> to <code>datastax-dse-1</code>'s seeds)</li>
+</ul>
+</li>
+<li>In OpsCenter, set:
+<ul>
+<li><code>OPSCENTER HOSTNAME</code> = <code>opscenter-0-node.datastax-dse-1.autoip.dcos.thisdcos.directory</code> (point <code>datastax-dse-3</code> to <code>datastax-dse-1</code>'s OpsCenter)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Wait for <code>datastax-dse-2</code> and <code>datastax-dse-3</code> to finish deploying. Then, update the seed nodes across all the instances:
+<ol>
+<li>Go to the service view of <code>datastax-dse-1</code> in the DC/OS UI. Click the menu in the upper right and then choose <strong>Edit</strong>. Go to the <strong>Environment</strong> tab and set <code>DSE_EXTERNAL_SEEDS</code> = <code>dse-0-node.datastax-dse-2.autoip.dcos.thisdcos.directory,dse-1-node.datastax-dse-2.autoip.dcos.thisdcos.directory,dse-0-node.datastax-dse-3.autoip.dcos.thisdcos.directory,dse-1-node.datastax-dse-3.autoip.dcos.thisdcos.directory</code> (point <code>datastax-dse-1</code> to <code>datastax-dse-2</code> and <code>datastax-dse-3</code>).</li>
+<li>Wait for the seed update to roll out across <code>datastax-dse-1</code> nodes.</li>
+<li>Go to the service view of <code>datastax-dse-2</code> in the DC/OS UI. Click the menu in the upper right and then choose <strong>Edit</strong>. Go to the <strong>Environment</strong> tab and update <code>DSE_EXTERNAL_SEEDS</code> = <code>dse-0-node.datastax-dse-1.autoip.dcos.thisdcos.directory,dse-1-node.datastax-dse-1.autoip.dcos.thisdcos.directory,dse-0-node.datastax-dse-3.autoip.dcos.thisdcos.directory,dse-1-node.datastax-dse-3.autoip.dcos.thisdcos.directory</code> (point <code>datastax-dse-2</code> to <code>datastax-dse-1</code> and <code>datastax-dse-3</code>).</li>
+<li>Wait for the seed update to roll out across <code>datastax-dse-2</code> nodes.</li>
+<li>Go to the service view of <code>datastax-dse-3</code> in the DC/OS UI. Click the menu in the upper right and then choose <strong>Edit</strong>. Go to the <strong>Environment</strong> tab and update <code>DSE_EXTERNAL_SEEDS</code> = <code>dse-0-node.datastax-dse-2.autoip.dcos.thisdcos.directory,dse-2-node.datastax-dse-1.autoip.dcos.thisdcos.directory,dse-0-node.datastax-dse-3.autoip.dcos.thisdcos.directory,dse-1-node.datastax-dse-3.autoip.dcos.thisdcos.directory</code> (point <code>datastax-dse-3</code> to <code>datastax-dse-1</code> and <code>datastax-dse-2</code>).</li>
+<li>Wait for the seed update to roll out across <code>datastax-dse-3</code> nodes.</li>
+</ol>
+</li>
+<li>Now, each of the three DCs has seed nodes configured for the other DCs. Because we used <code>.autoip.dcos.thisdcos.directory</code> hostnames, which automatically update to follow the tasks, we won’t need to reconfigure seeds if they’re moved between systems in the DC/OS cluster.</li>
+</ol>
+<h2 id="using-volume-profiles"><a class="content__anchor" href="#using-volume-profiles" aria-hidden="true"><i data-feather="bookmark"></i></a>Using Volume Profiles</h2>
+<p>Volume profiles are used to classify volumes. For example, users can group SSDs into a “fast” profile and group HDDs into a “slow” profile.</p>
+<p class="message--note"><strong>NOTE: </strong>Volume profiles are immutable and therefore cannot contain references to specific devices, nodes or other ephemeral identifiers.</p> 
+<p><a href="/dcosdocs/mesosphere/dcos/services/storage/latest/">DC/OS Storage Service (DSS)</a> is a service that manages volumes, volume profiles, volume providers, and storage devices in a DC/OS cluster.</p>
+<p>If you want to deploy DSE with DSS, please follow our <a href="/dcosdocs/mesosphere/dcos/services/storage/1.0.0/tutorials/cassandra-dss-volumes/">tutorial for Cassandra</a> and use the same procedure to deploy DSE.</p>
+<p>After the DC/OS cluster is running and volume profiles are created, you can deploy DSE with the volume profile.</p>
+<p class="message--note"><strong>NOTE: </strong>DSE will be configured to look for <code>MOUNT</code> volumes with the specified volume profile.</p> 
+<p>After the DSE service finishes deploying, its tasks will be running with the specified volume profiles.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#installing-with-custom-configuration">Installing with Custom Configuration</a></li><li class="content__sections-item content__sections-item--h2"><a href="#datastax-opscenter">DataStax OpsCenter</a></li><li class="content__sections-item content__sections-item--h2"><a href="#service-settings">Service Settings</a></li><li class="content__sections-item content__sections-item--h2"><a href="#best-practices">Best Practices</a></li><li class="content__sections-item content__sections-item--h2"><a href="#node-settings">Node Settings</a></li><li class="content__sections-item content__sections-item--h2"><a href="#rack-aware-placement">Rack-Aware Placement</a></li><li class="content__sections-item content__sections-item--h2"><a href="#use-built-in-or-external-opscenter">Use Built-In or External OpsCenter</a></li><li class="content__sections-item content__sections-item--h2"><a href="#installation-with-dse-multi-datacenter">Installation with DSE Multi-Datacenter</a></li><li class="content__sections-item content__sections-item--h2"><a href="#using-volume-profiles">Using Volume Profiles</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

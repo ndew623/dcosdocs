@@ -1,0 +1,181 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>外部持久卷 - D2iQ Docs</title><meta name="description" content="通过 Marathon 使用外部持久卷"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/1.13/storage/external-storage">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/external-storage">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/storage/external-storage">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/storage/external-storage">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/"><i data-feather="chevron-right"></i>安全</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/storage/"><i data-feather="chevron-right"></i>存储</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/storage/mount-disk-resources/">挂载磁盘资源</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/storage/nfs/">NFS 服务器</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/storage/persistent-volume/">本地持久卷</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/storage/external-storage/">外部持久卷</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">外部持久卷</h1></div><h4 class="content__header-description">通过 Marathon 使用外部持久卷</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/1.13/storage/external-storage/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>当容错对您的应用程序至关重要时，请使用外部卷。如果主机发生故障，本地 Marathon 实例会在其他主机上重新安排您的应用程序及其相关数据，而无需用户干预。外部卷通常提供较大的存储量。</p>
+<p>Marathon 应用程序通常在终止和重新启动时失去状态。在某些情况下，例如，如果您的应用程序使用 MySQL，您将希望应用程序保存其状态。您可以使用外部存储服务，例如 Amazon 的 Elastic Block Store (EBS)，创建跟随应用程序实例的持久卷。</p>
+<p>请注意，卷的大小以吉字节 (GiB) 为单位指定。</p>
+<h1 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>创建具有外部持久卷的应用程序</h1>
+<h2 id="marathon"><a class="content__anchor" href="#marathon" aria-hidden="true"><i data-feather="bookmark"></i></a>Marathon 应用定义</h2>
+<p>您可以在 [Marathon 应用定义][6] 中指定外部卷。</p>
+<h3 id="universal-container-runtime"><a class="content__anchor" href="#universal-container-runtime" aria-hidden="true"><i data-feather="bookmark"></i></a>使用 Universal Container Runtime</h3>
+<p>此应用定义中 <code>cmd</code> 将 <code>date</code> 命令的输出附加到 <code>test.txt</code>. 如果您看到应用程序连续运行的日志显示越来越多的 <code>date</code> 输出行，则可以确定外部卷已被正确使用。</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;hello&quot;,
+  &quot;instances&quot;: 1,
+  &quot;cpus&quot;: 0.1,
+  &quot;mem&quot;: 32,
+  &quot;cmd&quot;: &quot;date &gt;&gt; test-rexray-volume/test.txt; cat test-rexray-volume/test.txt&quot;,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;MESOS&quot;,
+    &quot;volumes&quot;: [
+      {
+        &quot;containerPath&quot;: &quot;test-rexray-volume&quot;,
+        &quot;external&quot;: {
+          &quot;size&quot;: 100,
+          &quot;name&quot;: &quot;my-test-vol&quot;,
+          &quot;provider&quot;: &quot;dvdi&quot;,
+          &quot;options&quot;: { &quot;dvdi/driver&quot;: &quot;rexray&quot; }
+          },
+        &quot;mode&quot;: &quot;RW&quot;
+      }
+    ]
+  },
+  &quot;upgradeStrategy&quot;: {
+    &quot;minimumHealthCapacity&quot;: 0,
+    &quot;maximumOverCapacity&quot;: 0
+  }
+}
+</code></pre>
+<h4 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>卷配置选项</h4>
+<ul>
+<li><code>containerPath</code>：卷装载在容器内的路径。对于 Mesos 外部卷，这必须是相对于容器的单层路径；不能包含正斜杠 (<code>/</code>). 有关更多信息，请参阅[数据目录上的 REX-Ray 文档][7]。</li>
+<li><code>mode</code>：卷的访问模式。目前， <code>&quot;RW&quot;</code> 是唯一可能的值，它将允许您的应用程序从卷中读取及写入卷。</li>
+<li><code>external.size</code>：以 <strong>GiB</strong> 为单位的卷大小。</li>
+<li><code>external.name</code>: <strong>name</strong> 卷驱动程序用于查找外部卷的名称。当您的任务在代理程序上暂存时，卷驱动程序将在存储服务中查询具有此名称的卷。如果不存在，则是[隐式创建的][8]。否则，将重用现有卷。</li>
+<li><code>external.options[&quot;dvdi/driver&quot;]</code>：用于存储的 Docker 卷驱动程序。随 DC/OS 提供的唯一靠 Docker 卷驱动程序是 <code>rexray</code>. 了解有关 [REX-Ray][9] 的更多信息。</li>
+<li>您可以通过 <code>container.volumes[x].external.options[optionName]</code> 来指定其他选项。Mesos 容器的 dvdi 提供程序适用 <code>dvdcli</code>，它提供以下[选项][10]。任何选项的可用性取决于您的卷驱动程序。</li>
+<li>通过在 <code>container.volumes</code> 阵列中添加其他项来创建多个卷。</li>
+<li>创建应用程序后，无法更改卷参数。</li>
+<li>如 <code>upgradeStrategy.minimumHealthCapacity</code> 大于 0.5 或 <code>upgradeStrategy.maximumOverCapacity</code> 不等于 0，Marathon 将不会启动具有外部卷的应用程序。</li>
+</ul>
+<h3 id="docker"><a class="content__anchor" href="#docker" aria-hidden="true"><i data-feather="bookmark"></i></a>使用 Docker 引擎</h3>
+<p>下面是一个示例应用定义，它使用 Docker Engine 并指定外部卷。此应用定义中 <code>cmd</code> 将 <code>date</code> 命令的输出附加到 <code>test.txt</code>. 如果您看到应用程序连续运行的日志显示越来越多的 <code>date</code> 输出行，则可以验证是否正确使用了外部卷。</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/test-docker&quot;,
+  &quot;instances&quot;: 1,
+  &quot;cpus&quot;: 0.1,
+  &quot;mem&quot;: 32,
+  &quot;cmd&quot;: &quot;date &gt;&gt; /data/test-rexray-volume/test.txt; cat /data/test-rexray-volume/test.txt&quot;,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;DOCKER&quot;,
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;alpine:3.1&quot;,
+      &quot;network&quot;: &quot;HOST&quot;,
+      &quot;forcePullImage&quot;: true
+    },
+    &quot;volumes&quot;: [
+      {
+        &quot;containerPath&quot;: &quot;/data/test-rexray-volume&quot;,
+        &quot;external&quot;: {
+          &quot;name&quot;: &quot;my-test-vol&quot;,
+          &quot;provider&quot;: &quot;dvdi&quot;,
+          &quot;options&quot;: { &quot;dvdi/driver&quot;: &quot;rexray&quot; }
+        },
+        &quot;mode&quot;: &quot;RW&quot;
+      }
+    ]
+  },
+  &quot;upgradeStrategy&quot;: {
+    &quot;minimumHealthCapacity&quot;: 0,
+    &quot;maximumOverCapacity&quot;: 0
+  }
+}
+</code></pre>
+<h4 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>卷配置选项</h4>
+<ul>
+<li><code>containerPath</code> 必须是绝对的。</li>
+<li>只有某些版本的 Docker 与 REX-Ray 卷驱动程序兼容。请参阅 [REX-Ray 文档][11]。</li>
+</ul>
+<h2 id="dcos-ui"><a class="content__anchor" href="#dcos-ui" aria-hidden="true"><i data-feather="bookmark"></i></a>从 DC/OS UI 创建应用程序</h2>
+<ol>
+<li>单击 <strong>Services</strong> 选项卡，然后 <strong>RUN A SERVICE</strong>。</li>
+<li>如果您正在使用 Docker 容器，请单击 <strong>Container Settings</strong> 并配置您的容器运行时间。</li>
+<li>单击 <strong>Volumes</strong> 并输入卷名称和容器路径。</li>
+<li>单击 <strong>Deploy</strong>。</li>
+</ol>
+<p><a name="implicit-vol"></a></p>
+<h1 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>隐式卷</h1>
+<p>默认隐式卷大小为 16 GiB。如果您使用的是 Universal Container Runtime，则可以通过设置  来修改特定卷的此默认值。<code>volumes[x].external.size</code>. 如果您使用的是 Docker Engine，则无法修改特定卷的此默认值。但是，对于这两个运行时间，您可以通过修改 [REX-Ray configuration][4] 来修改所有隐式卷的默认大小。</p>
+<h1 id="-5"><a class="content__anchor" href="#-5" aria-hidden="true"><i data-feather="bookmark"></i></a>扩展应用程序</h1>
+<p>使用外部卷的应用程序只能扩展为单个实例，因为卷一次只能附加到单个任务。</p>
+<p>如果将应用程序减容到 0 个实例，该卷将从装载它的代理程序中分离，但不会被删除。如果您再次扩展应用程序，则与其关联的数据仍然可用。</p>
+<h1 id="docker-2"><a class="content__anchor" href="#docker-2" aria-hidden="true"><i data-feather="bookmark"></i></a>使用第三方 Docker 卷驱动程序</h1>
+<p>如果您想使用第三方的 Docker 卷驱动程序，而非 REX-RAY（例如，<a href="https://github.com/NetApp/trident">Netapp Trident</a>)，那么您需要在每个代理节点上执行以下步骤（以下步骤以 Trident 为例）：</p>
+<ol>
+<li>
+<p>将卷驱动程序安装为 Docker 插件。</p>
+<pre><code>$ docker plugin install netapp/trident-plugin:19.10 --alias netapp --grant-all-permissions
+</code></pre>
+</li>
+<li>
+<p>将卷驱动程序注册到 Docker 插件目录。请参阅 <a href="https://docs.docker.com/engine/extend/plugin_api/#plugin-discovery">Docker 插件 API</a>，以了解 Docker 如何发现插件。</p>
+<pre><code>$ sudo mkdir -p /etc/docker/plugins/
+$ sudo bash -c 'echo &quot;unix:///run/docker/plugins/&lt;plugin-id&gt;/netapp.sock&quot; &gt; /etc/docker/plugins/netapp.spec'
+</code></pre>
+</li>
+</ol>
+<p>现在，您可以在 DC/OS 中使用卷驱动程序了。创建应用程序时，您需要将选项 <code>external.options[&quot;dvdi/driver&quot;]</code> 设为卷驱动程序的名称（如 <code>netapp</code>）。</p>
+<h1 id="-6"><a class="content__anchor" href="#-6" aria-hidden="true"><i data-feather="bookmark"></i></a>潜在问题</h1>
+<ul>
+<li>每个卷只能分配一个任务。您的存储提供程序可能有其他限制。</li>
+<li>您创建的卷不会自动清除。如果删除群集，则必须转至存储提供程序并删除不再需要的卷。如果您正在使用 EBS，请通过您在 Marathon 应用定义中设置的 <code>container.volumes.external.name</code> 进行搜索来查找它们。此名称对应于 EBS 卷 <code>Name</code> 标签。</li>
+<li>卷由其存储提供程序命名。选择唯一的卷名称以避免冲突。</li>
+<li>如果使用 Docker，则必须使用兼容的 Docker 版本。请参阅 [REX-Ray 文档][11]，了解哪些版本的 Docker 与 REX-Ray 卷驱动程序兼容。</li>
+<li>对于隐式创建卷的应用程序，启动时间可能会增加。增加的量取决于若干因素，包括卷大小和类型。存储提供程序处理卷的方法也会影响隐式创建卷的启动时间。</li>
+</ul>
+<h2 id="ebs"><a class="content__anchor" href="#ebs" aria-hidden="true"><i data-feather="bookmark"></i></a>EBS 特定</h2>
+<p>在同一 AWS 账户上创建的卷共享一个命名空间。选择唯一的卷名称以避免在同一帐户下启动多个群集时的冲突。</p>
+<p>EBS 卷也由其可用区 (AZ) 命名，并且 EBS 卷 [只能连接到同一 AZ 的 EC2 实例][12]。因此，尝试在不同的 AZ 中运行的代理程序中启动任务将导致创建同名的新卷。如果您在一个 AZ 中创建群集，请将其销毁，如果您希望重用任何外部卷，请确保在同一 AZ 中创建群集。如果群集跨越多个 AZ，请使用 Marathon 限制仅在同一 AZ 中启动实例。</p>
+<p>默认情况下，REX-Ray 将在连接 13 个 EBS 卷后失败。使用 [配置选项 useLargeDeviceRange 来扩展此限制][13]，这已在 RexRay v0.11.4 中引入。</p>
+<p>在某些较新的 EC2 实例类型上，EBS 卷作为非易失性内存主机控制器接口规范 (NVMe) 设备存在。对 NVMe 的支持仅添加到 v0.11.4 的 RexRay。您需要采取以下必要步骤，才能使 RexRay 与 CentOS 上的 NVMe 设备一起使用（在较新的 AMI 上，则可能不需要）：</p>
+<ol>
+<li>
+<p>安装 NVMe CLI 命令。</p>
+<pre><code class="language-bash">$ yum install -y nvme-cli
+</code></pre>
+</li>
+<li>
+<p>安装必要的 udev 规则和 helper 脚本。这些都取自 <a href="https://github.com/rexray/rexray/blob/362035816046e87f7bc5a6ca745760d09a69a40c/.docs/user-guide/storage-providers/aws.md#nvme-support">RexRay 用户指南</a>.</p>
+<pre><code class="language-bash">$ cat &lt;&lt;EOF &gt; /etc/udev/rules.d/999-aws-ebs-nvme.rules
+KERNEL==&quot;nvme[0-9]*n[0-9]*&quot;, ENV{DEVTYPE}==&quot;disk&quot;, ATTRS{model}==&quot;Amazon Elastic Block Store&quot;, PROGRAM=&quot;/usr/local/bin/ebs-nvme-mapping /dev/%k&quot;, SYMLINK+=&quot;%c&quot;
+EOF
+</code></pre>
+</li>
+<li>
+<p>创建 helper 脚本。</p>
+<pre><code class="language-bash">$ cat &lt;&lt;EOF &gt; /usr/local/bin/ebs-nvme-mapping
+#!/bin/bash
+#/usr/local/bin/ebs-nvme-mapping
+vol=$(/usr/sbin/nvme id-ctrl --raw-binary &quot;${1}&quot; | \
+      cut -c3073-3104 | tr -s ' ' | sed 's/ $//g')
+vol=${vol#/dev/}
+[ -n &quot;${vol}&quot; ] &amp;&amp; echo &quot;${vol/xvd/sd} ${vol/sd/xvd}&quot;
+EOF
+</code></pre>
+</li>
+</ol>
+<pre><code>1. 在脚本上设置文件权限，然后重新加载 udev 规则。
+    ```bash
+    $ chown root:root /usr/local/bin/ebs-nvme-mapping
+    $ chmod 700 /usr/local/bin/ebs-nvme-mapping
+    $ udevadm control --reload
+    ```
+
+## 外部卷   
+
+有关外部卷的故障排除，请参阅代理程序或系统日志。如果您在 DC/OS 上使用 REX-Ray，还可以查阅 `systemd` 日志中的 `dcos-rexray.service` 单元记录。
+
+[4]: https://rexray.readthedocs.io/en/v0.9.0/user-guide/config/
+[5]: http://rexray.readthedocs.io/en/v0.9.0/user-guide/storage-providers/
+[6]: /dcosdocs/mesosphere/dcos/1.13/deploying-services/creating-services/
+[7]: https://rexray.readthedocs.io/en/v0.9.0/user-guide/config/#data-directories
+[8]: #implicit-vol
+[9]: https://rexray.readthedocs.io/en/v0.9.0/user-guide/schedulers/
+[10]: https://github.com/emccode/dvdcli#extra-options
+[11]: https://rexray.readthedocs.io/en/v0.9.0/user-guide/schedulers/#docker-containerizer-with-marathon
+[12]: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html
+[13]: https://rexray.readthedocs.io/en/v0.11.0/user-guide/storage-providers/aws/#configuration-notes
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#创建具有外部持久卷的应用程序">创建具有外部持久卷的应用程序</a></li><li class="content__sections-item content__sections-item--h2"><a href="#marathon">Marathon 应用定义</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-ui">从 DC/OS UI 创建应用程序</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-4">隐式卷</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-5">扩展应用程序</a></li><li class="content__sections-item content__sections-item--h1"><a href="#docker-2">使用第三方 Docker 卷驱动程序</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-6">潜在问题</a></li><li class="content__sections-item content__sections-item--h2"><a href="#ebs">EBS 特定</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

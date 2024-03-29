@@ -1,0 +1,355 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Release Notes - D2iQ Docs</title><meta name="description" content="Discover the new features, updates, and known limitations in this release of DC/OS Storage Service"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Storage Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li><li class="chooser-list-item"><a href="/dkp/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__item"><a href="/dkp/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><div class="toggle"><p><span class="title">Storage</span><span class="version"> 1.0.0</span></p></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/storage/1.0.0/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/storage/1.0.0/terminology-and-concepts/">Terminology and Concepts</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/storage/1.0.0/architecture/">Architecture</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/storage/1.0.0/install/"><i data-feather="chevron-right"></i>Install</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/storage/1.0.0/troubleshooting/">Troubleshooting</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/storage/1.0.0/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/storage/1.0.0/upgrades/">Upgrades</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/storage/1.0.0/volume-plugins/">Volume Plugins</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/storage/1.0.0/uninstall/">Uninstall</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/storage/1.0.0/cli-references/"><i data-feather="chevron-right"></i>CLI References</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Release Notes</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">Discover the new features, updates, and known limitations in this release of DC/OS Storage Service</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/storage/1.0.0/release-notes/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+Release+Notes&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/services/storage/1.0.0/release-notes&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><h1 id="release-notes-for-dcos-storage-service-version-100"><a class="content__anchor" href="#release-notes-for-dcos-storage-service-version-100" aria-hidden="true"><i data-feather="bookmark"></i></a>Release notes for DC/OS Storage Service version 1.0.0</h1>
+<ul>
+<li>This version of the DC/OS Storage Service is considered Generally Available and all users are strongly encouraged to upgrade from previous versions.</li>
+<li>This version of the DC/OS Storage Service requires DC/OS Enterprise version 1.13.2 or later.</li>
+</ul>
+<h2 id="new-features"><a class="content__anchor" href="#new-features" aria-hidden="true"><i data-feather="bookmark"></i></a>New Features</h2>
+<ul>
+<li>The <code>devices</code> volume provider now blacklists descendants of blacklisted devices by default. To override the default behavior, you can also explicitly blacklist a device using the <code>blacklist-exactly</code> configuration option.</li>
+<li>The <code>devices</code> and <code>lvm</code> volume providers now emit metrics. For more information see <a href="#new-metrics">New Metrics</a>.</li>
+<li>DSS can manage storage providers and volumes on agents that also advertise GPU resources.</li>
+<li>Operator can scrub volume removal operations that will never complete due to interrupted <code>DESTROY_DISK</code> operations.</li>
+<li>Operator can scrub local volumes and local volume providers that DSS reports as <code>MISSING</code>.</li>
+<li>Volume remove operations can be canceled. If no Mesos operations been issued to remove the volume, you can cancel the removal request.</li>
+<li>Operator can more easily remove failing providers from a node.</li>
+<li>The <code>dcos storage volume create</code> accepts create parameters via JSON file or <code>stdin</code>.</li>
+<li>The <code>dcos storage ...</code> commands accept a <code>-v</code> flag to toggle verbose logging.</li>
+</ul>
+<h2 id="updates"><a class="content__anchor" href="#updates" aria-hidden="true"><i data-feather="bookmark"></i></a>Updates</h2>
+<ul>
+<li>Additional logging of API requests and responses.</li>
+<li>Enforce uniqueness of device provider names.</li>
+<li>More robust enforcement of non-overlapping devices among multiple <code>lvm</code> volume providers.</li>
+<li>Device provider creation validates that the target node is known to DSS.</li>
+<li>Prevent volume lifecycle operations when the parent provider is being modified, or is otherwise not ready.</li>
+<li>Prevent provider modifications when that provider has an in-progress volume operation.</li>
+<li>Removed permissions that are no longer needed by storage principal (related to marathon, package, storage service).</li>
+<li>DSS running on permissive mode clusters requires storage principal configuration.</li>
+<li>DSS running on strict mode clusters requires <code>enforce-authorization</code> to be enabled.</li>
+<li><code>dcos storage ... list</code> commands display results in sorted order.</li>
+<li><code>dcos storage provider list</code> table header <code>STATE</code> is now called <code>STATUS</code> (for consistency).</li>
+<li>Removed the <code>--all</code> flag from <code>dcos storage provider list</code></li>
+<li>The <code>--timeout</code> flag sets a timeout after which the CLI will abort its operation instead of relying on the server to time out the operation. The CLI will keep retrying internally until the timeout is hit or a non-timeout error or success is achieved.</li>
+<li>Removed the previously deprecated “Artifacts Container” installation method.</li>
+<li>Secondary DSS instances will refuse to start if a primary instance is already running.</li>
+<li>Actively monitor Mesos heartbeats to DSS and trigger re-connection as needed.</li>
+<li>The DSS package includes a <code>LICENSES</code> file that contains copies of all OSS licenses.</li>
+<li>Service bug fixes, performance fixes, security fixes, as well as other doc fixes and improvements.</li>
+</ul>
+<h2 id="limitations"><a class="content__anchor" href="#limitations" aria-hidden="true"><i data-feather="bookmark"></i></a>Limitations</h2>
+<ul>
+<li><a href="https://jira.mesosphere.com/browse/ASF-2423"></a> Only local volume storage is currently supported.</li>
+<li><a href="https://jira.mesosphere.com/browse/DCOS-52744"></a> Only manual <a href="../upgrades/">upgrades</a> of a running DC/OS Storage Service on an existing cluster are supported at this time.</li>
+<li>Volume size must be a multiple of 4MiB, which is the default size of an LVM extent. Otherwise, DSS will reply with an error when attempting to create the volume.</li>
+<li>When planning to manually remove a logical volume via <code>lvremove</code>, the operator is responsible for zeroing the volume prior to removal.</li>
+</ul>
+<h2 id="known-issues"><a class="content__anchor" href="#known-issues" aria-hidden="true"><i data-feather="bookmark"></i></a>Known Issues</h2>
+<ul>
+<li><a href="https://jira.mesosphere.com/browse/ASF-1655"></a> In the event of an unexpected device and/or volume change on an agent, you must restart the agent for the <code>devices</code> and <code>lvm</code> providers to reconcile the condition. For example, if you add or remove devices, restart the agent to update the <code>devices</code> volume provider with the changes.</li>
+<li><code>dcos storage</code> CLI subcommands may fail with a gateway timeout error, but still complete successfully in the background.</li>
+<li><a href="https://jira.mesosphere.com/browse/ASF-1655"></a> The Mesos SLRP implementation is not yet compatible with multiple profiles that consume capacity from the same provider in different ratios (for example, RAID1 and linear). To work around this, create multiple providers, each of which is wholly dedicated to linear or RAID1.</li>
+<li><a href="https://jira.mesosphere.com/browse/DCOS-44108"></a> The storage service should only list providers that it currently manages; incompletely removed providers may be incorrectly listed in some cases.</li>
+<li>Deleting a volume may fail with “Cannot allocate memory” on some versions of CoreOS. To avoid this issue, ensure you are using a <a href="/dcosdocs/mesosphere/dcos/version-policy/#dcos-platform-version-compatibility-matrix">supported version</a> of CoreOS.</li>
+<li>Kernels from (including) 3.10.0-862.6.3.el7 up to (including) 3.10.0-862.11.6.el7 may panic as a result of LVM operations (https://access.redhat.com/solutions/3520511).</li>
+<li>The DC/OS installer may issue one or more <em>WARNING</em> messages regarding missing kernel modules:<pre><code>Checking if kernel module raid1 is loaded: WARNING Kernel module raid1 is not loaded. DC/OS Storage Service (DSS) depends on it.
+Checking if kernel module dm_raid is loaded: WARNING Kernel module dm_raid is not loaded. DC/OS Storage Service (DSS) depends on it.
+</code></pre>
+To resolve the issue, configure the <code>raid1</code> and <code>dm_raid</code> kernel modules to load at OS boot time.</li>
+<li>Using NVMe storage with DSS may require additional modifications to the underlying OS. For more information see these <a href="/dcosdocs/mesosphere/dcos/latest/storage/external-storage/#ebs-specific">suggested commands and helper scripts</a>.</li>
+<li><a href="https://jira.mesosphere.com/browse/DCOS-54794"></a> The device names (e.g. <code>sda</code>) used to create volume providers can be unstable over time thus <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/persistent_naming">precautions</a> should be taken to avoid this condition.</li>
+<li><a href="https://jira.mesosphere.com/browse/DCOS-55524"></a> The DC/OS UI shows an incorrect unit for DC/OS Storage volume size in the service create modal – the value will be treated as MiB instead of GiB as stated in the UI.</li>
+<li><a href="https://jira.mesosphere.com/browse/DCOS-44055"></a> The DC/OS cluster’s reported total disk resources is inflated due to double-counting of DSS devices.</li>
+</ul>
+<h2 id="new-metrics"><a class="content__anchor" href="#new-metrics" aria-hidden="true"><i data-feather="bookmark"></i></a>New Metrics</h2>
+<p>All metrics related to the DC/OS Storage Service have a prefix of <code>csidevices_</code>, <code>csilvm_</code>, or <code>dss_</code>.</p>
+<h3 id="new-devices-provider-metrics"><a class="content__anchor" href="#new-devices-provider-metrics" aria-hidden="true"><i data-feather="bookmark"></i></a>New <code>devices</code> provider metrics</h3>
+<ul>
+<li><code>csidevices_uptime</code>: the uptime (in seconds) of the process</li>
+<li><code>csidevices_requests</code>: number of requests served, tagged by:
+<ul>
+<li><code>result_type</code>: one of <code>success</code>, <code>error</code></li>
+<li><code>method</code>: the RPC name, e.g., <code>/csi.v0.Controller/ListVolumes</code></li>
+</ul>
+</li>
+<li><code>csidevices_requests_latency_(stddev,mean,lower,count,sum,upper)</code>: the request duration (in milliseconds), tagged by:
+<ul>
+<li><code>method</code>: the RPC name, e.g., <code>/csi.v0.Controller/ListVolumes</code></li>
+</ul>
+</li>
+<li><code>csidevices_devices</code>: the number of devices reported by ListVolumes</li>
+</ul>
+<h3 id="new-lvm-volume-provider-metrics"><a class="content__anchor" href="#new-lvm-volume-provider-metrics" aria-hidden="true"><i data-feather="bookmark"></i></a>New <code>lvm</code> volume provider metrics</h3>
+<ul>
+<li><code>csilvm_uptime</code>: the uptime (in seconds) of the process</li>
+<li><code>csilvm_requests</code>: number of requests served, tagged by:
+<ul>
+<li><code>result_type</code>: one of <code>success</code>, <code>error</code></li>
+<li><code>method</code>: the RPC name, e.g., <code>/csi.v0.Controller/CreateVolume</code></li>
+</ul>
+</li>
+<li><code>csilvm_requests_latency_(stddev,mean,lower,count,sum,upper)</code>: the request duration (in milliseconds), tagged by:
+<ul>
+<li><code>method</code>: the RPC name, e.g., <code>/csi.v0.Controller/CreateVolume</code></li>
+</ul>
+</li>
+<li><code>csilvm_volumes</code>: the number of active logical volumes</li>
+<li><code>csilvm_bytes_total</code>: the total number of bytes in the volume group</li>
+<li><code>csilvm_bytes_free</code>: the number of bytes available for creating a linear logical volume</li>
+<li><code>csilvm_bytes_used</code>: the number of bytes allocated to active logical volumes</li>
+<li><code>csilvm_pvs</code>: the number of physical volumes in the volume group</li>
+<li><code>csilvm_missing_pvs</code>: the number of pvs given on the command-line but are not found in the volume group</li>
+<li><code>csilvm_unexpected_pvs</code>: the number of pvs not given on the command-line but are found in the volume group</li>
+<li><code>csilvm_lookup_pv_errs</code>: the number of errors encountered while looking for pvs specified on the command-line</li>
+</ul>
+<h3 id="new-dss-metrics"><a class="content__anchor" href="#new-dss-metrics" aria-hidden="true"><i data-feather="bookmark"></i></a>New DSS metrics</h3>
+<ul>
+<li><code>dss_agent_lookups_hits</code>: number of successful agent address lookups (via cache)</li>
+<li><code>dss_agent_lookups_misses</code>: number of failed agent address lookups (via cache)</li>
+<li><code>dss_mesosclient_master_getAgents_shared</code>: count of coalesced API calls</li>
+<li><code>dss_obj_providers_missing</code>: number of <code>MISSING</code> providers</li>
+<li><code>dss_obj_volumes_missing</code>: number of <code>MISSING</code> volumes</li>
+<li><code>dss_ops_providers_create</code>: duration of provider create operations</li>
+<li><code>dss_ops_providers_modify</code>: duration of provider modify operations</li>
+<li><code>dss_ops_providers_remove</code>: duration of provider remove operations</li>
+<li><code>dss_ops_volumes_create</code>: duration of volume create operations</li>
+<li><code>dss_ops_volumes_remove</code>: duration of volume remove operations</li>
+<li><code>dss_sched_hb_disabled</code>: non-zero if scheduler is subscribed to mesos w/o heartbeats enabled</li>
+<li><code>dss_sched_hb_missed</code>: missed mesos heartbeats</li>
+<li><code>dss_sched_hb_missed2Many</code>: how many times the number of consecutively missed mesos heartbeats triggered reconnection to mesos</li>
+</ul>
+<!--
+# Release notes for Beta DC/OS Storage Service version 0.6.0
+
+* This version of the DC/OS Storage Service requires DC/OS Enterprise version 1.13 or later.
+
+## New Features
+
+* Volume capacity constraints may be specified as part of a volume profile.
+* Added and enhanced existing CLI commands to support mitigation of issues resulting from agent reconfiguration events.
+* SDK-based services (still in Beta) may consume DC/OS Storage Service volumes.
+* Storage provider configurations may be modified in place, and no longer require a remove/reinstall cycle in order to update.
+* Storage plugins are upgradable in-place, and no longer require a remove/reinstall cycle in order to upgrade.
+* Storage service diagnostics are downloaded as part of the DC/OS Diagnostics bundle.
+
+## Updates
+
+* Narrowed the scope of Mesos disk permissions required by the storage service.
+* `devices` volume provider is not removable if another provider (e.g. `lvm` provider) is consuming one or more of its devices.
+* Improved observability via additional metrics instrumented throughout the storage service.
+* `journald+logrotate` logging enabled, by default, for the storage service.
+* Streamlined resource management via default storage service offer filters.
+* Tutorial for extending the default Universal Installer configuration in order to provide additional raw disks for the storage service to consume.
+* Service bug fixes, performance fixes, as well as other doc fixes and improvements.
+
+## Limitations
+
+* Only local volume storage is currently supported.
+* Automated [upgrades](../upgrades/) of a running DC/OS Storage Service on an existing cluster are not yet supported.
+* The service must be deployed in a DC/OS cluster running in `strict` [security](/dcosdocs/mesosphere/dcos/latest/security/ent/#security-modes) mode when configured with a service account and corresponding secret.
+
+## Known Issues
+
+DC/OS Storage Service is currently in Beta and has the following known bugs.
+
+* `devices` volume providers do not witness new or removed devices on the agent until the agent is restarted.
+* `dcos storage` CLI subcommands may fail with a gateway timeout error, but still complete successfully in the background.
+* The Mesos SLRP implementation is not yet compatible with multiple profiles that consume capacity from the same provider in different ratios (for example, RAID1 and linear).
+* The storage service should only list providers that it currently manages; incompletely removed providers may be incorrectly listed in some cases.
+* Deleting a volume may fail with "Cannot allocate memory" on CoreOS; please use a [supported version](/dcosdocs/mesosphere/dcos/latest/version-policy/#dcos-platform-version-compatibility-matrix) of CoreOS.
+* Kernels from (including) 3.10.0-862.6.3.el7 up to (including) 3.10.0-862.11.6.el7 may panic as a result of LVM operations (https://access.redhat.com/solutions/3520511).
+
+# Release notes for Beta DC/OS Storage Service version 0.5.3
+
+* This is a bug fix release, see the [version 0.5.0](#version_050) release notes for major changes between 0.4.x and 0.5.x.
+
+## Updates
+
+* `min-allocatable-disk` is a new DSS configuration option.
+* Documentation corrections and updates.
+
+# Release notes for Beta DC/OS Storage Service version 0.5.2
+
+* This is a bug fix release, see the [version 0.5.0](#version_050) release notes for major changes between 0.4.x and 0.5.x.
+
+## Updates
+
+* LVM plugin performance improvements.
+* Documentation corrections and updates.
+
+<a name="version_050"></a>
+# Release notes for Beta DC/OS Storage Service version 0.5.0
+
+* This version of the DC/OS Storage Service requires DC/OS Enterprise version 1.12.1 or later.
+* Upgrading DSS from v0.4.x to v0.5.x requires [manual intervention](../upgrades/). Simply upgrading the `beta-storage` package is not sufficient.
+
+## Updates
+
+* More robust coordination with Mesos in regard to resource reservations and create/remove volume operations.
+* Configurable `logrotate` maximal `stdout`/`stderr` size for the DC/OS Storage Service itself.
+* `lvm` volume provider names are now limited to 64 characters in length.
+* The `devices` and `lvm` plugins have been updated with fixes.
+* Added `log-journald` package configuration option to redirect storage service logs to `journald`.
+* Provider and volume records are purged from DSS history upon successful removal.
+* Increase default CPU requirements to reduce CPU throttling and API tail latencies.
+* Various other bug/performance fixes and documentation corrections.
+
+## Limitations
+
+* Only local volume storage is currently supported.
+* Volume profile deactivation is not supported.
+* Automated [upgrades](../upgrades/) of a running DC/OS Storage Service on an existing cluster are not yet supported.
+* The service must be deployed in a DC/OS cluster running in `strict` [security](/dcosdocs/mesosphere/dcos/latest/security/ent/#security-modes) mode when configured with a service account and corresponding secret.
+
+## Known Issues
+
+DC/OS Storage Service is currently in Beta and has the following known bugs.
+
+* `devices` volume providers do not witness new or removed devices on the agent until the agent is restarted.
+* `dcos storage` CLI subcommands may fail with a gateway timeout error, but still complete successfully in the background.
+* `MOUNTPOINT` and `FSTYPE` are no longer available via `dcos storage device list`.
+* The Mesos SLRP implementation is not yet compatible with multiple profiles that consume capacity from the same provider in different ratios (for example, RAID1 and linear).
+* The storage service should only list providers that it currently manages; incompletely removed providers may be incorrectly listed in some cases.
+* Deleting a volume may fail with "Cannot allocate memory" on CoreOS; please use a [supported version](/dcosdocs/mesosphere/dcos/latest/version-policy/#dcos-platform-version-compatibility-matrix) of CoreOS.
+* Kernels from (including) 3.10.0-862.6.3.el7 up to (including) 3.10.0-862.11.6.el7 may panic as a result of LVM operations (https://access.redhat.com/solutions/3520511).
+
+# Version 0.4.0
+
+* This version of the DC/OS Storage Service requires DC/OS Enterprise version 1.12 or later.
+
+## New features
+
+* Local volume provider support for LVM-backed RAID1 storage. See the [Volume plugins](../volume-plugins/) documentation for details.
+
+## Updates
+
+* Added the `--all` flag for the `list` action of storage CLI subcommands `profile`, `provider`, and `volume`.
+* The `--timeout` flag, added to all storage CLI subcommands, limits the time that the CLI waits for a storage service response.
+* Improved error reporting for storage CLI subcommands.
+* Improved interoperability with other DC/OS CLI subcommands.
+* Emitted statsd metrics use `_` instead of `.` as a sub-label separator.
+* Additional metrics for previously untracked Mesos API interactions.
+* Increased verbosity for debug logging in the RPC layer.
+* Support for performance diagnosis at run-time.
+* Configurable CPU, memory, and disk resource usage for the DC/OS Storage Service itself.
+* Improvements to Mesos offer handling to improve throughput and reduce offer contention.
+* Documentation corrections and enhancements.
+* Various other bug fixes.
+
+## Limitations
+
+DC/OS Storage Service is currently in Beta and has the following known limitations.
+
+* Only local volume storage is currently supported.
+* Volume profile deactivation is not supported.
+* Removing a `devices` volume provider from a node is not supported.
+* Automated [upgrades](../upgrades/) of a running DC/OS Storage Service on an existing cluster are not yet supported.
+* The service must be deployed in a DC/OS cluster running in `strict` [security](/dcosdocs/mesosphere/dcos/latest/security/ent/#security-modes) mode when configured with a service account and corresponding secret.
+
+## Known Issues
+
+DC/OS Storage Service is currently in Beta and has the following known bugs.
+
+* Local volume creation will fail if the volume provider name is too long.
+* Local volume removal can hang indefinitely.
+* `devices` volume providers do not witness new or removed devices on the agent until the agent is restarted.
+* Multiple storage providers with the same name can be created, but only uniquely named providers are listed.
+* `dcos storage` CLI subcommands may fail with a gateway timeout error, but still complete successfully in the background.
+
+# Version 0.3.2
+
+* This version of the DC/OS Storage Service requires DC/OS Enterprise version 1.12 or later.
+
+## Updates
+
+* Updated the doc to add the `resource_provider` read permission to the install steps.
+
+# Version 0.3.1
+
+* This version of the DC/OS Storage Service requires DC/OS Enterprise version 1.12 or later.
+
+## Updates
+
+* Fixed the `minDcosReleaseVersion` on the package so the package does not install on 1.11 (or older) DC/OS.
+
+# Version 0.3.0
+
+* This version of the DC/OS Storage Service requires DC/OS Enterprise version 1.12 or later.
+
+## New features
+
+* Add support for [device blacklist](../cli-references/dcos-storage-device/).
+* [Installation](../install/package-registry-based/) via DC/OS Package Registry.
+* Publish service metrics to DC/OS [metrics](/dcosdocs/mesosphere/dcos/latest/metrics/).
+
+## Updates
+
+* Devices [volume plugin](../terminology-and-concepts/) needs be installed manually from this version.
+* Compatible with DC/OS clusters running in `strict` [security](/dcosdocs/mesosphere/dcos/latest/security/ent/#security-modes) mode, see [installation notes](../install/) for details.
+* CLI commands report additional details for errors generated by the DC/OS Storage Service.
+* Plugin [logs are viewable](../tutorials/) via [DC/OS CLI](../latest/cli/command-reference/dcos-node/dcos-node-log/).
+* Bug fixes and other minor improvements.
+
+## Limitations
+
+DC/OS Storage Service is currently in Beta and has the following known limitations.
+
+* Volume profile deactivation is not supported.
+* Only linear target is supported by the LVM volume plugin.
+* Removing a `devices` volume provider from a node is not supported.
+* Automated [upgrades](../upgrades/) of a running DC/OS Storage Service on an existing cluster are not yet supported.
+
+# Version 0.2.0
+
+* This version of the DC/OS Storage Service requires DC/OS Enterprise version 1.11.1 or later.
+
+## New features
+
+* Support deletion of local [volume providers](../terminology-and-concepts/).
+* Support deletion of [volumes](../terminology-and-concepts/).
+
+## Updates
+
+* Updated LVM [volume plugin](../terminology-and-concepts/).
+* Bug fixes and other minor improvements.
+
+## Limitations
+
+DC/OS Storage Service is currently in Beta and has the following known limitations.
+
+* Volume profile deactivation is not supported.
+* Cannot list devices or create volume provider on public agents.
+* Only linear target is supported by the LVM volume plugin.
+* Limited error reporting.
+* The only supported DC/OS [security](/dcosdocs/mesosphere/dcos/latest/security/ent/#security-modes) mode is `permissive`.
+* Automated [upgrades](../upgrades/) of a running DC/OS Storage Service on an existing cluster are not yet supported.
+
+# Version 0.1.0
+
+Initial release.
+
+## New features
+
+* Support creating [volume profiles](../terminology-and-concepts/).
+* Support dynamically adding local [volume providers](../terminology-and-concepts/).
+* Support dynamically creating [volumes](../terminology-and-concepts/) with profiles.
+* Support listing [devices](../terminology-and-concepts/) on each agent node.
+* Built-in LVM [volume plugin](../terminology-and-concepts/).
+* Integrate with Apache Mesos [CSI](mesos.apache.org/documentation/latest/csi/) support.
+
+## Limitations
+
+DC/OS Storage Service is currently in Beta and has the following known limitations.
+
+* Volume deletion is not supported.
+* Volume provider deletion is not supported.
+* Volume profile deactivation is not supported.
+* Cannot list devices or create volume provider on public agents.
+* Only linear target is supported by the LVM volume plugin.
+
+-->
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#release-notes-for-dcos-storage-service-version-100">Release notes for DC/OS Storage Service version 1.0.0</a></li><li class="content__sections-item content__sections-item--h2"><a href="#new-features">New Features</a></li><li class="content__sections-item content__sections-item--h2"><a href="#updates">Updates</a></li><li class="content__sections-item content__sections-item--h2"><a href="#limitations">Limitations</a></li><li class="content__sections-item content__sections-item--h2"><a href="#known-issues">Known Issues</a></li><li class="content__sections-item content__sections-item--h2"><a href="#new-metrics">New Metrics</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

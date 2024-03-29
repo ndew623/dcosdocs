@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>API Reference - D2iQ Docs</title><meta name="description" content="API Reference for DC/OS Apache Cassandra"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Cassandra Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services/cassandra">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/api-reference">Cassandra 2.9.0-3.11.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/cassandra/2.4.0-3.0.16/api-reference">Cassandra 2.4.0-3.0.16</a></li></ul><div class="toggle"><p><span class="title">Cassandra</span><span class="version"> 2.9.0-3.11.6</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/getting-started/">Getting Started</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/operations/">Operations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/configuration/">Configuring</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/advanced/">Advanced</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/updates/">Update</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/security/">Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/uninstall/">Uninstall</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/troubleshooting/">Troubleshooting</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/api-reference/">API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/support-policy/">Support Policy</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">API Reference</h1></div><h4 class="content__header-description">API Reference for DC/OS Apache Cassandra</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/api-reference/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>The DC/OS Apache Cassandra Service implements a REST API that may be accessed from outside the cluster. The <code>&lt;dcos_url&gt;</code> parameter referenced below indicates the base URL of the DC/OS cluster on which the DC/OS Apache Cassandra Service is deployed.</p>
+<h1 id="rest-api-authentication"><a class="content__anchor" href="#rest-api-authentication" aria-hidden="true"><i data-feather="bookmark"></i></a>REST API Authentication</h1>
+<p>REST API requests must be authenticated. This authentication is only applicable for interacting with the Apache Cassandra REST API directly. You do not need the token to access the Apache Cassandra nodes themselves.</p>
+<p>If you are using Enterprise DC/OS, follow these instructions to <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/service-auth/custom-service-auth/">create a service account and an authentication token</a>. You can then configure your service to automatically refresh the authentication token when it expires. To get started more quickly, you can also <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/iam-api/">get the authentication token without a service account</a>, but you will need to manually refresh the token.</p>
+<p>If you are using open source DC/OS, follow these instructions to <a href="/dcosdocs/mesosphere/dcos/latest/security/oss/iam-api/">pass your HTTP API token to the DC/OS endpoint</a>.</p>
+<p>Once you have the authentication token, you can store it in an environment variable and reference it in your REST API calls:</p>
+<pre><code class="language-bash">export auth_token=uSeR_t0k3n
+</code></pre>
+<p>The <code>curl</code> examples in this document assume that an auth token has been stored in an environment variable named <code>auth_token</code>.</p>
+<p>If you are using Enterprise DC/OS, the security mode of your installation may also require the <code>--ca-cert</code> flag when making REST calls. Refer to <a href="/1.11/security/ent/tls-ssl/get-cert/#using-curl-to-retrieve-the-dcos-ca-bundle">Obtaining and passing the DC/OS certificate in cURL requests</a> for information on how to use the <code>--cacert</code> flag. If your security mode is <code>disabled</code>, do not use the <code>--ca-cert</code> flag.</p>
+<h1 id="plan-api"><a class="content__anchor" href="#plan-api" aria-hidden="true"><i data-feather="bookmark"></i></a>Plan API</h1>
+<p>The Plan API provides endpoints for monitoring and controlling service installation and configuration updates.</p>
+<h2 id="list-plans"><a class="content__anchor" href="#list-plans" aria-hidden="true"><i data-feather="bookmark"></i></a>List plans</h2>
+<p>You may list the configured plans for the service. By default, all services at least have a <code>deploy</code> plan and a <code>recovery</code> plan. Some services may have additional custom plans defined.</p>
+<pre><code class="language-bash">curl -H &quot;Authorization:token=$auth_token&quot; &lt;dcos_url&gt;/service/cassandra/v1/plans
+</code></pre>
+<pre><code class="language-bash">dcos cassandra --name=cassandra plan list
+</code></pre>
+<h2 id="view-plan"><a class="content__anchor" href="#view-plan" aria-hidden="true"><i data-feather="bookmark"></i></a>View plan</h2>
+<p>You may view the current state of a listed plan:</p>
+<pre><code class="language-bash">curl -H &quot;Authorization:token=$auth_token&quot; &lt;dcos_url&gt;/service/cassandra/v1/plans/&lt;plan&gt;
+</code></pre>
+<p>The CLI may be used to show a formatted tree of the plan (default), or the underlying JSON data as retrieved from the above HTTP endpoint:</p>
+<pre><code class="language-bash">dcos cassandra --name=cassandra plan show &lt;plan&gt;
+</code></pre>
+<pre><code class="language-bash">dcos cassandra --name=cassandra plan show &lt;plan&gt; --json
+</code></pre>
+<h2 id="pause-plan"><a class="content__anchor" href="#pause-plan" aria-hidden="true"><i data-feather="bookmark"></i></a>Pause plan</h2>
+<p>The installation will pause after completing the operation of the current node and wait for user input before proceeding further.</p>
+<pre><code class="language-bash">curl -X POST -H &quot;Authorization:token=$auth_token&quot; &lt;dcos_url&gt;/service/cassandra/v1/plans/deploy/interrupt
+</code></pre>
+<pre><code class="language-bash">dcos cassandra --name=cassandra plan pause deploy
+</code></pre>
+<h2 id="resume-plan"><a class="content__anchor" href="#resume-plan" aria-hidden="true"><i data-feather="bookmark"></i></a>Resume plan</h2>
+<p>The REST API request below will resume the operation at the next pending node.</p>
+<pre><code class="language-bash">curl -X PUT -H &quot;Authorization:token=$auth_token&quot; &lt;dcos_surl&gt;/service/cassandra/v1/plans/deploy/continue
+</code></pre>
+<pre><code class="language-bash">dcos cassandra --name=cassandra plan continue deploy
+</code></pre>
+<h1 id="nodes-api"><a class="content__anchor" href="#nodes-api" aria-hidden="true"><i data-feather="bookmark"></i></a>Nodes API</h1>
+<p>The pod API provides endpoints for retrieving information about nodes, restarting them, and replacing them.</p>
+<h2 id="list-nodes"><a class="content__anchor" href="#list-nodes" aria-hidden="true"><i data-feather="bookmark"></i></a>List Nodes</h2>
+<p>A list of available node ids can be retrieved by sending a GET request to <code>/v1/pod</code>:</p>
+<p>CLI Example</p>
+<pre><code class="language-bash">dcos cassandra --name=cassandra pod list
+</code></pre>
+<p>HTTP Example</p>
+<pre><code class="language-bash">curl -H &quot;Authorization:token=$auth_token&quot; &lt;dcos_url&gt;/service/cassandra/v1/pod
+</code></pre>
+<h2 id="node-info"><a class="content__anchor" href="#node-info" aria-hidden="true"><i data-feather="bookmark"></i></a>Node Info</h2>
+<p>You can retrieve node information by sending a GET request to <code>/v1/pod/&lt;node-id&gt;/info</code>:</p>
+<pre><code class="language-bash">curl  -H &quot;Authorization:token=$auth_token&quot; &lt;dcos_url&gt;/service/cassandra/v1/pod/&lt;node-id&gt;/info
+</code></pre>
+<p>CLI Example</p>
+<pre><code class="language-bash">dcos cassandra --name=cassandra pod info journalnode-0
+</code></pre>
+<p>HTTP Example</p>
+<pre><code class="language-bash">curl  -H &quot;Authorization:token=$auth_token&quot; &lt;dcos_url&gt;/service/cassandra/v1/pod/journalnode-0/info
+</code></pre>
+<h2 id="replace-a-node"><a class="content__anchor" href="#replace-a-node" aria-hidden="true"><i data-feather="bookmark"></i></a>Replace a Node</h2>
+<p>The <code>replace endpoint</code> command can be used to replace a node with an instance running on another agent node.</p>
+<p>CLI Example</p>
+<pre><code class="language-bash">dcos cassandra --name=cassandra pod replace &lt;node-id&gt;
+</code></pre>
+<p>HTTP Example</p>
+<pre><code class="language-bash">curl -X POST -H &quot;Authorization:token=$auth_token&quot; &lt;dcos_url&gt;/service/cassandra/v1/pod/&lt;node-id&gt;/replace
+</code></pre>
+<p>If the operation succeeds, a <code>200 OK</code> is returned.</p>
+<h2 id="restart-a-node"><a class="content__anchor" href="#restart-a-node" aria-hidden="true"><i data-feather="bookmark"></i></a>Restart a Node</h2>
+<p>The <code>restart endpoint</code> command can be used to restart a node in place on the same agent node.</p>
+<p>CLI Example</p>
+<pre><code class="language-bash">dcos cassandra --name=cassandra pod restart &lt;node-id&gt;
+</code></pre>
+<p>HTTP Example</p>
+<pre><code class="language-bash">curl -X POST -H &quot;Authorization:token=$auth_token&quot; &lt;dcos_url&gt;/service/cassandra/v1/pod/&lt;node-id&gt;/restart
+</code></pre>
+<p>If the operation succeeds a <code>200 OK</code> is returned.</p>
+<h2 id="pause-a-node"><a class="content__anchor" href="#pause-a-node" aria-hidden="true"><i data-feather="bookmark"></i></a>Pause a Node</h2>
+<p>The <code>pause endpoint</code> command can be used to relaunch a node in an idle command state for debugging purposes.</p>
+<p>CLI example</p>
+<pre><code class="language-bash">dcos cassandra --name=cassandra debug pod pause &lt;node-id&gt;
+</code></pre>
+<p>HTTP Example</p>
+<pre><code class="language-bash">curl -X POST -H &quot;Authorization:token=$auth_token&quot; &lt;dcos_url&gt;/service/cassandra/v1/pod/&lt;node-id&gt;/pause
+</code></pre>
+<h1 id="configuration-api"><a class="content__anchor" href="#configuration-api" aria-hidden="true"><i data-feather="bookmark"></i></a>Configuration API</h1>
+<p>The configuration API provides an endpoint to view current and previous configurations of the cluster.</p>
+<h2 id="view-target-config"><a class="content__anchor" href="#view-target-config" aria-hidden="true"><i data-feather="bookmark"></i></a>View Target Config</h2>
+<p>You can view the current target configuration by sending a GET request to <code>/v1/configurations/target</code>.</p>
+<p>CLI Example</p>
+<pre><code class="language-bash">dcos cassandra --name=cassandra config target
+</code></pre>
+<p>HTTP Example</p>
+<pre><code class="language-bash">curl -H &quot;Authorization:token=$auth_token&quot; &lt;dcos_url&gt;/service/cassandra/v1/configurations/target
+</code></pre>
+<h2 id="list-configs"><a class="content__anchor" href="#list-configs" aria-hidden="true"><i data-feather="bookmark"></i></a>List Configs</h2>
+<p>You can list all configuration IDs by sending a GET request to <code>/v1/configurations</code>.</p>
+<p>CLI Example</p>
+<pre><code class="language-bash">dcos cassandra --name=cassandra config list
+[
+  &quot;319ebe89-42e2-40e2-9169-8568e2421023&quot;,
+  &quot;294235f2-8504-4194-b43d-664443f2132b&quot;
+]
+</code></pre>
+<p>HTTP Example</p>
+<pre><code class="language-bash">curl -H &quot;Authorization:token=$auth_token&quot; &lt;dcos_url&gt;/service/cassandra/v1/configurations
+[
+  &quot;319ebe89-42e2-40e2-9169-8568e2421023&quot;,
+  &quot;294235f2-8504-4194-b43d-664443f2132b&quot;
+]
+</code></pre>
+<h2 id="view-specified-config"><a class="content__anchor" href="#view-specified-config" aria-hidden="true"><i data-feather="bookmark"></i></a>View Specified Config</h2>
+<p>You can view a specific configuration by sending a GET request to <code>/v1/configurations/&lt;config-id&gt;</code>.</p>
+<p>CLI Example</p>
+<pre><code class="language-bash">dcos cassandra --name=cassandra config show 9a8d4308-ab9d-4121-b460-696ec3368ad6
+</code></pre>
+<p>HTTP Example</p>
+<pre><code class="language-bash">curl -H &quot;Authorization:token=$auth_token&quot; &lt;dcos_url&gt;/service/cassandra/v1/configurations/9a8d4308-ab9d-4121-b460-696ec3368ad6
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#rest-api-authentication">REST API Authentication</a></li><li class="content__sections-item content__sections-item--h1"><a href="#plan-api">Plan API</a></li><li class="content__sections-item content__sections-item--h2"><a href="#list-plans">List plans</a></li><li class="content__sections-item content__sections-item--h2"><a href="#view-plan">View plan</a></li><li class="content__sections-item content__sections-item--h2"><a href="#pause-plan">Pause plan</a></li><li class="content__sections-item content__sections-item--h2"><a href="#resume-plan">Resume plan</a></li><li class="content__sections-item content__sections-item--h1"><a href="#nodes-api">Nodes API</a></li><li class="content__sections-item content__sections-item--h2"><a href="#list-nodes">List Nodes</a></li><li class="content__sections-item content__sections-item--h2"><a href="#node-info">Node Info</a></li><li class="content__sections-item content__sections-item--h2"><a href="#replace-a-node">Replace a Node</a></li><li class="content__sections-item content__sections-item--h2"><a href="#restart-a-node">Restart a Node</a></li><li class="content__sections-item content__sections-item--h2"><a href="#pause-a-node">Pause a Node</a></li><li class="content__sections-item content__sections-item--h1"><a href="#configuration-api">Configuration API</a></li><li class="content__sections-item content__sections-item--h2"><a href="#view-target-config">View Target Config</a></li><li class="content__sections-item content__sections-item--h2"><a href="#list-configs">List Configs</a></li><li class="content__sections-item content__sections-item--h2"><a href="#view-specified-config">View Specified Config</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

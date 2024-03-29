@@ -1,0 +1,185 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Mesos DNS API - D2iQ Docs</title><meta name="description" content="使用 Mesos DNA API 发现 IP 地址和端口"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.1/networking/DNS/mesos-dns/mesos-dns-api">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/DNS/mesos-dns/mesos-dns-api">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/networking/DNS/mesos-dns/mesos-dns-api">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/networking/DNS/mesos-dns/mesos-dns-api">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/"><i data-feather="chevron-right"></i>网络</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/load-balancing-vips/"><i data-feather="chevron-right"></i>负载均衡和虚拟 IP (VIP)</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/SDN/"><i data-feather="chevron-right"></i>软件定义网络</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/DNS/"><i data-feather="chevron-right"></i>DNS</a></li><ul><li class="active"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/DNS/mesos-dns/"><i data-feather="chevron-right"></i>Mesos-DNS</a></li><ul><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/DNS/mesos-dns/service-naming/">服务命名</a></li><li class="active active-on"><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/DNS/mesos-dns/mesos-dns-api/">Mesos DNS API</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/DNS/mesos-dns/expose-mesos-zone/">揭示外面的 Mesos 区域</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/DNS/mesos-dns/troubleshooting/">“故障排除”</a></li></ul></ul></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Mesos DNS API</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">使用 Mesos DNA API 发现 IP 地址和端口</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.1/networking/DNS/mesos-dns/mesos-dns-api/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>您可以使用 Mesos DNS API 发现其他应用程序的 IP 地址和端口。</p>
+<h1 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>路由</h1>
+<p>访问 Mesos DNS API 是通过每个节点上使用以下路由的 Admin Router 代理的：</p>
+<pre><code class="language-bash">curl -H &quot;Authorization: token=&lt;auth-token&gt;&quot; http://&lt;public-master-ip&gt;/mesos_dns/v1/
+</code></pre>
+<p>访问代理节点的 Mesos DNS API 也是通过管理节点代理的：</p>
+<pre><code class="language-bash">curl -H &quot;Authorization: token=&lt;auth-token&gt;&quot; http://&lt;public-master-ip&gt;/system/v1/agent/{agent_id}/mesos_dns/v1/
+</code></pre>
+<h1 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>格式</h1>
+<p>Mesos DNS API 的请求和响应主体被编排成 JSON 格式。</p>
+<p>请求必须包含接受标题：</p>
+<pre><code>Accept: application/json
+</code></pre>
+<p>响应将包括内容类型标题：</p>
+<pre><code>Content-Type: application/json
+</code></pre>
+<h1 id="enterprise"><a class="content__anchor" href="#enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>授权 <span class="badge__container badge__container--small"><span class="badge badge--shortcode badge--large badge--small badge--enterprise">Enterprise</span></span></h1>
+<p>所有 Mesos DNS API 路由需要认证才能使用。</p>
+<p>要验证 API 请求，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/iam-api/#obtaining-an-authentication-token">获取认证令牌</a> 和 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/iam-api/#passing-an-authentication-token">传递认证令牌</a>.</p>
+<p>Mesos DNS API 还需要通过以下权限授权：</p>
+<table>
+<thead>
+<tr>
+<th>路由</th>
+<th>权限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/system/mesos_dns/v1/</code></td>
+<td><code>dcos:adminrouter:ops:mesos-dns</code></td>
+</tr>
+<tr>
+<td><code>/system/v1/agent/{agent_id}/mesos_dns/v1/</code></td>
+<td><code>dcos:adminrouter:system:agent</code></td>
+</tr>
+</tbody>
+</table>
+<p>用户也可以通过 <code>dcos:superuser</code> 权限获得所有路由。</p>
+<p>要为您的帐户分配权限，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/perms-reference/">权限参考</a>.</p>
+<h1 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>资源</h1>
+<p>Mesos-DNS 实现了一个简单的 REST API，用于通过 HTTP 进行服务发现。这些示例假设您具有 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/sshcluster/">与节点的 SSH 连接</a>.</p>
+<h2 id="get-v1version"><a class="content__anchor" href="#get-v1version" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="get-version"></a>GET /v1/version</h2>
+<p>以 JSON 格式列出 Mesos-DNS 版本和源代码 URL。</p>
+<pre><code class="language-bash">curl -H &quot;Authorization: token=&lt;auth-token&gt;&quot; http://&lt;public-master-ip&gt;/mesos_dns/v1/version
+</code></pre>
+<p>输出应类似于：</p>
+<pre><code class="language-json">{
+  &quot;Service&quot;: &quot;Mesos-DNS&quot;,
+  &quot;URL&quot;: &quot;https://github.com/mesosphere/mesos-dns&quot;,
+  &quot;Version&quot;: &quot;dev&quot;
+ }
+</code></pre>
+<h2 id="get-v1config"><a class="content__anchor" href="#get-v1config" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="get-config"></a>GET /v1/config</h2>
+<p>以 JSON 格式列出 Mesos-DNS 配置参数。</p>
+<pre><code class="language-bash">curl -H &quot;Authorization: token=&lt;auth-token&gt;&quot; http://&lt;public-master-ip&gt;/mesos_dns/v1/config
+</code></pre>
+<p>DC/OS 开源的输出应该类似于：</p>
+<pre><code class="language-json">{
+  &quot;RefreshSeconds&quot;: 30,
+  &quot;Port&quot;: 61053,
+  &quot;Timeout&quot;: 5,
+  &quot;StateTimeoutSeconds&quot;: 300,
+  &quot;ZkDetectionTimeout&quot;: 30,
+  &quot;HttpPort&quot;: 8123,
+  &quot;TTL&quot;: 60,
+  &quot;SOASerial&quot;: 1495828250,
+  &quot;SOARefresh&quot;: 60,
+  &quot;SOARetry&quot;: 600,
+  &quot;SOAExpire&quot;: 86400,
+  &quot;SOAMinttl&quot;: 60,
+  &quot;SOAMname&quot;: &quot;ns1.mesos.&quot;,
+  &quot;SOARname&quot;: &quot;root.ns1.mesos.&quot;,
+  &quot;Masters&quot;: null,
+  &quot;ZoneResolvers&quot;: {},
+  &quot;Resolvers&quot;: [
+   &quot;169.254.169.253&quot;
+  ],
+  &quot;IPSources&quot;: [
+   &quot;host&quot;,
+   &quot;netinfo&quot;
+  ],
+  &quot;Zk&quot;: &quot;zk://zk-1.zk:2181,zk-2.zk:2181,zk-3.zk:2181,zk-4.zk:2181,zk-5.zk:2181/mesos&quot;,
+  &quot;Domain&quot;: &quot;mesos&quot;,
+  &quot;File&quot;: &quot;/opt/mesosphere/etc/mesos-dns.json&quot;,
+  &quot;Listener&quot;: &quot;0.0.0.0&quot;,
+  &quot;HTTPListener&quot;: &quot;0.0.0.0&quot;,
+  &quot;RecurseOn&quot;: true,
+  &quot;DnsOn&quot;: true,
+  &quot;HttpOn&quot;: true,
+  &quot;ExternalOn&quot;: true,
+  &quot;EnforceRFC952&quot;: false,
+  &quot;SetTruncateBit&quot;: false,
+  &quot;EnumerationOn&quot;: true,
+  &quot;MesosHTTPSOn&quot;: false,
+  &quot;CACertFile&quot;: &quot;&quot;,
+  &quot;CertFile&quot;: &quot;&quot;,
+  &quot;KeyFile&quot;: &quot;&quot;,
+  &quot;MesosCredentials&quot;: {
+   &quot;Principal&quot;: &quot;&quot;,
+   &quot;Secret&quot;: &quot;&quot;
+  },
+  &quot;IAMConfigFile&quot;: &quot;&quot;,
+  &quot;MesosAuthentication&quot;: &quot;&quot;
+ }
+</code></pre>
+<p>Entperise DC/OS 的输出应该类似于：</p>
+<pre><code class="language-json">{
+  &quot;RefreshSeconds&quot;: 30,
+  &quot;Port&quot;: 61053,
+  &quot;Timeout&quot;: 5,
+  &quot;StateTimeoutSeconds&quot;: 300,
+  &quot;ZkDetectionTimeout&quot;: 30,
+  &quot;HttpPort&quot;: 8123,
+  &quot;TTL&quot;: 60,
+  &quot;SOASerial&quot;: 1495828138,
+  &quot;SOARefresh&quot;: 60,
+  &quot;SOARetry&quot;: 600,
+  &quot;SOAExpire&quot;: 86400,
+  &quot;SOAMinttl&quot;: 60,
+  &quot;SOAMname&quot;: &quot;ns1.mesos.&quot;,
+  &quot;SOARname&quot;: &quot;root.ns1.mesos.&quot;,
+  &quot;Masters&quot;: null,
+  &quot;ZoneResolvers&quot;: {},
+  &quot;Resolvers&quot;: [
+   &quot;169.254.169.253&quot;
+  ],
+  &quot;IPSources&quot;: [
+   &quot;host&quot;,
+   &quot;netinfo&quot;
+  ],
+  &quot;Zk&quot;: &quot;zk://zk-1.zk:2181,zk-2.zk:2181,zk-3.zk:2181,zk-4.zk:2181,zk-5.zk:2181/mesos&quot;,
+  &quot;Domain&quot;: &quot;mesos&quot;,
+  &quot;File&quot;: &quot;/opt/mesosphere/etc/mesos-dns-enterprise.json&quot;,
+  &quot;Listener&quot;: &quot;0.0.0.0&quot;,
+  &quot;HTTPListener&quot;: &quot;127.0.0.1&quot;,
+  &quot;RecurseOn&quot;: true,
+  &quot;DnsOn&quot;: true,
+  &quot;HttpOn&quot;: true,
+  &quot;ExternalOn&quot;: true,
+  &quot;EnforceRFC952&quot;: false,
+  &quot;SetTruncateBit&quot;: false,
+  &quot;EnumerationOn&quot;: true,
+  &quot;MesosHTTPSOn&quot;: true,
+  &quot;CACertFile&quot;: &quot;/run/dcos/pki/CA/certs/ca.crt&quot;,
+  &quot;CertFile&quot;: &quot;/run/dcos/pki/tls/certs/mesos-dns.crt&quot;,
+  &quot;KeyFile&quot;: &quot;/run/dcos/pki/tls/private/mesos-dns.key&quot;,
+  &quot;MesosCredentials&quot;: {
+   &quot;Principal&quot;: &quot;&quot;,
+   &quot;Secret&quot;: &quot;&quot;
+  },
+  &quot;IAMConfigFile&quot;: &quot;/run/dcos/etc/mesos-dns/iam.json&quot;,
+  &quot;MesosAuthentication&quot;: &quot;iam&quot;
+ }
+</code></pre>
+<h2 host="" id="get-v1hosts"><a class="content__anchor" href="#get-v1hosts" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="get-hosts"></a>GET /v1/hosts/</h2>
+<p>以 JSON 格式列出与主机名对应的 IP 地址。它与 DNS A 记录查找相同。</p>
+<p class="message--note"><strong>注意：</strong>HTTP 界面仅解析 Mesos 域中的主机名。</p>
+<pre><code class="language-bash">curl -H &quot;Authorization: token=&lt;auth-token&gt;&quot; http://&lt;public-master-ip&gt;/mesos_dns/v1/hosts/nginx.marathon.mesos
+</code></pre>
+<p>输出应类似于：</p>
+<pre><code class="language-json">[
+    {&quot;host&quot;:&quot;nginx.marathon.mesos.&quot;,&quot;ip&quot;:&quot;10.249.219.155&quot;},
+    {&quot;host&quot;:&quot;nginx.marathon.mesos.&quot;,&quot;ip&quot;:&quot;10.190.238.173&quot;},
+    {&quot;host&quot;:&quot;nginx.marathon.mesos.&quot;,&quot;ip&quot;:&quot;10.156.230.230&quot;}
+]
+</code></pre>
+<h2 service="" id="get-v1services"><a class="content__anchor" href="#get-v1services" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="get-service"></a>GET /v1/services/</h2>
+<p>以 JSON 格式列出与主机名对应的主机名、IP 地址和端口。它与 DNS SRV 记录查找相同。</p>
+<p class="message--note"><strong>注意：</strong>HTTP 界面仅解析 Mesos 域中的主机名。</p>
+<pre><code class="language-bash">curl -H &quot;Authorization: token=&lt;auth-token&gt;&quot; http://&lt;public-master-ip&gt;/mesos_dns/v1/services/_nginx._tcp.marathon.mesos
+</code></pre>
+<p>输出应类似于：</p>
+<pre><code class="language-json">[
+    {&quot;host&quot;:&quot;nginx-s2.marathon.mesos.&quot;,&quot;ip&quot;:&quot;10.249.219.155&quot;,&quot;port&quot;:&quot;31644&quot;,&quot;service&quot;:&quot;_nginx._tcp.marathon.mesos.&quot;},
+    {&quot;host&quot;:&quot;nginx-s1.marathon.mesos.&quot;,&quot;ip&quot;:&quot;10.190.238.173&quot;,&quot;port&quot;:&quot;31667&quot;,&quot;service&quot;:&quot;_nginx._tcp.marathon.mesos.&quot;},
+    {&quot;host&quot;:&quot;nginx-s0.marathon.mesos.&quot;,&quot;ip&quot;:&quot;10.156.230.230&quot;,&quot;port&quot;:&quot;31880&quot;,&quot;service&quot;:&quot;_nginx._tcp.marathon.mesos.&quot;}
+]
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#路由">路由</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-2">格式</a></li><li class="content__sections-item content__sections-item--h1"><a href="#enterprise">授权 Enterprise</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-3">资源</a></li><li class="content__sections-item content__sections-item--h2"><a href="#get-v1version">GET /v1/version</a></li><li class="content__sections-item content__sections-item--h2"><a href="#get-v1config">GET /v1/config</a></li><li class="content__sections-item content__sections-item--h2"><a href="#get-v1hosts">GET /v1/hosts/</a></li><li class="content__sections-item content__sections-item--h2"><a href="#get-v1services">GET /v1/services/</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

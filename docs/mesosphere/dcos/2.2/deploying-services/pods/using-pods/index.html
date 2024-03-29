@@ -1,0 +1,115 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Using Pods - D2iQ Docs</title><meta name="description" content="Creating and managing pods via the CLI or the Marathon API endpoint"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.2"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/pods/using-pods">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/pods/using-pods">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/pods/using-pods">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/deploying-services/pods/using-pods">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/install/">Installing Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/marathon-parameters/">Marathon Configuration Reference</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/creating-services/"><i data-feather="chevron-right"></i>Creating Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/task-handling/"><i data-feather="chevron-right"></i>Task Handling</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/config-universe-service/">Configuring Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/fault-domain-awareness/">Fault Domain Awareness and Capacity Extension</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/service-groups/">Granting Access to Services and Groups</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/marathon-constraints/">Marathon Placement Constraints</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/monitor-services/">Monitoring Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/scale-service/">Scaling a Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/service-endpoints/">Service Endpoints</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/service-ports/">Service Ports</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/update-user-service/">Updating a User-Created Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/private-docker-registry/">Using a Private Docker Registry</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/deployments/">Deployments</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/expose-service/">Exposing a Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/uninstall/">Uninstalling Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/package-api/">Package Management API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/marathon-on-marathon/"><i data-feather="chevron-right"></i>Using Custom Marathon</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/marathon-api/">Marathon API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/containerizers/"><i data-feather="chevron-right"></i>Using Containerizers</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/pods/"><i data-feather="chevron-right"></i>Pods</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/pods/quickstart/">Quick Start</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/pods/technical-overview/">Technical Overview</a></li><li class="active active-on"><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/pods/using-pods/">Using Pods</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/pods/examples/">Pod Examples</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/multi-tenancy-primitives/">Multi-Tenancy Primitives</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/gpu/">Using GPUs</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/faq/">Frequently Asked Questions</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/archives/">Access Documentation Archives</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Using Pods</h1></div><h4 class="content__header-description">Creating and managing pods via the CLI or the Marathon API endpoint</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.2/deploying-services/pods/using-pods/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>You can create and manage your pods via the DC/OS CLI or via the <code>/v2/pods/</code> endpoint of the <a href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/marathon-api/">Marathon API</a>.</p>
+<h1 id="using-the-pods-cli"><a class="content__anchor" href="#using-the-pods-cli" aria-hidden="true"><i data-feather="bookmark"></i></a>Using the Pods CLI</h1>
+<p>The following commands are available in the pods CLI:</p>
+<ul>
+<li><code>dcos marathon pod add [&lt;pod-resource&gt;]</code></li>
+<li><code>dcos marathon pod list [--json]</code></li>
+<li><code>dcos marathon pod remove [--force] &lt;pod-id&gt;</code></li>
+<li><code>dcos marathon pod show &lt;pod-id&gt;</code></li>
+<li><code>dcos marathon pod update [--force] &lt;pod-id&gt;</code></li>
+</ul>
+<h2 id="add-a-pod"><a class="content__anchor" href="#add-a-pod" aria-hidden="true"><i data-feather="bookmark"></i></a>Add a Pod</h2>
+<p>To add a pod, first create a JSON pod definition. Then, run the following command:</p>
+<pre><code class="language-bash">dcos marathon pod add &lt;pod-json-file&gt;
+</code></pre>
+<h2 id="list-pods"><a class="content__anchor" href="#list-pods" aria-hidden="true"><i data-feather="bookmark"></i></a>List Pods</h2>
+<p>List pods and the number of containers they have with the following command:</p>
+<pre><code class="language-bash">dcos marathon pod list
+</code></pre>
+<h2 id="remove-a-pod"><a class="content__anchor" href="#remove-a-pod" aria-hidden="true"><i data-feather="bookmark"></i></a>Remove a Pod</h2>
+<p>Remove a pod with the following command:</p>
+<pre><code class="language-bash">dcos marathon pod remove &lt;pod-id&gt;
+</code></pre>
+<p>If the pod is currently deploying, you will not be able to remove the pod. To remove the pod anyway, run the command with the <code>--force</code> flag.</p>
+<h2 id="show-pod-json"><a class="content__anchor" href="#show-pod-json" aria-hidden="true"><i data-feather="bookmark"></i></a>Show Pod JSON</h2>
+<p>To see the pod definition, run the following command:</p>
+<pre><code class="language-bash">dcos marathon pod show &lt;pod-id&gt;
+</code></pre>
+<p>You can use the <code>show</code> command to read data about the pod programmatically.</p>
+<h2 id="update-pod"><a class="content__anchor" href="#update-pod" aria-hidden="true"><i data-feather="bookmark"></i></a>Update Pod</h2>
+<p>To update a pod, first modify the JSON definition for the pod, then run the following command:</p>
+<pre><code class="language-bash">dcos marathon pod update &lt;pod-id&gt; &lt; &lt;new-pod-definition&gt;
+</code></pre>
+<p>If the pod is currently deploying, you will not be able to update the pod. To update the pod anyway, run the command with the <code>--force</code> flag.</p>
+<h1 id="using-the-rest-api"><a class="content__anchor" href="#using-the-rest-api" aria-hidden="true"><i data-feather="bookmark"></i></a>Using the REST API</h1>
+<h2 id="create"><a class="content__anchor" href="#create" aria-hidden="true"><i data-feather="bookmark"></i></a>Create</h2>
+<pre><code class="language-bash"> curl -X POST -H &quot;Content-type: application/json&quot; -d@&lt;mypod&gt;.json http://&lt;ip&gt;:&lt;port&gt;/v2/pods
+</code></pre>
+<p>Sample response:</p>
+<pre><code class="language-json">{
+    &quot;containers&quot;: [
+        {
+            &quot;artifacts&quot;: [],
+            &quot;endpoints&quot;: [],
+            &quot;environment&quot;: {},
+            &quot;exec&quot;: {
+                &quot;command&quot;: {
+                    &quot;shell&quot;: &quot;sleep 1000&quot;
+                }
+            },
+            &quot;healthCheck&quot;: null,
+            &quot;image&quot;: null,
+            &quot;labels&quot;: {},
+            &quot;lifecycle&quot;: null,
+            &quot;name&quot;: &quot;sleep1&quot;,
+            &quot;resources&quot;: {
+                &quot;cpus&quot;: 0.1,
+                &quot;disk&quot;: 0,
+                &quot;gpus&quot;: 0,
+                &quot;mem&quot;: 32
+            },
+            &quot;user&quot;: null,
+            &quot;volumeMounts&quot;: []
+        }
+    ],
+    &quot;environment&quot;: {},
+    &quot;id&quot;: &quot;/simplepod2&quot;,
+    &quot;labels&quot;: {},
+    &quot;networks&quot;: [
+        {
+            &quot;labels&quot;: {},
+            &quot;mode&quot;: &quot;host&quot;,
+            &quot;name&quot;: null
+        }
+    ],
+    &quot;scaling&quot;: {
+        &quot;instances&quot;: 2,
+        &quot;kind&quot;: &quot;fixed&quot;,
+        &quot;maxInstances&quot;: null
+    },
+    &quot;scheduling&quot;: {
+        &quot;backoff&quot;: {
+            &quot;backoff&quot;: 1,
+            &quot;backoffFactor&quot;: 1.15,
+            &quot;maxLaunchDelaySeconds&quot;: 300
+        },
+        &quot;placement&quot;: {
+            &quot;acceptedResourceRoles&quot;: [],
+            &quot;constraints&quot;: []
+        },
+        &quot;upgrade&quot;: {
+            &quot;maximumOverCapacity&quot;: 1,
+            &quot;minimumHealthCapacity&quot;: 1
+        }
+    },
+    &quot;secrets&quot;: {},
+    &quot;user&quot;: null,
+    &quot;volumes&quot;: []
+}
+</code></pre>
+<h2 id="status"><a class="content__anchor" href="#status" aria-hidden="true"><i data-feather="bookmark"></i></a>Status</h2>
+<p>Get the status of all pods:</p>
+<pre><code class="language-bash">curl -X GET http://&lt;ip&gt;:&lt;port&gt;/v2/pods/::status
+</code></pre>
+<p>Get the status of a single pod:</p>
+<pre><code class="language-bash">curl -X GET http://&lt;ip&gt;:&lt;port&gt;/v2/pods/&lt;pod-id&gt;::status
+</code></pre>
+<h2 id="delete"><a class="content__anchor" href="#delete" aria-hidden="true"><i data-feather="bookmark"></i></a>Delete</h2>
+<pre><code class="language-bash">curl -X DELETE http://&lt;ip&gt;:&lt;port&gt;/v2/pods/&lt;pod-id&gt;
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#using-the-pods-cli">Using the Pods CLI</a></li><li class="content__sections-item content__sections-item--h2"><a href="#add-a-pod">Add a Pod</a></li><li class="content__sections-item content__sections-item--h2"><a href="#list-pods">List Pods</a></li><li class="content__sections-item content__sections-item--h2"><a href="#remove-a-pod">Remove a Pod</a></li><li class="content__sections-item content__sections-item--h2"><a href="#show-pod-json">Show Pod JSON</a></li><li class="content__sections-item content__sections-item--h2"><a href="#update-pod">Update Pod</a></li><li class="content__sections-item content__sections-item--h1"><a href="#using-the-rest-api">Using the REST API</a></li><li class="content__sections-item content__sections-item--h2"><a href="#create">Create</a></li><li class="content__sections-item content__sections-item--h2"><a href="#status">Status</a></li><li class="content__sections-item content__sections-item--h2"><a href="#delete">Delete</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>使用 ELK 进行日志管理 - D2iQ Docs</title><meta name="description" content="从群集节点管理系统和应用程序日志"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.1/monitoring/logging/aggregating/elk">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/aggregating/elk">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/logging/aggregating/elk">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/logging/aggregating/elk">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/performance-monitoring/"><i data-feather="chevron-right"></i>性能监控</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/"><i data-feather="chevron-right"></i>日志记录</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/quickstart/">快速入门</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/access-component-logs/">访问系统和组件日志</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/access-task-logs/">控制对任务日志的访问</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/configure-task-logs/">配置任务日志输出和保留</a></li><li class="active"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/aggregating/"><i data-feather="chevron-right"></i>日志聚合</a></li><ul><li class="active active-on"><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/aggregating/elk/">使用 ELK 进行日志管理</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/aggregating/filter-elk/">使用 ELK 筛选日志</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/aggregating/splunk/">使用 Splunk 进行日志管理</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/aggregating/filter-splunk/">使用 Splunk 筛选日志</a></li></ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/logging-reference/">日志记录参考</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/logging-api-examples/">日志记录 API 示例</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/debugging/"><i data-feather="chevron-right"></i>调试</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">使用 ELK 进行日志管理</h1></div><h4 class="content__header-description">从群集节点管理系统和应用程序日志</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/aggregating/elk/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>您可以将 DC/OS 群集中节点的系统和应用程序日志传输到 Elasticsearch 服务器。这些说明是基于 CentOS 7，可能极大地不同于与其他 Linux 系统分配。</p>
+<h1 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>本文档涵盖和不涵盖的内容</h1>
+<p>本文档介绍了如何将 Filebeat 输出从每个节点发送到集中式 Elasticsearch 实例。本文档介绍如何从 Filebeat 直接传输到 Elasticsearch。此架构中没有使用 Logstash。如果您有兴趣筛选、解析和了解处于中间 Logstash 阶段的日志，请参阅 Logstash <a href="https://www.elastic.co/guide/en/logstash/current/index.html">文档</a> 以及 <a href="../filter-elk/">使用 ELK 筛选日志</a> 中的示例。</p>
+<p>本文档未介绍如何设置和配置 Elasticsearch 服务器。本文档未介绍如何在 Filebeat 实例和 Elasticsearch 之间建立安全的 TLS 通信。有关如何实现此操作的详细信息，请参阅 <a href="https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-getting-started.html">Filebeat</a> 和 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.0/index.html">Elasticsearch</a> 文档。</p>
+<p><strong>前提条件</strong></p>
+<ul>
+<li>现有 Elasticsearch 装置可以消化数据用于索引</li>
+<li>所有 DC/OS 节点都必须能够连接到用于在 Elasticsearch 和 Filebeat 之间通信的端口上的 Elasticsearch 服务器（默认情况下为 9200）</li>
+</ul>
+<h2 id="1-filebeat"><a class="content__anchor" href="#1-filebeat" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="all"></a>步骤 1：安装 Filebeat</h2>
+<p>对于 DC/OS 群集中的所有节点：</p>
+<ol>
+<li>
+<p>安装 Elastic 的 <a href="https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-getting-started.html">Filebeat</a>。</p>
+<pre><code class="language-bash">curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-5.0.0-x86_64.rpm
+sudo rpm -vi filebeat-5.0.0-x86_64.rpm
+</code></pre>
+</li>
+<li>
+<p>创建 <code>/var/log/dcos</code> 目录：</p>
+<pre><code class="language-bash">sudo mkdir -p /var/log/dcos
+</code></pre>
+</li>
+<li>
+<p>将默认的 Filebeat 配置文件移到备份副本：</p>
+<pre><code class="language-bash">sudo mv /etc/filebeat/filebeat.yml /etc/filebeat/filebeat.yml.BAK
+</code></pre>
+</li>
+<li>
+<p>填充新的 <code>filebeat.yml</code> 配置文件，包括文件的附加输入条目 <code>/var/log/dcos/dcos.log</code>。附加日志文件将用于在后续步骤中捕获 DC/OS 日志。记住用下面的变量 <code>$ELK_HOSTNAME</code> 和 <code>$ELK_PORT</code> 替代 Elasticsearch 正在侦听的主机和端口的实际值。</p>
+<pre><code class="language-bash">filebeat.prospectors:
+- input_type: log
+  paths:
+    - /var/lib/mesos/slave/slaves/*/frameworks/*/executors/*/runs/latest/stdout*
+    - /var/lib/mesos/slave/slaves/*/frameworks/*/executors/*/runs/latest/stderr*
+    - /var/log/mesos/*.log
+    - /var/log/dcos/dcos.log
+exclude_files: [&quot;stdout.logrotate.state&quot;, &quot;stdout.logrotate.conf&quot;, &quot;stderr.logrotate.state&quot;, &quot;stderr.logrotate.conf&quot;]
+tail_files: true
+output.elasticsearch:
+  hosts: [&quot;$ELK_HOSTNAME:$ELK_PORT&quot;]
+</code></pre>
+</li>
+</ol>
+<table class=“table” bgcolor=#7d58ff>
+<tr> 
+  <td align=justify style=color:white><strong>重要信息：</strong>代理节点 Filebeat 配置要求任务将日志写入 `stdout` 和 `stderr`。某些 DC/OS 服务（包括 Cassandra 和 Kafka）不会将日志写入 `stdout` 和 `stderr`。如果要记录这些服务，您必须自定义代理节点 Filebeat 配置。</td>
+</tr> 
+</table>
+<h2 id="2"><a class="content__anchor" href="#2" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="all-2"></a>步骤 2：为分析日志设置服务</h2>
+<p>对于 DC/OS 群集中的所有节点：</p>
+<ol>
+<li>
+<p>创建脚本 <code>/etc/systemd/system/dcos-journalctl-filebeat.service</code>，该脚本可解析 DC/OS 管理节点 <code>journalctl</code> 日志的输出并将其输送到 <code>/var/log/dcos/dcos.log</code>。</p>
+<p>此脚本可配合 DC/OS 和 Enterprise DC/OS 使用。不适用的日志条目将被忽略。</p>
+<pre><code class="language-bash">sudo tee /etc/systemd/system/dcos-journalctl-filebeat.service&lt;&lt;-EOF
+[Unit]
+Description=DCOS journalctl parser to filebeat
+Wants=filebeat.service
+After=filebeat.service
+
+[Service]
+Restart=always
+RestartSec=5
+ExecStart=/bin/sh -c '/bin/journalctl  --since=&quot;5 minutes ago&quot; --no-tail --follow --unit=&quot;dcos*.service&quot; &gt;&gt; /var/log/dcos/dcos.log 2&gt;&amp;1'
+
+[Install]
+WantedBy=multi-user.target
+EOF
+</code></pre>
+</li>
+</ol>
+<h2 id="3-filebeat"><a class="content__anchor" href="#3-filebeat" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="all-3"></a>步骤 3：启动并启用 Filebeat</h2>
+<ol>
+<li>
+<p>对于所有节点，启动并启用在上面创建的 Filebeat 日志解析服务：</p>
+<pre><code class="language-bash">sudo chmod 0755 /etc/systemd/system/dcos-journalctl-filebeat.service
+sudo systemctl daemon-reload
+sudo systemctl start dcos-journalctl-filebeat.service
+sudo systemctl enable dcos-journalctl-filebeat.service
+sudo systemctl start filebeat
+sudo systemctl enable filebeat
+</code></pre>
+</li>
+</ol>
+<h3 id="elk"><a class="content__anchor" href="#elk" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="all"></a>ELK 节点注释</h3>
+<p>ELK 堆栈将接收、存储、搜索和显示有关以上为群集中所有节点配置的 Filebeat 实例所解析的日志的信息。</p>
+<p>本文档介绍如何从 Filebeat 直接传输到 Elasticsearch。此架构中没有使用 Logstash。如果您有兴趣筛选、剖析和了解处于中间 Logstash 阶段的日志，请参阅 Logstash <a href="https://www.elastic.co/guide/en/logstash/current/index.html">文档</a>。</p>
+<p>您必须修改默认参数值才能让 Elasticsearch 准备好接收信息。例如，编辑 Elasticsearch 配置文件（通常为 <code>/etc/elasticsearch/elasticsearch.yml</code>）：</p>
+<pre><code class="language-bash">network.host = [IP address from the interface in your ElasticSearch node connecting to the Filebeat instances]
+</code></pre>
+<p>文件中的其他参数超出本文档的范围。有关详细信息，请查看 Elasticsearch <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.0/index.html">文档</a>。</p>
+<h2 id="4"><a class="content__anchor" href="#4" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="all-4"></a>步骤 4：配置日志轮换</h2>
+<p>应在所有节点上配置日志轮换，以防止文件 <code>/var/log/dcos/dcos.log</code> 无限制地增大和装满磁盘空间。
+<code>logrotate</code> 配置应包含 <code>copytruncate</code>，因为 <code>journalctl</code> 管道保持打开状态，即使在轮换后仍然指向同一个文件。
+使用 <code>copytruncate</code> 时，复制文件和将其截断之间的窗口很小，因此某些记录数据可能丢失 - 应该平衡装满磁盘和丢失某些日志之间的利弊。</p>
+<p>例如，<code>logrotate</code> 配置应当是这样的：</p>
+<pre><code>/var/log/dcos/dcos.log {    
+  size 100M
+  copytruncate
+  rotate 5
+  compress
+  compresscmd /bin/xz
+}
+</code></pre>
+<h1 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>后续步骤</h1>
+<p>有关如何使用 ELK 筛选日志的详细信息，请参阅 <a href="../filter-elk/">使用 ELK 筛选 DC/OS 日志</a>。</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#本文档涵盖和不涵盖的内容">本文档涵盖和不涵盖的内容</a></li><li class="content__sections-item content__sections-item--h2"><a href="#1-filebeat">步骤 1：安装 Filebeat</a></li><li class="content__sections-item content__sections-item--h2"><a href="#2">步骤 2：为分析日志设置服务</a></li><li class="content__sections-item content__sections-item--h2"><a href="#3-filebeat">步骤 3：启动并启用 Filebeat</a></li><li class="content__sections-item content__sections-item--h2"><a href="#4">步骤 4：配置日志轮换</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-2">后续步骤</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

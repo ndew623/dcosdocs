@@ -1,0 +1,208 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Tools - D2iQ Docs</title><meta name="description" content="Tutorial - Tools for debugging applications on DC/OS"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/dcos-debug/tools">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/tutorials/dcos-debug/tools">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/tutorials/dcos-debug/tools">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/tutorials/dcos-debug/tools">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/tutorials/dcos-debug/tools">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/tutorials/dcos-101/"><i data-feather="chevron-right"></i>DC/OS 101</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/tutorials/create-service/">Creating and Running a Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/tutorials/stateful-services/">Running Stateful Services on DC/OS</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/tutorials/autoscaling/"><i data-feather="chevron-right"></i>Autoscaling with Marathon</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/tutorials/iot_pipeline/">Deploying a Load-Balanced Data Pipeline</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/tutorials/deploy-on-marathon/">Deploying Marathon Apps with Jenkins</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/tutorials/task-labels/">Labeling Tasks and Jobs</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/tutorials/dcos-debug/"><i data-feather="chevron-right"></i>Debugging Applications on DC/OS</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/tutorials/dcos-debug/problems/">Problems</a></li><li class="active active-on"><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/tutorials/dcos-debug/tools/">Tools</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/tutorials/dcos-debug/gen-strat/">Strategy</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/tutorials/dcos-debug/scenarios/"><i data-feather="chevron-right"></i>Practice Deployment Debugging Scenarios on DC/OS</a></li></ul></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Tools</h1></div><h4 class="content__header-description">Tutorial - Tools for debugging applications on DC/OS</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.1/tutorials/dcos-debug/tools/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- II. Tools Section -->
+<!-- This disclaimer should be included at the beginning of each page of a tutorial. -->
+<p class="message--important"><strong>IMPORTANT: </strong>Tutorials are intended to give you hands-on experience working with a limited set of DC/OS features with no implied or explicit warranty of any kind. None of the information provided--including sample scripts, commands, or applications--is officially supported by Mesosphere. You should not use this information in a production environment without independent testing and validation.</p>
+<p><a name="tools"></a></p>
+<p>DC/OS comes with several tools relevant for application debugging:</p>
+<ul>
+<li>
+<p><a href="#dcos-web">DC/OS web interfaces</a></p>
+</li>
+<li>
+<p><a href="#logs">Logs</a></p>
+</li>
+<li>
+<p><a href="#metrics">Metrics</a></p>
+</li>
+<li>
+<p><a href="#interactive">Debugging Tasks Interactively</a></p>
+</li>
+<li>
+<p><a href="#endpoints">HTTP Endpoints</a></p>
+</li>
+<li>
+<p><span class="badge__container badge__container--block"><span class="badge badge--shortcode badge--large badge--block badge--community">Community</span></span>(#community-tool)</p>
+</li>
+<li>
+<p><a href="#other-tools">Other tools</a></p>
+</li>
+</ul>
+<p><a name="dcos-web"></a></p>
+<h2 id="dcos-web-interfaces"><a class="content__anchor" href="#dcos-web-interfaces" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS web interfaces</h2>
+<p>DC/OS provides many web interfaces for various components, these are particularly when debugging application deployment issues:</p>
+<ul>
+<li>
+<p><a href="#dcos-ui">DC/OS web interface</a></p>
+</li>
+<li>
+<p><a href="#mesos-ui">Mesos web interface</a></p>
+</li>
+<li>
+<p><a href="#zoo-ui">Zookeeper/Exhibitor web interface</a></p>
+</li>
+</ul>
+<p><a name="dcos-ui"></a></p>
+<h3 id="dcos-web-interface"><a class="content__anchor" href="#dcos-web-interface" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS web interface</h3>
+<p>The <strong>DC/OS web interface</strong> is a great place to start debugging as it provides quick access to:</p>
+<ul>
+<li><strong>Cluster Resource Allocation</strong> to provide an overview of available cluster resources</li>
+<li><strong>Task Logs</strong> to provide insight into tasks failures</li>
+<li><strong>Task Debug Information</strong> to provide information about the most recent task offers and/or why a task did not start</li>
+</ul>
+<p><img src="https://mesosphere.com/wp-content/uploads/2018/04/pasted-image-0-21.png" alt="Pic of DC/OS web interface"></p>
+<p>Figure 1. Task debug interface</p>
+<p><a name="mesos-ui"></a></p>
+<h3 id="mesos-web-interface"><a class="content__anchor" href="#mesos-web-interface" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesos web interface</h3>
+<p>The DC/OS web interface shows the majority of the information you need for debugging. However, sometimes going a step further and accessing the Mesos web interface can be helpful – especially when checking failed tasked or registered frameworks. The Mesos web interface can be accessed via <code>https://&lt;cluster-address&gt;/mesos</code>.</p>
+<p><img src="https://mesosphere.com/wp-content/uploads/2018/04/Screen-Shot-2018-04-15-at-17.56.16.png" alt="Pic of Mesos web interface"></p>
+<p>Figure 2. Mesos web interface</p>
+<p><a name="zoo-ui"></a></p>
+<h3 id="zookeeper-web-interface"><a class="content__anchor" href="#zookeeper-web-interface" aria-hidden="true"><i data-feather="bookmark"></i></a>ZooKeeper web interface</h3>
+<p>As much of the cluster and framework state is stored in Zookeeper, it can sometimes be helpful to check these states using the ZooKeeper/Exhibitor web interface. Frameworks such as Marathon, Kafka, and Cassandra store information with Zookeeper, so this resource can be particularly useful when debugging such frameworks. For example, a failure while uninstalling of one of these frameworks can leave entries behind. So then for sure, if you experience difficulties when reinstalling a framework you have uninstalled earlier, checking this web interface could be very helpful. You can access it via <code>https://&lt;cluster-address&gt;/exhibitor</code>.</p>
+<p><img src="https://mesosphere.com/wp-content/uploads/2018/04/pasted-image-0-13.png" alt="Pic of ZooKeeper/Exhibitor web interface"></p>
+<p>Figure 3. ZooKeeper/Exhibitor web interface</p>
+<p><a name="logs"></a></p>
+<h2 id="logs"><a class="content__anchor" href="#logs" aria-hidden="true"><i data-feather="bookmark"></i></a>Logs</h2>
+<p>Logs are useful tools for seeing events and the conditions that occurred before they emerged. Often logs include error messages that can supply helpful information regarding the cause of the error. As logging is an important topic in its own right, we recommend the <a href="/dcosdocs/mesosphere/dcos/2.1/monitoring/logging/#system-logs">DC/OS logging documentation</a>, for more information.</p>
+<p>DC/OS has a number of different sources for logs. In general, these are the most helpful logs for application debugging:</p>
+<ul>
+<li><a href="#task-logs">Task/Application Logs</a></li>
+<li><a href="#scheduler-logs">Service Scheduler Logs</a> (e.g., Marathon)</li>
+<li><a href="#agent-logs">Mesos Agent Logs</a></li>
+<li><a href="#master-logs">Mesos Master Logs</a></li>
+<li><a href="#system-logs">System Logs</a></li>
+</ul>
+<p>In DC/OS, there are multiple options for accessing any of these logs: the <strong>DC/OS web interface</strong> the <strong>DC/OS CLI</strong>, or HTTP endpoints. Moreover, DC/OS rotate logs by default to prevent utilizing all available disk space.</p>
+<p class="message--note"><strong>NOTE: </strong>Need a scalable way to manage and search your logs? It could be worth building an <a href="/dcosdocs/mesosphere/dcos/2.1/monitoring/logging/aggregating/filter-elk/">ELK stack</a> for log aggregation and filtering.</p>
+<p>Sometimes it can help to increase the level of detail written to a log temporarily to obtain more detailed troubleshooting information for debugging. For most components, this can be done by accessing an endpoint. For example, if you want to increase <a href="http://mesos.apache.org/documentation/latest/endpoints/logging/toggle/">the log level of a Mesos Agent</a> for 5 minutes after the server receives the API call, you could follow something like this simple two-step process:</p>
+<h5 id="connect-to-master-node"><a class="content__anchor" href="#connect-to-master-node" aria-hidden="true"><i data-feather="bookmark"></i></a>Connect to Master Node</h5>
+<pre><code class="language-bash">$ dcos node ssh --master-proxy --leader
+</code></pre>
+<h5 id="raise-log-level-on-mesos-agent-1002219"><a class="content__anchor" href="#raise-log-level-on-mesos-agent-1002219" aria-hidden="true"><i data-feather="bookmark"></i></a>Raise Log Level on Mesos Agent 10.0.2.219</h5>
+<pre><code class="language-bash">$ curl -X POST 10.0.2.219:5051/logging/toggle?level=3&amp;duration=5mins
+</code></pre>
+<p><a name="task-logs"></a></p>
+<h3 id="taskapplication-logs"><a class="content__anchor" href="#taskapplication-logs" aria-hidden="true"><i data-feather="bookmark"></i></a>Task/Application Logs</h3>
+<p>Task/application logs are often helpful in understanding the state of the problematic application. By default, applications logs are written (together with execution logs) to the <code>STDERR</code> and <code>STDOUT</code> files in the task work directory. When looking at the task in the DC/OS web interface, you can just simply view the logs as shown below.</p>
+<p><img src="https://mesosphere.com/wp-content/uploads/2018/04/pasted-image-0-16.png" alt="Pic of task log"></p>
+<p>Figure 4. Task log</p>
+<p>You can also do the same from the DC/OS CLI:</p>
+<pre><code class="language-bash">$ dcos task log --follow &lt;service-name&gt;
+</code></pre>
+<p><a name="scheduler-logs"></a></p>
+<h3 id="schedulermarathon-logs"><a class="content__anchor" href="#schedulermarathon-logs" aria-hidden="true"><i data-feather="bookmark"></i></a>Scheduler/Marathon Logs</h3>
+<p><a href="https://mesosphere.github.io/marathon/">Marathon</a> is DC/OS’s default scheduler when starting an application. Scheduler logs, and Marathon logs in particular, are a great source of information to help you understand why or how something was scheduled (or not) on which node. Recall that the scheduler matches tasks to available resources. So then because the scheduler also receives task status updates, the log also contains detailed information about task failures.</p>
+<p>You can retrieve and view a scheduler log about a specific service through the list of services found in the DC/OS web interface, or via the following command:</p>
+<pre><code class="language-bash">$ dcos service log --follow &lt;scheduler-service-name&gt;
+</code></pre>
+<p>Note that since Marathon is the “Init” system of DC/OS, it is running as a SystemD unit (same with respect to the other DC/OS system components). Due to this fact, you need the CLI command to access its logs.</p>
+<p><a name="agent-logs"></a></p>
+<h3 id="mesos-agent-logs"><a class="content__anchor" href="#mesos-agent-logs" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesos Agent Logs</h3>
+<p>Mesos agent logs are helpful for understanding how an application was started by the agent and how it may have failed. You can launch the Mesos web interface by navigating to <code>https://&lt;cluster_name&gt;/mesos</code> and examining the agent logs as shown below.</p>
+<p><img src="https://mesosphere.com/wp-content/uploads/2018/04/pasted-image-0-23.png" alt="Pic of Mesos agent UI"></p>
+<p>Figure 5. Mesos agent interface</p>
+<p>Alternatively, you can view the agent logs by first using <code>dcos node log --mesos-id=&lt;node-id&gt;</code> from the DC/OS CLI to locate the corresponding node <code>ID</code>. Enter:</p>
+<pre><code class="language-bash">$ dcos node
+</code></pre>
+<p>where you will see something similar to the following output:</p>
+<pre><code class="language-bash">HOSTNAME        IP                         ID                    TYPE
+
+10.0.1.51    10.0.1.51   ffc913d8-4012-4953-b693-1acc33b400ce-S3  agent
+
+10.0.2.50    10.0.2.50   ffc913d8-4012-4953-b693-1acc33b400ce-S1  agent
+
+10.0.2.68    10.0.2.68   ffc913d8-4012-4953-b693-1acc33b400ce-S2  agent
+
+10.0.3.192   10.0.3.192  ffc913d8-4012-4953-b693-1acc33b400ce-S4  agent
+
+10.0.3.81    10.0.3.81   ffc913d8-4012-4953-b693-1acc33b400ce-S0  agent
+
+master.mesos.  10.0.4.215    ffc913d8-4012-4953-b693-1acc33b400ce   master (leader)
+</code></pre>
+<p>Then, in this case, you can enter:</p>
+<pre><code class="language-bash">$ dcos node log --mesos-id=ffc913d8-4012-4953-b693-1acc33b400ce-S0 --follow
+</code></pre>
+<p>and get the following log output:</p>
+<pre><code class="language-bash">2018-04-09 19:04:22: I0410 02:38:22.711650  3709 http.cpp:1185] HTTP GET for /slave(1)/state from 10.0.3.81:56595 with User-Agent='navstar@10.0.3.81 (pid 3168)'
+
+2018-04-09 19:04:24: I0410 02:38:24.752534  3708 logfmt.cpp:178] dstip=10.0.3.81 type=audit timestamp=2018-04-10 02:38:24.752481024+00:00 reason=&quot;Valid authorization token&quot; uid=&quot;dcos_net_agent&quot; object=&quot;/slave(1)/state&quot; agent=&quot;navstar@10.0.3.81 (pid 3168)&quot; authorizer=&quot;mesos-agent&quot; action=&quot;GET&quot; result=allow srcip=10.0.3.81 dstport=5051 srcport=56595
+</code></pre>
+<p><a name="master-logs"></a></p>
+<h3 id="mesos-master-logs"><a class="content__anchor" href="#mesos-master-logs" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesos Master Logs</h3>
+<p>The Mesos Master is responsible for matching available resources to the scheduler. It also forwards task status updates from the Mesos Agents to the corresponding scheduler. This makes the Mesos Master logs a great resource for understanding the overall state of the cluster.</p>
+<p>Be aware that there are typically multiple Mesos Masters for a single cluster. So you should <strong>identify the current leading Mesos Master to get the most recent logs</strong>. In fact, in some cases it might even make sense to retrieve logs from another Mesos master as well: e.g., a master node failed and you want to understand why.</p>
+<p>You can either retrieve the master logs from the Mesos web interface via <code>&lt;cluster-name&gt;/mesos</code>, via <code>dcos node log --leader</code>, or for a specific master node using <code>ssh master</code> and <code>journalctl -u dcos-mesos-master</code>.</p>
+<p><a name="system-logs"></a></p>
+<h3 id="system-logs"><a class="content__anchor" href="#system-logs" aria-hidden="true"><i data-feather="bookmark"></i></a>System Logs</h3>
+<p>We have now covered the most important log sources in the DC/OS environment, but there are many more logs available. Every DC/OS component writes a log. As mentioned above, <a href="/dcosdocs/mesosphere/dcos/2.1/overview/architecture/components/">each DC/OS component</a> is running as one Systemd unit. You can <a href="/dcosdocs/mesosphere/dcos/latest/monitoring/logging/#system-logs">retrieve the logs directly</a> on the particular node by SSHing into the node, and then typing <code>journalctl -u &lt;systemd-unit-name&gt;</code>. Two of the more common system units to consider during debugging (besides Mesos and Marathon) are the <code>docker.service</code> and the <code>dcos-exhibitor.service</code>.</p>
+<p>As an example, consider the system unit for the docker daemon on the Mesos agent <code>ffc913d8-4012-4953-b693-1acc33b400ce-S0</code> (recall the <code>dcos node</code> command retrieves the Mesos ID).</p>
+<p>First, we can SSH into that agent using the corresponding SSH key:</p>
+<pre><code class="language-bash">$ dcos node ssh --master-proxy --mesos-id=ffc913d8-4012-4953-b693-1acc33b400ce-S0
+</code></pre>
+<p>Then we can use <code>journatlctl</code>, to look at the Docker logs:</p>
+<pre><code class="language-bash">$ journalctl -u docker
+</code></pre>
+<p>which outputs something like this:</p>
+<pre><code class="language-bash">-- Logs begin at Mon 2018-04-09 23:50:05 UTC, end at Tue 2018-04-10 02:52:41 UTC. --
+
+Apr 09 23:51:50 ip-10-0-3-81.us-west-2.compute.internal systemd[1]: Starting Docker Application Container Engine...
+
+Apr 09 23:51:51 ip-10-0-3-81.us-west-2.compute.internal dockerd[1262]: time=&quot;2018-04-09T23:51:51.293577691Z&quot; level=info msg=&quot;Graph migration to content-addressability took 0.00 seconds&quot;
+</code></pre>
+<p><a name="metrics"></a></p>
+<h2 id="metrics"><a class="content__anchor" href="#metrics" aria-hidden="true"><i data-feather="bookmark"></i></a>Metrics</h2>
+<p>Metrics are useful because they help identify potential issues before they become actual bugs. For example, imagine a situation wherein a container uses up all allocated memory. If you could detect this while the container is <strong>still running but not yet killed</strong>, you are much more likely to be able to intervene in time.</p>
+<p>In DC/OS there are three main endpoints for metrics:</p>
+<ul>
+<li><a href="https://github.com/dcos/dcos-metrics">DC/OS metrics</a>
+<ul>
+<li>endpoint exposing combined metrics from tasks/container, nodes, and applications</li>
+</ul>
+</li>
+<li><a href="http://mesos.apache.org/documentation/latest/monitoring/">Mesos metrics</a>
+<ul>
+<li>endpoint exposing Mesos-specific metrics</li>
+</ul>
+</li>
+<li><a href="https://mesosphere.github.io/marathon/docs/metrics.html">Marathon metrics</a>
+<ul>
+<li>endppoint exposing Marathon-specific metrics</li>
+</ul>
+</li>
+</ul>
+<p>One way to leverage metrics to help with debugging is to set up a dashboard. This dashboard would include the most important metrics related to the services you want to monitor. For example, you could <a href="https://github.com/dcos/dcos-metrics/blob/master/docs/quickstart/prometheus.md#dcos-metrics-with-prometheus-and-grafana">use prometheus and grafana</a> to make a metrics dashboard.</p>
+<p>Ideally, with the dashboard configured and functioning, you can identify potential problems before they become actual bugs. Moreover, when issues do arise, this sort of dashboard can be extremely helpful in determining the cause of the bug(e.g. maybe a cluster has no free resources). Each link from the endpoint item listed above provides recommendations for the metrics you should monitor for that endpoint.</p>
+<p><a name="interactive"></a></p>
+<h2 id="interactive"><a class="content__anchor" href="#interactive" aria-hidden="true"><i data-feather="bookmark"></i></a>Interactive</h2>
+<p>Sometimes the task logs provide insufficient help. In these cases, using your favorite Linux tools (e.g. <code>curl</code>, <code>cat</code>, <code>ping</code>, etc…) to get an interactive point of view could be a worthwhile next step.</p>
+<p>For example, if you are using a [Universal Container Runtime (UCR)] (/latest/deploying-services/containerizers/ucr/), you can use <code>dcos task exec</code> as follows:</p>
+<pre><code class="language-bash">dcos task exec -it &lt;mycontainerid&gt;
+</code></pre>
+<p>and be presented with an interactive bash shell inside that container.</p>
+<p class="message--important"><strong>IMPORTANT: </strong>If you alter the state of the container when using <code>dcos task exec</code> in the manner above, you must update the stored <code>app-definition</code> and restart the container from that updated <code>app-definition</code>. If you fail to do so, then your changes will be lost the next time the container restarts.</p>
+<p>Alternatively, when using a docker containerizer, you can SSH into the node in question and run <a href="https://docs.docker.com/engine/reference/commandline/exec/"><code>docker exec</code></a> to investigate the running container.</p>
+<p><a name="endpoints"></a></p>
+<h2 id="http-endpoints"><a class="content__anchor" href="#http-endpoints" aria-hidden="true"><i data-feather="bookmark"></i></a>HTTP Endpoints</h2>
+<p>DC/OS has a large number of additional endpoints that could be useful for debugging:</p>
+<ul>
+<li><code>&lt;cluster&gt;/mesos/master/state-summary</code></li>
+</ul>
+<h3 id="state-summary"><a class="content__anchor" href="#state-summary" aria-hidden="true"><i data-feather="bookmark"></i></a><code>state-summary</code></h3>
+<p>The <a href="http://mesos.apache.org/documentation/latest/endpoints/master/state-summary/"><code>state-summary</code> endpoint</a> returns a json encoded summary of the agents, tasks, and frameworks inside the cluster. This is especially helpful when considering allocation of resources across the cluster, as it shows you whether there are resources already reserved for a particular role (there are more details on this in <a href="#c2">one of the debugging scenarios provided below</a>.</p>
+<p class="message--note"><strong>NOTE: </strong>See the <a href="http://mesos.apache.org/documentation/latest/endpoints/">complete list of Mesos endpoints</a>.
+<h3 id="queue"><a class="content__anchor" href="#queue" aria-hidden="true"><i data-feather="bookmark"></i></a><code>queue</code></h3>
+<ul>
+<li><code>&lt;cluster&gt;/marathon/v2/queue</code></li>
+</ul>
+<p>Marathon’s <a href="https://mesosphere.github.io/marathon/api-console/index.html"><code>queue</code> endpoint</a> returns a list of all tasks in the queue to be scheduled by Marathon. This endpoint is valuable when troubleshooting scaling or deployment problems.</p>
+<p><a name="community-tool"></a></p>
+<h2 id="community"><a class="content__anchor" href="#community" aria-hidden="true"><i data-feather="bookmark"></i></a>Community</h2>
+<p>The <a href="https://dcos.io/community/?_ga=2.183442662.1394567794.1525106895-1279864600.1520288020">DC/OS community</a> is a great place to ask additional questions either via <a href="http://chat.dcos.io/?_ga=2.183442662.1394567794.1525106895-1279864600.1520288020">Slack</a> or the <a href="https://groups.google.com/a/dcos.io/forum/#!forum/users">mailing list</a>. Also keep in mind that both <a href="http://mesos.apache.org/community/">Mesos</a> and <a href="https://mesosphere.github.io/marathon/support.html">Marathon</a> have their own communities in addition to the DC/OS community.</p>
+<p><a name="other-tools"></a></p>
+<h2 id="other-tools"><a class="content__anchor" href="#other-tools" aria-hidden="true"><i data-feather="bookmark"></i></a>Other Tools</h2>
+<p>There are other debugging tools as well – <a href="/dcosdocs/mesosphere/dcos/2.1/monitoring/debugging/">internal to DC/OS</a> as well as external tools like <a href="https://sysdig.com/blog/monitoring-mesos/">Sysdig</a> or <a href="https://www.instana.com/">Instana</a>. These tools can be especially helpful in determining non DC/OS specific issues (e.g., Linux Kernel or networking problems).</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#dcos-web-interfaces">DC/OS web interfaces</a></li><li class="content__sections-item content__sections-item--h2"><a href="#logs">Logs</a></li><li class="content__sections-item content__sections-item--h2"><a href="#metrics">Metrics</a></li><li class="content__sections-item content__sections-item--h2"><a href="#interactive">Interactive</a></li><li class="content__sections-item content__sections-item--h2"><a href="#http-endpoints">HTTP Endpoints</a></li><li class="content__sections-item content__sections-item--h2"><a href="#community">Community</a></li><li class="content__sections-item content__sections-item--h2"><a href="#other-tools">Other Tools</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

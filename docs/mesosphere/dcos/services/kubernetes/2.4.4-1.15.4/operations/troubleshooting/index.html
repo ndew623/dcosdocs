@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Troubleshooting - D2iQ Docs</title><meta name="description" content="Troubleshooting DC/OS Kubernetes"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Kubernetes Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.8.0-1.19.2/operations/troubleshooting">Kubernetes 2.8.0-1.19.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.7.0-1.18.6/operations/troubleshooting">Kubernetes 2.7.0-1.18.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.6.1-1.17.8/operations/troubleshooting">Kubernetes 2.6.1-1.17.8</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.6.0-1.17.7/operations/troubleshooting">Kubernetes 2.6.0-1.17.7</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.5.0-1.16.9/operations/troubleshooting">Kubernetes 2.5.0-1.16.9</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/troubleshooting">Kubernetes 2.4.9-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/operations/troubleshooting">Kubernetes 2.4.8-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.7-1.15.10/operations/troubleshooting">Kubernetes 2.4.7-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.6-1.15.6/operations/troubleshooting">Kubernetes 2.4.6-1.15.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.5-1.15.5/operations/troubleshooting">Kubernetes 2.4.5-1.15.5</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/troubleshooting">Kubernetes 2.4.4-1.15.4</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/troubleshooting">Kubernetes 2.4.3-1.15.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.2-1.15.3/operations/troubleshooting">Kubernetes 2.4.2-1.15.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/operations/troubleshooting">Kubernetes 2.4.1-1.15.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.10-1.15.10/operations/troubleshooting">Kubernetes 2.4.10-1.15.10</a></li></ul><div class="toggle"><p><span class="title">Kubernetes</span><span class="version"> 2.4.4-1.15.4</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/overview/">Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/getting-started/"><i data-feather="chevron-right"></i>Tutorial - Kubernetes on DC/OS Enterprise</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/"><i data-feather="chevron-right"></i>Operations</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/cluster-sizing/">Cluster Sizing</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/kubernetes-audit/">Kubernetes Auditing</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/kubernetes-dashboard/">Kubernetes Dashboard</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/metrics-exporter/">Metrics Exporter</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/quota-support/">Quota Support</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/ingress/">External Ingress</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/authn-and-authz/">Authentication and Authorization</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/customizing-install/">Customizing</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/upgrade/">Upgrade</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/exposing-the-kubernetes-api/">Exposing the Kubernetes API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/exposing-the-kubernetes-api-marathonlb-edgelb/">Exposing the Kubernetes API via Marathon-LB or Edge-LB</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/connecting-clients/">Connecting Clients</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/uninstall/">Uninstall</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/private-docker-registry/">Use private Docker registry</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/disaster-recovery/">Disaster Recovery</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/troubleshooting/">Troubleshooting</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/cli/">CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/changelog/">Changelog</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/supported-versions/">Supported Versions</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Troubleshooting</h1></div><h4 class="content__header-description">Troubleshooting DC/OS Kubernetes</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/troubleshooting/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- This source repo for this topic is https://github.com/mesosphere/dcos-kubernetes -->
+<h1 id="troubleshooting-kubernetes"><a class="content__anchor" href="#troubleshooting-kubernetes" aria-hidden="true"><i data-feather="bookmark"></i></a>Troubleshooting Kubernetes</h1>
+<h2 id="scheduler-is-not-starting-at-all"><a class="content__anchor" href="#scheduler-is-not-starting-at-all" aria-hidden="true"><i data-feather="bookmark"></i></a>Scheduler is not starting at all</h2>
+<p>If the scheduler task is not starting at all for your Kubernetes cluster, confirm that your DC/OS cluster contains enough resources to launch the cluster.
+If it appears that there are enough resources available, verify that there are no existing quotas for that installation. If there are, verify that it contains correct values.</p>
+<p>See the <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/getting-started/setting-up">Setting up</a> for more detail on setting up your cluster.</p>
+<h2 id="scheduler-is-restarting"><a class="content__anchor" href="#scheduler-is-restarting" aria-hidden="true"><i data-feather="bookmark"></i></a>Scheduler is restarting</h2>
+<p>If the scheduler task is starting for your Kubernetes cluster but is in a “Failed” restart loop, verify all of the installation <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/getting-started/setting-up/#prerequisite-dcos-enterprise-cluster-enterprise">prerequisites</a> have been met.
+This might include improperly configured Service Account and/or Service Account secret or other issues.</p>
+<p>The simplest way is to look at the Kubernetes cluster’s scheduler logs for any error messages. Here are a few examples of what you might see.</p>
+<p>Service Account and Service Account secret was not specified or is not created:</p>
+<pre><code class="language-text">Exception in thread &quot;main&quot; java.lang.IllegalStateException: com.mesosphere.sdk.state.ConfigStoreException: Configuration failed validation without any prior target configurationavailable for fallback. Initial launch with invalid configuration? 1 Errors: 1: Field: 'service.service_account_secret'; Value: 'null'; Message: 'MUST specify a service account secret in DC/OS Enterprise.' (reason: LOGIC_ERROR)
+	at com.mesosphere.sdk.scheduler.SchedulerBuilder.updateConfig(SchedulerBuilder.java:660)
+	at com.mesosphere.sdk.scheduler.SchedulerBuilder.getDefaultScheduler(SchedulerBuilder.java:379)
+	at com.mesosphere.sdk.scheduler.SchedulerBuilder.build(SchedulerBuilder.java:322)
+	at com.mesosphere.sdk.scheduler.SchedulerRunner.run(SchedulerRunner.java:89)
+	at com.mesosphere.sdk.kubernetes.scheduler.Main.main(Main.java:269)
+Caused by: com.mesosphere.sdk.state.ConfigStoreException: Configuration failed validation without any prior target configurationavailable for fallback. Initial launch with invalid configuration? 1 Errors: 1: Field: 'service.service_account_secret'; Value: 'null'; Message: 'MUST specify a service account secret in DC/OS Enterprise.' (reason: LOGIC_ERROR)
+	at com.mesosphere.sdk.config.DefaultConfigurationUpdater.updateConfiguration(DefaultConfigurationUpdater.java:119)
+	at com.mesosphere.sdk.config.DefaultConfigurationUpdater.updateConfiguration(DefaultConfigurationUpdater.java:33)
+	at com.mesosphere.sdk.scheduler.SchedulerBuilder.updateConfig(SchedulerBuilder.java:657)
+</code></pre>
+<p>Service Account and Service Account secret were specified but does not have the correct permissions:</p>
+<pre><code class="language-text">Exception in thread &quot;main&quot; java.lang.RuntimeException: java.io.IOException: Unable to list secret at 'dev/kubernetes0q': query='GET http://master.mesos/secrets/v1/secret/default/dev/kubernetes01?list=true HTTP/1.1', code=403, reason='Forbidden'
+    at com.mesosphere.sdk.kubernetes.scheduler.tls.SecretsClientTLSStore.cleanupTempSecrets(SecretsClientTLSStore.java:267)
+    at com.mesosphere.sdk.kubernetes.scheduler.tls.SecretsClientTLSStore.create(SecretsClientTLSStore.java:84)
+    at com.mesosphere.sdk.kubernetes.scheduler.tls.EnterpriseTLSProvisioner.&lt;init&gt;(EnterpriseTLSProvisioner.java:79)
+    at com.mesosphere.sdk.kubernetes.scheduler.tls.TLSProvisioner.create(TLSProvisioner.java:583)
+    at com.mesosphere.sdk.kubernetes.scheduler.tls.TLSProvisioner.init(TLSProvisioner.java:119)
+    at com.mesosphere.sdk.kubernetes.scheduler.Main.main(Main.java:239)
+Caused by: java.io.IOException: Unable to list secret at 'dev/kubernetes0q': query='GET http://master.mesos/secrets/v1/secret/default/dev/kubernetes01?list=true HTTP/1.1', code=403, reason='Forbidden'
+    at com.mesosphere.sdk.dcos.clients.SecretsClient.query(SecretsClient.java:158)
+    at com.mesosphere.sdk.dcos.clients.SecretsClient.list(SecretsClient.java:93)
+    at com.mesosphere.sdk.kubernetes.scheduler.tls.SecretsClientTLSStore.cleanupTempSecrets(SecretsClientTLSStore.java:265)
+    ... 5 more
+</code></pre>
+<h2 id="scheduler-started-but-other-tasks-are-not-being-launched"><a class="content__anchor" href="#scheduler-started-but-other-tasks-are-not-being-launched" aria-hidden="true"><i data-feather="bookmark"></i></a>Scheduler started but other tasks are not being launched</h2>
+<p>If the scheduler is running but no other tasks are being launched and the DC/OS cluster is running in strict mode, verify that the service account was <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/customizing-install/#tls">created correctly</a>.
+Below is an example of what you might see in the scheduler logs in such as a scenario:</p>
+<pre><code class="language-text">com.mesosphere.mesos.HTTPAdapter.MesosToSchedulerDriverAdapter:subscribe(115): Sending SUBSCRIBE call
+[pool-13-thread-1] com.mesosphere.mesos.HTTPAdapter.MesosToSchedulerDriverAdapter:scheduleNextSubscription(134): Backing off for: 2180
+[pool-13-thread-1] com.mesosphere.mesos.HTTPAdapter.MesosToSchedulerDriverAdapter:subscribe(115): Sending SUBSCRIBE call
+[pool-13-thread-1] com.mesosphere.mesos.HTTPAdapter.MesosToSchedulerDriverAdapter:scheduleNextSubscription(134): Backing off for: 3314
+[pool-13-thread-1] com.mesosphere.mesos.HTTPAdapter.MesosToSchedulerDriverAdapter:subscribe(115): Sending SUBSCRIBE call
+[pool-13-thread-1] com.mesosphere.mesos.HTTPAdapter.MesosToSchedulerDriverAdapter:scheduleNextSubscription(134): Backing off for: 7042
+[pool-13-thread-1] com.mesosphere.mesos.HTTPAdapter.MesosToSchedulerDriverAdapter:subscribe(115): Sending SUBSCRIBE call
+[pool-13-thread-1] com.mesosphere.mesos.HTTPAdapter.MesosToSchedulerDriverAdapter:scheduleNextSubscription(134): Backing off for: 8962
+[pool-13-thread-1] com.mesosphere.mesos.HTTPAdapter.MesosToSchedulerDriverAdapter:subscribe(115): Sending SUBSCRIBE call
+[pool-13-thread-1] com.mesosphere.mesos.HTTPAdapter.MesosToSchedulerDriverAdapter:scheduleNextSubscription(134): Backing off for: 29982
+</code></pre>
+<h2 id="a-restarting-or-unhealthy-dcos-task"><a class="content__anchor" href="#a-restarting-or-unhealthy-dcos-task" aria-hidden="true"><i data-feather="bookmark"></i></a>A restarting or unhealthy DC/OS task</h2>
+<p>In rare situations a DC/OS Kubernetes task may become unstable and require manual intervention.
+In this case use the <code>dcos kubernetes cluster debug pod</code> <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/cli#debug-pod-1">CLI</a> to assist in debugging and recovering failed, flapping or otherwise misbehaving tasks.</p>
+<p>First run <code>dcos kubernetes cluster debug pod restart &lt;pod&gt; --cluster-name &lt;cluster-name&gt;</code> to simply restart the task on the same agent.
+If that does not work or you know that specific agent is unhealthy, run <code>dcos kubernetes cluster debug pod replace &lt;pod&gt; --cluster-name &lt;cluster-name&gt;</code> to force the pod to be scheduled on a new agent.
+It is also worth mentioning that the pod will only get scheduled to a new agent if there are enough resources available.</p>
+<p>Sometimes the task might appear stuck in <code>PREPARED</code> state after running <code>pod replace</code>.
+This is usually caused by the DC/OS agent where the Kubernetes task was previously running losing connectivity with the master agent.
+In this case, you must decommission the agent in order to release the previously reserved resources by running:</p>
+<pre><code class="language-shell">dcos node decommission &lt;mesos-agent-id&gt;
+</code></pre>
+<p>To confirm that this is in fact why the task is stuck in <code>PREPARED</code> state, check the output of <code>https://&lt;dcos_master_public_IP_address&gt;/service/&lt;cluster_name&gt;/v1/debug/offers</code>, you should see messages similar to:</p>
+<pre><code>FAIL(ResourceEvaluationStage): Offer lacks previously reserved 'cpus' with resourceId: '22703a81-bfad-44c2-af52-94b20346398a' for resource: 'name: cpus, value: type: SCALAR scalar { value: 0.1 }, role: dev__kubernetes01-role, pre-reserved-role: *, principal: dev-kubernetes01'
+...
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>Take precautions when dealing with unhealthy <tt>etcd</tt> tasks, see the section below for more detail.</p>
+<h2 id="planned-decommission-of-a-dcos-agent"><a class="content__anchor" href="#planned-decommission-of-a-dcos-agent" aria-hidden="true"><i data-feather="bookmark"></i></a>Planned decommission of a DC/OS agent</h2>
+<h3 id="kube-node-tasks"><a class="content__anchor" href="#kube-node-tasks" aria-hidden="true"><i data-feather="bookmark"></i></a>Kube-node tasks</h3>
+<p>When one or more of your DC/OS agents require to be decommissioned it is important to first safely move any Kubernetes workloads from the nodes that are scheduled on that agent.</p>
+<ol>
+<li>First drain one of the impacted Kubernetes nodes, forcing Kubernetes to reschedule any running pods onto other nodes:</li>
+</ol>
+<pre><code class="language-shell">kubectl drain &lt;node name&gt;
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>Depending on the running workloads, you may need to include the flags <code>--delete-local-data</code> and/or <code>--ignore-daemonsets</code> when running the above command.</p>
+<ol start="2">
+<li>Next, <code>replace</code> the corresponding DC/OS pod that is running on the to be decommissioned agent, this will schedule the pod onto a different agent:</li>
+</ol>
+<pre><code class="language-shell">dcos kubernetes cluster debug pod replace &lt;pod&gt; --cluster-name &lt;cluster-name&gt;
+</code></pre>
+<ol start="3">
+<li>After the replaced DC/OS pod is in <code>Running</code> state and the Kubernetes node’s status is <code>Ready,SchedulingDisabled</code>, it is safe to uncordon the node, allowing for workloads to be scheduled onto it once again:</li>
+</ol>
+<pre><code class="language-shell">kubectl uncordon &lt;node name&gt;
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>Kubernetes will not actively rebalance the existing workloads onto the newly uncordoned node; however any future pods will be scheduled there.</p>
+<ol start="4">
+<li>
+<p>Repeat for all other kube nodes and DC/OS tasks that are scheduled on the same DC/OS agent replacing <code>&lt;node name&gt;</code>, <code>&lt;pod&gt;</code> and <code>&lt;cluster-name&gt;</code> with the appropriate values.</p>
+</li>
+<li>
+<p>Finally, once all of the tasks have been successfully moved to different agents, it is safe to decommission the DC/OS agent:</p>
+</li>
+</ol>
+<pre><code class="language-shell">dcos node decommission &lt;mesos-agent-id&gt;
+</code></pre>
+<h3 id="kube-control-plane-tasks"><a class="content__anchor" href="#kube-control-plane-tasks" aria-hidden="true"><i data-feather="bookmark"></i></a>Kube-control-plane tasks</h3>
+<p>Unlike with kube-node tasks, kube-control-plane tasks do not require draining before replacing.
+However, to avoid downtime when decommissioning an agent with a kube-control-plane task, ensure the <code>kubernetes.high_availability</code> option set to <code>true</code>.</p>
+<p>If HA mode is enabled, it is safe to run the command below and move the kube-control-plane task to a different agent:</p>
+<pre><code class="language-shell">dcos kubernetes cluster debug pod replace &lt;pod&gt; --cluster-name &lt;cluster-name&gt;
+</code></pre>
+<h3 id="etcd-tasks"><a class="content__anchor" href="#etcd-tasks" aria-hidden="true"><i data-feather="bookmark"></i></a>Etcd tasks</h3>
+<p>As described in the <a href="#troubleshooting-etcd">etcd section below</a> it is only possible to move an <code>etcd</code> task when the <code>kubernetes.high_availability</code> option is set to <code>true</code> and quorum is established.</p>
+<p>Once you have confirmed that is the case, run the command below to move the <code>etcd</code> task to a different agent:</p>
+<pre><code class="language-shell">dcos kubernetes cluster debug pod replace &lt;pod&gt; --cluster-name &lt;cluster-name&gt;
+</code></pre>
+<h2 id="unhealthy-dcos-agent"><a class="content__anchor" href="#unhealthy-dcos-agent" aria-hidden="true"><i data-feather="bookmark"></i></a>Unhealthy DC/OS agent</h2>
+<p>If a DC/OS agent is unhealthy, consider removing that agent from your DC/OS cluster.
+To safely do so, you must decommission it by running:</p>
+<pre><code class="language-shell">dcos node decommission &lt;mesos-agent-id&gt;
+</code></pre>
+<p>When a DC/OS agent is decommissioned, any Kubernetes tasks that are running on that agent will be automatically rescheduled onto a different agent.</p>
+<h1 id="troubleshooting-etcd"><a class="content__anchor" href="#troubleshooting-etcd" aria-hidden="true"><i data-feather="bookmark"></i></a>Troubleshooting <code>etcd</code></h1>
+<p>The DC/OS Kubernetes package goes to great lengths to ensure proper operation of the <code>etcd</code> cluster in the presence of failures.
+However, it is not possible to foresee and mitigate all possible situations, and in some cases manual intervention by the end-user may be required.
+For instance, if an <code>etcd</code> process that has been added to an existing cluster crashes before actually being able to establish a connection with the other members, the cluster may become unstable or, in some circumstances, inoperable.
+This document presents a number of best-practices that help reducing the chances of permanently losing an <code>etcd</code> cluster and the associated data. You should be familiar with the <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/disaster-recovery/">Disaster Recovery</a> section before reading this document.</p>
+<h2 id="failure-scenarios"><a class="content__anchor" href="#failure-scenarios" aria-hidden="true"><i data-feather="bookmark"></i></a>Failure Scenarios</h2>
+<p>There are four main failure scenarios that can lead to permanent failures in an <code>etcd</code> cluster created and managed by DC/OS Kubernetes:</p>
+<ol>
+<li><strong>(Scenario 1)</strong> When first creating the cluster, as when first installing DC/OS Kubernetes;</li>
+<li><strong>(Scenario 2)</strong> When scaling up the cluster, as when updating the value of <code>kubernetes.high_availability</code>;</li>
+<li><strong>(Scenario 3)</strong> When <code>kubernetes.high_availability</code> is <code>false</code> and the single member crashes, as when the DC/OS agent where the member is running permanently fails;</li>
+<li><strong>(Scenario 4)</strong> When <code>kubernetes.high_availability</code> is <code>true</code> and one or more members crash, as when there is a major outage of the DC/OS cluster.</li>
+</ol>
+<h3 id="scenario-1"><a class="content__anchor" href="#scenario-1" aria-hidden="true"><i data-feather="bookmark"></i></a>Scenario 1</h3>
+<p>The first scenario deals with failures that may happen when first installing DC/OS Kubernetes.
+It is the least risky one as there is no pre-existing data stored in <code>etcd</code>, and hence there will be no data loss.</p>
+<p>In this scenario, the easiest way towards recovery is to uninstall and re-install DC/OS Kubernetes.
+Before re-installing DC/OS Kubernetes, make sure that all DC/OS agents are healthy, and that the DC/OS cluster itself is healthy and that there are no networking problems, and meets all the <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/getting-started/setting-up/#prerequisite-dcos-enterprise-cluster-enterprise">prerequisites</a>.</p>
+<h3 id="scenario-2"><a class="content__anchor" href="#scenario-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Scenario 2</h3>
+<p>The second scenario deals with failures that may happen when switching the value of the <code>kubernetes.high_availability</code> from <code>false</code> to <code>true</code> (i.e. when scaling up the existing <code>etcd</code> cluster).
+In this scenario there is the risk (albeit low) of permanently losing the <code>etcd</code> cluster and the associated data.
+To prevent this situation or be prepared in case it arises, you can take a number of preventive measures.</p>
+<h4 id="perform-a-backup-of-the-existing-installation"><a class="content__anchor" href="#perform-a-backup-of-the-existing-installation" aria-hidden="true"><i data-feather="bookmark"></i></a>Perform a backup of the existing installation</h4>
+<p>Before switching the value of <code>kubernetes.high_availability</code>, it is <strong>STRONGLY ADVISED</strong> to perform a backup of the current installation using the instructions in <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/disaster-recovery/">Disaster Recovery</a>.
+In the unlikely event of a failure in the <code>etcd</code> cluster while the scale-up operation is performed, uninstall DC/OS Kubernetes and use <code>dcos kubernetes cluster restore --cluster-name=CLUSTER-NAME</code> to restore the backup to a new cluster.
+After the restore, retry updating the value of <code>kubernetes.high_availability</code> from <code>false</code> to <code>true</code>.
+If this operation fails for the second or third time in a row, the DC/OS cluster may be unhealthy, and you are encouraged to contact technical support in order to further troubleshoot the problem.</p>
+<h4 id="perform-a-snapshot-of-the-etcd-keyspace"><a class="content__anchor" href="#perform-a-snapshot-of-the-etcd-keyspace" aria-hidden="true"><i data-feather="bookmark"></i></a>Perform a snapshot of the <code>etcd</code> keyspace</h4>
+<p>In addition to creating a backup using <code>dcos kubernetes cluster backup --cluster-name=CLUSTER-NAME</code> as described above, it may also be a good idea to create a snapshot of the <code>etcd</code> keyspace using <code>etcdctl</code>.
+This snapshot can be later used to restore an <code>etcd</code> cluster running outside DC/OS.</p>
+<ol>
+<li>Run the following command (replacing the <code>&lt;SERVICE_NAME&gt;</code> placehold as appropriate) to create a snapshot:</li>
+</ol>
+<pre><code class="language-shell">dcos task exec &lt;SERVICE_NAME&gt;__etcd-0-peer \
+    etcdctl \
+    --endpoints https://etcd-0-peer.&lt;SERVICE_NAME&gt;.autoip.dcos.thisdcos.directory:2379 \
+    --cacert ca-crt.pem \
+    --cert etcd-crt.pem \
+    --key etcd-key.pem \
+    snapshot save etcd-0-peer.db
+</code></pre>
+<p>This will create a file named <code>etcd-0-peer.db</code> in the working directory of the <code>etcd-0-peer</code> task containing a snapshot of the <code>etcd</code> keyspace.</p>
+<ol start="2">
+<li>You should then fetch the <code>etcd-0-peer.db</code> file from inside the <code>etcd-0-peer</code> task and store it in a safe place (i.e. in their workstation or cloud storage).</li>
+<li>To fetch the <code>etcd-0-peer.db</code> file from inside the <code>etcd-0-peer</code> task use the DC/OS UI or manually <code>scp</code> from the DC/OS agent.</li>
+</ol>
+<h4 id="start-with-kuberneteshigh-availabilitytrue-if-setting-up-production"><a class="content__anchor" href="#start-with-kuberneteshigh-availabilitytrue-if-setting-up-production" aria-hidden="true"><i data-feather="bookmark"></i></a>Start with <code>kubernetes.high_availability=true</code> if setting up production</h4>
+<p>For production DC/OS Kubernetes clusters it is highly recommended to set <code>kubernetes.high_availability=true</code> when first installing the package.
+This reduces the chance of data loss, and all failures occuring from this point fall into the previously described <a href="#scenario-1">Scenario 1</a>.</p>
+<h3 id="scenario-3"><a class="content__anchor" href="#scenario-3" aria-hidden="true"><i data-feather="bookmark"></i></a>Scenario 3</h3>
+<p>The third scenario deals with failures in the single <code>etcd</code> member that is in use when <code>kubernetes.high_availability</code> is set to <code>false</code>.
+Two main types of failures can occur in this scenario:</p>
+<ol>
+<li>The <code>etcd-0-peer</code> task crashes but the DC/OS agent remains healthy;</li>
+<li>The DC/OS agent permanently fails.</li>
+</ol>
+<p>When the <code>etcd-0-peer</code> task crashes but the DC/OS agent where it was running remains healthy, the task will simply be restarted on the same agent and the existing data will be preserved.
+The DC/OS Kubernetes cluster as a whole may experience some instability, and some other tasks (such as <code>kube-control-plane-0-instance</code>) may also restart, but existing <code>etcd</code> data will be safe.
+There is usually no need for manual intervention in this scenario.</p>
+<p>When the DC/OS agent where <code>etcd-0-peer</code> was running permanently fails, and as mentioned in <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/limitations/">Limitations</a>, the contents of the <code>etcd</code> data directory will be <strong>PERMANENTLY LOST</strong>.
+In order to restore data you will have to use <code>dcos kubernetes cluster restore --cluster-name=CLUSTER-NAME</code> as described in <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/disaster-recovery/">Disaster Recovery</a>.
+For this reason, it is <strong>STRONGLY ADVISED</strong> to periodically back up the DC/OS Kubernetes cluster(s) using <code>dcos kubernetes cluster backup --cluster-name=CLUSTER-NAME</code>, and to avoid running production workloads in a cluster where <code>kubernetes.high_availability</code> is set to <code>false</code>.</p>
+<h3 id="scenario-4"><a class="content__anchor" href="#scenario-4" aria-hidden="true"><i data-feather="bookmark"></i></a>Scenario 4</h3>
+<p>The fourth scenario deals with failures of <code>etcd</code> members when using <code>kubernetes.high_availability=true</code>.
+Two main types of failures can occur in this scenario:</p>
+<ol>
+<li>A single <code>etcd</code> task (e.g., <code>etcd-0-peer</code>) crashes permanently;</li>
+<li>Two or more <code>etcd</code> task crash permanently.</li>
+</ol>
+<p>Permanently losing a single <code>etcd</code> member does not pose a problem since quorum in the <code>etcd</code> cluster is not lost.
+Data stored in <code>etcd</code> is also not lost, since there are still two active members holding the data.
+In this scenario, simply clean up and re-launch a failed <code>etcd</code> member in a different DC/OS agent by running the following command (replacing <code>&lt;SERVICE_NAME&gt;</code> and <code>&lt;etcd-task-name&gt;</code> as appropriate):</p>
+<pre><code class="language-shell">$ dcos kubernetes cluster debug --cluster-name=CLUSTER-NAME pod replace &lt;pod-name&gt;
+{
+  &quot;pod&quot;: &quot;etcd-1&quot;,
+  &quot;tasks&quot;: [
+    &quot;etcd-1-peer&quot;,
+    &quot;etcd-1-recover&quot;
+  ]
+}
+</code></pre>
+<p>However, permanently losing two or more members will cause the <code>etcd</code> cluster to lose quorum and become inoperable.
+In this scenario you must use <code>dcos kubernetes cluster restore --cluster-name=CLUSTER-NAME</code> to re-create the DC/OS Kubernetes cluster from a previous backup, as described in <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/disaster-recovery/">Disaster Recovery</a>.</p>
+<h2 id="further-reading"><a class="content__anchor" href="#further-reading" aria-hidden="true"><i data-feather="bookmark"></i></a>Further Reading</h2>
+<p>In order to gain a better insight on <code>etcd</code> troubleshooting and disaster recovery, as well as on why some of the described scenarios represent permanent quorum loss and failure of the <code>etcd</code> cluster, it is strongly recommended to read the official <code>etcd</code> <a href="https://coreos.com/etcd/docs/latest/op-guide/recovery.html">Disaster Recovery</a> and <a href="https://coreos.com/etcd/docs/latest/faq.html">FAQ</a> documents.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#troubleshooting-kubernetes">Troubleshooting Kubernetes</a></li><li class="content__sections-item content__sections-item--h2"><a href="#scheduler-is-not-starting-at-all">Scheduler is not starting at all</a></li><li class="content__sections-item content__sections-item--h2"><a href="#scheduler-is-restarting">Scheduler is restarting</a></li><li class="content__sections-item content__sections-item--h2"><a href="#scheduler-started-but-other-tasks-are-not-being-launched">Scheduler started but other tasks are not being launched</a></li><li class="content__sections-item content__sections-item--h2"><a href="#a-restarting-or-unhealthy-dcos-task">A restarting or unhealthy DC/OS task</a></li><li class="content__sections-item content__sections-item--h2"><a href="#planned-decommission-of-a-dcos-agent">Planned decommission of a DC/OS agent</a></li><li class="content__sections-item content__sections-item--h2"><a href="#unhealthy-dcos-agent">Unhealthy DC/OS agent</a></li><li class="content__sections-item content__sections-item--h1"><a href="#troubleshooting-etcd">Troubleshooting etcd</a></li><li class="content__sections-item content__sections-item--h2"><a href="#failure-scenarios">Failure Scenarios</a></li><li class="content__sections-item content__sections-item--h2"><a href="#further-reading">Further Reading</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Tutorial - External load balancing for a sample app - D2iQ Docs</title><meta name="description" content="How to use an external group for accessing a containerized service through Marathon-LB"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Marathon Lb Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.14/mlb-basic-tutorial">Marathon-LB 1.14.x</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.15/mlb-basic-tutorial">Marathon-LB 1.15.x</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.13/mlb-basic-tutorial">Marathon-LB 1.13.x</a></li></ul><div class="toggle"><p><span class="title">Marathon Lb</span><span class="version"> 1.15</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.15/release-notes/">Release notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.15/mlb-install/">Installing Marathon-LB</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.15/mlb-overview/">Marathon-LB overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.15/mlb-configuration/">Working with templates and app labels</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.15/mlb-basic-tutorial/">Tutorial - Basic external load balancing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.15/mlb-advanced-tutorial/">Tutorial - Internal and external load balancing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.15/mlb-scaling-tutorial/">Tutorial - Scaling apps using Marathon-LB statistics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.15/mlb-troubleshooting/">Troubleshooting Marathon-LB</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.15/mlb-reference/">Reference information</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Tutorial - External load balancing for a sample app</h1></div><h4 class="content__header-description">How to use an external group for accessing a containerized service through Marathon-LB</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/marathon-lb/1.15/mlb-basic-tutorial/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>This tutorial guides you through the steps for configuring Marathon-LB to run a containerized DC/OS service with external load balancing for a website. After completing this tutorial, you will have hands-on practice configuring load balancing for a sample application.</p>
+<p>In this tutorial, you will:</p>
+<ul>
+<li>Download a Docker image that contains NGINX as a sample app.</li>
+<li>Prepare load balancing for the NGINX application on the <code>dcos.io</code> website.</li>
+<li>Install Marathon-LB as the edge load balancer for the service.</li>
+<li>Run Marathon-LB on a public-facing node to route inbound network traffic.</li>
+</ul>
+<h1 id="before-you-begin"><a class="content__anchor" href="#before-you-begin" aria-hidden="true"><i data-feather="bookmark"></i></a>Before you begin</h1>
+<ul>
+<li>You must have a DC/OS cluster with a bootstrap node, at least one master node, at least one private agent node, and at least one public agent node.</li>
+<li>You must have an account with access to the DC/OS web-based administrative console or DC/OS command-line interface.</li>
+<li>You must have Marathon-LB installed.</li>
+</ul>
+<h1 id="download-the-app-definition-and-container"><a class="content__anchor" href="#download-the-app-definition-and-container" aria-hidden="true"><i data-feather="bookmark"></i></a>Download the app definition and container</h1>
+<p>This tutorial uses a sample app definition file that you can download from the <code>dcos-website</code> GitHub repository.</p>
+<ol>
+<li>
+<p>Copy <a href="https://github.com/dcos/dcos-website/blob/develop/dcos-website.json"><code>dcos-website/dcos-website.json</code></a> from the <code>dcos-website</code> GitHub repository.</p>
+</li>
+<li>
+<p>Go to the <a href="https://hub.docker.com/r/mesosphere/dcos-website/tags"><code>mesosphere/dcos-website</code></a> Docker repository and copy the latest <code>image</code> tag.</p>
+</li>
+</ol>
+  <p>
+  <img src="/dcosdocs/mesosphere/dcos/2.0/img/dockerhub.png" alt="Mesosphere Docker Hub">
+  </p>
+<p>For example, after clicking <strong>Tags</strong>, you might see an identifier similar to this:
+<code>cff383e4f5a51bf04e2d0177c5023e7cebcab3cc</code></p>
+  <p>
+  <img src="/dcosdocs/mesosphere/dcos/services/img/docker-repo-tag.png" alt="Sample image tag">
+  </p>
+<h1 id="modify-the-app-image-tag-and-public-ip-address"><a class="content__anchor" href="#modify-the-app-image-tag-and-public-ip-address" aria-hidden="true"><i data-feather="bookmark"></i></a>Modify the app image tag and public IP address</h1>
+<ol>
+<li>
+<p>Open the <code>dcos-website.json</code> app definition file you downloaded from the repository.</p>
+</li>
+<li>
+<p>Add the <code>image-tag</code> in the <code>docker:image</code> field with the Docker image tag.</p>
+<p>For example:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;dcos-website&quot;,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;DOCKER&quot;,
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;mesosphere/dcos-website:cff383e4f5a51bf04e2d0177c5023e7cebcab3cc&quot;,
+      &quot;network&quot;: &quot;BRIDGE&quot;,
+      &quot;portMappings&quot;: [
+        { &quot;hostPort&quot;: 0, &quot;containerPort&quot;: 80, &quot;servicePort&quot;: 10004 }
+      ]
+    }
+  },
+</code></pre>
+</li>
+<li>
+<p>Identify the public-facing IP address for your public agent node.</p>
+<p>For information about how to find your public agent IP address, see <a href="/dcosdocs/mesosphere/dcos/2.0/administering-clusters/locate-public-agent/">Finding a public agent IP</a>.</p>
+</li>
+<li>
+<p>In the <code>labels</code> field, add an entry for <code>HAPROXY_0_VHOST</code> and assign it the value of your public agent IP.</p>
+<p>For example, if the public agent node IP address is 64.172.103.2, you might add lines similar to the following:</p>
+<pre><code>&quot;labels&quot;:{
+        &quot;HAPROXY_DEPLOYMENT_GROUP&quot;:&quot;dcos-website&quot;,
+        &quot;HAPROXY_DEPLOYMENT_ALT_PORT&quot;:&quot;10005&quot;,
+        &quot;HAPROXY_GROUP&quot;:&quot;external&quot;,
+        &quot;HAPROXY_0_REDIRECT_TO_HTTPS&quot;:&quot;true&quot;,
+        &quot;HAPROXY_0_VHOST&quot;: &quot;64.172.103.2&quot;
+      }
+</code></pre>
+<p>Be sure to remove the leading <code>http://</code> and the trailing slash () from the IP address, and to add a comma after the preceding field.</p>
+<p>The complete JSON app definition file should resemble the following:</p>
+<pre><code class="language-json">  {
+    &quot;id&quot;: &quot;dcos-website&quot;,
+    &quot;container&quot;: {
+      &quot;type&quot;: &quot;DOCKER&quot;,
+      &quot;portMappings&quot;: [
+        { &quot;hostPort&quot;: 0, &quot;containerPort&quot;: 80, &quot;servicePort&quot;: 10004 }
+      ],
+      &quot;docker&quot;: {
+        &quot;image&quot;: &quot;mesosphere/dcos-website:cff383e4f5a51bf04e2d0177c5023e7cebcab3cc&quot;
+      }
+    },
+    &quot;instances&quot;: 3,
+    &quot;cpus&quot;: 0.25,
+    &quot;mem&quot;: 100,
+    &quot;network&quot;: &quot;BRIDGE&quot;,
+    &quot;healthChecks&quot;: [{
+        &quot;protocol&quot;: &quot;HTTP&quot;,
+        &quot;path&quot;: &quot;/&quot;,
+        &quot;portIndex&quot;: 0,
+        &quot;timeoutSeconds&quot;: 2,
+        &quot;gracePeriodSeconds&quot;: 15,
+        &quot;intervalSeconds&quot;: 3,
+        &quot;maxConsecutiveFailures&quot;: 2
+    }],
+    &quot;labels&quot;:{
+      &quot;HAPROXY_DEPLOYMENT_GROUP&quot;:&quot;dcos-website&quot;,
+      &quot;HAPROXY_DEPLOYMENT_ALT_PORT&quot;:&quot;10005&quot;,
+      &quot;HAPROXY_GROUP&quot;:&quot;external&quot;,
+      &quot;HAPROXY_0_REDIRECT_TO_HTTPS&quot;:&quot;true&quot;,
+      &quot;HAPROXY_0_VHOST&quot;: &quot;64.172.103.2&quot;
+    }
+  }
+</code></pre>
+</li>
+</ol>
+<p>Only apps with the label <code>HAPROXY_GROUP=external</code> will be exposed using this Marathon-LB configuration.</p>
+<h1 id="add-the-load-balanced-application-and-check-its-status"><a class="content__anchor" href="#add-the-load-balanced-application-and-check-its-status" aria-hidden="true"><i data-feather="bookmark"></i></a>Add the load-balanced application and check its status</h1>
+<ol>
+<li>
+<p>Run the service from the DC/OS CLI using the following command:</p>
+<pre><code class="language-bash">dcos marathon app add dcos-website.json
+</code></pre>
+</li>
+<li>
+<p>Open the DC/OS web-based console URL in a browser, then click <strong>Services</strong> to verify that your application is deployed and running.</p>
+ <p>
+ <img src="/dcosdocs/mesosphere/dcos/2.0/img/healthy-dcos-website.png" alt="Healthy service">
+ </p>
+</li>
+<li>
+<p>In the web browser, navigate to the IP address for your public agent node to verify the site you have deployed is running.</p>
+</li>
+</ol>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#before-you-begin">Before you begin</a></li><li class="content__sections-item content__sections-item--h1"><a href="#download-the-app-definition-and-container">Download the app definition and container</a></li><li class="content__sections-item content__sections-item--h1"><a href="#modify-the-app-image-tag-and-public-ip-address">Modify the app image tag and public IP address</a></li><li class="content__sections-item content__sections-item--h1"><a href="#add-the-load-balanced-application-and-check-its-status">Add the load-balanced application and check its status</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

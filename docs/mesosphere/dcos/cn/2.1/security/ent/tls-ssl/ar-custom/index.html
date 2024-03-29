@@ -1,0 +1,191 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>配置自定义外部证书 - D2iQ Docs</title><meta name="description" content="配置 DC/OS Enterprise 以使用自定义外部证书"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.1/security/ent/tls-ssl/ar-custom">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/tls-ssl/ar-custom">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/tls-ssl">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/tls-ssl">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/"><i data-feather="chevron-right"></i>网络</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/"><i data-feather="chevron-right"></i>安全</a></li><ul><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/"><i data-feather="chevron-right"></i>DC/OS Enterprise 安全性</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/users-groups/"><i data-feather="chevron-right"></i>管理用户和组</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/gui-permissions/"><i data-feather="chevron-right"></i>授予访问 UI 的权限</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/perms-management/">权限管理</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/perms-reference/">权限参考</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/ldap/"><i data-feather="chevron-right"></i>LDAP 身份认证</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/secrets/"><i data-feather="chevron-right"></i>密钥</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/sso/"><i data-feather="chevron-right"></i>基于身份提供程序的身份认证</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/service-auth/"><i data-feather="chevron-right"></i>服务认证</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/restrict-service-access/">限制对 DC/OS 服务组的访问</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/hardening/">强化</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/iam-api/">身份和访问管理 API</a></li><li class="active"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/tls-ssl/"><i data-feather="chevron-right"></i>确保与 TLS 通信的安全</a></li><ul><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/tls-ssl/haproxy-adminrouter/">在 Admin Router 前配置 HAProxy</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/tls-ssl/ca-custom/">配置自定义 CA 证书</a></li><li class="active active-on"><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/tls-ssl/ar-custom/">配置自定义外部证书</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/tls-ssl/get-cert/">获取 DC/OS CA 捆绑包</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/tls-ssl/ca-trust-browser/">在 DC/OS CA 中建立信任</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/tls-ssl/ca-trust-cli/">在 CLI 中建立信任</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/tls-ssl/ca-trust-curl/">在 curl 命令中建立信任</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/tls-ssl/ca-api/">使用证书颁发机构 API</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/tls-ssl/exhibitor/">通过双向 TLS 保护 Exhibitor</a></li></ul></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/oss/"><i data-feather="chevron-right"></i>DC/OS 开源安全</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">配置自定义外部证书</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">配置 DC/OS Enterprise 以使用自定义外部证书</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/tls-ssl/ar-custom/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- The source repository for this topic is https://github.com/dcos/dcos-docs-site -->
+<p>通过 Admin Router 对 DC/OS Enterprise 群集进行外部访问。默认情况下，Admin Router 提供的证书由 DC/OS 证书颁发机构签名。默认情况下，默认的 DC/OS CA 证书不受信任，并且要求客户端在 CA 中手动配置信任（例如，通过接受弹出的浏览器对话框）。可以使用 [自定义 CA 证书] 提供受信任的 CA 证书(/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/tls-ssl/ca-custom/)。但是，获得合适的 CA 证书可能很困难。通过自定义外部证书，群集管理员可以提供易于获取的非 CA 证书和 Admin Router 将提供给外部连接的密钥。</p>
+<p>为您的 DC/OS Enterprise 群集使用自定义外部证书的好处包括：</p>
+<ul>
+<li>只需要获得标准证书，而非中间 CA 签名证书，就可以在默认情况下与客户端信任的群集连接（即浏览器信任的证书）；</li>
+<li>对于连接到使用不同服务器名称的群集的客户端，使用具有不同属性的证书。</li>
+</ul>
+<h1 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>目录</h1>
+<ul>
+<li><a href="#%E6%94%AF%E6%8C%81">支持</a></li>
+<li><a href="#glossary">术语表</a>，用于术语的一般定义</li>
+<li><a href="#requirements">要求</a></li>
+<li><a href="#config-ref">配置参数参考</a></li>
+<li><a href="#installing-dcos-enterprise-with-a-custom-external-certificate">安装</a></li>
+</ul>
+<h1 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>支持</h1>
+<ul>
+<li>DC/OS Enterprise 2.1 及更高版本支持自定义外部证书。</li>
+<li>在初始安装或升级期间可添加自定义外部证书。</li>
+<li>自定义外部证书支持 RSA 和 ECC 密钥。</li>
+</ul>
+<p>术语表</p>
+<ul>
+<li>
+<p><strong>自定义外部证书：</strong> PEM 格式的证书，用于通过 Admin Router 访问使用一组服务器名称的群集。如有必要，应将所有的中间 CA 证书包含在客户端信任的根 CA 证书中。根 CA 证书不需要包含在 PEM 文件中。</p>
+</li>
+<li>
+<p><strong>服务器名称：</strong> Admin Router 与自定义外部证书的规范名称和对象替代名称相匹配的一组名称。</p>
+</li>
+<li>
+<p><strong>自定义私钥：</strong> 与自定义外部证书关联的 PKCS#8 格式的私钥。</p>
+</li>
+<li>
+<p>**安装目录：**DC/OS 安装程序驻留的 bootstrap 节点上的目录。在本文档中以 <code>$DCOS_INSTALL_DIR</code> 表示。</p>
+</li>
+<li>
+<p>**配置：**管理安装过程特定方面的配置参数集。配置存储在 DC/OS 配置文件中。</p>
+</li>
+<li>
+<p>**DC/OS 配置文件：**包含 DC/OS 配置参数的文件。DC/OS 配置文件通常被称为 <code>config.yaml</code>，并且必须在安装期间出现在 bootstrap 节点上的 <code>$DCOS_INSTALL_DIR/genconf/</code> 的目录中。它由 DC/OS 安装程序使用。</p>
+</li>
+</ul>
+<h1 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>要求</h1>
+<p>要使用自定义外部证书安装 DC/OS Enterprise，您需要：</p>
+<ul>
+<li>包含自定义外部证书的文件。</li>
+<li>包含自定义私钥的文件。</li>
+</ul>
+<h2 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>指定位置</h2>
+<p>bootstrap 节点上 <code>$DCOS_INSTALL_DIR/genconf/</code> 目录中的自定义外部证书、自定义私钥的文件系统路径必须在 DC/OS 配置文件中分别使用 <code>external_certificate_path</code> 和 <code>external_certificate_key_path</code> 参数进行指定。路径必须相对于 <code>$DCOS_INSTALL_DIR</code>.</p>
+<h1 id="-5"><a class="content__anchor" href="#-5" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="config-ref"></a>配置参数参考</h1>
+<h3 id="external-certificate-path"><a class="content__anchor" href="#external-certificate-path" aria-hidden="true"><i data-feather="bookmark"></i></a>external_certificate_path</h3>
+<p>到包含 OpenSSL PEM 格式的单个 X.509 leaf 证书的文件的路径（相对于 <code>$DCOS_INSTALL_DIR</code>）。例如：<code>genconf/external-certificate.crt</code>。如有必要，应将所有的中间 CA 证书包含在客户端信任的根 CA 证书中。建议不要在 PEM 文件中包含最终根 CA 证书，但这并不强制要求。</p>
+<p>如果提供，则这是自定义外部证书。如果未提供，那么 DC/OS 群集使用在 DC/OS CA 签名的初始 bootstrap 阶段生成的唯一 leaf 证书，并将其提供给客户端。</p>
+<p>请参阅 <code>external_certificate_validation_disable</code> 参数，了解外部证书的验证以及如何被覆盖。</p>
+<h2 id="external-certificate-key-path"><a class="content__anchor" href="#external-certificate-key-path" aria-hidden="true"><i data-feather="bookmark"></i></a>external_certificate_key_path</h2>
+<p>到包含私匙文件的路径（相对于 <code>$DCOS_INSTALL_DIR</code>），该私匙对应于自定义外部证书，以 OpenSSL (PKCS#8) PEM 格式编码。例如：<code>genconf/external-certificate-key.key</code>.</p>
+<p>这是高度敏感的数据。配置处理器仅为配置验证目的访问此文件，并且不复制数据。成功配置验证后，需要将此文件从带外放置到路径 <code>/var/lib/dcos/pki/tls/private/adminrouter-external.key</code> 上所有 DC/OS 主节点的文件系统中，然后再启动大多数 DC/OS <code>systemd</code> 单元。该文件必须是根用户可读取的，并且应该具有 0600 权限集。</p>
+<p>如果指定了 <code>external_certificate_path</code>，则此路径是必需的。</p>
+<h2 id="external-certificate-servernames"><a class="content__anchor" href="#external-certificate-servernames" aria-hidden="true"><i data-feather="bookmark"></i></a>external_certificate_servernames</h2>
+<p>访问群集时客户端可以使用的服务器名称列表，
+以便 Admin Router 将自定义外部证书提供给
+客户端。服务器名称可包含：</p>
+<ul>
+<li>普通主机名，例如，<code>host.example.com</code>。</li>
+<li>IP 地址，例如，<code>192.0.2.5</code>。</li>
+<li><code>*</code> 通配符，如 <code>*.example.com</code>，会匹配
+<code>example.com</code>（如 <code>foo.example.com</code>、<code>bar.example.com</code>）的所有子域，但不是域
+本身 - <code>example.com</code> 或更深的子域：<code>foo.bar.example.com</code>。</li>
+<li><code>.</code> 通配符，如 <code>.example.com</code>，会相同匹配 <code>*</code> 通配符以及域
+本身（如 <code>foo.example.com</code>、<code>bar.example.com</code>、<code>example.com</code>）。</li>
+</ul>
+<p>服务器名称不能包含：</p>
+<ul>
+<li><code>master.mesos</code></li>
+<li><code>leader.mesos</code></li>
+<li><code>registry.component.thisdcos.directory</code></li>
+<li>由 <code>/opt/mesosphere/bin/detect_ip</code> 脚本（从 <code>ip_detect_contents</code> 或 <code>ip_detect_filename</code> 配置参数创建）返回的任何 IP 地址。</li>
+</ul>
+<p>此选项中所提供的每个服务器名称必须在自定义外部
+证书的规范名称或对象替代名称中。</p>
+<p>如果指定了 <code>external_certificate_path</code>，则此选项是必需的。</p>
+<h2 id="external-certificate-validation-disable"><a class="content__anchor" href="#external-certificate-validation-disable" aria-hidden="true"><i data-feather="bookmark"></i></a>external_certificate_validation_disable</h2>
+<p>自定义外部证书在使用之前，需要经过
+验证。即：</p>
+<ul>
+<li>对
+<code>external_certificate_servernames</code>参数所提及的服务器名称的限制</li>
+<li>证书密钥必须为 RSA 或 ECC 类型</li>
+<li>RSA 密钥最小为 2048</li>
+<li>ECC 密钥最小为 256</li>
+<li>ECC 的密钥曲线必须是 SECP256R1 或 SECP384R1 之一，</li>
+<li>必须定义密钥用法扩展</li>
+<li>证书的有效期不得起始于未来日期</li>
+<li>证书的有效期不得早于 365
+天截止</li>
+<li>不需要基本约束，但如果被定义，则
+不应设置 CA 标记</li>
+<li>密钥用法扩展必须设置数字签名和密钥加密
+扩展</li>
+<li>必须存在已扩展的密钥用法扩展，并且其服务器
+身份认证标记必须被设置</li>
+</ul>
+<p>此外，如果证书链存在于外部
+证书的 PEM 中，则链本身必须：</p>
+<ul>
+<li>从 leaf 证书开始，紧跟中间 CA 证书，每个
+都签署其前者，并被其后者签署</li>
+<li>每个中间 CA 证书必须是有效的 CA 证书（到期等）</li>
+</ul>
+<p>如果这些限制太严格，则可以通过
+将 <code>external_certificate_validation_disable</code> 参数设置为 <code>true</code> 来覆盖。</p>
+<h1 id="dcos-enterprise"><a class="content__anchor" href="#dcos-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>使用自定义外部证书安装 DC/OS Enterprise</h1>
+<h2 id="-6"><a class="content__anchor" href="#-6" aria-hidden="true"><i data-feather="bookmark"></i></a>前提条件</h2>
+<ul>
+<li>
+<p>通过安装程序安装 DC/OS Enterprise 是根据相应 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/deploying-dcos/installation/">文档</a> 进行准备（直至文档的<a href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/deploying-dcos/installation/#install-dcos"><strong>安装 DC/OS</strong></a> 部分）。</p>
+</li>
+<li>
+<p>配置参数 <code>external_certificate_path</code>、<code>external_certificate_key_path</code> 和 <code>external_certificate_servernames</code> 在 DC/OS 配置文件 <code>$DCOS_INSTALL_DIR/genconf/config.yaml</code> 中指定并指向文件系统中的相关位置。在 bootstrap 节点上发出命令的示例：</p>
+</li>
+</ul>
+<pre><code class="language-bash">cd $DCOS_INSTALL_DIR
+cat genconf/config.yaml
+</code></pre>
+<pre><code>[...]
+external_certificate_path: genconf/external-certificate.crt
+external_certificate_key_path: genconf/external-certificate-key.key
+external_certificate_servernames:
+  - foo.example.com
+  - bar.example.com
+  - .example.org
+  - *.example.net
+[...]
+</code></pre>
+<h2 id="bootstrap"><a class="content__anchor" href="#bootstrap" aria-hidden="true"><i data-feather="bookmark"></i></a>复制自定义外部证书和私钥到 bootstrap 节点</h2>
+<p>自定义外部证书、自定义私钥必须放在 bootstrap 节点上的 <code>$DCOS_INSTALL_DIR/genconf/</code> 目录中：</p>
+<pre><code class="language-bash">cd $DCOS_INSTALL_DIR
+ls genconf/
+</code></pre>
+<pre><code>external-certificate.crt
+external-certificate-key.key
+</code></pre>
+<h2 id="-7"><a class="content__anchor" href="#-7" aria-hidden="true"><i data-feather="bookmark"></i></a>将自定义私钥手动复制到所有管理节点</h2>
+<p>出于安全原因，安装程序不会将私钥从 bootstrap 节点复制到主节点。
+<strong>在开始安装之前</strong>，必须将自定义私钥安全地分发到每个 DC/OS  管理节点。</p>
+<p>自定义私钥文件的文件系统路径必须是 <code>/var/lib/dcos/pki/tls/private/adminrouter-external.key</code>。包含与自定义外部证书对应的私钥 <code>adminrouter-external.key</code> 的文件必须由 root Unix 用户拥有，并且设置了 0600 权限。建议您确保目录 <code>/var/lib/dcos/pki/tls/private</code> 由 root 拥有，并且具有 0700 权限。</p>
+<p>如果通过网络将私钥文件复制到主节点上，则必须充分保护网络通道。</p>
+<p>例如，可以通过在每个管理节点（<code>W.X.Y.Z</code> 表示 bootstrap 节点的 IP 地址）上运行以下命令（如 <code>root</code> ）来实现这一点：</p>
+<pre><code class="language-bash">mkdir -p /var/lib/dcos/pki/tls/private/
+chown root /var/lib/dcos/pki/tls/private/
+chmod 700 /var/lib/dcos/pki/tls/private/
+scp centos@W.X.Y.Z:$DCOS_INSTALL_DIR/genconf/external-certificate-key.key /var/lib/dcos/pki/tls/private/
+chown root /var/lib/dcos/pki/tls/private/adminrouter-external.key
+chmod 600 /var/lib/dcos/pki/tls/private/adminrouter-external.key
+</code></pre>
+<h2 id="-8"><a class="content__anchor" href="#-8" aria-hidden="true"><i data-feather="bookmark"></i></a>安装</h2>
+<p>按照 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/deploying-dcos/installation/#install-dcos">安装程序文档</a> 中的说明继续安装。请注意，当执行 <code>dcos_generate_config.ee.sh</code> 时，当前工作目录必须是 <code>$DCOS_INSTALL_DIR</code> 目录。</p>
+<p>如果您从 DC/OS CA 发布的证书更改为自定义外部证书（反之亦然），请注意，您的客户端在升级期间可能需要同时信任这两种证书。</p>
+<h2 id="-9"><a class="content__anchor" href="#-9" aria-hidden="true"><i data-feather="bookmark"></i></a>验证安装</h2>
+<p>要验证是否已通过自定义外部证书正确安装 DC/OS Enterprise 群集，请启动 TLS 连接至 Admin Router，它将提供已配置服务器名称的自定义外部证书。为此，请在要与 <code>external_certificate_servernames</code> 中的一个条目相匹配的请求中指定服务器名称。</p>
+<p>如果您已有已签名外部证书的 CA 根证书，则可执行以下命令：</p>
+<pre><code class="language-bash">openssl s_client -connect &lt;public_ip_master_node_X&gt;:443 -showcerts -servername &lt;one of configured server names&gt; -verifyCAfile &lt;path to the CA file that signed external certificate/external certificate intermediate chain&gt;  | grep -e &quot;s:&quot; -e &quot;i:&quot; -e &quot;return code:&quot; | grep -e &quot;s:&quot; -e &quot;i:&quot; -e &quot;return code:&quot;
+</code></pre>
+<p>输出应如下所示：</p>
+<pre><code>depth=4 C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = Root CA
+verify return:1
+depth=3 C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = Intermediate CA 0
+verify return:1
+depth=2 C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = Intermediate CA 1
+verify return:1
+depth=1 C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = Intermediate CA 2
+verify return:1
+depth=0 C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = Leaf Certificate
+verify return:1
+ 0 s:C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = Leaf Certificate
+   i:C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = Intermediate CA 2
+ 1 s:C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = Intermediate CA 2
+   i:C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = Intermediate CA 1
+ 2 s:C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = Intermediate CA 1
+   i:C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = Intermediate CA 0
+ 3 s:C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = Intermediate CA 0
+   i:C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = Root CA
+    Verify return code: 0 (ok)
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#目录">目录</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-2">支持</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-3">要求</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-4">指定位置</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-5">配置参数参考</a></li><li class="content__sections-item content__sections-item--h2"><a href="#external-certificate-key-path">external_certificate_key_path</a></li><li class="content__sections-item content__sections-item--h2"><a href="#external-certificate-servernames">external_certificate_servernames</a></li><li class="content__sections-item content__sections-item--h2"><a href="#external-certificate-validation-disable">external_certificate_validation_disable</a></li><li class="content__sections-item content__sections-item--h1"><a href="#dcos-enterprise">使用自定义外部证书安装 DC/OS Enterprise</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-6">前提条件</a></li><li class="content__sections-item content__sections-item--h2"><a href="#bootstrap">复制自定义外部证书和私钥到 bootstrap 节点</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-7">将自定义私钥手动复制到所有管理节点</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-8">安装</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-9">验证安装</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

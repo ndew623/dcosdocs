@@ -1,0 +1,527 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>组件 - D2iQ Docs</title><meta name="description" content="了解 DC/OS 组件"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.0/overview/architecture/components">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.0"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/architecture/components">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/architecture/components">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/architecture/components">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.0</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/"><i data-feather="chevron-right"></i>概述</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/what-is-dcos/">什么是 DC/OS</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/architecture/"><i data-feather="chevron-right"></i>架构</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/architecture/node-types/">节点类型</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/architecture/task-types/">任务类型</a></li><li class="active active-on"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/architecture/components/">组件</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/architecture/distributed-process-management/">分布式进程管理</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/architecture/boot-sequence/">启动顺序</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/features/">特性</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/concepts/">概念</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/high-availability/">高可用性</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/telemetry/">遥测</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/feature-maturity/">特性成熟度</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/design/"><i data-feather="chevron-right"></i>设计</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">组件</h1></div><h4 class="content__header-description">了解 DC/OS 组件</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.0/overview/architecture/components/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>DC/OS 由许多开源微服务组件组成，经过精心调整和配置以协同工作。Mesosphere DC/OS Enterprise 包括大部分开源 DC/OS 组件，但还包括多个额外组件、模块和插件。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.0/img/dcos-components-1-13.png" alt="Mesosphere DC/OS Enterprise 组件"></p>
+<p>图 1 - DC/OS 组件</p>
+<p>从表面上看，DC/OS 是处理容器编排、包管理和安全的包容性容器平台。从根本上说，DC/OS 是建立在 <a href="http://mesos.apache.org/">Apache Mesos</a> 基础之上的操作系统，处理群集管理和软件定义网络，同时简化日志记录和度量标准收集。</p>
+<p><a name="cluster-management"><a></p>
+<h1 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>群集管理</h1>
+<p>DC/OS 提供了一种作为单个群集级别系统查看和操作大量单个机器级系统的方法。它隐藏了 Mesos（分布式系统内核）的复杂性，具有更高级别的抽象概念、接口和工具。群集管理是该功能的核心，包括内核、其依赖关系及其用户界面。</p>
+<p><a name="apache-mesos"></a></p>
+<h2 id="apache-mesos"><a class="content__anchor" href="#apache-mesos" aria-hidden="true"><i data-feather="bookmark"></i></a>Apache Mesos</h2>
+<p>Mesos 作为分布式系统内核来管理资源和任务。Mesos 管理节点揭示调度器、执行器和操作界面，以便进行群集管理。Mesos 代理节点管理每个 [DC/OS 代理节点]上的单个执行器、任务和资源。(/dcosdocs/mesosphere/dcos/cn/2.0/overview/concepts/#dcos-agent-node). Mesos Agent Public 是配置用于在 [DC/OS 公共代理节点] 上运行的 Mesos 代理节点(/dcosdocs/mesosphere/dcos/cn/2.0/overview/concepts/#public-agent-node).</p>
+<h3 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>dcos-mesos-master.service</code></li>
+<li><code>dcos-mesos-slave.service</code></li>
+<li><code>dcos-mesos-slave-public.service</code></li>
+</ul>
+<p>阅读以下文档资源，了解有关 Apache Mesos 的更多信息：</p>
+<ul>
+<li><a href="http://mesos.apache.org/">文档</a></li>
+<li><a href="https://github.com/apache/mesos">来源</a></li>
+<li><a href="https://mesos.apache.org/documentation/latest/endpoints/">API 参考</a></li>
+</ul>
+<p><a name="apache-zookeeper"></a></p>
+<h2 id="apache-zookeeper"><a class="content__anchor" href="#apache-zookeeper" aria-hidden="true"><i data-feather="bookmark"></i></a>Apache ZooKeeper</h2>
+<p>ZooKeeper 为配置、同步、名称注册和群集状态存储提供一致且高度可用的分布式键值存储。</p>
+<h3 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<p>不适用 - ZooKeeper 由 Exhibitor 监督。</p>
+<p>阅读以下文档资源，了解有关 Apache Zookeeper 的更多信息：</p>
+<ul>
+<li><a href="https://zookeeper.apache.org/">文档</a></li>
+<li><a href="https://github.com/apache/zookeeper">来源</a></li>
+</ul>
+<p><a name="exhibitor"></a></p>
+<h2 id="exhibitor"><a class="content__anchor" href="#exhibitor" aria-hidden="true"><i data-feather="bookmark"></i></a>Exhibitor</h2>
+<p>Exhibitor 监督 ZooKeeper 并提供管理 Web 界面。</p>
+<h3 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>dcos-exhibitor.service</code></li>
+</ul>
+<p>阅读以下文档资源，了解有关 Exhibitor 的更多信息：</p>
+<ul>
+<li><a href="https://github.com/soabase/exhibitor/wiki">文档</a></li>
+<li><a href="https://github.com/dcos/exhibitor">来源</a></li>
+<li><a href="https://github.com/soabase/exhibitor/wiki/REST-Introduction">API 参考</a></li>
+</ul>
+<p><a name="dcos-installer"></a></p>
+<h2 id="dcos"><a class="content__anchor" href="#dcos" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS 安装工具</h2>
+<p>DC/OS 安装工具（<code>dcos_generate_config.ee.sh</code>）生成安装工件并安装 DC/OS。作为每个节点上安装过程的一部分，DC/OS 下载服务从 bootstrap 机器下载安装工件，DC/OS 设置服务利用 DC/OS 组件包管理器 (Pkgpanda) 安装组件。</p>
+<h3 id="-5"><a class="content__anchor" href="#-5" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>dcos-download.service</code></li>
+<li><code>dcos-setup.service</code></li>
+</ul>
+<p>阅读以下文档资源，了解有关 DC/OS 和安装方法的更多信息：</p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/">文档</a></li>
+<li><a href="https://github.com/dcos/dcos">来源</a></li>
+</ul>
+<p><a name="dcos-backup"></a></p>
+<h2 id="dcos-enterprise"><a class="content__anchor" href="#dcos-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS 备份 <span class="badge badge--shortcode badge--large badge--block badge--enterprise">Enterprise</span></h2>
+<p>DC/OS 备份提供 DC/OS 组件状态的备份和恢复（在 1.10 中仅 Marathon）。</p>
+<h3 id="-6"><a class="content__anchor" href="#-6" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>dcos-backup-master.service</code></li>
+<li><code>dcos-backup-master.socket</code></li>
+</ul>
+<p>阅读以下文档资源，了解有关备份和恢复群集的更多信息：</p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/backup-and-restore/">文档</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/backup-and-restore/backup-restore-api/">API 参考</a></li>
+</ul>
+<p><a name="dcos-gui"></a></p>
+<h2 id="dcos-gui"><a class="content__anchor" href="#dcos-gui" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS GUI</h2>
+<p>DC/OS GUI（Web 界面）是基于浏览器的系统仪表盘和控制中心。</p>
+<h3 id="-7"><a class="content__anchor" href="#-7" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<p>不适用 - GUI 由 Admin Router 服务。</p>
+<p>阅读以下文档资源，了解有关 DC/OS GUI 的更多信息：</p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/gui/">文档</a></li>
+<li><a href="https://github.com/dcos/dcos-ui">来源</a></li>
+</ul>
+<p><a name="dcos-cli"></a></p>
+<h2 id="dcos-cli"><a class="content__anchor" href="#dcos-cli" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS CLI</h2>
+<p>DC/OS CLI 是基于终端的远程客户端。</p>
+<h3 id="-8"><a class="content__anchor" href="#-8" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<p>不适用 - CLI 是用户可下载的二进制文件。</p>
+<p>阅读以下文档资源，了解有关 DC/OS CLI 的更多信息：</p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/cli/">文档</a></li>
+<li><a href="https://github.com/dcos/dcos-cli">来源</a></li>
+</ul>
+<h1 id="-9"><a class="content__anchor" href="#-9" aria-hidden="true"><i data-feather="bookmark"></i></a>容器编排</h1>
+<p>容器编排是连续自动调度、协调和管理容器化流程及其所消耗的资源。DC/OS 包括最常用的基于容器的高级抽象的内置编排：作业和服务。许多使用案例通过这些基本抽象直接处理，但它们还能够为需要更灵活程序化生命周期管理自动化的任务部署定制调度器。</p>
+<p><a name="marathon"></a></p>
+<h2 id="marathon"><a class="content__anchor" href="#marathon" aria-hidden="true"><i data-feather="bookmark"></i></a>Marathon</h2>
+<p>Marathon 编排长期的容器化服务（应用程序和 Pod）。</p>
+<h3 id="-10"><a class="content__anchor" href="#-10" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>dcos-marathon.service</code></li>
+</ul>
+<p>阅读以下文档资源，了解有关 DC/OS Marathon 的更多信息：</p>
+<ul>
+<li><a href="https://mesosphere.github.io/marathon/">网站</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/">文档</a></li>
+<li><a href="https://github.com/mesosphere/marathon">来源</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/marathon-api/">API 参考</a></li>
+</ul>
+<p><a name="dcos-jobs"></a></p>
+<h2 id="dcos-metronome"><a class="content__anchor" href="#dcos-metronome" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS 作业（Metronome）</h2>
+<p>DC/OS 作业（Metronome）编排短期的、计划的或即时的容器化作业。</p>
+<h3 id="-11"><a class="content__anchor" href="#-11" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>dcos-metronome.service</code></li>
+</ul>
+<p>阅读以下文档资源，了解有关 DC/OS Metronome 的更多信息：</p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-jobs/">文档</a></li>
+<li><a href="https://github.com/dcos/metronome">来源</a></li>
+<li><a href="https://dcos.github.io/metronome/docs/generated/api.html">API 参考</a></li>
+</ul>
+<h1 id="-12"><a class="content__anchor" href="#-12" aria-hidden="true"><i data-feather="bookmark"></i></a>容器运行时</h1>
+<p>容器运行时在隔离操作系统级别环境中执行和管理机器一级的进程。DC/OS 使用 <a href="http://mesos.apache.org/documentation/latest/containerizers/">Mesos 的容器化工具抽象</a>支持多个容器运行时。</p>
+<p><a name="universal-container-runtime"></a></p>
+<h2 id="-13"><a class="content__anchor" href="#-13" aria-hidden="true"><i data-feather="bookmark"></i></a>通用容器运行时</h2>
+<p>通用容器运行时（Mesos 容器化工具）是内置于 Mesos 代理节点的逻辑组件，严格来说不是一个单独的进程。它使用可配置的隔离器对 Mesos 任务执行容器化。通用容器运行时支持多种图像格式，包括 Docker 镜像，无需使用 Docker 引擎。</p>
+<h3 id="-14"><a class="content__anchor" href="#-14" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<p>不适用 - 通用容器运行时是 Mesos 代理节点的一部分。</p>
+<p>阅读以下文档资源，了解有关通用容器运行时的更多信息：</p>
+<ul>
+<li><a href="http://mesos.apache.org/documentation/latest/containerizers/">Mesos 容器化工具文档</a></li>
+</ul>
+<p><a name="docker-engine"></a></p>
+<h2 id="docker"><a class="content__anchor" href="#docker" aria-hidden="true"><i data-feather="bookmark"></i></a>Docker 引擎</h2>
+<p>Docker 引擎不由 DC/OS 安装程序安装，而是在每个节点上运行的系统附属。Mesos 代理节点还包括一个名为 Docker 容器化工具的独立逻辑组件，将 Mesos 任务的容器化分配给 Docker 引擎。</p>
+<h3 id="-15"><a class="content__anchor" href="#-15" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>docker.service</code> - Docker 引擎不由 DC/OS 安装工具安装。</li>
+</ul>
+<p>阅读以下文档资源，了解有关 Docker 引擎的更多信息：</p>
+<ul>
+<li><a href="http://mesos.apache.org/documentation/latest/docker-containerizer">Docker 容器化工具文档</a></li>
+<li><a href="https://docs.docker.com/engine/">Docker 引擎文档</a></li>
+<li><a href="https://github.com/docker/docker/">Docker 引擎来源</a></li>
+</ul>
+<p><a name="docker-gc"></a></p>
+<h2 id="docker-gc"><a class="content__anchor" href="#docker-gc" aria-hidden="true"><i data-feather="bookmark"></i></a>Docker GC</h2>
+<p>Docker GC 定期收集 Docker“垃圾”容器和图像。</p>
+<h3 id="-16"><a class="content__anchor" href="#-16" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>dcos-docker-gc.service</code></li>
+<li><code>dcos-docker-gc.timer</code></li>
+</ul>
+<p>阅读以下文档资源，了解有关 Docker GC 的更多信息：</p>
+<ul>
+<li><a href="https://github.com/spotify/docker-gc">来源</a></li>
+</ul>
+<h1 id="-17"><a class="content__anchor" href="#-17" aria-hidden="true"><i data-feather="bookmark"></i></a>日志记录和度量标准</h1>
+<p>没有任何软件能完美运行，尤其是在首次运行时。在整个群集分配任务以及分析和调试这些服务的正常模式都会变得繁琐。DC/OS 包括多个组件，通过聚合、缓存和流式传输日志、度量标准和群集状态元数据来减轻调试分布式系统的辛苦。</p>
+<p><a name="dcos-network-metrics"></a></p>
+<h2 id="dcos-enterprise-2"><a class="content__anchor" href="#dcos-enterprise-2" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS 网络度量标准 <span class="badge badge--shortcode badge--large badge--block badge--enterprise">Enterprise</span></h2>
+<p>DC/OS 网络度量标准揭示了网络相关度量标准。DC/OS 网络度量标准也被称为 DC/OS 网络 API。</p>
+<h3 id="-18"><a class="content__anchor" href="#-18" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>dcos-networking_api.service</code></li>
+</ul>
+<p><a name="dcos-diagnostics"></a></p>
+<h2 id="dcos-2"><a class="content__anchor" href="#dcos-2" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS 诊断</h2>
+<p>DC/OS 诊断汇总并揭示组件的健康状态。DC/OS 诊断也被称为 DC/OS 分布式诊断工具。</p>
+<h3 id="-19"><a class="content__anchor" href="#-19" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>dcos-diagnostics.service</code></li>
+<li><code>dcos-diagnostics.socket</code></li>
+</ul>
+<p>阅读以下文档资源，了解有关 DC/OS 诊断的更多信息：</p>
+<ul>
+<li><a href="https://github.com/dcos/dcos-diagnostics">来源</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/#system-health-http-api-endpoint">API 参考</a></li>
+</ul>
+<p><a name="dcos-log"></a></p>
+<h2 id="dcos-3"><a class="content__anchor" href="#dcos-3" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS 日志</h2>
+<p>DC/OS 日志服务揭示节点、组件和容器（任务）日志。</p>
+<h3 id="-20"><a class="content__anchor" href="#-20" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>dcos-log-master.service</code></li>
+<li><code>dcos-log-master.socket</code></li>
+<li><code>dcos-log-agent.service</code></li>
+<li><code>dcos-log-agent.socket</code></li>
+</ul>
+<p>阅读以下文档资源，了解有关 DC/OS 日志的更多信息：</p>
+<ul>
+<li><a href="https://github.com/dcos/dcos-log">来源</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/logging/logging-reference/">API 参考</a></li>
+</ul>
+<p><a name="logrotate"></a></p>
+<h2 id="-21"><a class="content__anchor" href="#-21" aria-hidden="true"><i data-feather="bookmark"></i></a>日志轮换</h2>
+<p>Logrotate 管理历史日志文件的轮换、压缩和删除。</p>
+<h3 id="-22"><a class="content__anchor" href="#-22" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>dcos-logrotate-master.service</code></li>
+<li><code>dcos-logrotate-master.timer</code></li>
+<li><code>dcos-logrotate-agent.service</code></li>
+<li><code>dcos-logrotate-agent.timer</code></li>
+</ul>
+<p>阅读以下文档资源，了解有关 DC/OS 日志轮换的更多信息：</p>
+<ul>
+<li><a href="https://linux.die.net/man/8/logrotate">文档</a></li>
+<li><a href="https://github.com/logrotate/logrotate">来源</a></li>
+</ul>
+<p><a name="telegraf"></a></p>
+<h2 id="telegraf"><a class="content__anchor" href="#telegraf" aria-hidden="true"><i data-feather="bookmark"></i></a>Telegraf</h2>
+<p>Telegraf 是一个可配置的度量标准管道。它默认收集系统、容器和应用程序度量标准。</p>
+<h3 id="-23"><a class="content__anchor" href="#-23" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>dcos-telegraf.service</code></li>
+<li><code>dcos-telegraf.socket</code></li>
+</ul>
+<p>阅读以下文档资源，了解有关 DC/OS Telegraf 的更多信息：</p>
+<ul>
+<li><a href="https://github.com/dcos/telegraf">来源</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/metrics/metrics-api/">API 参考</a></li>
+</ul>
+<p><a name="dcos-signal"></a></p>
+<h2 id="dcos-4"><a class="content__anchor" href="#dcos-4" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS 信号</h2>
+<p>DC/OS 信号服务报告群集遥测和分析，以帮助改进 DC/OS。管理员可以在安装时间 <a href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/production/deploying-dcos/opt-out/#telemetry">选择退出遥测</a></p>
+<h3 id="-24"><a class="content__anchor" href="#-24" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>dcos-signal.service</code></li>
+<li><code>dcos-signal.timer</code></li>
+</ul>
+<p>阅读以下文档资源，了解有关 DC/OS 信号的更多信息：</p>
+<ul>
+<li><a href="https://github.com/dcos/dcos-signal">来源</a></li>
+</ul>
+<p><a name="dcos-history"></a></p>
+<h2 id="dcos-5"><a class="content__anchor" href="#dcos-5" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS 历史记录</h2>
+<p>DC/OS 历史记录服务缓存并揭示历史系统状态，以促进 GUI 中的群集使用率统计信息。</p>
+<h3 id="-25"><a class="content__anchor" href="#-25" aria-hidden="true"><i data-feather="bookmark"></i></a>已弃用</h3>
+<p>此服务已弃用，将在未来版本中移除。</p>
+<h3 id="-26"><a class="content__anchor" href="#-26" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>dcos-history.service</code></li>
+</ul>
+<p>阅读以下文档资源，了解有关 DC/OS 历史记录的更多信息：</p>
+<ul>
+<li><a href="https://github.com/dcos/dcos/tree/master/packages/dcos-history/extra">来源</a></li>
+<li><a href="https://github.com/dcos/dcos/tree/master/packages/dcos-history/extra#api">API 参考</a></li>
+</ul>
+<h1 id="-27"><a class="content__anchor" href="#-27" aria-hidden="true"><i data-feather="bookmark"></i></a>网络</h1>
+<p>在为计算机提供数字而非名字的世界里，任务是自动调度的，依赖关系以声明方式定义，服务在分布式集合中运行，网络管理也需要从插入电缆提升到配置软件定义网络。为实现这个目标，DC/OS 包含了用于路由、代理、名称解析、虚拟 IP、负载均衡和分布式重配置的一系列网络组件。</p>
+<p><a name="admin-router"></a></p>
+<h2 id="admin-router"><a class="content__anchor" href="#admin-router" aria-hidden="true"><i data-feather="bookmark"></i></a>Admin Router</h2>
+<p>Admin Router 使用 [NGINX] 揭示组件和服务的统一控制平面代理。(https://www.nginx.com/). Admin Router 代理为节点特定的健康、日志、度量标准和包管理内部端点提供代理。</p>
+<h3 id="-28"><a class="content__anchor" href="#-28" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>dcos-adminrouter.service</code></li>
+<li><code>dcos-adminrouter-agent.service</code></li>
+</ul>
+<p>阅读以下文档资源，了解有关 DC/OS Admin Router 的更多信息：</p>
+<ul>
+<li><a href="https://github.com/dcos/adminrouter">来源</a></li>
+</ul>
+<p><a name="mesos-dns"></a></p>
+<h2 id="mesos-dns"><a class="content__anchor" href="#mesos-dns" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesos DNS</h2>
+<p>Mesos DNS 提供群集内基于域名的服务发现。</p>
+<h3 id="-29"><a class="content__anchor" href="#-29" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>dcos-mesos-dns.service</code></li>
+</ul>
+<p>阅读以下文档资源，了解有关 Mesos DNS 的更多信息：</p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/networking/DNS/mesos-dns">文档</a></li>
+<li><a href="https://github.com/mesosphere/mesos-dns">来源</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/networking/DNS/mesos-dns/mesos-dns-api/">API 参考</a></li>
+</ul>
+<p><a name="dns-forwarder"></a></p>
+<h2 id="dcos-6"><a class="content__anchor" href="#dcos-6" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS 网络</h2>
+<p><code>dcos-net</code> 是一个 Erlang 虚拟机，主持以下网络应用程序：</p>
+<ul>
+<li><code>dcos-dns</code>：基于 DNS 的分布式服务发现。</li>
+<li><code>dcos-overlay</code>：适合 UCR 和 Docker 容器的 SDN 解决方案。</li>
+<li><code>dcos-l4lb</code>：分布式 4 层负载均衡器。</li>
+</ul>
+<h3 id="-30"><a class="content__anchor" href="#-30" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>dcos-net.service</code></li>
+<li><code>dcos-net-watchdog.service</code></li>
+</ul>
+<p>阅读以下文档资源，了解有关 DC/OS Net 的更多信息：</p>
+<ul>
+<li><a href="https://github.com/dcos/dcos-net">来源</a></li>
+</ul>
+<p><a name="generate-resolv.conf"></a></p>
+<h2 id="generate-resolvconf"><a class="content__anchor" href="#generate-resolvconf" aria-hidden="true"><i data-feather="bookmark"></i></a><code>Generate resolv.conf</code></h2>
+<p><code>Generate resolv.conf</code> 通过更新 <code>/etc/resolv.conf</code> 以促进 DC/OS 软件定义网络来配置网络名称解析。</p>
+<h3 id="-31"><a class="content__anchor" href="#-31" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>dcos-gen-resolvconf.service</code></li>
+<li><code>dcos-gen-resolvconf.timer</code></li>
+</ul>
+<p>阅读以下文档资源，了解更多有关  的信息:<code>Generate resolv.conf</code>:</p>
+<ul>
+<li><a href="https://github.com/dcos/dcos/blob/master/packages/dcos-net/extra/gen_resolvconf.py">来源</a></li>
+</ul>
+<h1 id="-32"><a class="content__anchor" href="#-32" aria-hidden="true"><i data-feather="bookmark"></i></a>包管理</h1>
+<p>正如机器操作系统需要包管理以安装、升级、配置和移除单个应用程序和服务一样，数据中心操作系统也需要包管理来对分布式服务执行同样的操作。在 DC/OS 中，包管理有两个级别：组件的机器级别以及用户服务的群集级别。</p>
+<p><a name="dcos-package-manager"></a></p>
+<h2 id="dcos-cosmos"><a class="content__anchor" href="#dcos-cosmos" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS 包管理器 (Cosmos)</h2>
+<p>DC/OS 包管理器 (Cosmos) 安装和管理 <a href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/package-registry/">DC/OS 软件包存储库</a> 中的 DC/OS 软件包，如 <a href="https://github.com/mesosphere/universe">Mesosphere Catalog</a>.</p>
+<h3 id="-33"><a class="content__anchor" href="#-33" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>dcos-cosmos.service</code></li>
+</ul>
+<p>阅读以下文档资源，了解有关 DC/OS 包管理器（Cosmos）的更多信息：</p>
+<ul>
+<li><a href="https://github.com/dcos/cosmos">来源</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/package-api/">API 参考</a></li>
+</ul>
+<p><a name="dcos-component-package-manager"></a></p>
+<h2 id="dcos-pkgpanda"><a class="content__anchor" href="#dcos-pkgpanda" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS 组件包管理器 (Pkgpanda)</h2>
+<p>DC/OS 组件包管理器 (Pkgpanda) 安装和管理 DC/OS 组件。</p>
+<h3 id="-34"><a class="content__anchor" href="#-34" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>dcos-pkgpanda-api.service</code></li>
+<li><code>dcos-pkgpanda-api.socket</code></li>
+</ul>
+<p>阅读以下文档资源，了解有关 DC/OS 组件包管理器 (Pkgpanda) 的更多信息：</p>
+<ul>
+<li><a href="https://github.com/dcos/dcos/tree/master/pkgpanda">来源</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/component-management/">API 参考</a></li>
+</ul>
+<h1 id="iam-enterprise"><a class="content__anchor" href="#iam-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>IAM 和安全 <span class="badge badge--shortcode badge--large badge--block badge--enterprise">Enterprise</span></h1>
+<p>DC/OS Enterprise 中的身份和访问管理由用户、用户组和权限构成的内部数据库管理。也可以附加外部身份提供商，以充分利用现有数据库。权限由 Admin Router 的反向代理在边缘执行，也在组件级别执行，以控制对特定操作的访问。SSL 证书等密钥也可以安全地生成、管理、存储并添加到用户服务中。</p>
+<p><a name="dcos-iam"></a></p>
+<h2 id="dcos-bouncer"><a class="content__anchor" href="#dcos-bouncer" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS 身份和访问管理器 (Bouncer)</h2>
+<p>DC/OS 身份和访问管理器 (IAM) 通过管理用户、用户组、服务帐户、权限和身份提供商，控制对 DC/OS 组件和服务的访问。除管理本地用户数据库以外，DC/OS IAM 还可以使用 LDAP、SAML 或 Open ID Connect 来分派给外部身份提供商。对于细粒度的访问控制，其他 DC/OS 组件（如 Mesos 和Marathon）直接与 DC/OS IAM 集成。DC/OS IAM 也被称为 Bouncer。</p>
+<h3 id="-35"><a class="content__anchor" href="#-35" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>dcos-bouncer.service</code></li>
+</ul>
+<p>阅读以下文档资源，了解有关 DC/OS 标识和访问管理器 (Bouncer) 的更多信息：</p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/security/">文档</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/iam-api/">API 参考</a></li>
+</ul>
+<p><a name="cockroachdb"></a></p>
+<h2 id="cockroachdb"><a class="content__anchor" href="#cockroachdb" aria-hidden="true"><i data-feather="bookmark"></i></a>CockroachDB</h2>
+<p>CockroachDB 是一个分布式 SQL 数据库，基于事务性、高度一致的键值对存储。</p>
+<p class="message--note"><strong>注意：</strong>CockroachDB 目前仅由 <a href="#dcos-iam">DC/OS 身份和访问管理器使用</a>.</p>
+<h3 id="-36"><a class="content__anchor" href="#-36" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>dcos-cockroach.service</code></li>
+</ul>
+<p>阅读以下文档资源，了解有关 CockroachDB 的更多信息：</p>
+<ul>
+<li><a href="https://www.cockroachlabs.com/docs/">文档</a></li>
+<li><a href="https://github.com/cockroachdb/cockroach">来源</a></li>
+</ul>
+<p><a name="dcos-certificate-authority"></a></p>
+<h2 id="dcos-7"><a class="content__anchor" href="#dcos-7" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS 证书颁发机构</h2>
+<p>DC/OS 证书颁发机构 (CA) 发布已签署的数字证书，确保通信安全。DC/OS CA 是基于 Cloudflare 的 <a href="https://github.com/cloudflare/cfssl">Cfssl</a>.</p>
+<h3 id="-37"><a class="content__anchor" href="#-37" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>dcos-ca.service</code></li>
+</ul>
+<p>阅读以下文档资源，了解有关 DC/OS 证书颁发机构的更多信息：</p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/tls-ssl/">文档</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/tls-ssl/ca-api/">API 参考</a></li>
+</ul>
+<p><a name="dcos-secrets"></a></p>
+<h2 id="dcos-8"><a class="content__anchor" href="#dcos-8" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS 密钥</h2>
+<p>DC/OS 密钥提供一个安全的 API，用于存储并从 Vault （一个密钥存储库）检索密钥。</p>
+<h3 id="-38"><a class="content__anchor" href="#-38" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>dcos-secrets.service</code></li>
+</ul>
+<p>阅读以下文档资源，了解有关 DC/OS 密钥的更多信息：</p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/secrets/">文档</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/secrets/secrets-api/">API 参考</a></li>
+</ul>
+<p><a name="vault"></a></p>
+<h2 id="vault"><a class="content__anchor" href="#vault" aria-hidden="true"><i data-feather="bookmark"></i></a>Vault</h2>
+<p>Vault 是一个用于安全地管理密钥的工具。密钥是指您希望控制其访问权限的任何内容，例如 API 密钥、密码、证书等。Vault 提供与任何密钥的统一界面，同时提供严密的访问控制并记录详细的审核日志。</p>
+<h3 id="-39"><a class="content__anchor" href="#-39" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>dcos-vault.service</code></li>
+</ul>
+<p>阅读以下文档资源，了解有关 Vault 的更多信息：</p>
+<ul>
+<li><a href="https://www.vaultproject.io/docs/">文档</a></li>
+<li><a href="https://github.com/mesosphere/vault/">来源</a></li>
+<li><a href="https://www.vaultproject.io/api/">API 参考</a></li>
+</ul>
+<h1 id="-40"><a class="content__anchor" href="#-40" aria-hidden="true"><i data-feather="bookmark"></i></a>存储</h1>
+<p>DC/OS 提供了许多不同方法来调配磁盘空间和卷到任务。其中一种方法是外部持久卷，由其自己的组件管理。</p>
+<p><a name="rex-ray"></a></p>
+<h2 id="rex-ray"><a class="content__anchor" href="#rex-ray" aria-hidden="true"><i data-feather="bookmark"></i></a>REX-Ray</h2>
+<p>REX-Ray 编排调配、附加和安装外部持久卷。</p>
+<h3 id="-41"><a class="content__anchor" href="#-41" aria-hidden="true"><i data-feather="bookmark"></i></a>系统服务</h3>
+<ul>
+<li><code>dcos-rexray.service</code></li>
+</ul>
+<p>阅读以下文档资源，了解有关 REX 射线的更多信息：</p>
+<ul>
+<li><a href="http://rexray.readthedocs.io/">文档</a></li>
+<li><a href="https://github.com/codedellemc/rexray">来源</a></li>
+</ul>
+<h1 id="-42"><a class="content__anchor" href="#-42" aria-hidden="true"><i data-feather="bookmark"></i></a>套接字和计时器</h1>
+<p>多个组件被配置为按需使用 <a href="https://www.freedesktop.org/software/systemd/man/systemd.socket.html">systemd 套接字</a>，使得可以在请求出现时将其启动，而不是持续运行和不必要地消耗资源。虽然这些套接字是单独的 <a href="https://www.freedesktop.org/software/systemd/man/systemd.unit.html">systemd 单元</a>，但它们不被视为是单独组件。</p>
+<p>多个组件被配置为使用 <a href="https://www.freedesktop.org/software/systemd/man/systemd.timer.html">systemd 计时器</a>，使得它们可以定期执行或重新启动。定期执行避免了持续执行和不必要的资源消耗。定期重新启动使得可以从下游依赖关系（如基于时间的 DNS 缓存到期）中提取新配置。虽然这些计时器是单独的 <a href="https://www.freedesktop.org/software/systemd/man/systemd.unit.html">systemd 单元</a>，但它们不被视为是单独组件。</p>
+<h1 id="-43"><a class="content__anchor" href="#-43" aria-hidden="true"><i data-feather="bookmark"></i></a>组件安装</h1>
+<p>DC/OS 组件由 <a href="https://github.com/dcos/dcos/tree/master/pkgpanda">DC/OS 组件包管理器 (Pkgpanda)</a>（用于 <code>systemd</code> 单元的包管理器）安装、升级和管理。</p>
+<p>要查看 DC/OS 安装工具管理的软件包的完整列表，请参阅 <a href="https://github.com/dcos/dcos/tree/master/packages">DC/OS 源存储库的软件包目录</a>.</p>
+<h1 id="systemd"><a class="content__anchor" href="#systemd" aria-hidden="true"><i data-feather="bookmark"></i></a><code>Systemd</code> 服务</h1>
+<p>大多数 DC/OS 组件在 DC/OS 节点上作为 <a href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/concepts/#systemd-service">systemd 服务</a>运行。</p>
+<p>要查看 <code>systemd</code> 在任何特定节点上运行的组件的列表，请列出 <code>/etc/systemd/system/dcos.target.wants/</code> 目录的内容或执行 <code>systemctl | grep dcos-</code> 以查看其当前状态。</p>
+<h2 id="-44"><a class="content__anchor" href="#-44" aria-hidden="true"><i data-feather="bookmark"></i></a>管理节点</h2>
+<pre><code class="language-bash">ls /etc/systemd/system/dcos.target.wants/ -1
+dcos-adminrouter.service
+dcos-backup-master.service
+dcos-backup-master.socket
+dcos-bouncer.service
+dcos-ca.service
+dcos-checks-api.service
+dcos-checks-api.socket
+dcos-checks-poststart.service
+dcos-checks-poststart.timer
+dcos-cluster-linker.service
+dcos-cluster-linker.socket
+dcos-cockroachdb-config-change.service
+dcos-cockroachdb-config-change.timer
+dcos-cockroach.service
+dcos-cosmos.service
+dcos-diagnostics-mesos-state.service
+dcos-diagnostics-mesos-state.timer
+dcos-diagnostics.service
+dcos-diagnostics.socket
+dcos-exhibitor.service
+dcos-fluent-bit.service
+dcos-gen-resolvconf.service
+dcos-gen-resolvconf.timer
+dcos-history.service
+dcos-iam-ldap-sync.service
+dcos-iam-ldap-sync.timer
+dcos-licensing.service
+dcos-licensing.socket
+dcos-log-master.service
+dcos-log-master.socket
+dcos-logrotate-master.service
+dcos-logrotate-master.timer
+dcos-marathon.service
+dcos-mesos-dns.service
+dcos-mesos-master.service
+dcos-metronome.service
+dcos-net.service
+dcos-net-watchdog.service
+dcos-pkgpanda-api.service
+dcos-registry.service
+dcos-secrets.service
+dcos-secrets.socket
+dcos-signal.service
+dcos-signal.timer
+dcos-telegraf.service
+dcos-telegraf.socket
+dcos-ui-update-service.service
+dcos-ui-update-service.socket
+dcos-vault.service
+</code></pre>
+<h2 id="-45"><a class="content__anchor" href="#-45" aria-hidden="true"><i data-feather="bookmark"></i></a>专用代理节点</h2>
+<pre><code class="language-bash">ls /etc/systemd/system/dcos.target.wants/ -1
+dcos-adminrouter-agent.service
+dcos-checks-api.service
+dcos-checks-api.socket
+dcos-checks-poststart.service
+dcos-checks-poststart.timer
+dcos-diagnostics.service
+dcos-diagnostics.socket
+dcos-docker-gc.service
+dcos-docker-gc.timer
+dcos-fluent-bit.service
+dcos-gen-resolvconf.service
+dcos-gen-resolvconf.timer
+dcos-log-agent.service
+dcos-log-agent.socket
+dcos-logrotate-agent.service
+dcos-logrotate-agent.timer
+dcos-mesos-slave.service
+dcos-net.service
+dcos-net-watchdog.service
+dcos-pkgpanda-api.service
+dcos-rexray.service
+dcos-telegraf.service
+dcos-telegraf.socket
+</code></pre>
+<h2 id="-46"><a class="content__anchor" href="#-46" aria-hidden="true"><i data-feather="bookmark"></i></a>公共代理节点</h2>
+<pre><code class="language-bash">ls /etc/systemd/system/dcos.target.wants/ -1
+dcos-adminrouter-agent.service
+dcos-checks-api.service
+dcos-checks-api.socket
+dcos-checks-poststart.service
+dcos-checks-poststart.timer
+dcos-diagnostics.service
+dcos-diagnostics.socket
+dcos-docker-gc.service
+dcos-docker-gc.timer
+dcos-fluent-bit.service
+dcos-gen-resolvconf.service
+dcos-gen-resolvconf.timer
+dcos-log-agent.service
+dcos-log-agent.socket
+dcos-logrotate-agent.service
+dcos-logrotate-agent.timer
+dcos-mesos-slave-public.service
+dcos-net.service
+dcos-net-watchdog.service
+dcos-pkgpanda-api.service
+dcos-rexray.service
+dcos-telegraf.service
+dcos-telegraf.socket
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#群集管理">群集管理</a></li><li class="content__sections-item content__sections-item--h2"><a href="#apache-mesos">Apache Mesos</a></li><li class="content__sections-item content__sections-item--h2"><a href="#apache-zookeeper">Apache ZooKeeper</a></li><li class="content__sections-item content__sections-item--h2"><a href="#exhibitor">Exhibitor</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos">DC/OS 安装工具</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-enterprise">DC/OS 备份 Enterprise</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-gui">DC/OS GUI</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-cli">DC/OS CLI</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-9">容器编排</a></li><li class="content__sections-item content__sections-item--h2"><a href="#marathon">Marathon</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-metronome">DC/OS 作业（Metronome）</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-12">容器运行时</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-13">通用容器运行时</a></li><li class="content__sections-item content__sections-item--h2"><a href="#docker">Docker 引擎</a></li><li class="content__sections-item content__sections-item--h2"><a href="#docker-gc">Docker GC</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-17">日志记录和度量标准</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-enterprise-2">DC/OS 网络度量标准 Enterprise</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-2">DC/OS 诊断</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-3">DC/OS 日志</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-21">日志轮换</a></li><li class="content__sections-item content__sections-item--h2"><a href="#telegraf">Telegraf</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-4">DC/OS 信号</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-5">DC/OS 历史记录</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-27">网络</a></li><li class="content__sections-item content__sections-item--h2"><a href="#admin-router">Admin Router</a></li><li class="content__sections-item content__sections-item--h2"><a href="#mesos-dns">Mesos DNS</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-6">DC/OS 网络</a></li><li class="content__sections-item content__sections-item--h2"><a href="#generate-resolvconf">Generate resolv.conf</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-32">包管理</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-cosmos">DC/OS 包管理器 (Cosmos)</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-pkgpanda">DC/OS 组件包管理器 (Pkgpanda)</a></li><li class="content__sections-item content__sections-item--h1"><a href="#iam-enterprise">IAM 和安全 Enterprise</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-bouncer">DC/OS 身份和访问管理器 (Bouncer)</a></li><li class="content__sections-item content__sections-item--h2"><a href="#cockroachdb">CockroachDB</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-7">DC/OS 证书颁发机构</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-8">DC/OS 密钥</a></li><li class="content__sections-item content__sections-item--h2"><a href="#vault">Vault</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-40">存储</a></li><li class="content__sections-item content__sections-item--h2"><a href="#rex-ray">REX-Ray</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-42">套接字和计时器</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-43">组件安装</a></li><li class="content__sections-item content__sections-item--h1"><a href="#systemd">Systemd 服务</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-44">管理节点</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-45">专用代理节点</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-46">公共代理节点</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

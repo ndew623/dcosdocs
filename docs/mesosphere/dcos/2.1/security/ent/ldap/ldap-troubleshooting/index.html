@@ -1,0 +1,306 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Troubleshooting LDAP errors - D2iQ Docs</title><meta name="description" content="Troubleshooting common authentication and configuration issues for your LDAP directory"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/ldap/ldap-troubleshooting">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/security/ent/ldap/ldap-troubleshooting">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/security/ent/ldap/ldap-troubleshooting">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/security/ent/ldap/ldap-troubleshooting">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/security/ent/ldap/ldap-troubleshooting">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/security/"><i data-feather="chevron-right"></i>Security</a></li><ul><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/"><i data-feather="chevron-right"></i>DC/OS Enterprise Security</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/users-groups/"><i data-feather="chevron-right"></i>Managing users and groups</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/gui-permissions/"><i data-feather="chevron-right"></i>Granting Access to the UI</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/perms-management/">Permissions Management</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/perms-reference/">Permissions Reference</a></li><li class="active"><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/ldap/"><i data-feather="chevron-right"></i>LDAP authentication</a></li><ul><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/ldap/ldap-conn/">Connection</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/ldap/ldap-auth/">Specifying Authentication and Parameters</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/ldap/ldap-verify/">Verification</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/ldap/ldap-sync/">Synchronization</a></li><li class="active active-on"><a class="d3" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/ldap/ldap-troubleshooting/">Troubleshooting LDAP errors</a></li></ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/secrets/"><i data-feather="chevron-right"></i>Secrets</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/sso/"><i data-feather="chevron-right"></i>Identity provider-based authentication</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/service-auth/"><i data-feather="chevron-right"></i>Service Authentication</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/restrict-service-access/">Restricting Access to DC/OS Service Groups</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/hardening/">Hardening</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/iam-api/">Identity and Access Management API</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/security/ent/tls-ssl/"><i data-feather="chevron-right"></i>Securing Communication with TLS</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/security/oss/"><i data-feather="chevron-right"></i>DC/OS Open Source Security</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Troubleshooting LDAP errors</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">Troubleshooting common authentication and configuration issues for your LDAP directory</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.1/security/ent/ldap/ldap-troubleshooting/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>The Lightweight Directory Access Protocol (LDAP) provides a lightweight client-server protocol for accessing directory services. The protocol provides a standards-based method for defining objects and their attributes for X.500-based directory services. LDAP runs over TCP/IP or other connection-oriented transfer services.</p>
+<h1 id="common-issues-when-using-microsoft-active-directory"><a class="content__anchor" href="#common-issues-when-using-microsoft-active-directory" aria-hidden="true"><i data-feather="bookmark"></i></a>Common issues when using Microsoft Active Directory</h1>
+<p>Microsoft Windows Server Active Directory is the LDAP-based identity store for Windows forests and domains. Active Directory stores details about users, groups, computers, roles, and organizations in LDAP-compliant objects and attributes and returns the information you search for using LDAP queries in the same format as other LDAP services such as OpenLDAP.</p>
+<p>Because integrating Active Directory authentication into a multi-platform environment can present challenges that you are less likely to encounter when you use ApacheDS, OpenLDAP, or other LDAP services, the most common issues with LDAP authentication and configuration involve communication with the Active Directory domain controllers or replication across Active Directory domains.</p>
+<h1 id="cannot-connect-to-the-directory-backend"><a class="content__anchor" href="#cannot-connect-to-the-directory-backend" aria-hidden="true"><i data-feather="bookmark"></i></a>Cannot connect to the directory backend</h1>
+<p>If you attempt to retrieve information from Active Directory but the connection fails, you might see the following error message:</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.1/img/ldap-cannot-open-connection-error.png" alt="Cannot connect to the directory"></p>
+<p>Figure 1. Connection error message: timeout</p>
+<p>If you see an error message indicating the connection to the backend directory failed, the problem is most often caused by one of the following issues:</p>
+<ul>
+<li>
+<p>A required port is closed to all traffic or protected by firewall rules.</p>
+<p>Specific port requirements depend on the version of Active Directory you are using and the type of communication traffic. For example, most LDAP traffic requires port 389 for TCP or UDP connections to handle directory and replication services, user and computer authentication, and group policy distribution.</p>
+<p>To handle the same type of traffic over a secure communications channel, LDAP requires port 636 for TCP connections to deliver encrypted messages over a secure socket layer (SSL).</p>
+</li>
+<li>
+<p>DNS cannot resolve the name or IP address for the Active Directory domain controller.</p>
+</li>
+</ul>
+<p>If you encounter this error, check whether the computer where you saw the error has the correct IP address for the network interface and the domain controller. You can check the current IP address and network settings for domain connections using the DHCP server role or manually in the network adapter settings. For example, you can retrieve the current network settings for the computer using <code>ipconfig</code> or a similar operating system command to display network configuration details.</p>
+<p>If there is a problem with the port number, host name, or host IP address, edit the values in the LDAP directory settings to specify the correct port, host name, or host IP address.</p>
+<p>To edit the LDAP directory settings:</p>
+<ol>
+<li>
+<p>Log in to the DC/OS web-based console.</p>
+</li>
+<li>
+<p>Click <strong>Settings</strong>, then click <strong>LDAP Directory</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Edit Directory</strong>.</p>
+</li>
+<li>
+<p>Modify the host name, host IP address, or LDAP port.</p>
+</li>
+<li>
+<p>Click <strong>Save Configuration</strong>.</p>
+</li>
+</ol>
+<h1 id="transport-layer-security-ssltls-connection-errors"><a class="content__anchor" href="#transport-layer-security-ssltls-connection-errors" aria-hidden="true"><i data-feather="bookmark"></i></a>Transport layer security (SSL/TLS) connection errors</h1>
+<p>If you attempt to connect to Active Directory and the connection fails because there is a problem communicating with the server using transport layer security (SSL/TLS), you might see the following error message:</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.1/img/ldap-tsl-ssl-socket-error.png" alt="SSL connection error"></p>
+<p>Figure 2. Connection error: socket SSL wrapping error</p>
+<p>For example, you might see this error if the LDAP server is not configured to accept SSL/TLS connections or if the certificate used to secure the channel is invalid.</p>
+<p>If you have a problem connecting to Active Directory when using secure socket layer (SSL) connections, you should:</p>
+<ul>
+<li>Check that LDAP over SSL (LDAPS) is enabled for the Active Directory LDAP server role and that you have imported a valid CA certificate to allow SSL/TLS connections.</li>
+<li>Check how you have configured the appropriate corresponding LDAP SSL/TLS setting for the directory in the DC/OS cluster.</li>
+</ul>
+<p>If the Active Directory LDAP server role is not configured to allow SSL/TLS connections, you should verify that the DC/OS cluster is configured to allow unencrypted communication.</p>
+<p>To change how DC/OS handles SSL/TLS connection errors:</p>
+<ol>
+<li>
+<p>Log in to the DC/OS web-based console.</p>
+</li>
+<li>
+<p>Click <strong>Settings</strong>, then click <strong>LDAP Directory</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Edit Directory</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Select SSL/TLS setting</strong>, select another option.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.1/img/ldap-ssl-options.png" alt="SSL/TLS setting option"></p>
+<p>Figure 3. SSL/TLS setting options</p>
+<p>For example, if you have configured the Select SSL/TLS setting to <strong>Use SSL/TLS for all connections</strong>, you might want to change the setting to <strong>Attempt StartTLS, proceed unencrypted if it fails</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Save Configuration</strong>.</p>
+</li>
+</ol>
+<h1 id="ssltls-is-enforced-but-the-connection-fails"><a class="content__anchor" href="#ssltls-is-enforced-but-the-connection-fails" aria-hidden="true"><i data-feather="bookmark"></i></a>SSL/TLS is enforced but the connection fails</h1>
+<p>If you have configured connections to the LDAP server to abort if unable to use transport layer security (SSL/TLS), you might see the following error message:</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.1/img/ldap-enforced-TLS-error.png" alt="Aborted SSL/TLS connections"></p>
+<p>Figure 4. Connection error message: TLS error</p>
+<p>To change how DC/OS handles SSL/TLS connection errors:</p>
+<ol>
+<li>
+<p>Log in to the DC/OS web-based console.</p>
+</li>
+<li>
+<p>Click <strong>Settings</strong>, then click <strong>LDAP Directory</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Edit Directory</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Select SSL/TLS setting</strong>, select another option.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.1/img/ldap-ssl-options.png" alt="SSL/TLS setting option"></p>
+<p>Figure 5. SSL/TLS setting option</p>
+<p>For example, if you want to continue to connect to the LDAP server when secure communication is not available, you can set the Select SSL/TLS setting to <strong>Attempt StartTLS, proceed unencrypted if it fails</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Save Configuration</strong>.</p>
+</li>
+</ol>
+<h1 id="service-account-credential-issues"><a class="content__anchor" href="#service-account-credential-issues" aria-hidden="true"><i data-feather="bookmark"></i></a>Service account credential issues</h1>
+<p>If the connection to the LDAP server is successful, but the authentication credentials for the service account are incorrect, you might see the following error message:</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.1/img/ldap-lookup-DN-error.png" alt="LDAP authentication error"></p>
+<p>Figure 6. LDAP authentication error</p>
+<p>To address this issue:</p>
+<ol>
+<li>
+<p>Log in to the DC/OS web-based console.</p>
+</li>
+<li>
+<p>Click <strong>Settings</strong>, then click <strong>LDAP Directory</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Edit Directory</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Authentication</strong>.</p>
+</li>
+<li>
+<p>Correct the <strong>Lookup DN</strong> and the <strong>Lookup Password</strong>.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.1/img/ldap-lookup-dn.png" alt="Modify authentication information"></p>
+<p>Figure 7. Modify authentication information</p>
+</li>
+<li>
+<p>Click <strong>Save Configuration</strong>.</p>
+</li>
+</ol>
+<h1 id="cannot-find-user"><a class="content__anchor" href="#cannot-find-user" aria-hidden="true"><i data-feather="bookmark"></i></a>Cannot find user</h1>
+<p>If the connection to the LDAP server is successful and the service account credentials are correct, but the user is not found, you might see the following error message:</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.1/img/ldap-user-error.png" alt="LDAP user not found"></p>
+<p>Figure 8. LDAP user not found</p>
+<p>In most cases, you will see this error if a specified user or service account is not within the scope of the user search base you have defined or if there is a problem with the distinguished name (DN) or distinguished name (DN) template used to bind to the LDAP server. If you see this error, you should verify the following settings:</p>
+<ul>
+<li>The type of bind operation and authentication method you are using to connect to the LDAP server.</li>
+<li>The scope defined for the user search base.</li>
+<li>The user distinguished name (DN) template you are using.</li>
+<li>The user search filter template you are using.</li>
+</ul>
+<h2 id="specifying-a-user-distinguished-name-dn-template"><a class="content__anchor" href="#specifying-a-user-distinguished-name-dn-template" aria-hidden="true"><i data-feather="bookmark"></i></a>Specifying a user distinguished name (DN) template</h2>
+<p>If you are using <strong>simple</strong> authentication to bind to the LDAP server, be sure that you have specified a valid User DN Template. In most cases, the distinguished name template includes the runtime variable placeholder <code>cn=%(username)s</code> that is replaced in lookup requests with an actual account name value.</p>
+<h2 id="specifying-a-user-search-base-and-filter-template"><a class="content__anchor" href="#specifying-a-user-search-base-and-filter-template" aria-hidden="true"><i data-feather="bookmark"></i></a>Specifying a user search base and filter template</h2>
+<p>If you are using <strong>search</strong> authentication to bind to the LDAP server, be sure that you have specified a valid User Search Base and User Search Filter Template.</p>
+<p>The user search base should be broad enough to include the appropriate containers, organizational units, and domains you from which you want to return results.</p>
+<p>When defining a search filter template, you should keep in mind the following:</p>
+<ul>
+<li>The <code>%(username)s</code> runtime variable is a placeholder that is replaced in lookup requests with an actual account name value.</li>
+<li>For OpenLDAP deployments, account lookup requests typically use the UID attribute so the search template placeholder is typically defined using <code>(uid=%(username)s))</code>.</li>
+<li>For Active Directory deployments, account lookup requests typically use the <code>sAMAccountName</code> attribute so the search template placeholder is typically defined using <code>(sAMAccountName=%(username)s))</code>. In most cases, the sAMAccountName attribute is the account name users enter to log on to computers in the Windows domain.</li>
+</ul>
+<h2 id="verifying-active-directory-user-account-names"><a class="content__anchor" href="#verifying-active-directory-user-account-names" aria-hidden="true"><i data-feather="bookmark"></i></a>Verifying Active Directory user account names</h2>
+<p>If you are using the LDAP server to access Active Directory accounts for Windows users, you can find the sAMAccountName attribute and other account information using Active Directory Users and Computers or Windows PowerShell.</p>
+<p>To look up the account information using Active Directory Users and Computers:</p>
+<ol>
+<li>
+<p>Log on to a Windows computer using an account with administrative privileges.</p>
+</li>
+<li>
+<p>Open the Control Panel for <strong>Administrative Tools</strong>.</p>
+</li>
+<li>
+<p>Open <strong>Active Directory Users and Computers</strong>.</p>
+</li>
+<li>
+<p>Select the user account.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.1/img/ldap-aduc.png" alt="Selecting a user in Active Directory Users and Computers"></p>
+<p>Figure 9. Active Directory selections</p>
+</li>
+<li>
+<p>Right-click, then select <strong>Properties</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>Account</strong> tab and check the <strong>User login name</strong>.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.1/img/ldap-aduc-account-properties.png" alt="User login account property"></p>
+<p>Figure 10. User login account</p>
+</li>
+</ol>
+<h2 id="checking-for-alternative-account-name-formats"><a class="content__anchor" href="#checking-for-alternative-account-name-formats" aria-hidden="true"><i data-feather="bookmark"></i></a>Checking for alternative account name formats</h2>
+<p>In some cases, you might want to look up account information using an alternative to the <code>sAMAccountName</code>. For example, you might want to look for account information by the <code>userPrincipalName</code> that defines unique accounts in a domain with the <code>user@domain.com</code> format.</p>
+<p>If you want to use any other valid account name format such as <code>user@domain.com</code>, you can find the valid alternatives to replace the <code>sAMAccountName</code> by using Active Directory Users and Computers or by running commands using Windows PowerShell.</p>
+<p>To look up Active Directory user information using Window PowerShell:</p>
+<ol>
+<li>
+<p>Open the Windows PowerShell administrator console.</p>
+</li>
+<li>
+<p>Import the Active Directory module by using Import menu option or the Import-Module cmdlet. For example, in the PowerShell console you can run the <code>import-module</code> cmdlet like this: PS C:\Users\Administrator&gt; import-module activedirectory</p>
+</li>
+<li>
+<p>Run the Get-ADUser cmdlet to retrieve the Active Directory properties for a specified user. For example: PS C:\Users\Administrator&gt; Get-ADUser rmcdonald -properties *</p>
+</li>
+</ol>
+<p>This cmdlet returns all of the properties for the user with the <code>SAMAccountName</code> rmcdonald.</p>
+<pre><code>AccountExpirationDate : 
+accountExpires : 9223372036854775807
+AccountLockoutTime : 
+AccountNotDelegated : False
+AllowReversiblePasswordEncryption : False
+BadLogonCount : 1
+badPasswordTime : 131896358930929294
+badPwdCount : 1 
+CannotChangePassword : False
+CanonicalName : example.com/Users/Ronald McDonald
+Certificates : {} 
+City : 
+CN : Ronald McDonald 
+codePage : 0 
+Company : 
+Country : 
+countryCode : 0 
+Created : 12/17/2018 2:27:43 PM 
+createTimeStamp : 12/17/2018 2:27:43 PM 
+Deleted : 
+Department : 
+Description : 
+DisplayName : Ronald McDonald 
+DistinguishedName : CN=Ronald McDonald,CN=Users,DC=example,DC=com
+Division : 
+DoesNotRequirePreAuth : False 
+dSCorePropagationData : {12/31/1600 4:00:00 PM}
+EmailAddress : 
+EmployeeID : 
+EmployeeNumber : 
+Enabled : True 
+Fax : 
+GivenName : Ronald
+HomeDirectory : 
+HomedirRequired : False 
+HomeDrive : 
+HomePage : 
+HomePhone : 
+Initials : 
+instanceType : 4
+isDeleted : 
+LastBadPasswordAttempt : 12/18/2018 11:44:53 AM
+LastKnownParent : 
+lastLogoff : 0 
+lastLogon : 0 
+LastLogonDate : 12/17/2018 2:36:30 PM
+lastLogonTimestamp : 131895597903404620
+LockedOut : False
+logonCount : 0 
+LogonWorkstations : 
+Manager : 
+MemberOf : {} 
+MNSLogonAccount : False
+MobilePhone : 
+Modified : 12/17/2018 2:36:30 PM 
+modifyTimeStamp : 12/17/2018 2:36:30 PM
+msDS-User-Account-Control-Computed : 0 
+Name : Ronald McDonald 
+nTSecurityDescriptor : System.DirectoryServices.ActiveDirectorySecurity
+ObjectCategory : CN=Person,CN=Schema,CN=Configuration,DC=example,DC=com 
+ObjectClass : user 
+ObjectGUID : 8a372fe3-b879-4a58-aabd-6001327b2548
+objectSid : S-1-5-21-1469461492-1576009741-989685995-1104
+Office : 
+OfficePhone : 
+Organization : 
+OtherName : 
+PasswordExpired : False 
+PasswordLastSet : 12/17/2018 2:27:43 PM
+PasswordNeverExpires : True
+PasswordNotRequired : False 
+POBox : 
+PostalCode : 
+PrimaryGroup : CN=Domain Users,CN=Users,DC=example,DC=com
+primaryGroupID : 513 
+ProfilePath : 
+ProtectedFromAccidentalDeletion : False
+pwdLastSet : 131895592635431368 
+SamAccountName : rmcdonald 
+sAMAccountType : 805306368 
+ScriptPath : 
+sDRightsEffective : 15 
+ServicePrincipalNames : {} 
+SID : S-1-5-21-1469461492-1576009741-989685995-1104
+SIDHistory : {} 
+SmartcardLogonRequired : False 
+sn : McDonald 
+State : 
+StreetAddress : 
+Surname : McDonald 
+Title : 
+TrustedForDelegation : False
+TrustedToAuthForDelegation : False
+UseDESKeyOnly : False
+userAccountControl : 66048 
+userCertificate : {} 
+UserPrincipalName : rmcdonald@example.com
+uSNChanged : 16787 
+uSNCreated : 16781 
+whenChanged : 12/17/2018 2:36:30 PM 
+whenCreated : 12/17/2018 2:27:43 PM
+</code></pre>
+<h1 id="user-with-incorrect-credentials"><a class="content__anchor" href="#user-with-incorrect-credentials" aria-hidden="true"><i data-feather="bookmark"></i></a>User with incorrect credentials</h1>
+<p>If the connection to the LDAP server is successful and the specified user can be found inside the scope of the user search base but the credentials are wrong, you might see the following error message:</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.1/img/ldap-wrong-user-credentials.png" alt="Invalid user credentials"></p>
+<p>Figure 11. Invalid user credentials</p>
+<p>If you see this error, check for the following potential issues that can cause the user credentials to be invalid:</p>
+<ul>
+<li>Verify that the account is not locked or disabled.</li>
+<li>Verify that the account password has not expired.</li>
+<li>Check whether there are login hours or other access control restrictions preventing the user from being authenticated.</li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#common-issues-when-using-microsoft-active-directory">Common issues when using Microsoft Active Directory</a></li><li class="content__sections-item content__sections-item--h1"><a href="#cannot-connect-to-the-directory-backend">Cannot connect to the directory backend</a></li><li class="content__sections-item content__sections-item--h1"><a href="#transport-layer-security-ssltls-connection-errors">Transport layer security (SSL/TLS) connection errors</a></li><li class="content__sections-item content__sections-item--h1"><a href="#ssltls-is-enforced-but-the-connection-fails">SSL/TLS is enforced but the connection fails</a></li><li class="content__sections-item content__sections-item--h1"><a href="#service-account-credential-issues">Service account credential issues</a></li><li class="content__sections-item content__sections-item--h1"><a href="#cannot-find-user">Cannot find user</a></li><li class="content__sections-item content__sections-item--h2"><a href="#specifying-a-user-distinguished-name-dn-template">Specifying a user distinguished name (DN) template</a></li><li class="content__sections-item content__sections-item--h2"><a href="#specifying-a-user-search-base-and-filter-template">Specifying a user search base and filter template</a></li><li class="content__sections-item content__sections-item--h2"><a href="#verifying-active-directory-user-account-names">Verifying Active Directory user account names</a></li><li class="content__sections-item content__sections-item--h2"><a href="#checking-for-alternative-account-name-formats">Checking for alternative account name formats</a></li><li class="content__sections-item content__sections-item--h1"><a href="#user-with-incorrect-credentials">User with incorrect credentials</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

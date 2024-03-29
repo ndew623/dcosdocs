@@ -1,0 +1,200 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Service Ports - D2iQ Docs</title><meta name="description" content="Using Virtual IPs to manage service ports"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/service-ports">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.0"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/service-ports">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/service-ports">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/service-ports">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/deploying-services/service-ports">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.0</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/install/">Installing Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/marathon-parameters/">Marathon Configuration Reference</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/creating-services/"><i data-feather="chevron-right"></i>Creating Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/task-handling/"><i data-feather="chevron-right"></i>Task Handling</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/config-universe-service/">Configuring Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/fault-domain-awareness/">Fault Domain Awareness and Capacity Extension</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/service-groups/">Granting Access to Services and Groups</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/marathon-constraints/">Marathon Placement Constraints</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/monitor-services/">Monitoring Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/scale-service/">Scaling a Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/service-endpoints/">Service Endpoints</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/service-ports/">Service Ports</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/update-user-service/">Updating a User-Created Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/private-docker-registry/">Using a Private Docker Registry</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/deployments/">Deployments</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/expose-service/">Exposing a Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/uninstall/">Uninstalling Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/package-api/">Package Management API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/marathon-on-marathon/"><i data-feather="chevron-right"></i>Using Custom Marathon</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/marathon-api/">Marathon API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/containerizers/"><i data-feather="chevron-right"></i>Using Containerizers</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/pods/"><i data-feather="chevron-right"></i>Pods</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/multi-tenancy-primitives/">Multi-Tenancy Primitives</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/gpu/">Using GPUs</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/faq/">Frequently Asked Questions</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Service Ports</h1></div><h4 class="content__header-description">Using Virtual IPs to manage service ports</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.0/deploying-services/service-ports/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>You can use <a href="/dcosdocs/mesosphere/dcos/2.0/networking/load-balancing-vips/virtual-ip-addresses/">virtual addresses (VIPs)</a> to make port management easier. VIPs simplify inter-app communication and implement a reliable service-oriented architecture. VIPs map traffic from a single virtual address to multiple IP addresses and ports.</p>
+<h1 id="definitions"><a class="content__anchor" href="#definitions" aria-hidden="true"><i data-feather="bookmark"></i></a>Definitions</h1>
+<p><strong>containerPort</strong>: A container port specifies a port within a container. This is only necessary as part of a port mapping when using <code>BRIDGE</code> or <code>USER</code> mode networking with a Docker® container.</p>
+<p><strong>hostPort</strong>: A host port specifies a port on the host to bind to. When used with <code>BRIDGE</code> or <code>USER</code> mode networking, you specify a port mapping from a host port to a container port. In <code>HOST</code> networking, requested ports are host ports by default. Note that only host ports are made available to a task through environment variables.</p>
+<p><strong>BRIDGE networking</strong>: used by Docker applications that specify <code>BRIDGE</code> mode networking. In this mode, container ports are mapped to host ports. In this mode, applications bind to the specified ports within the container and Docker networking binds to the specified ports on the host.</p>
+<p><strong>USER networking</strong>: used by Docker applications that specify <code>USER</code> mode networking. In this mode, container ports are mapped to host ports. In this mode, applications bind to the specified ports within the container and Docker networking binds to the specified ports on the host. <code>USER</code> network mode is expected to be useful when integrating with “user-defined” Docker networks. In the Mesos world such networks are often made accessible through CNI® plugins used in concert with an Apache® Mesos® CNI network isolator.</p>
+<p><strong>HOST networking</strong>: used by non-Docker Marathon™ applications and Docker applications that use <code>HOST</code> mode networking. In this mode, applications bind directly to one or more ports on the host machine.</p>
+<p><strong>portMapping</strong>: In Docker <code>BRIDGE</code> mode, a port mapping is necessary for every port that should be reachable from outside of your container. A port mapping is a tuple containing a host port, container port, service port and protocol. Multiple port mappings may be specified for a Marathon application; an unspecified <code>hostPort</code> defaults to <code>0</code> (meaning that Marathon will assign one at random). In Docker <code>USER</code> mode the semantic for <code>hostPort</code> slightly changes: <code>hostPort</code> is not required for <code>USER</code> mode and if left unspecified Marathon WILL NOT automatically allocate one at random. This allows containers to be deployed on <code>USER</code> networks that include <code>containerPort</code> and discovery information, but do NOT expose those ports on the host network (and by implication would not consume host port resources).</p>
+<p><strong>ports</strong>: The ports array is used to define ports that should be considered as part of a resource offer in <code>HOST</code> mode. It is necessary only if no port mappings are specified. Only one of ports and portDefinitions should be defined for an application.</p>
+<p><strong>portDefinitions</strong>: The portDefinitions array is used to define ports that should be considered as part of a resource offer. It is necessary only to define this array if you are using <code>HOST</code> networking and no port mappings are specified. This array is meant to replace the ports array, and makes it possible to specify a port name, protocol and labels. Only one of ports and portDefinitions should be defined for an application.</p>
+<p><strong>protocol</strong>: Protocol specifies the internet protocol to use for a port (e.g. <code>tcp</code>, <code>udp</code> or <code>udp,tcp</code> for both). This is only necessary as part of a port mapping when using <code>BRIDGE</code> or <code>USER</code> mode networking with a Docker container.</p>
+<p><strong>requirePorts</strong>: requirePorts is a property that specifies whether Marathon should specifically look for specified ports in the resource offers it receives. This ensures that these ports are free and available to be bound to on the Mesos agent. This does not apply to <code>BRIDGE</code> or <code>USER</code> mode networking.</p>
+<p><strong>servicePort</strong>: When you create a new application in Marathon (either through the REST API or the front end), you may assign one or more service ports to it. You can specify all valid port numbers as service ports or you can use 0 to indicate that Marathon should allocate free service ports to the app automatically. If you do choose your own service port, you have to ensure yourself that it is unique across all of your applications.</p>
+<h1 id="random-port-assignment"><a class="content__anchor" href="#random-port-assignment" aria-hidden="true"><i data-feather="bookmark"></i></a>Random Port Assignment</h1>
+<p>Using the value <code>0</code> for any port settings indicates to Marathon that you would like a random port assignment. However, if <code>containerPort</code> is set to <code>0</code> within a <code>portMapping</code>, it is set to the same value as <code>hostPort</code>.</p>
+<h1 id="environment-variables"><a class="content__anchor" href="#environment-variables" aria-hidden="true"><i data-feather="bookmark"></i></a>Environment Variables</h1>
+<p>Each <strong>host port</strong> value is exposed to the running application instance via environment variables <code>$PORT0</code>, <code>$PORT1</code>, etc. Each Marathon application is given a single port by default, so <code>$PORT0</code> is always available. These variables are available inside a Docker container being run by Marathon too. Additionally, if the port is named <code>NAME</code>, it will also be accessible via the environment variable, <code>$PORT_NAME</code>.</p>
+<p>When using <code>BRIDGE</code> or <code>USER</code> mode networking, be sure to bind your application to the <code>containerPort</code>s you have specified in your <code>portMapping</code>s. However, if you have set <code>containerPort</code> to 0 then this will be the same as <code>hostPort</code> and you can use the <code>$PORT</code> environment variables.</p>
+<h1 id="example-configuration"><a class="content__anchor" href="#example-configuration" aria-hidden="true"><i data-feather="bookmark"></i></a>Example Configuration</h1>
+<h2 id="host-mode"><a class="content__anchor" href="#host-mode" aria-hidden="true"><i data-feather="bookmark"></i></a>Host Mode</h2>
+<p>Host mode networking is the default networking mode for Docker containers and the only networking mode for non-Docker applications. Note that it not necessary to <code>EXPOSE</code> ports in your Dockerfile.</p>
+<h3 id="enabling-host-mode"><a class="content__anchor" href="#enabling-host-mode" aria-hidden="true"><i data-feather="bookmark"></i></a>Enabling Host Mode</h3>
+<p>Host mode is enabled by default for containers. If you wish to be explicit, you can also specify it manually through the <code>network</code> property:</p>
+<pre><code class="language-json">  &quot;container&quot;: {
+    &quot;type&quot;: &quot;DOCKER&quot;,
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;my-image:1.0&quot;,
+      &quot;network&quot;: &quot;HOST&quot;
+    }
+  },
+</code></pre>
+<p>For non-Docker applications, you don’t need to specify anything.</p>
+<h3 id="specifying-ports"><a class="content__anchor" href="#specifying-ports" aria-hidden="true"><i data-feather="bookmark"></i></a>Specifying Ports</h3>
+<p>You can specify the ports that are available through the <code>ports</code> array:</p>
+<pre><code class="language-json">    &quot;ports&quot;: [
+        0, 0, 0
+    ],
+</code></pre>
+<p>Or through the <code>portDefinitions</code> array:</p>
+<pre><code class="language-json">    &quot;portDefinitions&quot;: [
+      {&quot;port&quot;: 0}, {&quot;port&quot;: 0}, {&quot;port&quot;: 0}
+    ],
+</code></pre>
+<p>In this example, we specify three randomly assigned host ports which would then be available to our command using the environment variables <code>$PORT0</code>, <code>$PORT1</code> and <code>$PORT2</code>. Marathon will also randomly assign three service posts in addition to these three host ports.</p>
+<p>You can also use specific service ports:</p>
+<pre><code class="language-json">    &quot;ports&quot;: [
+        2001, 2002, 3000
+    ],
+</code></pre>
+<p>Or:</p>
+<pre><code class="language-json">    &quot;portDefinitions&quot;: [
+        {&quot;port&quot;: 2001}, {&quot;port&quot;: 2002}, {&quot;port&quot;: 3000}
+    ],
+</code></pre>
+<p>In this case, host ports <code>$PORT0</code>, <code>$PORT1</code> and <code>$PORT3</code> remain randomly assigned. However, the three service ports for this application are now <code>2001</code>, <code>2002</code> and <code>3000</code>. As with the previous example, it is necessary to use a service discovery solution such as HAProxy® to proxy requests from service ports to host ports. If you want the applications service ports to be equal to its host ports, you can set <code>requirePorts</code> to <code>true</code> (<code>requirePorts</code> is <code>false</code> by default). This will tell Marathon to only schedule this application on agents which have these ports available:</p>
+<pre><code class="language-json">    &quot;ports&quot;: [
+        2001, 2002, 3000
+    ],
+    &quot;requirePorts&quot; : true
+</code></pre>
+<p>The service and host ports (including the environment variables <code>$PORT0</code>, <code>$PORT1</code>, and <code>$PORT2</code>), are both now <code>2001</code>, <code>2002</code> and <code>3000</code>. This property is useful if you do not use a service discovery solution to proxy requests from service ports to host ports.</p>
+<p>Defining the <code>portDefinitions</code> array allows you to specify a protocol, a name and labels for each port. When starting
+new tasks, Marathon will pass this metadata to Mesos. Mesos will expose this information in the <code>discovery</code> field of the
+task. Custom network discovery solutions can consume this field.</p>
+<p>Example port definition requesting a dynamic <code>tcp</code> port named <code>http</code> with the label <code>VIP_0</code> set to <code>10.0.0.1:80</code>:</p>
+<pre><code class="language-json">    &quot;portDefinitions&quot;: [
+        {
+            &quot;port&quot;: 0,
+            &quot;protocol&quot;: &quot;tcp&quot;,
+            &quot;name&quot;: &quot;http&quot;,
+            &quot;labels&quot;: {&quot;VIP_0&quot;: &quot;10.0.0.1:80&quot;}
+        }
+    ],
+</code></pre>
+<p>The <code>port</code> field is mandatory. The <code>protocol</code>, <code>name</code> and <code>labels</code> fields are optional. A port definition in which only
+the <code>port</code> field is set is equivalent to an element of the <code>ports</code> array.</p>
+<p>Note that only the <code>ports</code> array and the <code>portDefinitions</code> array should not be specified together, unless all their
+elements are equivalent.</p>
+<h3 id="referencing-ports"><a class="content__anchor" href="#referencing-ports" aria-hidden="true"><i data-feather="bookmark"></i></a>Referencing Ports</h3>
+<p>You can reference host ports in the Dockerfile for our fictitious app as follows:</p>
+<pre><code class="language-sh">CMD ./my-app --http-port=$PORT0 --https-port=$PORT1 --monitoring-port=$PORT2
+</code></pre>
+<p>Alternatively, if you aren’t using Docker or had specified a <code>cmd</code> in your Marathon application definition, it works in the same way:</p>
+<pre><code class="language-json">    &quot;cmd&quot;: &quot;./my-app --http-port=$PORT0 --https-port=$PORT1 --monitoring-port=$PORT2&quot;
+</code></pre>
+<h2 id="bridge-mode"><a class="content__anchor" href="#bridge-mode" aria-hidden="true"><i data-feather="bookmark"></i></a>Bridge Mode</h2>
+<p>Bridge mode networking allows you to map host ports to ports inside your container and is only applicable to Docker containers. It is particularly useful if you are using a container image with fixed port assignments that you can’t modify. Note that it not necessary to <code>EXPOSE</code> ports in your Dockerfile.</p>
+<h3 id="enabling-bridge-mode"><a class="content__anchor" href="#enabling-bridge-mode" aria-hidden="true"><i data-feather="bookmark"></i></a>Enabling Bridge Mode</h3>
+<p>You need to specify bridge mode through the <code>network</code> property:</p>
+<pre><code class="language-json">  &quot;container&quot;: {
+    &quot;type&quot;: &quot;DOCKER&quot;,
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;my-image:1.0&quot;,
+      &quot;network&quot;: &quot;BRIDGE&quot;
+    }
+  },
+</code></pre>
+<h3 id="enabling-user-mode"><a class="content__anchor" href="#enabling-user-mode" aria-hidden="true"><i data-feather="bookmark"></i></a>Enabling User Mode</h3>
+<p>You need to specify user mode through the <code>network</code> property:</p>
+<pre><code class="language-json">  &quot;container&quot;: {
+    &quot;type&quot;: &quot;DOCKER&quot;,
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;my-image:1.0&quot;,
+      &quot;network&quot;: &quot;USER&quot;
+    }
+  },
+  &quot;ipAddress&quot;: {
+    &quot;networkName&quot;: &quot;someUserNetwork&quot;
+  }
+</code></pre>
+<h3 id="specifying-ports-2"><a class="content__anchor" href="#specifying-ports-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Specifying Ports</h3>
+<p>Port mappings are similar to passing -p into the Docker command line and specify a relationship between a port on the host machine and a port inside the container. In this case, the <code>portMappings</code> array is used <strong>instead</strong> of the <code>ports</code> or <code>portDefinitions</code> array used in host mode.</p>
+<p>Port mappings are specified inside the <code>portMappings</code> object for a <code>container</code>:</p>
+<pre><code class="language-json">&quot;networks&quot;: [
+      { &quot;mode&quot;: &quot;container/bridge&quot; }
+],
+&quot;container&quot;: {
+  &quot;type&quot;: &quot;DOCKER&quot;,
+  &quot;docker&quot;: {
+    &quot;image&quot;: &quot;my-image:1.0&quot;,
+  },
+  &quot;portMappings&quot;: [
+    { &quot;containerPort&quot;: 0, &quot;hostPort&quot;: 0 },
+    { &quot;containerPort&quot;: 0, &quot;hostPort&quot;: 0 },
+    { &quot;containerPort&quot;: 0, &quot;hostPort&quot;: 0 }
+  ]
+}
+</code></pre>
+<p>In this example, we specify 3 mappings. A value of 0 will ask Marathon to randomly assign a value for <code>hostPort</code>. In this case, setting <code>containerPort</code> to 0 will cause it to have the same value as <code>hostPort</code>. These values are available inside the container as <code>$PORT0</code>, <code>$PORT1</code> and <code>$PORT2</code> respectively.</p>
+<p>Alternatively, if our process running in the container had fixed ports, we might do something like the following:</p>
+<pre><code class="language-json">&quot;networks&quot;: [
+      { &quot;mode&quot;: &quot;container/bridge&quot; }
+],
+&quot;container&quot;: {
+  &quot;type&quot;: &quot;DOCKER&quot;,
+  &quot;docker&quot;: {
+    &quot;image&quot;: &quot;my-image:1.0&quot;
+  },
+  &quot;portMappings&quot;: [
+    { &quot;containerPort&quot;: 80, &quot;hostPort&quot;: 0 },
+    { &quot;containerPort&quot;: 443, &quot;hostPort&quot;: 0 },
+    { &quot;containerPort&quot;: 4000, &quot;hostPort&quot;: 0 }
+  ]
+}
+</code></pre>
+<p>In this case, Marathon will randomly allocate host ports and map these to ports <code>80</code>, <code>443</code> and <code>4000</code> respectively. It’s important to note that the <code>$PORT</code> variables refer to the host ports. In this case, <code>$PORT0</code> will be set to the value of <code>hostPort</code> for the first mapping and so on.</p>
+<h4 id="specifying-protocol"><a class="content__anchor" href="#specifying-protocol" aria-hidden="true"><i data-feather="bookmark"></i></a>Specifying Protocol</h4>
+<p>You can also specify the protocol for these port mappings. The default is <code>tcp</code>:</p>
+<pre><code class="language-json">&quot;networks&quot;: [
+  { &quot;mode&quot;: &quot;container/bridge&quot; }
+],
+&quot;container&quot;: {
+  &quot;type&quot;: &quot;DOCKER&quot;,
+  &quot;docker&quot;: {
+    &quot;image&quot;: &quot;my-image:1.0&quot;
+  },
+  &quot;portMappings&quot;: [
+    { &quot;containerPort&quot;: 80, &quot;hostPort&quot;: 0, &quot;protocol&quot;: &quot;tcp&quot; },
+    { &quot;containerPort&quot;: 443, &quot;hostPort&quot;: 0, &quot;protocol&quot;: &quot;tcp&quot; },
+    { &quot;containerPort&quot;: 4000, &quot;hostPort&quot;: 0, &quot;protocol&quot;: &quot;udp&quot; }
+  ]
+}
+</code></pre>
+<h4 id="specifying-service-ports"><a class="content__anchor" href="#specifying-service-ports" aria-hidden="true"><i data-feather="bookmark"></i></a>Specifying Service Ports</h4>
+<p>By default, Marathon will create service ports for each of these ports and assign them random values. Service ports are used by service discovery solutions and it is often desirable to set these to well-known values. You can do this by setting a <code>servicePort</code> for each mapping:</p>
+<pre><code class="language-json">&quot;networks&quot;: [
+  { &quot;mode&quot;: &quot;container/bridge&quot; }
+],
+&quot;container&quot;: {
+  &quot;type&quot;: &quot;DOCKER&quot;,
+  &quot;docker&quot;: {
+    &quot;image&quot;: &quot;my-image:1.0&quot;
+  },
+  &quot;portMappings&quot;: [
+    { &quot;containerPort&quot;: 80, &quot;hostPort&quot;: 0, &quot;protocol&quot;: &quot;tcp&quot;, &quot;servicePort&quot;: 2000 },
+    { &quot;containerPort&quot;: 443, &quot;hostPort&quot;: 0, &quot;protocol&quot;: &quot;tcp&quot;, &quot;servicePort&quot;: 2001 },
+    { &quot;containerPort&quot;: 4000, &quot;hostPort&quot;: 0, &quot;protocol&quot;: &quot;udp&quot;, &quot;servicePort&quot;: 3000 }
+  ]
+}
+</code></pre>
+<p>In this example, the host ports <code>$PORT0</code>, <code>$PORT1</code> and <code>$PORT3</code> remain randomly assigned. However, the service ports for this application are now <code>2001</code>, <code>2002</code> and <code>3000</code>. An external proxy, like HAProxy, should be configured to route from the service ports to the host ports.</p>
+<h3 id="referencing-ports-2"><a class="content__anchor" href="#referencing-ports-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Referencing Ports</h3>
+<p>If you set <code>containerPort</code> to 0, then you should specify ports in the Dockerfile for our fictitious app as follows:</p>
+<pre><code class="language-sh">CMD ./my-app --http-port=$PORT0 --https-port=$PORT1 --monitoring-port=$PORT2
+</code></pre>
+<p>However, if you’ve specified <code>containerPort</code> values, you simply use the same values in the Dockerfile:</p>
+<pre><code class="language-sh">CMD ./my-app --http-port=80 --https-port=443 --monitoring-port=4000
+</code></pre>
+<p>Alternatively, you can specify a <code>cmd</code> in your Marathon application definition, it works in the same way as before:</p>
+<pre><code class="language-json">    &quot;cmd&quot;: &quot;./my-app --http-port=$PORT0 --https-port=$PORT1 --monitoring-port=$PORT2&quot;
+</code></pre>
+<p>Or, if you’ve used fixed values:</p>
+<pre><code class="language-json">    &quot;cmd&quot;: &quot;./my-app --http-port=80 --https-port=443 --monitoring-port=4000&quot;
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#definitions">Definitions</a></li><li class="content__sections-item content__sections-item--h1"><a href="#random-port-assignment">Random Port Assignment</a></li><li class="content__sections-item content__sections-item--h1"><a href="#environment-variables">Environment Variables</a></li><li class="content__sections-item content__sections-item--h1"><a href="#example-configuration">Example Configuration</a></li><li class="content__sections-item content__sections-item--h2"><a href="#host-mode">Host Mode</a></li><li class="content__sections-item content__sections-item--h2"><a href="#bridge-mode">Bridge Mode</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

@@ -1,0 +1,1108 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Pod Examples - D2iQ Docs</title><meta name="description" content="Understanding field definitions and examples of pods"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/pods/examples">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/pods/examples">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/pods/examples">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/pods/examples">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/deploying-services/pods/examples">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/install/">Installing Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/marathon-parameters/">Marathon Configuration Reference</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/creating-services/"><i data-feather="chevron-right"></i>Creating Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/task-handling/"><i data-feather="chevron-right"></i>Task Handling</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/config-universe-service/">Configuring Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/fault-domain-awareness/">Fault Domain Awareness and Capacity Extension</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/service-groups/">Granting Access to Services and Groups</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/marathon-constraints/">Marathon Placement Constraints</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/monitor-services/">Monitoring Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/scale-service/">Scaling a Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/service-endpoints/">Service Endpoints</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/service-ports/">Service Ports</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/update-user-service/">Updating a User-Created Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/private-docker-registry/">Using a Private Docker Registry</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/deployments/">Deployments</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/expose-service/">Exposing a Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/uninstall/">Uninstalling Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/package-api/">Package Management API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/marathon-on-marathon/"><i data-feather="chevron-right"></i>Using Custom Marathon</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/marathon-api/">Marathon API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/containerizers/"><i data-feather="chevron-right"></i>Using Containerizers</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/pods/"><i data-feather="chevron-right"></i>Pods</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/pods/quickstart/">Quick Start</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/pods/technical-overview/">Technical Overview</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/pods/using-pods/">Using Pods</a></li><li class="active active-on"><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/pods/examples/">Pod Examples</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/multi-tenancy-primitives/">Multi-Tenancy Primitives</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/gpu/">Using GPUs</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/faq/">Frequently Asked Questions</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Pod Examples</h1></div><h4 class="content__header-description">Understanding field definitions and examples of pods</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.1/deploying-services/pods/examples/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>This topic provides field definitions and usage examples for pods. For more details on field definitions, see <a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/marathon-parameters/">Marathon Configuration Reference</a>.</p>
+<h1 id="annotated-simple-pod-definition"><a class="content__anchor" href="#annotated-simple-pod-definition" aria-hidden="true"><i data-feather="bookmark"></i></a>Annotated simple pod definition</h1>
+<p>This pod, named <code>simple-pod</code> has a single container, <code>simpletask1</code>. The container pulls down an image (<code>python:3.5.2-alpine</code>) and runs a command.</p>
+<pre><code class="language-json">{
+   &quot;id&quot;:&quot;/simple-pod&quot;,
+   &quot;containers&quot;:[
+      {
+         &quot;name&quot;:&quot;simpletask1&quot;,
+         &quot;exec&quot;:{
+            &quot;command&quot;:{
+               &quot;shell&quot;:&quot;env &amp;&amp; sleep 10000&quot;
+            }
+         },
+         &quot;resources&quot;:{
+            &quot;cpus&quot;:0.1,
+            &quot;mem&quot;:32
+         },
+         &quot;image&quot;:{
+            &quot;kind&quot;:&quot;DOCKER&quot;,
+            &quot;id&quot;:&quot;python:3.5.2-alpine&quot;
+         }
+      }
+   ],
+   &quot;networks&quot;:[
+      {
+         &quot;mode&quot;:&quot;host&quot;
+      }
+   ]
+}
+</code></pre>
+<h2 id="basic-pod-fields"><a class="content__anchor" href="#basic-pod-fields" aria-hidden="true"><i data-feather="bookmark"></i></a>Basic pod fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code> (required)</td>
+<td>string</td>
+<td>Unique ID for the pod.</td>
+</tr>
+<tr>
+<td><code>containers</code> (required)</td>
+<td>array</td>
+<td>See <a href="#basic-pod-container-fields">Basic pod container fields</a>.</td>
+</tr>
+<tr>
+<td><code>volumes</code></td>
+<td>array</td>
+<td>All volumes associated with the pod.</td>
+</tr>
+<tr>
+<td><code>volumes.name</code></td>
+<td>string</td>
+<td>Name of shared volume.</td>
+</tr>
+<tr>
+<td><code>volumes.host</code></td>
+<td>string</td>
+<td>Absolute path of the file or directory on the agent, or else the relative path of the directory in the executor’s sandbox. Useful for mapping directories that exist on the agent or within the executor sandbox.</td>
+</tr>
+<tr>
+<td><code>networks</code></td>
+<td>array</td>
+<td>Accepts the following parameters: <code>mode</code>, <code>name</code>, and <code>labels</code>.</td>
+</tr>
+<tr>
+<td><code>networks.mode</code></td>
+<td>string</td>
+<td>Network mode: <code>host</code> or <code>container</code>. <code>host</code> uses the network namespace of the host. <code>container</code> uses virtual networking, and a virtual network name must be specified.</td>
+</tr>
+<tr>
+<td><code>networks:name</code></td>
+<td>string</td>
+<td>Required for <code>container</code> network mode.</td>
+</tr>
+<tr>
+<td><code>networks.labels</code></td>
+<td>object</td>
+<td>Key/value pairs (i.e., for passing metadata to Mesos modules).</td>
+</tr>
+<tr>
+<td><code>scaling</code></td>
+<td>array</td>
+<td>Accepts the following parameters: <code>kind</code>, <code>instances</code>, and <code>maxInstances</code>.</td>
+</tr>
+<tr>
+<td><code>scaling.kind</code></td>
+<td>string</td>
+<td>Type of scaling. Only <code>fixed</code> is currently supported.</td>
+</tr>
+<tr>
+<td><code>scaling.instances</code></td>
+<td>integer</td>
+<td>Initial number of pod instances (default: 1).</td>
+</tr>
+<tr>
+<td><code>scaling.maxInstances</code></td>
+<td>integer</td>
+<td>Maximum number of instances of this pod.</td>
+</tr>
+</tbody>
+</table>
+<p><a name="basic-pod-container-fields"></a></p>
+<h2 id="basic-pod-container-fields"><a class="content__anchor" href="#basic-pod-container-fields" aria-hidden="true"><i data-feather="bookmark"></i></a>Basic pod container fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>containers</code> (required)</td>
+<td>array</td>
+<td>Container definitions for all containers that belong to a pod.</td>
+</tr>
+<tr>
+<td><code>containers.name</code></td>
+<td>string</td>
+<td>Unique name for the container.</td>
+</tr>
+<tr>
+<td><code>containers.exec</code></td>
+<td>object</td>
+<td>Accepts the <code>command</code> parameter.</td>
+</tr>
+<tr>
+<td><code>containers.exec.command</code></td>
+<td>object</td>
+<td>Command executed by Mesos.</td>
+</tr>
+<tr>
+<td><code>containers.exec.command.shell</code></td>
+<td>string</td>
+<td>Command to execute. If using container entrypoint, use an empty string.</td>
+</tr>
+<tr>
+<td><code>containers.exec.overrideEntrypoint</code></td>
+<td>boolean</td>
+<td>If <code>command</code> is supplied, this is implicitly set to <code>true</code>. To use the default entrypoint, set to <code>false</code>.</td>
+</tr>
+<tr>
+<td><code>containers:resources</code> (required)</td>
+<td>object</td>
+<td>Container specifications for resources.</td>
+</tr>
+<tr>
+<td><code>containers.resources.cpus</code></td>
+<td>number</td>
+<td>CPU shares (default: 1.0).</td>
+</tr>
+<tr>
+<td><code>containers.resources.mem</code></td>
+<td>number</td>
+<td>Memory resources in MiB (default: 128).</td>
+</tr>
+<tr>
+<td><code>containers.resources.disk</code></td>
+<td>double</td>
+<td>Disk resources in MiB (default: 128).</td>
+</tr>
+<tr>
+<td><code>containers.resources.gpus</code></td>
+<td>integer</td>
+<td>GPU resources (default: 0).</td>
+</tr>
+<tr>
+<td><code>containers:resourceLimits</code> (required)</td>
+<td>object</td>
+<td>Container specifications for CPU and memory limits.</td>
+</tr>
+<tr>
+<td><code>containers.resourceLimits.cpus</code></td>
+<td>number or string</td>
+<td>CPU resource limit (default: value of <code>resources.cpus</code>), can specify as “unlimited”.</td>
+</tr>
+<tr>
+<td><code>containers.resourceLimits.mem</code></td>
+<td>number or string</td>
+<td>Memory resources in MiB (default: value of <code>resources.mem</code>), can specify as “unlimited”.</td>
+</tr>
+<tr>
+<td><code>containers.image</code></td>
+<td>object</td>
+<td>If <code>image</code> is omitted, the Mesos containerizer is used.</td>
+</tr>
+<tr>
+<td><code>containers.image.kind</code></td>
+<td>string</td>
+<td>Container image format (<code>DOCKER</code> or <code>APPC</code>).</td>
+</tr>
+<tr>
+<td><code>containers.image.id</code></td>
+<td>string</td>
+<td>Container image tag.</td>
+</tr>
+<tr>
+<td><code>containers.image.forcePull</code></td>
+<td>boolean</td>
+<td>Set to true to always pull image (default: false).</td>
+</tr>
+<tr>
+<td><code>containers.volumeMounts</code></td>
+<td>array</td>
+<td>Accepts the following parameters: <code>name</code> and <code>mountPath</code>.</td>
+</tr>
+<tr>
+<td><code>containers.volumeMounts.name</code></td>
+<td>string</td>
+<td>Name of the shared volume (must be a valid volume defined at the pod layer).</td>
+</tr>
+<tr>
+<td><code>containers.volumeMounts.mountPath</code></td>
+<td>string</td>
+<td>Container path to mount volume.</td>
+</tr>
+<tr>
+<td><code>containers.endpoints</code></td>
+<td>array</td>
+<td>Array of objects.</td>
+</tr>
+<tr>
+<td><code>containers.endpoints.name</code></td>
+<td>string</td>
+<td>Unique name of port.</td>
+</tr>
+<tr>
+<td><code>containers.endpoints.containerPort</code></td>
+<td>number</td>
+<td>The container point the container task is listening on. Required if network mode is <code>container</code>.</td>
+</tr>
+<tr>
+<td><code>containers.endpoints.hostPort</code></td>
+<td>number</td>
+<td>Mapped port on host. If set to <code>0</code>, Marathon dynamically allocates the port.</td>
+</tr>
+<tr>
+<td><code>containers.endpoints.protocol</code></td>
+<td>array</td>
+<td>Protocol of port (<code>tcp</code> or <code>http</code>).</td>
+</tr>
+<tr>
+<td><code>containers.endpoints.labels</code></td>
+<td>object</td>
+<td>Metadata as key/value pairs.</td>
+</tr>
+</tbody>
+</table>
+<p><a name="multi-pod"></a></p>
+<h1 id="annotated-multi-pod-with-all-parameters"><a class="content__anchor" href="#annotated-multi-pod-with-all-parameters" aria-hidden="true"><i data-feather="bookmark"></i></a>Annotated multi-pod with all parameters</h1>
+<p>The example below shows a pod, <code>test-pod</code>, with three containers, <code>healthtask1</code>, <code>healthtask2</code>, and <code>clienttask</code>. The pod makes uses shared volumes and the native DC/OS virtual networking solution.</p>
+<pre><code class="language-json">{
+   &quot;id&quot;:&quot;/test-pod&quot;,
+   &quot;labels&quot;:{
+      &quot;pod_label&quot;:&quot;pod&quot;
+   },
+   &quot;environment&quot;:{
+      &quot;POD_ENV&quot;:&quot;pod&quot;
+   },
+   &quot;containers&quot;:[
+      {
+         &quot;name&quot;:&quot;healthtask1&quot;,
+         &quot;exec&quot;:{
+            &quot;command&quot;:{
+               &quot;shell&quot;:&quot;./read-write-server.py 8080 mount1/test-file.txt&quot;
+            }
+         },
+         &quot;resources&quot;:{
+            &quot;cpus&quot;:0.1,
+            &quot;mem&quot;:32,
+            &quot;disk&quot;:32,
+            &quot;gpus&quot;:0
+         },
+         &quot;resourceLimits&quot;:{
+            &quot;cpus&quot;: &quot;unlimited&quot;,
+            &quot;mem&quot;: 1024
+         },
+         &quot;endpoints&quot;:[
+            {
+               &quot;name&quot;:&quot;httpendpoint&quot;,
+               &quot;containerPort&quot;:8080,
+               &quot;hostPort&quot;:0,
+               &quot;protocol&quot;:[
+                  &quot;tcp&quot;
+               ],
+               &quot;labels&quot;:{
+                  &quot;ep1_label&quot;:&quot;ep1&quot;
+               }
+            }
+         ],
+         &quot;image&quot;:{
+            &quot;kind&quot;:&quot;DOCKER&quot;,
+            &quot;id&quot;:&quot;python:3.5.2-alpine&quot;
+         },
+         &quot;environment&quot;:{
+            &quot;C1_ENV&quot;:&quot;c1&quot;
+         },
+         &quot;healthCheck&quot;:{
+            &quot;http&quot;:{
+               &quot;endpoint&quot;:&quot;httpendpoint&quot;,
+               &quot;path&quot;:&quot;/ping&quot;,
+               &quot;scheme&quot;:&quot;HTTP&quot;
+            },
+            &quot;gracePeriodSeconds&quot;:30,
+            &quot;intervalSeconds&quot;:5,
+            &quot;maxConsecutiveFailures&quot;:3,
+            &quot;timeoutSeconds&quot;:3,
+            &quot;delaySeconds&quot;:2
+         },
+         &quot;volumeMounts&quot;:[
+            {
+               &quot;name&quot;:&quot;sharedvolume&quot;,
+               &quot;mountPath&quot;:&quot;mount1&quot;
+            }
+         ],
+         &quot;artifacts&quot;:[
+            {
+               &quot;uri&quot;:&quot;https://s3-us-west-2.amazonaws.com/mesos-soak-cluster/read-write-server.py&quot;,
+               &quot;extract&quot;:false,
+               &quot;executable&quot;:true,
+               &quot;cache&quot;:true,
+               &quot;destPath&quot;:&quot;read-write-server.py&quot;
+            }
+         ],
+         &quot;labels&quot;:{
+            &quot;c1_label&quot;:&quot;c1&quot;
+         }
+      },
+      {
+         &quot;name&quot;:&quot;healthtask2&quot;,
+         &quot;exec&quot;:{
+            &quot;command&quot;:{
+               &quot;shell&quot;:&quot;./read-write-server.py 8081 mount2/test-file.txt&quot;
+            }
+         },
+         &quot;resources&quot;:{
+            &quot;cpus&quot;:0.1,
+            &quot;mem&quot;:32,
+            &quot;disk&quot;:32,
+            &quot;gpus&quot;:0
+         },
+         &quot;endpoints&quot;:[
+            {
+               &quot;name&quot;:&quot;httpendpoint2&quot;,
+               &quot;containerPort&quot;:8081,
+               &quot;hostPort&quot;:0,
+               &quot;protocol&quot;:[
+                  &quot;tcp&quot;
+               ],
+               &quot;labels&quot;:{
+                  &quot;ep2_label&quot;:&quot;ep2&quot;
+               }
+            }
+         ],
+         &quot;image&quot;:{
+            &quot;kind&quot;:&quot;DOCKER&quot;,
+            &quot;id&quot;:&quot;python:3.5.2-alpine&quot;
+         },
+         &quot;environment&quot;:{
+            &quot;C2_ENV&quot;:&quot;c2&quot;
+         },
+         &quot;healthCheck&quot;:{
+            &quot;http&quot;:{
+               &quot;endpoint&quot;:&quot;httpendpoint2&quot;,
+               &quot;path&quot;:&quot;/ping&quot;,
+               &quot;scheme&quot;:&quot;HTTP&quot;
+            },
+            &quot;gracePeriodSeconds&quot;:30,
+            &quot;intervalSeconds&quot;:5,
+            &quot;maxConsecutiveFailures&quot;:3,
+            &quot;timeoutSeconds&quot;:3,
+            &quot;delaySeconds&quot;:2
+         },
+         &quot;volumeMounts&quot;:[
+            {
+               &quot;name&quot;:&quot;sharedvolume&quot;,
+               &quot;mountPath&quot;:&quot;mount2&quot;
+            }
+         ],
+         &quot;artifacts&quot;:[
+            {
+               &quot;uri&quot;:&quot;https://s3-us-west-2.amazonaws.com/mesos-soak-cluster/read-write-server.py&quot;,
+               &quot;extract&quot;:false,
+               &quot;executable&quot;:true,
+               &quot;cache&quot;:true,
+               &quot;destPath&quot;:&quot;read-write-server.py&quot;
+            }
+         ],
+         &quot;labels&quot;:{
+            &quot;c2_label&quot;:&quot;c2&quot;
+         }
+      },
+      {
+         &quot;name&quot;:&quot;clienttask&quot;,
+         &quot;exec&quot;:{
+            &quot;command&quot;:{
+               &quot;shell&quot;:&quot;while true; do sleep 5 &amp;&amp; curl -X GET localhost:8080/write &amp;&amp; curl -X GET localhost:8081/read; done&quot;
+            }
+         },
+         &quot;resources&quot;:{
+            &quot;cpus&quot;:0.1,
+            &quot;mem&quot;:32,
+            &quot;disk&quot;:32,
+            &quot;gpus&quot;:0
+         },
+         &quot;endpoints&quot;:[
+
+         ],
+         &quot;environment&quot;:{
+            &quot;C3_ENV&quot;:&quot;c3&quot;
+         },
+         &quot;volumeMounts&quot;:[
+
+         ],
+         &quot;artifacts&quot;:[
+
+         ],
+         &quot;labels&quot;:{
+            &quot;c3_label&quot;:&quot;c3&quot;
+         }
+      }
+   ],
+   &quot;secrets&quot;:{
+
+   },
+   &quot;volumes&quot;:[
+      {
+         &quot;name&quot;:&quot;sharedvolume&quot;
+      }
+   ],
+   &quot;networks&quot;:[
+      {
+         &quot;name&quot;:&quot;dcos&quot;,
+         &quot;mode&quot;:&quot;container&quot;,
+         &quot;labels&quot;:{
+            &quot;net_label&quot;:&quot;net&quot;
+         }
+      }
+   ],
+   &quot;scaling&quot;:{
+      &quot;kind&quot;:&quot;fixed&quot;,
+      &quot;instances&quot;:1,
+      &quot;maxInstances&quot;:null
+   },
+   &quot;scheduling&quot;:{
+      &quot;backoff&quot;:{
+         &quot;backoff&quot;:1,
+         &quot;backoffFactor&quot;:1.15,
+         &quot;maxLaunchDelaySeconds&quot;:300
+      },
+      &quot;upgrade&quot;:{
+         &quot;minimumHealthCapacity&quot;:1,
+         &quot;maximumOverCapacity&quot;:1
+      },
+      &quot;placement&quot;:{
+         &quot;constraints&quot;:[
+
+         ],
+         &quot;acceptedResourceRoles&quot;:[
+
+         ]
+      },
+      &quot;killSelection&quot;:&quot;YOUNGEST_FIRST&quot;,
+      &quot;unreachableStrategy&quot;:{
+         &quot;inactiveAfterSeconds&quot;:900,
+         &quot;expungeAfterSeconds&quot;:604800
+      }
+   },
+   &quot;executorResources&quot;:{
+      &quot;cpus&quot;:0.1,
+      &quot;mem&quot;:32,
+      &quot;disk&quot;:10
+   }
+}
+</code></pre>
+<h2 id="additional-pod-fields"><a class="content__anchor" href="#additional-pod-fields" aria-hidden="true"><i data-feather="bookmark"></i></a>Additional pod fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>labels</code></td>
+<td>object</td>
+<td>Pod metadata as key/value pairs.</td>
+</tr>
+<tr>
+<td><code>environment</code></td>
+<td>object</td>
+<td>Environment variables at the pod level. All pod containers will inherit these environment variables. Must be capitalized.</td>
+</tr>
+<tr>
+<td><code>secrets</code></td>
+<td>object</td>
+<td>The fully qualified path to the secret in the store.</td>
+</tr>
+<tr>
+<td><code>scheduling</code></td>
+<td>object</td>
+<td>Defines exponential backoff behavior for faulty apps to prevent sandboxes from filling up.</td>
+</tr>
+<tr>
+<td><code>scheduling.backoff</code></td>
+<td>number</td>
+<td>Initial backoff (seconds) applied when a launched instance fails (default: 1).</td>
+</tr>
+<tr>
+<td><code>scheduling.backoffFactor</code></td>
+<td>number</td>
+<td>Factor applied to current backoff to determine the new backoff (default: 1.15).</td>
+</tr>
+<tr>
+<td><code>scheduling.maxLaunchDelaySeconds</code></td>
+<td>number</td>
+<td>Maximum backoff (seconds) applied when subsequent failures are detected (default: 300).</td>
+</tr>
+<tr>
+<td><code>scheduling.unreachableStrategy</code></td>
+<td>string or object</td>
+<td>Define handling for unreachable instances.</td>
+</tr>
+<tr>
+<td><code>scheduling.unreachableStrategy.inactiveAfterSeconds</code></td>
+<td>number</td>
+<td>Length of time an instance is unreachable after which it is marked as inactive.</td>
+</tr>
+<tr>
+<td><code>scheduling.unreachableStrategy.expungeAfterSeconds</code></td>
+<td>number</td>
+<td>Length of time an instance is unreachable after which it is expunged.</td>
+</tr>
+<tr>
+<td><code>scheduling.upgrade</code></td>
+<td>object</td>
+<td>Upgrade strategy that controls pod updates.</td>
+</tr>
+<tr>
+<td><code>scheduling.upgrade.minimumHealthCapacity</code></td>
+<td>number</td>
+<td>Number between 0 and 1 that represents the minimum number of healthy nodes to maintain during upgrade (default: 1).</td>
+</tr>
+<tr>
+<td><code>scheduling.upgrade.maximumOverCapacity</code></td>
+<td>number</td>
+<td>Number between 0 and 1 representing the maximum number of additional instances to launch during upgrade (default: 1).</td>
+</tr>
+<tr>
+<td><code>placement</code></td>
+<td>object</td>
+<td>Controls placement of pod tasks.</td>
+</tr>
+<tr>
+<td><code>placement.constraints</code></td>
+<td>string[]</td>
+<td>Constraints control the placement policy of pod tasks. Options: <code>UNIQUE</code>, <code>CLUSTER</code>, <code>GROUP_BY</code>, <code>LIKE</code>, <code>UNLIKE</code>, <code>MAX_PER</code>.</td>
+</tr>
+<tr>
+<td><code>placement.acceptedResourceRoles</code></td>
+<td>string[]</td>
+<td>List of resource roles. The Marathon component will only consider resource offers with roles on this list for this pod’s tasks.</td>
+</tr>
+<tr>
+<td><code>killSelection</code></td>
+<td>string</td>
+<td>Defines which instance is killed first when an app is in an over-provisioned state. Options: <code>YOUNGEST_FIRST</code>, <code>OLDEST_FIRST</code>.</td>
+</tr>
+<tr>
+<td><code>unreachableStrategy</code></td>
+<td></td>
+<td>Behavior when agents are partitioned from masters.</td>
+</tr>
+<tr>
+<td><code>killSelection.inactiveAfterSeconds</code></td>
+<td>integer</td>
+<td>Time in seconds to wait before replacing task (default: 900).</td>
+</tr>
+<tr>
+<td><code>killSelection.expungeAfterSeconds</code></td>
+<td>integer</td>
+<td>Time in seconds to wait for tasks to come back before expunging (default: 603800).</td>
+</tr>
+<tr>
+<td><code>executorResources</code></td>
+<td>object</td>
+<td>Resources reserved for the pod executor.</td>
+</tr>
+<tr>
+<td><code>executorResources.cpus</code></td>
+<td>number</td>
+<td>CPU shares (default: 0.1).</td>
+</tr>
+<tr>
+<td><code>executorResources.mem</code></td>
+<td>number</td>
+<td>Memory resources in MiB (default: 32).</td>
+</tr>
+<tr>
+<td><code>executorResources.disk</code></td>
+<td>number</td>
+<td>Disk resources in MiB (default: 10.0),</td>
+</tr>
+</tbody>
+</table>
+<h2 id="additional-pod-container-fields"><a class="content__anchor" href="#additional-pod-container-fields" aria-hidden="true"><i data-feather="bookmark"></i></a>Additional pod container fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>labels</code></td>
+<td>object</td>
+<td>Container metadata as key/value pairs.</td>
+</tr>
+<tr>
+<td><code>environment</code></td>
+<td>object</td>
+<td>Container environment variables. Can override pod environment variables. Must be capitalized.</td>
+</tr>
+<tr>
+<td><code>healthCheck</code></td>
+<td>object</td>
+<td>Accepts the following parameters: <code>http</code>, <code>tcp</code>, and <code>exec</code>.</td>
+</tr>
+<tr>
+<td><code>healthCheck.http</code></td>
+<td></td>
+<td>Protocol type. Options: <code>http</code>, <code>tcp</code>, <code>exec</code>.</td>
+</tr>
+<tr>
+<td><code>healthCheck.http.endpoint</code></td>
+<td>string</td>
+<td>Endpoint name to use.</td>
+</tr>
+<tr>
+<td><code>healthCheck.http.path</code></td>
+<td>string</td>
+<td>Path to the endpoint exposed by the task that provides health status.</td>
+</tr>
+<tr>
+<td><code>healthCheck.http.scheme</code></td>
+<td>string</td>
+<td>For httpHealthCheck, use <code>http</code>.</td>
+</tr>
+<tr>
+<td><code>healthCheck.gracePeriodSeconds</code></td>
+<td>integer</td>
+<td>Interval to ignore health check failures after a task is first started or until a task is first healthy (default: 300).</td>
+</tr>
+<tr>
+<td><code>healthCheck.intervalSeconds</code></td>
+<td>integer</td>
+<td>Interval between health checks (default: 60).</td>
+</tr>
+<tr>
+<td><code>healthCheck.maxConsecutiveFailures</code></td>
+<td>integer</td>
+<td>Number of consecutive failures before task is killed (default: 3).</td>
+</tr>
+<tr>
+<td><code>healthCheck.timeoutSeconds</code></td>
+<td>integer</td>
+<td>Time to wait until health check is complete (default: 20).</td>
+</tr>
+<tr>
+<td><code>healthCheck.delaySeconds</code></td>
+<td>integer</td>
+<td>Time to wait until starting health check (default: 2).</td>
+</tr>
+<tr>
+<td><code>artifacts</code></td>
+<td>array</td>
+<td>Array of artifact objects</td>
+</tr>
+<tr>
+<td><code>healthCheck.uri</code></td>
+<td>strings</td>
+<td>URI to resources to download (i.e., <code>.tgz</code>, <code>tar.gz</code>, <code>.zip</code>, <code>.txz</code>, etc).</td>
+</tr>
+<tr>
+<td><code>healthCheck.extract</code></td>
+<td>boolean</td>
+<td>Extract fetched artifact.</td>
+</tr>
+<tr>
+<td><code>healthCheck.executable</code></td>
+<td>boolean</td>
+<td>Set fetched artifact as executable.</td>
+</tr>
+<tr>
+<td><code>healthCheck.cache</code></td>
+<td>boolean</td>
+<td>Cache fetched artifact.</td>
+</tr>
+<tr>
+<td><code>healthCheck.destPath</code></td>
+<td>strings</td>
+<td>Destination path of artifact.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="a-pod-with-multiple-containers"><a class="content__anchor" href="#a-pod-with-multiple-containers" aria-hidden="true"><i data-feather="bookmark"></i></a>A pod with multiple containers</h1>
+<p>The following pod definition specifies a pod with 3 containers. <!-- Validated by suzanne 6-23-17 --></p>
+<pre><code class="language-json">{
+   &quot;id&quot;:&quot;/pod-with-multiple-containers&quot;,
+   &quot;version&quot;:&quot;2017-01-03T18:21:19.31Z&quot;,
+   &quot;containers&quot;:[
+      {
+         &quot;name&quot;:&quot;sleep1&quot;,
+         &quot;exec&quot;:{
+            &quot;command&quot;:{
+               &quot;shell&quot;:&quot;sleep 1000&quot;
+            }
+         },
+         &quot;resources&quot;:{
+            &quot;cpus&quot;:0.01,
+            &quot;mem&quot;:32,
+            &quot;disk&quot;:0,
+            &quot;gpus&quot;:0
+         }
+      },
+      {
+         &quot;name&quot;:&quot;sleep2&quot;,
+         &quot;exec&quot;:{
+            &quot;command&quot;:{
+               &quot;shell&quot;:&quot;sleep 1000&quot;
+            }
+         },
+         &quot;resources&quot;:{
+            &quot;cpus&quot;:0.01,
+            &quot;mem&quot;:32,
+            &quot;disk&quot;:0,
+            &quot;gpus&quot;:0
+         }
+      },
+      {
+         &quot;name&quot;:&quot;sleep3&quot;,
+         &quot;exec&quot;:{
+            &quot;command&quot;:{
+               &quot;shell&quot;:&quot;sleep 1000&quot;
+            }
+         },
+         &quot;resources&quot;:{
+            &quot;cpus&quot;:0.01,
+            &quot;mem&quot;:32,
+            &quot;disk&quot;:0,
+            &quot;gpus&quot;:0
+         }
+      }
+   ],
+   &quot;networks&quot;:[
+      {
+         &quot;mode&quot;:&quot;host&quot;
+      }
+   ],
+   &quot;scaling&quot;:{
+      &quot;kind&quot;:&quot;fixed&quot;,
+      &quot;instances&quot;:10,
+      &quot;maxInstances&quot;:null
+   },
+   &quot;scheduling&quot;:{
+      &quot;backoff&quot;:{
+         &quot;backoff&quot;:1,
+         &quot;backoffFactor&quot;:1.15,
+         &quot;maxLaunchDelaySeconds&quot;:300
+      },
+      &quot;upgrade&quot;:{
+         &quot;minimumHealthCapacity&quot;:1,
+         &quot;maximumOverCapacity&quot;:1
+      },
+      &quot;killSelection&quot;:&quot;Youngest_First&quot;,
+      &quot;unreachableStrategy&quot;:{
+         &quot;inactiveAfterSeconds&quot;:900,
+         &quot;expungeAfterSeconds&quot;:604800
+      }
+   },
+   &quot;executorResources&quot;:{
+      &quot;cpus&quot;:0.1,
+      &quot;mem&quot;:32,
+      &quot;disk&quot;:10
+   }
+}
+</code></pre>
+<h1 id="a-pod-that-uses-ephemeral-volumes"><a class="content__anchor" href="#a-pod-that-uses-ephemeral-volumes" aria-hidden="true"><i data-feather="bookmark"></i></a>A Pod that Uses Ephemeral Volumes</h1>
+<p>The following pod definition specifies an ephemeral volume called <code>v1</code>. <!-- Validated by suzanne 6-23-17 --></p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/with-ephemeral-vol&quot;,
+  &quot;version&quot;: &quot;2017-01-03T17:36:39.389Z&quot;,
+  &quot;containers&quot;: [
+    {
+      &quot;name&quot;: &quot;ct1&quot;,
+      &quot;exec&quot;: {
+        &quot;command&quot;: {
+          &quot;shell&quot;: &quot;while true; do echo the current time is $(date) &gt; ./jdef-v1/clock; sleep 1; done&quot;
+        }
+      },
+      &quot;resources&quot;: {
+        &quot;cpus&quot;: 0.1,
+        &quot;mem&quot;: 32,
+        &quot;disk&quot;: 0,
+        &quot;gpus&quot;: 0
+      },
+      &quot;volumeMounts&quot;: [
+        {
+          &quot;name&quot;: &quot;v1&quot;,
+          &quot;mountPath&quot;: &quot;jdef-v1&quot;
+        }
+      ]
+    },
+    {
+      &quot;name&quot;: &quot;ct2&quot;,
+      &quot;exec&quot;: {
+        &quot;command&quot;: {
+          &quot;shell&quot;: &quot;while true; do cat ./etc/clock; sleep 1; done&quot;
+        }
+      },
+      &quot;resources&quot;: {
+        &quot;cpus&quot;: 0.1,
+        &quot;mem&quot;: 32,
+        &quot;disk&quot;: 0,
+        &quot;gpus&quot;: 0
+      },
+      &quot;volumeMounts&quot;: [
+        {
+          &quot;name&quot;: &quot;v1&quot;,
+          &quot;mountPath&quot;: &quot;etc&quot;
+        }
+      ]
+    }
+  ],
+  &quot;volumes&quot;: [
+    {
+      &quot;name&quot;: &quot;v1&quot;
+    }
+  ],
+  &quot;networks&quot;: [
+    {
+      &quot;mode&quot;: &quot;host&quot;
+    }
+  ],
+  &quot;scaling&quot;: {
+    &quot;kind&quot;: &quot;fixed&quot;,
+    &quot;instances&quot;: 1,
+    &quot;maxInstances&quot;: null
+  },
+  &quot;scheduling&quot;: {
+    &quot;backoff&quot;: {
+      &quot;backoff&quot;: 1,
+      &quot;backoffFactor&quot;: 1.15,
+      &quot;maxLaunchDelaySeconds&quot;: 300
+    },
+    &quot;upgrade&quot;: {
+      &quot;minimumHealthCapacity&quot;: 1,
+      &quot;maximumOverCapacity&quot;: 1
+    },
+    &quot;killSelection&quot;: &quot;Youngest_First&quot;,
+    &quot;unreachableStrategy&quot;: {
+      &quot;inactiveAfterSeconds&quot;: 900,
+      &quot;expungeAfterSeconds&quot;: 604800
+    }
+  },
+  &quot;executorResources&quot;: {
+    &quot;cpus&quot;: 0.1,
+    &quot;mem&quot;: 32,
+    &quot;disk&quot;: 10
+  }
+}
+</code></pre>
+<h1 id="a-pod-that-uses-persistent-volumes"><a class="content__anchor" href="#a-pod-that-uses-persistent-volumes" aria-hidden="true"><i data-feather="bookmark"></i></a>A Pod that Uses Persistent Volumes</h1>
+<p>For an example of a pod that uses a persistent volume, see <a href="/dcosdocs/mesosphere/dcos/2.1/storage/persistent-volume/#create-a-pod-with-a-local-persistent-volume">Create a pod with a local persistent volume</a>.</p>
+<h2 id="ip-per-pod-networking"><a class="content__anchor" href="#ip-per-pod-networking" aria-hidden="true"><i data-feather="bookmark"></i></a>IP-per-Pod Networking</h2>
+<p>The following pod definition specifies a virtual (user) network named <code>dcos</code>. The <code>networks:mode:container</code> field creates the virtual network. The <code>name</code> field is optional. If you have installed DC/OS using <a href="/dcosdocs/mesosphere/dcos/2.1/installing/evaluation/community-supported-methods/aws/">our AWS templates</a>, the default virtual network name is <code>dcos</code>. <!-- Validated by suzanne 6-23-17 --></p>
+<pre><code class="language-json">{
+   &quot;id&quot;:&quot;/pod-with-virtual-network&quot;,
+   &quot;scaling&quot;:{
+      &quot;kind&quot;:&quot;fixed&quot;,
+      &quot;instances&quot;:1
+   },
+   &quot;containers&quot;:[
+      {
+         &quot;name&quot;:&quot;sleep1&quot;,
+         &quot;exec&quot;:{
+            &quot;command&quot;:{
+               &quot;shell&quot;:&quot;sleep 1000&quot;
+            }
+         },
+         &quot;resources&quot;:{
+            &quot;cpus&quot;:0.1,
+            &quot;mem&quot;:32
+         }
+      }
+   ],
+   &quot;networks&quot;:[
+      {
+         &quot;mode&quot;:&quot;container&quot;,
+         &quot;name&quot;:&quot;dcos&quot;
+      }
+   ]
+}
+</code></pre>
+<p>This pod declares a “web” endpoint that listens on port 80. <!-- Validated by suzanne 6-23-17 --></p>
+<pre><code class="language-json">{
+   &quot;id&quot;:&quot;/pod-with-endpoint&quot;,
+   &quot;containers&quot;:[
+      {
+         &quot;name&quot;:&quot;simple-docker&quot;,
+         &quot;resources&quot;:{
+            &quot;cpus&quot;:1,
+            &quot;mem&quot;:128,
+            &quot;disk&quot;:0,
+            &quot;gpus&quot;:0
+         },
+         &quot;image&quot;:{
+            &quot;kind&quot;:&quot;DOCKER&quot;,
+            &quot;id&quot;:&quot;nginx&quot;
+         },
+         &quot;endpoints&quot;:[
+            {
+               &quot;name&quot;:&quot;web&quot;,
+               &quot;containerPort&quot;:80,
+               &quot;protocol&quot;:[
+                  &quot;http&quot;
+               ]
+            }
+         ]
+      }
+   ],
+   &quot;networks&quot;:[
+      {
+         &quot;mode&quot;:&quot;container&quot;
+      }
+   ]
+}
+</code></pre>
+<p>This pod adds a healthcheck that references the <code>web</code> endpoint.  Mesos will execute an HTTP request against <code>&lt;container_ip&gt;:80</code>. The health check will pass if Mesos receives an HTTP 200 response.</p>
+<!-- validated by suzanne 6-23-17 -->
+<pre><code class="language-json">{
+   &quot;id&quot;:&quot;/pod-with-healthcheck&quot;,
+   &quot;containers&quot;:[
+      {
+         &quot;name&quot;:&quot;simple-docker&quot;,
+         &quot;resources&quot;:{
+            &quot;cpus&quot;:1,
+            &quot;mem&quot;:128,
+            &quot;disk&quot;:0,
+            &quot;gpus&quot;:0
+         },
+         &quot;image&quot;:{
+            &quot;kind&quot;:&quot;DOCKER&quot;,
+            &quot;id&quot;:&quot;nginx&quot;
+         },
+         &quot;endpoints&quot;:[
+            {
+               &quot;name&quot;:&quot;web&quot;,
+               &quot;containerPort&quot;:80,
+               &quot;protocol&quot;:[
+                  &quot;http&quot;
+               ]
+            }
+         ],
+         &quot;healthCheck&quot;:{
+            &quot;http&quot;:{
+               &quot;endpoint&quot;:&quot;web&quot;,
+               &quot;path&quot;:&quot;/&quot;
+            }
+         }
+      }
+   ],
+   &quot;networks&quot;:[
+      {
+         &quot;mode&quot;:&quot;container&quot;
+      }
+   ]
+}
+</code></pre>
+<h1 id="complete-pod"><a class="content__anchor" href="#complete-pod" aria-hidden="true"><i data-feather="bookmark"></i></a>Complete Pod</h1>
+<p>The following pod definition can serve as a reference to create more complicated pods.</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/complete-pod&quot;,
+  &quot;labels&quot;: {
+    &quot;owner&quot;: &quot;zeus&quot;,
+    &quot;note&quot;: &quot;Away from olympus&quot;
+  },
+  &quot;environment&quot;: {
+    &quot;XPS1&quot;: &quot;Test&quot;
+  },
+  &quot;volumes&quot;: [
+    {
+      &quot;name&quot;: &quot;etc&quot;,
+      &quot;host&quot;: &quot;/etc&quot;
+    }
+  ],
+  &quot;networks&quot;: [
+    {
+     &quot;mode&quot;: &quot;container&quot;,
+     &quot;name&quot;: &quot;dcos&quot;
+    }
+  ],
+  &quot;scaling&quot;: {
+    &quot;kind&quot;: &quot;fixed&quot;,
+    &quot;instances&quot;: 1
+  },
+  &quot;scheduling&quot;: {
+    &quot;backoff&quot;: {
+      &quot;backoff&quot;: 1,
+      &quot;backoffFactor&quot;: 1.15,
+      &quot;maxLaunchDelaySeconds&quot;: 300
+    },
+    &quot;upgrade&quot;: {
+      &quot;minimumHealthCapacity&quot;: 1,
+      &quot;maximumOverCapacity&quot;: 1
+    },
+    &quot;placement&quot;: {
+      &quot;constraints&quot;: [],
+      &quot;acceptedResourceRoles&quot;: []
+    }
+  },
+  &quot;containers&quot;: [
+    {
+      &quot;name&quot;: &quot;container1&quot;,
+      &quot;resources&quot;: {
+        &quot;cpus&quot;: 1,
+        &quot;mem&quot;: 128,
+        &quot;disk&quot;: 0,
+        &quot;gpus&quot;: 0
+      },
+      &quot;resourceLimits&quot;: {
+        &quot;cpus&quot;: &quot;unlimited&quot;,
+        &quot;mem&quot;: 1024
+      },
+      &quot;endpoints&quot;: [
+        {
+          &quot;name&quot;: &quot;http-endpoint&quot;,
+          &quot;containerPort&quot;: 80,
+          &quot;hostPort&quot;: 0,
+          &quot;protocol&quot;: [ &quot;HTTP&quot; ],
+          &quot;labels&quot;: {}
+        }
+      ],
+      &quot;image&quot;: {
+        &quot;id&quot;: &quot;nginx:latest&quot;,
+        &quot;kind&quot;: &quot;DOCKER&quot;,
+        &quot;forcePull&quot;: false
+      },
+      &quot;environment&quot;: {
+        &quot;XPS1&quot;: &quot;Test&quot;
+      },
+      &quot;user&quot;: &quot;root&quot;,
+      &quot;healthCheck&quot;: {
+        &quot;gracePeriodSeconds&quot;: 30,
+        &quot;intervalSeconds&quot;: 5,
+        &quot;maxConsecutiveFailures&quot;: 3,
+        &quot;timeoutSeconds&quot;: 4,
+        &quot;delaySeconds&quot;: 2,
+        &quot;http&quot;: {
+          &quot;path&quot;: &quot;/&quot;,
+          &quot;scheme&quot;: &quot;HTTP&quot;,
+          &quot;endpoint&quot;: &quot;http-endpoint&quot;
+        }
+      },
+      &quot;volumeMounts&quot;: [
+        {
+          &quot;name&quot;: &quot;etc&quot;,
+          &quot;mountPath&quot;: &quot;/mnt/etc&quot;,
+          &quot;readOnly&quot;: true
+        }
+      ],
+      &quot;artifacts&quot;: [
+        {
+          &quot;uri&quot;: &quot;https://ftp.gnu.org/gnu/glibc/glibc-2.25.tar.gz&quot;,
+          &quot;executable&quot;: false,
+          &quot;extract&quot;: true,
+          &quot;cache&quot;: true,
+          &quot;destPath&quot;: &quot;glibc-2.25.tar.gz&quot;
+        }
+      ],
+      &quot;labels&quot;: {
+        &quot;owner&quot;: &quot;zeus&quot;,
+        &quot;note&quot;: &quot;Away from olympus&quot;
+      },
+      &quot;lifecycle&quot;: {
+        &quot;killGracePeriodSeconds&quot;: 60
+      }
+    }
+  ]
+}
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#annotated-simple-pod-definition">Annotated simple pod definition</a></li><li class="content__sections-item content__sections-item--h2"><a href="#basic-pod-fields">Basic pod fields</a></li><li class="content__sections-item content__sections-item--h2"><a href="#basic-pod-container-fields">Basic pod container fields</a></li><li class="content__sections-item content__sections-item--h1"><a href="#annotated-multi-pod-with-all-parameters">Annotated multi-pod with all parameters</a></li><li class="content__sections-item content__sections-item--h2"><a href="#additional-pod-fields">Additional pod fields</a></li><li class="content__sections-item content__sections-item--h2"><a href="#additional-pod-container-fields">Additional pod container fields</a></li><li class="content__sections-item content__sections-item--h1"><a href="#a-pod-with-multiple-containers">A pod with multiple containers</a></li><li class="content__sections-item content__sections-item--h1"><a href="#a-pod-that-uses-ephemeral-volumes">A Pod that Uses Ephemeral Volumes</a></li><li class="content__sections-item content__sections-item--h1"><a href="#a-pod-that-uses-persistent-volumes">A Pod that Uses Persistent Volumes</a></li><li class="content__sections-item content__sections-item--h2"><a href="#ip-per-pod-networking">IP-per-Pod Networking</a></li><li class="content__sections-item content__sections-item--h1"><a href="#complete-pod">Complete Pod</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

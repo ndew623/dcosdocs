@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>挂载磁盘资源 - D2iQ Docs</title><meta name="description" content="使用 Mesos 挂载存储资源"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.1/storage/mount-disk-resources">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/mount-disk-resources">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/storage/mount-disk-resources">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/storage/mount-disk-resources">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/"><i data-feather="chevron-right"></i>安全</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/"><i data-feather="chevron-right"></i>存储</a></li><ul><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/mount-disk-resources/">挂载磁盘资源</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/nfs/">NFS 服务器</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/persistent-volume/">本地持久卷</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/external-storage/">外部持久卷</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">挂载磁盘资源</h1></div><h4 class="content__header-description">使用 Mesos 挂载存储资源</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.1/storage/mount-disk-resources/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>使用 DC/OS，您可以在群集中配置 Mesos <a href="http://mesos.apache.org/documentation/latest/multiple-disk/"><code>Mount</code> 磁盘资源</a>，只需使用众所周知的路径在代理节点上挂载存储资源即可。</p>
+<p>当 DC/OS 代理节点启动时，它会扫描与模式 <code>/dcos/volume&lt;N&gt;</code>（其中 <code>&lt;N&gt;</code> 是个整数）匹配的卷。然后，代理节点会自动配置，以向其他服务提供这些磁盘资源。</p>
+<h1 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>使用回送设备示例</h1>
+<p>在此示例中，磁盘资源在运行的群集上安装后被添加到 DC/OS 代理节点中。这些步骤可以在安装前使用，而无需停止服务或清除代理节点序状态。</p>
+<p>请注意，此示例仅处理<strong>添加</strong>资源，在删除资源时不能采用相同的方式。</p>
+<p class="message--warning"><strong>警告：</strong>这将终止节点上任何运行的任务或服务。<p>
+<ol>
+<li>
+<p>通过 SSH 连接到群集中的代理节点。</p>
+</li>
+<li>
+<p>检查当前代理节点的资源状态。</p>
+<pre><code class="language-bash">cat /var/lib/dcos/mesos-resources
+# Generated by make_disk_resources.py on 2016-05-05 17:04:29.868595
+#
+
+MESOS_RESOURCES='[{&quot;ranges&quot;: {&quot;range&quot;: [{&quot;end&quot;: 21, &quot;begin&quot;: 1}, {&quot;end&quot;: 5050, &quot;begin&quot;: 23}, {&quot;end&quot;: 32000, &quot;begin&quot;: 5052}]}, &quot;type&quot;:  &quot;RANGES&quot;, &quot;name&quot;: &quot;ports&quot;}, {&quot;role&quot;: &quot;*&quot;, &quot;type&quot;: &quot;SCALAR&quot;, &quot;name&quot;: &quot;disk&quot;, &quot;scalar&quot;: {&quot;value&quot;: 47540}}]'
+</code></pre>
+<p>请注意， 尚无引用。<code>/dcos/volume0</code>.</p>
+</li>
+<li>
+<p>停止代理节点。</p>
+<ul>
+<li>
+<p>在<a href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/concepts/#private-agent-node">专用</a>代理节点上：</p>
+<pre><code class="language-bash">sudo systemctl stop dcos-mesos-slave.service
+</code></pre>
+</li>
+<li>
+<p>在<a href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/concepts/#public-agent-node">公共</a>代理节点上：</p>
+<pre><code class="language-bash">sudo systemctl stop dcos-mesos-slave-public.service
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>清除代理节点状态。</p>
+<ol>
+<li>
+<p>使用以下命令缓存卷挂载发现资源状态：</p>
+<pre><code class="language-bash">sudo mv -f /var/lib/dcos/mesos-resources /var/lib/dcos/mesos-resources.cache
+</code></pre>
+<p>DC/OS 将稍后检查此文件，以便为代理生成新的资源状态。</p>
+</li>
+<li>
+<p>使用以下命令删除代理节点检查点状态：</p>
+<pre><code class="language-bash">sudo rm -f /var/lib/mesos/slave/meta/slaves/latest
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p>创建 200 MB 回送设备。</p>
+<pre><code class="language-bash">sudo mkdir -p /dcos/volume0
+sudo dd if=/dev/zero of=/root/volume0.img bs=1M count=200
+sudo losetup /dev/loop0 /root/volume0.img
+sudo mkfs -t ext4 /dev/loop0
+sudo losetup -d /dev/loop0
+</code></pre>
+<p>这仅适用于测试目的。挂载卷必须至少有 200 MB 可用空间。每个卷 100 MB 由 DC/OS 保留，不可用于其他服务。</p>
+</li>
+<li>
+<p>创建 <code>fstab</code> 条目并挂载。</p>
+<p>确保卷在启动时自动挂载。也可以通过 <code>systemd</code> 挂载单元完成类似操作。</p>
+<pre><code class="language-bash">echo &quot;/root/volume0.img /dcos/volume0 auto loop 0 2&quot; | sudo tee -a /etc/fstab
+sudo mount /dcos/volume0
+</code></pre>
+</li>
+<li>
+<p>重新启动。</p>
+<pre><code class="language-bash">sudo reboot
+</code></pre>
+</li>
+<li>
+<p>通过 SSH 连接到到代理节点并查看 <code>journald</code> 日志以获取对新卷 <code>/dcos/volume0</code>. 的引用。</p>
+<pre><code class="language-bash">journalctl -b | grep '/dcos/volume0'
+</code></pre>
+<p>特别是，应该有代理节点启动的条目和新的 volume0 <code>Mount</code> 磁盘资源：</p>
+<pre><code>May 05 19:18:40 dcos-agent-public-01234567000001 systemd[1]: Mounting /dcos/volume0...
+May 05 19:18:42 dcos-agent-public-01234567000001 systemd[1]: Mounted /dcos/volume0.
+May 05 19:18:46 dcos-agent-public-01234567000001 make_disk_resources.py[888]: Found matching mounts : [('/dcos/volume0', 74)]
+May 05 19:18:46 dcos-agent-public-01234567000001 make_disk_resources.py[888]: Generated disk resources map: [{'name': 'disk', 'type': 'SCALAR', 'disk': {'source': {'mount': {'root': '/dcos/volume0'}, 'type': 'MOUNT'}}, 'role': '*', 'scalar': {'value': 74}}, {'name': 'disk', 'type': 'SCALAR', 'role': '*', 'scalar': {'value': 47540}}]
+May 05 19:18:58 dcos-agent-public-01234567000001 mesos-slave[1891]: &quot; --oversubscribed_resources_interval=&quot;15secs&quot; --perf_duration=&quot;10secs&quot; --perf_interval=&quot;1mins&quot; --port=&quot;5051&quot; --qos_correction_interval_min=&quot;0ns&quot; --quiet=&quot;false&quot; --recover=&quot;reconnect&quot; --recovery_timeout=&quot;15mins&quot; --registration_backoff_factor=&quot;1secs&quot; --resources=&quot;[{&quot;name&quot;: &quot;ports&quot;, &quot;type&quot;: &quot;RANGES&quot;, &quot;ranges&quot;: {&quot;range&quot;: [{&quot;end&quot;: 21, &quot;begin&quot;: 1}, {&quot;end&quot;: 5050, &quot;begin&quot;: 23}, {&quot;end&quot;: 32000, &quot;begin&quot;: 5052}]}}, {&quot;name&quot;: &quot;disk&quot;, &quot;type&quot;: &quot;SCALAR&quot;, &quot;disk&quot;: {&quot;source&quot;: {&quot;mount&quot;: {&quot;root&quot;: &quot;/dcos/volume0&quot;}, &quot;type&quot;: &quot;&quot;}}, &quot;role&quot;: &quot;*&quot;, &quot;scalar&quot;: {&quot;value&quot;: 74}}, {&quot;name&quot;: &quot;disk&quot;, &quot;type&quot;: &quot;SCALAR&quot;, &quot;role&quot;: &quot;*&quot;, &quot;scalar&quot;: {&quot;value&quot;: 47540}}]&quot; --revocable_cpu_low_priority=&quot;true&quot; --sandbox_directory=&quot;/mnt/mesos/sandbox&quot; --slave_subsystems=&quot;cpu,memory&quot; --strict=&quot;true&quot; --switch_user=&quot;true&quot; --systemd_enable_support=&quot;true&quot; --systemd_runtime_directory=&quot;/run/systemd/system&quot; --version=&quot;false&quot; --work_dir=&quot;/var/lib/mesos/slave&quot;
+</code></pre>
+</li>
+</ol>
+<h1 id="marathon"><a class="content__anchor" href="#marathon" aria-hidden="true"><i data-feather="bookmark"></i></a>在 Marathon 应用程序中使用挂载卷示例</h1>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/mount-test-svc1&quot;,
+  &quot;instances&quot;: 1,
+  &quot;cpus&quot;: 0.1,
+  &quot;mem&quot;: 128,
+  &quot;networks&quot;: [
+    {
+      &quot;mode&quot;: &quot;container/bridge&quot;
+    }
+  ],
+  &quot;disk&quot;: 0,
+  &quot;gpus&quot;: 0,
+  &quot;backoffSeconds&quot;: 1,
+  &quot;backoffFactor&quot;: 1.15,
+  &quot;maxLaunchDelaySeconds&quot;: 300,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;DOCKER&quot;,
+    &quot;volumes&quot;: [
+      {
+        &quot;persistent&quot;: {
+          &quot;size&quot;: 25,
+          &quot;type&quot;: &quot;mount&quot;
+        },
+        &quot;mode&quot;: &quot;RW&quot;,
+        &quot;containerPath&quot;: &quot;volume0&quot;
+      }
+    ],
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;nginx&quot;,
+      &quot;privileged&quot;: false,
+      &quot;forcePullImage&quot;: false
+    },
+    &quot;portMappings&quot;: [
+      {
+        &quot;containerPort&quot;: 80,
+        &quot;hostPort&quot;: 0,
+        &quot;servicePort&quot;: 10101,
+        &quot;protocol&quot;: &quot;tcp&quot;,
+        &quot;name&quot;: &quot;httpport&quot;,
+        &quot;labels&quot;: {
+          &quot;VIP_0&quot;: &quot;/mount-test-svc1:80&quot;
+        }
+      }
+    ]
+  },
+  &quot;healthChecks&quot;: [
+    {
+      &quot;gracePeriodSeconds&quot;: 300,
+      &quot;intervalSeconds&quot;: 60,
+      &quot;timeoutSeconds&quot;: 20,
+      &quot;maxConsecutiveFailures&quot;: 3,
+      &quot;portIndex&quot;: 0,
+      &quot;path&quot;: &quot;/&quot;,
+      &quot;protocol&quot;: &quot;MESOS_HTTP&quot;,
+      &quot;delaySeconds&quot;: 15
+    }
+  ],
+  &quot;upgradeStrategy&quot;: {
+    &quot;minimumHealthCapacity&quot;: 0.5,
+    &quot;maximumOverCapacity&quot;: 0
+  },
+  &quot;unreachableStrategy&quot;: &quot;disabled&quot;,
+  &quot;killSelection&quot;: &quot;YOUNGEST_FIRST&quot;,
+  &quot;requirePorts&quot;: true,
+  &quot;labels&quot;: {
+    &quot;HAPROXY_GROUP&quot;: &quot;external&quot;
+  }
+}
+</code></pre>
+<p>在运行此服务后，导航到 Web 界面中的 <strong>Services &gt; Volumes</strong> 选项卡：</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/mount-disk.png" alt="挂载磁盘"></p>
+<p>图 1. Services &gt; Volumes 选项卡</p>
+<h1 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>云提供程序资源</h1>
+<p>云提供程序存储服务通常用于支持 DC/OS 挂载卷。在设计生产 DC/OS 部署时，此参考材料非常有用：</p>
+<ul>
+<li><a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html">Amazon: EBS</a></li>
+<li><a href="https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-about-disks-vhds/">Azure: 关于 Azure 虚拟机的磁盘和 VHD</a></li>
+<li><a href="https://azure.microsoft.com/en-us/documentation/articles/storage-introduction/#blob-storage">Azure: Microsoft Azure 存储简介</a></li>
+</ul>
+<h1 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>最佳实践</h1>
+<p><code>Mount</code> 磁盘资源主要用于 Kafka 和 Cassandra 等有状态服务，这些服务可以从整个群集中可用的专用存储中受益。使用 <code>Mount</code> 磁盘资源的任何服务具有对保留资源的独占访问权限。然而，考虑服务的性能和可靠性要求仍然很重要。<code>Mount</code> 磁盘资源的性能基于底层存储的特性，并且 DC/OS 不提供任何数据复制服务。请考虑以下事项：</p>
+<ul>
+<li>将 <code>Mount</code> 磁盘资源与具有严格存储要求的有状态服务一起使用。</li>
+<li>根据有状态服务的存储需求和要求，仔细考虑文件系统类型、存储介质（网络链接、SSD 等）和卷特征（RAID 级别、大小调整等）。</li>
+<li>使用 Mesos 属性标记 Mesos 代理节点，该属性反映代理节点磁盘挂载的特征，例如， IOPS200、RAID1 等</li>
+<li>使用 Mesos 属性限制将有状态服务与存储代理节点相关联。</li>
+<li>考虑将要求严苛的存储服务隔离到专用存储代理节点中，因为文件系统页面缓存是主机级共享资源。</li>
+<li>确保使用 <code>Mount</code> 磁盘资源的所有服务都旨在处理一个或多个 <code>Mount</code> 磁盘资源的永久丢失。服务仍然负责管理数据复制和保留，从故障代理节点进行正常恢复以及关键服务状态的备份。</li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#使用回送设备示例">使用回送设备示例</a></li><li class="content__sections-item content__sections-item--h1"><a href="#marathon">在 Marathon 应用程序中使用挂载卷示例</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-2">云提供程序资源</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-3">最佳实践</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

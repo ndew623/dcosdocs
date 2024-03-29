@@ -1,0 +1,203 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Quick Start - Managing volumes with Kubernetes CSI - D2iQ Docs</title><meta name="description" content="Getting started using both dynamic and pre-provisioned Kubernetes volumes"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Kubernetes Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.8.0-1.19.2/operations/storage/tutorial-kubernetes-storage-basic">Kubernetes 2.8.0-1.19.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.7.0-1.18.6/operations/storage/tutorial-kubernetes-storage-basic">Kubernetes 2.7.0-1.18.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.6.1-1.17.8/operations/storage/tutorial-kubernetes-storage-basic">Kubernetes 2.6.1-1.17.8</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.6.0-1.17.7/operations/storage/tutorial-kubernetes-storage-basic">Kubernetes 2.6.0-1.17.7</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.5.0-1.16.9/operations/storage/tutorial-kubernetes-storage-basic">Kubernetes 2.5.0-1.16.9</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/storage/tutorial-kubernetes-storage-basic">Kubernetes 2.4.9-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/operations/storage/tutorial-kubernetes-storage-basic">Kubernetes 2.4.8-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.7-1.15.10/operations/storage/tutorial-kubernetes-storage-basic">Kubernetes 2.4.7-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.6-1.15.6/operations/storage/tutorial-kubernetes-storage-basic">Kubernetes 2.4.6-1.15.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.5-1.15.5/operations/storage/tutorial-kubernetes-storage-basic">Kubernetes 2.4.5-1.15.5</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/storage/tutorial-kubernetes-storage-basic">Kubernetes 2.4.4-1.15.4</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/storage/tutorial-kubernetes-storage-basic">Kubernetes 2.4.3-1.15.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.2-1.15.3/operations/storage/tutorial-kubernetes-storage-basic">Kubernetes 2.4.2-1.15.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/operations/storage/tutorial-kubernetes-storage-basic">Kubernetes 2.4.1-1.15.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.10-1.15.10/operations/storage/tutorial-kubernetes-storage-basic">Kubernetes 2.4.10-1.15.10</a></li></ul><div class="toggle"><p><span class="title">Kubernetes</span><span class="version"> 2.4.9-1.15.10</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/overview/">Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/getting-started/"><i data-feather="chevron-right"></i>Tutorial - Kubernetes on DC/OS Enterprise</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/"><i data-feather="chevron-right"></i>Operations</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/cluster-sizing/">Cluster Sizing</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/kubernetes-audit/">Kubernetes Auditing</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/kubernetes-dashboard/">Kubernetes Dashboard</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/metrics-exporter/">Metrics Exporter</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/quota-support/">Quota Support</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/ingress/">External Ingress</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/admission-controllers/">Admission Controllers</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/authn-and-authz/">Authentication and Authorization</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/encrypt-data/">Encrypt Data</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/customizing-install/">Customizing</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/gatekeeper/">Enforce policies using Gatekeeper</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/upgrade/">Upgrade</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/storage/"><i data-feather="chevron-right"></i>Storage</a></li><ul><li class="active active-on"><a class="d2" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/storage/tutorial-kubernetes-storage-basic/">Quick Start</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/exposing-the-kubernetes-api/">Exposing the Kubernetes API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/exposing-the-kubernetes-api-marathonlb-edgelb/">Exposing the Kubernetes API via Marathon-LB or Edge-LB</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/connecting-clients/">Connecting Clients</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/uninstall/">Uninstall</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/private-docker-registry/">Use private Docker registry</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/disaster-recovery/">Disaster Recovery</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/troubleshooting/">Troubleshooting</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/cli/">CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/changelog/">Changelog</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/supported-versions/">Supported Versions</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Quick Start - Managing volumes with Kubernetes CSI</h1></div><h4 class="content__header-description">Getting started using both dynamic and pre-provisioned Kubernetes volumes</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/storage/tutorial-kubernetes-storage-basic/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>This simple tutorial demonstrates how to setup Kubernetes deployments with Kubernetes <a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/">Persistent Volumes</a> using the <a href="https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/">Amazon EBS CSI driver</a> for volume lifecycle management.
+The instructions in what follows assume you have <code>kubectl</code> access to your Kubernetes cluster being managed by <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/overview/">MKE</a>.</p>
+<h1 id="prerequisites"><a class="content__anchor" href="#prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h1>
+<ul>
+<li><code>wget</code> utility installed in your bash environment</li>
+<li>a Kubernetes 1.13 cluster</li>
+<li>access to <code>kubectl</code> connected to your Kubernetes cluster(s) being managed by MKE</li>
+<li>ability to provision volumes on AWS in the same AZ as the target Kubernetes cluster(s)</li>
+</ul>
+<h1 id="setting-up"><a class="content__anchor" href="#setting-up" aria-hidden="true"><i data-feather="bookmark"></i></a>Setting Up</h1>
+<ol>
+<li>
+<p>Download the demo repository to your working directory:</p>
+<pre><code>wget https://github.com/mesosphere/csi-driver-deployments/archive/master.zip -O csi-driver-deployments.zip
+unzip csi-driver-deployments.zip &amp;&amp; rm csi-driver-deployments.zip
+cd csi-driver-deployments-master/aws-ebs/kubernetes
+</code></pre>
+</li>
+<li>
+<p>Grant AWS API IAM permissions:</p>
+<p>The CSI driver must be connected to the AWS API. This sample IAM policy can be used to grant the driver the necessary permissions:</p>
+</li>
+</ol>
+<!-- following json asset taken from public repo: https://github.com/mesosphere/csi-driver-deployments/tree/master/aws-ebs/kubernetes -->
+<pre><code class="language-json">{
+  &quot;Version&quot;: &quot;2012-10-17&quot;,
+  &quot;Statement&quot;: [
+    {
+      &quot;Effect&quot;: &quot;Allow&quot;,
+      &quot;Action&quot;: [
+        &quot;ec2:AttachVolume&quot;,
+        &quot;ec2:CreateSnapshot&quot;,
+        &quot;ec2:CreateTags&quot;,
+        &quot;ec2:CreateVolume&quot;,
+        &quot;ec2:DeleteSnapshot&quot;,
+        &quot;ec2:DeleteTags&quot;,
+        &quot;ec2:DeleteVolume&quot;,
+        &quot;ec2:DescribeInstances&quot;,
+        &quot;ec2:DescribeSnapshots&quot;,
+        &quot;ec2:DescribeTags&quot;,
+        &quot;ec2:DescribeVolumes&quot;,
+        &quot;ec2:DetachVolume&quot;
+      ],
+      &quot;Resource&quot;: &quot;*&quot;
+    }
+  ]
+}
+</code></pre>
+<p>The recommended approach in this case is to <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html">add the above policy to the EC2 instance roles</a>. If this is not possible in your case, you will need to modify the <code>secrets.yaml</code> with <code>key_id</code>, <code>access_key</code> and optionally <code>session_token</code> credentials for a IAM user that does have this policy.</p>
+<ol>
+<li>Install the AWS EBS CSI driver:</li>
+</ol>
+<pre><code>```bash
+kubectl apply -f 0.2.0/
+```
+</code></pre>
+<p>Your Kubernetes cluster is ready to provision volumes via AWS EBS.</p>
+<h1 id="dynamically-provisioned-volume"><a class="content__anchor" href="#dynamically-provisioned-volume" aria-hidden="true"><i data-feather="bookmark"></i></a>Dynamically Provisioned Volume</h1>
+<h2 id="launch-a-deployment-with-a-dynamically-provisioned-ebs-volume"><a class="content__anchor" href="#launch-a-deployment-with-a-dynamically-provisioned-ebs-volume" aria-hidden="true"><i data-feather="bookmark"></i></a>Launch a deployment with a dynamically provisioned EBS volume</h2>
+<ol>
+<li>
+<p>To begin the demonstration, launch the following application deployment:</p>
+<pre><code class="language-bash">kubectl apply -f example-dynamic/
+</code></pre>
+<p>The dummy app <code>example-dynamic</code> utilizes dynamically provisioned EBS volumes created by the CSI driver.</p>
+</li>
+<li>
+<p>Wait for an EBS volume to be created and Bound to the claim:</p>
+<pre><code class="language-bash">kubectl get pvc -w
+</code></pre>
+</li>
+<li>
+<p>Get the EBS volumeID that was provisioned by the CSI driver:</p>
+<pre><code class="language-bash">kubectl describe pv
+</code></pre>
+</li>
+<li>
+<p>Note the returned value of <code>VolumeHandle</code> from the CLI output and confirm this value matches in the AWS console:</p>
+</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/img/ebs-in-use.png" alt="Screenshot of AWS EBS from above &quot;in-use&quot;."></p>
+<h2 id="delete-the-attached-pod"><a class="content__anchor" href="#delete-the-attached-pod" aria-hidden="true"><i data-feather="bookmark"></i></a>Delete the attached pod</h2>
+<ol>
+<li>
+<p>Get the name of the pod:</p>
+<pre><code class="language-bash">kubectl get pods
+</code></pre>
+</li>
+<li>
+<p>Take note when the pod started writing data:</p>
+<pre><code class="language-bash">kubectl exec -it &lt;pod-name&gt; cat /data/out.txt
+</code></pre>
+</li>
+<li>
+<p>Delete the pod:</p>
+<pre><code class="language-bash">kubectl delete pods &lt;pod-name&gt;
+</code></pre>
+<p>Deleting the pods takes a few seconds because the driver is unmounting the volume and detaching from the instance.</p>
+</li>
+<li>
+<p>Get a list of your pods again:</p>
+<pre><code class="language-bash">kubectl get pods
+</code></pre>
+<p>However, because the deployment is still active, Kubernetes will immediately reattach the volume to the new pod.</p>
+</li>
+<li>
+<p>Now, take note of when this new pod started writing data:</p>
+<pre><code class="language-bash">kubectl exec -it &lt;new-pod-name&gt; cat /data/out.txt
+</code></pre>
+<p>You can see that data persisted across pod restart, as the log begins at the same time.</p>
+</li>
+</ol>
+<h2 id="delete-the-deployment-and-associated-dynamically-provisioned-volume"><a class="content__anchor" href="#delete-the-deployment-and-associated-dynamically-provisioned-volume" aria-hidden="true"><i data-feather="bookmark"></i></a>Delete the deployment and associated dynamically provisioned volume</h2>
+<ol>
+<li>
+<p>Delete dynamic application deployment:</p>
+<pre><code class="language-bash">kubectl delete deployment ebs-dynamic-app
+</code></pre>
+</li>
+<li>
+<p>Check the AWS console, see that the volume will still be “available”:</p>
+</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/img/ebs-available.png" alt="Screenshot of AWS EBS from above still &quot;available&quot;."></p>
+<ol>
+<li>
+<p>Delete the dynamic deployment’s pvc:</p>
+<pre><code class="language-bash">kubectl delete pvc dynamic
+</code></pre>
+</li>
+<li>
+<p>Check the AWS console again, this time the volume is deleted and does not even show up:</p>
+</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/img/ebs-missing.png" alt="Screenshot of AWS EBS volume absent from where it had been."></p>
+<h1 id="pre-provisioned-volume"><a class="content__anchor" href="#pre-provisioned-volume" aria-hidden="true"><i data-feather="bookmark"></i></a>Pre-provisioned Volume</h1>
+<p>Imagine you have an existing application that is already using an EBS volume to persist its data and it is now being migrated to run in Kubernetes.
+Using a pre-provisioned volume as described below allows you to safely migrate that application without losing any of its data.
+Creating a <code>PersistentVolume</code> resource type directly and specifying the backing EBS <code>volumeID</code> instead of relying on the CSI driver to provision the EBS volumes allows you to reuse your existing EBS volume(s) but still leverage the CSI driver functionality to properly attach and detach EBS volume(s) from the EC2 instances when application pods are being scheduled.</p>
+<h2 id="launch-a-deployment-with-a-pre-provisioned-ebs-volume"><a class="content__anchor" href="#launch-a-deployment-with-a-pre-provisioned-ebs-volume" aria-hidden="true"><i data-feather="bookmark"></i></a>Launch a deployment with a pre-provisioned EBS volume</h2>
+<ol>
+<li>Create a new EBS volume in the same AZ as the cluster in the AWS console, note the <code>volumeID</code> of the new volume:</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/img/ebs-pre-provisioned-created.png" alt="Screenshot of AWS EBS volume &quot;available&quot; for newly created volume."></p>
+<ol>
+<li>Next, edit the <code>pre-provisioned/pv.yaml</code>, by inserting the value of <code>volumeID</code> from the previous step in for the value of <code>volumeHandle</code> in the <code>spec.csi.volumeHandle</code>, replacing <code>__REPLACE_ME__</code>:</li>
+</ol>
+<pre><code class="language-json">    apiVersion: v1
+    kind: PersistentVolume
+    metadata:
+    name: pre-provisioned
+    annotations:
+        pv.kubernetes.io/provisioned-by: ebs.csi.aws.com
+    spec:
+    accessModes:
+        - ReadWriteOnce
+    capacity:
+        storage: 1Gi
+    csi:
+        driver: ebs.csi.aws.com
+        fsType: ext4
+        volumeHandle: __REPLACE_ME__
+    claimRef:
+        namespace: default
+        name: pre-provisioned
+    persistentVolumeReclaimPolicy: Retain
+</code></pre>
+<ol>
+<li>
+<p>Launch the application deployment with a pre-provisioned EBS volume:</p>
+<pre><code class="language-bash">kubectl apply -f example-pre-provisioned/
+</code></pre>
+<p>the EBS volume will be in “in-use”.</p>
+</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/img/ebs-pre-provisioned-in-use.png" alt="Screenshot of AWS EBS from above &quot;in-use&quot;."></p>
+<h2 id="delete-the-pre-provisioned-deployment"><a class="content__anchor" href="#delete-the-pre-provisioned-deployment" aria-hidden="true"><i data-feather="bookmark"></i></a>Delete the pre-provisioned deployment</h2>
+<ol>
+<li>
+<p>Delete the application deployment:</p>
+<pre><code class="language-bash">kubectl delete deployment ebs-pre-provisioned-app
+</code></pre>
+</li>
+<li>
+<p>Delete the PV and PVC:</p>
+<pre><code class="language-bash">kubectl delete pvc pre-provisioned
+kubectl delete pv pre-provisioned
+</code></pre>
+</li>
+<li>
+<p>Check the AWS console again, the volume will be “available” even though the PVC and PV have been deleted. This is because we have set the appropriate reclaim policy in the PV configuration:</p>
+<pre><code class="language-json">persistentVolumeReclaimPolicy: Retain
+</code></pre>
+<p>so that that same EBS volume can be reused in other pods later on if desired.</p>
+</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/img/ebs-pre-provisioned-available-retain.png" alt="Screenshot of AWS EBS volume &quot;available&quot; with Retain reclaim policy."></p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#prerequisites">Prerequisites</a></li><li class="content__sections-item content__sections-item--h1"><a href="#setting-up">Setting Up</a></li><li class="content__sections-item content__sections-item--h1"><a href="#dynamically-provisioned-volume">Dynamically Provisioned Volume</a></li><li class="content__sections-item content__sections-item--h2"><a href="#launch-a-deployment-with-a-dynamically-provisioned-ebs-volume">Launch a deployment with a dynamically provisioned EBS volume</a></li><li class="content__sections-item content__sections-item--h2"><a href="#delete-the-attached-pod">Delete the attached pod</a></li><li class="content__sections-item content__sections-item--h2"><a href="#delete-the-deployment-and-associated-dynamically-provisioned-volume">Delete the deployment and associated dynamically provisioned volume</a></li><li class="content__sections-item content__sections-item--h1"><a href="#pre-provisioned-volume">Pre-provisioned Volume</a></li><li class="content__sections-item content__sections-item--h2"><a href="#launch-a-deployment-with-a-pre-provisioned-ebs-volume">Launch a deployment with a pre-provisioned EBS volume</a></li><li class="content__sections-item content__sections-item--h2"><a href="#delete-the-pre-provisioned-deployment">Delete the pre-provisioned deployment</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

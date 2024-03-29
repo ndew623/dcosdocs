@@ -1,0 +1,239 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Security - D2iQ Docs</title><meta name="description" content="Security for DC/OS Apache HDFS service"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Hdfs Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services/hdfs">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/hdfs/2.8.0-3.2.1/operations/security">HDFS 2.8.0-3.2.1</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/hdfs/2.5.0-2.6.0-cdh5.11.0/operations/security">HDFS 2.5.0-2.6.0-cdh5.11.0</a></li></ul><div class="toggle"><p><span class="title">Hdfs</span><span class="version"> 2.8.0-3.2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/hdfs/2.8.0-3.2.1/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/hdfs/2.8.0-3.2.1/getting-started/">Getting Started</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/hdfs/2.8.0-3.2.1/overview/">Overview</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/hdfs/2.8.0-3.2.1/operations/"><i data-feather="chevron-right"></i>Operations</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/hdfs/2.8.0-3.2.1/operations/configuration/">Configuration</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/hdfs/2.8.0-3.2.1/operations/updates/">Updating</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/services/hdfs/2.8.0-3.2.1/operations/security/">Security</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/hdfs/2.8.0-3.2.1/operations/uninstall/">Uninstalling</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/hdfs/2.8.0-3.2.1/operations/troubleshooting/">Troubleshooting</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/hdfs/2.8.0-3.2.1/api-reference/">API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/hdfs/2.8.0-3.2.1/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/hdfs/2.8.0-3.2.1/support-policy/">Supported Versions</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Security</h1></div><h4 class="content__header-description">Security for DC/OS Apache HDFS service</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/hdfs/2.8.0-3.2.1/operations/security/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+Security&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/services/hdfs/2.8.0-3.2.1/operations/security&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><h1 id="dcos-apache-hdfs-security"><a class="content__anchor" href="#dcos-apache-hdfs-security" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS Apache HDFS Security</h1>
+<p>The DC/OS Apache HDFS service supports HDFS’s native transport encryption, authentication, and authorization mechanisms. The service provides automation and orchestration to simplify the usage of these important features.</p>
+<p>A good overview of these features can be found <a href="https://hadoop.apache.org/docs/r3.2.1/hadoop-project-dist/hadoop-common/SecureMode.html">here</a>.</p>
+<p class="message--note"><strong>NOTE: </strong>These security features are only available on DC/OS Enterprise 1.10 and later.</p>
+<h2 id="transport-encryption"><a class="content__anchor" href="#transport-encryption" aria-hidden="true"><i data-feather="bookmark"></i></a>Transport Encryption</h2>
+<p>With transport encryption enabled, DC/OS Apache HDFS will automatically deploy all nodes with the correct configuration to encrypt communication via SSL. The nodes will communicate securely between themselves using SSL.</p>
+<p>The service uses the <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/tls-ssl/">DC/OS CA</a> to generate the SSL artifacts that it uses to secure the service. Any client that trusts the DC/OS CA will consider the service’s certificates valid.</p>
+<p class="message--note"><strong>NOTE: </strong>Enabling transport encryption is not <strong>required</strong> to use <a href="#kerberos-authentication">Kerberos authentication</a>, but transport encryption <strong>can</strong> be combined with Kerberos authentication.</p>
+<h3 id="prerequisites"><a class="content__anchor" href="#prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h3>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/latest/security/ent/service-auth/custom-service-auth/">A DC/OS Service Account with a secret stored in the DC/OS Secret Store</a>.</li>
+<li>DC/OS Superuser permissions for modifying the permissions of the Service Account.</li>
+</ul>
+<h3 id="configure-transport-encryption"><a class="content__anchor" href="#configure-transport-encryption" aria-hidden="true"><i data-feather="bookmark"></i></a>Configure Transport Encryption</h3>
+<h4 id="set-up-the-service-account"><a class="content__anchor" href="#set-up-the-service-account" aria-hidden="true"><i data-feather="bookmark"></i></a>Set up the service account</h4>
+<p><a href="/dcosdocs/mesosphere/dcos/latest/security/ent/perms-management/">Grant</a> the service account the correct permissions.</p>
+<ul>
+<li>In DC/OS 1.10, the required permission is <code>dcos:superuser full</code>.</li>
+<li>In DC/OS 1.11 and later, the required permissions are:</li>
+</ul>
+<pre><code>dcos:secrets:default:/&lt;service name&gt;/* full
+dcos:secrets:list:default:/&lt;service name&gt; read
+dcos:adminrouter:ops:ca:rw full
+dcos:adminrouter:ops:ca:ro full
+</code></pre>
+<p>where <code>&lt;service name&gt;</code> is the name of the service to be installed.</p>
+<!-- Not clear if this is the right location DCOS-39455 --> 
+<p>Run the following DC/OS Enterprise CLI commands to set permissions for the service account on a strict cluster:</p>
+<pre><code>dcos security org users grant ${SERVICE_ACCOUNT} dcos:mesos:master:task:app_id:&lt;service/name&gt; create
+dcos security org users grant ${SERVICE_ACCOUNT} dcos:mesos:master:reservation:principal:dev_hdfs create
+dcos security org users grant ${SERVICE_ACCOUNT} dcos:mesos:master:volume:principal:dev_hdfs create
+</code></pre>
+<h4 id="install-the-service"><a class="content__anchor" href="#install-the-service" aria-hidden="true"><i data-feather="bookmark"></i></a>Install the service</h4>
+<p>Install the DC/OS Apache HDFS service including the following options in addition to your own:</p>
+<pre><code class="language-json">{
+    &quot;service&quot;: {
+        &quot;service_account&quot;: &quot;&lt;your service account name&gt;&quot;,
+        &quot;service_account_secret&quot;: &quot;&lt;full path of service secret&gt;&quot;,
+        &quot;security&quot;: {
+            &quot;transport_encryption&quot;: {
+                &quot;enabled&quot;: true, &quot;allow_plaintext&quot;: &lt;true|false default false&gt;
+
+            }
+        }
+    }
+}
+</code></pre>
+<h4 id="transport-encryption-for-clients"><a class="content__anchor" href="#transport-encryption-for-clients" aria-hidden="true"><i data-feather="bookmark"></i></a>Transport Encryption for Clients</h4>
+<p>With Transport Encryption enabled, service clients will need to be configured to use the <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/tls-ssl/get-cert/">DC/OS CA bundle</a> to verify the connections they make to the service. Consult your client’s documentation for trusting a CA and configure your client appropriately.</p>
+<h2 id="authentication"><a class="content__anchor" href="#authentication" aria-hidden="true"><i data-feather="bookmark"></i></a>Authentication</h2>
+<p>DC/OS Apache HDFS supports Kerberos authentication.</p>
+<h3 id="kerberos-authentication"><a class="content__anchor" href="#kerberos-authentication" aria-hidden="true"><i data-feather="bookmark"></i></a>Kerberos Authentication</h3>
+<p>Kerberos authentication relies on a central authority to verify that HDFS clients are who they say they are. DC/OS Apache HDFS integrates with your existing Kerberos infrastructure to verify the identity of clients.</p>
+<h4 id="prerequisites-2"><a class="content__anchor" href="#prerequisites-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h4>
+<ul>
+<li>The hostname and port of a KDC reachable from your DC/OS cluster</li>
+<li>Sufficient access to the KDC to create Kerberos principals</li>
+<li>Sufficient access to the KDC to retrieve a keytab for the generated principals</li>
+<li><a href="/dcosdocs/mesosphere/dcos/latest/cli/enterprise-cli/#installing-the-dcos-enterprise-cli">The DC/OS Enterprise CLI</a></li>
+<li>DC/OS Superuser permissions</li>
+</ul>
+<h4 id="configure-kerberos-authentication"><a class="content__anchor" href="#configure-kerberos-authentication" aria-hidden="true"><i data-feather="bookmark"></i></a>Configure Kerberos Authentication</h4>
+<h4 id="create-principals"><a class="content__anchor" href="#create-principals" aria-hidden="true"><i data-feather="bookmark"></i></a>Create principals</h4>
+<p>The DC/OS Apache HDFS service requires Kerberos principals for each node to be deployed. The overall topology of the HDFS service is:</p>
+<ul>
+<li>3 journal nodes</li>
+<li>2 name nodes (with ZKFC)</li>
+<li>A configurable number of data nodes</li>
+</ul>
+<p class="message--note"><strong>NOTE: </strong> DC/OS Apache HDFS requires a principal for both the <tt>service primary</tt> and <tt>HTTP</tt>. The latter is used by the HTTP API.</p>
+<p>The required Kerberos principals will have the form:</p>
+<pre><code>&lt;service primary&gt;/name-0-node.&lt;service subdomain&gt;.autoip.dcos.thisdcos.directory@&lt;service realm&gt;
+HTTP/name-0-node.&lt;service subdomain&gt;.autoip.dcos.thisdcos.directory@&lt;service realm&gt;
+&lt;service primary&gt;/name-0-zkfc.&lt;service subdomain&gt;.autoip.dcos.thisdcos.directory@&lt;service realm&gt;
+HTTP/name-0-zkfc.&lt;service subdomain&gt;.autoip.dcos.thisdcos.directory@&lt;service realm&gt;
+&lt;service primary&gt;/name-1-node.&lt;service subdomain&gt;.autoip.dcos.thisdcos.directory@&lt;service realm&gt;
+HTTP/name-1-node.&lt;service subdomain&gt;.autoip.dcos.thisdcos.directory@&lt;service realm&gt;
+&lt;service primary&gt;/name-1-zkfc.&lt;service subdomain&gt;.autoip.dcos.thisdcos.directory@&lt;service realm&gt;
+HTTP/name-1-zkfc.&lt;service subdomain&gt;.autoip.dcos.thisdcos.directory@&lt;service realm&gt;
+
+&lt;service primary&gt;/journal-0-node.&lt;service subdomain&gt;.autoip.dcos.thisdcos.directory@&lt;service realm&gt;
+HTTP/journal-0-node.&lt;service subdomain&gt;.autoip.dcos.thisdcos.directory@&lt;service realm&gt;
+&lt;service primary&gt;/journal-1-node.&lt;service subdomain&gt;.autoip.dcos.thisdcos.directory@&lt;service realm&gt;
+HTTP/journal-1-node.&lt;service subdomain&gt;.autoip.dcos.thisdcos.directory@&lt;service realm&gt;
+&lt;service primary&gt;/journal-2-node.&lt;service subdomain&gt;.autoip.dcos.thisdcos.directory@&lt;service realm&gt;
+HTTP/journal-2-node.&lt;service subdomain&gt;.autoip.dcos.thisdcos.directory@&lt;service realm&gt;
+
+&lt;service primary&gt;/data-&lt;data-index&gt;-node.&lt;service subdomain&gt;.autoip.dcos.thisdcos.directory@&lt;service realm&gt;
+HTTP/data-&lt;data-index&gt;-node.&lt;service subdomain&gt;.autoip.dcos.thisdcos.directory@&lt;service realm&gt;
+
+</code></pre>
+<p>with:</p>
+<ul>
+<li><code>service primary = service.security.kerberos.primary</code></li>
+<li><code>data index = 0 up to data_node.count - 1</code></li>
+<li><code>service subdomain = service.name with all</code>/<code>'s removed</code></li>
+<li><code>service realm = service.security.kerberos.realm</code></li>
+</ul>
+<p>For example, if installing with these options:</p>
+<pre><code class="language-json">{
+    &quot;service&quot;: {
+        &quot;name&quot;: &quot;a/good/example&quot;,
+        &quot;security&quot;: {
+            &quot;kerberos&quot;: {
+                &quot;primary&quot;: &quot;example&quot;,
+                &quot;realm&quot;: &quot;EXAMPLE&quot;
+            }
+        }
+    },
+    &quot;data_node&quot;: {
+        &quot;count&quot;: 3
+    }
+}
+</code></pre>
+<p>then the principals to create would be:</p>
+<pre><code>example/name-0-node.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE
+HTTP/name-0-node.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE
+example/name-0-zkfc.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE
+HTTP/name-0-zkfc.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE
+example/name-1-node.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE
+HTTP/name-1-node.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE
+example/name-1-zkfc.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE
+HTTP/name-1-zkfc.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE
+
+example/journal-0-node.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE
+HTTP/journal-0-node.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE
+example/journal-1-node.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE
+HTTP/journal-1-node.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE
+example/journal-2-node.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE
+HTTP/journal-2-node.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE
+
+example/data-0-node.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE
+HTTP/data-0-node.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE
+example/data-1-node.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE
+HTTP/data-1-node.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE
+example/data-2-node.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE
+HTTP/data-2-node.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE
+</code></pre>
+<h5 id="active-directory"><a class="content__anchor" href="#active-directory" aria-hidden="true"><i data-feather="bookmark"></i></a>Active Directory</h5>
+<p>Microsoft Active Directory can be used as a Kerberos KDC. Doing so requires creating a mapping between Active Directory users and Kerberos principals.</p>
+<p>The utility <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/ktpass">ktpass</a> can be used to both create a keytab from Active Directory and generate the mapping at the same time.</p>
+<p>The mapping <em>can</em>, however, be created manually. For a Kerberos principal like <code>&lt;primary&gt;/&lt;host&gt;@&lt;REALM&gt;</code>, the Active Directory user should have its <code>servicePrincipalName</code> and <code>userPrincipalName</code> attributes set to,</p>
+<pre><code>servicePrincipalName = &lt;primary&gt;/&lt;host&gt;
+userPrincipalName = &lt;primary&gt;/&lt;host&gt;@&lt;REALM&gt;
+</code></pre>
+<p>For example, with the Kerberos principal <code>example&amp;#x2F;name-0-node.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE</code>, then the correct mapping would be,</p>
+<pre><code>servicePrincipalName = example&amp;#x2F;name-0-node.agoodexample.autoip.dcos.thisdcos.directory
+userPrincipalName = example&amp;#x2F;name-0-node.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE
+</code></pre>
+<p>If either mapping is incorrect or not present, the service will fail to authenticate that Principal. The symptom in the Kerberos debug logs will be an error of the form</p>
+<pre><code>KRBError:
+sTime is Wed Feb 07 03:22:47 UTC 2018 1517973767000
+suSec is 697984
+error code is 6
+error Message is Client not found in Kerberos database
+sname is krbtgt/AD.MESOSPHERE.COM@AD.MESOSPHERE.COM
+msgType is 30
+</code></pre>
+<p>when the <code>userPrincipalName</code> is set incorrectly, and an error of the form</p>
+<pre><code>KRBError:
+sTime is Wed Feb 07 03:44:57 UTC 2018 1517975097000
+suSec is 128465
+error code is 7
+error Message is Server not found in Kerberos database
+sname is kafka/kafka-1-broker.confluent-kafka.autoip.dcos.thisdcos.directory@AD.MESOSPHERE.COM
+msgType is 30
+</code></pre>
+<p>when the <code>servicePrincipalName</code> is set incorrectly.</p>
+<h4 id="place-service-keytab-in-dcos-secret-store"><a class="content__anchor" href="#place-service-keytab-in-dcos-secret-store" aria-hidden="true"><i data-feather="bookmark"></i></a>Place Service Keytab in DC/OS Secret Store</h4>
+<p>The DC/OS Apache HDFS service uses a keytab containing all node principals (service keytab). After creating the principals above, generate the service keytab making sure to include all the node principals. This will be stored as a secret in the DC/OS Secret Store.</p>
+<p class="message--note"><strong>NOTE: </strong>DC/OS 1.10 does not support adding binary secrets directly to the secret store, only text files are supported. Instead, first base64 encode the file, and save it to the secret store as <tt>/desired/path/__dcos_base64__secret_name</tt>. The DC/OS security modules will handle decoding the file when it is used by the service. </p>
+<p>The service keytab should be stored at <code>service/path/name/service.keytab</code>. As noted above. for DC/OS 1.10, it would be <code>__dcos_base64__service.keytab</code>), where <code>service/path/name</code> matches the path and name of the service. For example, if installing with the options</p>
+<pre><code class="language-json">{
+    &quot;service&quot;: {
+        &quot;name&quot;: &quot;a/good/example&quot;
+    }
+}
+</code></pre>
+<p>then the service keytab should be stored at <code>a/good/example/service.keytab</code>.</p>
+<p>Documentation for adding a file to the secret store can be found <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/secrets/create-secrets/#creating-secrets-from-a-file-via-the-dcos-enterprise-cli">here</a>.</p>
+<p class="message--note"><strong>NOTE: </strong>Secrets access is controlled by <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/#spaces-for-secrets">DC/OS Spaces</a>, which function like namespaces. Any secret in the same DC/OS Space as the service will be accessible by the service. However, matching the two paths is the most secure option. Additionally the secret name <tt>service.keytab</tt> is a convention and not a requirement.</p>
+<h4 id="install-the-service-2"><a class="content__anchor" href="#install-the-service-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Install the Service</h4>
+<p>Install the DC/OS Apache HDFS service with the following options in addition to your own:</p>
+<pre><code class="language-json">{
+    &quot;service&quot;: {
+        &quot;security&quot;: {
+            &quot;kerberos&quot;: {
+                &quot;enabled&quot;: true,
+                &quot;kdc&quot;: {
+                    &quot;hostname&quot;: &quot;&lt;kdc host&gt;&quot;,
+                    &quot;port&quot;: &lt;kdc port&gt;
+                },
+                &quot;primary&quot;: &quot;&lt;service primary default hdfs&gt;&quot;,
+                &quot;realm&quot;: &quot;&lt;realm&gt;&quot;,
+                &quot;keytab_secret&quot;: &quot;&lt;path to keytab secret&gt;&quot;,
+                &quot;debug&quot;: &lt;true|false default false&gt;
+            }
+        }
+    }
+}
+</code></pre>
+<h2 id="authorization"><a class="content__anchor" href="#authorization" aria-hidden="true"><i data-feather="bookmark"></i></a>Authorization</h2>
+<p>The DC/OS Apache HDFS service supports HDFS’s native authorization, which behaves similarly to UNIX file permissions. If Kerberos is enabled as detailed <a href="#kerberos-authentication">above</a>, then Kerberos principals are mapped to HDFS users against which permissions can be assigned.</p>
+<h3 id="enable-authorization"><a class="content__anchor" href="#enable-authorization" aria-hidden="true"><i data-feather="bookmark"></i></a>Enable Authorization</h3>
+<h4 id="prerequisites-3"><a class="content__anchor" href="#prerequisites-3" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h4>
+<ul>
+<li>Completion of  <a href="#kerberos-authentication">Kerberos authentication</a> above.</li>
+</ul>
+<h4 id="set-kerberos-principal-to-user-mapping"><a class="content__anchor" href="#set-kerberos-principal-to-user-mapping" aria-hidden="true"><i data-feather="bookmark"></i></a>Set Kerberos Principal to User Mapping</h4>
+<p>A custom mapping must be set to map Kerberos principals to OS user names for the purposes of determining group membership. This is supplied by setting the parameter</p>
+<pre><code>{
+    &quot;hdfs&quot;: {
+        &quot;security_auth_to_local&quot;: &quot;&lt;custom mapping&gt;&quot;
+    }
+}
+</code></pre>
+<p>where <code>&lt;custom mapping&gt;</code> is a base64-encoded string.</p>
+<p class="message--note"><strong>NOTE: </strong>Mappings for HDFS service principals will be inserted automatically.</p>
+<p><a href="https://hortonworks.com/blog/fine-tune-your-apache-hadoop-security-settings/">This</a> article has a good description of how to build a custom mapping, under the section “Kerberos Principals and UNIX User Names”.</p>
+<p class="message--note"><strong>NOTE: </strong>In DC/OS 1.11 and later, the DC/OS UI will automatically encode and decode the mapping to and from base64. If installing from the CLI or from the UI in a version earlier than DC/OS 1.11, it is necessary to do the encoding manually.</p>
+<h2 id="forwarding-dns-and-custom-domain"><a class="content__anchor" href="#forwarding-dns-and-custom-domain" aria-hidden="true"><i data-feather="bookmark"></i></a>Forwarding DNS and Custom Domain</h2>
+<p>Every DC/OS cluster has a unique cryptographic ID which can be used to forward DNS queries to that cluster. To securely expose the service outside the cluster, external clients must have an upstream resolver configured to forward DNS queries to the DC/OS cluster of the service as described <a href="/dcosdocs/mesosphere/dcos/latest/networking/DNS/mesos-dns/expose-mesos-zone/">here</a>.</p>
+<p>With only forwarding configured, DNS entries within the DC/OS cluster will be resolvable at <code>&lt;task-domain&gt;.autoip.dcos.&lt;cryptographic-id&gt;.dcos.directory</code>. However, if you configure a DNS alias, you can use a custom domain. For example, <code>&lt;task-domain&gt;.cluster-1.acmeco.net</code>. In either case, the DC/OS Apache HDFS service will need to be installed with an additional security option:</p>
+<pre><code class="language-json">{
+    &quot;service&quot;: {
+        &quot;security&quot;: {
+            &quot;custom_domain&quot;: &quot;&lt;custom-domain&gt;&quot;
+        }
+    }
+}
+</code></pre>
+<p>where <code>&lt;custom-domain&gt;</code> is one of <code>autoip.dcos.&lt;cryptographic-id&gt;.dcos.directory</code> or your organization’s specific domain (e.g., <code>cluster-1.acmeco.net</code>).</p>
+<p>As a concrete example, using the custom domain of <code>cluster-1.acmeco.net</code> the node 0 task would have a host of <code>node-0-server.&lt;service-name&gt;.cluster-1.acmeco.net</code>.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#dcos-apache-hdfs-security">DC/OS Apache HDFS Security</a></li><li class="content__sections-item content__sections-item--h2"><a href="#transport-encryption">Transport Encryption</a></li><li class="content__sections-item content__sections-item--h2"><a href="#authentication">Authentication</a></li><li class="content__sections-item content__sections-item--h2"><a href="#authorization">Authorization</a></li><li class="content__sections-item content__sections-item--h2"><a href="#forwarding-dns-and-custom-domain">Forwarding DNS and Custom Domain</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

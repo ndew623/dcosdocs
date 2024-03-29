@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>创建服务 - D2iQ Docs</title><meta name="description" content="使用 Marathon 定义 DC/OS 服务"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/1.13/deploying-services/creating-services">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/creating-services">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/creating-services">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/creating-services">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/marathon-parameters/">Marathon 配置参考</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/install/">安装服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/task-handling/"><i data-feather="chevron-right"></i>任务处理</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/creating-services/"><i data-feather="chevron-right"></i>创建服务</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/creating-services/deploy-docker-app/">教程 - 部署基于 Docker 的服务</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/creating-services/health-checks/">状况检查</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/config-universe-service/">配置服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/marathon-constraints/">Marathon 布局约束</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/scale-service/">扩展服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/service-groups/">授权访问服务和组</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/fault-domain-awareness/">故障域感知和容量扩展</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/update-user-service/">更新用户创建的服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/service-ports/">服务端口</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/service-endpoints/">服务端点</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/monitor-services/">监控服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/private-docker-registry/">使用专用 Docker 注册表</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/expose-service/">公开服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/deployments/">部署</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/uninstall/">卸载服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/package-api/">包管理 API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/marathon-on-marathon/"><i data-feather="chevron-right"></i>使用自定义 Marathon</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/marathon-api/">Marathon  API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/containerizers/"><i data-feather="chevron-right"></i>使用容器化工具</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/pods/"><i data-feather="chevron-right"></i>Pod</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/multi-tenancy-primitives/">多租户原始文件</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/gpu/">使用 GPU</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/faq/">常见问题</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">创建服务</h1></div><h4 class="content__header-description">使用 Marathon 定义 DC/OS 服务</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/creating-services/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>Marathon 应用程序通常代表长期运行的服务，有许多实例在多个主机上运行。应用程序实例称为<strong>任务</strong>。<strong>应用定义</strong>描述启动和维护任务所需的一切。Marathon 应用定义创建 DC/OS <strong>服务</strong>。</p>
+<h1 id="shell"><a class="content__anchor" href="#shell" aria-hidden="true"><i data-feather="bookmark"></i></a>内联 shell 脚本</h1>
+<p>您可以在内联 shell 脚本中部署简单的程序。我们从简单的示例开始：一项服务，它将 <code>Hello Marathon</code> 打印到 <code>stdout</code>，然后在无限循环中休眠 5 秒。</p>
+<ol>
+<li>
+<p>使用以下 JSON 应用定义描述应用程序。使用您选择的名称创建文件。</p>
+<pre><code class="language-json">{
+    &quot;id&quot;: &quot;basic-0&quot;,
+    &quot;cmd&quot;: &quot;while [ true ] ; do echo 'Hello Marathon' ; sleep 5 ; done&quot;,
+    &quot;cpus&quot;: 0.1,
+    &quot;mem&quot;: 10.0,
+    &quot;instances&quot;: 1
+}
+</code></pre>
+<p>在上述示例中， <code>cmd</code> 是执行的命令。它的值由底层的 Mesos 执行器通过  包装。<code>/bin/sh -c ${cmd}</code>.</p>
+</li>
+<li>
+<p>使用 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/">DC/OS CLI</a> 将服务添加到 DC/OS。</p>
+<pre><code class="language-bash">dcos marathon app add &lt;your-service-name&gt;.json
+</code></pre>
+</li>
+</ol>
+<p>当您定义并启动服务时，Marathon 将执行交给 Mesos。Mesos 为每个任务创建一个沙盒目录。sandbox 目录是每个代理节点上的目录，用作执行环境并包含相关的日志文件。<code>stderr</code> 和 <code>stdout</code> 流也会写入沙盒目录。</p>
+<h2 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>申请应用程序中的资源</h2>
+<p>若要运行任何有意义的应用程序，通常依赖于一组资源：文件或文件存档。为了管理资源分配，Marathon 具有 URI（统一资源标识符）的概念。URL 使用 <a href="http://mesos.apache.org/documentation/latest/fetcher/">Mesos 抓取器</a> 在下载（并可能）提取资源方面做好工作。</p>
+<p>示例：</p>
+<pre><code class="language-json">{
+    &quot;id&quot;: &quot;basic-1&quot;,
+    &quot;cmd&quot;: &quot;`chmod u+x cool-script.sh &amp;&amp; ./cool-script.sh`&quot;,
+    &quot;cpus&quot;: 0.1,
+    &quot;mem&quot;: 10.0,
+    &quot;instances&quot;: 1,
+    &quot;fetch&quot;: [ { &quot;uri&quot;: &quot;https://example.com/app/cool-script.sh&quot; } ]
+}
+</code></pre>
+<p>上述示例执行 <code>cmd</code> 内容，下载资源 <code>https://example.com/app/cool-script.sh</code> (通过 Mesos)，并使其在服务实例的 Mesos 沙盒中可用。您可以通过访问 DC/OS Web 界面并单击 <code>basic-1</code> 的实例，然后单击<strong>Files</strong>选项卡来验证是否已下载。您应该在那里找到 <code>cool-script.sh</code></p>
+<p class="message--note"><strong>注意：</strong>默认情况下，抓取器不会使下载的文件可执行。在上述示例中，<code>cmd</code> 首先使文件可执行。</p>
+<p>如前所述，Marathon 还知道如何处理存档中的应用程序资源。目前，Marathon（通过 Mesos 并在执行 <code>cmd</code> 之前） 首次尝试使用以下文件扩展名解压缩/提取资源：</p>
+<ul>
+<li><code>.tgz</code></li>
+<li><code>.tar.gz</code></li>
+<li><code>.tbz2</code></li>
+<li><code>.tar.bz2</code></li>
+<li><code>.txz</code></li>
+<li><code>.tar.xz</code></li>
+<li><code>.zip</code></li>
+</ul>
+<p>以下示例展示了这在实践中是如何进行的。假设您的应用程序可执行文件位于  中的 zip文件中。<code>https://example.com/app.zip</code>. 此 zip 文件包含要执行的脚本 <code>cool-script.sh</code> 方法如下：</p>
+<pre><code class="language-json">{
+    &quot;id&quot;: &quot;basic-2&quot;,
+    &quot;cmd&quot;: &quot;app/cool-script.sh&quot;,
+    &quot;cpus&quot;: 0.1,
+    &quot;mem&quot;: 10.0,
+    &quot;instances&quot;: 1,
+    &quot;fetch&quot;: [ { &quot;uri&quot;: &quot;https://example.com/app.zip&quot; } ]
+}
+</code></pre>
+<p>与实例 <code>basic-1</code> 相反，我们现在有一个 <code>cmd</code>，值为 <code>app/cool-script.sh</code>. 下载并解压缩 zip 文件后，根据文件名 <code>app</code> 创建目录 <code>app.zip</code>，并将 zip 文件的内容提取到其中。</p>
+<p>您可以指定多个资源。例如，您可以提供 Git 存储库以及 CDN 中的一些资源，如下所示：</p>
+<pre><code class="language-json">{
+    &quot;fetch&quot;: [
+        { &quot;uri&quot;: &quot;https://git.example.com/repo-app.zip&quot;, &quot;https://cdn.example.net/my-file.jpg&quot;},
+        { &quot;uri&quot;: &quot;https://cdn.example.net/my-other-file.css&quot; }
+    ]
+}
+</code></pre>
+<p>开发和部署周期的典型模式是让您的自动构建系统将应用程序二进制文件放置在可通过 URI 下载的位置。Marathon 可以从多个来源下载资源。Marathon 支持以下 <a href="http://tools.ietf.org/html/rfc3986#section-3.1">URI 方案</a>：</p>
+<ul>
+<li><code>file:</code></li>
+<li><code>http:</code></li>
+<li><code>https:</code></li>
+<li><code>ftp:</code></li>
+<li><code>ftps:</code></li>
+<li><code>hdfs:</code></li>
+<li><code>s3:</code></li>
+<li><code>s3a:</code></li>
+<li><code>s3n:</code></li>
+</ul>
+<h1 id="rest-api"><a class="content__anchor" href="#rest-api" aria-hidden="true"><i data-feather="bookmark"></i></a>REST API</h1>
+<p>您可以使用 REST API 部署基于 Docker 的简单应用程序。通过 Marathon，运行使用 Docker 镜像的应用程序非常简单。</p>
+<p>在以下示例中，使用 Marathon API 将 Docker 应用程序部署到 DC/OS。Docker 应用程序是基于 Python 的 Web 服务器，使用 <a href="https://registry.hub.docker.com/_/python/">python:3</a> 镜像。在容器内，Web 服务器在端口 <code>80</code>（<code>containerPort</code>的值）上运行。 <code>hostPort</code> 设置为 <code>0</code> 以便 Marathon 在 Mesos 代理节点上分配一个随机端口，该端口映射到容器内的端口 80。</p>
+<ol>
+<li>
+<p>选择是否使用 Universal Container Runtime (UCR) 或 Docker Engine 运行时间。请参阅<a href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/containerizers/">使用容器化工具</a>.</p>
+<ul>
+<li>
+<p>若要使用 Universal Container Runtime (UCR)，请将以下 JSON 粘贴到名为 <code>basic-3-mesos.json</code> 的文件中:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;basic-3-mesos&quot;,
+  &quot;cmd&quot;: &quot;cd /;python3 -m http.server 80&quot;,
+  &quot;acceptedResourceRoles&quot;: [&quot;slave_public&quot;],
+  &quot;container&quot;: {
+    &quot;portMappings&quot;: [
+      {
+        &quot;containerPort&quot;: 80,
+        &quot;hostPort&quot;: 0
+      }
+    ],
+    &quot;type&quot;: &quot;MESOS&quot;,
+    &quot;docker&quot;: { &quot;image&quot;: &quot;python:3&quot; }
+  },
+  &quot;cpus&quot;: 0.5,
+  &quot;mem&quot;: 32,
+  &quot;networks&quot;: [ { &quot;mode&quot;: &quot;container/bridge&quot; } ]
+}
+</code></pre>
+</li>
+<li>
+<p>若要使用 Docker Engine 运行时间，请将以下 JSON 粘贴到名为  的文件中：<code>basic-3-docker.json</code>:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;basic-3-docker&quot;,
+  &quot;cmd&quot;: &quot;cd /;python3 -m http.server 80&quot;,
+  &quot;acceptedResourceRoles&quot;: [ &quot;slave_public&quot; ],
+  &quot;container&quot;: {
+    &quot;portMappings&quot;: [
+      {
+        &quot;containerPort&quot;: 80,
+        &quot;hostPort&quot;: 0
+      }
+    ],
+    &quot;type&quot;: &quot;DOCKER&quot;,
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;python:3&quot; },
+      &quot;parameters&quot;: [
+        {
+          &quot;key&quot;: &quot;log-driver&quot;,
+          &quot;value&quot;: &quot;none&quot;
+        }
+      ]
+  },
+  &quot;cpus&quot;: 0.5,
+  &quot;instances&quot;: 1,
+  &quot;mem&quot;: 32,
+  &quot;networks&quot;: [ { &quot;mode&quot;: &quot;container/bridge&quot; } ]
+}
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>使用 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/marathon-api/">Marathon API</a> 部署应用程序 <code>basic-3-docker</code>. 请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/iam-api/">验证 HTTP API 端点</a> 以了解有关如下命令中所需的 API 令牌的更多信息。</p>
+<pre><code class="language-sh"> curl -H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; -X POST &lt;master-IP&gt;/service/marathon/v2/apps -d @basic-3-docker.json -H &quot;Content-type: application/json&quot;
+</code></pre>
+</li>
+<li>
+<p>转到 DC/OS GUI 的 <strong>Services</strong> 选项卡以查看正在运行的服务。</p>
+</li>
+<li>
+<p>单击 <code>basic-3-docker</code>，然后单击任务 ID。</p>
+</li>
+<li>
+<p>向下滚动到 <strong>Marathon Task Configuration</strong> 部分，并记录 PORTS 属性。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/1.13/img/container-port.png" alt="容器端口"></p>
+<p>图 1. 容器端口</p>
+</li>
+<li>
+<p>确定<a href="/dcosdocs/mesosphere/dcos/cn/1.13/administering-clusters/locate-public-agent/">公共节点的 IP 地址</a>.</p>
+</li>
+<li>
+<p>导航至 <code>&lt;public-node-IP&gt;:&lt;port&gt;</code> 以查看 Docker 容器根目录的内容。</p>
+</li>
+</ol>
+<div class="grid"><a class="grid__item" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/creating-services/deploy-docker-app"><div class="grid__header__wrapper"><h3 class="grid__header">教程 - 部署基于 Docker 的服务</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">部署基于 Docker 的服务<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/creating-services/health-checks"><div class="grid__header__wrapper"><h3 class="grid__header">状况检查</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">定义 DC/OS 服务的运行状况检查<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a></div></article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#shell">内联 shell 脚本</a></li><li class="content__sections-item content__sections-item--h2"><a href="#申请应用程序中的资源">申请应用程序中的资源</a></li><li class="content__sections-item content__sections-item--h1"><a href="#rest-api">REST API</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

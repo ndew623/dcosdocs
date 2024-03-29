@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Azure 容器服务 - D2iQ Docs</title><meta name="description" content="了解 DC/OS 如何实现 Azure 容器服务"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.0/overview/design/azure-container-service">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.0"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/design/azure-container-service">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/design/azure-container-service">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/design/azure-container-service">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.0</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/"><i data-feather="chevron-right"></i>概述</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/what-is-dcos/">什么是 DC/OS</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/architecture/"><i data-feather="chevron-right"></i>架构</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/features/">特性</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/concepts/">概念</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/high-availability/">高可用性</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/telemetry/">遥测</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/feature-maturity/">特性成熟度</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/design/"><i data-feather="chevron-right"></i>设计</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/design/auth-flow/">认证架构</a></li><li class="active active-on"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/design/azure-container-service/">ACS</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/design/dns-proxy/">分布式 DNS</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/design/installation/">安装</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/design/overlay/">覆盖网络</a></li></ul></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Azure 容器服务</h1></div><h4 class="content__header-description">了解 DC/OS 如何实现 Azure 容器服务</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.0/overview/design/azure-container-service/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p><a href="https://azure.microsoft.com/documentation/articles/container-service-deployment/">Azure 容器服务</a> 是对已优化 DC/OS 的参考实现，以充分利用 Microsoft Azure 基础架构的特性。如果您已拥有 Azure 帐户，则可以通过 [创建 Azure 容器服务群集]，尝试参考实现在 <a href="https://aka.ms/acscreate">Microsoft Azure 上构建的 DC/OS</a>. （若没有账户，请首先获得 <a href="https://azure.microsoft.com/pricing/free-trial/">免费 Azure 试用帐户</a></p>
+<p class="message--warning"><strong>警告：</strong>Mesosphere 不支持 Ubuntu 作为 DC/OS 的操作系统，即便是使用 Microsoft Azure 时。</p>
+<p>本文档介绍了：</p>
+<ul>
+<li>使用 DC/OS 的好处</li>
+<li>Azure 基础架构和实现架构</li>
+<li>用于构建 DC/OS 和 ACS 群集的物料清单</li>
+</ul>
+<h2 id="dcos"><a class="content__anchor" href="#dcos" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS 的优势</h2>
+<p>DC/OS 由 Apache Mesos 提供支持，用作一组计算机的分布式内核，您可以将其视为一个单元，但您仍保持对每个单元的控制。在 DC/OS 中，系统的内核是任意数量公开可用和专用的 Mesos 管理节点和代理节点；故障的 Mesos 管理节点由备用管理节点透明地替代，并处理领导者选举。管理节点处理有故障的代理节点和进程。</p>
+<p>DC/OS 应用程序用作其分布式用户空间中的系统组件。系统 Marathon 组件对于 DC/OS 是分布式 <code>init</code>，但这还包括 Admin Router 服务、Mesos-DNS 服务、Exhibitor，以及用户进程使用的以及管理主节点和代理节点的其他系统范围组件。</p>
+<p>有关 DC/OS 更全面的架构描述，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/architecture/">DC/OS 架构</a>.</p>
+<p>关于更完整的组件讨论，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/architecture/components/">DC/OS 组件</a>.</p>
+<h3 id="dcos-mesos"><a class="content__anchor" href="#dcos-mesos" aria-hidden="true"><i data-feather="bookmark"></i></a>为什么选择 DC/OS 而不是 Mesos？</h3>
+<p>许多公司 <a href="https://mesos.apache.org/documentation/latest/powered-by-mesos/">使用 Mesos 直接取得成功</a>. 然而，DC/OS 具有几个重要特点，区别于 Mesos 的开源特点，并为您的部署添加功能。</p>
+<ol>
+<li>部署和管理 Mesos 可能很复杂，原因正是它可以管理非常复杂的环境；DC/OS 使这种复杂性变得简单易用并为社区所支持。</li>
+<li>DC/OS 实现了不仅仅工业级别还有互联网级别的容错性。</li>
+<li>DC/OS Catalog 一系列包使得安装简便，通过提供所有相应的开源软件包，支持开发人员、数据科学家和系统管理员。</li>
+<li>实时度量标准“firehouse”开放供您喜爱的诊断和分析包使用。</li>
+<li>DC/OS 有三种管理分布式操作系统的方式：CLI、图形界面和 API。</li>
+</ol>
+<p>Catalog 包</p>
+<p>以下是 DC/OS 第 1 天 Catalog 中内容的列表，按许可证类型分类。</p>
+<h4 id="apache-v2"><a class="content__anchor" href="#apache-v2" aria-hidden="true"><i data-feather="bookmark"></i></a>Apache 许可证 V2</h4>
+<ul>
+<li>ArangoDB</li>
+<li>Apache Cassandra</li>
+<li>Crate</li>
+<li>Elastic Search</li>
+<li>Etcd</li>
+<li>Exhibitor</li>
+<li>Apache Hadoop</li>
+<li>Hue</li>
+<li>Jenkins</li>
+<li>Apache Kafka</li>
+<li>Linkerd</li>
+<li>Mr Redis</li>
+<li>Namerd</li>
+<li>Quobyte</li>
+<li>Riak</li>
+<li>Spark Notebook</li>
+<li>Apache Spark</li>
+<li>Apache Storm</li>
+<li>Docker Swarm</li>
+<li>Apache Zeppelin</li>
+</ul>
+<h4 id="bsd"><a class="content__anchor" href="#bsd" aria-hidden="true"><i data-feather="bookmark"></i></a>简化的 BSD</h4>
+<ul>
+<li>Datadog</li>
+<li>Nginx</li>
+</ul>
+<h4 id="mit"><a class="content__anchor" href="#mit" aria-hidden="true"><i data-feather="bookmark"></i></a>MIT</h4>
+<ul>
+<li>OpenVPN Admin</li>
+<li>OpenVPN</li>
+<li>Ruxit</li>
+</ul>
+<p>您不仅可以使用 DC/OS 包系统带有的 Catalog 包，还可以在那里发布您的技能来回馈社区。您也可能希望自己部署 DC/OS；您可以从使用 Azure 容器服务，在“云”中参考实现 DC/OS 开始。</p>
+<h2 id="azure"><a class="content__anchor" href="#azure" aria-hidden="true"><i data-feather="bookmark"></i></a>Azure 容器服务基础架构和优化</h2>
+<p>Azure 容器服务采用 DC/OS 构建，作为关键编排选项之一。DC/OS 实现经过优化，可在 Microsoft Azure 和本地轻松创建和使用，最终使用 Azure Stack。它是开始使用 DC/OS、Mesos 和分布式群集（可以像一个大型系统一样管理）的最佳方式之一，无论是在您的数据中心，还是在 Azure 中。</p>
+<p>Azure 容器服务实现为您带来了其他好处：</p>
+<ol>
+<li>这是开始使用 DC/OS 的最简便方法。您只需点击几个按钮并提供几个参数，然后就可以部署应用程序了。如果您有 Azure 帐户，<a href="https://aka.ms/acscreate">请尝试</a>.</li>
+<li>DC/OS 部署专门针对 Azure 经过审核和优化：所有虚拟机、存储、网络、负载均衡器等都可以为高可用性 DC/OS 群集创建并配置。</li>
+<li>您可以增加与 Azure 服务的集成性，条件是您认定随着系统前进它会使您的部署受益。</li>
+<li>ACS 为基础架构提供 Microsoft 支持，以补充 Mesosphere 对 DC/OS 的支持。</li>
+</ol>
+<p>默认的 ACS 架构与此相似：</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.0/img/dcos-acs.png" alt="使用 DC/OS 的 Azure 容器服务架构。"></p>
+<p>图 1 - 使用 DC/OS 的 Azure 容器服务架构</p>
+<h2 id="dcos-2"><a class="content__anchor" href="#dcos-2" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS 组件列表</h2>
+<p>以下列表显示了 DC/OS 本身使用的组件。您会注意到围绕 Mesos、Marathon、Python 等的核心组件。</p>
+<!-- Note to translators: do not translate this list. -->
+<ul>
+<li>adminrouter</li>
+<li>boost-system</li>
+<li>boto</li>
+<li>bouncer</li>
+<li>cosmos</li>
+<li>curl</li>
+<li>dcos-cluster-id</li>
+<li>dcos-diagnostics</li>
+<li>dcos-history-service（已弃用）</li>
+<li>dcos-image</li>
+<li>dcos-image-deps</li>
+<li>dcos-installer</li>
+<li>dcos-installer-ui</li>
+<li>dcos-metrics</li>
+<li>dcos-oauth</li>
+<li>dcos-signal</li>
+<li>dcos-ui</li>
+<li>dnspython</li>
+<li>erlang</li>
+<li>exhibitor</li>
+<li>flask</li>
+<li>hadoop</li>
+<li>hdfs-mesos</li>
+<li>java</li>
+<li>libevent</li>
+<li>logrotate</li>
+<li>marathon</li>
+<li>mesos</li>
+<li>mesos-buildenv</li>
+<li>mesos-dns</li>
+<li>mesos-metrics-module</li>
+<li>mesos-modules-private</li>
+<li>minuteman</li>
+<li>ncurses</li>
+<li>networking_api</li>
+<li>openssl</li>
+<li>python</li>
+<li>python-dateutil</li>
+<li>python-docopt</li>
+<li>python-jinja2</li>
+<li>python-kazoo</li>
+<li>python-markupsafe</li>
+<li>python-passlib</li>
+<li>python-pyyaml</li>
+<li>python-requests</li>
+<li>python-retry</li>
+<li>six</li>
+<li>spartan</li>
+<li>strace</li>
+<li>toybox</li>
+<li>treeinfo.json</li>
+<li>zk-value-consensus</li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#dcos">DC/OS 的优势</a></li><li class="content__sections-item content__sections-item--h2"><a href="#azure">Azure 容器服务基础架构和优化</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-2">DC/OS 组件列表</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

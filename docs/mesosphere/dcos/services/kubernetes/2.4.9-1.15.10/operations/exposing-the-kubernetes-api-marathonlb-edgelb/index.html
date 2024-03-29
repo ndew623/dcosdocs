@@ -1,0 +1,224 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Exposing the Kubernetes API via Marathon-LB or Edge-LB - D2iQ Docs</title><meta name="description" content="Setting up HAProxy to expose the Kubernetes API via Marathon-LB or Edge-LB"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Kubernetes Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.8.0-1.19.2/operations/exposing-the-kubernetes-api-marathonlb-edgelb">Kubernetes 2.8.0-1.19.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.7.0-1.18.6/operations/exposing-the-kubernetes-api-marathonlb-edgelb">Kubernetes 2.7.0-1.18.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.6.1-1.17.8/operations/exposing-the-kubernetes-api-marathonlb-edgelb">Kubernetes 2.6.1-1.17.8</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.6.0-1.17.7/operations/exposing-the-kubernetes-api-marathonlb-edgelb">Kubernetes 2.6.0-1.17.7</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.5.0-1.16.9/operations/exposing-the-kubernetes-api-marathonlb-edgelb">Kubernetes 2.5.0-1.16.9</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/exposing-the-kubernetes-api-marathonlb-edgelb">Kubernetes 2.4.9-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/operations/exposing-the-kubernetes-api-marathonlb-edgelb">Kubernetes 2.4.8-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.7-1.15.10/operations/exposing-the-kubernetes-api-marathonlb-edgelb">Kubernetes 2.4.7-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.6-1.15.6/operations/exposing-the-kubernetes-api-marathonlb-edgelb">Kubernetes 2.4.6-1.15.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.5-1.15.5/operations/exposing-the-kubernetes-api-marathonlb-edgelb">Kubernetes 2.4.5-1.15.5</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/exposing-the-kubernetes-api-marathonlb-edgelb">Kubernetes 2.4.4-1.15.4</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/exposing-the-kubernetes-api-marathonlb-edgelb">Kubernetes 2.4.3-1.15.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.2-1.15.3/operations/exposing-the-kubernetes-api-marathonlb-edgelb">Kubernetes 2.4.2-1.15.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/operations/exposing-the-kubernetes-api-marathonlb-edgelb">Kubernetes 2.4.1-1.15.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.10-1.15.10/operations/exposing-the-kubernetes-api-marathonlb-edgelb">Kubernetes 2.4.10-1.15.10</a></li></ul><div class="toggle"><p><span class="title">Kubernetes</span><span class="version"> 2.4.9-1.15.10</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/overview/">Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/getting-started/"><i data-feather="chevron-right"></i>Tutorial - Kubernetes on DC/OS Enterprise</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/"><i data-feather="chevron-right"></i>Operations</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/cluster-sizing/">Cluster Sizing</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/kubernetes-audit/">Kubernetes Auditing</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/kubernetes-dashboard/">Kubernetes Dashboard</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/metrics-exporter/">Metrics Exporter</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/quota-support/">Quota Support</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/ingress/">External Ingress</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/admission-controllers/">Admission Controllers</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/authn-and-authz/">Authentication and Authorization</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/encrypt-data/">Encrypt Data</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/customizing-install/">Customizing</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/gatekeeper/">Enforce policies using Gatekeeper</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/upgrade/">Upgrade</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/exposing-the-kubernetes-api/">Exposing the Kubernetes API</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/exposing-the-kubernetes-api-marathonlb-edgelb/">Exposing the Kubernetes API via Marathon-LB or Edge-LB</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/connecting-clients/">Connecting Clients</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/uninstall/">Uninstall</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/private-docker-registry/">Use private Docker registry</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/disaster-recovery/">Disaster Recovery</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/troubleshooting/">Troubleshooting</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/cli/">CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/changelog/">Changelog</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/supported-versions/">Supported Versions</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Exposing the Kubernetes API via Marathon-LB or Edge-LB</h1></div><h4 class="content__header-description">Setting up HAProxy to expose the Kubernetes API via Marathon-LB or Edge-LB</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/exposing-the-kubernetes-api-marathonlb-edgelb/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- This source repo for this topic is https://github.com/mesosphere/dcos-kubernetes-cluster -->
+<h1 id="using-haproxy-with-marathon-lb-or-edge-lb"><a class="content__anchor" href="#using-haproxy-with-marathon-lb-or-edge-lb" aria-hidden="true"><i data-feather="bookmark"></i></a>Using HAProxy with Marathon-LB or Edge-LB</h1>
+<p>If you have existing instances of Marathon-LB in your DC/OS cluster, or if you are using Edge-LB (DC/OS Enterprise), you can expose the Kubernetes API for a given Kubernetes cluster via the existing HAProxy built into Marathon-LB or Edge-LB.</p>
+<p>These options (as documented below) are slightly less secure than Option 2 from the <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/exposing-the-kubernetes-api/">Exposing the Kubernetes API</a> page, because they use a self-signed TLS certificate to expose the Kubernetes API endpoint.
+Exposing the Kubernetes API endpoint with Marathon-LB and/or Edge-LB using a signed certificate is possible but not covered by the scope of this document.
+Exposing the Kubernetes API for multiple Kubernetes clusters is also out of the scope of this document. This is explained in detail in <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/exposing-the-kubernetes-api/">Exposing the Kubernetes API</a>.</p>
+<p>Both of these examples will generate a setup similar to the following:</p>
+<p><img src="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/img/marathonlb.png" alt="Exposing the Kubernetes API using HAProxy" title="Exposing the Kubernetes API using HAProxy"></p>
+<p>Figure 1. Exposing the Kubernetes API using HAProxy</p>
+<p>These examples assume that you want to expose the Kubernetes API for a cluster named <code>kubernetes-cluster</code>.
+If your Kubernetes cluster has a different name, then some changes may need to be made; these are called out below.</p>
+<p class="message--note"><strong>NOTE: </strong>If you have Marathon-LB running on a given public agent node, ports 9090, 9091, 80, 443, and 10000-10150 are consumed by Marathon-LB by default; keep this in mind when considering public Kubernetes node placement.</p>
+<h1 id="example-1-using-an-existing-marathon-lb-instance"><a class="content__anchor" href="#example-1-using-an-existing-marathon-lb-instance" aria-hidden="true"><i data-feather="bookmark"></i></a>Example 1: Using an existing Marathon-LB instance</h1>
+<p>Marathon-LB looks at all running Marathon applications and uses metadata (labels and other properties) on the application definitions to determine what applications and services to expose via HAProxy.
+Specifically, a given instance of Marathon-LB will look for applications with a specific <code>HAPROXY_GROUP</code> label, and expose those that match the specified <code>HAPROXY_GROUP</code>.
+The default <code>HAPROXY_GROUP</code> label that Marathon-LB looks for is <code>external</code>.</p>
+<p>While Marathon-LB is primarily used to expose Marathon applications, it can be tricked into exposing non-Marathon endpoints with a dummy application.
+Here are two examples on how to achieve this:</p>
+<ul>
+<li>One with no TLS certificate verification.</li>
+<li>One with TLS verification between HAProxy and the Kubernetes API (but not between the user and HAProxy).</li>
+</ul>
+<p>Both of these examples assume that Marathon-LB (version 1.12.1 or later) is already properly installed and configured (following the Marathon-LB <a href="/dcosdocs/mesosphere/dcos/services/marathon-lb/">installation instructions</a>).</p>
+<h2 id="marathon-lb-without-tls-certificate-verification"><a class="content__anchor" href="#marathon-lb-without-tls-certificate-verification" aria-hidden="true"><i data-feather="bookmark"></i></a>Marathon-LB without TLS Certificate Verification</h2>
+<p>For example, if you have a default Marathon-LB instance, you can run a Marathon application with the following definition, and it will expose the Kubernetes API:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/marathon-lb-kubernetes-cluster&quot;,
+  &quot;instances&quot;: 1,
+  &quot;cpus&quot;: 0.001,
+  &quot;mem&quot;: 16,
+  &quot;cmd&quot;: &quot;tail -F /dev/null&quot;,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;MESOS&quot;
+  },
+  &quot;portDefinitions&quot;: [
+    {
+      &quot;protocol&quot;: &quot;tcp&quot;,
+      &quot;port&quot;: 0
+    }
+  ],
+  &quot;labels&quot;: {
+    &quot;HAPROXY_GROUP&quot;: &quot;external&quot;,
+    &quot;HAPROXY_0_MODE&quot;: &quot;http&quot;,
+    &quot;HAPROXY_0_PORT&quot;: &quot;6443&quot;,
+    &quot;HAPROXY_0_SSL_CERT&quot;: &quot;/etc/ssl/cert.pem&quot;,
+    &quot;HAPROXY_0_BACKEND_SERVER_OPTIONS&quot;: &quot;  timeout connect 10s\n  timeout client 86400s\n  timeout server 86400s\n  timeout tunnel 86400s\n  server kubernetescluster apiserver.kubernetes-cluster.l4lb.thisdcos.directory:6443 ssl verify none\n&quot;
+  }
+}
+</code></pre>
+<p>If your Kubernetes cluster is called something different from <code>kubernetes-cluster</code>, then <code>apiserver.kubernetes-cluster.l4lb.thisdcos.directory:6443</code> should be modified to match the cluster’s name.
+For example, if your Kubernetes cluster is called <code>dev/kubernetes01</code>, then you must replace</p>
+<pre><code class="language-text">apiserver.kubernetes-cluster.l4lb.thisdcos.directory:6443
+</code></pre>
+<p>with</p>
+<pre><code class="language-text">apiserver.devkubernetes01.l4lb.thisdcos.directory:6443
+</code></pre>
+<p>Notice how the slash in <code>dev/kubernetes01</code> has been removed from the cluster’s name to form the hostname.</p>
+<p>This application could be added to DC/OS either through the DC/OS web interface, the Marathon API, or via the <code>dcos</code> command line with this (assuming the JSON is saved as the file <code>kubectl-proxy.json</code>)</p>
+<pre><code class="language-shell">dcos marathon app add kubectl-proxy.json
+</code></pre>
+<p>Here is how this works:</p>
+<ol>
+<li>Marathon-LB identifies that the application <code>marathon-lb-kubernetes-cluster</code> has the <code>HAPROXY_GROUP</code> label set to <code>external</code> (change this if you’re using a different <code>HAPROXY_GROUP</code> for your Marathon-LB configuration).</li>
+<li>The <code>instances</code>, <code>cpus</code>, <code>mem</code>, <code>cmd</code>, and <code>container</code> fields create a dummy container that takes up minimal space and performs no operation.</li>
+<li>The single port indicates that this application has one “port” (this information is used by Marathon-LB).</li>
+<li><code>&quot;HAPROXY_0_MODE&quot;: &quot;http&quot;</code> indicates to Marathon-LB that the frontend and backend configuration for this particular service should be configured with <code>http</code>.</li>
+<li><code>&quot;HAPROXY_0_PORT&quot;: &quot;6443&quot;</code> tells Marathon-LB to expose the service on port 6443 (rather than the randomly-generated service port, which is ignored).</li>
+<li><code>&quot;HAPROXY_0_SSL_CERT&quot;: &quot;/etc/ssl/cert.pem&quot;</code> tells Marathon-LB to expose the service with the self-signed Marathon-LB certificate (which has <strong>no CN</strong>).</li>
+<li>The last label <code>HAPROXY_0_BACKEND_SERVER_OPTIONS</code> indicates that Marathon-LB should forward traffic to the endpoint <code>apiserver.kubernetes-cluster.l4lb.thisdcos.directory:6443</code> rather than to the dummy application, and that the connection should be made using TLS without verification.
+Also, large timeout values are used so that calls such as <code>kubectl logs -f</code> and <code>kubectl exec -i -t</code> don’t terminate abruptly after a short period.</li>
+</ol>
+<h2 id="marathon-lb-with-tls-certificate-verification-between-haproxy-and-the-kubernetes-api"><a class="content__anchor" href="#marathon-lb-with-tls-certificate-verification-between-haproxy-and-the-kubernetes-api" aria-hidden="true"><i data-feather="bookmark"></i></a>Marathon-LB with TLS Certificate Verification between HAProxy and the Kubernetes API</h2>
+<p>Alternatively, if you are using DC/OS Enterprise, you can modify the dummy application with this so that it will verify the connection between HAProxy and the target Kubernetes API; this will still have an invalid, self-signed certificate for external clients:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/marathon-lb-kubernetes-cluster&quot;,
+  &quot;instances&quot;: 1,
+  &quot;cpus&quot;: 0.001,
+  &quot;mem&quot;: 16,
+  &quot;cmd&quot;: &quot;tail -F /dev/null&quot;,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;MESOS&quot;
+  },
+  &quot;portDefinitions&quot;: [
+    {
+      &quot;protocol&quot;: &quot;tcp&quot;,
+      &quot;port&quot;: 0
+    }
+  ],
+  &quot;labels&quot;: {
+    &quot;HAPROXY_GROUP&quot;: &quot;external&quot;,
+    &quot;HAPROXY_0_MODE&quot;: &quot;http&quot;,
+    &quot;HAPROXY_0_PORT&quot;: &quot;6443&quot;,
+    &quot;HAPROXY_0_SSL_CERT&quot;: &quot;/etc/ssl/cert.pem&quot;,
+    &quot;HAPROXY_0_BACKEND_SERVER_OPTIONS&quot;: &quot;  timeout connect 10s\n  timeout client 86400s\n  timeout server 86400s\n  timeout tunnel 86400s\n  server kubernetescluster apiserver.kubernetes-cluster.l4lb.thisdcos.directory:6443 ssl verify required ca-file /mnt/mesos/sandbox/.ssl/ca-bundle.crt\n&quot;
+  }
+}
+</code></pre>
+<p>If your Kubernetes cluster is called something different from <code>kubernetes-cluster</code>, then <code>apiserver.kubernetes-cluster.l4lb.thisdcos.directory:6443</code> should be modified to match the cluster’s name.
+For example, if your Kubernetes cluster is called <code>dev/kubernetes01</code>, then you must replace</p>
+<pre><code class="language-text">apiserver.kubernetes-cluster.l4lb.thisdcos.directory:6443
+</code></pre>
+<p>with</p>
+<pre><code class="language-text">apiserver.devkubernetes01.l4lb.thisdcos.directory:6443
+</code></pre>
+<p>Notice how the slash in <code>dev/kubernetes01</code> has been removed from the cluster’s name to form the hostname.</p>
+<p>Again, this application could be added to DC/OS either through the DC/OS web interface, the Marathon API, or via the <code>dcos</code> command line with this (assuming the JSON is saved as the file <code>kubectl-proxy.json</code>)</p>
+<pre><code class="language-shell">dcos marathon app add kubectl-proxy.json
+</code></pre>
+<h1 id="example-2-auto-exposure-via-edge-lb-150"><a class="content__anchor" href="#example-2-auto-exposure-via-edge-lb-150" aria-hidden="true"><i data-feather="bookmark"></i></a>Example 2: Auto exposure via Edge-LB &gt;= 1.5.0</h1>
+<p>The cluster’s control plane tasks are launched with labels that will trigger an Auto Pool to start.</p>
+<p>By default the cluster’s Service Name (e.g. <code>dev/kubernetes01</code>) will be used as the path prefix. To find the endpoint run</p>
+<pre><code class="language-shell">dcos edgelb endpoints auto-default
+  NAME                   PORT  INTERNAL IPS  EXTERNAL IPS
+  frontend_0.0.0.0_6443  6443  172.16.7.60   54.184.41.74
+  stats                  9090  172.16.7.60   54.184.41.74
+Public/private IPs metadata is inaccurate in case of pools that use virtual networks.
+</code></pre>
+<p>Assuming a cluster Service Name of <code>dev/kubernetes01</code> it can be configured via</p>
+<pre><code class="language-shell">dcos kubernetes cluster kubeconfig --cluster-name=dev/kubernetes01 --activate-context --apiserver-url=https://54.184.41.74:6443/dev/kubernetes01 --context-name=dev/kubernetes01 --force-overwrite --insecure-skip-tls-verify
+</code></pre>
+<p>Various options can be set when launching the cluster to control the labels and exposure settings.</p>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>default value</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>kubernetes.apiserver_edgelb.expose</code></td>
+<td><code>true</code></td>
+<td>enable or disable exposure for jsut this cluster</td>
+</tr>
+<tr>
+<td><code>kubernetes.apiserver_edgelb.template</code></td>
+<td><code>default</code></td>
+<td>the pool-template to expose with</td>
+</tr>
+<tr>
+<td><code>kubernetes.apiserver_edgelb.certificate</code></td>
+<td><code>$AUTOCERT</code></td>
+<td>the secret name of a certificate or <code>$AUTOCERT</code></td>
+</tr>
+<tr>
+<td><code>kubernetes.apiserver_edgelb.port</code></td>
+<td><code>6443</code></td>
+<td>the frontend port to use</td>
+</tr>
+<tr>
+<td><code>kubernetes.apiserver_edgelb.path</code></td>
+<td><code>/{{service.name}}</code></td>
+<td>the path to use on the frontend</td>
+</tr>
+</tbody>
+</table>
+<h1 id="example-3-creating-an-edge-lb-pool"><a class="content__anchor" href="#example-3-creating-an-edge-lb-pool" aria-hidden="true"><i data-feather="bookmark"></i></a>Example 3: Creating an Edge-LB Pool</h1>
+<p>If, instead of using Marathon-LB, you are using Edge-LB in your DC/OS cluster, you can create an Edge-LB pool to expose the target Kubernetes API to clients.</p>
+<p>This example does not validate certificates either between Kubernetes clients and HAProxy or between HAProxy and the Kubernetes API.
+These validations are achievable but are outside the scope of this document.</p>
+<pre><code class="language-json">{
+  &quot;apiVersion&quot;: &quot;V2&quot;,
+  &quot;name&quot;: &quot;edgelb-kubernetes-cluster&quot;,
+  &quot;count&quot;: 1,
+  &quot;autoCertificate&quot;: true,
+  &quot;haproxy&quot;: {
+    &quot;frontends&quot;: [{
+      &quot;bindPort&quot;: 6443,
+      &quot;protocol&quot;: &quot;HTTPS&quot;,
+      &quot;certificates&quot;: [
+        &quot;$AUTOCERT&quot;
+      ],
+      &quot;linkBackend&quot;: {
+        &quot;defaultBackend&quot;: &quot;kubernetes-cluster&quot;
+      }
+    }],
+    &quot;backends&quot;: [{
+      &quot;name&quot;: &quot;kubernetes-cluster&quot;,
+      &quot;protocol&quot;: &quot;HTTPS&quot;,
+      &quot;services&quot;: [{
+        &quot;mesos&quot;: {
+          &quot;frameworkName&quot;: &quot;kubernetes-cluster&quot;,
+          &quot;taskNamePattern&quot;: &quot;kube-control-plane&quot;
+        },
+        &quot;endpoint&quot;: {
+          &quot;portName&quot;: &quot;apiserver&quot;
+        }
+      }]
+    }],
+    &quot;stats&quot;: {
+      &quot;bindPort&quot;: 6090
+    }
+  }
+}
+</code></pre>
+<p>If your Kubernetes cluster is called something different from <code>kubernetes-cluster</code>, then the <code>frameworkName</code> should be modified to match the cluster’s name.
+For example, if your Kubernetes service is located at <code>dev/kubernetes01</code>, then replace <code>&quot;frameworkName&quot;: &quot;kubernetes-cluster&quot;</code> with <code>&quot;frameworkName&quot;: &quot;dev/kubernetes01&quot;</code>.</p>
+<p>This example assumes that Edge-LB (version 1.0.3 or later) is already properly installed and configured (following the Edge-LB <a href="/dcosdocs/mesosphere/dcos/services/edge-lb/latest">installation instructions</a>):</p>
+<ol>
+<li>
+<p>Create a <code>edgelb-kubernetes-cluster-pool.json</code> file with the above contents.</p>
+</li>
+<li>
+<p>Create the Edge-LB pool with the following command:</p>
+<pre><code class="language-shell">dcos edgelb create edgelb-kubernetes-cluster-pool.json
+</code></pre>
+</li>
+</ol>
+<p>This creates an Edge-LB pool with the following configuration:</p>
+<ul>
+<li>One (1) instance of HAProxy, running on a public DC/OS agent node.</li>
+<li>Exposes port 6443 with TLS and a self-signed certificate.</li>
+<li>Forwards connections on port 6443 to the Mesos task matching framework name <code>kubernetes-cluster</code> and task name matching regex <code>kube-control-plane</code>, on the port labeled <code>apiserver</code>.</li>
+<li>Listens on port 6090 for the HAProxy stats endpoint.
+Note that this will, by default, expose this port externally;
+if you do not want this exposed externally, you could add a <code>&quot;bindAddress&quot;:&quot;127.0.0.1&quot;</code> within the <code>stats</code> block.</li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#using-haproxy-with-marathon-lb-or-edge-lb">Using HAProxy with Marathon-LB or Edge-LB</a></li><li class="content__sections-item content__sections-item--h1"><a href="#example-1-using-an-existing-marathon-lb-instance">Example 1: Using an existing Marathon-LB instance</a></li><li class="content__sections-item content__sections-item--h2"><a href="#marathon-lb-without-tls-certificate-verification">Marathon-LB without TLS Certificate Verification</a></li><li class="content__sections-item content__sections-item--h2"><a href="#marathon-lb-with-tls-certificate-verification-between-haproxy-and-the-kubernetes-api">Marathon-LB with TLS Certificate Verification between HAProxy and the Kubernetes API</a></li><li class="content__sections-item content__sections-item--h1"><a href="#example-2-auto-exposure-via-edge-lb-150">Example 2: Auto exposure via Edge-LB >= 1.5.0</a></li><li class="content__sections-item content__sections-item--h1"><a href="#example-3-creating-an-edge-lb-pool">Example 3: Creating an Edge-LB Pool</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

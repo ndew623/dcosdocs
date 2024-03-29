@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Metronome Placement Constraints - D2iQ Docs</title><meta name="description" content="Understanding Metronome placement constraints"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-jobs/metronome-constraints">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/metronome-constraints">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/deploying-jobs/metronome-constraints">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/deploying-jobs/metronome-constraints">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/deploying-jobs/metronome-constraints">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><ul><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-jobs/metronome-constraints/">Metronome Placement Constraints</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-jobs/running-jobs-in-remote-regions/">Running Jobs in Remote Regions</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-jobs/quickstart/">Creating Jobs</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-jobs/examples/">Examples</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-jobs/job-groups/">Granting Access to Jobs</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Metronome Placement Constraints</h1></div><h4 class="content__header-description">Understanding Metronome placement constraints</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.1/deploying-jobs/metronome-constraints/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>Metronome placement constraints control where jobs run. Constraints have three parts: a field name, an operator, and a value. The field can be the hostname of the agent or any attribute of the agent.</p>
+<p>Metronome supports a subset of Marathon operators, and supports all of Marathon’s special field names.</p>
+<h1 id="field-names"><a class="content__anchor" href="#field-names" aria-hidden="true"><i data-feather="bookmark"></i></a>Field Names</h1>
+<h2 id="agent-properties-as-a-field-name"><a class="content__anchor" href="#agent-properties-as-a-field-name" aria-hidden="true"><i data-feather="bookmark"></i></a>Agent properties as a field name</h2>
+<p>Constraints with a field name beginning with <code>@</code> refer to agent properties.</p>
+<h3 id="host-name"><a class="content__anchor" href="#host-name" aria-hidden="true"><i data-feather="bookmark"></i></a>Host name</h3>
+<p>Entering <code>@hostname</code> as the field name matches the agent hostname. See <code>LIKE</code> operator, below, for a usage example.</p>
+<h3 id="region-and-zone-as-field-names"><a class="content__anchor" href="#region-and-zone-as-field-names" aria-hidden="true"><i data-feather="bookmark"></i></a>Region and zone as field names</h3>
+<p>Use the <code>@region</code> and <code>@zone</code> field names to configure <a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/fault-domain-awareness/">fault domain awareness and capacity extension</a>. See <code>IS</code> operator, below, for a usage example</p>
+<h2 id="attribute-as-field-name"><a class="content__anchor" href="#attribute-as-field-name" aria-hidden="true"><i data-feather="bookmark"></i></a>Attribute as field name</h2>
+<p>If <code>@hostname</code>, <code>@region</code>, or <code>@zone</code> are not specified as field names, then the field name is interpreted as a Mesos <a href="http://mesos.apache.org/documentation/attributes-resources/#attributes">agent attribute</a>.</p>
+<p>Metronome supports text, scalar and range attribute values. For scalars and ranges, Metronome will perform a string comparison on the formatted values as they would be specified <a href="http://mesos.apache.org/documentation/attributes-resources/#attributes">per the specification in Mesos</a>.</p>
+<h1 id="operators"><a class="content__anchor" href="#operators" aria-hidden="true"><i data-feather="bookmark"></i></a>Operators</h1>
+<h2 id="is-operator"><a class="content__anchor" href="#is-operator" aria-hidden="true"><i data-feather="bookmark"></i></a>IS operator</h2>
+<p>Supported in DC/OS 1.12.1 and later.</p>
+<p><strong>Value</strong> (required): A Mesos Scalar or Text value, as specified by the <a href="http://mesos.apache.org/documentation/latest/attributes-resources/#types">Mesos Attributes and Resources Type Specification</a>:</p>
+<pre><code>scalar : floatValue
+
+floatValue : ( intValue ( &quot;.&quot; intValue )? ) | ...
+
+intValue : [0-9]+
+
+text : [a-zA-Z0-9_/.-]
+</code></pre>
+<h3 id="comparing-text-values"><a class="content__anchor" href="#comparing-text-values" aria-hidden="true"><i data-feather="bookmark"></i></a>Comparing text values</h3>
+<p>When an <code>IS</code> constraint is specified, a task is only launched on nodes that have the specified value.</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;sleep-cluster&quot;,
+  &quot;cmd&quot;: &quot;sleep 60&quot;,
+  &quot;instances&quot;: 3,
+  &quot;constraints&quot;: [[&quot;rack&quot;, &quot;IS&quot;, &quot;rack-1&quot;]]
+}
+</code></pre>
+<h3 id="comparing-scalar-values"><a class="content__anchor" href="#comparing-scalar-values" aria-hidden="true"><i data-feather="bookmark"></i></a>Comparing scalar values</h3>
+<p>When comparing scalars, the value is compared to the nearest thousandth (using half-even rounding strategy).</p>
+<p>Given an agent with attribute “level:0.8”, the following constraints would match:</p>
+<pre><code class="language-json">[[&quot;level&quot;, &quot;IS&quot;, &quot;0.8&quot;]]
+
+[[&quot;level&quot;, &quot;IS&quot;, &quot;0.80&quot;]]
+
+[[&quot;level&quot;, &quot;IS&quot;, &quot;0.8001&quot;]]
+</code></pre>
+<h3 id="example"><a class="content__anchor" href="#example" aria-hidden="true"><i data-feather="bookmark"></i></a>Example</h3>
+<p>The following example will cause a job to run in the region us-east-1:</p>
+<pre><code class="language-json">{
+  &quot;description&quot;: &quot;Remote Sleeper&quot;,
+  &quot;id&quot;: &quot;sleeper-remote&quot;,
+  &quot;run&quot;: {
+    ...,
+    &quot;placement&quot;: {
+      &quot;constraints&quot;: [
+        { &quot;attribute&quot;: &quot;@region&quot;, &quot;operator&quot;: &quot;IS&quot;, &quot;value&quot;: &quot;us-east-1&quot; }
+      ]
+    }
+  }
+}
+</code></pre>
+<h2 id="like-operator"><a class="content__anchor" href="#like-operator" aria-hidden="true"><i data-feather="bookmark"></i></a>LIKE operator</h2>
+<p><strong>Value</strong> (required): A regular expression for the value of the attribute.</p>
+<p><code>LIKE</code> accepts a regular expression as parameter and allows you to run your tasks only on the agents whose field values match the regular expression. Note that the entire value must be matched (imagine there is an implicit <code>^</code> and <code>$</code> surrounding the regular expression).</p>
+<pre><code class="language-json">{
+  &quot;description&quot;: &quot;Important Job&quot;,
+  &quot;id&quot;: &quot;sleeper&quot;,
+  &quot;run&quot;: {
+    ...,
+    &quot;placement&quot;: {
+      &quot;constraints&quot;: [
+        { &quot;attribute&quot;: &quot;@hostname&quot;, &quot;operator&quot;: &quot;LIKE&quot;, &quot;value&quot;: &quot;host-[7-9]&quot; }
+      ]
+    }
+  }
+}
+</code></pre>
+<p><code>LIKE</code> constraints will not match offers from agents that lack the attribute in question.</p>
+<p>If the attribute in question is a scalar, it is rounded to the nearest thousandth using the half-even rounding strategy; zeroes after the decimal are dropped.</p>
+<h2 id="unlike-operator"><a class="content__anchor" href="#unlike-operator" aria-hidden="true"><i data-feather="bookmark"></i></a>UNLIKE operator</h2>
+<p><strong>Value</strong> (required): A regular expression for the value of the attribute.</p>
+<p><code>UNLIKE</code> is similar to the <code>LIKE</code> operator, but instructs Metronome to only run tasks on agents whose field values <strong>do not</strong> match the regular expression.</p>
+<pre><code class="language-json">{
+  &quot;description&quot;: &quot;Important Job&quot;,
+  &quot;id&quot;: &quot;sleeper&quot;,
+  &quot;run&quot;: {
+    ...,
+    &quot;placement&quot;: {
+      &quot;constraints&quot;: [
+        { &quot;attribute&quot;: &quot;@hostname&quot;, &quot;operator&quot;: &quot;UNLIKE&quot;, &quot;value&quot;: &quot;temp-host-.*&quot; }
+      ]
+    }
+  }
+}
+</code></pre>
+<p><code>UNLIKE</code> constraints will match offers from agents that lack the attribute in question.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#field-names">Field Names</a></li><li class="content__sections-item content__sections-item--h2"><a href="#agent-properties-as-a-field-name">Agent properties as a field name</a></li><li class="content__sections-item content__sections-item--h2"><a href="#attribute-as-field-name">Attribute as field name</a></li><li class="content__sections-item content__sections-item--h1"><a href="#operators">Operators</a></li><li class="content__sections-item content__sections-item--h2"><a href="#is-operator">IS operator</a></li><li class="content__sections-item content__sections-item--h2"><a href="#like-operator">LIKE operator</a></li><li class="content__sections-item content__sections-item--h2"><a href="#unlike-operator">UNLIKE operator</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

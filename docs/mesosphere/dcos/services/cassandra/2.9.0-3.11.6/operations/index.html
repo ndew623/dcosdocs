@@ -1,0 +1,374 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Operations - D2iQ Docs</title><meta name="description" content="Managing, repairing, and monitoring your DC/OS Apache Cassandra service"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Cassandra Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services/cassandra">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/operations">Cassandra 2.9.0-3.11.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/cassandra/2.4.0-3.0.16/operations">Cassandra 2.4.0-3.0.16</a></li></ul><div class="toggle"><p><span class="title">Cassandra</span><span class="version"> 2.9.0-3.11.6</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/getting-started/">Getting Started</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/operations/">Operations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/configuration/">Configuring</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/advanced/">Advanced</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/updates/">Update</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/security/">Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/uninstall/">Uninstall</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/troubleshooting/">Troubleshooting</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/api-reference/">API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/support-policy/">Support Policy</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Operations</h1></div><h4 class="content__header-description">Managing, repairing, and monitoring your DC/OS Apache Cassandra service</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/operations/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>The DC/OS Apache Cassandra service provides a robust API (accessible by HTTP or DC/OS CLI) for managing, repairing, and monitoring the service. Here, only the CLI version is presented for conciseness, but see the <a href="#api-reference">API Reference</a> for HTTP instructions.</p>
+<h2 id="plan-operations"><a class="content__anchor" href="#plan-operations" aria-hidden="true"><i data-feather="bookmark"></i></a>Plan Operations</h2>
+<p>An instance of the DC/OS Apache Cassandra service is ultimately a set of plans (how to run the service) and a set of pods (what to run). The service is driven primarily by two plans, <code>deploy</code> and <code>recovery</code>.</p>
+<p>The <code>deploy</code> plan is used during initial installation, as well as during configuration and service updates. The <code>recovery</code> plan is an always-running plan that ensures that the pods and tasks that should be running, stay running. Other plans (“sidecars”) are used for secondary operations.</p>
+<p>Every plan is made up of a set of phases, each of which consists of one or more steps.</p>
+<h3 id="listing-plans"><a class="content__anchor" href="#listing-plans" aria-hidden="true"><i data-feather="bookmark"></i></a>Listing plans</h3>
+<p>A list of plans can be retrieved using the CLI command:</p>
+<pre><code class="language-bash">dcos cassandra --name=cassandra plan list
+
+</code></pre>
+<h3 id="inspecting-a-plan"><a class="content__anchor" href="#inspecting-a-plan" aria-hidden="true"><i data-feather="bookmark"></i></a>Inspecting a plan</h3>
+<p>View the current status of a plan using the CLI command:</p>
+<pre><code class="language-bash">dcos cassandra --name=cassandra plan status &lt;plan-name&gt;
+</code></pre>
+<p>For example, the status of the completed deploy plan of the service will be:</p>
+<pre><code class="language-bash">dcos cassandra --name=cassandra plan status deploy
+deploy (serial strategy) (COMPLETE)
+└─ node-deploy (serial strategy) (COMPLETE)
+   ├─ node-0:[server] (COMPLETE)
+   ├─ node-0:[init_system_keyspaces] (COMPLETE)
+   ├─ node-1:[server] (COMPLETE)
+   └─ node-2:[server] (COMPLETE)
+
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>Passing the <tt>--json</tt> flag to the <tt>status</tt> command will return a JSON response which has UUIDs for the phases and steps of a plan. These UUIDs can be useful in the other plan commands.</p>
+<h3 id="operating-on-a-plan"><a class="content__anchor" href="#operating-on-a-plan" aria-hidden="true"><i data-feather="bookmark"></i></a>Operating on a plan</h3>
+<h4 id="start"><a class="content__anchor" href="#start" aria-hidden="true"><i data-feather="bookmark"></i></a>Start</h4>
+<p>Start a plan with the CLI command:</p>
+<pre><code class="language-bash">dcos cassandra --name=cassandra plan start &lt;plan-name&gt;
+</code></pre>
+<h4 id="pause"><a class="content__anchor" href="#pause" aria-hidden="true"><i data-feather="bookmark"></i></a>Pause</h4>
+<p>Pauses the plan, or a specific phase in that plan with the provided phase name (or UUID).</p>
+<pre><code class="language-bash">dcos cassandra --name=cassandra plan pause &lt;plan (required)&gt; &lt;phase (optional)&gt;
+</code></pre>
+<h4 id="stop"><a class="content__anchor" href="#stop" aria-hidden="true"><i data-feather="bookmark"></i></a>Stop</h4>
+<p>Stops the running plan with the provided name.</p>
+<pre><code class="language-bash">dcos cassandra --name=cassandra plan stop &lt;plan&gt;
+</code></pre>
+<p>Plan Stop differs from Plan Pause in the following ways:</p>
+<ul>
+<li>Pause can be issued for a specific phase or for all phases within a plan. Stop can only be issued for a plan.</li>
+<li>Pause updates the underlying Phase/Step state. Stop both ceases execution and of the plan and resets the plan to its initial pending state.</li>
+</ul>
+<h4 id="resume"><a class="content__anchor" href="#resume" aria-hidden="true"><i data-feather="bookmark"></i></a>Resume</h4>
+<p>Resumes the plan, or a specific phase in that plan, with the provided phase name (or UUID).</p>
+<pre><code class="language-bash">dcos cassandra --name=cassandra plan resume &lt;plan (required)&gt; &lt;phase (optional)&gt;
+</code></pre>
+<h4 id="force-restart"><a class="content__anchor" href="#force-restart" aria-hidden="true"><i data-feather="bookmark"></i></a>Force-Restart</h4>
+<p>Restarts the specified step, phase if no step is specified, or plan if no phase is specified.</p>
+<pre><code class="language-bash">dcos cassandra --name=cassandra force-restart &lt;plan (required)&gt; &lt;phase (optional)&gt; &lt;step (optional)&gt;
+</code></pre>
+<h4 id="force-complete"><a class="content__anchor" href="#force-complete" aria-hidden="true"><i data-feather="bookmark"></i></a>Force-Complete</h4>
+<p>Force completes a specific step in the provided phase of the plan. From the CLI it is only possible to force complete a step. The HTTP API supports force completing on phases and plans in their entirety.</p>
+<pre><code class="language-bash">dcos cassandra --name=cassandra force-complete &lt;plan (required)&gt; &lt;phase (required)&gt; &lt;step (required)&gt;
+</code></pre>
+<h2 id="pod-operations"><a class="content__anchor" href="#pod-operations" aria-hidden="true"><i data-feather="bookmark"></i></a>Pod Operations</h2>
+<p>A deployed instance of the DC/OS Apache Cassandra service is made up of a set of running pods. Using the pod API, it is possible to manage the lifecycle of these pods as well as investigate failures of the pods and their tasks.</p>
+<p class="message--note"><strong>NOTE: </strong>Managing pod count is done via the service configuration and does not have a direct API.</p>
+<h3 id="list"><a class="content__anchor" href="#list" aria-hidden="true"><i data-feather="bookmark"></i></a>List</h3>
+<p>To list all the pods of the service run the CLI command:</p>
+<pre><code class="language-bash">dcos cassandra --name=cassandra pod list
+</code></pre>
+<h3 id="status"><a class="content__anchor" href="#status" aria-hidden="true"><i data-feather="bookmark"></i></a>Status</h3>
+<p>To view the status of all pods or optionally just one pod run the CLI command:</p>
+<pre><code class="language-bash">dcos cassandra --name=cassandra pod status &lt;pod-name (optional)&gt;
+</code></pre>
+<p>This will show any status overrides for pods and their tasks.</p>
+<h3 id="restart"><a class="content__anchor" href="#restart" aria-hidden="true"><i data-feather="bookmark"></i></a>Restart</h3>
+<p>To restart a pod in place, use the CLI command:</p>
+<pre><code class="language-bash">dcos cassandra --name=cassandra pod restart &lt;pod-name&gt;
+</code></pre>
+<p>This will kill the tasks of the pod, and relaunch them in-place. The progress of the restart can be monitored by watching the <code>recovery</code> plan of the service.</p>
+<h3 id="replace"><a class="content__anchor" href="#replace" aria-hidden="true"><i data-feather="bookmark"></i></a>Replace</h3>
+<p>Replace should be used <strong>only</strong> when the current instance of the pod should be completely destroyed. All persistent data (read: volumes) of the pod will be destroyed. Replace should be used when a DC/OS agent is being removed, is permanently down, or pod placement constraints need to be updated.</p>
+<p>Issue a replace by running the CLI command:</p>
+<pre><code class="language-bash">dcos cassandra --name=cassandra pod replace &lt;pod-name&gt;
+</code></pre>
+<h3 id="pause-2"><a class="content__anchor" href="#pause-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Pause</h3>
+<p>Pausing a pod relaunches it in an idle command state. This allows you to debug the contents of the pod, possibly making changes to fix problems, while still having access to all the context of the pod (such as volumes)</p>
+<p>Using pause and <code>dcos task exec</code> is a very powerful debugging tool. To pause a pod use the CLI command:</p>
+<pre><code class="language-bash">dcos cassandra --name=cassandra debug pod pause &lt;pod-name&gt;
+</code></pre>
+<p>To pause a specific task of a pod append the <code>-t &lt;task-name&gt;</code> flag,</p>
+<pre><code class="language-bash">dcos cassandra --name=cassandra debug pod pause &lt;pod-name&gt; -t &lt;task-name&gt;
+</code></pre>
+<p>Use the <code>pod status</code> command to check what tasks and pods are in an overridden state.</p>
+<h3 id="resume-2"><a class="content__anchor" href="#resume-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Resume</h3>
+<p>To resume a paused pod or task use the CLI command:</p>
+<pre><code class="language-bash">dcos cassandra --name=cassandra debug pod resume &lt;pod-name&gt; [-t &lt;task-name&gt;]
+</code></pre>
+<p>Check the <code>pod status</code> command to verify that the pod (or task) has properly resumed.</p>
+<h2 id="service-metrics"><a class="content__anchor" href="#service-metrics" aria-hidden="true"><i data-feather="bookmark"></i></a>Service Metrics</h2>
+<p>The DC/OS Apache Cassandra service pushes metrics into the DC/OS metrics system. Details on consuming them can be found at the documentation on the <a href="/dcosdocs/mesosphere/dcos/latest/metrics/">DC/OS metrics system</a>.</p>
+<h2 id="logging"><a class="content__anchor" href="#logging" aria-hidden="true"><i data-feather="bookmark"></i></a>Logging</h2>
+<p>DC/OS has three ways to access service scheduler and service task logs.</p>
+<ol>
+<li>Via the DC/OS GUI</li>
+<li>Via the Mesos GUI</li>
+<li>Via the DC/OS CLI</li>
+</ol>
+<h3 id="dcos-gui"><a class="content__anchor" href="#dcos-gui" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS GUI</h3>
+<p>A service’s logs are accessed by selecting the service in the <strong>Services</strong> tab. Both the service scheduler and service tasks are displayed side by side in this view. To view the tasks sandbox (files) as well as its <code>stdout</code> and <code>stderr</code>, click on a task.</p>
+<h3 id="mesos-gui"><a class="content__anchor" href="#mesos-gui" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesos GUI</h3>
+<p>The Mesos GUI provides similar access as that of the DC/OS UI, but the service scheduler is separate from the service tasks. The service tasks can all be found in the <strong>Frameworks</strong> tab under the framework with the same name as the service. The service scheduler can be found in the Marathon framework, it will be a task with the same name as the service.</p>
+<p>Access both the files and logs of a service by clicking on its <code>sandbox</code> link.</p>
+<p><a href="/dcosdocs/mesosphere/dcos/services/img/ops-guide-scheduler-sandbox.png"><img src="/dcosdocs/mesosphere/dcos/services/img/ops-guide-scheduler-sandbox.png" alt="contents of a scheduler sandbox" width="400"/></a></p>
+<p>Figure 1 - Scheduler sandbox</p>
+<h3 id="dcos-cli"><a class="content__anchor" href="#dcos-cli" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS CLI</h3>
+<p>The <code>dcos task log</code> subcommand allows you to pull logs from multiple tasks at the same time. The <code>dcos task log &lt;task-pattern&gt;</code> command will fetch logs for all tasks matching the prefix pattern. See the help of the subcommand for full details of the command.</p>
+<h3 id="mesos-agent-logs"><a class="content__anchor" href="#mesos-agent-logs" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesos Agent logs</h3>
+<p>Occasionally, it can also be useful to examine what a given Mesos agent is doing. The Mesos Agent handles deployment of Mesos tasks to a given physical system in the cluster. One Mesos Agent runs on each system. These logs can be useful for determining if there is a problem at the system level that is causing alerts across multiple services on that system.</p>
+<p>Mesos agent logs can be accessed via the Mesos GUI or directly on the agent. The GUI method is described here.</p>
+<p>Navigate to the agent you want to view either directly from a task by clicking the “Agent” item in the breadcrumb when viewing a task (this will go directly to the agent hosting the task), or by navigating through the “Agents” menu item at the top of the screen (you will need to select the desired agent from the list).</p>
+<p>In the Agent view, you will see a list of frameworks with a presence on that Agent. In the left pane you will see a plain link named “LOG”. Click that link to view the agent logs.</p>
+<p><a href="/dcosdocs/mesosphere/dcos/services/img/ops-guide-agent.png"><img src="/dcosdocs/mesosphere/dcos/services/img/ops-guide-agent.png" alt="view of tasks running on a given agent" width="400"/></a></p>
+<p>Figure 2 - List of frameworks</p>
+<h2 id="performing-cassandra-cleanup-and-repair-operations"><a class="content__anchor" href="#performing-cassandra-cleanup-and-repair-operations" aria-hidden="true"><i data-feather="bookmark"></i></a>Performing Cassandra Cleanup and Repair Operations</h2>
+<p>You may manually trigger certain <code>nodetool</code> operations against your Cassandra instance using the CLI or the HTTP API.</p>
+<h3 id="cleanup"><a class="content__anchor" href="#cleanup" aria-hidden="true"><i data-feather="bookmark"></i></a>Cleanup</h3>
+<p>You may trigger a <code>nodetool cleanup</code> operation across your Cassandra nodes using the <code>cleanup</code> plan. This plan requires the following parameters to run:</p>
+<ul>
+<li><code>CASSANDRA_KEYSPACE</code>: the Cassandra keyspace to be cleaned up.</li>
+</ul>
+<p>Use the following command to initiate this plan from the command line:</p>
+<pre><code>dcos cassandra --name=&lt;service-name&gt; plan start cleanup -p CASSANDRA_KEYSPACE=space1
+</code></pre>
+<p>Use the following command to view the status of this plan from the command line:</p>
+<pre><code>dcos cassandra --name=&lt;service-name&gt; plan status cleanup
+cleanup (IN_PROGRESS)
+└─ cleanup-deploy (IN_PROGRESS)
+   ├─ node-0:[cleanup] (COMPLETE)
+   ├─ node-1:[cleanup] (STARTING)
+   └─ node-2:[cleanup] (PENDING)
+</code></pre>
+<p>When the plan is completed, its status will be marked <code>COMPLETE</code>.</p>
+<p>The above <code>plan start</code> and <code>plan status</code> commands may also be made directly to the service over HTTP. Run the above commands with an additional <code>-v</code> flag to see the queries involved.</p>
+<p>For more information about <code>nodetool cleanup</code>, see the Cassandra documentation.</p>
+<h3 id="repair"><a class="content__anchor" href="#repair" aria-hidden="true"><i data-feather="bookmark"></i></a>Repair</h3>
+<p>You may trigger a <code>nodetool repair</code> operation across your Cassandra nodes using the <code>repair</code> plan. This plan requires the following parameters to be executed:</p>
+<ul>
+<li><code>CASSANDRA_KEYSPACE</code>: the Cassandra keyspace to be cleaned up.</li>
+</ul>
+<p>Use the following command to initiate <code>CASSANDRA_KEYSPACE</code> from the command line:</p>
+<pre><code>dcos cassandra --name=&lt;service-name&gt; plan start repair -p CASSANDRA_KEYSPACE=space1
+</code></pre>
+<p>Use the following command to view the status of this plan from the command line:</p>
+<pre><code>dcos cassandra --name=&lt;service-name&gt; plan status repair
+repair (STARTING)
+└─ repair-deploy (STARTING)
+   ├─ node-0:[repair] (STARTING)
+   ├─ node-1:[repair] (PENDING)
+   └─ node-2:[repair] (PENDING)
+</code></pre>
+<p>When the plan is completed, its status will be marked as <code>COMPLETE</code>.</p>
+<p>The above <code>plan start</code> and <code>plan status</code> commands may also be made directly to the service over HTTP. Run the above commands with an additional <code>-v</code> flag to see the queries involved.</p>
+<p>For more information about <code>nodetool repair</code>, see the Cassandra documentation.</p>
+<h2 id="seed-nodes"><a class="content__anchor" href="#seed-nodes" aria-hidden="true"><i data-feather="bookmark"></i></a>Seed nodes</h2>
+<p>Cassandra seed nodes are those nodes with indices smaller than the seed node count.  By default, Cassandra is deployed with a seed node count of two (node-0 and node-1 are seed nodes). When a replace operation is performed on one these
+nodes, all other nodes must be restarted and updated with the ip address of the new seed node. This
+operation is performed automatically.</p>
+<p>For example:  Use the following command, if you want to replace <code>node-0</code>:</p>
+<pre><code class="language-bash">dcos cassandra --name=&lt;service-name&gt; pod replace node-0
+</code></pre>
+<p>The output of a recovery plan is as follows:</p>
+<pre><code class="language-bash">dcos cassandra --name=&lt;service-name&gt; plan show recovery
+recovery (IN_PROGRESS)
+└─ permanent-node-failure-recovery (IN_PROGRESS)
+   ├─ node-0:[server] (COMPLETE)
+   ├─ node-1:[server] (STARTING)
+   └─ node-2:[server] (PENDING)
+   ...
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>Only the seed node is being placed on a new node, all other nodes are restarted in place with no loss of data.</p>
+<h1 id="back-up-and-restore"><a class="content__anchor" href="#back-up-and-restore" aria-hidden="true"><i data-feather="bookmark"></i></a>Back up and Restore</h1>
+<h2 id="backing-up-to-s3"><a class="content__anchor" href="#backing-up-to-s3" aria-hidden="true"><i data-feather="bookmark"></i></a>Backing Up to S3</h2>
+<p>You can back up an entire cluster’s data and schema to Amazon S3 or S3 compatible storage using the <code>backup-s3</code> plan. This plan requires the following parameters to run:</p>
+<ul>
+<li><code>SNAPSHOT_NAME</code>: The name of this snapshot. Snapshots for individual nodes will be stored as S3 folders inside of a top level <code>snapshot</code> folder.</li>
+<li><code>CASSANDRA_KEYSPACES</code>: The Cassandra keyspaces to back up. The entire keyspace and its schema will be backed up for each keyspace specified.</li>
+<li><code>AWS_ACCESS_KEY_ID</code>: The access key ID for the AWS IAM user running this backup</li>
+<li><code>AWS_SECRET_ACCESS_KEY</code>: The secret access key for the AWS IAM user running this backup</li>
+<li><code>AWS_REGION</code>: The region of the S3 bucket being used to store this backup</li>
+<li><code>S3_BUCKET_NAME</code>: The name of the S3 bucket in which to store this backup</li>
+<li><code>HTTPS_PROXY</code>: Specifications for the  backup plan, taken from <code>config.yaml</code>.</li>
+</ul>
+<p>Optional parameters:</p>
+<ul>
+<li><code>S3_ENDPOINT_URL</code>: URL of S3 compatible storage. If you want to backup to S3 compatible storage, please provide this parameter in <code>backup-s3</code> plan.</li>
+<li><code>AWS_SESSION_ID</code>: It may also be necessary to set the session ID depending on how you authenticate with AWS.</li>
+<li><code>AWS_SESSION_TOKEN</code>: It may also be necessary to set the session token depending on how you authenticate with AWS.</li>
+</ul>
+<p>Make sure to provision your nodes with enough disk space to perform a backup.  backups are stored on disk before being uploaded to S3, and will take up as much space as the data currently in the tables and requires half of your total available space to be free to backup every keyspace at once.</p>
+<p>As noted in the documentation for the backup/restore strategy configuration option, it is possible to run transfers to S3 either in serial or in parallel, but care must be taken not to exceed any throughput limits you may have in your cluster. Throughput depends on a variety of factors, including uplink speed, proximity to region where the backups are being uploaded and downloaded, and the performance of the underlying storage infrastructure. You should perform periodic tests in your local environment to understand what you can expect from S3.</p>
+<p>You can configure whether snapshots are created and uploaded in serial (default) or in parallel. The serial backup/restore strategy is recommended.</p>
+<p>Before initiating the backup plan, it is recommended to reset the plan to its original state. This will ensure the backup plan runs in the correct sequence. You can reset the plan with the following command:</p>
+<p>dcos cassandra --name=<service-name> plan stop backup-s3</p>
+<p>Use the following parameters to initiate this plan from the command line:</p>
+<pre><code>SNAPSHOT_NAME=&lt;my_snapshot&gt;
+CASSANDRA_KEYSPACES=&quot;space1 space2&quot;
+AWS_ACCESS_KEY_ID=&lt;my_access_key_id&gt;
+AWS_SECRET_ACCESS_KEY=&lt;my_secret_access_key&gt;
+AWS_REGION=us-west-2
+S3_BUCKET_NAME=backups
+dcos cassandra --name=&lt;service-name&gt; plan start backup-s3 \
+    -p SNAPSHOT_NAME=$SNAPSHOT_NAME \
+    -p &quot;CASSANDRA_KEYSPACES=$CASSANDRA_KEYSPACES&quot; \
+    -p AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
+    -p AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY \
+    -p AWS_REGION=$AWS_REGION \
+    -p S3_BUCKET_NAME=$S3_BUCKET_NAME
+    -p HTTPS_PROXY=http://internal.proxy:8080
+</code></pre>
+<p>If you are backing up multiple keyspaces, they must be separated by spaces and wrapped in quotation marks when supplied to the <code>plan start</code> command, as shown in the above example. If the <code>CASSANDRA_KEYSPACES</code> parameter is not supplied, then every keyspace in your cluster will be backed up.</p>
+<p class="message--warning"><strong>WARNING: </strong>To ensure that sensitive information such as your AWS secret access key remains secure, check if you have set the <tt>core.dcos_url</tt> configuration property in the DC/OS CLI to an HTTPS URL.</p>
+<p>To view the status of this plan from the command line:</p>
+<pre><code>dcos cassandra --name=&lt;service-name&gt; plan status backup-s3
+backup-s3 (IN_PROGRESS)
+├─ backup-schema (COMPLETE)
+│  ├─ node-0:[backup-schema] (COMPLETE)
+│  ├─ node-1:[backup-schema] (COMPLETE)
+│  └─ node-2:[backup-schema] (COMPLETE)
+├─ create-snapshots (IN_PROGRESS)
+│  ├─ node-0:[snapshot] (STARTED)
+│  ├─ node-1:[snapshot] (STARTED)
+│  └─ node-2:[snapshot] (COMPLETE)
+├─ upload-backups (PENDING)
+│  ├─ node-0:[upload-s3] (PENDING)
+│  ├─ node-1:[upload-s3] (PENDING)
+│  └─ node-2:[upload-s3] (PENDING)
+└─ cleanup-snapshots (PENDING)
+   ├─ node-0:[cleanup-snapshot] (PENDING)
+   ├─ node-1:[cleanup-snapshot] (PENDING)
+   └─ node-2:[cleanup-snapshot] (PENDING)
+</code></pre>
+<p>The above <code>plan start</code> and <code>plan status</code> commands may also be made directly to the service over HTTP. Run the above commands with an additional <code>-v</code> flag to see the queries involved.</p>
+<h2 id="backing-up-to-azure"><a class="content__anchor" href="#backing-up-to-azure" aria-hidden="true"><i data-feather="bookmark"></i></a>Backing up to Azure</h2>
+<p>You can also back up to Microsoft Azure using the <code>backup-azure</code> plan. This plan requires the following parameters to run:</p>
+<ul>
+<li><code>SNAPSHOT_NAME</code>: the name of this snapshot. Snapshots for individual nodes will be stored as gzipped tarballs with the name <code>node-&lt;POD_INDEX&gt;.tar.gz</code>.</li>
+<li><code>CASSANDRA_KEYSPACES</code>: the Cassandra keyspaces to backup. The entire keyspace, as well as its schema, will be backed up for each keyspace specified.</li>
+<li><code>CLIENT_ID</code>: the client ID for the Azure service principal running this backup</li>
+<li><code>TENANT_ID</code>: the tenant ID for the tenant that the service principal belongs to</li>
+<li><code>CLIENT_SECRET</code>: the service principal’s secret key</li>
+<li><code>AZURE_STORAGE_ACCOUNT</code>: the name of the storage account that this backup will be sent to</li>
+<li><code>AZURE_STORAGE_KEY</code>: the secret key associated with the storage account</li>
+<li><code>CONTAINER_NAME</code>: the name of the container in which to store this backup.</li>
+</ul>
+<p>Before initiating the backup plan, it is recommended to reset the plan to its original state. This will ensure the backup plan runs in the correct sequence. You can reset the plan with:</p>
+<p>dcos cassandra --name=<service-name> plan stop backup-azure</p>
+<p>You can initiate this plan from the command line in the same way as the Amazon S3 backup plan:</p>
+<pre><code>dcos cassandra --name=&lt;service-name&gt; plan start backup-azure \
+    -p SNAPSHOT_NAME=$SNAPSHOT_NAME \
+    -p &quot;CASSANDRA_KEYSPACES=$CASSANDRA_KEYSPACES&quot; \
+    -p CLIENT_ID=$CLIENT_ID \
+    -p TENANT_ID=$TENANT_ID \
+    -p CLIENT_SECRET=$CLIENT_SECRET \
+    -p AZURE_STORAGE_ACCOUNT=$AZURE_STORAGE_ACCOUNT \
+    -p AZURE_STORAGE_KEY=$AZURE_STORAGE_KEY \
+    -p CONTAINER_NAME=$CONTAINER_NAME
+</code></pre>
+<p>To view the status of this plan from the command line:</p>
+<pre><code>dcos cassandra --name=&lt;service-name&gt; plan status backup-azure
+backup-azure (IN_PROGRESS)
+├─ backup-schema (COMPLETE)
+│  ├─ node-0:[backup-schema] (COMPLETE)
+│  ├─ node-1:[backup-schema] (COMPLETE)
+│  └─ node-2:[backup-schema] (COMPLETE)
+├─ create-snapshots (COMPLETE)
+│  ├─ node-0:[snapshot] (COMPLETE)
+│  ├─ node-1:[snapshot] (COMPLETE)
+│  └─ node-2:[snapshot] (COMPLETE)
+├─ upload-backups (IN_PROGRESS)
+│  ├─ node-0:[upload-azure] (COMPLETE)
+│  ├─ node-1:[upload-azure] (STARTING)
+│  └─ node-2:[upload-azure] (PENDING)
+└─ cleanup-snapshots (PENDING)
+   ├─ node-0:[cleanup-snapshot] (PENDING)
+   ├─ node-1:[cleanup-snapshot] (PENDING)
+   └─ node-2:[cleanup-snapshot] (PENDING)
+</code></pre>
+<p>The above <code>plan start</code> and <code>plan status</code> commands may also be made directly to the service over HTTP. Run the above commands with an additional <code>-v</code> flag to see the queries involved.</p>
+<h1 id="restore"><a class="content__anchor" href="#restore" aria-hidden="true"><i data-feather="bookmark"></i></a>Restore</h1>
+<p>All restore plans will restore the schema from every keyspace backed up with the backup plan and populate those keyspaces with the data they contained at the time the snapshot was taken. Downloading and restoration of backups will use the configured backup/restore strategy. This plan assumes that the keyspaces being restored do not already exist in the current cluster, and will fail if any keyspace with the same name is present.</p>
+<h2 id="restoring-from-s3"><a class="content__anchor" href="#restoring-from-s3" aria-hidden="true"><i data-feather="bookmark"></i></a>Restoring From S3</h2>
+<p>Restoring cluster data is similar to backing it up. The <code>restore-s3</code> plan assumes that your data is stored in an S3 bucket in the format that <code>backup-s3</code> uses. The restore plan has the following required parameters:</p>
+<ul>
+<li><code>SNAPSHOT_NAME</code>: the snapshot name from the <code>backup-s3</code> plan</li>
+<li><code>AWS_ACCESS_KEY_ID</code>: the access key ID for the AWS IAM user running this restore</li>
+<li><code>AWS_SECRET_ACCESS_KEY</code>: the secret access key for the AWS IAM user running this restore</li>
+<li><code>AWS_REGION</code>: the region of the S3 bucket being used to store the backup being restored</li>
+<li><code>S3_BUCKET_NAME</code>: the name of the S3 bucket where the backup is stored</li>
+</ul>
+<p>Optional parameters:</p>
+<ul>
+<li><code>S3_ENDPOINT_URL</code>: URL of S3 compatible storage. If you want to restore from S3 compatible storage, please provide this parameter in <code>restore-s3</code> plan.</li>
+<li><code>AWS_SESSION_ID</code>: It may also be necessary to set the session ID depending on how you authenticate with AWS.</li>
+<li><code>AWS_SESSION_TOKEN</code>: It may also be necessary to set the session token depending on how you authenticate with AWS.</li>
+</ul>
+<p>To initiate this plan from the command line:</p>
+<pre><code>SNAPSHOT_NAME=&lt;my_snapshot&gt;
+CASSANDRA_KEYSPACES=&quot;space1 space2&quot;
+AWS_ACCESS_KEY_ID=&lt;my_access_key_id&gt;
+AWS_SECRET_ACCESS_KEY=&lt;my_secret_access_key&gt;
+AWS_REGION=us-west-2
+S3_BUCKET_NAME=backups
+dcos cassandra --name=&lt;service-name&gt; plan start restore-s3 \
+    -p SNAPSHOT_NAME=$SNAPSHOT_NAME \
+    -p &quot;CASSANDRA_KEYSPACES=$CASSANDRA_KEYSPACES&quot; \
+    -p AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
+    -p AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY \
+    -p AWS_REGION=$AWS_REGION \
+    -p S3_BUCKET_NAME=$S3_BUCKET_NAME
+</code></pre>
+<p>To view the status of this plan from the command line:</p>
+<pre><code>dcos cassandra --name=&lt;service-name&gt; plan status restore-s3
+restore-s3 (IN_PROGRESS)
+├─ fetch-s3 (COMPLETE)
+│  ├─ node-0:[fetch-s3] (COMPLETE)
+│  ├─ node-1:[fetch-s3] (COMPLETE)
+│  └─ node-2:[fetch-s3] (COMPLETE)
+├─ restore-schema (IN_PROGRESS)
+│  ├─ node-0:[restore-schema] (COMPLETE)
+│  ├─ node-1:[restore-schema] (STARTED)
+│  └─ node-2:[restore-schema] (PENDING)
+└─ restore-snapshots (PENDING)
+   ├─ node-0:[restore-snapshot] (PENDING)
+   ├─ node-1:[restore-snapshot] (PENDING)
+   └─ node-2:[restore-snapshot] (PENDING)
+</code></pre>
+<p>The above <code>plan start</code> and <code>plan status</code> commands may also be made directly to the service over HTTP. Run the above commands with an additional <code>-v</code> flag to see the queries involved.</p>
+<h2 id="restoring-from-azure"><a class="content__anchor" href="#restoring-from-azure" aria-hidden="true"><i data-feather="bookmark"></i></a>Restoring From Azure</h2>
+<p>You can restore from Microsoft Azure using the <code>restore-azure</code> plan. This plan requires the following parameters to run:</p>
+<ul>
+<li><code>SNAPSHOT_NAME</code>: The name of this snapshot. Snapshots for individual nodes will be stored as gzipped tarballs with the name <code>node-&lt;POD_INDEX&gt;.tar.gz</code>.</li>
+<li><code>CLIENT_ID</code>: The client ID for the Azure service principal running this backup.</li>
+<li><code>TENANT_ID</code>: The tenant ID for the tenant that the service principal belongs to.</li>
+<li><code>CLIENT_SECRET</code>: The service principal’s secret key.</li>
+<li><code>AZURE_STORAGE_ACCOUNT</code>: The name of the storage account that this backup will be sent to.</li>
+<li><code>AZURE_STORAGE_KEY</code>: The secret key associated with the storage account.</li>
+<li><code>CONTAINER_NAME</code>: The name of the container in which to store this backup.</li>
+</ul>
+<p>You can initiate this plan from the command line similar to the Amazon S3 restore plan:</p>
+<pre><code>dcos cassandra --name=&lt;service-name&gt; plan start restore-azure \
+    -p SNAPSHOT_NAME=$SNAPSHOT_NAME \
+    -p CLIENT_ID=$CLIENT_ID \
+    -p TENANT_ID=$TENANT_ID \
+    -p CLIENT_SECRET=$CLIENT_SECRET \
+    -p AZURE_STORAGE_ACCOUNT=$AZURE_STORAGE_ACCOUNT \
+    -p AZURE_STORAGE_KEY=$AZURE_STORAGE_KEY \
+    -p CONTAINER_NAME=$CONTAINER_NAME
+</code></pre>
+<p>Use the following command to view the status of this plan from the command line:</p>
+<pre><code>dcos cassandra --name=&lt;service-name&gt; plan status restore-azure
+restore-azure (IN_PROGRESS)
+├─ fetch-azure (COMPLETE)
+│  ├─ node-0:[fetch-azure] (COMPLETE)
+│  ├─ node-1:[fetch-azure] (COMPLETE)
+│  └─ node-2:[fetch-azure] (COMPLETE)
+├─ restore-schema (COMPLETE)
+│  ├─ node-0:[restore-schema] (COMPLETE)
+│  ├─ node-1:[restore-schema] (COMPLETE)
+│  └─ node-2:[restore-schema] (COMPLETE)
+└─ restore-snapshots (IN_PROGRESS)
+   ├─ node-0:[restore-snapshot] (COMPLETE)
+   ├─ node-1:[restore-snapshot] (STARTING)
+   └─ node-2:[restore-snapshot] (PENDING)
+</code></pre>
+<p>The above <code>plan start</code> and <code>plan status</code> commands may also be made directly to the service over HTTP. Run the above commands with an additional <code>-v</code> flag to see the queries involved.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#plan-operations">Plan Operations</a></li><li class="content__sections-item content__sections-item--h2"><a href="#pod-operations">Pod Operations</a></li><li class="content__sections-item content__sections-item--h2"><a href="#service-metrics">Service Metrics</a></li><li class="content__sections-item content__sections-item--h2"><a href="#logging">Logging</a></li><li class="content__sections-item content__sections-item--h2"><a href="#performing-cassandra-cleanup-and-repair-operations">Performing Cassandra Cleanup and Repair Operations</a></li><li class="content__sections-item content__sections-item--h2"><a href="#seed-nodes">Seed nodes</a></li><li class="content__sections-item content__sections-item--h1"><a href="#back-up-and-restore">Back up and Restore</a></li><li class="content__sections-item content__sections-item--h2"><a href="#backing-up-to-s3">Backing Up to S3</a></li><li class="content__sections-item content__sections-item--h2"><a href="#backing-up-to-azure">Backing up to Azure</a></li><li class="content__sections-item content__sections-item--h1"><a href="#restore">Restore</a></li><li class="content__sections-item content__sections-item--h2"><a href="#restoring-from-s3">Restoring From S3</a></li><li class="content__sections-item content__sections-item--h2"><a href="#restoring-from-azure">Restoring From Azure</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

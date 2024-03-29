@@ -1,0 +1,152 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Marathon 布局约束 - D2iQ Docs</title><meta name="description" content="了解 Marathon 布局约束"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/marathon-constraints">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.0"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/marathon-constraints">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/marathon-constraints">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/marathon-constraints">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.0</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/marathon-parameters/">Marathon 配置参考</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/install/">安装服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/task-handling/"><i data-feather="chevron-right"></i>任务处理</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/creating-services/"><i data-feather="chevron-right"></i>创建服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/config-universe-service/">配置服务</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/marathon-constraints/">Marathon 布局约束</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/scale-service/">扩展服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/service-groups/">授权访问服务和组</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/fault-domain-awareness/">故障域感知和容量扩展</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/update-user-service/">更新用户创建的服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/service-ports/">服务端口</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/service-endpoints/">服务端点</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/monitor-services/">监控服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/private-docker-registry/">使用专用 Docker 注册表</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/expose-service/">公开服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/deployments/">部署</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/uninstall/">卸载服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/package-api/">包管理 API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/marathon-on-marathon/"><i data-feather="chevron-right"></i>使用自定义 Marathon</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/marathon-api/">Marathon  API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/containerizers/"><i data-feather="chevron-right"></i>使用容器化工具</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/pods/"><i data-feather="chevron-right"></i>Pod</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/multi-tenancy-primitives/">多租户原始文件</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/gpu/">使用 GPU</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/faq/">常见问题</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Marathon 布局约束</h1></div><h4 class="content__header-description">了解 Marathon 布局约束</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/marathon-constraints/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>Marathon™ 放置约束能够控制服务的运行位置，以便优化容错性（通过在多个节点上分散任务）或本地化（通过在同一节点上运行所有服务任务）。约束有三个部分：字段名称、算子和可选参数。该字段名称可以是代理节点的主机名或代理节点的任何属性。</p>
+<h1 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>字段名称</h1>
+<h2 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>代理属性作为字段名称</h2>
+<p>字段名称以 <code>@</code> 开头的约束引用代理属性。</p>
+<h3 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>主机名</h3>
+<p>字段名称与代理节点主机名相匹配时输入 <code>@hostname</code> 参见以下 <code>UNIQUE operator</code>，查看使用示例。</p>
+<h3 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>分域和分区作为字段名称</h3>
+<p>使用 <code>@region</code> 和 <code>@zone</code> 字段名称配置 <a href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/fault-domain-awareness/">故障域感知和容量扩展</a>.</p>
+<h2 id="-5"><a class="content__anchor" href="#-5" aria-hidden="true"><i data-feather="bookmark"></i></a>属性作为字段名称</h2>
+<p>如果 <code>@hostname</code>、 <code>@region</code> 或 <code>@zone</code> 未被指定为字段名称，那么字段名称将被解释为 Apache® Mesos® 代理节点属性。Mesos 代理节点属性允许您标记代理节点。参见 <code>mesos-slave --help</code>，了解如何设置属性。如果代理节点上未定义指定的属性，大多数算子将拒绝在其上运行任务。事实上，只有 <code>UNLIKE</code> 算子将始终接受此邀约，但其他算子将始终拒绝。</p>
+<p>Marathon 支持文本、标量、范围和数集属性值。为确定标量、范围和数集，Marathon 将对格式值执行字符串比较。格式与 Mesos 属性格式匹配。范围和数集的格式分别为 <code>[begin-end,...]</code> 和 <code>{item,...}</code> 例如，您可能有一个格式为 <code>[100-200]</code> 的范围和格式为 <code>{a,b,c}</code>. 的数集。Regex 适用于 LIKE 和 UNLIKE 算子；如需匹配 ANY 值，请使用字符串 <code>.*</code>.</p>
+<h1 id="-6"><a class="content__anchor" href="#-6" aria-hidden="true"><i data-feather="bookmark"></i></a>算子</h1>
+<h2 id="cluster"><a class="content__anchor" href="#cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>CLUSTER 算子</h2>
+<p><strong>值</strong>（可选）: 字符串值。
+指定值后，就会采用值完全匹配的属性在代理节点上启动任务。</p>
+<p><code>CLUSTER</code> 支持您在共享某个属性的代理节点上运行服务的所有任务。这一属性在您的服务有特殊硬件，或者想在同一机架上运行这些服务以降低延迟时，以及其他情况下都非常实用。</p>
+<p>命名字段名称 <code>hostname</code> 告诉 Marathon 应用程序或 Pod 启动的任务应在同一代理上启动：</p>
+<ul>
+<li>指定 <code>hostname</code> 的值后，就会在主机名与值匹配的代理上启动任务。
+<code>hostname</code> 值为空或未指定时，第一个实例在 <strong>任意</strong> 代理节点上启动，其余任务也和该实例一起在同一代理上启动。</li>
+</ul>
+<p>当字段名称为属性时，Marathon 处理任务的方式会不同：</p>
+<ul>
+<li>指定值后，任何代理只要带有一个根据<strong>和</strong>字段命名的属性，且属性具有匹配该限制的值，均可启动任务。</li>
+<li>当值为空或未指定时，第一个实例会在具有根据字段命名的属性的任何代理上启动；该代理上属性的值用于匹配将来的限制。</li>
+</ul>
+<h2 id="-7"><a class="content__anchor" href="#-7" aria-hidden="true"><i data-feather="bookmark"></i></a>示例</h2>
+<p>以下示例指定了运行应用程序任务的确切机架：</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;sleep-cluster&quot;,
+  &quot;cmd&quot;: &quot;sleep 60&quot;,
+  &quot;instances&quot;: 3,
+  &quot;constraints&quot;: [[&quot;rack_id&quot;, &quot;CLUSTER&quot;, &quot;rack-1&quot;]]
+}
+</code></pre>
+<p>此示例将值字段留空。这会告诉 Marathon ，所有应用程序任务都应在同一机架上运行，但不指定具体机架。</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;sleep-cluster&quot;,
+  &quot;cmd&quot;: &quot;sleep 60&quot;,
+  &quot;instances&quot;: 3,
+  &quot;constraints&quot;: [[&quot;rack_id&quot;, &quot;CLUSTER&quot;]]
+}
+</code></pre>
+<p>此示例使用指定的 <code>hostname</code>，这意味着服务必须在特定节点上运行。</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;sleep-cluster&quot;,
+  &quot;cmd&quot;: &quot;sleep 60&quot;,
+  &quot;instances&quot;: 3,
+  &quot;constraints&quot;: [[&quot;hostname&quot;, &quot;CLUSTER&quot;, &quot;a.specific.node.com&quot;]]
+}
+</code></pre>
+<p>下面，字段已命名 <code>hostname</code>，但值为空。这会告诉 Marathon，所有应用程序任务必须在同一节点上运行，但不指定具体节点。</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;sleep-cluster&quot;,
+  &quot;cmd&quot;: &quot;sleep 60&quot;,
+  &quot;instances&quot;: 3,
+  &quot;constraints&quot;: [[&quot;hostname&quot;, &quot;CLUSTER&quot;]]
+}
+</code></pre>
+<h2 id="like"><a class="content__anchor" href="#like" aria-hidden="true"><i data-feather="bookmark"></i></a>LIKE 算子</h2>
+<p><strong>值</strong>（必填）：属性值的正则表达式。</p>
+<p><code>LIKE</code> 接受正则表达式作为参数，并且只允许在字段值与正则表达式匹配的代理节点上运行任务。请注意，必须匹配整个值（假设正则表达式周围有隐式 <code>^</code> 和 <code>$</code></p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;sleep-group-by&quot;,
+  &quot;cmd&quot;: &quot;sleep 60&quot;,
+  &quot;instances&quot;: 3,
+  &quot;constraints&quot;: [[&quot;rack_id&quot;, &quot;LIKE&quot;, &quot;rack-[1-3]&quot;]]
+}
+</code></pre>
+<p>如果相关属性是一个标量，则会利用半偶（half-even）舍入法舍入到最接近的千分位数；小数点后的零会去掉。</p>
+<h2 id="unlike"><a class="content__anchor" href="#unlike" aria-hidden="true"><i data-feather="bookmark"></i></a>UNLIKE 算子</h2>
+<p><strong>值</strong>（必填）：属性值的正则表达式。</p>
+<p><code>UNLIKE</code> 类似于 <code>LIKE</code> 算子，但指示 Marathon 仅在字段值 <strong>不与</strong>正则表达式匹配的代理节点上运行任务。请注意，必须匹配整个值（假设正则表达式周围有隐式 <code>^</code> 和 <code>$</code></p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;sleep-group-by&quot;,
+  &quot;cmd&quot;: &quot;sleep 60&quot;,
+  &quot;instances&quot;: 3,
+  &quot;constraints&quot;: [[&quot;rack_id&quot;, &quot;UNLIKE&quot;, &quot;rack-[7-9]&quot;]]
+}
+</code></pre>
+<h2 id="max-per"><a class="content__anchor" href="#max-per" aria-hidden="true"><i data-feather="bookmark"></i></a>MAX_PER 算子</h2>
+<p><strong>值</strong>（必填）：是一个整数，例如 <code>&quot;2&quot;</code>.</p>
+<p><code>MAX_PER</code> 接受数字作为指定每个组最大大小的参数。它可用于限制跨机架或数据中心的任务。</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;sleep-group-by&quot;,
+  &quot;cmd&quot;: &quot;sleep 60&quot;,
+  &quot;instances&quot;: 3,
+  &quot;constraints&quot;: [[&quot;rack_id&quot;, &quot;MAX_PER&quot;, &quot;2&quot;]]
+}
+</code></pre>
+<h2 id="unique"><a class="content__anchor" href="#unique" aria-hidden="true"><i data-feather="bookmark"></i></a>UNIQUE 算子</h2>
+<p><code>UNIQUE</code> 不接受值。</p>
+<p><code>UNIQUE</code> 告诉 Marathon 在所有服务任务中执行唯一的属性。例如，以下限制确保每个主机上只有一个服务任务。</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;sleep-unique&quot;,
+  &quot;cmd&quot;: &quot;sleep 60&quot;,
+  &quot;instances&quot;: 3,
+  &quot;constraints&quot;: [[&quot;hostname&quot;, &quot;UNIQUE&quot;]]
+}
+</code></pre>
+<h2 id="group-by"><a class="content__anchor" href="#group-by" aria-hidden="true"><i data-feather="bookmark"></i></a>GROUP_BY 算子</h2>
+<p><strong>值</strong>（可选）: 是一个整数，例如 <code>&quot;3&quot;</code>.</p>
+<p><code>GROUP_BY</code> 可用于在机架或数据中心之间均匀地分布任务，以实现高可用性。</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;sleep-group-by&quot;,
+  &quot;cmd&quot;: &quot;sleep 60&quot;,
+  &quot;instances&quot;: 3,
+  &quot;constraints&quot;: [[&quot;rack_id&quot;, &quot;GROUP_BY&quot;]]
+}
+</code></pre>
+<p>Marathon 通过分析 Mesos 传入的邀约，仅知道属性的不同值（例如，“<code>rack_id</code>”）。如果任务尚未分散到所有可能的值，请指定限制中的值的数量。如果没有指定值的数量，就可能发现任务仅分配给一个值，即使您正在使用 <code>GROUP_BY</code> 限制。例如，在 3 个机架上分散时，使用：</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;sleep-group-by&quot;,
+  &quot;cmd&quot;: &quot;sleep 60&quot;,
+  &quot;instances&quot;: 3,
+  &quot;constraints&quot;: [[&quot;rack_id&quot;, &quot;GROUP_BY&quot;, &quot;3&quot;]]
+}
+</code></pre>
+<h2 id="is"><a class="content__anchor" href="#is" aria-hidden="true"><i data-feather="bookmark"></i></a>IS 算子</h2>
+<p><strong>值</strong>（必填）：Mesos 标量或文本值，由 <a href="http://mesos.apache.org/documentation/latest/attributes-resources/#types">Mesos 属性和资源类型规范</a>指定：</p>
+<pre><code>scalar : floatValue
+
+floatValue : ( intValue ( &quot;.&quot; intValue )? ) | ...
+
+intValue : [0-9]+
+
+text : [a-zA-Z0-9_/.-]
+</code></pre>
+<h3 id="-8"><a class="content__anchor" href="#-8" aria-hidden="true"><i data-feather="bookmark"></i></a>比较文本值</h3>
+<p>指定 <code>IS</code> 限制后，任务仅在具有指定值的节点上启动。</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;sleep-cluster&quot;,
+  &quot;cmd&quot;: &quot;sleep 60&quot;,
+  &quot;instances&quot;: 3,
+  &quot;constraints&quot;: [[&quot;rack&quot;, &quot;IS&quot;, &quot;rack-1&quot;]]
+}
+</code></pre>
+<h3 id="-9"><a class="content__anchor" href="#-9" aria-hidden="true"><i data-feather="bookmark"></i></a>比较标量值</h3>
+<p>比较标量时，将值与最接近的千分位数进行比较（使用半偶舍入法）。</p>
+<p>假设节点的属性为“级别：0.8”，则匹配以下限制：</p>
+<pre><code class="language-json">[[&quot;level&quot;, &quot;IS&quot;, &quot;0.8&quot;]]
+
+[[&quot;level&quot;, &quot;IS&quot;, &quot;0.80&quot;]]
+
+[[&quot;level&quot;, &quot;IS&quot;, &quot;0.8001&quot;]]
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#字段名称">字段名称</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-2">代理属性作为字段名称</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-5">属性作为字段名称</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-6">算子</a></li><li class="content__sections-item content__sections-item--h2"><a href="#cluster">CLUSTER 算子</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-7">示例</a></li><li class="content__sections-item content__sections-item--h2"><a href="#like">LIKE 算子</a></li><li class="content__sections-item content__sections-item--h2"><a href="#unlike">UNLIKE 算子</a></li><li class="content__sections-item content__sections-item--h2"><a href="#max-per">MAX_PER 算子</a></li><li class="content__sections-item content__sections-item--h2"><a href="#unique">UNIQUE 算子</a></li><li class="content__sections-item content__sections-item--h2"><a href="#group-by">GROUP_BY 算子</a></li><li class="content__sections-item content__sections-item--h2"><a href="#is">IS 算子</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

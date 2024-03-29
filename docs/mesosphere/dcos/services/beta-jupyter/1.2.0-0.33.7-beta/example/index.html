@@ -1,0 +1,277 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Examples - D2iQ Docs</title><meta name="description" content="Examples of different installation options of Mesosphere Jupyter Service (Beta)"><link rel="icon" href="/assets/favicon.ico"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search DC/OS site"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><!-- Ethnio Activation Code -->
+<!-- script(type='text/javascript', language='javascript', src='//ethn.io/74286.js', async='true', charset='utf-8') --><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Beta Jupyter Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">Ksphere</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/ksphere/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/ksphere/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/ksphere/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/ksphere/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/ksphere/kubeflow">KUDO Kubeflow</a></li><li class="chooser-list-item"><a href="/ksphere/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/services/beta-jupyter/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>Ksphere</div></li><li class="header-dropdown__item"><a href="/ksphere/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/ksphere/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/ksphere/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/ksphere/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/ksphere/kubeflow">KUDO Kubeflow</a></li><li class="header-dropdown__item"><a href="/ksphere/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><div class="sidebar__dropdown__toggle"><p class="sidebar__dropdown__text"><span class="sidebar__dropdown__text__title">Beta Jupyter</span><span class="sidebar__dropdown__text__version"> 1.2.0-0.33.7-beta</span></p></div></div></header><nav class="sidebar__nav" role="navigation"><ul class="sidebar__nav__list sidebar__nav__list--active"><li class="sidebar__nav__item"><a class="sidebar__nav__item__container sidebar__nav__item__container--depth-0" href="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/quick-start"><div class="sidebar__nav__text">Quick Start</div></a></li><li class="sidebar__nav__item"><a class="sidebar__nav__item__container sidebar__nav__item__container--depth-0" href="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/installing"><div class="sidebar__nav__text">Install</div></a></li><li class="sidebar__nav__item"><a class="sidebar__nav__item__container sidebar__nav__item__container--depth-0" href="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/overview"><div class="sidebar__nav__text">Overview</div></a></li><li class="sidebar__nav__item sidebar__nav__item--active sidebar__nav__item--active-on"><a class="sidebar__nav__item__container sidebar__nav__item__container--depth-0" href="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/example"><div class="sidebar__nav__text">Examples</div></a></li><li class="sidebar__nav__item"><a class="sidebar__nav__item__container sidebar__nav__item__container--depth-0" href="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/limitations"><div class="sidebar__nav__text">Limitations</div></a></li><li class="sidebar__nav__item"><a class="sidebar__nav__item__container sidebar__nav__item__container--depth-0" href="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/uninstall"><div class="sidebar__nav__text">Uninstall</div></a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2020 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Examples</h1><p class="badge badge--content-header badge--beta">BETA</p></div><h4 class="content__header-description">Examples of different installation options of Mesosphere Jupyter Service (Beta)</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><a class="actions__link addthis_button" href="/"><i class="actions__icon" data-feather="share"></i><span class="actions__text">Share</span></a></li><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/master/pages/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/example/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://dcos-community.slack.com/" target="_blank"><i class="actions__icon" data-feather="slack"></i><span class="actions__text">Discuss</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+Examples&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/example&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><p>The examples in this section assume you are a data scientist using <a href="https://github.com/jupyterlab/jupyterlab">JupyterLab</a> to pre-process and analyze datasets with Spark and TensorFlow.</p>
+<p>The technologies used in this section are as follows:</p>
+<ul>
+<li>
+<p><a href="https://github.com/jupyterlab/jupyterlab">JupyterLab</a></p>
+</li>
+<li>
+<p><a href="https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html">HDFS</a></p>
+</li>
+<li>
+<p><a href="https://spark.apache.org/">Apache Spark</a></p>
+</li>
+<li>
+<p><a href="https://www.tensorflow.org/">TensorFlow</a> using the <a href="https://github.com/yahoo/TensorFlowOnSpark">Yahoo TensorFlowOnSpark distribution</a></p>
+</li>
+<li>
+<p><a href="/dcosdocs/mesosphere/dcos/services/marathon-lb/">Marathon-LB</a> to expose JupyterLab externally</p>
+</li>
+<li>
+<p>Estimated time for completion (manual installation): 20 minutes</p>
+</li>
+<li>
+<p>Target audience: Anyone interested in Data Analytics.</p>
+</li>
+</ul>
+<h1 id="prerequisites"><a class="content__anchor" href="#prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h1>
+<ul>
+<li>A cluster running <a href="https://dcos.io/releases/">DC/OS 1.11</a> or higher,  with at least 6 private agents and 1 public agent. Each agent should have 2 CPUs and 5 GB of RAM available.</li>
+<li><a href="/dcosdocs/mesosphere/dcos/latest/cli/install/">DC/OS CLI</a> installed</li>
+</ul>
+<h2 id="optional-terraform"><a class="content__anchor" href="#optional-terraform" aria-hidden="true"><i data-feather="bookmark"></i></a>Optional: Terraform</h2>
+<p>If you plan to use GPU support, you should use the <a href="https://github.com/dcos/terraform-dcos/blob/master/aws/README.md#adding-gpu-private-agents">dcos-terraform project</a> to provision DC/OS. Please refer to the <a href="https://github.com/dcos/examples/tree/master/jupyterlab/1.11#install-jupyterlab-with-gpu-support">GPU Cluster Provisioning section</a> in the README for more details.</p>
+<h1 id="installation"><a class="content__anchor" href="#installation" aria-hidden="true"><i data-feather="bookmark"></i></a>Installation</h1>
+<p>This section will describe how to install the HDFS service and the Marathon-LB service.</p>
+<h2 id="hdfs"><a class="content__anchor" href="#hdfs" aria-hidden="true"><i data-feather="bookmark"></i></a>HDFS</h2>
+<p>You can install the HDFS service from the DC/OS web-based interface or directly from the CLI. For example, run the following command:</p>
+<pre><code class="language-bash">$ dcos package install hdfs
+</code></pre>
+<p>To learn more about HDFS or advanced HDFS installation options, see the <a href="/dcosdocs/mesosphere/dcos/services/hdfs/">HDFS service documentation</a>.</p>
+<h2 id="marathon-lb"><a class="content__anchor" href="#marathon-lb" aria-hidden="true"><i data-feather="bookmark"></i></a>Marathon-LB</h2>
+<p>To expose JupyterLab externally, install <a href="/dcosdocs/mesosphere/dcos/services/marathon-lb/">Marathon-LB</a> using the following command:</p>
+<pre><code class="language-bash">$ dcos package install marathon-lb
+</code></pre>
+<p>To learn more about Marathon-LB or advanced Marathon-LB installation options, see the <a href="/dcosdocs/mesosphere/dcos/services/marathon-lb/">Marathon-LB documentation</a>.</p>
+<h2 id="jupyterlab"><a class="content__anchor" href="#jupyterlab" aria-hidden="true"><i data-feather="bookmark"></i></a>JupyterLab</h2>
+<p>You can install JupyterLab from the DC/OS web-based interface or CLI. In both cases, you need to change two parameters:</p>
+<ul>
+<li>the virtual host (VHOST)</li>
+<li>the configuration file URLs</li>
+</ul>
+<ol>
+<li>Expose the service on a <a href="/dcosdocs/mesosphere/dcos/latest/overview/architecture/node-types/">public agent</a> by changing the <code>networking.external_access.external_public_agent_hostname</code> setting to an externally reachable virtual host (<code>VHOST</code>).</li>
+</ol>
+<p>For example, you might specify the Public Agent ELB in an AWS environment.</p>
+<p>You can configure this setting using the DC/OS web-based interface or by customizing the JupyterLab configuration file.</p>
+<p>For example:</p>
+<p><a href="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/img/jupyterlab-VHOST_UI.png"><img src="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/img/jupyterlab-VHOST_UI.png" alt="VHOST configuration" width="400"/></a></p>
+<p>Figure: VHOST Configuration</p>
+<p>If you are modifying the jupyterlabconfiguration file, modify the following setting;</p>
+<pre><code>```
+&quot;external_access&quot;: {
+    &quot;enabled&quot;: true,
+    &quot;external_public_agent_hostname&quot;: &quot;&lt;ADD YOUR VHOST NAME HERE *WITHOUT* http:// or the trailing slash (/)&gt;&quot;
+}
+```
+</code></pre>
+<ol>
+<li>Specify the configuration file URLs.</li>
+</ol>
+<p>For this demonstration, you are using the HDFS data set from the HDFS package you have installed.</p>
+<p>From the DC/OS web-based interface:</p>
+<p><a href="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/img/jupyterlab-hdfs_ui.png"><img src="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/img/jupyterlab-hdfs_ui.png" alt="HDFS configuration" width="400"/></a></p>
+<p>Figure: HDFS Configuration</p>
+<p>Alternatively, you can modify the jupyterlabconfiguration file with the following setting:</p>
+<pre><code>```
+&quot;jupyter_conf_urls&quot;: &quot;http://api.hdfs.marathon.l4lb.thisdcos.directory/v1/endpoints&quot;,
+```
+</code></pre>
+<ol>
+<li>
+<p>Enable the following two parameters for better monitoring and debugging using the DC/OS web-based interface or the jupyterlab configuration file.</p>
+<p>For example, customize the configuration file with the following settings:</p>
+<pre><code class="language-json">&quot;start_spark_history_server&quot;: true,
+&quot;start_tensorboard&quot;: true,
+</code></pre>
+</li>
+<li>
+<p>Install JupyterLab either by clicking <strong>Run Service</strong> in the DC/OS web-based interface or from the CLI.</p>
+</li>
+</ol>
+<p>For example, in the DC/OS web-based interface:</p>
+<p><a href="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/img/jupyterlab-install_ui.png"><img src="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/img/jupyterlab-install_ui.png" alt="Run service" width="400"/></a></p>
+<p>Figure: Run Service</p>
+<pre><code>Alternatively, install using the CLI and a customized configuration file by running the following command:
+
+```
+dcos package install jupyterlab --options=jupyterlab_options.json
+```
+</code></pre>
+<p>For more information about the options for installing JupyterLab, see <a href="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/installing/">installation</a>.</p>
+<h1 id="demo"><a class="content__anchor" href="#demo" aria-hidden="true"><i data-feather="bookmark"></i></a>Demo</h1>
+<h2 id="login"><a class="content__anchor" href="#login" aria-hidden="true"><i data-feather="bookmark"></i></a>Login</h2>
+<ol>
+<li>Log in to JupyterLab. If we have used the default name and VHOST setting above it should be reachable via <code>&lt;VHOST&gt;/jupyterlab-notebook</code>.</li>
+</ol>
+<p><a href="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/img/jupyterlab-login.png"><img src="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/img/jupyterlab-login.png" alt="JupyterLab login" width="400"/></a></p>
+<p>Figure: JupyterLab login</p>
+<p>The default password with the above settings is <code>jupyter</code>.</p>
+<p><a href="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/img/jupyterlab-jupyterlab_ui.png"><img src="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/img/jupyterlab-jupyterlab_ui.png" alt="Default password jupyter" width="400"/></a></p>
+<p>Figure: Default password jupyter</p>
+<ol start="2">
+<li>After logging in, you should be able to see the JupyterLab Launcher:</li>
+</ol>
+<p><a href="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/img/jupyterlab-jupyterlab_ui.png"><img src="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/img/jupyterlab-jupyterlab_ui.png" alt="Default password jupyter" width="400"/></a></p>
+<p>Figure: JupyterLab launcher</p>
+<h2 id="sparkpi-job"><a class="content__anchor" href="#sparkpi-job" aria-hidden="true"><i data-feather="bookmark"></i></a>SparkPi Job</h2>
+<p>As a first test let us run the <a href="https://github.com/apache/spark/blob/master/examples/src/main/java/org/apache/spark/examples/JavaSparkPi.java">SparkPi example job</a>.</p>
+<ol>
+<li>Launch a Terminal from inside the notebook and then use the following command:</li>
+</ol>
+<pre><code class="language-bash">eval \
+  spark-submit \
+  ${SPARK_OPTS} \
+  --verbose \
+  --class org.apache.spark.examples.SparkPi \
+  /opt/spark/examples/jars/spark-examples_2.11-2.2.1.jar 100
+</code></pre>
+<p><a href="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/img/jupyterlab-sparkPi.png"><img src="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/img/jupyterlab-sparkPi.png" alt="SparkPi on JupyterLab" width="400"/></a></p>
+<p>Figure: SparkPi on JupyterLab</p>
+<ol start="2">
+<li>You should then see Spark spinning up tasks and computing Pi. If you want, you can check the Mesos web interface via <code>&lt;cluster&gt;/mesos</code> and see the Spark tasks being spawned there.</li>
+</ol>
+<p><a href="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/img/jupyterlab-SparkPi_Mesos.png"><img src="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/img/jupyterlab-SparkPi_Mesos.png" alt="SparkPi Mesos on JupyterLab" width="400"/></a></p>
+<p>Figure: SparkPi Mesos on JupyterLab</p>
+<p>Once the Spark job has finished, you should be able to see output similar to <code>Pi is roughly 3.1416119141611913</code> (followed by the Spark teardown log messages).</p>
+<h2 id="sparkpi-with-apache-toree"><a class="content__anchor" href="#sparkpi-with-apache-toree" aria-hidden="true"><i data-feather="bookmark"></i></a>SparkPi with Apache Toree</h2>
+<p>Let us run the SparkPi example as well directly from a <a href="https://toree.incubator.apache.org/">Apache Toree</a> notebook.</p>
+<ol>
+<li>Launch a new notebook with an <code>Apache Toree Scala</code> Kernel</li>
+<li>Use the Scala code below to compute Pi once more:</li>
+</ol>
+<pre><code class="language-scala">val NUM_SAMPLES = 10000000
+
+val count2 = spark.sparkContext.parallelize(1 to NUM_SAMPLES).map{i =&gt;
+  val x = Math.random()
+  val y = Math.random()
+  if (x*x + y*y &lt; 1) 1 else 0
+}.reduce(_ + _)
+
+println(&quot;Pi is roughly &quot; + 4.0 * count2 / NUM_SAMPLES)
+</code></pre>
+<p><a href="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/img/jupyterlab-SparkPi_Toree.png"><img src="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/img/jupyterlab-SparkPi_Toree.png" alt="SparkPiToree on JupyterLab" width="400"/></a></p>
+<p>Figure: SparkPiToree on JupyterLab</p>
+<h2 id="optional-check-available-gpus"><a class="content__anchor" href="#optional-check-available-gpus" aria-hidden="true"><i data-feather="bookmark"></i></a>Optional: Check available GPUs</h2>
+<p>For GPU enabled JupyterLab:</p>
+<ol>
+<li>Launch a new notebook with Python 3 Kernel and use the following python code to show the available GPUs.</li>
+</ol>
+<pre><code class="language-python">from tensorflow.python.client import device_lib
+
+def get_available_devices():
+    local_device_protos = device_lib.list_local_devices()
+    return [x.name for x in local_device_protos]
+
+print(get_available_devices())
+
+</code></pre>
+<p><a href="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/img/jupyterlab-gpu.png"><img src="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/img/jupyterlab-gpu.png" alt="GPU on JupyterLab" width="400"/></a></p>
+<p>Figure: GPU on JupyterLab</p>
+<h3 id="mnist-tensorflowonspark"><a class="content__anchor" href="#mnist-tensorflowonspark" aria-hidden="true"><i data-feather="bookmark"></i></a>MNIST TensorFlowOnSpark</h3>
+<p>Next let us use <a href="https://github.com/yahoo/TensorFlowOnSpark">TensorFlowOnSpark</a> and the <a href="http://yann.lecun.com/exdb/mnist/">MNIST database</a> to train a network recognizing handwritten digits.</p>
+<ol>
+<li>Clone the <a href="https://github.com/yahoo/TensorFlowOnSpark">Yahoo TensorFlowOnSpark Github Repo</a> using the notebook’s Terminal:</li>
+</ol>
+<pre><code class="language-bash">git clone https://github.com/yahoo/TensorFlowOnSpark
+</code></pre>
+<ol start="2">
+<li>Retrieve and extract raw MNIST Dataset using the notebook’s Terminal:</li>
+</ol>
+<pre><code class="language-bash">cd $MESOS_SANDBOX
+curl -fsSL -O http://downloads.mesosphere.com/data-science/assets/mnist.zip
+unzip mnist.zip
+</code></pre>
+<ol start="3">
+<li>Check HDFS
+Let us briefly confirm that HDFS is working as expected and the <code>mnist</code> directory does not exist yet from the notebook’s Terminal:</li>
+</ol>
+<pre><code class="language-bash">hdfs dfs -ls  mnist/
+ls: `mnist/': No such file or directory
+</code></pre>
+<ol start="4">
+<li>Prepare MNIST Dataset in CSV format and store on HDFS from the notebook’s Terminal</li>
+</ol>
+<pre><code class="language-bash">eval \
+  spark-submit \
+  ${SPARK_OPTS} \
+  --verbose \
+  $(pwd)/TensorFlowOnSpark/examples/mnist/mnist_data_setup.py \
+    --output mnist/csv \
+    --format csv
+</code></pre>
+<ol start="5">
+<li>Check for <code>mnist</code> directory in HDFS from notebook’s Terminal:</li>
+</ol>
+<pre><code class="language-bash">hdfs dfs -ls -R  mnist
+/drwxr-xr-x   - nobody supergroup          0 2018-08-08 01:33 mnist/csv
+drwxr-xr-x   - nobody supergroup          0 2018-08-08 01:33 mnist/csv/test
+drwxr-xr-x   - nobody supergroup          0 2018-08-08 01:33 mnist/csv/test/images
+-rw-r--r--   3 nobody supergroup          0 2018-08-08 01:33 mnist/csv/test/images/_SUCCESS
+-rw-r--r--   3 nobody supergroup    1810248 2018-08-08 01:33 mnist/csv/test/images/part-00000
+-rw-r--r--   3 nobody supergroup    1806102 2018-08-08 01:33 mnist/csv/test/images/part-00001
+-rw-r--r--   3 nobody supergroup    1811128 2018-08-08 01:33 mnist/csv/test/images/part-00002
+-rw-r--r--   3 nobody supergroup    1812952 2018-08-08 01:33 mnist/csv/test/images/part-00003
+-rw-r--r--   3 nobody supergroup    1810946 2018-08-08 01:33 mnist/csv/test/images/part-00004
+-rw-r--r--   3 nobody supergroup    1835497 2018-08-08 01:33 mnist/csv/test/images/part-00005
+...
+</code></pre>
+<ol start="67">
+<li>. Train MNIST model with CPUs from the notebook’s Terminal:</li>
+</ol>
+<pre><code class="language-bash">eval \
+  spark-submit \
+  ${SPARK_OPTS} \
+  --verbose \
+  --conf spark.mesos.executor.docker.image=dcoslabs/dcos-jupyterlab:1.2.0-0.33.7 \
+  --py-files $(pwd)/TensorFlowOnSpark/examples/mnist/spark/mnist_dist.py \
+  $(pwd)/TensorFlowOnSpark/examples/mnist/spark/mnist_spark.py \
+  --cluster_size 5 \
+  --images mnist/csv/train/images \
+  --labels mnist/csv/train/labels \
+  --format csv \
+  --mode train \
+  --model mnist/mnist_csv_model
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>If you want to use GPUs, make sure the cluster size matches the number of GPU instances.</p>
+<pre><code class="language-bash">eval \
+    spark-submit \
+    ${SPARK_OPTS} \
+    --verbose \
+    --conf spark.mesos.executor.docker.image=dcoslabs/dcos-jupyterlab:1.2.0-0.33.7-gpu \
+    --conf spark.mesos.gpus.max=2 \
+    --conf spark.mesos.executor.gpus=1 \
+    --py-files $(pwd)/TensorFlowOnSpark/examples/mnist/spark/mnist_dist.py \
+    $(pwd)/TensorFlowOnSpark/examples/mnist/spark/mnist_spark.py \
+    --cluster_size 2 \
+    --images mnist/csv/train/images \
+    --labels mnist/csv/train/labels \
+    --format csv \
+    --mode train \
+    --model mnist/mnist_csv_model
+</code></pre>
+<p>As we configured TensorBoard to be enabled, we can go to <code>&lt;VHOST&gt;/jupyterlab-notebook/tensorboard</code> and check the Training progress.</p>
+<p><a href="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/img/jupyterlab-TensorBoard.png"><img src="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/img/jupyterlab-TensorBoard.png" alt="TensorBoard on JupyterLab" width="400"/></a></p>
+<p>Figure: TensorBoard on JupyterLab</p>
+<ol start="7">
+<li>Verify that the trained model exists on HDFS using the notebook’s Terminal:</li>
+</ol>
+<pre><code class="language-bash">nobody@2442bc8f-94d4-4f74-8321-b8b8b40436d7:~$ hdfs dfs -ls -R mnist/mnist_csv_model
+-rw-r--r--   3 nobody supergroup        128 2018-08-08 02:37 mnist/mnist_csv_model/checkpoint
+-rw-r--r--   3 nobody supergroup    4288367 2018-08-08 02:37 mnist/mnist_csv_model/events.out.tfevents.1533695777.ip-10-0-7-250.us-west-2.compute.internal
+-rw-r--r--   3 nobody supergroup         40 2018-08-08 02:36 mnist/mnist_csv_model/events.out.tfevents.1533695778.ip-10-0-7-250.us-west-2.compute.internal
+-rw-r--r--   3 nobody supergroup     156424 2018-08-08 02:36 mnist/mnist_csv_model/graph.pbtxt
+-rw-r--r--   3 nobody supergroup     814168 2018-08-08 02:36 mnist/mnist_csv_model/model.ckpt-0.data-00000-of-00001
+-rw-r--r--   3 nobody supergroup        408 2018-08-08 02:36 mnist/mnist_csv_model/model.ckpt-0.index
+-rw-r--r--   3 nobody supergroup      69583 2018-08-08 02:36 mnist/mnist_csv_model/model.ckpt-0.meta
+-rw-r--r--   3 nobody supergroup     814168 2018-08-08 02:37 mnist/mnist_csv_model/model.ckpt-600.data-00000-of-00001
+-rw-r--r--   3 nobody supergroup        408 2018-08-08 02:37 mnist/mnist_csv_model/model.ckpt-600.index
+-rw-r--r--   3 nobody supergroup      74941 2018-08-08 02:37 mnist/mnist_csv_model/model.ckpt-600.meta
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#prerequisites">Prerequisites</a></li><li class="content__sections-item content__sections-item--h2"><a href="#optional-terraform">Optional: Terraform</a></li><li class="content__sections-item content__sections-item--h1"><a href="#installation">Installation</a></li><li class="content__sections-item content__sections-item--h2"><a href="#hdfs">HDFS</a></li><li class="content__sections-item content__sections-item--h2"><a href="#marathon-lb">Marathon-LB</a></li><li class="content__sections-item content__sections-item--h2"><a href="#jupyterlab">JupyterLab</a></li><li class="content__sections-item content__sections-item--h1"><a href="#demo">Demo</a></li><li class="content__sections-item content__sections-item--h2"><a href="#login">Login</a></li><li class="content__sections-item content__sections-item--h2"><a href="#sparkpi-job">SparkPi Job</a></li><li class="content__sections-item content__sections-item--h2"><a href="#sparkpi-with-apache-toree">SparkPi with Apache Toree</a></li><li class="content__sections-item content__sections-item--h2"><a href="#optional-check-available-gpus">Optional: Check available GPUs</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59c6dc5017f3462f" async></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.2.0/dist/instantsearch.min.js"></script><script src="/js/bundle.js"></script></body></html>

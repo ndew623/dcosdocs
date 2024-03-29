@@ -1,0 +1,132 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>覆盖默认 Linux 用户 - D2iQ Docs</title><meta name="description" content="覆盖默认 Linux 用户"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.1/security/ent/users-groups/config-linux-user">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/users-groups/config-linux-user">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/users-groups/config-linux-user">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/users-groups/config-linux-user">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/"><i data-feather="chevron-right"></i>网络</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/"><i data-feather="chevron-right"></i>安全</a></li><ul><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/"><i data-feather="chevron-right"></i>DC/OS Enterprise 安全性</a></li><ul><li class="active"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/users-groups/"><i data-feather="chevron-right"></i>管理用户和组</a></li><ul><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/users-groups/add-local-user/">添加本地用户</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/users-groups/add-external-user/">添加外部用户</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/users-groups/reset-superuser/">重置超级用户</a></li><li class="active active-on"><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/users-groups/config-linux-user/">覆盖默认 Linux 用户</a></li></ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/gui-permissions/"><i data-feather="chevron-right"></i>授予访问 UI 的权限</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/perms-management/">权限管理</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/perms-reference/">权限参考</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/ldap/"><i data-feather="chevron-right"></i>LDAP 身份认证</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/secrets/"><i data-feather="chevron-right"></i>密钥</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/sso/"><i data-feather="chevron-right"></i>基于身份提供程序的身份认证</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/service-auth/"><i data-feather="chevron-right"></i>服务认证</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/restrict-service-access/">限制对 DC/OS 服务组的访问</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/hardening/">强化</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/iam-api/">身份和访问管理 API</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/tls-ssl/"><i data-feather="chevron-right"></i>确保与 TLS 通信的安全</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/oss/"><i data-feather="chevron-right"></i>DC/OS 开源安全</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">覆盖默认 Linux 用户</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">覆盖默认 Linux 用户</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/users-groups/config-linux-user/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- The source repository for this topic is https://github.com/dcos/dcos-docs-site -->
+<p>服务或作业的默认 Linux 用户可能因安全模式和容器类型而异 请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/#linux-users">Linux 用户</a> 了解更多信息。</p>
+<p>覆盖默认 Linux 用户的程序因服务或作业类型而异。</p>
+<ul>
+<li><a href="#universe">覆盖 Catalog 服务的默认 Linux 用户</a></li>
+<li><a href="#marathon-app-def">通过 Marathon 应用定义覆盖服务的默认用户</a></li>
+<li><a href="#metronome-job-def">通过 Metronome 作业定义覆盖作业的默认用户</a></li>
+</ul>
+<h1 id="catalog-linux"><a class="content__anchor" href="#catalog-linux" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="universe"></a>覆盖 Catalog 服务的默认 Linux 用户</h1>
+<p>许多 Catalog 服务忽略其用户帐户的覆盖，在 <code>strict</code> 模式下除外。我们提供覆盖服务默认 Linux 用户的详细步骤，该服务在[服务账户]中支持此覆盖。(/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/service-auth/). 有关逐步说明，请参阅与感兴趣的服务相关部分。这些程序还说明如何配置服务以使用加密和服务账户。</p>
+<p>请记得授予权限，以便对启动 <code>create</code> 服务的服务帐户用户执行 <code>dcos:mesos:master:task:user[:&lt;linux-user-name&gt;]</code> 资源上的 Catalog 操作。请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/perms-reference/#mesos-permissions">Mesos 权限</a>，了解更多信息。</p>
+<h1 id="marathon-linux"><a class="content__anchor" href="#marathon-linux" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="marathon-app-def"></a>通过 Marathon 应用定义覆盖默认 Linux 用户</h1>
+<p>Marathon 应用定义提供用于覆盖默认 Linux 用户的 <code>&quot;user&quot;</code> 密钥。**提示：**参考 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/creating-services/">Marathon 文档</a>，了解有关编写 Marathon 服务的更多详细信息。</p>
+<p>以下教程将展示所有权如何运作。在开始之前，请确保：</p>
+<ul>
+<li>代理程序上已存在 Linux 用户帐户。</li>
+<li>您已安装并登录到 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/">DC/OS CLI</a>.</li>
+<li>必须遵守 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/tls-ssl/get-cert/">下载根证书</a> 中的步骤才能发布此部分的 curl 命令。</li>
+<li>您已授予对<code>create</code> DC/OS 服务帐户用户 <code>dcos:mesos:master:task:user:&lt;linux-user-name&gt;</code> 资源执行 <code>dcos_marathon</code> 操作的权限。</li>
+</ul>
+<p>满足这些先决条件后，完成以下步骤以覆盖默认 Linux 用户。</p>
+<ol>
+<li>
+<p>创建 Marathon 应用定义，并使用信息名称保存，如 <code>myservice.json</code>. 以下服务会将其在用户名称下运行的用户名称写入日志，创建新文件，并从 dcos.io 获取 Mesosphere 徽标。</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;linux-user-override&quot;,
+  &quot;cmd&quot;: &quot;whoami &amp;&amp; tee file &amp;&amp; sleep 1000&quot;,
+  &quot;user&quot;: &quot;&lt;your-test-user-account&gt;&quot;,
+  &quot;uris&quot;: [
+      &quot;/dcosdocs/mesosphere/dcos/2.1/img/logos/mesosphere.svg&quot;
+  ]
+}
+</code></pre>
+ <p class="message--important"><strong>重要信息：</strong>不要忘记将“your-test-user-account”替换为代理程序上存在的 Linux 用户的名称，并且与默认值不同。</p>
+</li>
+<li>
+<p>使用 [Marathon API]部署服务。(/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/marathon-api/).</p>
+<pre><code class="language-bash">curl -X POST --cacert dcos-ca.crt $(dcos config show core.dcos_url)/service/marathon/v2/apps -d @myservice.json -H &quot;Content-type: application/json&quot; -H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot;
+</code></pre>
+</li>
+</ol>
+<ol>
+<li>
+<p>检查 DC/OS Web 界面的 <strong>服务</strong> 选项卡，以确认您的应用程序已成功创建。</p>
+</li>
+<li>
+<p>单击您的服务，然后单击 <strong>Configuration</strong> 选项卡。</p>
+</li>
+<li>
+<p>向下滚动以查看指定为<strong>用户</strong>值的 Linux 用户帐户。</p>
+</li>
+<li>
+<p>单击 <strong>Tasks</strong> 选项卡。到这时，您的服务应该已成功部署。单击任务名称。</p>
+</li>
+<li>
+<p>单击 <strong>Files</strong> 选项卡。</p>
+</li>
+<li>
+<p>观察作为获取和创建文件的<strong>所有者</strong>而传入的 Linux 用户名。</p>
+</li>
+<li>
+<p>单击以打开 <strong>stdout</strong> 文件。</p>
+</li>
+<li>
+<p>滚动到底部，您应该能看到 <code>whoami</code> 命令的结果，例如，任务在其下运行的用户名称。</p>
+</li>
+</ol>
+<h1 id="metronome-linux"><a class="content__anchor" href="#metronome-linux" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="metronome-job-def"></a>通过 Metronome 作业定义覆盖默认 Linux 用户</h1>
+<p>Metronome 作业定义提供 <code>&quot;user&quot;</code> 密钥，可用于覆盖默认 Linux 用户。</p>
+<p class="message--note"><strong>注意：</strong>有关创建和部署作业的更多信息，请参阅<a href="/dcosdocs/mesosphere/dcos/2.1/deploying-jobs/quickstart/">作业文档</a></p>
+<p>以下程序将引导您完成快速教程，以展示所有权如何运作。在开始之前，请确保：</p>
+<ul>
+<li>代理程序上已存在 Linux 用户帐户。</li>
+<li>您已安装并登录到 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/">DC/OS CLI</a>.</li>
+<li>必须遵守 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/tls-ssl/get-cert/">下载根证书</a> 中的步骤才能发布此部分的 curl 命令。</li>
+<li>您已授予对<code>create</code> DC/OS 服务帐户用户 <code>dcos:mesos:master:task:user:&lt;linux-user-name&gt;</code> 资源执行 <code>dcos_metronome</code> 操作的权限。</li>
+</ul>
+<p>满足这些先决条件后，完成以下步骤以覆盖默认 Linux 用户。</p>
+<ol>
+<li>
+<p>创建 Metronome 作业定义，并使用信息名称保存，如 <code>myjob.json</code>.</p>
+<pre><code class="language-json">{
+&quot;id&quot;: &quot;test-user-override&quot;,
+&quot;run&quot;: {
+  &quot;artifacts&quot;: [
+    {
+      &quot;uri&quot;: &quot;/dcosdocs/mesosphere/dcos/2.1/img/logos/mesosphere.svg&quot;
+    }
+  ],
+  &quot;cmd&quot;: &quot;whoami &amp;&amp; printf 'iamme' | tee file &amp;&amp; sleep 1000&quot;,
+  &quot;cpus&quot;: 0.01,
+  &quot;mem&quot;: 32,
+  &quot;disk&quot;: 0,
+  &quot;user&quot;: &quot;&lt;your-test-user-account&gt;&quot;
+}
+}
+</code></pre>
+ <p class="message--important"><strong>重要信息：</strong>不要忘记将“your-test-user-account”替换为代理程序上存在的 Linux 系统用户的名称，并且与默认值不同。如果您尚未配置用户，则存在 Linux 系统用户 <code>nobody</code></p>
+</li>
+<li>
+<p>使用 [Metronome REST API] 部署作业。(https://dcos.github.io/metronome/docs/generated/api.html).</p>
+<pre><code class="language-bash">curl -X POST --cacert dcos-ca.crt $(dcos config show core.dcos_url)/service/metronome/v1/jobs -d @myjob.json -H &quot;Content-type: application/json&quot; -H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot;
+</code></pre>
+</li>
+<li>
+<p>检查 DC/OS Web 界面的 <strong>Jobs</strong> 选项卡，以确认您的应用程序已成功部署。</p>
+</li>
+<li>
+<p>单击您的作业，然后单击 <strong>Run Now</strong>。</p>
+</li>
+<li>
+<p>单击三个堆叠点并选择 <strong>Run Now</strong>，从右上方打开下拉菜单。</p>
+</li>
+<li>
+<p>展开作业并单击打开其任务。</p>
+</li>
+<li>
+<p>单击以打开 <strong>Files</strong> 选项卡。注意所有文件都将您的 Linux 用户作为<strong>所有者</strong>。</p>
+</li>
+<li>
+<p>单击以打开 <code>stdout</code> 文件。</p>
+</li>
+<li>
+<p>滚动到底部，您应该看到 <code>whoami</code> 命令的结果，任务在其下运行的用户名称，然后是 <code>iamme</code>.</p>
+</li>
+</ol>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#catalog-linux">覆盖 Catalog 服务的默认 Linux 用户</a></li><li class="content__sections-item content__sections-item--h1"><a href="#marathon-linux">通过 Marathon 应用定义覆盖默认 Linux 用户</a></li><li class="content__sections-item content__sections-item--h1"><a href="#metronome-linux">通过 Metronome 作业定义覆盖默认 Linux 用户</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

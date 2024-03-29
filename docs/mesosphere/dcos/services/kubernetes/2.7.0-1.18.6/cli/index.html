@@ -1,0 +1,312 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>CLI - D2iQ Docs</title><meta name="description" content="CLI commands for DC/OS Kubernetes"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Kubernetes Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.8.0-1.19.2/cli">Kubernetes 2.8.0-1.19.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.7.0-1.18.6/cli">Kubernetes 2.7.0-1.18.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.6.1-1.17.8/cli">Kubernetes 2.6.1-1.17.8</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.6.0-1.17.7/cli">Kubernetes 2.6.0-1.17.7</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.5.0-1.16.9/cli">Kubernetes 2.5.0-1.16.9</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/cli">Kubernetes 2.4.9-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/cli">Kubernetes 2.4.8-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.7-1.15.10/cli">Kubernetes 2.4.7-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.6-1.15.6/cli">Kubernetes 2.4.6-1.15.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.5-1.15.5/cli">Kubernetes 2.4.5-1.15.5</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/cli">Kubernetes 2.4.4-1.15.4</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/cli">Kubernetes 2.4.3-1.15.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.2-1.15.3/cli">Kubernetes 2.4.2-1.15.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/cli">Kubernetes 2.4.1-1.15.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.10-1.15.10/cli">Kubernetes 2.4.10-1.15.10</a></li></ul><div class="toggle"><p><span class="title">Kubernetes</span><span class="version"> 2.7.0-1.18.6</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.7.0-1.18.6/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.7.0-1.18.6/overview/">Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.7.0-1.18.6/getting-started/"><i data-feather="chevron-right"></i>Tutorial - Kubernetes on DC/OS Enterprise</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.7.0-1.18.6/operations/"><i data-feather="chevron-right"></i>Operations</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.7.0-1.18.6/cli/">CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.7.0-1.18.6/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.7.0-1.18.6/changelog/">Changelog</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.7.0-1.18.6/supported-versions/">Supported Versions</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">CLI</h1></div><h4 class="content__header-description">CLI commands for DC/OS Kubernetes</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/kubernetes/2.7.0-1.18.6/cli/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- This source repo for this topic is https://github.com/mesosphere/dcos-kubernetes-cluster -->
+<h1 id="dcos-kubernetes-cli"><a class="content__anchor" href="#dcos-kubernetes-cli" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS Kubernetes CLI</h1>
+<p>A CLI is provided as a way to interact with the cluster manager and allow complete control over the life-cycle of Kubernetes clusters running on DC/OS.</p>
+<ul>
+<li><a href="#commands">Commands</a>
+<ul>
+<li><a href="#manager-commands">Manager Commands</a>
+<ul>
+<li><a href="#manager-describe">Manager Describe</a></li>
+<li><a href="#manager-plans">Manager Plans</a></li>
+<li><a href="#manager-pod">Manager Pod</a></li>
+<li><a href="#manager-update">Manager Update</a></li>
+<li><a href="#manager-debug">Manager Debug</a></li>
+</ul>
+</li>
+<li><a href="#cluster-commands">Cluster Commands</a>
+<ul>
+<li><a href="#cluster-list">Cluster List</a></li>
+<li><a href="#cluster-default">Cluster Default</a></li>
+<li><a href="#cluster-kubeconfig">Cluster Kubeconfig</a></li>
+<li><a href="#cluster-describe">Cluster Describe</a></li>
+<li><a href="#cluster-create">Cluster Create</a></li>
+<li><a href="#cluster-update">Cluster Update</a></li>
+<li><a href="#cluster-delete">Cluster Delete</a></li>
+<li><a href="#cluster-backup">Cluster Backup</a></li>
+<li><a href="#cluster-restore">Cluster Restore</a></li>
+<li><a href="#cluster-debug">Cluster Debug</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="commands"><a class="content__anchor" href="#commands" aria-hidden="true"><i data-feather="bookmark"></i></a>Commands</h2>
+<p>The <code>kubernetes</code> CLI has two useful top level commands that each refer to the particular objects you can run actions against.</p>
+<ul>
+<li>manager - commands run against the cluster <code>manager</code>.</li>
+<li>cluster - commands run against a specific Kubernetes cluster.</li>
+</ul>
+<p>For more details on available commands, run:</p>
+<pre><code class="language-shell">$ dcos kubernetes --help
+
+usage: dcos kubernetes [&lt;flags&gt;] &lt;command&gt;
+
+
+Flags:
+  -h, --help     Show context-sensitive help.
+  -v, --verbose  Enable extra logging of requests/responses
+      --version  Show application version.
+</code></pre>
+<h3 id="manager-commands"><a class="content__anchor" href="#manager-commands" aria-hidden="true"><i data-feather="bookmark"></i></a>Manager Commands</h3>
+<pre><code class="language-shell">$ dcos kubernetes manager &lt;subcommand&gt; [&lt;flags&gt;]
+</code></pre>
+<h4 id="manager-describe"><a class="content__anchor" href="#manager-describe" aria-hidden="true"><i data-feather="bookmark"></i></a>Manager Describe</h4>
+<p>View the configuration for this service:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager describe
+</code></pre>
+<h4 id="manager-plans"><a class="content__anchor" href="#manager-plans" aria-hidden="true"><i data-feather="bookmark"></i></a>Manager Plans</h4>
+<h5 id="plan-list"><a class="content__anchor" href="#plan-list" aria-hidden="true"><i data-feather="bookmark"></i></a>Plan List</h5>
+<p>Show all plans for this service:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager plan list
+</code></pre>
+<h5 id="plan-status"><a class="content__anchor" href="#plan-status" aria-hidden="true"><i data-feather="bookmark"></i></a>Plan Status</h5>
+<p>Display the status of the plan with the provided plan name:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager plan status [&lt;flags&gt;] &lt;plan&gt;
+</code></pre>
+<h5 id="plan-start"><a class="content__anchor" href="#plan-start" aria-hidden="true"><i data-feather="bookmark"></i></a>Plan Start</h5>
+<p>Start the plan with the provided name and any optional plan arguments:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager plan start [&lt;flags&gt;] &lt;plan&gt;
+</code></pre>
+<h5 id="plan-stop"><a class="content__anchor" href="#plan-stop" aria-hidden="true"><i data-feather="bookmark"></i></a>Plan Stop</h5>
+<p>Stop the running plan with the provided name:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager plan stop &lt;plan&gt;
+</code></pre>
+<p>Plan Stop differs from Plan Pause in the following ways:</p>
+<ul>
+<li>Pause can be issued for a specific phase or for all phases within a plan. Stop can only be issued for a plan.</li>
+<li>Pause updates the underlying Phase/Step state. Stop both ceases execution and of the plan and resets the plan to its initial pending state.</li>
+</ul>
+<h5 id="plan-pause"><a class="content__anchor" href="#plan-pause" aria-hidden="true"><i data-feather="bookmark"></i></a>Plan Pause</h5>
+<p>Pause the plan, or a specific phase in that plan with the provided phase name (or UUID):</p>
+<pre><code class="language-shell">$ dcos kubernetes manager plan pause &lt;plan&gt; [&lt;phase&gt;]
+</code></pre>
+<h5 id="plan-resume"><a class="content__anchor" href="#plan-resume" aria-hidden="true"><i data-feather="bookmark"></i></a>Plan Resume</h5>
+<p>Resume the plan, or a specific phase in that plan with the provided phase name (or UUID):</p>
+<pre><code class="language-shell">$ dcos kubernetes manager plan resume &lt;plan&gt; [&lt;phase&gt;]
+</code></pre>
+<h5 id="plan-force-restart"><a class="content__anchor" href="#plan-force-restart" aria-hidden="true"><i data-feather="bookmark"></i></a>Plan Force-Restart</h5>
+<p>Restart the plan with the provided name, or a specific phase in the plan with the provided name, or a specific step in a phase of the plan with the provided step name.</p>
+<pre><code class="language-shell">$ dcos kubernetes manager plan force-restart &lt;plan&gt; [&lt;phase&gt; [&lt;step&gt;]]
+</code></pre>
+<h5 id="plan-force-complete"><a class="content__anchor" href="#plan-force-complete" aria-hidden="true"><i data-feather="bookmark"></i></a>Plan Force-Complete</h5>
+<p>Force complete a specific step in the provided phase. Example uses include the following: Abort a sidecar operation due to observed failure or known required manual preparation that was not performed.</p>
+<pre><code class="language-shell">$ dcos kubernetes manager plan force-complete &lt;plan&gt; &lt;phase&gt; &lt;step&gt;
+</code></pre>
+<h4 id="manager-pod"><a class="content__anchor" href="#manager-pod" aria-hidden="true"><i data-feather="bookmark"></i></a>Manager Pod</h4>
+<h5 id="pod-list"><a class="content__anchor" href="#pod-list" aria-hidden="true"><i data-feather="bookmark"></i></a>Pod List</h5>
+<p>Display the list of known pod instances:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager pod list
+</code></pre>
+<h5 id="pod-status"><a class="content__anchor" href="#pod-status" aria-hidden="true"><i data-feather="bookmark"></i></a>Pod Status</h5>
+<p>Display the status for tasks in one pod or all pods:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager pod status [&lt;flags&gt;] [&lt;pod&gt;]
+</code></pre>
+<h5 id="pod-info"><a class="content__anchor" href="#pod-info" aria-hidden="true"><i data-feather="bookmark"></i></a>Pod Info</h5>
+<p>Display the full state information for tasks in a pod:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager pod info &lt;pod&gt;
+</code></pre>
+<h5 id="pod-restart"><a class="content__anchor" href="#pod-restart" aria-hidden="true"><i data-feather="bookmark"></i></a>Pod Restart</h5>
+<p>Restarts a given pod without moving it to a new agent:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager pod restart &lt;pod&gt;  
+</code></pre>
+<h5 id="pod-replace"><a class="content__anchor" href="#pod-replace" aria-hidden="true"><i data-feather="bookmark"></i></a>Pod Replace</h5>
+<p>Replace should be used <strong>only</strong> when the current instance of the pod should be completely destroyed. All persistent data (read: volumes) of the pod will be destroyed. Replace should be used when a DC/OS agent is being removed, is permanently down, or pod placement constraints need to be updated.
+Destroys a given pod and moves it to a new agent:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager pod replace &lt;pod&gt;
+</code></pre>
+<h4 id="manager-update"><a class="content__anchor" href="#manager-update" aria-hidden="true"><i data-feather="bookmark"></i></a>Manager Update</h4>
+<h5 id="update-start"><a class="content__anchor" href="#update-start" aria-hidden="true"><i data-feather="bookmark"></i></a>Update Start</h5>
+<p>Launches an update operation:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager update start [&lt;flags&gt;]
+</code></pre>
+<h5 id="update-force-complete"><a class="content__anchor" href="#update-force-complete" aria-hidden="true"><i data-feather="bookmark"></i></a>Update Force-Complete</h5>
+<p>Force complete a specific step in the provided phase:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager update force-complete &lt;phase&gt; &lt;step&gt;
+</code></pre>
+<h5 id="update-force-restart"><a class="content__anchor" href="#update-force-restart" aria-hidden="true"><i data-feather="bookmark"></i></a>Update Force-Restart</h5>
+<p>Restart update plan, or specific step in the provided phase:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager update force-restart [&lt;phase&gt; [&lt;step&gt;]]
+</code></pre>
+<h5 id="update-package-version"><a class="content__anchor" href="#update-package-version" aria-hidden="true"><i data-feather="bookmark"></i></a>Update Package-Version</h5>
+<p>View a list of available package versions to downgrade or upgrade to:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager update package-versions
+</code></pre>
+<h5 id="update-pause"><a class="content__anchor" href="#update-pause" aria-hidden="true"><i data-feather="bookmark"></i></a>Update Pause</h5>
+<p>Pause update plan:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager update pause
+</code></pre>
+<h5 id="update-resume"><a class="content__anchor" href="#update-resume" aria-hidden="true"><i data-feather="bookmark"></i></a>Update Resume</h5>
+<p>Resume update plan:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager update resume
+</code></pre>
+<h5 id="update-status"><a class="content__anchor" href="#update-status" aria-hidden="true"><i data-feather="bookmark"></i></a>Update Status</h5>
+<p>View status of a running update:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager update status [&lt;flags&gt;]
+</code></pre>
+<h4 id="manager-debug"><a class="content__anchor" href="#manager-debug" aria-hidden="true"><i data-feather="bookmark"></i></a>Manager Debug</h4>
+<h5 id="debug-config"><a class="content__anchor" href="#debug-config" aria-hidden="true"><i data-feather="bookmark"></i></a>Debug Config</h5>
+<p>List IDs of all available configurations:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager debug config list
+</code></pre>
+<p>Display a specified configuration:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager debug config show &lt;config_id&gt;
+</code></pre>
+<p>Display the target configuration:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager debug config target
+</code></pre>
+<p>List ID of the target configuration:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager debug config target_id
+</code></pre>
+<h5 id="debug-pod"><a class="content__anchor" href="#debug-pod" aria-hidden="true"><i data-feather="bookmark"></i></a>Debug Pod</h5>
+<p>Pauses a pod’s tasks for debugging:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager debug pod pause [&lt;flags&gt;] &lt;pod&gt;
+</code></pre>
+<p>Resumes a pod’s normal execution following a pause command:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager debug pod resume [&lt;flags&gt;] &lt;pod&gt;
+</code></pre>
+<h5 id="debug-state"><a class="content__anchor" href="#debug-state" aria-hidden="true"><i data-feather="bookmark"></i></a>Debug State</h5>
+<p>Display the Mesos framework ID:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager debug state framework_id
+</code></pre>
+<p>List names of all custom properties:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager debug state properties
+</code></pre>
+<p>Display the content of a specified property:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager debug state property &lt;name&gt;
+</code></pre>
+<p>Refresh the state cache, used for debugging:</p>
+<pre><code class="language-shell">$ dcos kubernetes manager debug state refresh_cache
+</code></pre>
+<h3 id="cluster-commands"><a class="content__anchor" href="#cluster-commands" aria-hidden="true"><i data-feather="bookmark"></i></a>Cluster Commands</h3>
+<p>The cluster sub-command itself represents a list of actions that can be made against a cluster, existing or otherwise (such as the case of create).</p>
+<pre><code class="language-shell">$ dcos kubernetes cluster &lt;sub-command&gt; [&lt;flags&gt;]
+</code></pre>
+<h4 id="cluster-list"><a class="content__anchor" href="#cluster-list" aria-hidden="true"><i data-feather="bookmark"></i></a>Cluster List</h4>
+<p>Lists Kubernetes clusters:</p>
+<pre><code class="language-shell">$ dcos kubernetes cluster list
+</code></pre>
+<h4 id="cluster-kubeconfig"><a class="content__anchor" href="#cluster-kubeconfig" aria-hidden="true"><i data-feather="bookmark"></i></a>Cluster Kubeconfig</h4>
+<p>Generates a kubeconfig entry for a cluster:</p>
+<pre><code class="language-shell">$ dcos kubernetes cluster kubeconfig --apiserver-url=APISERVER-URL [&lt;flags&gt;]
+</code></pre>
+<h4 id="cluster-describe"><a class="content__anchor" href="#cluster-describe" aria-hidden="true"><i data-feather="bookmark"></i></a>Cluster Describe</h4>
+<p>View the configuration for a cluster:</p>
+<pre><code class="language-shell">$ dcos kubernetes cluster describe [&lt;flags&gt;]
+</code></pre>
+<h4 id="cluster-default"><a class="content__anchor" href="#cluster-default" aria-hidden="true"><i data-feather="bookmark"></i></a>Cluster Default</h4>
+<h5 id="default-show"><a class="content__anchor" href="#default-show" aria-hidden="true"><i data-feather="bookmark"></i></a>Default Show</h5>
+<p>Print the name of the default Kubernetes cluster:</p>
+<pre><code class="language-shell">$ dcos kubernetes cluster default show
+</code></pre>
+<h5 id="default-unset"><a class="content__anchor" href="#default-unset" aria-hidden="true"><i data-feather="bookmark"></i></a>Default Unset</h5>
+<p>Unset the default Kubernetes cluster:</p>
+<pre><code class="language-shell">$ dcos kubernetes cluster default unset
+</code></pre>
+<h5 id="default-set"><a class="content__anchor" href="#default-set" aria-hidden="true"><i data-feather="bookmark"></i></a>Default Set</h5>
+<p>Set the default Kubernetes cluster:</p>
+<pre><code class="language-shell">$ dcos kubernetes cluster default set &lt;cluster_name&gt;
+</code></pre>
+<h4 id="cluster-create"><a class="content__anchor" href="#cluster-create" aria-hidden="true"><i data-feather="bookmark"></i></a>Cluster Create</h4>
+<p>Create a cluster:</p>
+<pre><code class="language-shell">$ dcos kubernetes cluster create [&lt;flags&gt;]
+</code></pre>
+<h4 id="cluster-update"><a class="content__anchor" href="#cluster-update" aria-hidden="true"><i data-feather="bookmark"></i></a>Cluster Update</h4>
+<p>Update a cluster:</p>
+<pre><code class="language-shell">$ dcos kubernetes cluster update [&lt;flags&gt;]
+</code></pre>
+<h4 id="cluster-delete"><a class="content__anchor" href="#cluster-delete" aria-hidden="true"><i data-feather="bookmark"></i></a>Cluster Delete</h4>
+<p>Delete a cluster:</p>
+<pre><code class="language-shell">$ dcos kubernetes cluster delete [&lt;flags&gt;]
+</code></pre>
+<h4 id="cluster-backup"><a class="content__anchor" href="#cluster-backup" aria-hidden="true"><i data-feather="bookmark"></i></a>Cluster Backup</h4>
+<p>Create a backup of the state of a cluster:</p>
+<pre><code class="language-shell">$ dcos kubernetes cluster backup [&lt;flags&gt;]
+</code></pre>
+<h4 id="cluster-restore"><a class="content__anchor" href="#cluster-restore" aria-hidden="true"><i data-feather="bookmark"></i></a>Cluster Restore</h4>
+<p>Restore a backup of the state of a cluster:</p>
+<pre><code class="language-shell">$ dcos kubernetes cluster restore [&lt;flags&gt;]
+</code></pre>
+<h4 id="cluster-debug"><a class="content__anchor" href="#cluster-debug" aria-hidden="true"><i data-feather="bookmark"></i></a>Cluster Debug</h4>
+<h5 id="debug-config-2"><a class="content__anchor" href="#debug-config-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Debug Config</h5>
+<p>List IDs of all available configurations:</p>
+<pre><code class="language-shell">dcos kubernetes cluster debug [&lt;flags&gt;] config list
+</code></pre>
+<p>Display a specified configuration:</p>
+<pre><code class="language-shell">dcos kubernetes cluster debug [&lt;flags&gt;] config show &lt;config_id&gt;
+</code></pre>
+<p>Display the target configuration:</p>
+<pre><code class="language-shell">dcos kubernetes cluster debug [&lt;flags&gt;] config target
+</code></pre>
+<p>List ID of the target configuration:</p>
+<pre><code class="language-shell">dcos kubernetes cluster debug [&lt;flags&gt;] config target_id
+</code></pre>
+<h5 id="debug-pod-2"><a class="content__anchor" href="#debug-pod-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Debug Pod</h5>
+<p>Pauses a pod’s tasks for debugging:</p>
+<pre><code class="language-shell">dcos kubernetes cluster debug pod pause [&lt;flags&gt;] &lt;pod&gt;
+</code></pre>
+<p>Resumes a pod’s normal execution following a pause command:</p>
+<pre><code class="language-shell">dcos kubernetes cluster debug pod resume [&lt;flags&gt;] &lt;pod&gt;
+</code></pre>
+<p>Display the list of known pod instances:</p>
+<pre><code class="language-shell">dcos kubernetes cluster debug [&lt;flags&gt;] pod list
+</code></pre>
+<p>Display the status for tasks in one pod or all pods:</p>
+<pre><code class="language-shell">dcos kubernetes cluster debug pod status [&lt;flags&gt;] [&lt;pod&gt;]
+</code></pre>
+<p>Display the full state information for tasks in a pod:</p>
+<pre><code class="language-shell">dcos kubernetes cluster debug [&lt;flags&gt;] pod info &lt;pod&gt;
+</code></pre>
+<p>Restarts a given pod without moving it to a new agent:</p>
+<pre><code class="language-shell">dcos kubernetes cluster debug [&lt;flags&gt;] pod restart &lt;pod&gt;
+</code></pre>
+<p>Destroys a given pod and moves it to a new agent:</p>
+<pre><code class="language-shell">dcos kubernetes cluster debug [&lt;flags&gt;] pod replace &lt;pod&gt;
+</code></pre>
+<h5 id="debug-state-2"><a class="content__anchor" href="#debug-state-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Debug State</h5>
+<p>Display the Mesos framework ID:</p>
+<pre><code class="language-shell">dcos kubernetes cluster debug [&lt;flags&gt;] state framework_id
+</code></pre>
+<p>List names of all custom properties:</p>
+<pre><code class="language-shell">dcos kubernetes cluster debug [&lt;flags&gt;] state properties
+</code></pre>
+<p>Display the content of a specified property:</p>
+<pre><code class="language-shell">dcos kubernetes cluster debug [&lt;flags&gt;] state property &lt;name&gt;
+</code></pre>
+<p>Refresh the state cache, used for debugging:</p>
+<pre><code class="language-shell">dcos kubernetes cluster debug [&lt;flags&gt;] state refresh_cache
+</code></pre>
+<h5 id="debug-plan"><a class="content__anchor" href="#debug-plan" aria-hidden="true"><i data-feather="bookmark"></i></a>Debug Plan</h5>
+<p>Show all plans for this service:</p>
+<pre><code class="language-shell">dcos kubernetes cluster debug [&lt;flags&gt;] plan list
+</code></pre>
+<p>Display the status of the plan with the provided plan name:</p>
+<pre><code class="language-shell">dcos kubernetes cluster debug plan status [&lt;flags&gt;] &lt;plan&gt;
+</code></pre>
+<p>Start the plan with the provided name and any optional plan arguments:</p>
+<pre><code class="language-shell">dcos kubernetes cluster debug plan start [&lt;flags&gt;] &lt;plan&gt;
+</code></pre>
+<p>Stop the running plan with the provided name:</p>
+<pre><code class="language-shell">dcos kubernetes cluster debug [&lt;flags&gt;] plan stop &lt;plan&gt;
+</code></pre>
+<p>Pause the plan, or a specific phase in that plan with the provided phase name (or UUID):</p>
+<pre><code class="language-shell">dcos kubernetes cluster debug [&lt;flags&gt;] plan pause &lt;plan&gt; [&lt;phase&gt;]
+</code></pre>
+<p>Resume the plan, or a specific phase in that plan with the provided phase name (or UUID):</p>
+<pre><code class="language-shell">dcos kubernetes cluster debug [&lt;flags&gt;] plan resume &lt;plan&gt; [&lt;phase&gt;]
+</code></pre>
+<p>Restart the plan with the provided name, or a specific phase in the plan with the provided name, or a specific step in a phase of the plan with the provided step name.</p>
+<pre><code class="language-shell">dcos kubernetes cluster debug [&lt;flags&gt;] plan force-restart &lt;plan&gt; [&lt;phase&gt; [&lt;step&gt;]]
+</code></pre>
+<p>Force complete a specific step in the provided phase. Example uses include the following: Abort a sidecar operation due to observed failure or known required manual preparation that was not performed.</p>
+<pre><code class="language-shell">dcos kubernetes cluster debug [&lt;flags&gt;] plan force-complete &lt;plan&gt; &lt;phase&gt; &lt;step&gt;
+</code></pre>
+<h5 id="debug-endpoints"><a class="content__anchor" href="#debug-endpoints" aria-hidden="true"><i data-feather="bookmark"></i></a>Debug Endpoints</h5>
+<p>View client endpoints for this DC/OS service:</p>
+<pre><code class="language-shell">dcos kubernetes cluster debug [&lt;flags&gt;] endpoints [&lt;name&gt;]
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#dcos-kubernetes-cli">DC/OS Kubernetes CLI</a></li><li class="content__sections-item content__sections-item--h2"><a href="#commands">Commands</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

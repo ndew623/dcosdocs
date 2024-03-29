@@ -1,0 +1,273 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>使用专用 Docker 注册表 - D2iQ Docs</title><meta name="description" content="创建专用 Docker 注册表的存档"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/private-docker-registry">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/private-docker-registry">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/private-docker-registry">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/private-docker-registry">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/marathon-parameters/">Marathon 配置参考</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/install/">安装服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/task-handling/"><i data-feather="chevron-right"></i>任务处理</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/creating-services/"><i data-feather="chevron-right"></i>创建服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/config-universe-service/">配置服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/marathon-constraints/">Marathon 布局约束</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/scale-service/">扩展服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/service-groups/">授权访问服务和组</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/fault-domain-awareness/">故障域感知和容量扩展</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/update-user-service/">更新用户创建的服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/service-ports/">服务端口</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/service-endpoints/">服务端点</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/monitor-services/">监控服务</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/private-docker-registry/">使用专用 Docker 注册表</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/expose-service/">公开服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/deployments/">部署</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/uninstall/">卸载服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/package-api/">包管理 API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/marathon-on-marathon/"><i data-feather="chevron-right"></i>使用自定义 Marathon</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/marathon-api/">Marathon  API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/containerizers/"><i data-feather="chevron-right"></i>使用容器化工具</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/pods/"><i data-feather="chevron-right"></i>Pod</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/multi-tenancy-primitives/">多租户原始文件</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/gpu/">使用 GPU</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/faq/">常见问题</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">使用专用 Docker 注册表</h1></div><h4 class="content__header-description">创建专用 Docker 注册表的存档</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/private-docker-registry/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>若要从专用 Docker 注册表中提供拉取凭据，请创建 Docker 凭据的存档，然后将其添加为服务或 pod 定义中的 URI。在 DC/OS Enterprise 中，您还可以将 Docker 注册表凭据上传到 DC/OS [密钥存储库](#secret-store-instructions），并在服务或 pod 定义中进行引用。</p>
+<p><a name="uri-instructions"></a></p>
+<h1 id="docker-uri"><a class="content__anchor" href="#docker-uri" aria-hidden="true"><i data-feather="bookmark"></i></a>将专用 Docker 注册表凭据引用为 URI</h1>
+<h2 id="1-docker"><a class="content__anchor" href="#1-docker" aria-hidden="true"><i data-feather="bookmark"></i></a>步骤 1：压缩 Docker 凭据</h2>
+<ol>
+<li>
+<p>手动登录专用注册表。登录后会在主目录中创建 <code>.docker</code> 文件夹和 <code>.docker/config.json</code> 文件。</p>
+<pre><code class="language-bash">docker login some.docker.host.com
+Username: foo
+Password:
+Email: foo@bar.com
+</code></pre>
+</li>
+<li>
+<p>压缩 <code>.docker</code> 文件夹及其内容。</p>
+<pre><code class="language-bash">cd ~
+tar -czf docker.tar.gz .docker
+</code></pre>
+</li>
+<li>
+<p>验证两个文件都在存档中。</p>
+<pre><code class="language-bash">  tar -tvf ~/docker.tar.gz
+
+  drwx------ root/root         0 2015-07-28 02:54 .docker/
+  -rw------- root/root       114 2015-07-28 01:31 .docker/config.json
+</code></pre>
+</li>
+<li>
+<p>将存档文件放置在您的应用定义可访问的位置。</p>
+<pre><code class="language-bash">cp docker.tar.gz /etc/
+</code></pre>
+</li>
+</ol>
+<p class="message--important"><strong>重要信息：</strong>所有会启动您应用的节点都必须能够访问 URI。可以将文件分发到所有节点的本地文件系统，例如，通过 RSYNC/SCP 分发，或将其存储在共享网络驱动器上，例如 <a href="http://aws.amazon.com/s3/">Amazon S3</a>. 仔细考虑所选方法的安全影响。</p>
+<h2 id="2-uri"><a class="content__anchor" href="#2-uri" aria-hidden="true"><i data-feather="bookmark"></i></a>步骤 2：将 URI 路径添加到服务定义</h2>
+<ol>
+<li>
+<p>将存档文件登录凭据的路径添加到服务定义。</p>
+<pre><code class="language-bash">&quot;fetch&quot;: [
+  {
+    &quot;uri&quot;: &quot;file:///etc/docker.tar.gz&quot;
+  }
+]
+</code></pre>
+<p>例如：</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/some/name/or/id&quot;,
+  &quot;cpus&quot;: 1,
+  &quot;mem&quot;: 1024,
+  &quot;instances&quot;: 1,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;DOCKER&quot;,
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;some.docker.host.com/namespace/repo&quot;
+    }
+  },
+  &quot;fetch&quot;: [
+    {
+      &quot;uri&quot;: &quot;file:///etc/docker.tar.gz&quot;
+    }
+  ]
+}
+</code></pre>
+<p>Docker 镜像现在将使用提供的安全凭证进行拉取。</p>
+</li>
+</ol>
+<p><a name="secret-store-instructions"></a></p>
+<h1 id="docker-enterprise"><a class="content__anchor" href="#docker-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>引用密钥存储库中的专用 Docker 注册表凭据 <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></h1>
+<p>按照以下步骤向 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/secrets/">DC/OS Enterprise 密钥存储库</a>添加 Docker 注册表凭据，然后在服务定义中引用该密钥。</p>
+<p class="message--important"><strong>重要信息：</strong>此功能仅适用于<a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/containerizers/ucr/">通用容器运行时</a>. 如果需要使用 Docker Engine，请遵循上述 URI 说明。</p>
+<h2 id="1"><a class="content__anchor" href="#1" aria-hidden="true"><i data-feather="bookmark"></i></a>步骤 1：创建凭据文件</h2>
+<ol>
+<li>
+<p>手动登录您的专用注册表。这会创建 <code>~/.docker</code> 目录和 <code>~/.docker/config.json</code> 文件。</p>
+<pre><code class="language-bash">docker login some.docker.host.com
+Username: foo
+Password:
+Email: foo@bar.com
+</code></pre>
+</li>
+<li>
+<p>检查您是否有 <code>~/.docker/config.json</code> 文件。</p>
+<pre><code class="language-bash">ls ~/.docker
+config.json
+</code></pre>
+<p>您的 <code>config.json</code> 文件应该是这样的，其中 <code>auth</code> 的值是基于 64 位编码的 <code>username:password</code> 字符串。</p>
+<pre><code class="language-json">{
+  &quot;auths&quot;: {
+      &quot;https://index.docker.io/v1/&quot;: {
+          &quot;auth&quot;: &quot;XXXXX&quot;,
+          &quot;email&quot;: &quot;&lt;your-email&gt;&quot;
+      }
+  }
+}
+</code></pre>
+<p>如果使用的是 Mac OS，就需要手动编码 <code>username:password</code> 字符串并修改您的 <code>config.json</code> ，以便与上面的片段匹配。使用 base64 为密钥对编码时，请务必省略后面的换行符：</p>
+<pre><code class="language-bash">echo -n myuser@domain.com:hard-to-guess-password | base64
+</code></pre>
+</li>
+<li>
+<p>添加 <code>config.json</code> 文件到 DC/OS 密钥存储库。<a href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/secrets/create-secrets/">了解创建密钥的详细信息</a>.</p>
+<p class="message--note"><strong>注意：</strong>自 DC/OS 版本 1.10.0 开始，您只能使用 DC/OS CLI 将文件添加到密钥存储库。</p>
+<pre><code class="language-bash">dcos security secrets create --file=config.json &lt;path/to/secret&gt;
+</code></pre>
+<p>如果您打算遵循以下示例，请输入以下命令以添加密钥：</p>
+<pre><code class="language-bash">dcos security secrets create --file=config.json mesos-docker/pullConfig
+</code></pre>
+</li>
+</ol>
+<h2 id="2-pod"><a class="content__anchor" href="#2-pod" aria-hidden="true"><i data-feather="bookmark"></i></a>步骤 2：为您的服务或 pod 定义添加密钥</h2>
+<h3 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>对于服务</h3>
+<ol>
+<li>
+<p>在 <code>secrets</code> 参数中添加密钥位置，并在 <code>docker.pullConfig</code> 参数中引用密钥。</p>
+<p class="message--important"><strong>重要信息：</strong>此功能 <strong>仅</strong> 获得通用容器运行时的支持：<code>container.type</code> 必须为 <code>MESOS</code>.</p>
+<pre><code class="language-json">{
+   &quot;id&quot;: &quot;/mesos-docker&quot;,
+   &quot;container&quot;: {
+     &quot;docker&quot;: {
+       &quot;image&quot;: &quot;&lt;your/private/image&gt;&quot;,
+       &quot;pullConfig&quot;: {
+         &quot;secret&quot;: &quot;pullConfigSecret&quot;
+       }
+     },
+     &quot;type&quot;: &quot;MESOS&quot;
+   },
+   &quot;secrets&quot;: {
+     &quot;pullConfigSecret&quot;: {
+       &quot;source&quot;: &quot;/mesos-docker/pullConfig&quot;
+     }
+   },
+   &quot;args&quot;: [&quot;hello&quot;],
+   &quot;cpus&quot;: 0.2,
+   &quot;mem&quot;: 16.0,
+   &quot;instances&quot;: 1
+}
+</code></pre>
+</li>
+<li>
+<p>将服务添加到 DC/OS。如果您使用上述示例，则 <code>&lt;svc-name&gt;</code> 为 <code>mesos-docker</code>.</p>
+<pre><code>dcos marathon app add &lt;svc-name&gt;.json
+</code></pre>
+<p>Docker 镜像现在将使用提供的安全凭证进行拉取。</p>
+</li>
+</ol>
+<h3 id="pod"><a class="content__anchor" href="#pod" aria-hidden="true"><i data-feather="bookmark"></i></a>对于 pod</h3>
+<ol>
+<li>
+<p>在 <code>secrets</code> 参数中添加密钥位置，并在 <code>containers.image.pullConfig</code> 参数中引用密钥。</p>
+<p class="message--important"><strong>重要信息：</strong>仅当 <code>image.kind</code> 设置为 <code>DOCKER</code>. 时，才支持此功能。</p>
+<pre><code class="language-json">{
+     &quot;id&quot;:&quot;/simple-pod&quot;,
+     &quot;containers&quot;:[
+        {
+          &quot;name&quot;:&quot;simpletask1&quot;,
+          &quot;exec&quot;:{
+              &quot;command&quot;:{
+                &quot;shell&quot;:&quot;env &amp;&amp; sleep 1000&quot;
+              }
+            },
+          &quot;resources&quot;:{
+            &quot;cpus&quot;:0.1,
+            &quot;mem&quot;:32
+        },
+        &quot;image&quot;:{
+            &quot;kind&quot;:&quot;DOCKER&quot;,
+            &quot;id&quot;:&quot;&lt;your/private/image&gt;&quot;,
+            &quot;pullConfig&quot;:{
+              &quot;secret&quot;:&quot;pullConfigSecret&quot;
+           }
+        }
+     }
+  ],
+  &quot;networks&quot;:[
+      {
+        &quot;mode&quot;:&quot;host&quot;
+      }
+  ],
+  &quot;secrets&quot;:{
+      &quot;pullConfigSecret&quot;:{
+        &quot;source&quot;:&quot;/pod/pullConfig&quot;
+     }
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>将 pod 添加到 DC/OS。如果您使用上述示例，则 <code>&lt;pod-name&gt;</code> 为 <code>simple-pod</code>.</p>
+<pre><code>dcos marathon pod add &lt;pod-name&gt;.json
+</code></pre>
+<p>Docker 镜像现在将使用提供的安全凭证进行拉取。</p>
+</li>
+</ol>
+<p><a name="docker-repo-certs"></a></p>
+<h1 id="docker"><a class="content__anchor" href="#docker" aria-hidden="true"><i data-feather="bookmark"></i></a>配置代理以使用 Docker 注册表的自定义证书</h1>
+<p>某些组织需要用户凭据和有效的安全套接字层 (SSL) 证书，才能授权访问 Docker 注册表。例如，某些注册表配置需要一个证书来加密客户端与注册表之间的通信，而用户凭据则确定在成功连接到注册表之后，谁可以访问注册表。</p>
+<p>如果您的专用注册表使用证书来保证通信，则可以配置代理节点来授信您用来访问专用 Docker 注册表的证书。</p>
+<p>要配置用于访问专用 Docker 注册表和 DC/OS UCR 的自定义证书，请完成以下步骤：</p>
+<ol>
+<li>
+<p>创建或标识要用作访问 Docker 注册表的可信证书的自定义证书。</p>
+<p>您可以使用 OpenSSL、DC/OS Enterprise CLI 或其他程序生成公钥和私钥、证书请求以及加密的客户端和服务器证书。</p>
+<p>创建或标识证书后，可以按照注册表提供程序提供的说明将注册表配置为使用此证书。</p>
+</li>
+<li>
+<p>将证书下载或复制到每个代理的以下两个位置。</p>
+<pre><code class="language-bash">/etc/docker/certs.d/&lt;registry_name&gt;:&lt;registry_port&gt;/ca.crt
+/var/lib/dcos/pki/tls/certs/&lt;something&gt;.crt
+</code></pre>
+<p>对于每个代理上可信 CA 证书的路径，请将 <code>&lt;registry_name&gt;</code> 和 <code>&lt;registry_port&gt;</code> 替换为适合您的安装的特定注册表名称和端口号。</p>
+<p>例如，如果要将 DC/OS <code>ca.crt</code> 证书配置为可信证书并且本地 Docker 注册表引用为 <code>registry.mycompany.com:5000</code>，则可以下载 <code>ca.crt</code> 文件的副本并使用类似如下的命令将其设置为受信任：</p>
+<pre><code class="language-bash">sudo mkdir -p /etc/docker/certs.d/registry.mycompany.com:5000
+sudo cp /path/to/ca.crt etc/docker/certs.d/registry.mycompany.com:5000/ca.crt
+sudo cp /etc/docker/certs.d/registry.mycompany.com:5000/ca.crt /var/lib/dcos/pki/tls/certs/docker-registry-ca.crt
+</code></pre>
+</li>
+<li>
+<p>通过运行类似如下的命令为文件生成散列：</p>
+<pre><code class="language-bash">cd /var/lib/dcos/pki/tls/certs/
+openssl x509 -hash -noout -in docker-registry-ca.crt
+</code></pre>
+</li>
+<li>
+<p>创建从受信任证书到公共代理节点上 <code>/var/lib/dcos/pki/tls/certs</code> 目录的符号链接。</p>
+<pre><code class="language-bash">sudo ln -s /var/lib/dcos/pki/tls/certs/docker-registry-ca.crt /var/lib/dcos/pki/tls/certs/&lt;hash_number&gt;.0
+</code></pre>
+</li>
+</ol>
+<p><a name="tarball-instructions"></a></p>
+<h1 id="tarball"><a class="content__anchor" href="#tarball" aria-hidden="true"><i data-feather="bookmark"></i></a>将自定义镜像从 tarball 推送到专用注册表中</h1>
+<p>如果您向销售代表索要企业版的 Marathon，您可能已在 <code>.tar</code> 存档中获得 Docker 镜像。按照以下步骤将其部署到注册表中：</p>
+<h2 id="1-2"><a class="content__anchor" href="#1-2" aria-hidden="true"><i data-feather="bookmark"></i></a>步骤 1：在本地机器中导入</h2>
+<ol>
+<li>
+<p>将 tarball 加载到您本地 Docker 客户端，并将路径传递到自定义 tarball。例如， <code>marathon-dcos-ee.&lt;version&gt;.tar</code>:</p>
+<pre><code class="language-bash">docker load -i marathon-dcos-ee.&lt;version&gt;.tar
+</code></pre>
+<p><strong>提示：</strong> 可以使用此命令查看 Marathon 镜像。</p>
+<pre><code>docker images
+</code></pre>
+<p>您会看到与如下内容类似的输出：</p>
+<pre><code class="language-bash">REPOSITORY                    TAG                 IMAGE ID            CREATED             SIZE
+mesosphere/marathon-dcos-ee   1.4.0-RC4_1.9.4     d1ffa68a50c0        3 months ago        926.4 MB
+</code></pre>
+</li>
+</ol>
+<h2 id="2"><a class="content__anchor" href="#2" aria-hidden="true"><i data-feather="bookmark"></i></a>步骤 2：将镜像推送至存储库</h2>
+<ol>
+<li>
+<p>重新标记文件以匹配您在专用 Docker 注册表中使用的存储库：</p>
+<pre><code class="language-bash">docker tag \
+ mesosphere/marathon-dcos-ee:&lt;mesosphere-tag&gt; \
+ &lt;your-repo&gt;/marathon-dcos-ee:&lt;your-tag&gt;
+</code></pre>
+<p>其中：</p>
+<ul>
+<li><code>&lt;mesosphere-tag&gt;</code> 是 Mesosphere 镜像的标签。通常，该标签与文件名中的版本号匹配。</li>
+<li><code>&lt;your-repo&gt;</code> 是您要在其中存储镜像的专用存储库的名称。</li>
+<li><code>&lt;your-tag&gt;</code> 是镜像的标签。建议使用与 Mesosphere 镜像相同的标记。</li>
+</ul>
+</li>
+<li>
+<p>将新镜像推送至您的专用 Docker 注册表：</p>
+<pre><code class="language-bash">docker push &lt;your-repo&gt;/marathon-dcos-ee:&lt;your-tag&gt;
+</code></pre>
+</li>
+</ol>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#docker-uri">将专用 Docker 注册表凭据引用为 URI</a></li><li class="content__sections-item content__sections-item--h2"><a href="#1-docker">步骤 1：压缩 Docker 凭据</a></li><li class="content__sections-item content__sections-item--h2"><a href="#2-uri">步骤 2：将 URI 路径添加到服务定义</a></li><li class="content__sections-item content__sections-item--h1"><a href="#docker-enterprise">引用密钥存储库中的专用 Docker 注册表凭据 Enterprise</a></li><li class="content__sections-item content__sections-item--h2"><a href="#1">步骤 1：创建凭据文件</a></li><li class="content__sections-item content__sections-item--h2"><a href="#2-pod">步骤 2：为您的服务或 pod 定义添加密钥</a></li><li class="content__sections-item content__sections-item--h1"><a href="#docker">配置代理以使用 Docker 注册表的自定义证书</a></li><li class="content__sections-item content__sections-item--h1"><a href="#tarball">将自定义镜像从 tarball 推送到专用注册表中</a></li><li class="content__sections-item content__sections-item--h2"><a href="#1-2">步骤 1：在本地机器中导入</a></li><li class="content__sections-item content__sections-item--h2"><a href="#2">步骤 2：将镜像推送至存储库</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

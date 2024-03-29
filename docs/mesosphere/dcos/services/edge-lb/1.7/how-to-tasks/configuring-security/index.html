@@ -1,0 +1,246 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Security certificates and secrets - D2iQ Docs</title><meta name="description" content="Provides examples for configuring security settings for Edge-LB pools"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Edge Lb Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li><li class="chooser-list-item"><a href="/dkp/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services/edge-lb">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__item"><a href="/dkp/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/how-to-tasks/configuring-security">Edge-LB 1.7</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.6/how-to-tasks/configuring-security">Edge-LB 1.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.5/how-to-tasks/configuring-security">Edge-LB 1.5</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.4">Edge-LB 1.4</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.3">Edge-LB 1.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.2">Edge-LB 1.2</a></li></ul><div class="toggle"><p><span class="title">Edge Lb</span><span class="version"> 1.7</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/concepts/"><i data-feather="chevron-right"></i>Edge-LB concepts</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/"><i data-feather="chevron-right"></i>Getting started with Edge-LB</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/how-to-tasks/"><i data-feather="chevron-right"></i>How-to guides for Edge-LB</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/how-to-tasks/basic-configuration/">Basic configuration settings</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/how-to-tasks/configuring-security/">Security certificates and secrets</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/how-to-tasks/path-based-routing/">Path-based routing</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/how-to-tasks/predefined-ports/">Exposing tasks using pre-assigned ports</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/how-to-tasks/dynamic-frontend-ports/">Configuring a frontend port dynamically</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/how-to-tasks/dynamic-stats-frontend/">Configuring the statistics port</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/how-to-tasks/scale-up/">Scaling load-balancer instances</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/how-to-tasks/weighted-backends/">Weighted backends</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/how-to-tasks/east-west-load-balancing/">Internal-only load balancing</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/how-to-tasks/reload-pools/">Reloading and restarting pools</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/how-to-tasks/updating-pool-config/">Updating the Edge-LB pool configuration</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/how-to-tasks/verify-version/">Verifying the Edge-LB installed version</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/how-to-tasks/upgrading/">Upgrading Edge-LB</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/how-to-tasks/uninstalling/">Uninstalling Edge-LB</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/reference/"><i data-feather="chevron-right"></i>Reference information</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/related-documentation/"><i data-feather="chevron-right"></i>Related documentation</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Security certificates and secrets</h1></div><h4 class="content__header-description">Provides examples for configuring security settings for Edge-LB pools</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/how-to-tasks/configuring-security/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+Security+certificates+and+secrets&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/how-to-tasks/configuring-security&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><p>Edge-LB runs on DC/OS™ Enterprise clusters with permissive or strict security. You can also use secure socket layer (SSL) certificates to secure the gateway between the external network and the DC/OS cluster. This section provides code examples that illustrate how to set security-related Edge-LB pool configuration options.</p>
+<h1 id="before-you-begin"><a class="content__anchor" href="#before-you-begin" aria-hidden="true"><i data-feather="bookmark"></i></a>Before you begin</h1>
+<p>Before you create Edge-LB pools and pool configuration files, you should have DC/OS Enterprise cluster nodes installed and ready to use, and have previously downloaded and installed the latest Edge-LB packages.</p>
+<p>You must have:</p>
+<ul>
+<li>Edge-LB installed as described in the Edge-LB <a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/installing">installation instructions</a>.</li>
+<li>The core DC/OS command-line interface (CLI) installed and configured to communicate with the DC/OS cluster.</li>
+<li>The <code>edgelb</code> command-line interface (CLI) installed.</li>
+<li>An active and properly-configured DC/OS Enterprise cluster, with at least one DC/OS <strong>private agent</strong> node to run the load-balanced service and at least one DC/OS <strong>public agent</strong> node for exposing the load-balanced service.</li>
+</ul>
+<p>For information about installing Edge-LB packages, see the <a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/installing/">installation</a> instructions.</p>
+<h1 id="using-ssltls-certificates"><a class="content__anchor" href="#using-ssltls-certificates" aria-hidden="true"><i data-feather="bookmark"></i></a>Using SSL/TLS certificates</h1>
+<p>There are three different ways to get and use a certificate for secure communication. You can use:</p>
+<ul>
+<li>Self-signed or trusted certificates as part of a public key infrastructure (PKI).</li>
+<li>Secrets stored as encrypted files in the DC/OS vault.</li>
+<li>Environment variables stored as secrets in the DC/OS vault.</li>
+</ul>
+<h2 id="automatically-generated-self-signed-certificate"><a class="content__anchor" href="#automatically-generated-self-signed-certificate" aria-hidden="true"><i data-feather="bookmark"></i></a>Automatically generated self-signed certificate</h2>
+<pre><code class="language-json">{
+  &quot;apiVersion&quot;: &quot;V2&quot;,
+  &quot;name&quot;: &quot;auto-certificates&quot;,
+  &quot;count&quot;: 1,
+  &quot;autoCertificate&quot;: true,
+  &quot;haproxy&quot;: {
+    &quot;frontends&quot;: [
+      {
+        &quot;bindPort&quot;: 443,
+        &quot;protocol&quot;: &quot;HTTPS&quot;,
+        &quot;certificates&quot;: [
+          &quot;$AUTOCERT&quot;
+        ],
+        &quot;linkBackend&quot;: {
+          &quot;defaultBackend&quot;: &quot;host-httpd&quot;
+        }
+      }
+    ],
+    &quot;backends&quot;: [{
+      &quot;name&quot;: &quot;host-httpd&quot;,
+      &quot;protocol&quot;: &quot;HTTP&quot;,
+      &quot;services&quot;: [{
+        &quot;marathon&quot;: {
+          &quot;serviceID&quot;: &quot;/host-httpd&quot;
+        },
+        &quot;endpoint&quot;: {
+          &quot;portName&quot;: &quot;web&quot;
+        }
+      }]
+    }]
+  }
+}
+</code></pre>
+<h2 id="dcos-secrets-enterprise-only"><a class="content__anchor" href="#dcos-secrets-enterprise-only" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS Secrets (Enterprise Only)</h2>
+<pre><code class="language-json">{
+  &quot;apiVersion&quot;: &quot;V2&quot;,
+  &quot;name&quot;: &quot;secret-certificates&quot;,
+  &quot;count&quot;: 1,
+  &quot;autoCertificate&quot;: false,
+  &quot;secrets&quot;: [
+    {
+      &quot;secret&quot;: &quot;mysecret&quot;,
+      &quot;file&quot;: &quot;mysecretfile&quot;
+    }
+  ],
+  &quot;haproxy&quot;: {
+    &quot;frontends&quot;: [
+      {
+        &quot;bindPort&quot;: 443,
+        &quot;protocol&quot;: &quot;HTTPS&quot;,
+        &quot;certificates&quot;: [
+          &quot;$SECRETS/mysecretfile&quot;
+        ],
+        &quot;linkBackend&quot;: {
+          &quot;defaultBackend&quot;: &quot;host-httpd&quot;
+        }
+      }
+    ],
+    &quot;backends&quot;: [{
+      &quot;name&quot;: &quot;host-httpd&quot;,
+      &quot;protocol&quot;: &quot;HTTP&quot;,
+      &quot;services&quot;: [{
+        &quot;marathon&quot;: {
+          &quot;serviceID&quot;: &quot;/host-httpd&quot;
+        },
+        &quot;endpoint&quot;: {
+          &quot;portName&quot;: &quot;web&quot;
+        }
+      }]
+    }]
+  }
+}
+</code></pre>
+<h2 id="environment-variables-not-secured"><a class="content__anchor" href="#environment-variables-not-secured" aria-hidden="true"><i data-feather="bookmark"></i></a>Environment variables (Not secured)</h2>
+<pre><code class="language-json">{
+  &quot;apiVersion&quot;: &quot;V2&quot;,
+  &quot;name&quot;: &quot;env-certificates&quot;,
+  &quot;count&quot;: 1,
+  &quot;autoCertificate&quot;: false,
+  &quot;environmentVariables&quot;: {
+    &quot;ELB_FILE_HAPROXY_CERT&quot;: &quot;-----BEGIN CERTIFICATE-----\nfoo\n-----END CERTIFICATE-----\n-----BEGIN RSA PRIVATE KEY-----\nbar\n-----END RSA PRIVATE KEY-----\n&quot;
+  },
+  &quot;haproxy&quot;: {
+    &quot;frontends&quot;: [
+      {
+        &quot;bindPort&quot;: 443,
+        &quot;protocol&quot;: &quot;HTTPS&quot;,
+        &quot;certificates&quot;: [
+          &quot;$ENVFILE/ELB_FILE_HAPROXY_CERT&quot;
+        ],
+        &quot;linkBackend&quot;: {
+          &quot;defaultBackend&quot;: &quot;host-httpd&quot;
+        }
+      }
+    ],
+    &quot;backends&quot;: [{
+      &quot;name&quot;: &quot;host-httpd&quot;,
+      &quot;protocol&quot;: &quot;HTTP&quot;,
+      &quot;services&quot;: [{
+        &quot;marathon&quot;: {
+          &quot;serviceID&quot;: &quot;/host-httpd&quot;
+        },
+        &quot;endpoint&quot;: {
+          &quot;portName&quot;: &quot;web&quot;
+        }
+      }]
+    }]
+  }
+}
+</code></pre>
+<h1 id="using-host-name-and-sni-routing-with-vhosts"><a class="content__anchor" href="#using-host-name-and-sni-routing-with-vhosts" aria-hidden="true"><i data-feather="bookmark"></i></a>Using host name and SNI routing with VHOSTS</h1>
+<p>To direct traffic based on the host name to multiple backends for a single port (such as 80 or 443), you can use the <code>pool.haproxy.frontend.linkBackend</code> setting.</p>
+<h2 id="before-you-begin-2"><a class="content__anchor" href="#before-you-begin-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Before you begin</h2>
+<ul>
+<li>
+<p>You must have at least one secure socket layer (SSL) certificiate for the Edge-LB service account. Depending on the security requirements of the cluster, you might have additional SSL certificates that you want to use for access to the linked backend.</p>
+</li>
+<li>
+<p>You should create and store a DC/OS secret for each unique SSL certificate you are using. However, one secret is enough if the SSL certificate includes a wildcard that matches several separate websites with the same layer-2 domain namespace. For example, you only need to create and store one secret if you have a certificate to trust any website in the <code>*.ajuba.net</code> domain.</p>
+</li>
+<li>
+<p>Each secret should contain sections similar to the following:</p>
+<pre><code>-----BEGIN CERTIFICATE-----
+...certificate body here...
+-----END CERTIFICATE-----
+-----BEGIN RSA PRIVATE KEY-----
+...private key body here...
+-----END RSA PRIVATE KEY-----
+</code></pre>
+</li>
+</ul>
+<p>For more information about creating and storing secrets, see <a href="/1.13/security/ent/secrets/">Secrets</a>.</p>
+<h2 id="sample-configuration"><a class="content__anchor" href="#sample-configuration" aria-hidden="true"><i data-feather="bookmark"></i></a>Sample configuration</h2>
+<p>After you have created or identified the SSL certificate and stored it securely in DC/OS Secrets, you can route traffic to multiple backends using the <code>pool.haproxy.frontend.linkBackend</code> setting as illustrated in the following example:</p>
+<pre><code class="language-json">{
+  &quot;apiVersion&quot;: &quot;V2&quot;,
+  &quot;name&quot;: &quot;vhost-routing&quot;,
+  &quot;count&quot;: 1,
+  &quot;secrets&quot;: [
+    {
+      &quot;secret&quot;: &quot;mysslsecret1&quot;,
+      &quot;file&quot;: &quot;mysecretfile1&quot;
+    },
+    {
+      &quot;secret&quot;: &quot;mysslsecret2&quot;,
+      &quot;file&quot;: &quot;mysecretfile2&quot;
+    }
+    ],
+    &quot;haproxy&quot;: {
+      &quot;frontends&quot;: [
+        {
+          &quot;bindPort&quot;: 80,
+          &quot;protocol&quot;: &quot;HTTP&quot;,
+          &quot;linkBackend&quot;: {
+            &quot;map&quot;: [
+            {
+              &quot;hostEq&quot;: &quot;nginx.example.com&quot;,
+              &quot;backend&quot;: &quot;nginx&quot;
+            },
+            {
+              &quot;hostReg&quot;: &quot;.*.httpd.example.com&quot;,
+              &quot;backend&quot;: &quot;httpd&quot;
+            }
+            ]
+          }
+        },
+        {
+          &quot;bindPort&quot;: 443,
+          &quot;protocol&quot;: &quot;TLS&quot;,
+          &quot;certificates&quot;: [
+            &quot;$SECRETS/mysecretfile1&quot;,
+            &quot;$SECRETS/mysecretfile2&quot;
+            ],
+          &quot;linkBackend&quot;: {
+            &quot;map&quot;: [
+            {
+              &quot;hostEq&quot;: &quot;nginx.example.com&quot;,
+              &quot;backend&quot;: &quot;nginx&quot;
+            },
+            {
+              &quot;hostReg&quot;: &quot;.*.httpd.example.com&quot;,
+              &quot;backend&quot;: &quot;httpd&quot;
+            }
+          ]
+          }
+        }  
+      ],
+        &quot;backends&quot;: [
+          {
+            &quot;name&quot;: &quot;httpd&quot;,
+            &quot;protocol&quot;: &quot;HTTP&quot;,
+            &quot;services&quot;: [
+              {
+                &quot;marathon&quot;: {
+                  &quot;serviceID&quot;: &quot;/host-httpd&quot;
+                  },
+                &quot;endpoint&quot;: {
+                  &quot;portName&quot;: &quot;web&quot;
+                }
+              }
+            ]
+          },
+      {
+        &quot;name&quot;: &quot;nginx&quot;,
+        &quot;protocol&quot;: &quot;HTTP&quot;,
+        &quot;services&quot;: [
+          {
+            &quot;mesos&quot;: {
+              &quot;frameworkName&quot;: &quot;marathon&quot;,
+              &quot;taskName&quot;: &quot;bridge-nginx&quot;
+              },
+            &quot;endpoint&quot;: {
+              &quot;portName&quot;: &quot;web&quot;
+              }
+          }
+        ]
+      }
+    ]
+  }
+}
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#before-you-begin">Before you begin</a></li><li class="content__sections-item content__sections-item--h1"><a href="#using-ssltls-certificates">Using SSL/TLS certificates</a></li><li class="content__sections-item content__sections-item--h2"><a href="#automatically-generated-self-signed-certificate">Automatically generated self-signed certificate</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-secrets-enterprise-only">DC/OS Secrets (Enterprise Only)</a></li><li class="content__sections-item content__sections-item--h2"><a href="#environment-variables-not-secured">Environment variables (Not secured)</a></li><li class="content__sections-item content__sections-item--h1"><a href="#using-host-name-and-sni-routing-with-vhosts">Using host name and SNI routing with VHOSTS</a></li><li class="content__sections-item content__sections-item--h2"><a href="#before-you-begin-2">Before you begin</a></li><li class="content__sections-item content__sections-item--h2"><a href="#sample-configuration">Sample configuration</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

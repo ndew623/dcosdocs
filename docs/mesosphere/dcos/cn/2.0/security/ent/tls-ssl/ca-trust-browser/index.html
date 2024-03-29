@@ -1,0 +1,137 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>在 DC/OS CA 中建立信任 - D2iQ Docs</title><meta name="description" content="配置 Chrome 和 Firefox 以信任您的 DC/OS CA。"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.0/security/ent/tls-ssl/ca-trust-browser">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.0"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/tls-ssl/ca-trust-browser">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/tls-ssl/ca-trust-browser">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/tls-ssl/ca-trust-browser">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.0</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/networking/"><i data-feather="chevron-right"></i>网络</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/"><i data-feather="chevron-right"></i>安全</a></li><ul><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/"><i data-feather="chevron-right"></i>DC/OS Enterprise 安全性</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/users-groups/"><i data-feather="chevron-right"></i>管理用户和组</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/gui-permissions/"><i data-feather="chevron-right"></i>授予访问 UI 的权限</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/perms-management/">权限管理</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/perms-reference/">权限参考</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/ldap/"><i data-feather="chevron-right"></i>LDAP 身份认证</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/secrets/"><i data-feather="chevron-right"></i>密钥</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/sso/"><i data-feather="chevron-right"></i>基于身份提供程序的身份认证</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/service-auth/"><i data-feather="chevron-right"></i>服务认证</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/restrict-service-access/">限制对 DC/OS 服务组的访问</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/hardening/">强化</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/iam-api/">身份和访问管理 API</a></li><li class="active"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/tls-ssl/"><i data-feather="chevron-right"></i>确保与 TLS 通信的安全</a></li><ul><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/tls-ssl/haproxy-adminrouter/">在 Admin Router 前配置 HAProxy</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/tls-ssl/ca-custom/">配置自定义 CA 证书</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/tls-ssl/get-cert/">获取 DC/OS CA 捆绑包</a></li><li class="active active-on"><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/tls-ssl/ca-trust-browser/">在 DC/OS CA 中建立信任</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/tls-ssl/ca-trust-cli/">在 CLI 中建立信任</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/tls-ssl/ca-trust-curl/">在 curl 命令中建立信任</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/tls-ssl/ca-api/">使用证书颁发机构 API</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/tls-ssl/exhibitor/">通过双向 TLS 保护 Exhibitor</a></li></ul></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/oss/"><i data-feather="chevron-right"></i>DC/OS 开源安全</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">在 DC/OS CA 中建立信任</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">配置 Chrome 和 Firefox 以信任您的 DC/OS CA。</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/tls-ssl/ca-trust-browser/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- The source repository for this topic is https://github.com/dcos/dcos-docs-site -->
+<p><strong>先决条件：</strong>[DC/OS CA 根证书]的本地副本。(/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/tls-ssl/get-cert/).</p>
+<p>添加 DC/OS CA 作为受信任根证书颁发机构的程序因操作系统和浏览器而异。请参阅与您的浏览器/操作系统对相对应的部分。</p>
+<ul>
+<li>
+<p><a href="#osx-chrome">OS X 上的 Google Chrome</a></p>
+</li>
+<li>
+<p><a href="#win-chrome">Windows 10 上的 Google Chrome</a></p>
+</li>
+<li>
+<p><a href="#osx-win-firefox">OS X 或 Windows 上的 Mozilla Firefox</a></p>
+</li>
+</ul>
+<h1 id="os-x-google-chrome-dcos-ca"><a class="content__anchor" href="#os-x-google-chrome-dcos-ca" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="osx-chrome"></a>在 OS X 上配置 Google Chrome 以信任您的 DC/OS CA</h1>
+<ul>
+<li>
+<p>此程序最适用于 Chrome 56 或更高版本。</p>
+</li>
+<li>
+<p>可能会提示您输入密码以允许修改密匙链。在提示时提供您的密码。</p>
+</li>
+</ul>
+<ol>
+<li>
+<p>单击桌面右上角的放大镜图标，打开 Spotlight Search。在框中键入 <strong>Keychain Access</strong>。</p>
+</li>
+<li>
+<p>在 <strong>Keychain Access</strong> 对话框中，选择 <strong>System</strong>。</p>
+</li>
+<li>
+<p>使用以下方法之一将 <code>dcos-ca.crt</code> 文件添加到 <strong>System</strong> 密钥链：</p>
+<ul>
+<li>拖放文件</li>
+<li><strong>文件</strong> -&gt; <strong>导入项目</strong></li>
+</ul>
+</li>
+<li>
+<p>双击密匙链中的证书，展开 <strong>信任</strong> 部分，并选择<strong>使用此证书时</strong> <strong>始终信任</strong>。</p>
+</li>
+<li>
+<p>关闭对话框。</p>
+</li>
+<li>
+<p>打开新的 Incognito Chrome 窗口并打开 DC/OS Web 界面。地址栏中的 DC/OS Web 界面的路径应标记为 <strong>Secure</strong>。您也可以尝试访问每个主节点的公共 IP 地址，以确认所有主节点均显示为 <strong>Secure</strong>。</p>
+</li>
+</ol>
+<h1 id="windows-google-chrome-dcos-ca"><a class="content__anchor" href="#windows-google-chrome-dcos-ca" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="win-chrome"></a>在 Windows 上配置 Google Chrome 以信任您的 DC/OS CA</h1>
+<ul>
+<li>此程序最适用于 Chrome 56 或更高版本或 Windows 10。</li>
+</ul>
+<ol>
+<li>
+<p>打开 Chrome 浏览器并在地址栏中键入 <code>chrome://settings</code></p>
+</li>
+<li>
+<p>向下滚动并单击 <strong>Show advanced settings</strong>。</p>
+</li>
+<li>
+<p>向下滚动并单击 <strong>Manage certificates</strong>。</p>
+</li>
+<li>
+<p>单击以打开 <strong>Trusted Root Certification Authority</strong> 选项卡。</p>
+</li>
+<li>
+<p>单击 <strong>Import</strong>。</p>
+</li>
+<li>
+<p>单击证书导入向导的 <strong>Welcome</strong> 页面上的 <strong>Next</strong>。</p>
+</li>
+<li>
+<p>单击 <strong>Browse</strong>。</p>
+</li>
+<li>
+<p>导航至您的 <code>dcos-ca.crt</code> 文件，选择它，并单击 <strong>Open</strong>。</p>
+</li>
+<li>
+<p>单击 <strong>Next</strong>。</p>
+</li>
+<li>
+<p>确保选中 <strong>Place all certificates in the following store</strong> 选项，以及<strong>Certificate Store</strong> 是 <strong>Trusted Root Certification Authorities</strong>。</p>
+</li>
+<li>
+<p>单击 <strong>Next</strong>。</p>
+</li>
+<li>
+<p>单击 <strong>Finish</strong>。</p>
+</li>
+<li>
+<p>您应检查指纹是否与 DC/OS CA 根证书的指纹匹配，然后单击 <strong>Yes</strong>。</p>
+</li>
+<li>
+<p>单击确认消息上的 <strong>OK</strong>。</p>
+</li>
+<li>
+<p>单击 <strong>Close</strong>。</p>
+</li>
+<li>
+<p>关闭并重新启动 Chrome，或打开新的 Incognito 会话。访问您的群集 URL 和每个主节点的公共 IP 地址，以确认这些站点现在显示为 <strong>Secure</strong>。</p>
+</li>
+</ol>
+<h1 id="os-x-windows-mozilla-firefox-dcos-ca"><a class="content__anchor" href="#os-x-windows-mozilla-firefox-dcos-ca" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="osx-win-firefox"></a>在 OS X 或 Windows 上配置 Mozilla Firefox 以信任您的 DC/OS CA</h1>
+<ol>
+<li>
+<p>打开 Mozilla Firefox 浏览器并在地址栏中键入 <code>about:preferences#advanced</code></p>
+</li>
+<li>
+<p>单击 <strong>Certificates</strong>。</p>
+</li>
+<li>
+<p>单击 <strong>View Certificates</strong>。</p>
+</li>
+<li>
+<p>单击 <strong>Import</strong>。</p>
+</li>
+<li>
+<p>在对话框中找到并选择 <code>dcos-ca.crt</code> 文件并单击 <strong>Open</strong>。</p>
+</li>
+<li>
+<p>我们建议单击 <strong>View</strong> 以检查证书。理想情况下，您应确认指纹是否与 DC/OS CA 根证书的指纹相匹配。</p>
+</li>
+<li>
+<p>验证证书后，选择 <strong>Trust this CA to identify websites</strong>，然后单击 <strong>OK</strong>。</p>
+</li>
+<li>
+<p>再次单击 <strong>OK</strong>，关闭 <strong>Certificate</strong> 对话框。</p>
+</li>
+<li>
+<p>在地址栏中键入群集 URL 并按下 <strong>确定</strong> 键。地址栏中的 DC/OS Web 界面的路径应标记为 <strong>Secure</strong>。您也可以尝试访问每个主节点的公共 IP 地址，以确认所有主节点均显示为 <strong>Secure</strong>。</p>
+</li>
+</ol>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#os-x-google-chrome-dcos-ca">在 OS X 上配置 Google Chrome 以信任您的 DC/OS CA</a></li><li class="content__sections-item content__sections-item--h1"><a href="#windows-google-chrome-dcos-ca">在 Windows 上配置 Google Chrome 以信任您的 DC/OS CA</a></li><li class="content__sections-item content__sections-item--h1"><a href="#os-x-windows-mozilla-firefox-dcos-ca">在 OS X 或 Windows 上配置 Mozilla Firefox 以信任您的 DC/OS CA</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

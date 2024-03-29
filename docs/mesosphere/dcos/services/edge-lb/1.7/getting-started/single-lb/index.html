@@ -1,0 +1,243 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Expose and load balance a sample service - D2iQ Docs</title><meta name="description" content="Illustrates the basic steps for load balancing a single service running on DC/OS"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Edge Lb Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li><li class="chooser-list-item"><a href="/dkp/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services/edge-lb">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__item"><a href="/dkp/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/single-lb">Edge-LB 1.7</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.6/getting-started/single-lb">Edge-LB 1.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.5/getting-started/single-lb">Edge-LB 1.5</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.4/getting-started/single-lb">Edge-LB 1.4</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.3">Edge-LB 1.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.2">Edge-LB 1.2</a></li></ul><div class="toggle"><p><span class="title">Edge Lb</span><span class="version"> 1.7</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/concepts/"><i data-feather="chevron-right"></i>Edge-LB concepts</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/"><i data-feather="chevron-right"></i>Getting started with Edge-LB</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/installing/">Install Edge-LB</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/comparing-load-balancers/">Comparing load balancing services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/auto-pools/">Automatically exposing apps with Auto Pools and labels</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/single-lb/">Expose and load balance a sample service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/edge-lb-mlb-example/">Compare Edge-LB to Marathon-LB</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/mlb-to-edge-lb-migration/">Migrate from Marathon-LB to Edge-LB</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/how-to-tasks/"><i data-feather="chevron-right"></i>How-to guides for Edge-LB</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/reference/"><i data-feather="chevron-right"></i>Reference information</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/related-documentation/"><i data-feather="chevron-right"></i>Related documentation</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Expose and load balance a sample service</h1></div><h4 class="content__header-description">Illustrates the basic steps for load balancing a single service running on DC/OS</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/single-lb/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+Expose+and+load+balance+a+sample+service&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/single-lb&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><p>These sample exercises demonstrate how to prepare load balancing for access to a single DC/OS™ service. For this tutorial, the access requests originate outside of the DC/OS cluster and are routed into the cluster through a public-facing IP address. This scenario illustrates the most common way that organizations get started with a load balancing solution.</p>
+<h1 id="before-you-begin"><a class="content__anchor" href="#before-you-begin" aria-hidden="true"><i data-feather="bookmark"></i></a>Before you begin</h1>
+<p>You must have:</p>
+<ul>
+<li>Edge-LB installed as described in the Edge-LB <a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/installing">installation instructions</a>.</li>
+<li>The core DC/OS command-line interface (CLI) installed and configured to communicate with the DC/OS cluster.</li>
+<li>The <code>edgelb</code> command-line interface (CLI) installed.</li>
+<li>An active and properly-configured DC/OS Enterprise cluster.</li>
+<li>A DC/OS Enterprise cluster that has at least one DC/OS <strong>private agent</strong> node to run the load-balanced service and at least one DC/OS <strong>public agent</strong> node for exposing the load-balanced service.</li>
+</ul>
+<h1 id="preview-of-what-you-will-do"><a class="content__anchor" href="#preview-of-what-you-will-do" aria-hidden="true"><i data-feather="bookmark"></i></a>Preview of what you will do</h1>
+<p>These procedures show you how to configure an Edge-LB instance to provide public access to a simple Marathon™ app. In this tutorial, you will:</p>
+<ul>
+<li>Create and deploy a sample Marathon app called <code>ping</code>.</li>
+<li>Expose the <code>ping</code> app through the Edge-LB pool instance called <code>ping-lb</code>.</li>
+<li>Access the sample <code>ping</code> app through the public agent URL.</li>
+</ul>
+<h1 id="create-the-sample-app-definition"><a class="content__anchor" href="#create-the-sample-app-definition" aria-hidden="true"><i data-feather="bookmark"></i></a>Create the sample app definition</h1>
+<ol>
+<li>
+<p>Open a text editor, then copy and paste the following sample app definition to create the <code>ping.json</code> file:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/ping&quot;,
+  &quot;cpus&quot;: 0.1,
+  &quot;mem&quot;: 32,
+  &quot;instances&quot;: 1,
+  &quot;cmd&quot;: &quot;echo \&quot;pong\&quot; &gt; index.html &amp;&amp; python -m http.server $PORT0&quot;,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;DOCKER&quot;,
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;python:3&quot;
+    }
+  },
+  &quot;healthChecks&quot;: [
+  {
+    &quot;protocol&quot;: &quot;MESOS_HTTP&quot;,
+    &quot;path&quot;: &quot;/&quot;,
+    &quot;portIndex&quot;: 0,
+    &quot;gracePeriodSeconds&quot;: 5,
+    &quot;intervalSeconds&quot;: 10,
+    &quot;timeoutSeconds&quot;: 10,
+    &quot;maxConsecutiveFailures&quot;: 3
+  }
+  ],
+  &quot;portDefinitions&quot;: [
+  {
+    &quot;protocol&quot;: &quot;tcp&quot;,
+    &quot;port&quot;: 0,
+    &quot;name&quot;: &quot;pong-port&quot;
+  }
+  ],
+  &quot;requirePorts&quot;: true
+}
+</code></pre>
+<p>In this sample app definition, notice that the <code>portDefinitions.name</code> field matches the <code>haproxy.backends.endpoint.portName</code> setting. If these fields don’t match, the pool will not deploy successfully.</p>
+</li>
+<li>
+<p>Deploy the <code>ping</code> service by installing the <code>ping.json</code> app definition:</p>
+<pre><code class="language-bash">dcos marathon app add ping.json
+</code></pre>
+<p>This command displays a confirmation message similar to the following, if deployment is successful:</p>
+<pre><code>Created deployment dfeec06f-5d64-44e0-b6f2-4ddb61fb0887
+</code></pre>
+</li>
+</ol>
+<h1 id="create-the-edge-lb-pool-configuration-file"><a class="content__anchor" href="#create-the-edge-lb-pool-configuration-file" aria-hidden="true"><i data-feather="bookmark"></i></a>Create the Edge-LB pool configuration file</h1>
+<ol>
+<li>
+<p>Open a text editor, then copy and paste the following Edge-LB pool configuration settings to create the <code>ping-lb.json</code> Edge-LB pool instance:</p>
+<pre><code class="language-json">{
+  &quot;apiVersion&quot;: &quot;V2&quot;,
+  &quot;name&quot;: &quot;ping-lb&quot;,
+  &quot;count&quot;: 5,
+  &quot;haproxy&quot;: {
+    &quot;frontends&quot;: [
+    {
+      &quot;bindPort&quot;: 15001,
+      &quot;protocol&quot;: &quot;HTTP&quot;,
+      &quot;linkBackend&quot;: {
+        &quot;defaultBackend&quot;: &quot;ping-backend&quot;
+      }
+    }
+  ],
+    &quot;backends&quot;: [
+    {
+      &quot;name&quot;: &quot;ping-backend&quot;,
+      &quot;protocol&quot;: &quot;HTTP&quot;,
+      &quot;services&quot;: [
+      {
+        &quot;marathon&quot;: {
+          &quot;serviceID&quot;: &quot;/ping&quot;
+        },
+        &quot;endpoint&quot;: {
+          &quot;portName&quot;: &quot;pong-port&quot;
+        }
+      }
+    ]
+    }
+  ],
+    &quot;stats&quot;: {
+      &quot;bindPort&quot;: 0
+    }
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>Review the configuration settings to verify they meet the following guidelines and requirements:</p>
+<ul>
+<li>
+<p>The <code>name</code> indicates the pool instance name.
+In this sample pool configuration file, the instance name is <code>ping-lb</code>. You must have this name to edit, update, or delete the Edge-LB pool instance after you deploy it.</p>
+</li>
+<li>
+<p>The <code>haproxy.frontends.linkBackend.defaultBackend</code> must match the <code>haproxy.backends.name</code> value.
+In this sample pool configuration file, the backend name is <code>ping-backend</code>.</p>
+</li>
+<li>
+<p>The <code>haproxy.backends.endpoint.portName</code> in the pool configuration file must match the <code>portDefinitions.name</code> in the app definition file. In this sample pool configuration file, the name is <code>pong-port</code>.</p>
+</li>
+<li>
+<p>The <code>haproxy.frontends.bindPort</code> setting indicates the port used to access the app. In this sample pool configuration file, the app is accessible on port 15001.</p>
+</li>
+<li>
+<p>The <code>haproxy.stats.bindPort</code> setting indicates that the port for accessing load-balancing statistics. In this sample configuration file, the setting of <code>0</code> specifies that the port is dynamically allocated.</p>
+</li>
+<li>
+<p>The <code>haproxy.backends.marathon.serviceID</code> must match the name of the app definition.
+In this sample pool configuration file, the service name is <code>/ping</code>.</p>
+</li>
+</ul>
+ <p class="message--note"><strong>NOTE: </strong>When you deploy a cluster with Terraform, the default firewall configuration allows you to access only ports 80 (http) and 443 (https). Everything else is blocked. You may want to add public agent ports to the main.tf file (the Terraform configuration file of the running cluster) in module "dcos." To add public agent ports, add a line like this one, <code>public_agents_additional_ports = [ 15001, 10020, 9090, 1025 ]</code>, and then re-deploy the cluster.</p>
+</li>
+</ol>
+<h1 id="deploy-an-edge-lb-pool-to-expose-the-service"><a class="content__anchor" href="#deploy-an-edge-lb-pool-to-expose-the-service" aria-hidden="true"><i data-feather="bookmark"></i></a>Deploy an Edge-LB pool to expose the service</h1>
+<ol>
+<li>
+<p>Deploy the <code>ping-lb.json</code> pool configuration file to create the <code>ping-lb</code> pool instance for load balancing access to the <code>ping</code> service:</p>
+<pre><code class="language-bash">dcos edgelb create ping-lb.json
+</code></pre>
+<p>The command displays a confirmation message similar to the following:</p>
+<pre><code>Successfully created ping-lb. Check &quot;dcos edgelb show ping-lb&quot; or &quot;dcos edgelb status ping-lb&quot; for deployment status
+</code></pre>
+</li>
+<li>
+<p>Verify the service and the pool instance have been deployed successfully:</p>
+<pre><code class="language-bash">dcos marathon app list
+</code></pre>
+<p>The command displays information similar to the following:</p>
+<pre><code>ID                          MEM   CPUS  TASKS  HEALTH  DEPLOYMENT  WAITING  CONTAINER  CMD
+/dcos-edgelb/api            1024   1     1/1    1/1       ---      False      MESOS    cp -vR /dcosfilestmp/*...
+/dcos-edgelb/pools/ping-lb  2048   1     1/1    1/1       ---      False      MESOS    export...
+/ping                        32   0.1    1/1    1/1       ---      False      DOCKER   echo &quot;pong&quot; &gt; index.html &amp;&amp;...
+</code></pre>
+</li>
+<li>
+<p>Verify the pool configuration for the frontend and statistics ports:</p>
+<pre><code class="language-bash">dcos edgelb list
+</code></pre>
+<p>This command displays information similar to the following:</p>
+<pre><code>NAME     APIVERSION  COUNT  ROLE          PORTS
+ping-lb  V2          5      slave_public  0, 15001
+</code></pre>
+</li>
+<li>
+<p>Verify the tasks associated with the deployed services and the pool instance:</p>
+<pre><code class="language-bash">dcos task list
+</code></pre>
+<p>This command displays information similar to the following:</p>
+<pre><code>NAME                       HOST        USER  STATE  ID                                                              MESOS ID                                     REGION          ZONE
+api.dcos-edgelb            10.0.2.231  root    R    dcos-edgelb_api.17a52ec2-5177-11e9-9149-e2160eee24f2            e9153020-fe99-49d7-9d10-773adf12e726-S1  aws/us-west-2  aws/us-west-2c
+ping                       10.0.2.231  root    R    ping.1b56da33-5179-11e9-9149-e2160eee24f2                       e9153020-fe99-49d7-9d10-773adf12e726-S1  aws/us-west-2  aws/us-west-2c
+ping-lb.pools.dcos-edgelb  10.0.2.231  root    R    dcos-edgelb_pools_ping-lb.88344f14-517a-11e9-9149-e2160eee24f2  e9153020-fe99-49d7-9d10-773adf12e726-S1  aws/us-west-2  aws/us-west-2c
+</code></pre>
+</li>
+<li>
+<p>Verify that the Edge-LB pool instance was deployed successfully with the configured frontend and backend ports:</p>
+<pre><code class="language-bash">dcos edgelb endpoints ping-lb
+</code></pre>
+<p>This command displays information similar to the following:</p>
+<pre><code>NAME            PORT   INTERNAL IP
+frontend_port0  15001  10.0.5.105
+stats_port      1025   10.0.5.105
+</code></pre>
+<p>Optionally, you can view the Edge-LB pool configuration as formatted output or in JSON file format using one of the following commands:</p>
+<pre><code class="language-bash">dcos edgelb show ping-lb
+
+dcos edgelb show ping-lb --json
+</code></pre>
+<p>You will see output similar to the following:</p>
+<pre><code class="language-bash">Summary:
+  NAME         ping-lb
+  APIVERSION   V2
+  COUNT        5
+  ROLE         slave_public
+  CONSTRAINTS  hostname:UNIQUE
+  STATSPORT    0
+
+Frontends:
+  NAME                    PORT   PROTOCOL
+  frontend_0.0.0.0_15001  15001  HTTP
+
+Backends:
+  FRONTEND                NAME          PROTOCOL  BALANCE
+  frontend_0.0.0.0_15001  ping-backend  HTTP      roundrobin
+
+Marathon Services:
+  BACKEND       TYPE     SERVICE  CONTAINER  PORT       CHECK
+  ping-backend  AUTO_IP  /ping               pong-port  enabled
+
+Mesos Services:
+  BACKEND  TYPE  FRAMEWORK  TASK  PORT  CHECK
+</code></pre>
+</li>
+</ol>
+<h1 id="access-the-sample-load-balanced-service"><a class="content__anchor" href="#access-the-sample-load-balanced-service" aria-hidden="true"><i data-feather="bookmark"></i></a>Access the sample load balanced service</h1>
+<p>After you have configured and tested the <code>ping</code> service and <code>ping-lb</code> pool configuration file, you can verify you have access to the service.</p>
+<ol>
+<li>
+<p>Open a web browser and navigate to the public-facing IP address.</p>
+<p>If your DC/OS Enterprise cluster is 1.13, or newer, you can view the public-facing IP address by clicking <strong>Nodes</strong> in the DC/OS web-based console, or by using the command:</p>
+<pre><code class="language-bash">dcos node list
+</code></pre>
+<p>In most cases, this command returns node information that includes both the private and public IP addresses for each node. You should keep in mind, however, that the public and private IP addresses returned might not be accurate if the Edge-LB pool uses virtual networks.</p>
+<p>For more information about finding the public IP address for a public agent node, see <a href="/dcosdocs/mesosphere/dcos/2.0/administering-clusters/locate-public-agent/">Finding a public agent IP</a>.</p>
+</li>
+<li>
+<p>Verify that you can access the deployed service using the public-facing IP address and the frontend port 15001:</p>
+<pre><code class="language-bash">http://&lt;public_agent_public_IP&gt;:15001
+</code></pre>
+<p>For example, if the public IP address for the public agent node is 34.211.65.249, access the <code>pong</code> service by opening <code>http://34.211.65.249:15001</code>.</p>
+<p>If you have not enabled additional ports by changing the main.tf file and re-deploying the cluster, you can access the “pong” service by executing the following command with one of the default <a href="/dcosdocs/mesosphere/dcos/2.0/installing/production/system-requirements/ports">ports</a> which are 80 and 443, with your public IPs included:</p>
+<pre><code>$ curl &lt;public IP address&gt;:443
+Output: pong
+</code></pre>
+</li>
+</ol>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#before-you-begin">Before you begin</a></li><li class="content__sections-item content__sections-item--h1"><a href="#preview-of-what-you-will-do">Preview of what you will do</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-the-sample-app-definition">Create the sample app definition</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-the-edge-lb-pool-configuration-file">Create the Edge-LB pool configuration file</a></li><li class="content__sections-item content__sections-item--h1"><a href="#deploy-an-edge-lb-pool-to-expose-the-service">Deploy an Edge-LB pool to expose the service</a></li><li class="content__sections-item content__sections-item--h1"><a href="#access-the-sample-load-balanced-service">Access the sample load balanced service</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

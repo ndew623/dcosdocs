@@ -1,0 +1,379 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>System Requirements - D2iQ Docs</title><meta name="description" content="Hardware and software requirements for DC/OS  deployments"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/system-requirements">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/installing/production/system-requirements">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/installing/production/system-requirements">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/installing/production/system-requirements">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/installing/production/system-requirements">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/installing/"><i data-feather="chevron-right"></i>Installing</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/installing/evaluation/"><i data-feather="chevron-right"></i>Cloud Installation</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/installing/production/"><i data-feather="chevron-right"></i>On-Prem Installation</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/installing/production/virt-infra/">Virtual Infrastructure</a></li><li class="active active-on"><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/installing/production/system-requirements/"><i data-feather="chevron-right"></i>System Requirements</a></li><ul><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.1/installing/production/system-requirements/docker-centos/">Docker on CentOS/RHEL</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.1/installing/production/system-requirements/zookeeper-requirements/">ZooKeeper resources</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.1/installing/production/system-requirements/ports/">Ports</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.1/installing/production/system-requirements/partitions/">Disk Partitions</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.1/installing/production/system-requirements/custom-ami/">Custom AMI</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.1/installing/production/system-requirements/azure-recommendations/">Azure</a></li></ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/installing/production/deploying-dcos/"><i data-feather="chevron-right"></i>Deploying DC/OS</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/installing/production/advanced-configuration/"><i data-feather="chevron-right"></i>Advanced Configuration</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/installing/production/dcos-ansible/"><i data-feather="chevron-right"></i>DC/OS with Ansible</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/installing/production/patching/">Patching</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/installing/production/upgrading/">Upgrading</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/installing/production/uninstalling/">Uninstalling</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/installing/installation-faq/">Frequently Asked Questions</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/installing/troubleshooting/">Troubleshooting</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">System Requirements</h1></div><h4 class="content__header-description">Hardware and software requirements for DC/OS  deployments</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.1/installing/production/system-requirements/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>A DC/OS cluster consists of two types of nodes <strong>master nodes</strong> and <strong>agent nodes</strong>.  The agent nodes can be either <strong>public agent nodes</strong> or <strong>private agent nodes</strong>. Public agent nodes provide north-south (external to internal) access to services in the cluster through load balancers. Private agents host the containers and services that are deployed on the cluster. In addition to the master and agent cluster nodes, each DC/OS installation includes a separate <strong>bootstrap node</strong> for DC/OS installation and upgrade files. Some of the hardware and software requirements apply to all nodes. Other requirements are specific to the type of node being deployed.</p>
+<h1 id="hardware-prerequisites"><a class="content__anchor" href="#hardware-prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a>Hardware prerequisites</h1>
+<p>The hardware prerequisites are a single bootstrap node, Mesos master nodes, and Mesos agent nodes.</p>
+<h2 id="bootstrap-node"><a class="content__anchor" href="#bootstrap-node" aria-hidden="true"><i data-feather="bookmark"></i></a>Bootstrap node</h2>
+<ul>
+<li>DC/OS installation is run on a single <strong>Bootstrap node</strong> with two cores, 16 GB RAM, and 60 GB HDD.</li>
+<li>The bootstrap node is only used during the installation and upgrade process, so there are no specific recommendations for high performance storage or separated mount points.</li>
+</ul>
+<p class="message--note"><strong>NOTE: </strong>The bootstrap node must be separate from your cluster nodes.</p>
+<a name="CommonReqs">
+<h2 id="all-master-and-agent-nodes-in-the-cluster"><a class="content__anchor" href="#all-master-and-agent-nodes-in-the-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>All master and agent nodes in the cluster</h2>
+<p>The DC/OS cluster nodes are designated Mesos masters and agents during installation. The supported operating systems and environments are listed on the <a href="/dcosdocs/mesosphere/dcos/version-policy/">version policy page</a>.</p>
+<p>When you install DC/OS on the cluster nodes, the required files are installed in the <code>/opt/mesosphere</code> directory. You can create the <code>/opt/mesosphere</code> directory prior to installing DC/OS, but it must be either an empty directory or a link to an empty directory. DC/OS can be installed on a separate volume mount by creating an empty directory on the mounted volume, creating a link at <code>/opt/mesosphere</code> that targets the empty directory, and then installing DC/OS.</p>
+<p>You should verify the following requirements for all master and agent nodes in the cluster:</p>
+<ul>
+<li>Every node must have network access to a public Docker repository or to an internal Docker registry.</li>
+<li>If the node operating system is RHEL 7 or CentOS 7, the <code>firewalld</code> daemon must be stopped and disabled. For more information, see <a href="#FirewallDaemon">Disabling the firewall daemon on Red Hat or CentOS</a>.</li>
+<li>The DNSmasq process must be stopped and disabled so that DC/OS has access to port 53. For more information, see <a href="#StopDNSmasq">Stopping the DNSmasq process</a>.</li>
+<li>You are not using <code>noexec</code> to mount the <code>/tmp</code> directory on any system where you intend to use the DC/OS CLI.</li>
+<li>You have sufficient disk to store persistent information for the cluster in the <code>var/lib/mesos</code> directory.</li>
+<li>You should not remotely mount the <code>/var/lib/mesos</code> or Docker storage <code>/var/lib/docker</code> directory.</li>
+</ul>
+<a name="FirewallDaemon">
+<h3 id="disabling-the-firewall-daemon-on-red-hat-or-centos"><a class="content__anchor" href="#disabling-the-firewall-daemon-on-red-hat-or-centos" aria-hidden="true"><i data-feather="bookmark"></i></a>Disabling the firewall daemon on Red Hat or CentOS</h3>
+<p>There is a known <a href="https://github.com/docker/docker/issues/16137" target="_blank">Docker issue</a> that the <code>firewalld</code> process interacts poorly with Docker. For more information about this issue, see the <a href="https://docs.docker.com/v1.6/installation/centos/#firewalld" target="_blank">Docker CentOS firewalld</a> documentation.</p>
+<p>To stop and disable the <code>firewalld</code>, run the following command:</p>
+<pre><code class="language-bash">sudo systemctl stop firewalld &amp;&amp; sudo systemctl disable firewalld
+</code></pre>
+<a name="StopDNSmasq">
+<h3 id="stopping-the-dnsmasq-process"><a class="content__anchor" href="#stopping-the-dnsmasq-process" aria-hidden="true"><i data-feather="bookmark"></i></a>Stopping the DNSmasq process</h3>
+<p>The DC/OS cluster requires access to port 53. To prevent port conflicts, you should stop and disable the <code>dnsmasq</code> process by running the following command:</p>
+<pre><code class="language-bash">sudo systemctl stop dnsmasq &amp;&amp; sudo systemctl disable dnsmasq.service
+</code></pre>
+<h2 id="master-node-requirements"><a class="content__anchor" href="#master-node-requirements" aria-hidden="true"><i data-feather="bookmark"></i></a>Master node requirements</h2>
+<p>The following table lists the master node hardware requirements:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Minimum</th>
+<th>Recommended</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nodes</td>
+<td>1*</td>
+<td>3 or 5</td>
+</tr>
+<tr>
+<td>Processor</td>
+<td>4 cores</td>
+<td>4 cores</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>32 GB RAM</td>
+<td>32 GB RAM</td>
+</tr>
+<tr>
+<td>Hard disk</td>
+<td>120 GB</td>
+<td>120 GB</td>
+</tr>
+</tbody>
+</table>
+<p>* For business critical deployments, three master nodes are required rather than one master node.</p>
+<p>There are many mixed workloads on the masters. Workloads that are expected to be continuously available or considered business-critical should only be run on a DC/OS cluster with at least three masters. For more information about high availability requirements see the <a href="/dcosdocs/mesosphere/dcos/2.1/overview/high-availability/">High Availability documentation</a>.</p>
+<p>Examples of mixed workloads on the masters are Mesos replicated logs and ZooKeeper. In some cases, mixed workloads require synchronizing with <code>fsync</code> periodically, which can generate a lot of expensive random I/O. We recommend the following:</p>
+<ul>
+<li>
+<p>Solid-state drive (SSD) or non-volatile memory express (NVMe) devices for fast, locally-attached storage. To reduce the likelihood of I/O latency issues, solid-state drives should be locally attached to the physical machine, if possible. You should also be sure that solid-state drive (SSD) or non-volatile memory express (NVMe) devices are used for the file systems hosting master node replicated logs.</p>
+<p>In planning your storage requirements, keep in mind that you should avoid using a single storage area network (SAN) device and NFS to connect to the nodes in the cluster. This type of architecture introduces a higher possibility of latency than using local storage and introduces a single point of failure in what should otherwise be a distributed system. Network latency and bandwidth issues can cause client sessions to time out and adversely affect [DC/OS] cluster performance and reliability.</p>
+</li>
+<li>
+<p>RAID controllers with a battery backup unit (BBU).</p>
+</li>
+<li>
+<p>RAID controller cache configured in writeback mode.</p>
+</li>
+<li>
+<p>If separation of storage mount points is possible, the following storage mount points are recommended on the master node. These recommendations will optimize the performance of a busy DC/OS cluster by isolating the I/O of various services.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Directory Path</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><em>/var/lib/dcos</em></td>
+<td style="text-align:left">A majority of the I/O on the master nodes will occur within this directory structure. If you are planning a cluster with hundreds of nodes or intend to have a high rate of deploying and deleting workloads, isolating this directory to dedicated SSD storage on a separate device is recommended.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Further breaking down this directory structure into individual mount points for specific services is recommended for a cluster which will grow to thousands of nodes.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Directory Path</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><em>/var/lib/dcos/mesos/master</em></td>
+<td style="text-align:left">logging directories</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>/var/lib/dcos/cockroach</em></td>
+<td style="text-align:left">CockroachDB <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+<tr>
+<td style="text-align:left"><em>/var/lib/dcos/navstar</em></td>
+<td style="text-align:left">for Mnesia database</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>/var/lib/dcos/secrets</em></td>
+<td style="text-align:left">secrets vault <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+<tr>
+<td style="text-align:left"><em>/var/lib/dcos/exec</em></td>
+<td style="text-align:left">Temporary files required by various DC/OS services. The <em>/var/lib/dcos/exec</em> directory must not be on a volume which is mounted with the <code>noexec</code> option.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>/var/lib/dcos/exhibitor</em></td>
+<td style="text-align:left">Zookeeper database</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>/var/lib/dcos/exhibitor/zookeeper/transactions</em></td>
+<td style="text-align:left">The ZooKeeper transaction logs are very sensitive to delays in disk writes. If you can only provide limited SSD space, this is the directory to place there. A minimum of 2 GB must be available for these logs.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="agent-node-requirements"><a class="content__anchor" href="#agent-node-requirements" aria-hidden="true"><i data-feather="bookmark"></i></a>Agent node requirements</h2>
+<p>The table below shows the agent node hardware requirements.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Minimum</th>
+<th>Recommended</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nodes</td>
+<td>1</td>
+<td>6 or more</td>
+</tr>
+<tr>
+<td>Processor</td>
+<td>2 cores</td>
+<td>2 cores</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>16 GB RAM</td>
+<td>16 GB RAM</td>
+</tr>
+<tr>
+<td>Hard disk</td>
+<td>60 GB</td>
+<td>60 GB</td>
+</tr>
+</tbody>
+</table>
+<p>In planning memory requirements for agent nodes, you should ensure that agents are configured minimize the use of swap space. The recommended best practice is optimize cluster performance and reduce potential resource consumption issues to disable memory swapping for all agents in the cluster, if possible.</p>
+<p>In addition to the requirements described in <a href="#CommonReqs">All master and agent nodes in the cluster</a>, the agent nodes must have:</p>
+<ul>
+<li>
+<p>A <code>/var</code> directory with 20 GB or more of free space. This directory is used by the sandbox for both <a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/containerizers/">Docker and DC/OS Universal container runtime</a>.</p>
+</li>
+<li>
+<p>Do not use <code>noexec</code> to mount the <code>/tmp</code> directory on any system where you intend to use the DC/OS CLI unless a TMPDIR environment variable is set to something other than <code>/tmp/</code>. Mounting the <code>/tmp</code> directory using the <code>noexec</code> option could break CLI functionality.</p>
+</li>
+<li>
+<p>If you are planning a cluster with hundreds of agent nodes or intend to have a high rate of deploying and deleting services, isolating this directory to dedicated SSD storage is recommended.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Directory Path</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><em>/var/lib/mesos/</em></td>
+<td style="text-align:left">Most of the I/O from the Agent nodes will be directed at this directory. Also, The disk space that Apache Mesos advertises in its UI is the sum of the space advertised by filesystem(s) underpinning <em>/var/lib/mesos</em></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Further breaking down this directory structure into individual mount points for specific services is recommended for a cluster which will grow to thousands of nodes.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Directory path</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><em>/var/lib/mesos/slave/slaves</em></td>
+<td style="text-align:left">Sandbox directories for tasks</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>/var/lib/mesos/slave/volumes</em></td>
+<td style="text-align:left">Used by frameworks that consume ROOT persistent volumes</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>/var/lib/mesos/docker/store</em></td>
+<td style="text-align:left">Stores Docker image layers that are used to provision URC containers</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>/var/lib/docker</em></td>
+<td style="text-align:left">Stores Docker image layers that are used to provision Docker containers</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="port-and-protocol-configuration"><a class="content__anchor" href="#port-and-protocol-configuration" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="port-and-protocol"></a>Port and protocol configuration</h2>
+<ul>
+<li>Secure shell (SSH) must be enabled on all nodes.</li>
+<li>Internet Control Message Protocol (ICMP) must be enabled on all nodes.</li>
+<li>All hostnames (FQDN and short hostnames) must be resolvable in DNS; both forward and reverse lookups must succeed. <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></li>
+<li>All DC/OS node host names should resolve to  <strong>locally bindable</strong> IP addresses. Most applications require host names to resolve by binding to a local IP address to function correctly. Applications that cannot resolve the host name of a node by binding to a local IP address might fail to function or behave in unexpected ways. <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></li>
+<li>Each node is network accessible from the bootstrap node.</li>
+<li>Each node has unfettered IP-to-IP connectivity from itself to all nodes in the DC/OS cluster.</li>
+<li>All ports should be open for communication from the master nodes to the agent nodes and vice versa. <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></li>
+<li>UDP must be open for ingress to port 53 on the masters. To attach to a cluster, the Mesos agent node service (<code>dcos-mesos-slave</code>) uses this port to find <code>leader.mesos</code>.</li>
+</ul>
+<p>Requirements for intermediaries (e.g., reverse proxies performing SSL termination) between DC/OS users and the master nodes:</p>
+<ul>
+<li>No intermediary must buffer the entire response before sending any data to the client.</li>
+<li>Upon detecting that its client goes away, the intermediary should also close the corresponding upstream TCP connection (i.e., the intermediary
+should not reuse upstream HTTP connections).</li>
+</ul>
+<h2 id="high-speed-internet-access"><a class="content__anchor" href="#high-speed-internet-access" aria-hidden="true"><i data-feather="bookmark"></i></a>High-speed internet access</h2>
+<p>High speed internet access is recommended for DC/OS installations. A minimum 10 MBit per second is required for DC/OS services. The installation of some DC/OS services will fail if the artifact download time exceeds the value of MESOS_EXECUTOR_REGISTRATION_TIMEOUT within the file <code>/opt/mesosphere/etc/mesos-slave-common</code>. The default value for MESOS_EXECUTOR_REGISTRATION_TIMEOUT is 10 minutes.</p>
+<h1 id="software-prerequisites"><a class="content__anchor" href="#software-prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a>Software prerequisites</h1>
+<ul>
+<li>
+<p>Refer to the <a href="https://raw.githubusercontent.com/dcos/dcos/1.10/cloud_images/centos7/install_prereqs.sh">install_prereqs.sh</a> script for an example of how to install the software requirements for DC/OS masters and agents on a CentOS 7 host.<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></p>
+</li>
+<li>
+<p>When using OverlayFS over XFS, the XFS volume should be created with the -n ftype=1 flag. Please see the <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/7.2_release_notes/technology-preview-file_systems">Red Hat</a> and <a href="http://mesos.apache.org/documentation/latest/container-image/#provisioner-backends">Mesos</a> documentation for more details.</p>
+</li>
+</ul>
+<h2 id="docker-requirements"><a class="content__anchor" href="#docker-requirements" aria-hidden="true"><i data-feather="bookmark"></i></a>Docker requirements</h2>
+<p>Docker must be installed on all bootstrap and cluster nodes. The supported Docker versions are listed on <a href="/dcosdocs/mesosphere/dcos/version-policy/">version policy page</a>.</p>
+<h3 id="recommendations"><a class="content__anchor" href="#recommendations" aria-hidden="true"><i data-feather="bookmark"></i></a>Recommendations</h3>
+<ul>
+<li>
+<p>Do not use Docker <code>devicemapper</code> storage driver in <code>loop-lvm</code> mode. For more information, see <a href="https://docs.docker.com/engine/userguide/storagedriver/device-mapper-driver/">Docker and the Device Mapper storage driver</a>.</p>
+</li>
+<li>
+<p>Prefer <code>OverlayFS</code> or <code>devicemapper</code> in <code>direct-lvm</code> mode when choosing a production storage driver. For more information, see Docker’s <a href="https://docs.docker.com/engine/userguide/storagedriver/selectadriver/" target="_blank">Select a Storage Driver</a>.</p>
+</li>
+<li>
+<p>Manage Docker on CentOS with <code>systemd</code>. The <code>systemd</code> handles will start Docker and helps to restart Dcoker, when it crashes.</p>
+</li>
+<li>
+<p>Run Docker commands as the root user (with <code>sudo</code>) or as a user in the <a href="https://docs.docker.com/engine/installation/linux/centos/#create-a-docker-group" target="_blank">docker user group</a>.</p>
+</li>
+</ul>
+<h3 id="distribution-specific-installation"><a class="content__anchor" href="#distribution-specific-installation" aria-hidden="true"><i data-feather="bookmark"></i></a>Distribution-specific installation</h3>
+<p>Each Linux distribution requires Docker to be installed in a specific way:</p>
+<ul>
+<li><strong>CentOS/RHEL</strong> - <a href="/dcosdocs/mesosphere/dcos/2.1/installing/production/system-requirements/docker-centos/">Install Docker from Docker’s yum repository</a>.</li>
+<li><strong>CoreOS</strong> - Comes with Docker pre-installed and pre-configured.</li>
+</ul>
+<p>For more more information, see Docker’s <a href="https://docs.docker.com/install/" target="_blank">distribution-specific installation instructions</a>.</p>
+<h2 id="disable-sudo-password-prompts"><a class="content__anchor" href="#disable-sudo-password-prompts" aria-hidden="true"><i data-feather="bookmark"></i></a>Disable sudo password prompts</h2>
+<p>To disable the <code>sudo</code> password prompt, you must add the following line to your <code>/etc/sudoers</code> file.</p>
+<pre><code class="language-bash">%wheel ALL=(ALL) NOPASSWD: ALL
+</code></pre>
+<p>Alternatively, you can SSH as the <code>root</code> user.</p>
+<h2 id="synchronize-time-for-all-nodes-in-the-cluster"><a class="content__anchor" href="#synchronize-time-for-all-nodes-in-the-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>Synchronize time for all nodes in the cluster</h2>
+<p>You must enable Network Time Protocol (NTP) on all nodes in the cluster for clock synchronization. By default, during DC/OS startup you will receive an error if this is not enabled. You can check if NTP is enabled by running one of these commands, depending on your OS and configuration:</p>
+<pre><code class="language-bash">ntptime
+adjtimex -p
+timedatectl
+</code></pre>
+<h2 id="bootstrap-node-2"><a class="content__anchor" href="#bootstrap-node-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Bootstrap node</h2>
+<p>Before installing DC/OS, you <strong>must</strong> ensure that your bootstrap node has the following prerequisites.</p>
+<p class="message--important"><strong>IMPORTANT: </strong>If you specify `exhibitor_storage_backend: zookeeper`, the bootstrap node is a permanent part of your cluster. With `exhibitor_storage_backend: zookeeper`, the leader state and leader election of your Mesos masters is maintained in Exhibitor ZooKeeper on the bootstrap node. For more information, see the <a href="/dcosdocs/mesosphere/dcos/2.1/installing/production/advanced-configuration/configuration-reference/">configuration parameter documentation</a>.</p>
+<ul>
+<li>The bootstrap node must be separate from your cluster nodes.</li>
+</ul>
+<h3 id="dcos-configuration-file"><a class="content__anchor" href="#dcos-configuration-file" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="setup-file"></a>DC/OS configuration file</h3>
+<ul>
+<li>
+<p>Download and save the <a href="https://support.mesosphere.com/hc/en-us/articles/213198586-Mesosphere-Enterprise-DC-OS-Downloads">dcos_generate_config file</a> to your bootstrap node. This file is used to create your customized DC/OS build file. Contact your sales representative or <a href="mailto:sales@mesosphere.com">sales@mesosphere.com</a> for access to this file. <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></p>
+</li>
+<li>
+<p>Download and save the <a href="https://downloads.dcos.io/dcos/stable/dcos_generate_config.sh">dcos_generate_config file</a> to your bootstrap node. This file is used to create your customized DC/OS build file. <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--oss">Open Source</span></span></p>
+</li>
+</ul>
+<h3 id="docker-nginx-production-installation"><a class="content__anchor" href="#docker-nginx-production-installation" aria-hidden="true"><i data-feather="bookmark"></i></a>Docker NGINX (production installation)</h3>
+<p>For production installations only, install the Docker NGINX image with this command:</p>
+<pre><code class="language-bash">sudo docker pull nginx
+</code></pre>
+<h2 id="cluster-nodes"><a class="content__anchor" href="#cluster-nodes" aria-hidden="true"><i data-feather="bookmark"></i></a>Cluster nodes</h2>
+<p>For production installations only, your cluster nodes must have the following prerequisites. The cluster nodes are designated as Mesos masters and agents during installation.</p>
+<h3 id="data-compression-production-installation"><a class="content__anchor" href="#data-compression-production-installation" aria-hidden="true"><i data-feather="bookmark"></i></a>Data compression (production installation)</h3>
+<p>You must have the <a href="http://www.info-zip.org/UnZip.html" target="_blank">UnZip</a>, <a href="https://www.gnu.org/software/tar/" target="_blank">GNU tar</a>, and <a href="http://tukaani.org/xz/" target="_blank">XZ Utils</a> data compression utilities installed on your cluster nodes.</p>
+<p>To install these utilities on CentOS7 and RHEL7:</p>
+<pre><code class="language-bash">sudo yum install -y tar xz unzip curl ipset
+</code></pre>
+<h3 id="cluster-permissions-production-installation"><a class="content__anchor" href="#cluster-permissions-production-installation" aria-hidden="true"><i data-feather="bookmark"></i></a>Cluster permissions (production installation)</h3>
+<p>On each of your cluster nodes, follow the below instructions:</p>
+<ul>
+<li>
+<p>Make sure that SELinux is in one of the supported modes.</p>
+<p>To review the current SELinux status and configuration run the following command:</p>
+<pre><code class="language-bash">sudo sestatus
+</code></pre>
+<p>DC/OS supports the following SELinux configurations:</p>
+<ul>
+<li>Current mode: <code>disabled</code></li>
+<li>Current mode: <code>permissive</code></li>
+<li>Current mode: <code>enforcing</code>, given that <code>Loaded policy name</code> is <code>targeted</code>
+This mode is not supported on CoreOS.</li>
+</ul>
+<p>To change the mode from <code>enforcing</code> to <code>permissive</code> run the following command:</p>
+<pre><code class="language-bash">sudo sed -i 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config
+</code></pre>
+<p>Or, if <code>sestatus</code> shows a “Current mode” which is <code>enforcing</code> with a <code>Loaded policy name</code> which is not <code>targeted</code>, run the following command to change the <code>Loaded policy name</code> to <code>targeted</code>:</p>
+<pre><code class="language-bash">sudo sed -i 's/SELINUXTYPE=.*/SELINUXTYPE=targeted/g' /etc/selinux/config
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>Ensure that all services running on every node can be run in the chosen SELinux configuration.</p>
+</li>
+<li>
+<p>Add <code>nogroup</code> and <code>docker</code> groups:</p>
+<pre><code class="language-bash">sudo groupadd nogroup &amp;&amp;
+sudo groupadd docker
+</code></pre>
+</li>
+<li>
+<p>Reboot your cluster for the changes to take effect.</p>
+<pre><code class="language-bash">sudo reboot
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>It may take a few minutes for your node to come back online after reboot.</p>
+</li>
+</ul>
+<h3 id="locale-requirements"><a class="content__anchor" href="#locale-requirements" aria-hidden="true"><i data-feather="bookmark"></i></a>Locale requirements</h3>
+<p>You must set the <code>LC_ALL</code> and <code>LANG</code> environment variables to <code>en_US.utf-8</code>.</p>
+<ul>
+<li>
+<p>For information on how to set these variables in Red Hat, see <a href="https://access.redhat.com/solutions/974273">How to change system locale on RHEL</a></p>
+</li>
+<li>
+<p>On Linux:</p>
+</li>
+</ul>
+<pre><code>localectl set-locale LANG=en_US.utf8
+</code></pre>
+<ul>
+<li>For information on how to set on these variables in CentOS7, see <a href="https://www.rosehosting.com/blog/how-to-set-up-system-locale-on-centos-7/">How to set up system locale on CentOS 7</a>.</li>
+</ul>
+<h1 id="next-steps"><a class="content__anchor" href="#next-steps" aria-hidden="true"><i data-feather="bookmark"></i></a>Next steps</h1>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/installing/production/system-requirements/docker-centos/">Install Docker from Docker’s yum repository</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/installing/production/deploying-dcos/installation/">DC/OS Installation Guide</a></li>
+</ul>
+<div class="grid"><a class="grid__item" href="/dcosdocs/mesosphere/dcos/2.1/installing/production/system-requirements/docker-centos"><div class="grid__header__wrapper"><h3 class="grid__header">Installing Docker on CentOS/RHEL</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">Requirements, recommendations and procedures for installing Docker CE on CentOS/RHEL<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/dcosdocs/mesosphere/dcos/2.1/installing/production/system-requirements/zookeeper-requirements"><div class="grid__header__wrapper"><h3 class="grid__header">ZooKeeper resources</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">Requirements and recommendations for ZooKeeper in a DC/OS cluster<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/dcosdocs/mesosphere/dcos/2.1/installing/production/system-requirements/ports"><div class="grid__header__wrapper"><h3 class="grid__header">DC/OS Ports</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">Understanding configured ports for DC/OS deployment<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/dcosdocs/mesosphere/dcos/2.1/installing/production/system-requirements/partitions"><div class="grid__header__wrapper"><h3 class="grid__header">Disk Partitions</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">Planning disk partitioning for a DC/OS cluster<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/dcosdocs/mesosphere/dcos/2.1/installing/production/system-requirements/custom-ami"><div class="grid__header__wrapper"><h3 class="grid__header">Installing using a Custom AMI</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">Using AWS machine images to launch DC/OS<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/dcosdocs/mesosphere/dcos/2.1/installing/production/system-requirements/azure-recommendations"><div class="grid__header__wrapper"><h3 class="grid__header">Azure Recommendations</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">Recommendations for Azure<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a></div></article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#hardware-prerequisites">Hardware prerequisites</a></li><li class="content__sections-item content__sections-item--h2"><a href="#bootstrap-node">Bootstrap node</a></li><li class="content__sections-item content__sections-item--h2"><a href="#all-master-and-agent-nodes-in-the-cluster">All master and agent nodes in the cluster</a></li><li class="content__sections-item content__sections-item--h2"><a href="#master-node-requirements">Master node requirements</a></li><li class="content__sections-item content__sections-item--h2"><a href="#agent-node-requirements">Agent node requirements</a></li><li class="content__sections-item content__sections-item--h2"><a href="#port-and-protocol-configuration">Port and protocol configuration</a></li><li class="content__sections-item content__sections-item--h2"><a href="#high-speed-internet-access">High-speed internet access</a></li><li class="content__sections-item content__sections-item--h1"><a href="#software-prerequisites">Software prerequisites</a></li><li class="content__sections-item content__sections-item--h2"><a href="#docker-requirements">Docker requirements</a></li><li class="content__sections-item content__sections-item--h2"><a href="#disable-sudo-password-prompts">Disable sudo password prompts</a></li><li class="content__sections-item content__sections-item--h2"><a href="#synchronize-time-for-all-nodes-in-the-cluster">Synchronize time for all nodes in the cluster</a></li><li class="content__sections-item content__sections-item--h2"><a href="#bootstrap-node-2">Bootstrap node</a></li><li class="content__sections-item content__sections-item--h2"><a href="#cluster-nodes">Cluster nodes</a></li><li class="content__sections-item content__sections-item--h1"><a href="#next-steps">Next steps</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

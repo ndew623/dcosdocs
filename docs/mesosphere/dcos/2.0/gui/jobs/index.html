@@ -1,0 +1,457 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Jobs - D2iQ Docs</title><meta name="description" content="Native support for creating and managing jobs."><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/2.0/gui/jobs">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.0"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/gui/jobs">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/gui/jobs">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/gui/jobs">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/gui/jobs">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.0</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/gui/"><i data-feather="chevron-right"></i>GUI</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/gui/dashboard/">Dashboard</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/gui/services/">Services</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/gui/jobs/">Jobs</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/gui/catalog/">Catalog</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/gui/nodes/">Nodes</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/gui/networking/">Networking</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/gui/secrets/">Secrets</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/gui/cluster/">Cluster</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/gui/components/">Components</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/gui/settings/">Settings</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/gui/organization/">Organization</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/gui/updating-gui/">Updating the GUI</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Jobs</h1></div><h4 class="content__header-description">Native support for creating and managing jobs.</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.0/gui/jobs/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>The Jobs tab provides native support for creating, scheduling and managing your jobs. From the side menu, click on <strong>Jobs</strong>. The display will show all of your current jobs either singly or, if grouped, in the group folder.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-Main.png" alt="Jobs"></p>
+<p>Figure 1 - Jobs main screen</p>
+<p>Click on the down arrow next to each column name to sort the list.</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+<th>Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>Unique identifier for your job. Corresponds to <strong>Job ID</strong> in the configuration section.</td>
+<td></td>
+</tr>
+<tr>
+<td>CPUs<b>*</b></td>
+<td>The number of CPU shares your job needs per instance.</td>
+<td></td>
+</tr>
+<tr>
+<td>Mem<b>*</b></td>
+<td>The amount of memory your job needs per instance in MiB.</td>
+<td></td>
+</tr>
+<tr>
+<td>Disk<b>*</b></td>
+<td>The amount of disk your job needs per instance in MiB.</td>
+<td></td>
+</tr>
+<tr>
+<td>GPUs<b>*</b></td>
+<td>The amount of GPU shares your job needs per instance.</td>
+<td></td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Current status of your job.</td>
+<td>Scheduled or Unscheduled</td>
+</tr>
+<tr>
+<td>Last Run</td>
+<td>Shows the final status of the last time your job was run.</td>
+<td>Success or Fail</td>
+</tr>
+</tbody>
+</table>
+<p><span class="message message--note"><strong>*</strong> This field is available starting from <code>DC/OS-UI v5.2.0</code>.</span></p>
+<h1 id="creating-a-new-job"><a class="content__anchor" href="#creating-a-new-job" aria-hidden="true"><i data-feather="bookmark"></i></a>Creating a new job</h1>
+<p>There are two ways to create a job in the DC/OS™ UI.</p>
+<ul>
+<li>If you have no jobs configured, the Jobs screen will contain a notice that you have no active jobs, and a <strong>Create a Job</strong> button.</li>
+</ul>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-No-Active-Jobs.png" alt="No active jobs"></p>
+<p>Figure 2 - Create a Job button</p>
+<ul>
+<li>Regardless of whether you have active jobs or not, you can always click on the <strong>+</strong> sign in the upper right corner to create a new job.</li>
+</ul>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-Create-a-Job.png" alt="Plus sign"></p>
+<p>Figure 3 - Click on plus sign</p>
+<p>A configuration screen for a new job will appear. Note that this screen is the same as that used for editing jobs.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-New-Job.png" alt="Job configuration screen"></p>
+<p>Figure 4 - Job configuration screen</p>
+<h3 id="split-screen"><a class="content__anchor" href="#split-screen" aria-hidden="true"><i data-feather="bookmark"></i></a>Split screen</h3>
+<p>Note that in all the <strong>Jobs</strong> configuration screens, you can choose to view the UI alone, or split the screen between the UI and a <strong>JSON Editor</strong> window. In the following discussion of the <strong>Jobs</strong> configuration options, we will show you the split screen so that you can see how they work together, but you may always choose to use the UI by itself.</p>
+<!-- Where are JSON files created here stored? Can that location be configured? -->
+<p>Edits made to either interface will be immediately reflected in the other. For example, if you enter a value in any field in the left hand UI, it will be added to the JSON file on the right hand.</p>
+<p>To dismiss the <strong>JSON Editor</strong> screen, click the toggle again.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-Split-Screen.png" alt="Split Screen"></p>
+<p>Figure 5 - Split screen</p>
+<p>To invoke the <strong>JSON Editor</strong>, click on the <strong>JSON Editor</strong> toggle switch next to the <strong>Submit</strong> button.</p>
+<h1 id="configuring-a-job"><a class="content__anchor" href="#configuring-a-job" aria-hidden="true"><i data-feather="bookmark"></i></a>Configuring a job</h1>
+<p>You will see eight tabs on the left hand side of the screen. These help you name, configure and manage your job:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#general">General</a></td>
+<td>Sets the most basic job settings, such as the job identifier, CPU, memory and disk requirements.</td>
+</tr>
+<tr>
+<td><a href="#container-runtime">Container Runtime</a></td>
+<td>Specifies whether the job runs using the Universal Container Runtime or the Docker® Engine.</td>
+</tr>
+<tr>
+<td><a href="#schedule">Schedule</a></td>
+<td>Sets up a schedule for your job. You can use the <code>cron</code> format.</td>
+</tr>
+<tr>
+<td><a href="#environment">Environment</a></td>
+<td>Specifies environment variables to be attached to each instance of your job.</td>
+</tr>
+<tr>
+<td><a href="#volumes">Volumes</a></td>
+<td>Configures a stateful job by setting up a persistent volume.</td>
+</tr>
+<tr>
+<td><a href="#placement">Placement</a></td>
+<td>Specifies the placement of agent nodes in regions and zones for high availability, or to expand capacity to new regions.</td>
+</tr>
+<tr>
+<td><a href="#run-configuration">Run Configuration</a></td>
+<td>Advanced settings for the job.</td>
+</tr>
+<tr>
+<td><a href="#secrets">Secrets</a></td>
+<td>Sets up a Secret Store to secure important values like private keys, API tokens, and so forth.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="general"><a class="content__anchor" href="#general" aria-hidden="true"><i data-feather="bookmark"></i></a>General</h2>
+<p>The <strong>General</strong> tab allows you to set up the most basic configuration for a job.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-General.png" alt="Jobs"></p>
+<p>Figure 6 - General configuration tab</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Job ID</td>
+<td>Required field. Defines a unique identifier for the new job. You also use this setting to manage job operations. Each name must be at least 1 character long and may only contain digits (0-9), dashes (-), and lowercase letters (a - z). The name may not begin or end with a dash.</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Provides an optional description of the new job.</td>
+</tr>
+<tr>
+<td>CPUs</td>
+<td>Required field. Specifies the number of CPU cores your job requires. This number can be an integer or a fraction.</td>
+</tr>
+<tr>
+<td>Mem (MiB)</td>
+<td>Required field. Specifies the amount of memory, in MiB, your job requires.</td>
+</tr>
+<tr>
+<td>Disk (MiB)</td>
+<td>Required field. Specifies the amount of disk space, in MiB, your job requires.</td>
+</tr>
+<tr>
+<td>GPUs</td>
+<td>Specifies the number of GPU (Graphics Processing Unit) shares this job needs per instance. This field is only applicable for jobs that run on nodes configured to use GPU (Graphics Processing Unit) cores and tasks that are launched using DC/OS <a href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/containerizers/ucr/">Universal Container Runtime</a> containers. Support for GPU resources is not available for Docker containers or images.</td>
+</tr>
+<tr>
+<td>Job Type</td>
+<td>Select <strong>Container Image</strong> with an optional <strong>Command</strong> or <strong>Command Only</strong>.</td>
+</tr>
+<tr>
+<td>Container Image</td>
+<td>Repository name. This field allows you to specify an image you want to run, such as Ubuntu:14.04.</td>
+</tr>
+<tr>
+<td>Command*</td>
+<td>Specifies a command to be run on the host or in the container. This value is wrapped by Mesos via <code>/bin/sh - job.cmd</code>. Either <code>cmd</code> or <code>args</code> must be supplied . It is invalid to supply both <code>cmd</code> and <code>args</code> in the same job.</td>
+</tr>
+<tr>
+<td>Command Only</td>
+<td>Specifies a command to be run on the host or in the container. This value is wrapped by Mesos via <code>/bin/sh - job.cmd</code>. Either <code>cmd</code> or <code>args</code> must be supplied . It is invalid to supply both <code>cmd</code> and <code>args</code> in the same job.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="container-runtime"><a class="content__anchor" href="#container-runtime" aria-hidden="true"><i data-feather="bookmark"></i></a>Container Runtime</h2>
+<p>The <strong>Container Runtime</strong> is responsible for running your job. We support the <strong>Universal Container Runtime (UCR)</strong> and the <strong>Docker Engine</strong>.</p>
+<h3 id="ucr"><a class="content__anchor" href="#ucr" aria-hidden="true"><i data-feather="bookmark"></i></a>UCR</h3>
+<p><strong>Universal Container Runtime</strong> uses the native Mesos engine and supports GPU resources. This is the recommended selection.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-Container-Runtime.png" alt="Jobs"></p>
+<p>Figure 7 - <strong>Jobs &gt; Container Runtime</strong> tab</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Force Pull Image On Launch</td>
+<td>Forces Docker to pull the latest image before launching each instance.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="docker-engine"><a class="content__anchor" href="#docker-engine" aria-hidden="true"><i data-feather="bookmark"></i></a>Docker Engine</h3>
+<p>The <strong>Docker Engine</strong> is Docker’s container runtime. It requires an image and does not support GPU resources.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-Container-Runtime-2.png" alt="Jobs"></p>
+<p>Figure 8 - <strong>Jobs &gt; Container Runtime &gt; Docker Engine</strong> tab</p>
+<p><strong>Additional options</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Force Pull Image On Launch</td>
+<td>Forces Docker to pull the latest image before launching each instance.</td>
+</tr>
+<tr>
+<td>Grant Runtime Privileges</td>
+<td>Runs the specified Docker image in privileged mode. By default, containers are “underprivileged” and cannot, for example, run a Docker daemon inside a Docker container.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Docker Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add Parameter</td>
+<td>Specifies additional Docker runtime <strong>Parameter Names</strong> and <strong>Parameter Values</strong> for the new job, if applicable. You can add multiple <strong>Parameter Names</strong> and corresponding values by clicking <strong>Add Parameter</strong> for each <strong>Parameter Name</strong> and <strong>Parameter Value</strong> you want to include.</td>
+</tr>
+<tr>
+<td>Add Arg</td>
+<td>Specifies additional command-line arguments for the new job, if applicable. You can add multiple arguments by clicking <strong>Add Arg</strong> for each argument you want to include.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="schedule"><a class="content__anchor" href="#schedule" aria-hidden="true"><i data-feather="bookmark"></i></a>Schedule</h2>
+<p>You can set up jobs with a scheduler using the <code>cron</code> format. Select <strong>Schedule</strong> to specify a schedule for when the job runs.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-Schedule.png" alt="Schedule"></p>
+<p>Figure 9 - <strong>Jobs &gt; Schedule</strong> tab</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Enable Schedule</strong></td>
+<td>Activates or deactivates the scheduler.</td>
+</tr>
+<tr>
+<td><strong>Schedule ID</strong></td>
+<td>Defines a unique identifier for the job schedule. This is a required field. The schedule identifier must be a string with at least 2 characters and it can only contain digits (0-9), dashes (-), and lowercase letters (a-z). The schedule identifier must not begin or end with a dash.</td>
+</tr>
+<tr>
+<td><strong>CRON Schedule</strong></td>
+<td>Specifies the schedule in <code>cron</code> format. This is a required field. Use <a href="http://crontab.guru">this crontab generator</a> for help. You can also set a <strong>Time Zone</strong> to apply to the cron schedule. For example, you might have nodes in different time zones and want to run the job using a standardized UTC time or a specific local time zone such as America/New_York.</td>
+</tr>
+<tr>
+<td><strong>Starting Deadline</strong></td>
+<td>Sets the time, in seconds, to start the job if it misses its scheduled time for any reason. Missed job executions are counted as failed jobs.</td>
+</tr>
+<tr>
+<td><strong>Concurrency Policy</strong></td>
+<td>A concurrency policy determines whether a new job run instance is triggered if there’s already a job instance running. Set if you want to allow new job instances to run if there’s already a job instance running.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="environment"><a class="content__anchor" href="#environment" aria-hidden="true"><i data-feather="bookmark"></i></a>Environment</h2>
+<p>Select <strong>Environment</strong> to configure any environment values to be attached to each instance of your job that is launched.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-Environment.png" alt="Environment"></p>
+<p>Figure 10 - <strong>Jobs &gt; Environment</strong> tab</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Environment Variables</strong></td>
+<td>Sets up environment variables for each instance your service launches. DC/OS exposes environment variables for host ports and metadata.</td>
+</tr>
+<tr>
+<td><strong>Key</strong></td>
+<td>Unique name for an environment value.</td>
+</tr>
+<tr>
+<td><strong>Value</strong></td>
+<td>Value assigned to a key.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="volumes"><a class="content__anchor" href="#volumes" aria-hidden="true"><i data-feather="bookmark"></i></a>Volumes</h2>
+<p>Select the <strong>Volumes</strong> tab to create a stateful job by configuring a persistent volume. Persistent volumes enable instances to be restarted without data loss.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-Volumes.png" alt="Volumes"></p>
+<p>Figure 11 - <strong>Jobs &gt; Volumes</strong> tab</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Add Volume</strong></td>
+<td>Sets up the persistent volume.</td>
+</tr>
+<tr>
+<td><strong>Container Path</strong></td>
+<td>The path where your application will read and write data. This must be a single-level path relative to the container; it cannot contain a forward slash (/).</td>
+</tr>
+<tr>
+<td><strong>Host Path</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Mode</strong></td>
+<td>Access mode of the volume. You may select <strong>Read and Write</strong> or <strong>Read Only</strong> from the drop-down menu.</td>
+</tr>
+</tbody>
+</table>
+<p>For more information, see the <a href="/dcosdocs/mesosphere/dcos/2.0/storage/">Storage</a> documents.</p>
+<h2 id="placement"><a class="content__anchor" href="#placement" aria-hidden="true"><i data-feather="bookmark"></i></a>Placement</h2>
+<p>You can configure the placement of agent nodes in regions and zones for high availability, or to expand capacity to new regions when necessary.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-Placement.png" alt="Placement"></p>
+<p>Figure 12 - <strong>Jobs &gt; Placement</strong> tab</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Region</strong></td>
+<td>Where you want your agent nodes to run. If you leave this field blank, your job will run in your local region. These values usually correspond to a cloud provider’s zones, such as <code>aws/us-west-2</code>.</td>
+</tr>
+<tr>
+<td><strong>Advanced Constraints</strong></td>
+<td>Control more precisely where your job runs.</td>
+</tr>
+</tbody>
+</table>
+<p>Constraints have three parts:</p>
+<ul>
+<li>An <strong>Operator</strong>. You have three choices for operators:
+<ul>
+<li><strong>Is</strong> - Run job on nodes having attribute IDs with a specific value.</li>
+<li><strong>Like</strong> - Run job on a particular set of attribute IDs.</li>
+<li><strong>Unlike</strong> - Don’t run job on a particular set of attribute IDs.</li>
+</ul>
+</li>
+<li>A <strong>Field</strong>. This can be the hostname of the agent node or any attribute of the agent node.</li>
+<li>A <strong>Value</strong>. This can be a string or regex value of your choice.|</li>
+</ul>
+<h2 id="run-configuration"><a class="content__anchor" href="#run-configuration" aria-hidden="true"><i data-feather="bookmark"></i></a>Run Configuration</h2>
+<p>Select <strong>Run Configuration</strong> to specify advanced settings for the new job.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-Run-Configuration.png" alt="Run Config"></p>
+<p>Figure 13 - <strong>Jobs &gt; Run Configuration</strong> tab</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Max Launch Delay</strong></td>
+<td>Specifies the maximum number of seconds to wait for a job to start running after it is launched by a scheduled job run or manually by a user. If the job does not start running within the maximum number of seconds allowed, the job is aborted.</td>
+</tr>
+<tr>
+<td><strong>Kill Grace Period</strong></td>
+<td>Specifies the number of seconds between escalating from <code>SIGTERM</code> to <code>SIGKILL</code> when signalling tasks to terminate. During this grace period, tasks should perform an orderly shut down immediately upon receiving SIGTERM.</td>
+</tr>
+<tr>
+<td><strong>Username</strong></td>
+<td>Identifies the user account that runs the tasks on the agent.</td>
+</tr>
+<tr>
+<td><strong>Artifact URI</strong></td>
+<td>Provides one or more artifact URIs you want passed to fetcher module and resolved at runtime and the action–Execute, Extract, or Cache–you want to perform for each URI.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/job-artifacts-uri.png" alt="Adding an artifact URI and action for a job"></p>
+<p>Figure 14 - Add an artifact URI and action</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Restart Policy</strong></td>
+<td>Specifies the steps to take if a job fails.</td>
+</tr>
+<tr>
+<td><strong>Never</strong></td>
+<td>Choose this if you never want to attempt to restart a failed job.</td>
+</tr>
+<tr>
+<td><strong>On Failure</strong></td>
+<td>Set a time limit for attempting to restart the job using the <strong>Keep Trying Time</strong> field. For example, set the <strong>Keep Trying Time</strong> to 30 if you want to try restarting the job after waiting for 30 seconds. If no value is set for Keep Trying Time, DC/OS will continue attempting to restart the failed job indefinitely.</td>
+</tr>
+<tr>
+<td><strong>Labels</strong></td>
+<td>Specifies a <strong>Key</strong> and <strong>Value</strong> that you want to attach as metadata to the new job. You can then use the job label to filter or expose information for labeled jobs. You can add multiple label key name/value pairs by clicking <strong>Add Label</strong> for each name/value pair you want to include. For more information about using labels, see <a href="/dcosdocs/mesosphere/dcos/2.0/tutorials/task-labels/">Labeling tasks and jobs</a>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="secrets"><a class="content__anchor" href="#secrets" aria-hidden="true"><i data-feather="bookmark"></i></a>Secrets</h2>
+<p>Select the DC/OS Secret Store to secure important values like private keys, API tokens, and database passwords.</p>
+<p>To use a Secret in an application, you must make sure the user has the appropriate permissions. See the <a href="/dcosdocs/mesosphere/dcos/2.0/security/ent/secrets/">Secrets documentation</a> for more information.</p>
+<p>Click on <strong>Add Secret</strong> to add a secret.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/job-artifacts-uri.png" alt="Secrets"></p>
+<p>Figure 15 - Secrets tab</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Secret</td>
+<td>Unique values are also allowed for one-time use.</td>
+</tr>
+<tr>
+<td>Expose As</td>
+<td>From the dropdown menu, select Environmental Value or File.</td>
+</tr>
+<tr>
+<td>Environmental Value</td>
+<td>An environmental variable-based secret.</td>
+</tr>
+<tr>
+<td>Environment Variable Name</td>
+<td>Enter the name of an environmental variable.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="managing-jobs-with-the-ui"><a class="content__anchor" href="#managing-jobs-with-the-ui" aria-hidden="true"><i data-feather="bookmark"></i></a>Managing jobs with the UI</h1>
+<p>Detailed instructions for adding, viewing, modifying or removing jobs can be found in the section on <a href="/dcosdocs/mesosphere/dcos/1.13/deploying-jobs/quickstart/#managing-jobs-with-the-dcos-ui">Deploying Jobs</a>.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#creating-a-new-job">Creating a new job</a></li><li class="content__sections-item content__sections-item--h1"><a href="#configuring-a-job">Configuring a job</a></li><li class="content__sections-item content__sections-item--h2"><a href="#general">General</a></li><li class="content__sections-item content__sections-item--h2"><a href="#container-runtime">Container Runtime</a></li><li class="content__sections-item content__sections-item--h2"><a href="#schedule">Schedule</a></li><li class="content__sections-item content__sections-item--h2"><a href="#environment">Environment</a></li><li class="content__sections-item content__sections-item--h2"><a href="#volumes">Volumes</a></li><li class="content__sections-item content__sections-item--h2"><a href="#placement">Placement</a></li><li class="content__sections-item content__sections-item--h2"><a href="#run-configuration">Run Configuration</a></li><li class="content__sections-item content__sections-item--h2"><a href="#secrets">Secrets</a></li><li class="content__sections-item content__sections-item--h1"><a href="#managing-jobs-with-the-ui">Managing jobs with the UI</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

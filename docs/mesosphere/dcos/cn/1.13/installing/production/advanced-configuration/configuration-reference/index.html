@@ -1,0 +1,1000 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>配置参考 - D2iQ Docs</title><meta name="description" content="DC/OS Enterprise 和 DC/OS 开源可用的配置参数"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/1.13/installing/production/advanced-configuration/configuration-reference">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/advanced-configuration/configuration-reference">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/production/advanced-configuration/configuration-reference">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/advanced-configuration/configuration-reference">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/"><i data-feather="chevron-right"></i>概述</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/"><i data-feather="chevron-right"></i>安装</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/"><i data-feather="chevron-right"></i>云安装</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/"><i data-feather="chevron-right"></i>本地安装</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/virt-infra/">虚拟基础架构</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/system-requirements/"><i data-feather="chevron-right"></i>系统要求</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/deploying-dcos/"><i data-feather="chevron-right"></i>部署 DC/OS</a></li><li class="active"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/advanced-configuration/"><i data-feather="chevron-right"></i>高级配置</a></li><ul><li class="active active-on"><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/advanced-configuration/configuration-reference/">配置参考</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/advanced-configuration/configuring-gpu-nodes/">配置 GPU 节点</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/advanced-configuration/configuring-zones-regions/"><i data-feather="chevron-right"></i>配置分区和分域</a></li></ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/dcos-ansible/"><i data-feather="chevron-right"></i>带 Ansible 的 DC/OS</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/patching/">打补丁</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/upgrading/">升级</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/uninstalling/">卸载</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/installation-faq/">常见问题</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/troubleshooting/">故障排除</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">配置参考</h1></div><h4 class="content__header-description">DC/OS Enterprise 和 DC/OS 开源可用的配置参数</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/advanced-configuration/configuration-reference/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><h1 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>配置参数</h1>
+<p>本页包含 DC/OS Enterprise 和 DC/OS 开源的配置参数。</p>
+<h1 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>群集设置</h1>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#agent-list">agent_list</a></td>
+<td>[专用代理]<code>-</code> 主机名的 IPv4 地址的 YAML 嵌套列表(/dcosdocs/mesosphere/dcos/cn/1.13/overview/concepts/#private-agent-node)</td>
+</tr>
+<tr>
+<td><a href="#aws-template-storage-access-key-id">aws_template_storage_access_key_id</a></td>
+<td>拥有 AWS S3 bucket 的账户的 <a href="http://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys">访问密钥 ID</a>。</td>
+</tr>
+<tr>
+<td><a href="#aws-template-storage-bucket">aws_template_storage_bucket</a></td>
+<td>包含 [自定义高级 AWS 模板] 的 s3 bucket 的名称。(/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/community-supported-methods/aws/advanced/#create-your-templates).</td>
+</tr>
+<tr>
+<td><a href="#aws-template-storage-bucket-path">aws_template_storage_bucket_path</a></td>
+<td>S3 bucket 内模板工件存储位置的路径。</td>
+</tr>
+<tr>
+<td><a href="#aws-template-storage-region-name">aws_template_storage_region_name</a></td>
+<td>包含 S3 bucket 的分域。</td>
+</tr>
+<tr>
+<td><a href="#aws-template-storage-secret-access-key">aws_template_storage_secret_access_key</a></td>
+<td>拥有 AWS S3 bucket 的账户的 <a href="http://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys">秘密访问密钥</a>。</td>
+</tr>
+<tr>
+<td><a href="#aws-template-upload">aws_template_upload</a></td>
+<td>是否将自定义高级 AWS 模板上传到 S3 bucket。</td>
+</tr>
+<tr>
+<td><a href="#bootstrap-url">bootstrap_url</a></td>
+<td>（必填）DC/OS 安装工具用于存储自定义 DC/OS 构建文件的 URI 路径。</td>
+</tr>
+<tr>
+<td><a href="#cluster-docker-credentials">cluster_docker_credentials</a></td>
+<td>要传递给 Docker 的词典。</td>
+</tr>
+<tr>
+<td><a href="#cluster-docker-credentials-enabled">cluster_docker_credentials_enabled</a></td>
+<td>是否传递 Mesos <code>--docker_config</code> 选项给 Mesos。</td>
+</tr>
+<tr>
+<td><a href="#cluster-docker-registry-url">cluster_docker_registry_url</a></td>
+<td>Mesos 用于拉取 Docker 镜像的自定义 URL。如果从默认值更改，您需要将本地 Catalog 导入到您的 Docker 注册表，因为您不能访问 DockerHub 来拉取我们的图像。参见 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/administering-clusters/deploying-a-local-dcos-universe/#selected-packages">部署本地 Catalog</a> 和 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/private-docker-registry/">使用专用 Docker 注册表</a>.</td>
+</tr>
+<tr>
+<td><a href="#cluster-name">cluster_name</a></td>
+<td>群集的名称。</td>
+</tr>
+<tr>
+<td><a href="#cosmos-config">cosmos_config</a></td>
+<td>要传递给 [DC/OS 包管理器 (Cosmos)] 的打包配置词典。</td>
+</tr>
+<tr>
+<td><a href="#custom-checks">custom_checks</a></td>
+<td>添加到默认检查配置进程的自定义安装检查。</td>
+</tr>
+<tr>
+<td><a href="#exhibitor-storage-backend">exhibitor_storage_backend</a></td>
+<td>Exhibitor 使用的存储后端类型。</td>
+</tr>
+<tr>
+<td><a href="#enable-gpu-isolation">enable_gpu_isolation</a></td>
+<td>指示是否在 DC/OS 中启用 GPU 支持。</td>
+</tr>
+<tr>
+<td><a href="#fault-domain-enabled-enterprise">fault_domain_enabled</a></td>
+<td>默认情况下，故障域感知已启用，安装工具将预期来自 [故障检测脚本] PrivateAgentInstanceCount。(/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/deploying-dcos/installation/#create-a-fault-domain-detection-script-enterprise). 要覆盖此功能，请设置为 <code>false</code>，将不会预期或使用故障域信息。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+<tr>
+<td><a href="#gpus-are-scarce">gpus_are_scarce</a></td>
+<td>指示是否将 GPU 作为群集中的稀缺资源。</td>
+</tr>
+<tr>
+<td><a href="#ip-detect-public-filename">ip_detect_public_filename</a></td>
+<td>在群集中使用的 IP 检测文件。</td>
+</tr>
+<tr>
+<td><a href="#log-offers">log_offers</a></td>
+<td>指出领导 Mesos 管理节点是否应记录发送给调度器的邀约。默认值为真。</td>
+</tr>
+<tr>
+<td><a href="#marathon-gpu-scheduling-behavior">marathon_gpu_scheduling_behavior</a></td>
+<td>表示 Marathon 是否会在带有可用 GPU 的节点上安排非 GPU 任务。默认为 <code>restricted</code>.</td>
+</tr>
+<tr>
+<td><a href="#master-discovery">master_discovery</a></td>
+<td>（必填）Mesos 管理节点发现方法。</td>
+</tr>
+<tr>
+<td><a href="#master-external-loadbalancer-enterprise">master_external_loadbalancer</a></td>
+<td>负载均衡器的 DNS 名称或 IP 地址。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+<tr>
+<td><a href="#mesos-container-log-sink">mesos_container_log_sink</a></td>
+<td>容器（任务）的日志管理器。</td>
+</tr>
+<tr>
+<td><a href="#mesos-seccomp-enabled">mesos_seccomp_enabled</a></td>
+<td>指出是否对 UCR 容器启用 Seccomp 支持。</td>
+</tr>
+<tr>
+<td><a href="#mesos-seccomp-profile-name">mesos_seccomp_profile_name</a></td>
+<td>默认 Seccomp 配置文件的名称。</td>
+</tr>
+<tr>
+<td><a href="#metronome-gpu-scheduling-behavior">metronome_gpu_scheduling_behavior</a></td>
+<td>表示 Metronome 是否会在带有可用 GPU 的节点上安排非 GPU 任务。默认为 <code>restricted</code>.</td>
+</tr>
+<tr>
+<td><a href="#platform">platform</a></td>
+<td>基础架构平台。</td>
+</tr>
+<tr>
+<td><a href="#public-agent-list">public_agent_list</a></td>
+<td><a href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/concepts/#public-agent-node">公共代理</a> 主机名的 IPv4 地址的 YAML 嵌套列表 (<code>-</code>)。</td>
+</tr>
+<tr>
+<td><a href="#rexray-config">rexray_config</a></td>
+<td><a href="https://rexray.readthedocs.io/en/v0.9.0/user-guide/config/">REX-Ray</a> 配置方法，用于在 Marathon 中启用外部持久卷。不能同时指定 <code>rexray_config</code> 和 <code>rexray_config_preset</code>.</td>
+</tr>
+<tr>
+<td><a href="#rexray-config-preset">rexray_config_preset</a></td>
+<td>如果您在 AWS 上运行 DC/OS，将此参数设置为 <code>aws</code>，请将 <code>rexray_config</code> 参数设置为与 DC/OS 本身捆绑的合理默认 REX-Ray 配置。不能同时指定 <code>rexray_config</code> 和 <code>rexray_config_preset</code>.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>网络</h1>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#dcos-net-cluster-identity">dcos_net_cluster_identity</a></td>
+<td>此功能可确保群集中的节点具有唯一标识符，以防群集之间发生未经授权的“交互”。默认值为 <code>false</code></td>
+</tr>
+<tr>
+<td><a href="#dcos-overlay-enable">dcos_overlay_enable</a></td>
+<td>指定是否启用 DC/OS 虚拟网络的参数模块。</td>
+</tr>
+<tr>
+<td><a href="#dns-bind-ip-blacklist">dns_bind_ip_blacklist</a></td>
+<td>DC/OS DNS 解析器无法绑定的 IP 地址列表。</td>
+</tr>
+<tr>
+<td><a href="#dns-forward-zones">dns_forward_zones</a></td>
+<td>配置 DNS 查询自定义转发行为的 DNS 分区、IP 地址和端口嵌套列表。</td>
+</tr>
+<tr>
+<td><a href="#dns-search">dns_search</a></td>
+<td>输入不合格域时尝试的域列表（以空格隔开）。</td>
+</tr>
+<tr>
+<td><a href="#master-dns-bindall">master_dns_bindall</a></td>
+<td>指示管理节点 DNS 端口是否打开。</td>
+</tr>
+<tr>
+<td><a href="#mesos-dns-set-truncate-bit">mesos_dns_set_truncate_bit</a></td>
+<td>指示在响应过大而无法放入一个数据包时，是否设置截断数位。</td>
+</tr>
+<tr>
+<td><a href="#resolvers">resolvers</a></td>
+<td>DC/OS 群集节点 DNS 解析器的 YAML 嵌套列表(<code>-</code></td>
+</tr>
+<tr>
+<td><a href="#use-proxy">use_proxy</a></td>
+<td>指示是否启用 DC/OS 代理。</td>
+</tr>
+<tr>
+<td><a href="#enable-ipv6">enable_ipv6</a></td>
+<td>布尔值，表示 IPv6 网络支持是否在 DC/OS 中可用。默认值为 <code>true</code>.</td>
+</tr>
+<tr>
+<td><a href="#dcos-l4lb-enable-ipv6">dcos_l4lb_enable_ipv6</a></td>
+<td>布尔值，表示第 4 层负载均衡是否可用于 IPv6 网络。该参数仅在 <code>enable_ipv6</code> 设置为 <code>true</code>. 时生效。默认值为 <code>false</code>.</td>
+</tr>
+<tr>
+<td><a href="#dcos-ucr-default-bridge-subnet">dcos_ucr_default_bridge_subnet</a></td>
+<td>分配给 <code>mesos-bridge</code> CNI 网络，供 UCR 构建桥接模式网络的 IPv4 子网。</td>
+</tr>
+<tr>
+<td><a href="#network-cni-root-dir-persist">network_cni_root_dir_persist</a></td>
+<td>布尔值，指定在主机重启期间是否使 CNI 根目录持久化。默认值为 <code>false</code>. 如果将此配置选项设置为 <code>true</code>，CNI 根目录创建于 <code>work dir</code>. 将此选项设置为 <code>true</code>，以允许 CNI 隔离器在重启主机节点之后进行正确的清理。注意：必须重启主机才能生效。</td>
+</tr>
+</tbody>
+</table>
+<h1 id="enterprise"><a class="content__anchor" href="#enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>存储 <span class="badge badge--shortcode badge--large badge--block badge--enterprise">Enterprise</span></h1>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#feature-dcos-storage-enabled-enterprise">feature_dcos_storage_enabled</a></td>
+<td>如果设置了标记，则将启用 DC/OS 中的高级存储功能，包括 Mesos <a href="https://github.com/container-storage-interface/spec">CSI</a> 支持和预安装的 CSI 设备插件。此功能标记需要打开以使用 <a href="/dcosdocs/mesosphere/dcos/cn/services/storage/">DC/OS 存储服务 (DSS)</a> <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+</tbody>
+</table>
+<h1 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>性能和微调</h1>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#docker-remove-delay">docker_remove_delay</a></td>
+<td>在 Mesos 将 docker 容器（即，<code>docker rm</code>）视为终止后删除该容器之前的等待时间。</td>
+</tr>
+<tr>
+<td><a href="#dcos-audit-logging-enterprise">dcos_audit_logging</a></td>
+<td>指明是否已记录 Mesos、Marathon 和作业的安全决策（身份认证、授权）。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+<tr>
+<td><a href="#enable-docker-gc">enable_docker_gc</a></td>
+<td>指示是否运行 <a href="https://github.com/spotify/docker-gc#excluding-images-from-garbage-collection">docker-gc</a> 脚本，一个简单的 Docker 容器和镜像垃圾回收脚本，每小时清理一次失散的 Docker 容器。</td>
+</tr>
+<tr>
+<td><a href="#gc-delay">gc_delay</a></td>
+<td>清理执行器目录前等待的最长时间。</td>
+</tr>
+<tr>
+<td><a href="#log-directory">log_directory</a></td>
+<td>从 SSH 进程到安装工具主机日志的路径。</td>
+</tr>
+<tr>
+<td><a href="#mesos-max-completed-tasks-per-framework">mesos_max_completed_tasks_per_framework</a></td>
+<td>Mesos 管理节点在内存中保留的每个框架的完成任务数。</td>
+</tr>
+<tr>
+<td><a href="#process-timeout">process_timeout</a></td>
+<td>在进程分叉之后等待开始操作所允许的时间（以秒为单位）。</td>
+</tr>
+</tbody>
+</table>
+<h1 id="-5"><a class="content__anchor" href="#-5" aria-hidden="true"><i data-feather="bookmark"></i></a>安全和身份认证</h1>
+<p><span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#adminrouter-auth-cache-enabled-enterprise">adminrouter_auth_cache_enabled</a></td>
+<td>控制 Admin Router 授权缓存的启用。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+<tr>
+<td><a href="#adminrouter-tls-1-0-enabled-enterprise">adminrouter_tls_1_0_enabled</a></td>
+<td>指示是否在 Admin Router 中启用 TLSv1 支持。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+<tr>
+<td><a href="#adminrouter-tls-1-1-enabled-enterprise">adminrouter_tls_1_1_enabled</a></td>
+<td>指示是否在 Admin Router 中启用 TLSv1.1 支持。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+<tr>
+<td><a href="#adminrouter-tls-1-2-enabled-enterprise">adminrouter_tls_1_2_enabled</a></td>
+<td>指示是否在 Admin Router 中启用 TLSv1.2 支持。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+<tr>
+<td><a href="#adminrouter-tls-cipher-suite-enterprise">adminrouter_tls_cipher_suite</a></td>
+<td>覆盖 Admin Router 中默认的 TLS 密码套件。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+<tr>
+<td><a href="#adminrouter-x-frame-options">adminrouter_x_frame_options</a></td>
+<td>设置 <code>X-Frame-Options</code> DC/OS UI 的标头值。默认设置为 <code>DENY</code></td>
+</tr>
+<tr>
+<td><a href="#auth-cookie-secure-flag-enterprise">auth_cookie_secure_flag</a></td>
+<td>指示是否允许 Web 浏览器通过非 HTTPS 连接发送 DC/OS 身份认证 Cookie。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+<tr>
+<td><a href="#bouncer-expiration-auth-token-days-enterprise">bouncer_expiration_auth_token_days</a></td>
+<td>设置了认证令牌生存时间值 (TTL) ，用于身份和访问管理。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+<tr>
+<td><a href="#ca-certificate-path-enterprise">ca_certificate_path</a></td>
+<td>使用此路径设置自定义 CA 证书。参见 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/tls-ssl/ca-custom#configuration-parameter-reference">使用自定义 CA 证书</a> 页面，获取详细的配置参数参考。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+<tr>
+<td><a href="#ca-certificate-key-path-enterprise">ca_certificate_key_path</a></td>
+<td>使用此路径设置自定义 CA 证书。参见 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/tls-ssl/ca-custom#configuration-parameter-reference">使用自定义 CA 证书</a> 页面，获取详细的配置参数参考。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+<tr>
+<td><a href="#ca-certificate-chain-path-enterprise">ca_certificate_chain_path</a></td>
+<td>使用此路径设置自定义 CA 证书。参见 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/tls-ssl/ca-custom#configuration-parameter-reference">使用自定义 CA 证书</a> 页面，获取详细的配置参数参考。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+<tr>
+<td><a href="#license-key-contents-enterprise">license_key_contents</a></td>
+<td>可选覆盖参数，以直接在 config.yaml 中提供许可证密钥内容。如果指定此参数，任何保存至 <code>genconf/license.txt</code> 的密匙将被忽略。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+<tr>
+<td><a href="#iam-ldap-sync-interval-enterprise">iam_ldap_sync_interval</a></td>
+<td>LDAP 同步操作之间的间隔时间（以秒为单位）。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+<tr>
+<td><a href="#permissions-cache-ttl-seconds-enterprise">permissions_cache_ttl_seconds</a></td>
+<td>权限更改在整个系统中传播的最大秒数。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+<tr>
+<td><a href="#security-enterprise">security</a></td>
+<td>安全模式：宽容或严格。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+<tr>
+<td><a href="#ssh-key-path">ssh_key_path</a></td>
+<td>安装工具用于登录到目标节点的路径。</td>
+</tr>
+<tr>
+<td><a href="#ssh-port">ssh_port</a></td>
+<td>SSH 端口，例如 22。</td>
+</tr>
+<tr>
+<td><a href="#ssh-user">ssh_user</a></td>
+<td>SSH 用户名，例如 <code>centos</code>.</td>
+</tr>
+<tr>
+<td><a href="#superuser-password-hash-enterprise">superuser_password_hash</a></td>
+<td>必填 - 散列超级用户密码。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+<tr>
+<td><a href="#superuser-service-account-public-key">superuser_service_account_public_key</a></td>
+<td>用于认证超级用户服务帐户的公钥。</td>
+</tr>
+<tr>
+<td><a href="#superuser-service-account-uid">superuser_service_account_uid</a></td>
+<td>超级用户服务帐户的用户 ID</td>
+</tr>
+<tr>
+<td><a href="#superuser-username-required-enterprise">superuser_username</a></td>
+<td>必填 - 超级用户的用户名。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+<tr>
+<td><a href="#telemetry-enabled">telemetry_enabled</a></td>
+<td>指示是否为群集启用匿名数据共享。</td>
+</tr>
+<tr>
+<td><a href="#zk-super-credentials-enterprise">zk_super_credentials</a></td>
+<td>Zookeeper 超级用户凭据。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+<tr>
+<td><a href="#zk-master-credentials-enterprise">zk_master_credentials</a></td>
+<td>Zookeeper 管理节点凭据。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+<tr>
+<td><a href="#zk-agent-credentials-enterprise">zk_agent_credentials</a></td>
+<td>Zookeeper 代理节点凭据。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--oss">Open Source</span></span></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#oauth-enabled-open-source">oauth_enabled</a></td>
+<td>指出是否为群集启用身份认证。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--oss">Open Source</span></span></td>
+</tr>
+<tr>
+<td><a href="#ssh-key-path">ssh_key_path</a></td>
+<td>安装工具用于登录到目标节点的路径。</td>
+</tr>
+<tr>
+<td><a href="#ssh-port">ssh_port</a></td>
+<td>SSH 端口，例如 22。</td>
+</tr>
+<tr>
+<td><a href="#ssh-user">ssh_user</a></td>
+<td>SSH 用户名，例如 <code>centos</code>.</td>
+</tr>
+<tr>
+<td><a href="#superuser-service-account-uid">superuser_service_account_uid</a></td>
+<td>超级用户服务帐户的用户 ID</td>
+</tr>
+<tr>
+<td><a href="#superuser-service-account-public-key">superuser_service_account_public_key</a></td>
+<td>用于认证超级用户服务帐户的公钥</td>
+</tr>
+<tr>
+<td><a href="#telemetry-enabled">telemetry_enabled</a></td>
+<td>指示是否为群集启用匿名数据共享。</td>
+</tr>
+</tbody>
+</table>
+<h1 id="-6"><a class="content__anchor" href="#-6" aria-hidden="true"><i data-feather="bookmark"></i></a>度量标准</h1>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#enable-mesos-input-plugin">enable_mesos_input_plugin</a></td>
+<td>指明是否启用 Telegraf 的 Mesos 输入插件来收集来自 Mesos 管理节点和代理节点的 Mesos 度量标准。默认值为 <code>true</code>. ** 注意：** DC/OS 1.13 默认支持 Mesos 输入插件。</td>
+</tr>
+</tbody>
+</table>
+<h1 id="-7"><a class="content__anchor" href="#-7" aria-hidden="true"><i data-feather="bookmark"></i></a>参数描述</h1>
+<h3 id="adminrouter-auth-cache-enabled-enterprise"><a class="content__anchor" href="#adminrouter-auth-cache-enabled-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>adminrouter_auth_cache_enabled <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></h3>
+<p>控制 Admin Router 授权缓存的启用。</p>
+<ul>
+<li><code>adminrouter_auth_cache_enabled: false</code> Admin Router 执行的每项授权检查都将从 IAM 加载用户的权限。</li>
+<li><code>adminrouter_auth_cache_enabled: true</code> （默认）Admin Router 将在执行授权检查后 5 秒内缓存用户的权限。</li>
+</ul>
+<h3 id="adminrouter-tls-1-0-enabled-enterprise"><a class="content__anchor" href="#adminrouter-tls-1-0-enabled-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>adminrouter_tls_1_0_enabled <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></h3>
+<p>指示是否在 Admin Router 中启用 TLS 1.0。更改此设置对代理节点上的内部 Admin Router 配置没有影响。</p>
+<ul>
+<li><code>adminrouter_tls_1_0_enabled: 'true'</code> 在 Admin Router 中启用 TLS 1.0 协议。</li>
+<li><code>adminrouter_tls_1_0_enabled: 'false'</code> 在 Admin Router 中禁用 TLS 1.0 协议。这是默认值。</li>
+</ul>
+<p>建议您不要启用 TLS 1.0，因为该协议被视为不安全。</p>
+<p>如果您已经安装了群集，并且想要在此更改此设备，可以通过 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/upgrading/">升级</a> 实现，同时将 <code>adminrouter_tls_1_0_enabled</code> 参数设置为所需值。</p>
+<h3 id="adminrouter-tls-1-1-enabled-enterprise"><a class="content__anchor" href="#adminrouter-tls-1-1-enabled-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>adminrouter_tls_1_1_enabled <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></h3>
+<p>指示是否在 Admin Router 中启用 TLS 1.1。更改此设置对代理节点上的内部 Admin Router 配置没有影响。</p>
+<ul>
+<li><code>adminrouter_tls_1_1_enabled: 'true'</code> 在 Admin Router 中启用 TLS 1.1 协议。这是默认值。</li>
+<li><code>adminrouter_tls_1_1_enabled: 'false'</code> 在 Admin Router 中禁用 TLS 1.1 协议。</li>
+</ul>
+<p>如果您已经安装了群集，并且想要在此更改此设备，可以通过 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/upgrading/">升级</a> 实现，同时将 <code>adminrouter_tls_1_1_enabled</code> 参数设置为所需值。</p>
+<h3 id="adminrouter-tls-1-2-enabled-enterprise"><a class="content__anchor" href="#adminrouter-tls-1-2-enabled-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>adminrouter_tls_1_2_enabled <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></h3>
+<p>指示是否在 Admin Router 中启用 TLS 1.2。更改此设置对代理节点上的内部 Admin Router 配置没有影响。</p>
+<ul>
+<li><code>adminrouter_tls_1_2_enabled: 'true'</code> 在 Admin Router 中启用 TLS 1.2 协议。这是默认值。</li>
+<li><code>adminrouter_tls_1_2_enabled: 'false'</code> 在 Admin Router 中禁用 TLS 1.2 协议。</li>
+</ul>
+<p>建议保持启用此协议版本，让此协议作为最安全的受支持 TLS 版本。</p>
+<p>如果您已经安装了群集，并且想要在此更改此设备，可以通过 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/upgrading/">升级</a> 实现，同时将 <code>adminrouter_tls_1_2_enabled</code> 参数设置为所需值。</p>
+<h3 id="adminrouter-tls-cipher-suite-enterprise"><a class="content__anchor" href="#adminrouter-tls-cipher-suite-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>adminrouter_tls_cipher_suite <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></h3>
+<p>提供 TLS 密码套件的自定义列表。该值将直接传递到 Admin Router 的 <a href="http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_ciphers"><code>ssl_ciphers</code></a>配置指令中。此字符串没有验证。设置错误将导致 DC/OS 安装失败。此配置设置仅影响在 DC/OS 管理节点上运行的 Admin Router 。</p>
+<p>如果未提供值，则使用默认值 <code>EECDH+AES128:RSA+AES128:EECDH+AES256:RSA+AES256:EECDH+3DES:RSA+3DES:!MD5;</code></p>
+<p>要验证所提供值的准确性，请使用 <code>openssl ciphers</code> 实用程序并提供您自己的值：<code>openssl ciphers &lt;cipher-suites&gt;</code>。如需所有可用密码的列表，请参阅 <a href="https://www.openssl.org/docs/man1.0.2/apps/ciphers.html">OpenSSL 文档</a>。</p>
+<p><strong>注意：</strong> 由于 Java 管辖区限制，不能仅使用 AES256 加密套件安装 DC/OS。</p>
+<h3 id="adminrouter-x-frame-options"><a class="content__anchor" href="#adminrouter-x-frame-options" aria-hidden="true"><i data-feather="bookmark"></i></a>adminrouter_x_frame_options</h3>
+<p>设置 <code>X-Frame-Options</code> DC/OS UI 的标头值。默认设置为 <code>DENY</code>.</p>
+<h3 id="agent-list"><a class="content__anchor" href="#agent-list" aria-hidden="true"><i data-feather="bookmark"></i></a>agent_list</h3>
+<p>[专用代理]<code>-</code>(/dcosdocs/mesosphere/dcos/cn/1.13/overview/concepts/#private-agent-node)主机名的 IPv4 地址的 YAML 嵌套列表。</p>
+<h3 id="auth-cookie-secure-flag-enterprise"><a class="content__anchor" href="#auth-cookie-secure-flag-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>auth_cookie_secure_flag <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></h3>
+<p>指示是否允许 Web 浏览器通过非 HTTPS 连接发送 DC/OS 身份认证 Cookie。DC/OS 身份认证 cookie 允许访问 DC/OS 群集，应通过加密连接发送。</p>
+<ul>
+<li>
+<p><code>auth_cookie_secure_flag: false</code>（默认）浏览器将通过未加密的 HTTP 连接或加密的 HTTPS 连接发送 DC/OS 身份认证 Cookie。</p>
+</li>
+<li>
+<p><code>auth_cookie_secure_flag: true</code> DC/OS 设置的身份认证 Cookie 将包含 <a href="https://www.owasp.org/index.php/SecureFlag"><code>Secure</code> 标记</a>，指示浏览器不在未加密的 HTTP 连接上发送 Cookie。这可能导致身份认证在下列情况下失败。</p>
+<ul>
+<li>如果安全模式是 <code>permissive</code>，URL 就会指定 HTTP 和 URL 包括与根路径不同的目标（例如，<code>http://&lt;cluster-url&gt;/&lt;path&gt;/</code>)</li>
+<li>在浏览器和终止 TLS 的 DC/OS 之间有代理</li>
+</ul>
+</li>
+</ul>
+<h3 id="aws-template-storage-access-key-id"><a class="content__anchor" href="#aws-template-storage-access-key-id" aria-hidden="true"><i data-feather="bookmark"></i></a>aws_template_storage_access_key_id</h3>
+<p>拥有 AWS S3 bucket 的账户的 <a href="http://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys">访问密钥 ID</a>。</p>
+<h3 id="aws-template-storage-bucket"><a class="content__anchor" href="#aws-template-storage-bucket" aria-hidden="true"><i data-feather="bookmark"></i></a>aws_template_storage_bucket</h3>
+<p>包含 [自定义高级 AWS 模板] 的 s3 bucket 的名称。(/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/community-supported-methods/aws/advanced/#create-your-templates).</p>
+<h3 id="aws-template-storage-bucket-path"><a class="content__anchor" href="#aws-template-storage-bucket-path" aria-hidden="true"><i data-feather="bookmark"></i></a>aws_template_storage_bucket_path</h3>
+<p>S3 bucket 内模板工件存储位置的路径。</p>
+<h3 id="aws-template-storage-region-name"><a class="content__anchor" href="#aws-template-storage-region-name" aria-hidden="true"><i data-feather="bookmark"></i></a>aws_template_storage_region_name</h3>
+<p>包含 S3 bucket 的分域。</p>
+<h3 id="aws-template-storage-secret-access-key"><a class="content__anchor" href="#aws-template-storage-secret-access-key" aria-hidden="true"><i data-feather="bookmark"></i></a>aws_template_storage_secret_access_key</h3>
+<p>拥有 AWS S3 bucket 的账户的 <a href="http://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys">秘密访问密钥</a>。</p>
+<h3 id="aws-template-upload"><a class="content__anchor" href="#aws-template-upload" aria-hidden="true"><i data-feather="bookmark"></i></a>aws_template_upload</h3>
+<p>是否将自定义高级 AWS 模板上传到 S3 bucket。</p>
+<h3 id="bootstrap-url"><a class="content__anchor" href="#bootstrap-url" aria-hidden="true"><i data-feather="bookmark"></i></a>bootstrap_url</h3>
+<p>（必填）DC/OS 安装工具用于存储自定义 DC/OS 构建文件的 URL 路径。如果正在使用自动化 DC/OS 安装工具，则应指定 <code>bootstrap_url: file:///opt/dcos_install_tmp</code>，除非已经移动安装工具的 assets。自动化 DC/OS 安装工具默认将构建文件放置于 <code>file:///opt/dcos_install_tmp</code>.</p>
+<h3 id="bouncer-expiration-auth-token-days-enterprise"><a class="content__anchor" href="#bouncer-expiration-auth-token-days-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>bouncer_expiration_auth_token_days <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></h3>
+<p>此参数设置了认证令牌生存时间值 (TTL) ，用于身份和访问管理。必须指定 YAML 字符串中包裹的 Python 浮动语法的值。令牌默认在五天后到期。例如，要将令牌寿命设置为半天：</p>
+<pre><code class="language-json">bouncer_expiration_auth_token_days: '0.5'
+</code></pre>
+<p>较小的过期时间可能对 DC/OS 组件有害。
+我们建议此值设置为不低于 0.25。
+如果您希望使用更低的值，请联系 Mesosphere 支持代表以获得指导。</p>
+<p>如需更多信息，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/">安全</a> 文档。</p>
+<h3 id="ca-certificate-path-enterprise"><a class="content__anchor" href="#ca-certificate-path-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>ca_certificate_path   <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></h3>
+<p>使用此路径设置自定义 CA 证书。参见 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/tls-ssl/ca-custom#configuration-parameter-reference">使用自定义 CA 证书</a> 页面，获取详细的配置参数参考。</p>
+<h3 id="ca-certificate-key-path-enterprise"><a class="content__anchor" href="#ca-certificate-key-path-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>ca_certificate_key_path  <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></h3>
+<p>使用此路径设置自定义 CA 证书。参见 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/tls-ssl/ca-custom#configuration-parameter-reference">使用自定义 CA 证书</a> 页面，获取详细的配置参数参考。</p>
+<h3 id="ca-certificate-chain-path-enterprise"><a class="content__anchor" href="#ca-certificate-chain-path-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>ca_certificate_chain_path  <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></h3>
+<p>使用此路径设置自定义 CA 证书。参见 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/tls-ssl/ca-custom#configuration-parameter-reference">使用自定义 CA 证书</a> 页面，获取详细的配置参数参考。</p>
+<h3 id="cluster-docker-credentials"><a class="content__anchor" href="#cluster-docker-credentials" aria-hidden="true"><i data-feather="bookmark"></i></a>cluster_docker_credentials</h3>
+<p>要传递给 Docker 的词典。</p>
+<ul>
+<li>如果未在 DC/OS 安装期间设置，就会在 <code>/etc/mesosphere/docker_credentials</code> 创建默认的空凭据文件。sysadmin 可根据需要更改凭据。<code>systemctl restart dcos-mesos-slave</code> 或 <code>systemctl restart dcos-mesos-slave-public</code> 需要更改才能生效。</li>
+<li>您也可以使用 <code>--docker_config</code> JSON <a href="http://mesos.apache.org/documentation/latest/configuration/">格式</a>。您可以在 <code>config.yaml</code> 文件中将其作为 YAML 写入，之后它会自动映射到 JSON 格式。这样就会把 Docker 凭据存储在与 DC/OS 内部配置（）相同的位置。<code>/opt/mesosphere</code>). 如需更新或更改配置，就必须创建新的 DC/OS 内部配置。</li>
+</ul>
+<p><strong>注意：</strong></p>
+<ul>
+<li><code>cluster_docker_credentials</code> 只有在 <a href="#cluster-docker-credentials-enabled"><code>cluster_docker_credentials_enabled</code></a> 设置为 <code>'true'</code> 之后才能生效。</li>
+<li>升级期间，- <code>cluster_docker_credentials</code> 只有在将 <code>cluster_docker_credentials_dcos_owned</code> 设置为 <code>'true'</code>. 后才能生效。</li>
+</ul>
+<p>可以使用以下选项进一步配置 Docker 凭据：</p>
+<ul>
+<li><code>cluster_docker_credentials_dcos_owned</code> 指示是否将凭据文件存储在 <code>/opt/mesosphere</code> 或 <code>/etc/mesosphere/docker_credentials</code>. 中。sysadmin 无法直接编辑 <code>/opt/mesosphere</code>
+<ul>
+<li><code>cluster_docker_credentials_dcos_owned: 'true'</code>凭据文件存储在 <code>/opt/mesosphere</code> 中。
+<ul>
+<li><code>cluster_docker_credentials_write_to_etc</code> 是否写入群集凭据文件。
+<ul>
+<li><code>cluster_docker_credentials_write_to_etc: 'true'</code> 写入凭据文件。该操作在覆盖凭据文件时产生问题（例如，如果文件含在机器图像或 AMI 中）的时候很实用。这是默认值。</li>
+<li><code>cluster_docker_credentials_write_to_etc: 'false'</code> 请勿写入凭据文件。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>cluster_docker_credentials_dcos_owned: 'false'</code>凭据文件存储在 <code>/etc/mesosphere/docker_credentials</code> 中。</li>
+</ul>
+</li>
+</ul>
+<p>如需更多信息，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/deploying-dcos/configuration/examples/#docker-credentials">示例</a>.</p>
+<h3 id="cluster-docker-credentials-enabled"><a class="content__anchor" href="#cluster-docker-credentials-enabled" aria-hidden="true"><i data-feather="bookmark"></i></a>cluster_docker_credentials_enabled</h3>
+<p>是否向 Mesos 传递包含 <a href="#cluster-docker-credentials"><code>--docker_config</code></a> 的 Mesos <code>cluster_docker_credentials</code> 选项。</p>
+<ul>
+<li><code>cluster_docker_credentials_enabled: 'true'</code> 请传递 Mesos 的 <code>--docker_config</code> 选项给 Mesos。它将指向包含所提供 <code>cluster_docker_credentials</code> 数据的文件。</li>
+<li><code>cluster_docker_credentials_enabled: 'false'</code> 请勿传递 Mesos的 <code>--docker_config</code> 选项给 Mesos。</li>
+</ul>
+<h3 id="cluster-docker-registry-url"><a class="content__anchor" href="#cluster-docker-registry-url" aria-hidden="true"><i data-feather="bookmark"></i></a>cluster_docker_registry_url</h3>
+<p>Mesos 用于拉取 Docker 镜像的自定义 URL。设置后将把 Mesos 的 <code>--docker_registry</code> 标记配置到指定 URL。这将更改 Mesos 用于拉取 Docker 镜像的默认 URL。默认使用 <code>https://registry-1.docker.io</code> 如果从默认值更改，您需要将本地 Catalog 导入到您的 Docker 注册表，因为您不能访问 DockerHub 来拉取我们的图像。参见 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/administering-clusters/deploying-a-local-dcos-universe/#selected-packages">部署本地 Catalog</a> 和 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/private-docker-registry/">使用专用 Docker 注册表</a> 获取更多信息。</p>
+<h3 id="cluster-name"><a class="content__anchor" href="#cluster-name" aria-hidden="true"><i data-feather="bookmark"></i></a>cluster_name</h3>
+<p>群集的名称。</p>
+<h3 id="cosmos-config"><a class="content__anchor" href="#cosmos-config" aria-hidden="true"><i data-feather="bookmark"></i></a>cosmos_config</h3>
+<p>要传递给 [DC/OS 包管理器] 的打包配置词典。(https://github.com/dcos/cosmos). 设置后，还必须指定以下选项。</p>
+<ul>
+<li><code>package_storage_uri</code>
+永久存储 DC/OS 包的位置。值必须是一个文件 URL，例如 <code>file:///var/lib/dcos/cosmos/packages</code>.</li>
+<li><code>staged_package_storage_uri</code>
+添加 DC/OS 包时，临时存储包的位置。值必须是一个文件 URL，例如 <code>file:///var/lib/dcos/cosmos/staged-packages</code>.</li>
+</ul>
+<h3 id="custom-checks"><a class="content__anchor" href="#custom-checks" aria-hidden="true"><i data-feather="bookmark"></i></a>custom_checks</h3>
+<p>添加到默认检查配置进程的自定义安装检查。配置用于 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/architecture/components/#dcos-diagnostics">DC/OS 诊断组件</a> 执行安装和升级检查。在安装和升级期间，这些自定义检查与默认的启动前和启动后检查一起运行。</p>
+<ul>
+<li>
+<p><code>cluster_checks</code> - 这组参数指定整个 DC/OS 群集的运行状况检查。</p>
+<ul>
+<li><code>&lt;check-name&gt;</code> - 运行状况检查的自定义名称</li>
+<li><code>description</code> - 指定检查说明</li>
+<li><code>cmd</code> - 指定运行状况检查命令字符串的阵列</li>
+<li><code>timeout</code> - 指定在认定检查失败之前需等待（以秒为单位）的时间。超时的检查通常状态为 <code>3 (UNKNOWN)</code></li>
+</ul>
+</li>
+<li>
+<p><code>node_checks</code> - 这组参数指定节点运行状况检查。</p>
+<ul>
+<li><code>&lt;check-name&gt;</code> - 运行状况检查的自定义名称</li>
+<li><code>description</code> - 指定检查说明</li>
+<li><code>cmd</code> - 指定运行状况检查命令字符串的阵列</li>
+<li><code>timeout</code> - 指定在认定检查失败之前需等待（以秒为单位）的时间。超时的检查通常状态为 <code>3 (UNKNOWN)</code></li>
+</ul>
+</li>
+</ul>
+<p>有关如何使用这些自定义检查的详细信息，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/deploying-dcos/configuration/examples/#custom-checks">示例</a> 以及 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/deploying-dcos/node-cluster-health-check/">节点和群集运行状况检查</a> 文档。</p>
+<h3 id="dcos-audit-logging-enterprise"><a class="content__anchor" href="#dcos-audit-logging-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>dcos_audit_logging <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></h3>
+<p>指明是否已记录 Mesos、Marathon 和作业的安全决策（身份认证、授权）。</p>
+<ul>
+<li><code>'dcos_audit_logging': 'true'</code> Mesos、Marathon 和作业已记录。这是默认值。</li>
+<li><code>'dcos_audit_logging': 'false'</code> Mesos、Marathon 和作业未记录。</li>
+</ul>
+<p>如需更多信息，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/">安全文档</a>.</p>
+<h3 id="dcos-l4lb-enable-ipv6"><a class="content__anchor" href="#dcos-l4lb-enable-ipv6" aria-hidden="true"><i data-feather="bookmark"></i></a>dcos_l4lb_enable_ipv6</h3>
+<p>指示第 4 层负载均衡是否可用于 IPv6 容器。</p>
+<ul>
+<li><code>dcos_l4lb_enable_ipv6: 'false'</code> 请为 IPv6 容器禁用 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/networking/load-balancing-vips/">第 4 层负载均衡</a> 这是默认值。</li>
+<li><code>dcos_l4lb_enable_ipv6: 'true'</code> 请为 IPv6 容器启用第 4 层负载均衡。</li>
+</ul>
+<p class="message--note"><strong>注意：</strong>为 IPv6 容器打开第 4 层负载均衡时应保持谨慎。</p>
+<h3 id="dcos-net-cluster-identity"><a class="content__anchor" href="#dcos-net-cluster-identity" aria-hidden="true"><i data-feather="bookmark"></i></a>dcos_net_cluster_identity</h3>
+<p>此功能可确保群集中的节点具有唯一标识符，以防群集之间发生未经授权的“交互”。默认值为 <code>false</code>.</p>
+<h3 id="dcos-overlay-enable"><a class="content__anchor" href="#dcos-overlay-enable" aria-hidden="true"><i data-feather="bookmark"></i></a>dcos_overlay_enable</h3>
+<p>指示是否启用 DC/OS 虚拟网络。</p>
+<p><strong>注意：</strong> 虚拟网络需要 Docker 1.12 或更高版本，但如果您使用 Docker 1.12 或更早版本，则必须指定 <code>dcos_overlay_enable: 'false'</code>. 如需更多信息，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/system-requirements/">系统要求</a>.</p>
+<ul>
+<li>
+<p><code>dcos_overlay_enable: 'false'</code> 请勿启用 DC/OS 虚拟网络。</p>
+</li>
+<li>
+<p><code>dcos_overlay_enable: 'true'</code> 请启用 DC/OS 虚拟网络。这是默认值。启用虚拟网络后，您还可以指定以下参数：</p>
+<ul>
+<li>
+<p><code>dcos_overlay_config_attempts</code> 指定配置尝试失败多少次之后，覆盖配置模块才会停止配置虚拟网络。</p>
+<p><strong>注意：</strong> 故障可能与功能异常的 Docker 守护程序有关。</p>
+</li>
+<li>
+<p><code>dcos_overlay_mtu</code> 在覆盖层上启动的容器中，虚拟以太网 (Veth) 的最大传输单元 (MTU)。</p>
+</li>
+<li>
+<p><code>dcos_overlay_network</code> 这组参数定义 DC/OS 的虚拟网络。DC/OS 的默认配置提供了名为 <code>dcos</code> 的虚拟网络，具有以下 YAML 配置：</p>
+<pre><code class="language-yaml">dcos_overlay_network:
+    vtep_subnet: 44.128.0.0/20
+    vtep_mac_oui: 70:B3:D5:00:00:00
+    overlays:
+      - name: dcos
+        subnet: 9.0.0.0/8
+        prefix: 26
+</code></pre>
+<ul>
+<li>
+<p><code>vtep_subnet</code> 用于虚拟网络 VxLAN 后端的专用地址空间。无法从代理或管理节点外部访问此地址空间。</p>
+</li>
+<li>
+<p><code>vtep_mac_oui</code> 连接到公共节点中虚拟网络接口的 MAC 地址。
+<strong>注意：</strong> 最后三个字节必须为 <code>00</code>.</p>
+</li>
+<li>
+<p><code>overlays</code></p>
+<ul>
+<li><code>name</code> 典型名称（参见 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/networking/SDN/dcos-overlay/">限制</a>，了解有关命名虚拟网络的限制）。</li>
+<li><code>subnet</code> 分配给虚拟网络的子网。</li>
+<li><code>prefix</code> 分配给每个代理的子网大小，进而定义覆盖网络可运行的代理的数量。子网的大小在来自覆盖子网。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>如需更多信息，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/deploying-dcos/configuration/examples/#overlay">示例</a> 和 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/networking/SDN/dcos-overlay/">文档</a>.</p>
+<h3 id="dcos-ucr-default-bridge-subnet"><a class="content__anchor" href="#dcos-ucr-default-bridge-subnet" aria-hidden="true"><i data-feather="bookmark"></i></a>dcos_ucr_default_bridge_subnet</h3>
+<p>取得 IPv4 子网。子网被分配到<code>ucr-br0</code> CNI 网络创建的桥接 <code>mesos-bridge</code> <code>mesos-bridge</code> CNI 网络代表的网络用于在为 UCR 容器选中桥接模式网络时，启动 UCR 容器。</p>
+<p>用于 UCR 的桥接模式网络与 Docker 的桥接模式网络相同，因此 <code>ucr-br0</code> 与 <code>docker0</code> Docker 桥接模式网络的桥接发挥相同作用。</p>
+<p>为 <code>dcos_ucr_default_bridge_subnet</code> 选择 IPv4 子网的唯一限制是不应在代理连接的网络上使用子网。换言之，只能在代理中访问这一子网。</p>
+<h3 id="dns-bind-ip-blacklist"><a class="content__anchor" href="#dns-bind-ip-blacklist" aria-hidden="true"><i data-feather="bookmark"></i></a>dns_bind_ip_blacklist</h3>
+<p>DC/OS DNS 解析器无法绑定的 IP 地址列表。</p>
+<h3 id="dns-forward-zones"><a class="content__anchor" href="#dns-forward-zones" aria-hidden="true"><i data-feather="bookmark"></i></a>dns_forward_zones</h3>
+<p>配置 DNS 查询自定义转发行为的 DNS 分区、IP 地址和端口列表。DNS 分区映射到一组 DNS 解析器中。</p>
+<p>样本定义如下：</p>
+<pre><code class="language-yaml">dns_forward_zones:
+  a.contoso.com:
+    - &quot;1.1.1.1:53&quot;
+    - &quot;2.2.2.2:53&quot;
+  b.contoso.com:
+    - &quot;3.3.3.3:53&quot;
+    - &quot;4.4.4.4:53&quot;
+</code></pre>
+<p>在上述示例中，发送到 <code>myapp.a.contoso.com</code> 的 DNS 查询将转发至 <code>1.1.1.1:53</code> 或 <code>2.2.2.2:53</code>. 同样，发送到 <code>myapp.b.contoso.com</code> 的 DNS 查询将转发至 <code>3.3.3.3:53</code> 或 <code>4.4.4.4:53</code>.</p>
+<h3 id="dns-search"><a class="content__anchor" href="#dns-search" aria-hidden="true"><i data-feather="bookmark"></i></a>dns_search</h3>
+<p>一份以空格隔开列表，列出了输入不合格域时尝试过的域（例如，不包含 ‘…’). 的域搜索）。Linux 实施 <code>/etc/resolv.conf</code> 将最大域数限制为 6 个，最大字符数可能设置为 256。如需详细信息，请参阅 <a href="http://man7.org/linux/man-pages/man5/resolv.conf.5.html">man /etc/resolv.conf</a>。</p>
+<p>每个群集管理节点的 <code>search</code> 文件都添加了一个 <code>/etc/resolv.conf</code> 行。 <code>search</code> 具有与 <code>domain</code> 相同的功能并且因可以指定多个域，而更具可扩展性。</p>
+<p>在本例中， <code>example.com</code> 有公共网站 <code>www.example.com</code>，而且数据中心的所有主机都具有完全限定的以 <code>dc1.example.com</code>. 结尾的域名。数据中心中的一个主机具有  主机名。<code>foo.dc1.example.com</code>. 如果 <code>dns_search</code> 设置为 ‘dc1.example.com example.com’，那么每个执行 <code>foo</code> 名称查找的 DC/OS 主机都将获得关于 <code>foo.dc1.example.com</code>. 的 A 记录。如果机器查找 <code>www</code>，首先会检查 <code>www.dc1.example.com</code>，但它不存在，因此搜索将尝试下一个域，查找 <code>www.example.com</code>，找到一条 A 记录就会将其返回。</p>
+<pre><code class="language-yaml">dns_search: dc1.example.com dc1.example.com example.com dc1.example.com dc2.example.com example.com
+</code></pre>
+<h3 id="docker-remove-delay"><a class="content__anchor" href="#docker-remove-delay" aria-hidden="true"><i data-feather="bookmark"></i></a>docker_remove_delay</h3>
+<p>在 Mesos 将 docker 容器（即 <code>docker rm</code>）视为终止后删除该容器之前的等待时间（例如，3 天、2 星期等）。这仅适用于 Docker 容器化工具。建议您接受默认值 1 小时。</p>
+<h3 id="enable-docker-gc"><a class="content__anchor" href="#enable-docker-gc" aria-hidden="true"><i data-feather="bookmark"></i></a>enable_docker_gc</h3>
+<p>指示是否运行 <a href="https://github.com/spotify/docker-gc#excluding-images-from-garbage-collection">docker-gc</a> 脚本，一个简单的 Docker 容器和镜像垃圾回收脚本，每小时清理一次失散的 Docker 容器。您可以使用 <code>/etc/</code> 配置参数，设置运行时间行为。如需更多信息，请参阅 <a href="https://github.com/spotify/docker-gc#excluding-images-from-garbage-collection">文档</a></p>
+<ul>
+<li><code>enable_docker_gc: 'true'</code> 请每小时运行一次 docker-gc 脚本。这是 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/">云</a> 模板安装的默认值。</li>
+<li><code>enable_docker_gc: 'false'</code> 请勿每小时运行一次 docker-gc 脚本。这是 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/">本地</a> 安装的默认值。</li>
+</ul>
+<h3 id="enable-mesos-input-plugin"><a class="content__anchor" href="#enable-mesos-input-plugin" aria-hidden="true"><i data-feather="bookmark"></i></a>enable_mesos_input_plugin</h3>
+<p>指明是否启用 Telegraf 的 Mesos 输入插件来收集来自 Mesos 管理节点和代理节点的 Mesos 度量标准。选项： <code>true</code> 或 <code>false</code>. 默认值为 <code>true</code>. 如需更多信息，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/metrics/mesos/">文档</a>.</p>
+<p><a name="exhibitor_storage_backend"></a></p>
+<h3 id="exhibitor-storage-backend"><a class="content__anchor" href="#exhibitor-storage-backend" aria-hidden="true"><i data-feather="bookmark"></i></a>exhibitor_storage_backend</h3>
+<p>Exhibitor 使用的存储后端类型。可以使用内部 DC/OS 存储库（<code>static</code>）或指定外部存储系统（<code>ZooKeeper</code>、<code>aws_s3</code>和 <code>Azure</code>），使用 Exhibitor 在管理节点上配置和编排 ZooKeeper。在 DC/OS 安装期间，Exhibitor 自动配置管理节点上的 ZooKeeper 安装。</p>
+<ul>
+<li><code>exhibitor_storage_backend: static</code>
+Exhibitor 存储后端在您的群集内部进行管理。</li>
+</ul>
+<p class="message--note"><strong>注意：</strong>如果 <a href ="/1.13/installing/production/advanced-configuration/configuration-reference/#master-discovery-required">master_discovery</a> 设置为 `master_http_loadbalancer`，则 exhibitor_storage_backend 不能设置为 `static`.</p>
+<ul>
+<li><code>exhibitor_storage_backend: zookeeper</code>
+用于共享存储库的 ZooKeeper 实例。如果使用 ZooKeeper 实例来 bootstrap Exhibitor，此 ZooKeeper 实例必须与您的 DC/OS 群集分开。您必须始终保有至少 3 个 ZooKeeper 实例才能实现高可用性。如果指定了 <code>zookeeper</code>，您还必须指定这些参数。
+<ul>
+<li><code>exhibitor_zk_hosts</code>
+一个或多个 Zookeeper 节点 IP 和端口地址的逗号分隔列表 (<code>&lt;ZK_IP&gt;:&lt;ZK_PORT&gt;, &lt;ZK_IP&gt;:&lt;ZK_PORT&gt;, &lt;ZK_IP:ZK_PORT&gt;</code>) ，用于配置内部 Exhibitor 实例。Exhibitor 使用此 ZooKeeper 群集编排其配置。建议执行多个 ZooKeeper 实例，解决生产环境中的故障切换。</li>
+<li><code>exhibitor_zk_path</code>
+Exhibitor 用来存储数据的文件路径。</li>
+</ul>
+</li>
+<li><code>exhibitor_storage_backend: aws_s3</code>
+用于共享存储的 Amazon 简单存储服务 (S3) bucket。如果指定了 <code>aws_s3</code>，您还必须指定这些参数：
+<ul>
+<li>
+<p><code>aws_access_key_id</code>
+AWS 密钥 ID。</p>
+</li>
+<li>
+<p><code>aws_region</code>
+S3 bucket 的 AWS 分域。</p>
+</li>
+<li>
+<p><code>aws_secret_access_key</code>
+AWS 密钥访问密匙。</p>
+</li>
+<li>
+<p><code>exhibitor_explicit_keys</code>
+指明您是否会使用 AWS API 密匙授予 Exhibitor 访问 S3 的权限。</p>
+<ul>
+<li><code>exhibitor_explicit_keys: 'true'</code>
+如果要使用 AWS API 密匙，请手动授予 Exhibitor 访问权限。</li>
+<li><code>exhibitor_explicit_keys: 'false'</code>
+如果要使用 AWS 身份和访问管理 (IAM) 实例政策，请将 Exhibitor 访问权限授予 S3。</li>
+</ul>
+</li>
+<li>
+<p><code>s3_bucket</code>
+S3 bucket 的名称。</p>
+</li>
+<li>
+<p><code>s3_prefix</code>
+用于 Exhibitor 使用的 S3 bucket 中的 S3 前缀。</p>
+<p><strong>注意：</strong> 不支持 AWS EC2 Classic。</p>
+</li>
+</ul>
+</li>
+<li><code>exhibitor_storage_backend: azure</code>
+用于共享存储库的 Azure 存储帐户。数据将存储在名为  的容器中。<code>dcos-exhibitor</code>. 如果指定了 <code>azure</code>，您还必须指定这些参数：
+<ul>
+<li><code>exhibitor_azure_account_name</code>
+Azure 存储帐户名称。</li>
+<li><code>exhibitor_azure_account_key</code>
+访问 Azure 存储帐户的密钥。</li>
+<li><code>exhibitor_azure_prefix</code>
+供 Exhibitor 使用的存储账户中使用的二进制大对象前缀。</li>
+</ul>
+</li>
+</ul>
+<h3 id="enable-gpu-isolation"><a class="content__anchor" href="#enable-gpu-isolation" aria-hidden="true"><i data-feather="bookmark"></i></a>enable_gpu_isolation</h3>
+<p>指示是否在 DC/OS 中启用 GPU 支持。</p>
+<ul>
+<li><code>enable_gpu_isolation: 'true'</code> DC/OS 中安装的任何 GPU 将自动被发现并用作 DC/OS 任务的可占用资源。这是默认值。</li>
+<li><code>enable_gpu_isolation: 'false'</code> GPU 不可用于群集。</li>
+</ul>
+<p>如需更多信息，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/gpu/">GPU 文档</a>.</p>
+<h3 id="enable-ipv6"><a class="content__anchor" href="#enable-ipv6" aria-hidden="true"><i data-feather="bookmark"></i></a>enable_ipv6</h3>
+<ul>
+<li><code>enable_ipv6: 'true'</code>：请在 DC/OS 中启用 IPv6 网络。这是默认值。</li>
+<li><code>enable_ipv6: 'false'</code>：请在 DC/OS 中禁用 IPv6 网络。</li>
+</ul>
+<p>目前，IPv6 网络仅有 Docker 容器受支持。将此标记设置为 <code>true</code>，就可以启用以下功能：</p>
+<ul>
+<li>用户可以创建 IPv6 DC/OS 覆盖网络。此操作仅适用于 Docker 容器。</li>
+<li>IPv6 容器的服务发现将可用。</li>
+<li>如果将 <a href="#dcos-l4lb-enable-ipv6">dcos_l4lb_enable_ipv6</a> 设置为 ，IPv6 Docker 容器即可使用第 4 层负载均衡。<code>true</code>.</li>
+</ul>
+<h3 id="fault-domain-enabled-enterprise"><a class="content__anchor" href="#fault-domain-enabled-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>fault_domain_enabled <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></h3>
+<p>默认情况下，故障域感知已启用，安装工具将预期来自 [故障检测脚本] PrivateAgentInstanceCount。(/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/deploying-dcos/installation/#create-a-fault-domain-detection-script-enterprise). 要覆盖此功能，请将此参数集添加到 <code>false</code>，将不会预期或使用故障域信息。</p>
+<h3 id="feature-dcos-storage-enabled-enterprise"><a class="content__anchor" href="#feature-dcos-storage-enabled-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>feature_dcos_storage_enabled <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></h3>
+<p>支持 DC/OS 中的高级存储功能，包括 Mesos 的 <a href="https://github.com/container-storage-interface/spec">CSI</a> 支持和支持预安装的 CSI 设备插件。</p>
+<ul>
+<li><code>feature_dcos_storage_enabled: 'false'</code> 请在 DC/OS 中禁用 CSI 支持。</li>
+<li><code>feature_dcos_storage_enabled: 'true'</code> 请在 DC/OS 中启用 CSI 支持。这是默认值，必须使用 <a href="/dcosdocs/mesosphere/dcos/cn/services/storage/">DC/OS 存储服务 (DSS)</a></li>
+</ul>
+<h3 id="gc-delay"><a class="content__anchor" href="#gc-delay" aria-hidden="true"><i data-feather="bookmark"></i></a>gc_delay</h3>
+<p>清理执行器目录前等待的最长时间。建议您接受两天作为默认值。</p>
+<h3 id="gpus-are-scarce"><a class="content__anchor" href="#gpus-are-scarce" aria-hidden="true"><i data-feather="bookmark"></i></a>gpus_are_scarce</h3>
+<p>指示是否将 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/gpu/">GPU</a> 作为群集中的稀缺资源。</p>
+<ul>
+<li><code>gpus_are_scarce: 'true'</code> 将 GPU 视为稀缺资源。这样就把 GPU 完全保留给选择通过 <a href="http://mesos.apache.org/documentation/latest/gpu-support/">Mesos <code>GPU_RESOURCES</code> 框架功能</a> 使用 GPU 的服务。这是默认值。</li>
+<li><code>gpus_are_scarce: 'false'</code> 将 GPU 与其他资源同等对待。所有框架，不论是否使用 <a href="http://mesos.apache.org/documentation/latest/gpu-support/">Mesos <code>GPU_RESOURCES</code> 框架功能</a>，都会没有差别地被提供 GPU。</li>
+</ul>
+<h3 id="iam-ldap-sync-interval-enterprise"><a class="content__anchor" href="#iam-ldap-sync-interval-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>iam_ldap_sync_interval <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></h3>
+<p>LDAP 同步操作之间的间隔时间（以秒为单位）。</p>
+<h3 id="ip-detect-public-filename"><a class="content__anchor" href="#ip-detect-public-filename" aria-hidden="true"><i data-feather="bookmark"></i></a>ip_detect_public_filename</h3>
+<p>bootstrap 节点上的文件（<code>/genconf/ip-detect-public</code>）路径，其中包含 shell 脚本，可将内部 IP 映射到公用 IP。例如：</p>
+<pre><code class="language-bash">#!/bin/sh
+set -o nounset -o errexit
+
+curl -fsSL https://ipinfo.io/ip
+</code></pre>
+<h3 id="license-key-contents-enterprise"><a class="content__anchor" href="#license-key-contents-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>license_key_contents <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></h3>
+<p>安装工具默认寻找许可证密钥以驻留在 <code>genconf/license.txt</code> 文件中。只有在用户希望覆盖此行为并直接在 config.yaml 中指定许可证时才使用参数 <code>license_key_contents</code> 许可证包含在任何给定时间附加到群集的节点最大数量以及许可证的开始和结束日期，为enterprise用户所需要。参见这些 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/administering-clusters/licenses/">关于许可证的页面</a>，获取有关使用许可证的更多信息。</p>
+<p>例如：<code>license_key_contents: verylongstringofchars</code>.</p>
+<h3 id="log-directory"><a class="content__anchor" href="#log-directory" aria-hidden="true"><i data-feather="bookmark"></i></a>log_directory</h3>
+<p>从 SSH 进程到安装工具主机日志的路径。默认设置为 <code>/genconf/logs</code>. 在大多数情况下不应更改路径，因为 <code>/genconf</code> 是容器运行安装工具的本地路径，还是一个挂载卷。</p>
+<h3 id="log-offers"><a class="content__anchor" href="#log-offers" aria-hidden="true"><i data-feather="bookmark"></i></a>log_offers</h3>
+<p>指出领导 Mesos 管理节点是否应记录发送给调度器的邀约。</p>
+<ul>
+<li><code>log_offers: true</code> 启用群集的 Mesos 邀约日志记录。这是默认值。</li>
+<li><code>log_offers: false</code> 禁用群集的 Mesos 邀约日志记录。</li>
+</ul>
+<h3 id="marathon-gpu-scheduling-behavior"><a class="content__anchor" href="#marathon-gpu-scheduling-behavior" aria-hidden="true"><i data-feather="bookmark"></i></a>marathon_gpu_scheduling_behavior</h3>
+<p>表示 Marathon 是否会在带有可用 GPU 的节点上安排非 GPU 任务。默认为 <code>restricted</code>，设置为 <code>undefined</code>，以便可以在具有可用 GPU 的代理节点上安排非 GPU 任务。另请参阅：<code>metronome_gpu_scheduling_behavior</code></p>
+<h3 id="master-discovery"><a class="content__anchor" href="#master-discovery" aria-hidden="true"><i data-feather="bookmark"></i></a>master_discovery</h3>
+<p>（必填）Mesos 管理节点发现方法。可用选项是 <code>static</code> 或 <code>master_http_loadbalancer</code>.</p>
+<ul>
+<li>
+<p><code>master_discovery: static</code>
+指定使用 Mesos 代理节点，通过向每个代理提供管理节点 IP 的静态列表来发现管理节点。管理节点不得更改 IP 地址，而如果管理节点被替代，新管理节点必须采用旧管理节点的 IP 地址。</p>
+<p class="message--note"><strong>注意：</strong>在 AWS 等通常动态分配内部 IP 的平台上，不应使用静态管理节点列表。管理节点实例因任何原因终止，都可能导致群集不稳定。只有在您可以确保管理节点 IP 不会更改时，才能使用静态管理节点列表。</p>
+<p>如果制定了 <code>static</code>，还必须指定以下参数：</p>
+<ul>
+<li><code>master_list</code>
+静态管理节点 IP 地址的 YAML 嵌套列表（<code>-</code></li>
+</ul>
+</li>
+<li>
+<p><code>master_discovery: master_http_loadbalancer</code> 这组管理节点的开头有一个 HTTP 负载均衡器。代理节点会得知负载均衡器的地址。它们使用负载均衡器访问管理节点中的 Exhibitor ，获取管理节点 IP 的完整列表。如果指定了 <code>master_http_load_balancer</code>，您还必须指定这些参数：</p>
+<ul>
+<li>
+<p><code>exhibitor_address</code> （必填）管理节点前面负载均衡器的地址（最好是 IP 地址）。如果需要替换管理节点，该地址成为代理用来查找新管理节点的静态地址。对于 DC/OS Enterprise，该地址包含在 [DC/OS 证书] 中。(/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/tls-ssl/). 负载均衡器必须接受端口 443、2181、5050 和 8181 上的流量。如果群集在宽容安全模式下运行，负载均衡器也可以接受端口 80 和 8080 上的流量，以便对群集中的服务进行非 SSL HTTP 访问。</p>
+ <p class="message--note"><strong>注意：</strong>通过端口 80 和 8080 访问群集不安全。<p>
+<p>流量也必须转发到管理节点上的 443、2181、5050 和 8181 端口。例如，负载均衡器上的 Mesos 端口 5050 应转发到管理节点的端口 5050 上。管理节点应通过循环调度转发任何新连接，并且应避免对 Mesos 端口 5050 的请求未做出响应的机器以确保管理节点保持运行。有关安全模式的更多信息，请查阅 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/#security-modes">安全模式文档</a>.</p>
+ <p class="message--note"><strong>注意：</strong>内部负载均衡器必须在 TCP 模式，不终止任何 TLS 的情况下工作。</p>
+</li>
+<li>
+<p><code>num_masters</code> (必填) DC/OS 群集中的 Mesos 管理节点的数量。此后不能更改。负载均衡器后面的管理节点数量不得大于这个数字，但在发生故障时，该数量可能会减少。
+<strong>注意：</strong></p>
+<ul>
+<li>如果将 master_discovery 设置为 <code>master_http_loadbalancer</code>，那么 <a href="#exhibitor-storage-backend">exhibitor_storage_backend</a> 就无法设置为 <code>static</code>.</li>
+<li>在 AWS 等动态分配内部 IP 的平台上，不应使用静态管理节点列表。管理节点实例因任何原因终止，都可能导致群集不稳定。建议为 Exhibitor 存储后端使用 aws_s3，因为我们可依赖 s3 在管理节点不可用时管理 Quorum 大小。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="master-dns-bindall"><a class="content__anchor" href="#master-dns-bindall" aria-hidden="true"><i data-feather="bookmark"></i></a>master_dns_bindall</h3>
+<p>指示管理节点 DNS 端口是否打开。打开的管理节点 DNS 端口会在管理节点上公开侦听。如果正在升级，请将此参数设置为 <code>true</code>.</p>
+<ul>
+<li><code>master_dns_bindall: 'true'</code> 管理节点 DNS 端口已打开。这是默认值。</li>
+<li><code>master_dns_bindall: 'false'</code> 管理节点 DNS 端口已关闭。</li>
+</ul>
+<h3 id="master-external-loadbalancer-enterprise"><a class="content__anchor" href="#master-external-loadbalancer-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>master_external_loadbalancer <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></h3>
+<p>负载均衡器的 DNS 名称或 IP 地址。指定后，将被作为对象替代名称纳入管理节点上 Admin Router 的 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/tls-ssl/">DC/OS 证书</a> 中。</p>
+<h3 id="mesos-agent-work-dir-open-source"><a class="content__anchor" href="#mesos-agent-work-dir-open-source" aria-hidden="true"><i data-feather="bookmark"></i></a>mesos_agent_work_dir <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--oss">Open Source</span></span></h3>
+<p>代理和公共代理节点上的 Mesos 工作目录的位置。它定义了群集中 Mesos 代理的 <code>work_dir</code> 参数。默认为 <code>/var/lib/mesos/slave</code>. 如需更多信息，请参阅 <a href="https://mesos.apache.org/documentation/latest/configuration/agent/">Mesos 文档</a>.</p>
+<h3 id="mesos-container-log-sink"><a class="content__anchor" href="#mesos-container-log-sink" aria-hidden="true"><i data-feather="bookmark"></i></a>mesos_container_log_sink</h3>
+<p>DC/OS 可以将任务日志的副本发送到主机的 journald，但是，由于 <a href="https://github.com/systemd/systemd/issues/5102">systemd</a> 中的已知性能问题，默认已禁用此功能。该问题已于 2017 年 7 月 31 日 <a href="https://github.com/systemd/systemd/pull/6392">修复</a>，并包含在 systemd v235 中。但是，某些 Linux 分发版本不使用此版本的 systemd，例如，截至 2018 年 7 月，CentOS 7.4 使用 systemd v219。因此，默认情况下 DC/OS 没有启用 logrotate 和 journald。如果需要此功能，为了避免此 systemd 性能问题，应确保使用的是新版 systemd。</p>
+<p>容器（任务）的日志管理器。选项包括：</p>
+<ul>
+<li><code>'journald'</code> - 仅将任务日志发送到 journald</li>
+<li><code>'logrotate'</code> - 仅将任务日志发送到文件系统（即 stdout/err 文件）</li>
+<li><code>'journald+logrotate'</code> - 将日志发送到 journald 和文件系统</li>
+</ul>
+<p>默认为 <code>logrotate</code>. 由于性能问题， 不推荐 <code>journald</code> 如需更多信息，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/logging/logging-reference/#compatibility">记录参考</a>.</p>
+<h3 id="mesos-dns-set-truncate-bit"><a class="content__anchor" href="#mesos-dns-set-truncate-bit" aria-hidden="true"><i data-feather="bookmark"></i></a>mesos_dns_set_truncate_bit</h3>
+<p>指示在响应过大而无法放入一个数据包时，Mesos-DNS 是否设置截断数位。</p>
+<ul>
+<li><code>mesos_dns_set_truncate_bit: 'true'</code> 如果响应太大而无法放入一个数据包并且被截断，Mesos-DNS 会设置截断位。这是默认行为，符合 RFC7766。</li>
+<li><code>mesos_dns_set_truncate_bit: 'false'</code> 如果响应太大而无法放入单个数据包，Mesos-DNS 不会设置截断数位。如果您知道应用程序在 TCP 上解析截断的 DNS 响应时会崩溃，或出于性能原因您想避免收到 DNS 请求响应的完整 DNS 记录，您应将此选项设置为 <code>false</code> ，并需注意，您从 Mesos-DNS 收到的 DNS 响应可能丢失了被安静丢弃的条目。这意味着截断的 DNS 响应将显示为完整（即使并不完整），因此不会触发 TCP 重试。此行为不符合 RFC7766。</li>
+</ul>
+<p>有关截断的 DNS 响应和重试 TCP 的详细信息，请参阅 <a href="https://tools.ietf.org/html/rfc7766">RFC7766 - 在 TCP 中传输 DNS——实施要求</a>.</p>
+<h3 id="mesos-master-work-dir-open-source"><a class="content__anchor" href="#mesos-master-work-dir-open-source" aria-hidden="true"><i data-feather="bookmark"></i></a>mesos_master_work_dir <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--oss">Open Source</span></span></h3>
+<p>管理节点上的 Mesos 工作目录位置。它定义了群集中 Mesos 管理节点的 <code>work_dir</code> 参数。默认为 <code>/var/lib/dcos/mesos/master</code>. 如需更多信息，请参阅 <a href="https://mesos.apache.org/documentation/latest/configuration/master/">Mesos 文档</a>.</p>
+<h3 id="mesos-max-completed-tasks-per-framework"><a class="content__anchor" href="#mesos-max-completed-tasks-per-framework" aria-hidden="true"><i data-feather="bookmark"></i></a>mesos_max_completed_tasks_per_framework</h3>
+<p>Mesos 管理节点在内存中保留的每个框架的完成任务数。在具有大量长时间运行框架的群集中，保留过多已完成的任务可能导致管理节点出现内存问题。如果未指定此参数，请使用 1000 作为 Mesos 默认值 。</p>
+<h3 id="mesos-seccomp-enabled"><a class="content__anchor" href="#mesos-seccomp-enabled" aria-hidden="true"><i data-feather="bookmark"></i></a>mesos_seccomp_enabled</h3>
+<p>指出是否对 UCR 容器启用 Seccomp 支持。</p>
+<ul>
+<li><code>mesos_seccomp_enabled: 'true'</code> 在 Mesos 代理节点上启用 Seccomp 隔离器。Seccomp 隔离器用于为 UCR 容器设置 Seccomp 配置文件。</li>
+<li><code>mesos_seccomp_enabled: 'false'</code> Seccomp 不可用于群集。这是默认值。</li>
+</ul>
+<p>有关详细信息，请参阅 <a href="http://mesos.apache.org/documentation/latest/isolators/linux-seccomp/">Seccomp 文档</a>。</p>
+<p><strong>注意</strong>：DC/OS 提供默认的 Seccomp 配置文件，可通过 <a href="#mesos-seccomp-profile-name"><code>mesos_seccomp_profile_name</code></a> 选项为 UCR 容器启用。</p>
+<h3 id="mesos-seccomp-profile-name"><a class="content__anchor" href="#mesos-seccomp-profile-name" aria-hidden="true"><i data-feather="bookmark"></i></a>mesos_seccomp_profile_name</h3>
+<p>指定默认的 Seccomp 配置文件的名称，该配置文件在 UCR 容器的群集范围内应用。如果未设置，则默认不应用 Seccomp 配置文件。如果将此配置选项设置为 <code>default.json</code>，Mesos 代理节点将使用内置的 Seccomp 配置文件。此配置文件是 Docker 置默认配置文件的细微修改版。它可以在  找到。<code>/opt/mesosphere/etc/dcos/mesos/seccomp</code>. 强烈建议使用内置的默认 Seccomp 配置文件。</p>
+<p><strong>注意</strong>：此选项需要开启 <a href="#mesos-seccomp-enable"><code>mesos_seccomp_enable</code></a> 选项。</p>
+<h3 id="metronome-gpu-scheduling-behavior"><a class="content__anchor" href="#metronome-gpu-scheduling-behavior" aria-hidden="true"><i data-feather="bookmark"></i></a>metronome_gpu_scheduling_behavior</h3>
+<p>表示 Metronome 是否会在带有可用 GPU 的节点上安排非 GPU 任务。默认为 <code>restricted</code>，设置为 <code>undefined</code>，以便可以在具有可用 GPU 的代理节点上安排非 GPU 任务。另请参阅：<code>marathon_gpu_scheduling_behavior</code></p>
+<h3 id="network-cni-root-dir-persist"><a class="content__anchor" href="#network-cni-root-dir-persist" aria-hidden="true"><i data-feather="bookmark"></i></a>network_cni_root_dir_persist</h3>
+<p>指定在主机重启期间是否使 CNI 根目录持久化。默认值为 <code>false</code>. 如果将此配置选项设置为 <code>true</code>，CNI 根目录创建于 <code>work dir</code>. 将此选项设置为 <code>true</code>，以允许 CNI 隔离器在重启主机节点之后进行正确的清理。</p>
+<p class="message--note"><strong>注意：</strong>该标记必须重启主机才能生效。</p>
+<h3 id="oauth-enabled-open-source"><a class="content__anchor" href="#oauth-enabled-open-source" aria-hidden="true"><i data-feather="bookmark"></i></a>oauth_enabled <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--oss">Open Source</span></span></h3>
+<p>指出是否为群集启用身份认证。<!-- DC/OS auth --></p>
+<ul>
+<li><code>oauth_enabled: true</code> 请启用群集身份认证。这是默认值。</li>
+<li><code>oauth_enabled: false</code> 请禁用群集身份认证。</li>
+</ul>
+<p>如果已经安装了群集，并且希望在此禁用此功能，可以使用同一参数集进行升级。</p>
+<h3 id="permissions-cache-ttl-seconds-enterprise"><a class="content__anchor" href="#permissions-cache-ttl-seconds-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>permissions_cache_ttl_seconds <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></h3>
+<p>权限更改在整个系统中传播的最大秒数。
+通过增加各种授权者的缓存使用来增大此值可减少对 IAM 的负荷。</p>
+<h3 id="platform"><a class="content__anchor" href="#platform" aria-hidden="true"><i data-feather="bookmark"></i></a>platform</h3>
+<p>基础架构平台。该值为可选的自由格式，无内容验证，仅用于遥测。提供适当的价值，以帮助通知 DC/OS 平台优先做出决策。示例值：<code>aws</code>、<code>azure</code>、<code>oneview</code>、<code>openstack</code>、<code>vsphere</code>、<code>vagrant-virtualbox</code>、<code>onprem</code>（默认）。</p>
+<h3 id="process-timeout"><a class="content__anchor" href="#process-timeout" aria-hidden="true"><i data-feather="bookmark"></i></a>process_timeout</h3>
+<p>在进程分叉之后等待开始操作所允许的时间（以秒为单位）。这个参数不是完整的进程时间。默认值为 120 秒。在较慢的网络上，考虑增加至 <code>process_timeout: 600</code>.</p>
+<h3 id="public-agent-list"><a class="content__anchor" href="#public-agent-list" aria-hidden="true"><i data-feather="bookmark"></i></a>public_agent_list</h3>
+<p>[公共代理]<code>-</code>(/dcosdocs/mesosphere/dcos/cn/1.13/overview/concepts/#public-agent-node)主机名的 IPv4 地址的 YAML 嵌套列表。</p>
+<h3 id="resolvers"><a class="content__anchor" href="#resolvers" aria-hidden="true"><i data-feather="bookmark"></i></a>resolvers</h3>
+<p>DC/OS 群集节点 DNS 解析器的 YAML 嵌套列表（<code>-</code> 最多可指定 3 个解析器。将此参数设置为您拥有的最权威的域名服务器。</p>
+<ul>
+<li>
+<p>如需解析内部主机名，请将其设置为可解析它们的域名服务器。</p>
+</li>
+<li>
+<p>如果没有要解析的内部主机名，您可以将其设置为 Google 或 AWS 等公共域名服务器。例如，可以指定 <a href="https://developers.google.com/speed/public-dns/docs/using">Google 公共 DNS IP 地址 (Ipv4)</a>:</p>
+<pre><code class="language-bash">resolvers:
+- 8.8.4.4
+- 8.8.8.8
+</code></pre>
+</li>
+<li>
+<p>如果没有 DNS 基础架构且没有权限访问互联网 DNS 服务器，您可以指定 <code>resolvers: []</code>。指定该设置后，发送到非 <code>.mesos</code> 的所有请求都将回复一个错误。如需更多信息，请参阅 Mesos-DNS <a href="/dcosdocs/mesosphere/dcos/cn/1.13/networking/DNS/mesos-dns/">文档</a>.</p>
+</li>
+</ul>
+<p class="message--warning"><strong>警告：</strong>如果设置的<code>解析器</code>参数不正确，您将永久损坏配置，必须重新安装 DC/OS。</p>
+<h3 id="rexray-config"><a class="content__anchor" href="#rexray-config" aria-hidden="true"><i data-feather="bookmark"></i></a>rexray_config</h3>
+<p><a href="https://rexray.readthedocs.io/en/v0.9.0/user-guide/config/" target="_blank"> REX-Ray</a> 配置，用于在 Marathon 中启用外部持久卷。REX-Ray 是一个存储编排引擎。以下为示例配置。</p>
+<pre><code>rexray_config:
+    rexray:
+      loglevel: info
+      service: ebs
+    libstorage:
+      integration:
+        volume:
+          operations:
+            unmount:
+              ignoreusedcount: true
+      server:
+        tasks:
+          logTimeout: 5m
+</code></pre>
+<p>请查看外部持久卷 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/storage/external-storage/">文档</a>，了解有关如何创建配置的信息。</p>
+<p>如果提供了 <code>rexray_config</code> 参数，则请逐字使用其内容进行 REX-Ray 配置。这样就可以完全自定义与各种 <a href="https://rexray.readthedocs.io/en/v0.9.0/user-guide/storage-providers/">外部存储提供商</a> 集成的 REX-Ray 配置。然而，如果将群集升级到包含更新版的 REX-Ray 的版本，就必须确保 <code>rexray_config</code> 参数与较新版本的 REX-Ray 兼容。</p>
+<h3 id="rexray-config-preset"><a class="content__anchor" href="#rexray-config-preset" aria-hidden="true"><i data-feather="bookmark"></i></a>rexray_config_preset</h3>
+<p>如果您正在 AWS 上运行群集，并希望 DC/OS 与弹性块存储器 (EBS) 集成，无需关注特定的 REX-Ray 配置，并将 <code>rexray_config_preset</code> 参数设置为 <code>aws</code>. 这样就会将 <code>rexray_config</code> 参数设置为与 DC/OS 捆绑的默认 REX-Ray 配置。这一选项的另一优势在于，在您升级到包含更新 REX-Ray 版本的 DC/OS 版本后，它能自动升级您群集的 REX-Ray 配置。</p>
+<h3 id="enterprise-2"><a class="content__anchor" href="#enterprise-2" aria-hidden="true"><i data-feather="bookmark"></i></a>安全 <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></h3>
+<p>指定 <code>security: permissive</code>（默认）以外的安全模式。模式后面是潜在的值。</p>
+<ul>
+<li><code>security: permissive</code></li>
+<li><code>security: strict</code></li>
+</ul>
+<p>请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/#security-modes">安全模式</a> 部分，了解对于每个参数的详细探讨。</p>
+<h3 id="ssh-key-path"><a class="content__anchor" href="#ssh-key-path" aria-hidden="true"><i data-feather="bookmark"></i></a>ssh_key_path</h3>
+<p>安装工具用于登录到目标节点的路径。该参数默认设置为 <code>/genconf/ssh_key</code>. 该参数不能更改，因为 <code>/genconf</code> 是容器运行安装工具的本地路径，还是一个挂载卷。</p>
+<h3 id="ssh-port"><a class="content__anchor" href="#ssh-port" aria-hidden="true"><i data-feather="bookmark"></i></a>ssh_port</h3>
+<p>SSH 端口，例如 <code>22</code>.</p>
+<h3 id="ssh-user"><a class="content__anchor" href="#ssh-user" aria-hidden="true"><i data-feather="bookmark"></i></a>ssh_user</h3>
+<p>SSH 用户名，例如 <code>centos</code>.</p>
+<h3 id="superuser-password-hash-enterprise"><a class="content__anchor" href="#superuser-password-hash-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>superuser_password_hash <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></h3>
+<p>（必填）带井号的超级用户密码。<code>superuser_password_hash</code> 通过使用安装工具 <code>--hash-password</code> 标记生成。第一个超级用户帐户用于提供登录 DC/OS 的方法，其中可添加其他管理帐户。如需更多信息，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/">安全文档</a>.</p>
+<h3 id="superuser-service-account-uid"><a class="content__anchor" href="#superuser-service-account-uid" aria-hidden="true"><i data-feather="bookmark"></i></a>superuser_service_account_uid</h3>
+<p>该服务账户使用 <code>superuser_service_account_public_key</code> 配置参数指定的公钥进行身份验证。</p>
+<h3 id="superuser-service-account-public-key"><a class="content__anchor" href="#superuser-service-account-public-key" aria-hidden="true"><i data-feather="bookmark"></i></a>superuser_service_account_public_key</h3>
+<p>超级用户服务账户公钥。
+此额外超级用户账户提供了使用超级用户特权对 DC/OS 群集进行任务自动化的方法。
+操作者可以创建 RSA 密钥对，并以 X.509 PEM 公钥格式提供生成的公钥。</p>
+<h3 id="superuser-username-enterprise"><a class="content__anchor" href="#superuser-username-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>superuser_username（必填） <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></h3>
+<p>超级用户的用户名。此帐户使用 <code>superuser_password_hash</code>. 如需更多信息，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/">安全文档</a>.</p>
+<h3 id="telemetry-enabled"><a class="content__anchor" href="#telemetry-enabled" aria-hidden="true"><i data-feather="bookmark"></i></a>telemetry_enabled</h3>
+<p>指出是否为群集启用匿名数据共享。<!-- DC/OS auth --></p>
+<ul>
+<li><code>telemetry_enabled: 'true'</code> 请启用匿名数据共享。这是默认值。</li>
+<li><code>telemetry_enabled: 'false'</code> 请禁用匿名数据共享。</li>
+</ul>
+<p>如果已经安装了群集，并且希望禁用此功能，可以使用同一参数集进行 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/upgrading/">升级</a></p>
+<h3 id="use-proxy"><a class="content__anchor" href="#use-proxy" aria-hidden="true"><i data-feather="bookmark"></i></a>use_proxy</h3>
+<p>指示是否启用 DC/OS 代理。</p>
+<ul>
+<li>
+<p><code>use_proxy: 'false'</code> 请勿配置 DC/OS <a href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/architecture/components/">组件</a> 以使用自定义代理。这是默认值。</p>
+</li>
+<li>
+<p><code>use_proxy: 'true'</code> 请配置 DC/OS <a href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/architecture/components/">组件</a> 以使用自定义代理。如果指定了 <code>use_proxy: 'true'</code>，您还可以指定这些参数：</p>
+<p><strong>注意：</strong> 指定的代理必须在提供的 <a href="#resolvers">解析器</a> 列表中解析。</p>
+<ul>
+<li><code>http_proxy: http://&lt;user&gt;:&lt;pass&gt;@&lt;proxy_host&gt;:&lt;http_proxy_port&gt;</code> HTTP 代理。</li>
+<li><code>https_proxy: https://&lt;user&gt;:&lt;pass&gt;@&lt;proxy_host&gt;:&lt;https_proxy_port&gt;</code> HTTPS 代理。</li>
+<li><code>no_proxy</code>：子域的 YAML 嵌套列表（<code>-</code>），避免此类子域转发到 <code>https_proxy</code>. 如果地址与其中一个字符串匹配，或主机位于其中一个字符串的域中，则不代理 http(s) 向该节点发送的请求。例如，<code>no_proxy</code> 列表可以是内部 IP 地址列表。</li>
+</ul>
+<p><strong>注意：</strong> 不支持通配符 (<code>*</code></p></p>
+<p>如需更多信息，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/deploying-dcos/configuration/examples/#http-proxy">示例</a>.</p>
+ <p class="message--note"><strong>注意：</strong>还应为 <a href="https://docs.docker.com/engine/admin/systemd/#/http-proxy">Docker</a> 配置 HTTP 代理。</p>
+</li>
+</ul>
+<h3 id="zk-super-credentials-enterprise"><a class="content__anchor" href="#zk-super-credentials-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>zk_super_credentials <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></h3>
+<p>在 DC/OS <code>strict</code> 和 <code>permissive</code> 模式群集上， 使用访问控制列表 (ACL) 保护 ZooKeeper 中存储的信息，从而使恶意用户无法连接到 ZooKeeper Quorum，从而不能直接修改服务元数据。ACL 指定与这些 ID 关联的资源 ID (RID) 和操作集合。ZooKeeper 支持可插拔的身份验证方案，并有一些内置方案：<code>world</code>、<code>auth</code>、<code>digest</code>、<code>host</code> 和 <code>ip</code>.</p>
+<p>DC/OS Zookeeper 凭据 <code>zk_super_credentials</code>、<code>zk_master_credentials</code> 和 <code>zk_agent_credentials</code> 使用 <code>digest</code> 身份认证，这需要 <code>&lt;uid&gt;:&lt;password&gt;</code> 字符串，然后在检查客户端是否可以访问特定资源时将其用作 ID。</p>
+<p><code>zk_super_credentials</code> 支持访问等同于 ZooKeeper 的 <code>root</code> 或 <code>superuser</code> 的帐户，该账户可以访问所有资源，不受现有 ACL 限制。此凭据支持算子访问 ZooKeeper Quorum 中存储的所有元数据，并由 DC/OS 引导脚本在初始化群集时使用。默认值：<code>'super:secret'</code>.</p>
+<p>要加固群集，Mesosphere 建议您将所有凭据的默认值更改为长而复杂的值。设置后，您可以使用在 DC/OS 管理节点上可用的 <code>/opt/mesosphere/active/exhibitor/usr/zookeeper/bin/zkCli.sh</code> 进行验证。<code>zkCli</code> 默认不作验证，所以 <code>/dcos</code> 树中的节点将无法访问。在 <code>addauth digest &lt;zk_super_credentials&gt;</code> 中调用 <code>zkCli</code> 后，ZooKeeper 中的所有节点都可以访问，利用 <code>zk_master_credentials</code> 和 <code>zk_agent_credentials</code> 可以访问它们的子集。例如：</p>
+<pre><code>[zk: localhost:2181(CONNECTED) 0] addauth digest super:secret
+[zk: localhost:2181(CONNECTED) 1] ls /dcos
+[backup, agent, RootCA, secrets, vault, CAChainInclRoot, CAChain, CACertKeyType, ca, master]
+[zk: localhost:2181(CONNECTED) 2] ls /dcos/secrets
+[core, init, system, bootstrap_user, keys]
+</code></pre>
+<h3 id="zk-master-credentials-enterprise"><a class="content__anchor" href="#zk-master-credentials-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>zk_master_credentials <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></h3>
+<p>Bootstrapping 进程使用的凭据，用于访问将在 DC/OS 管理节点上运行的服务的凭据。</p>
+<h3 id="zk-agent-credentials-enterprise"><a class="content__anchor" href="#zk-agent-credentials-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>zk_agent_credentials <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></h3>
+<p>引导进程使用的凭据，用于访问将在 DC/OS 代理节点上运行的服务的凭据。</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#配置参数">配置参数</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-2">群集设置</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-3">网络</a></li><li class="content__sections-item content__sections-item--h1"><a href="#enterprise">存储 Enterprise</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-4">性能和微调</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-5">安全和身份认证</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-6">度量标准</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-7">参数描述</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

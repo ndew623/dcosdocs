@@ -1,0 +1,338 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Multi-Tenancy Primitives - D2iQ Docs</title><meta name="description" content="A primer to Multi-Tenancy in DC/OS"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/multi-tenancy-primitives">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/multi-tenancy-primitives">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/multi-tenancy-primitives">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/multi-tenancy-primitives">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/deploying-services/multi-tenancy-primitives">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/install/">Installing Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/marathon-parameters/">Marathon Configuration Reference</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/creating-services/"><i data-feather="chevron-right"></i>Creating Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/task-handling/"><i data-feather="chevron-right"></i>Task Handling</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/config-universe-service/">Configuring Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/fault-domain-awareness/">Fault Domain Awareness and Capacity Extension</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/service-groups/">Granting Access to Services and Groups</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/marathon-constraints/">Marathon Placement Constraints</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/monitor-services/">Monitoring Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/scale-service/">Scaling a Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/service-endpoints/">Service Endpoints</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/service-ports/">Service Ports</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/update-user-service/">Updating a User-Created Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/private-docker-registry/">Using a Private Docker Registry</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/deployments/">Deployments</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/expose-service/">Exposing a Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/uninstall/">Uninstalling Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/package-api/">Package Management API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/marathon-on-marathon/"><i data-feather="chevron-right"></i>Using Custom Marathon</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/marathon-api/">Marathon API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/containerizers/"><i data-feather="chevron-right"></i>Using Containerizers</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/pods/"><i data-feather="chevron-right"></i>Pods</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/multi-tenancy-primitives/">Multi-Tenancy Primitives</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/gpu/">Using GPUs</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/faq/">Frequently Asked Questions</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Multi-Tenancy Primitives</h1></div><h4 class="content__header-description">A primer to Multi-Tenancy in DC/OS</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.1/deploying-services/multi-tenancy-primitives/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><h1 id="overview"><a class="content__anchor" href="#overview" aria-hidden="true"><i data-feather="bookmark"></i></a>Overview</h1>
+<p>Resources in DC/OS can be reserved and prioritized using a combination of roles, reservations, quotas, and weights. These features are provided by Apache Mesos, at the core of DC/OS and are referred to as <code>Primitives</code>, as they are only accessible via the API and have not yet been integrated into the DC/OS UI or CLI. A user requires good monitoring in place of available/used resources when working with quotas, reservations, and weights.</p>
+<p>Resource management in this context refers to concepts such as reservations of resources on agents, resource quotas, and weights (priorities) for frameworks. These are useful for a number of scenarios, such as configuring multi-tenant environments, where multiple teams or projects co-exist on the same DC/OS cluster, and the available resources (CPU, RAM, disk, and ports) must be carved up and guaranteed for each cluster with guaranteed quotas. Secondly, with mixed workloads on a single cluster where one class of frameworks may have a higher weight (priority) than another, resources with high priority should be able to deploy faster than a lower weight framework.</p>
+<p>This page covers the multi-tenancy primitives: Multi-Tenant quota management primitives, two examples of real-world scenarios, implementation instructions, and reference links.</p>
+<h1 id="multi-tenant-quota-management-primitives"><a class="content__anchor" href="#multi-tenant-quota-management-primitives" aria-hidden="true"><i data-feather="bookmark"></i></a>Multi-Tenant Quota Management Primitives</h1>
+<p>The key concepts of multi-tenancy primitives include the following:</p>
+<h2 id="roles"><a class="content__anchor" href="#roles" aria-hidden="true"><i data-feather="bookmark"></i></a>Roles</h2>
+<p>Roles refer to a resource consumer within the cluster. The resource consumer could represent a user within an organization, but it could also represent a team, a group, or a service. It most commonly refers to a class or type of activity which is running. In DC/OS, schedulers subscribe to one or more roles in order to receive resources and schedule work on behalf of the resource consumer(s) they are servicing. Examples of schedulers include Marathon, Kubernetes, and a number of the certified frameworks in the DC/OS Catalog such as Kafka and Cassandra, which have been built to include their own scheduler.</p>
+<p>There are two default roles which frameworks will subscribe to:</p>
+<ul>
+<li><code>*</code> on private agents</li>
+<li><code>slave_public</code> on public.</li>
+</ul>
+<p>Frameworks from the Catalog deploy with their own roles and unique roles can be created on demand.</p>
+<h2 id="reservations"><a class="content__anchor" href="#reservations" aria-hidden="true"><i data-feather="bookmark"></i></a>Reservations</h2>
+<p>Reservations refer to where the resources are reserved on targeted public and private agents for a specific role. Statically reserved resources are applied on agent (public/private) startup and cannot be amended for other roles without restarting the agent. Dynamically reserved resources enable operators and authorized frameworks to reserve and un-reserve resources after agent startup and on demand. All SDK based frameworks, like Kafka and Cassandra (certified frameworks listed in the DC/OS Catalog) leverage dynamic reservations for reserving the resources they intend to use with a deployment.</p>
+<h2 id="quotas"><a class="content__anchor" href="#quotas" aria-hidden="true"><i data-feather="bookmark"></i></a>Quotas</h2>
+<p>Quotas refer to a mechanism for guaranteeing that a role will receive a specific amount of resources. Today, quotas are a maximal; if a quota is defined and the task for the role is deployed, then those resources will be reserved immediately, whether the task scales up to use them or not. Other tasks will not be able to make use of those resources even though they may not be used by the task they are provided for. Dynamic quotas, where the task will only use what it needs at the time but is guaranteed to reach its quota, revocable resources and over-subscription are planned for a future release.</p>
+<h2 id="weights"><a class="content__anchor" href="#weights" aria-hidden="true"><i data-feather="bookmark"></i></a>Weights</h2>
+<p>Weights refer to a mechanism for prioritizing one role over another, to allow all tasks assigned to that role to receive more offers (of resources) over other roles with a lower weight. This can provide faster deployment time, scaling and replacement of tasks.</p>
+<h1 id="examples"><a class="content__anchor" href="#examples" aria-hidden="true"><i data-feather="bookmark"></i></a>Examples</h1>
+<p>These concepts are described based on two real-world scenarios of existing customer use cases.</p>
+<h2 id="analytics-platform-with-weighted-spark-roles"><a class="content__anchor" href="#analytics-platform-with-weighted-spark-roles" aria-hidden="true"><i data-feather="bookmark"></i></a>Analytics platform with weighted Spark roles</h2>
+<p>This example is based on a customer’s use case of an analytics pipeline. The primary workload is Spark with three tiers of Spark jobs, tagged with roles; “low” - 1, “medium” - 2, and “high” - 3, representing the priority and weights accordingly.</p>
+<p>In practice, the “high” role is allocated three times the fair share of offers (resources) than “medium”, which will be provided twice the fair share of “low”. Alongside weights, the “high” priority Spark role is provided a quota of <code>x</code> CPU shares and <code>y</code> RAM.</p>
+<p>As Spark jobs are deployed, the “high” priority Spark jobs receive their offers over the “medium” and “low” roles. Given that the “medium” and “low” priority roles do not have a quota applied, “medium” roles will be provided offers sooner than “low” priority roles, but there is no quota for “medium”, so if “medium” requires <code>z</code> cores and they are not available, it will receive however many are available at that time.</p>
+<h2 id="jenkins-in-marathon-on-marathon"><a class="content__anchor" href="#jenkins-in-marathon-on-marathon" aria-hidden="true"><i data-feather="bookmark"></i></a>Jenkins in Marathon on Marathon</h2>
+<p>In this example, a customer runs Jenkins (CI/CD pipeline) as a service with hundreds of instances, one instance for each development team that requires a service run.</p>
+<p>On the DC/OS cluster, there are other applications-as-a-service deployed as Marathon tasks. Each application, including Jenkins, is grouped in its own instance of Marathon (referred to as Marathon on Marathon or MoM) and in DC/OS documentation as non-native Marathon - where native Marathon is the default Marathon that ships with DC/OS. Conceptually, there is a native Marathon and non-native Marathon on Marathon that are dedicated for grouping other tasks.</p>
+<p>Each MoM hosts one of the groups of the application, and each has a role and quota attached. Each role and quota provides a method to guarantee that where one of them scales frequently, like Jenkins does as it spins up its agents on demand for a new build, it can get the resources it requires. If Jenkins requires more resources, the quota can be amended on the fly to provide them. Another common use of MoMs is for grouping environments such as Development, Testing, and Staging on one DC/OS cluster with robust resource and access management.</p>
+<p>In summary, Jenkins-as-a-service is a very dynamic workload, with hundreds of Jenkins agents being run on demand. Having good visibility of the resources available and understanding when the quota is reached are important parameters for tuning, availability and growth. The Spark example measures how much sooner the “high” role tasks ran than the “low”,  to inform the tuning of the weights.</p>
+<h1 id="implementation"><a class="content__anchor" href="#implementation" aria-hidden="true"><i data-feather="bookmark"></i></a>Implementation</h1>
+<p>You can use the following resources to learn how to implement both Marathon on Marathon and Spark quotas:</p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/marathon-on-marathon/">Deploying non-native instances of Marathon</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/services/spark/latest/job-scheduling/#quota-for-drivers-and-executors">Spark Quota</a></li>
+</ul>
+<p>In the examples below, it is recommended to run the application from a host with <a href="/dcosdocs/mesosphere/dcos/2.1/cli/">DC/OS CLI</a> installed.</p>
+<h2 id="roles-2"><a class="content__anchor" href="#roles-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Roles</h2>
+<p><a href="https://mesos.apache.org/documentation/latest/roles/">Roles</a> refer to a tag or a label which is assigned to a framework, task, or an agent. The default role is called <sup><code>*</code></sup> and all existing roles in a cluster can be viewed through the Mesos UI: <code>https://&lt;cluster-name-or-IP&gt;/mesos/#/roles</code>.</p>
+<p>In the following example, a role called <code>high</code> is assigned to a Spark task at runtime. Multiple instances of the Spark task can be executed, ensuring they all benefit from the resource management associated with <code>high</code>.</p>
+<ul>
+<li>
+<p><code>spark.mesos.role=high</code>  Applications in the DC/OS Catalog, like Kafka and Cassandra, are automatically deployed with a common role name which is not user configurable.</p>
+</li>
+<li>
+<p><code>confluent_kafka_role</code>  Roles do not require explicit management, like configuring a new role and assigning it to a task. They are created on demand when deploying a task or configuring a weight or quota. Likewise, you should not delete roles, they exist for the duration of the cluster.</p>
+</li>
+</ul>
+<h2 id="reservations-2"><a class="content__anchor" href="#reservations-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Reservations</h2>
+<p><a href="https://mesos.apache.org/documentation/latest/reservation/">Reservations</a> can be manually configured and are used by SDK frameworks. In both cases, an authorized user must be declared which is referred to as the principal/framework or an operator. In the case of SDK frameworks in DC/OS this is also known as the service account.</p>
+<h3 id="adding"><a class="content__anchor" href="#adding" aria-hidden="true"><i data-feather="bookmark"></i></a>Adding</h3>
+<p>Adding reserves resources on a specific agent with ID <code>312dc1dc-9b39-474f-8295-87fc43872e7c-S0</code> for role “low”, guaranteeing <code>four</code> CPU shares and <code>512MB</code> of RAM. When any task with a role of “low” requests offers that match what this agent has reserved then the task will be guaranteed to the agent itself.</p>
+<p class="message--note"><strong>NOTE: </strong>The principal of <code>bootstrapuser</code> differs for each user. In this example, the principal of <code>bootstrapuser</code> is my superuser account.</p>
+<p>You must change the <code>agent_id</code> for the agent ID on your cluster. Use <code>dcos node</code> to find the agent ID.</p>
+<p class="message--note"><strong>NOTE: </strong> All double quotes in the JSON examples below require sanitizing before use when copying and pasting into editors or a terminal.</p> 
+<pre><code class="language-json">tee add-reservation.json &lt;&lt; EOF
+{
+  &quot;type&quot;: &quot;RESERVE_RESOURCES&quot;,
+  &quot;reserve_resources&quot;: {
+    &quot;agent_id&quot;: {
+      &quot;value&quot;: &quot;312dc1dc-9b39-474f-8295-87fc43872e7c-S0&quot;
+    },
+    &quot;resources&quot;: [
+      {
+        &quot;type&quot;: &quot;SCALAR&quot;,
+        &quot;name&quot;: &quot;cpus&quot;,
+        &quot;reservation&quot;: {
+          &quot;principal&quot;: &quot;bootstrapuser&quot;
+        },
+        &quot;role&quot;: &quot;confluent-kafka-role&quot;,
+        &quot;scalar&quot;: {
+          &quot;value&quot;: 4.0
+        }
+      },
+      {
+        &quot;type&quot;: &quot;SCALAR&quot;,
+                &quot;name&quot;: &quot;mem&quot;,
+        &quot;reservation&quot;: {
+          &quot;principal&quot;: &quot;bootstrapuser&quot;
+        },
+        &quot;role&quot;: &quot;confluent-kafka-role&quot;,
+        &quot;scalar&quot;: {
+          &quot;value&quot;: 512.0
+        }
+      },
+      {
+        &quot;type&quot;: &quot;RANGES&quot;,
+        &quot;name&quot;: &quot;ports&quot;,
+        &quot;reservation&quot;: {
+          &quot;principal&quot;: &quot;bootstrapuser&quot;
+        },
+        &quot;role&quot;: &quot;confluent-kafka-role&quot;,
+        &quot;ranges&quot;: {
+          &quot;range&quot;: [
+            {
+              &quot;begin&quot;: 8112,
+              &quot;end&quot;: 8114
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+EOF
+
+
+
+curl -i -k \
+      -H &quot;Authorization: token=`dcos config show core.dcos_acs_token`&quot; \
+      -H &quot;Content-Type: application/json&quot; \
+      -H &quot;Accept: application/json&quot; \
+      -d @add-reservation.json \
+-X POST &quot;`dcos config show core.dcos_url`/mesos/api/v1&quot;
+</code></pre>
+<p>If successful, an <code>HTTP 202</code> response is expected.</p>
+<p>If resources are not available for reservation, an <code>HTTP 409</code> response is expected and the reservation cannot be made on that agent. There may already be tasks running that have consumed those resources.</p>
+<h3 id="reviewing"><a class="content__anchor" href="#reviewing" aria-hidden="true"><i data-feather="bookmark"></i></a>Reviewing</h3>
+<p>Reviewing is best achieved through the Mesos UI against the specific agent which you applied the reservation or by parsing the <code>state.json</code> through <code>jq</code>.</p>
+<pre><code class="language-shell">https://&lt;cluster-URL&gt;/mesos/#/agents/&lt;agent-id&gt;
+</code></pre>
+<h3 id="removing"><a class="content__anchor" href="#removing" aria-hidden="true"><i data-feather="bookmark"></i></a>Removing</h3>
+<p>Removing requires amending the input <code>JSON</code> to reference only the resources in the following format:</p>
+<p class="message--note"><strong>NOTE: </strong>Change the <code>agent_id</code> to match the agent ID on your cluster (as in the previous example).</p> 
+<pre><code class="language-json">tee remove-reservation.json &lt;&lt; EOF
+{
+  &quot;type&quot;: &quot;UNRESERVE_RESOURCES&quot;,
+  &quot;unreserve_resources&quot;: {
+    &quot;agent_id&quot;: {
+      &quot;value&quot;: &quot;312dc1dc-9b39-474f-8295-87fc43872e7c-S0&quot;
+    },
+    &quot;resources&quot;: [
+      {
+        &quot;type&quot;: &quot;SCALAR&quot;,
+        &quot;name&quot;: &quot;cpus&quot;,
+        &quot;reservation&quot;: {
+          &quot;principal&quot;: &quot;bootstrapuser&quot;
+        },
+        &quot;role&quot;: &quot;confluent-kafka-role&quot;,
+        &quot;scalar&quot;: {
+          &quot;value&quot;: 4.0
+        }
+      },
+      {
+        &quot;type&quot;: &quot;SCALAR&quot;,
+        &quot;name&quot;: &quot;mem&quot;,
+        &quot;reservation&quot;: {
+          &quot;principal&quot;: &quot;bootstrapuser&quot;
+        },
+        &quot;role&quot;: &quot;confluent-kafka-role&quot;,
+        &quot;scalar&quot;: {
+          &quot;value&quot;: 512.0
+        }
+      },
+      {
+        &quot;type&quot;: &quot;RANGES&quot;,
+        &quot;name&quot;: &quot;ports&quot;,
+        &quot;reservation&quot;: {
+          &quot;principal&quot;: &quot;bootstrapuser&quot;
+        },
+        &quot;role&quot;: &quot;confluent-kafka-role&quot;,
+        &quot;ranges&quot;: {
+          &quot;range&quot;: [
+            {
+              &quot;begin&quot;: 8112,
+              &quot;end&quot;: 8114
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+EOF
+
+curl -i -k \
+      -H &quot;Authorization: token=`dcos config show core.dcos_acs_token`&quot; \
+      -H &quot;Content-Type: application/json&quot; \
+      -H &quot;Accept: application/json&quot; \
+      -d @remove-reservation.json \
+-X POST &quot;`dcos config show core.dcos_url`/mesos/api/v1&quot;
+</code></pre>
+<p>There are further options related to dynamic and static operations and amending existing reservations that can be found in the reference links.</p>
+<h2 id="quotas-2"><a class="content__anchor" href="#quotas-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Quotas</h2>
+<p><a href="https://mesos.apache.org/documentation/latest/quota/">Quotas</a> specify a minimum amount of resources that the role is guaranteed to receive (unless the total resources in the cluster are less than the configured quota resources, which often indicates a misconfiguration).</p>
+<h3 id="adding-2"><a class="content__anchor" href="#adding-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Adding</h3>
+<p>Quotas cannot be updated once applied; they must be removed and added again. The following example applies a quota of <code>two</code> CPU shares and <code>4GB</code> of RAM to a role called <code>high</code>.</p>
+<pre><code class="language-json">tee set-quota.json &lt;&lt; EOF
+{
+  &quot;type&quot;: &quot;SET_QUOTA&quot;,
+  &quot;set_quota&quot;: {
+    &quot;quota_request&quot;: {
+      &quot;force&quot;: true,
+      &quot;guarantee&quot;: [
+        {
+          &quot;name&quot;: &quot;cpus&quot;,
+          &quot;role&quot;: &quot;*&quot;,
+          &quot;scalar&quot;: {
+            &quot;value&quot;: 2.0
+          },
+          &quot;type&quot;: &quot;SCALAR&quot;
+        },
+        {
+          &quot;name&quot;: &quot;mem&quot;,
+          &quot;role&quot;: &quot;*&quot;,
+          &quot;scalar&quot;: {
+            &quot;value&quot;: 4096.0
+          },
+          &quot;type&quot;: &quot;SCALAR&quot;
+        }
+      ],
+      &quot;role&quot;: &quot;high&quot;
+    }
+  }
+}
+EOF
+
+curl -i -k \
+      -H &quot;Authorization: token=`dcos config show core.dcos_acs_token`&quot; \
+      -H &quot;Content-Type: application/json&quot; \
+      -H &quot;Accept: application/json&quot; \
+      -d @set-quota.json \
+-X POST &quot;`dcos config show core.dcos_url`/mesos/api/v1&quot;
+</code></pre>
+<p>If successful, expect a <code>HTTP/1.1 200 OK</code> response.</p>
+<h3 id="reviewing-2"><a class="content__anchor" href="#reviewing-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Reviewing</h3>
+<pre><code class="language-json">tee get-quota.json &lt;&lt; EOF
+{
+  &quot;type&quot;: &quot;GET_QUOTA&quot;
+}
+EOF
+
+curl -i -k \
+      -H &quot;Authorization: token=`dcos config show core.dcos_acs_token`&quot; \
+      -H &quot;Content-Type: application/json&quot; \
+      -H &quot;Accept: application/json&quot; \
+      -d @get-quota.json \
+-X POST &quot;`dcos config show core.dcos_url`/mesos/api/v1&quot;
+
+HTTP/1.1 200 OK
+Server: openresty
+Date: Fri, 21 Sep 2018 15:35:09 GMT
+Content-Type: application/json
+Content-Length: 224
+Connection: keep-alive
+
+{&quot;type&quot;:&quot;GET_QUOTA&quot;,&quot;get_quota&quot;:{&quot;status&quot;:{&quot;infos&quot;:[{&quot;role&quot;:&quot;high&quot;,&quot;principal&quot;:&quot;bootstrapuser&quot;,&quot;guarantee&quot;:[{&quot;name&quot;:&quot;cpus&quot;,&quot;type&quot;:&quot;SCALAR&quot;,&quot;scalar&quot;:{&quot;value&quot;:2.0}},{&quot;name&quot;:&quot;mem&quot;,&quot;type&quot;:&quot;SCALAR&quot;,&quot;scalar&quot;:{&quot;value&quot;:128.0}}]}]}}}
+</code></pre>
+<h3 id="removing-2"><a class="content__anchor" href="#removing-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Removing</h3>
+<pre><code class="language-json">tee remove-quota.json &lt;&lt; EOF
+{
+  &quot;type&quot;: &quot;REMOVE_QUOTA&quot;,
+  &quot;remove_quota&quot;: {
+    &quot;role&quot;: &quot;high&quot;
+  }
+}
+EOF
+curl -i -k \
+      -H &quot;Authorization: token=`dcos config show core.dcos_acs_token`&quot; \
+      -H &quot;Content-Type: application/json&quot; \
+      -H &quot;Accept: application/json&quot; \
+      -d @remove-quota.json \
+-X POST &quot;`dcos config show core.dcos_url`/mesos/api/v1&quot;
+
+HTTP/1.1 200 OK
+Server: openresty
+Date: Fri, 21 Sep 2018 15:38:15 GMT
+Content-Length: 0
+Connection: keep-alive
+</code></pre>
+<p>If successful, expect a <code>HTTP/1.1 200 OK</code> response.</p>
+<h2 id="weights-2"><a class="content__anchor" href="#weights-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Weights</h2>
+<p><a href="https://mesos.apache.org/documentation/latest/weights/">Weights</a> are used to control the relative share of cluster resources that is offered to different roles.</p>
+<h3 id="applying"><a class="content__anchor" href="#applying" aria-hidden="true"><i data-feather="bookmark"></i></a>Applying</h3>
+<p>This applies a weight of <code>five</code> to role <code>perf</code>.</p>
+<pre><code class="language-json">tee set-weight.json &lt;&lt; EOF
+{
+  &quot;type&quot;: &quot;UPDATE_WEIGHTS&quot;,
+  &quot;update_weights&quot;: {
+    &quot;weight_infos&quot;: [
+      {
+        &quot;role&quot;: &quot;perf&quot;,
+        &quot;weight&quot;: 5.0
+      }
+    ]
+  }
+}
+EOF
+
+curl -i -k \
+      -H &quot;Authorization: token=`dcos config show core.dcos_acs_token`&quot; \
+      -H &quot;Content-Type: application/json&quot; \
+      -H &quot;Accept: application/json&quot; \
+      -d @set-weight.json \
+-X POST &quot;`dcos config show core.dcos_url`/mesos/api/v1&quot;
+</code></pre>
+<p>If successful, expect a <code>HTTP/1.1 200 OK</code> response.</p>
+<h3 id="reviewing-3"><a class="content__anchor" href="#reviewing-3" aria-hidden="true"><i data-feather="bookmark"></i></a>Reviewing</h3>
+<pre><code class="language-json">tee get-weight.json &lt;&lt; EOF
+{
+  &quot;type&quot;: &quot;GET_WEIGHTS&quot;
+}
+EOF
+
+curl -i -k \
+      -H &quot;Authorization: token=`dcos config show core.dcos_acs_token`&quot; \
+      -H &quot;Content-Type: application/json&quot; \
+      -H &quot;Accept: application/json&quot; \
+      -d @get-weight.json \
+-X POST &quot;`dcos config show core.dcos_url`/mesos/api/v1&quot;
+
+HTTP/1.1 200 OK
+Server: openresty
+Date: Fri, 21 Sep 2018 15:25:25 GMT
+Content-Type: application/json
+Content-Length: 84
+Connection: keep-alive
+{&quot;type&quot;:&quot;GET_WEIGHTS&quot;,&quot;get_weights&quot;:{&quot;weight_infos&quot;:[{&quot;weight&quot;:5.0,&quot;role&quot;:&quot;perf&quot;}]}}
+</code></pre>
+<h3 id="removing-3"><a class="content__anchor" href="#removing-3" aria-hidden="true"><i data-feather="bookmark"></i></a>Removing</h3>
+<p>Weights cannot be removed once set; they can be amended using the same method as applying to update the weight. If you wish to reset the weight for a role, you could set it back to <code>two</code> which is the same weight as the default role <sup><code>*</code></sup>.</p>
+<h2 id="marathon-on-marathon"><a class="content__anchor" href="#marathon-on-marathon" aria-hidden="true"><i data-feather="bookmark"></i></a>Marathon on Marathon</h2>
+<p>The DC/OS Catalog includes Marathon, which can be used to deploy a MoM. It should be noted that this is only useful for DC/OS OSS installations, as it does not provide support for Strict mode, Secrets or ACLs. See the <a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/marathon-on-marathon/basic/">Marathon on Marathon documentation</a>.</p>
+<p>To install DC/OS Enterprise MoM, you must contact Mesosphere Support for the Enterprise MoM tarball, then deploy it using the root Marathon. See the <a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/marathon-on-marathon/advanced/">custom non-native Marathon documentation</a>.</p>
+<h1 id="additional-resources"><a class="content__anchor" href="#additional-resources" aria-hidden="true"><i data-feather="bookmark"></i></a>Additional Resources</h1>
+<p>You can use the following additional resources to learn more about:</p>
+<ul>
+<li><a href="https://mesos.apache.org/documentation/latest/oversubscription/">Oversubscription</a></li>
+<li><a href="https://mesos.apache.org/documentation/latest/authorization/">Authorization</a></li>
+<li><a href="https://mesos.apache.org/documentation/latest/operator-http-api/">Mesos API</a></li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#overview">Overview</a></li><li class="content__sections-item content__sections-item--h1"><a href="#multi-tenant-quota-management-primitives">Multi-Tenant Quota Management Primitives</a></li><li class="content__sections-item content__sections-item--h2"><a href="#roles">Roles</a></li><li class="content__sections-item content__sections-item--h2"><a href="#reservations">Reservations</a></li><li class="content__sections-item content__sections-item--h2"><a href="#quotas">Quotas</a></li><li class="content__sections-item content__sections-item--h2"><a href="#weights">Weights</a></li><li class="content__sections-item content__sections-item--h1"><a href="#examples">Examples</a></li><li class="content__sections-item content__sections-item--h2"><a href="#analytics-platform-with-weighted-spark-roles">Analytics platform with weighted Spark roles</a></li><li class="content__sections-item content__sections-item--h2"><a href="#jenkins-in-marathon-on-marathon">Jenkins in Marathon on Marathon</a></li><li class="content__sections-item content__sections-item--h1"><a href="#implementation">Implementation</a></li><li class="content__sections-item content__sections-item--h2"><a href="#roles-2">Roles</a></li><li class="content__sections-item content__sections-item--h2"><a href="#reservations-2">Reservations</a></li><li class="content__sections-item content__sections-item--h2"><a href="#quotas-2">Quotas</a></li><li class="content__sections-item content__sections-item--h2"><a href="#weights-2">Weights</a></li><li class="content__sections-item content__sections-item--h2"><a href="#marathon-on-marathon">Marathon on Marathon</a></li><li class="content__sections-item content__sections-item--h1"><a href="#additional-resources">Additional Resources</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

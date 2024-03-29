@@ -1,0 +1,238 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Security - D2iQ Docs</title><meta name="description" content="Configuring Minio for DC/OS access"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Minio Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li><li class="chooser-list-item"><a href="/dkp/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__item"><a href="/dkp/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/minio/0.1.2/security">Minio 0.1.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/minio/0.1.1/security">Minio 0.1.1</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/minio/0.1.0/security">Minio 0.1.0</a></li></ul><div class="toggle"><p><span class="title">Minio</span><span class="version"> 0.1.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/minio/0.1.2/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/minio/0.1.2/getting-started/">Getting Started</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/minio/0.1.2/configuration/"><i data-feather="chevron-right"></i>Configuration</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/minio/0.1.2/operations/"><i data-feather="chevron-right"></i>Operations</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/minio/0.1.2/security/">Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/minio/0.1.2/troubleshooting/">Troubleshooting</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/minio/0.1.2/uninstall/">Uninstall</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/minio/0.1.2/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/minio/0.1.2/supported-versions/">Supported Versions</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Security</h1></div><h4 class="content__header-description">Configuring Minio for DC/OS access</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/minio/0.1.2/security/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+Security&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/services/minio/0.1.2/security&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><h1 id="prerequisites"><a class="content__anchor" href="#prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h1>
+<ul>
+<li>
+<p><a href="/dcosdocs/mesosphere/dcos/latest/security/ent/service-auth/custom-service-auth/">A DC/OS Service Account with a secret stored in the DC/OS Secret Store.</a></p>
+</li>
+<li>
+<p>DC/OS Superuser permissions for modifying the permissions of the service account.</p>
+</li>
+<li>
+<p>DC/OS CLI, either Enterprise or Open Source:</p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/1.10/cli/install/">DC/OS CLI</a> installed and be logged in as a superuser.</li>
+<li><a href="/dcosdocs/mesosphere/dcos/1.10/cli/enterprise-cli/#ent-cli-install">Enterprise DC/OS CLI 1.10 or later installed</a>.</li>
+</ul>
+</li>
+<li>
+<p>If your <a href="/dcosdocs/mesosphere/dcos/1.10/security/ent/">security mode</a> is permissive or strict, you must <a href="/dcosdocs/mesosphere/dcos/1.10/security/ent/tls-ssl/get-cert/">get the root cert</a> before issuing the curl commands in this section.</p>
+</li>
+</ul>
+<h1 id="provisioning-a-service-account"><a class="content__anchor" href="#provisioning-a-service-account" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="provision-a-service-account"></a>Provisioning a service account</h1>
+<p>This section describes how to configure DC/OS access for Minio. Depending on your <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/#security-modes/">security mode</a>, Minio may require <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/service-auth/">service authentication</a> for access to DC/OS.</p>
+<p>A service like Minio typically performs certain privileged actions on the cluster, which might require authenticating with the cluster. A service account associated with the service is used to authenticate with the DC/OS cluster. It is recommended to provisioning a separate service account for each service that would perform privileged operations. Service accounts authenticate using public-private keypair. The public key is used to create the service account in the cluster, while the corresponding private key is stored in the <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/secrets/">secret store</a>. The service account and the service account secret are passed to the service as install time options.</p>
+<table>
+<thead>
+<tr>
+<th>Security mode</th>
+<th>Service Account</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Disabled</td>
+<td>Not available</td>
+</tr>
+<tr>
+<td>Permissive</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Strict</td>
+<td>Required</td>
+</tr>
+</tbody>
+</table>
+<p>If you install a service in permissive mode and do not specify a service account, Metronome and Marathon will act as if requests made by this service are made by an account with the <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/perms-reference/#superuser">superuser permission</a>.</p>
+<h2 id="prerequisites-2"><a class="content__anchor" href="#prerequisites-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites:</h2>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/latest/cli/install/">DC/OS CLI installed</a> and be logged in as a superuser.</li>
+<li><a href="/dcosdocs/mesosphere/dcos/latest/cli/enterprise-cli/#ent-cli-install">Enterprise DC/OS CLI 0.4.14 or later installed</a>.</li>
+</ul>
+<h1 id="create-a-key-pair"><a class="content__anchor" href="#create-a-key-pair" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="create-a-keypair"></a>Create a Key Pair</h1>
+<p>In this step, a 2048-bit RSA public-private key pair is created using the Enterprise DC/OS CLI.</p>
+<p>Create a public-private key pair and save each value into a separate file within the current directory.</p>
+<pre><code class="language-bash">dcos security org service-accounts keypair &lt;private-key&gt;.pem &lt;public-key&gt;.pem
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>You can use the <a href="https://docs.d2iq.com/dcosdocs/mesosphere/dcos/latest/security/ent/secrets/">DC/OS Secret Store</a> to secure the key pair.</p>
+<h1 id="create-a-service-account"><a class="content__anchor" href="#create-a-service-account" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="create-a-service-account"></a>Create a Service Account</h1>
+<p>From a terminal prompt, create a new service account (for example, <code>minio</code>) containing the public key (<code>&lt;your-public-key&gt;.pem</code>).</p>
+<pre><code class="language-bash">dcos security org service-accounts create -p &lt;your-public-key&gt;.pem -d &lt;description&gt; minio
+</code></pre>
+<p>You can verify your new service account using the following command.</p>
+<pre><code class="language-bash">dcos security org service-accounts show minio
+</code></pre>
+<h1 id="create-a-secret"><a class="content__anchor" href="#create-a-secret" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="create-an-sa-secret"></a>Create a Secret</h1>
+<p>Create a secret (<code>miniod/&lt;secret-name&gt;</code>) with your service account and private key specified (<code>&lt;private-key&gt;.pem</code>).</p>
+<p class="message--note"><strong>NOTE: </strong>If you store your secret in a path that matches the service name, for example, service name and secret path are both minio, then only the service named minio can access it.</p>
+<pre><code class="language-bash">dcos security secrets create-sa-secret &lt;private-key&gt;.pem &lt;service-account-id&gt; minio/&lt;secret-name&gt;
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>If you are running, now EOL-ed, DC/OS 1.11 or older you would need to add <tt>--strict</tt> to the above command. For example, <tt>dcos security secrets --strict create-sa-secret <private-key>.pem <service-account-id> minio/sa-secret</tt> .</p>
+<p>You can list the secrets with this command:</p>
+<pre><code class="language-bash">dcos security secrets list /
+</code></pre>
+<h3 id="prerequisites-3"><a class="content__anchor" href="#prerequisites-3" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h3>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/latest/security/ent/service-auth/custom-service-auth/">A DC/OS Service Account with a secret stored in the DC/OS Secret Store</a>.</li>
+<li>DC/OS Superuser permissions for modifying the permissions of the Service Account.</li>
+</ul>
+<h3 id="configure-transport-encryption"><a class="content__anchor" href="#configure-transport-encryption" aria-hidden="true"><i data-feather="bookmark"></i></a>Configure Transport Encryption</h3>
+<h4 id="set-up-the-service-account"><a class="content__anchor" href="#set-up-the-service-account" aria-hidden="true"><i data-feather="bookmark"></i></a>Set up the service account</h4>
+<p><a href="/dcosdocs/mesosphere/dcos/latest/security/ent/perms-management/">Grant</a> the service account the correct permissions.</p>
+<ul>
+<li>In DC/OS 1.10, the required permission is <code>dcos:superuser full</code>.</li>
+<li>In DC/OS 1.11 and later, the required permissions are:</li>
+</ul>
+<pre><code>dcos:secrets:default:/&lt;service name&gt;/* full
+dcos:secrets:list:default:/&lt;service name&gt; read
+dcos:adminrouter:ops:ca:rw full
+dcos:adminrouter:ops:ca:ro full
+</code></pre>
+<p>where <code>&lt;service name&gt;</code> is the name of the service to be installed.</p>
+<!-- Not clear if this is the right location DCOS-39455 --> 
+<p>Run the following DC/OS Enterprise CLI commands to set permissions for the service account on a strict cluster:</p>
+<pre><code>dcos security org users grant ${SERVICE_ACCOUNT} dcos:mesos:master:task:app_id:&lt;service/name&gt; create
+dcos security org users grant ${SERVICE_ACCOUNT} dcos:mesos:master:reservation:principal:dev_hdfs create
+dcos security org users grant ${SERVICE_ACCOUNT} dcos:mesos:master:volume:principal:dev_hdfs create
+</code></pre>
+<h4 id="install-the-service"><a class="content__anchor" href="#install-the-service" aria-hidden="true"><i data-feather="bookmark"></i></a>Install the service</h4>
+<p>Install the DC/OS Minio service including the following options in addition to your own:</p>
+<pre><code class="language-json">{
+    &quot;service&quot;: {
+        &quot;service_account&quot;: &quot;&lt;your service account name&gt;&quot;,
+        &quot;service_account_secret&quot;: &quot;&lt;full path of service secret&gt;&quot;,
+        &quot;security&quot;: {
+            &quot;transport_encryption&quot;: {
+                &quot;enabled&quot;: true
+            }
+        }
+    }
+}
+</code></pre>
+<h2 id="accessing-the-minio-web-interface-with-edge-lb-tls-configuration"><a class="content__anchor" href="#accessing-the-minio-web-interface-with-edge-lb-tls-configuration" aria-hidden="true"><i data-feather="bookmark"></i></a>Accessing the Minio web interface with Edge-LB TLS configuration</h2>
+<h3 id="pre-requisites-for-edgelb-with-tls-configuration"><a class="content__anchor" href="#pre-requisites-for-edgelb-with-tls-configuration" aria-hidden="true"><i data-feather="bookmark"></i></a>Pre-requisites for EdgeLB with TLS configuration</h3>
+<ol>
+<li>
+<p>DC/OS cluster with Service account and Service account secret configured.</p>
+</li>
+<li>
+<p>Minio service installed with TLS enabled.</p>
+</li>
+</ol>
+<h3 id="steps"><a class="content__anchor" href="#steps" aria-hidden="true"><i data-feather="bookmark"></i></a>Steps</h3>
+<p>For Edge-LB pool configuration:</p>
+<ol>
+<li>
+<p>Add repo of <code>Edge-LB-aws</code>.</p>
+<pre><code class="language-shell">dcos package repo add --index=0 edgelb-aws \https://edge-lb-infinity-artifacts.s3.amazonaws.com/autodelete7d/master/edgelb/stub-universe-edgelb.json
+</code></pre>
+</li>
+<li>
+<p>Add repo of <code>Edge-LB-Pool-aws</code>.</p>
+<pre><code class="language-shell">dcos package repo add --index=0 edgelb-pool-aws \https://edge-lb-infinity-artifacts.s3.amazonaws.com/autodelete7d/master/edgelb-pool/stub-universe-edgelb-pool.json
+</code></pre>
+</li>
+<li>
+<p>Install the Edge-LB package:</p>
+<pre><code class="language-shell">dcos package install edgelb --yes
+</code></pre>
+</li>
+<li>
+<p>Create the configuration JSON file with required parameters to access DC/OS Minio:</p>
+<pre><code class="language-json">{
+&quot;apiVersion&quot;: &quot;V2&quot;,
+&quot;name&quot;: &quot;minio&quot;,
+&quot;count&quot;: 1,
+&quot;autoCertificate&quot;: true,
+&quot;haproxy&quot;: {
+   &quot;frontends&quot;: [
+      {
+      &quot;bindPort&quot;: 9001,
+      &quot;protocol&quot;: &quot;HTTPS&quot;,
+      &quot;certificates&quot;: [
+         &quot;$AUTOCERT&quot;
+      ],
+      &quot;linkBackend&quot;: {
+         &quot;defaultBackend&quot;: &quot;miniodemo&quot;
+      }
+      }
+   ],
+   &quot;backends&quot;: [
+   {
+      &quot;name&quot;: &quot;miniodemo&quot;,
+      &quot;protocol&quot;: &quot;HTTPS&quot;,
+      &quot;rewriteHttp&quot;: {
+         &quot;host&quot;: &quot;miniod.miniodemo.l4lb.thisdcos.directory&quot;
+         },
+         &quot;request&quot;: {
+            &quot;forwardfor&quot;: true,
+            &quot;xForwardedPort&quot;: true,
+            &quot;xForwardedProtoHttpsIfTls&quot;: true,
+            &quot;setHostHeader&quot;: true,
+            &quot;rewritePath&quot;: true
+      },
+      &quot;services&quot;: [{
+      &quot;endpoint&quot;: {
+         &quot;type&quot;: &quot;ADDRESS&quot;,
+         &quot;address&quot;: &quot;miniod.miniodemo.l4lb.thisdcos.directory&quot;,
+         &quot;port&quot;: 9000
+      }
+      }]
+      }
+      ]
+   }
+}
+
+</code></pre>
+</li>
+<li>
+<p>Create <code>edge-pool</code> using the JSON file created in the preceding step:</p>
+<pre><code class="language-shell">dcos edgelb create edgelb-pool-config.json
+</code></pre>
+</li>
+<li>
+<p>Accessing Minio:</p>
+<pre><code class="language-shell">https://&lt;Public IP of the Public Node of the cluster&gt;&gt;:9001/minio
+</code></pre>
+<p>The Minio server can be accessed using the Minio client by registering it to the Minio Server. To register a Minio client, specify the public IP of the Public Agent running EdgeLB.</p>
+<p><a href="../img/edgelb_with_tls.png"><img src="../img/edgelb_with_tls.png" alt="With TLS"/></a></p>
+<p>Figure 1. - Minio browser</p>
+<p>For more details on the Minio Client, refer to the link:
+<a href="https://docs.minio.io/docs/minio-client-complete-guide.html">minio-client-complete-guide</a></p>
+</li>
+</ol>
+<h2 id="installing-the-service"><a class="content__anchor" href="#installing-the-service" aria-hidden="true"><i data-feather="bookmark"></i></a>Installing the service</h2>
+<ol>
+<li>
+<p>Install the DC/OS Minio Service, including the following options in addition to your own:</p>
+<pre><code class="language-shell">{
+   &quot;service&quot;: {
+      &quot;service_account&quot;: &quot;&lt;your service account name&gt;&quot;,
+      &quot;service_account_secret&quot;: &quot;&lt;full path of service secret&gt;&quot;,
+      &quot;security&quot;: {
+         &quot;tls_ssl&quot;: {
+            &quot;enabled&quot;: true
+                  }
+                  }
+            }
+}
+</code></pre>
+<p><a href="../img/TLS_Service.png"><img src="../img/TLS_Service.png" alt="TLS Service View"/></a></p>
+<p>Figure 2. - TLS service view</p>
+</li>
+<li>
+<p>Running stage view
+<a href="../img/Running_Stage1.png"><img src="../img/TLS_Running_Stage.png" alt="TLS Running Stage"/></a></p>
+<p>Figure 3. - The Running stage view will display the progress of your installation.</p>
+</li>
+<li>
+<p>Verify your installation by viewing the log:</p>
+<p><a href="../img/TLS_Successful_Execution.png"><img src="../img/TLS_Successful_Execution.png" alt="TLS Successful Execution"/></a></p>
+<p>Figure 4. - Successful execution</p>
+</li>
+</ol>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#prerequisites">Prerequisites</a></li><li class="content__sections-item content__sections-item--h1"><a href="#provisioning-a-service-account">Provisioning a service account</a></li><li class="content__sections-item content__sections-item--h2"><a href="#prerequisites-2">Prerequisites:</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-a-key-pair">Create a Key Pair</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-a-service-account">Create a Service Account</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-a-secret">Create a Secret</a></li><li class="content__sections-item content__sections-item--h2"><a href="#accessing-the-minio-web-interface-with-edge-lb-tls-configuration">Accessing the Minio web interface with Edge-LB TLS configuration</a></li><li class="content__sections-item content__sections-item--h2"><a href="#installing-the-service">Installing the service</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

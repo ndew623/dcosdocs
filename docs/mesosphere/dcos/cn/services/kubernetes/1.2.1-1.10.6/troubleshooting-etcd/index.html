@@ -1,0 +1,136 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>etcd 故障排除 - D2iQ Docs</title><meta name="description" content="诊断 etcd 群集"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Kubernetes文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li><li class="chooser-list-item"><a href="/dkp/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services/kubernetes">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__item"><a href="/dkp/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><div class="toggle"><p><span class="title">Kubernetes</span><span class="version"> 1.2.1-1.10.6</span></p></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/install/">安装和自定义</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/advanced-install/">高级安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/quick-start/">快速启动</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/uninstall/">卸载</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/cluster_sizing/">群集大小</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/upgrade/">已升级</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/limitations/">限制</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/exposing-the-kubernetes-api/">暴露 Kubernetes API</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/exposing-the-kubernetes-api-marathonlb/">通过 Marathon-LB 或 Edge-LB 暴露 Kubernetes API</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/connecting-clients/">连接客户端</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/kubernetes-dashboard/">Kubernetes 仪表板</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/authn-and-authz/">授权</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/troubleshooting-etcd/">故障排除</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/disaster-recovery/">灾难恢复</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/ingress/">外部入口</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/supported-versions/">支持的版本</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/release-notes/">版本注释</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">etcd 故障排除</h1></div><h4 class="content__header-description">诊断 etcd 群集</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/master/pages/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/troubleshooting-etcd/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://dcos-community.slack.com/" target="_blank"><i class="actions__icon" data-feather="slack"></i><span class="actions__text">Discuss</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+etcd+故障排除&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/troubleshooting-etcd&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><h1 id="etcd"><a class="content__anchor" href="#etcd" aria-hidden="true"><i data-feather="bookmark"></i></a>故障排除 <code>etcd</code></h1>
+<p>DC/OS Kubernetes 包的长度很大，以确保
+<code>etcd</code> 集群遇到故障时也能正确运行。但是，不可能
+预见并缓解所有可能的情况，并且在某些情况下，
+可能需要终端用户的手动干预。例如，如果 <code>etcd</code> 进程
+在实际与其他成员建立连接之前，就已经
+被加入到现有的集群崩溃之中，那么集群可能变得不稳定，
+或者，在某些情况下，变得不可操作。本文档提供了一些
+最佳方案，有助于降低永久性丢失 <code>etcd</code>
+集群和相关数据的几率。我们建议您在阅读本文档之前先
+熟悉 <a href="../disaster-recovery">灾难恢复</a> 文档。</p>
+<h2 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>故障场景</h2>
+<p>有四种主要故障场景可能导致
+一个 <code>etcd</code> 由 DC/OS Kubernetes 创建和管理的集群出现永久性故障：</p>
+<ol>
+<li><strong>（场景 1）</strong> 首次创建集群时（例如，在首次安装
+DC/OS Kubernetes 时）；</li>
+<li><strong>（场景 2）</strong> 对集群进行扩展时（即更新值
+<code>kubernetes.high_availability</code>);</li>
+<li><strong>（场景 3）</strong> 当 <code>kubernetes.high_availability</code> 是 <code>false</code> 以及
+单个成员崩溃时（例如，当成员运行的 DC/OS 代理
+永久故障时）；</li>
+<li><strong>（场景 3）</strong> 当 <code>kubernetes.high_availability</code> 是 <code>true</code> 以及一个或
+多个成员崩溃时（例如，当 DC/OS 集群发生重大中断时）。</li>
+</ol>
+<h3 id="1"><a class="content__anchor" href="#1" aria-hidden="true"><i data-feather="bookmark"></i></a>场景 1</h3>
+<p>第一个场景涉及首次安装
+DC/OS Kubernetes 时可能出现的故障。这风险较低，由于没有数据预先
+存储于 <code>etcd</code>，因此可能没有数据丢失。</p>
+<p>在此场景中，当任何 <code>etcd</code> 成员（任务）无法启动时，
+最简单的恢复方式是卸载和重新安装 DC/OS Kubernetes。
+在重新安装 DC/OS Kubernetes 之前，您应确保每个 DC/OS
+代理是健康的，并且 DC/OS 集群本身是健康的（例如，
+无网络问题），并且符合所有 <a href="../install">先决条件</a>。</p>
+<h3 id="2"><a class="content__anchor" href="#2" aria-hidden="true"><i data-feather="bookmark"></i></a>场景 2</h3>
+<p>第二个场景涉及当将
+<code>kubernetes.high_availability</code> 的值从 <code>false</code> 切换为 <code>true</code> （比如，扩展
+现有的 <code>etcd</code> 集群时）时可能出现的故障。在此场景中，存在
+永久丢失 <code>etcd</code> 集群和相关数据的风险（较低）。要
+防止这种情况（但要为这种情况做好准备），您可以采取
+一些预防措施。</p>
+<h4 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>执行现有安装的备份</h4>
+<p>在转移 <code>kubernetes.high_availability</code> 的值前，我们
+<strong>强烈建议</strong> 您使用
+<a href="../disaster-recovery">灾难恢复</a> 中的指令对当前的安装进行备份。当执行扩展操作时，
+<code>etcd</code> 集群中不太可能出现故障，
+您应卸载 DC/OS Kubernetes，并按顺序使用 <code>dcos kubernetes restore</code>，
+以将备份恢复到新集群中。然后，您可以重试将 <code>kubernetes.high_availability</code> 的值从 <code>false</code> 更新为 <code>true</code>。如果此操作连续
+两次或三次失败，那么您的 DC/OS 集群可能是不健康的；我们鼓励您联系技术支持部门，以进一步解决问题。</p>
+<h4 id="etcd-keyspace"><a class="content__anchor" href="#etcd-keyspace" aria-hidden="true"><i data-feather="bookmark"></i></a>执行 <code>etcd</code> keyspace 的快照</h4>
+<p>除了使用 <code>dcos kubernetes backup</code> 创建备份（如上所述），
+也可以创建 <code>etcd</code> keyspace 的快照，使用
+<code>etcdctl</code>。如有必要，可以将此快照恢复到在 DC/OS 外部运行的 <code>etcd</code> 集群
+中。要创建 <code>etcd</code> keyspace 的快照，您可以运行
+以下命令（根据需要替换 <code>&lt;SERVICE_NAME&gt;</code> 占位符）：</p>
+<pre><code># dcos task exec &lt;SERVICE_NAME&gt;__etcd-0-peer \
+    find . -name etcdctl -exec {} \
+        --endpoints https://etcd-0-peer.&lt;SERVICE_NAME&gt;.mesos:2379 \
+        --cacert ca-crt.pem \
+        --cert etcd-crt.pem \
+        --key etcd-key.pem \
+        snapshot save etcd-0-peer.db \
+    \;
+</code></pre>
+<p>这将创建名为 <code>etcd-0-peer.db</code> 的文件，该文件位于
+<code>etcd-0-peer</code> 任务的工作目录，其中包含 <code>etcd</code> keyspace 的快照。然后您
+从 <code>etcd-0-peer</code> 任务中获取 <code>etcd-0-peer.db</code> 文件并将其存储到
+安全的地点（例如，您的工作站或云存储）。要从
+<code>etcd-0-peer</code> 任务中获取 <code>etcd-0-peer.db</code> 文件，您可以使用
+DC/OS UI 或手动 <code>scp</code> 从 DC/OS 代理获取。</p>
+<h4 id="kuberneteshigh-availabilitytrue"><a class="content__anchor" href="#kuberneteshigh-availabilitytrue" aria-hidden="true"><i data-feather="bookmark"></i></a>如果设置生产，则以 <code>kubernetes.high_availability=true</code> 开始</h4>
+<p>如果您从一开始就打算设置生产 DC/OS
+Kubernetes 集群，我们建议您
+首次安装包时设置 <code>kubernetes.high_availability=true</code>。该
+降低了数据丢失的几率，此时产生的所有故障都属于
+之前所描述的 <a href="#scenario-1">场景 1</a>。</p>
+<h3 id="3"><a class="content__anchor" href="#3" aria-hidden="true"><i data-feather="bookmark"></i></a>场景 3</h3>
+<p>第三个场景涉及单个 <code>etcd</code> 成员（使用中）出现的故障，
+这是在 <code>kubernetes.high_availability</code> 被设置为 <code>false</code> 时。此场景中可能
+会发生两种主要类型的故障：</p>
+<ol>
+<li><code>etcd-0-peer</code> 任务崩溃，但 DC/OS 代理保持健康。</li>
+<li>DC/OS 代理永久故障。</li>
+</ol>
+<p>当 <code>etcd-0-peer</code> 任务崩溃时，正在运行的 DC/OS 代理
+保持健康，任务只需在同一代理中重新启动，
+现有数据会被保留。DC/OS Kubernetes 集群整体可能会
+出现不稳定性，其他任务（例如，
+<code>kube-apiserver-0-instance</code> 或 <code>kube-scheduler-0-instance</code>）也可能会重新启动，
+但您现有的 <code>etcd</code> 数据会保持安全。通常，无需手动
+干预该场景。</p>
+<p>当 <code>etcd-0-peer</code> 正在运行的 DC/OS 代理出现永久故障时，
+就如 <a href="../limitations">限制</a> 中所述的，<code>etcd</code> 数据目录
+的内容将 <strong>永久丢失</strong>。要恢复您的数据，您必须使用 <code>dcos kubernetes restore</code>，如
+<a href="../disaster-recovery">灾难恢复</a> 中所述。因此，<em>强烈建议</em> 您使用
+<code>dcos kubernetes backup</code> 来定期备份您的 DC/OS Kubernetes 集群，以避免在
+<code>kubernetes.high_availability</code> 被设置为 <code>false</code>的集群中运行生产工作负载。</p>
+<h3 id="4"><a class="content__anchor" href="#4" aria-hidden="true"><i data-feather="bookmark"></i></a>场景 4</h3>
+<p>第四个场景涉及 <code>etcd</code> 成员
+在使用 <code>kubernetes.high_availability=true</code> 时出现的故障。此场景中可能发生两种
+主要故障：</p>
+<ol>
+<li>单个 <code>etcd</code> 任务（例如，<code>etcd-0-peer</code>）永久崩溃。</li>
+<li>两个或多个 <code>etcd</code> 任务永久崩溃。</li>
+</ol>
+<p>永久丢失单个 <code>etcd</code> 成员不代表出现问题，因为
+<code>etcd</code> 集群中的 quorum 未丢失。存储于 <code>etcd</code> 中的数据也
+未丢失，因为仍有两个活动成员存放着数据。在此
+场景中，通过运行以下命令，可以清除并在不同的 DC/OS 代理中重启一个故障 <code>etcd</code> 成员，
+（替换 <code>&lt;SERVICE_NAME&gt;</code> 和
+<code>&lt;etcd-task-name&gt;</code>）：</p>
+<pre><code># dcos kubernetes --name=&lt;SERVICE_NAME&gt; pod replace &lt;pod-name&gt;
+{
+  &quot;pod&quot;: &quot;etcd-1&quot;,
+  &quot;tasks&quot;: [
+    &quot;etcd-1-peer&quot;,
+    &quot;etcd-1-recover&quot;
+  ]
+}
+</code></pre>
+<p>然而，永久丢失两个或多个成员将导致 <code>etcd</code> 集群
+丢失 quorum，变得不可操作。在此场景中，您必须使用
+<code>dcos kubernetes restore</code> 从之前的备份中重新创建 DC/OS Kubernetes 集群，
+如 <a href="../disaster-recovery">灾难恢复</a> 中所述。</p>
+<h2 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>阅读更多</h2>
+<p>要更好地了解 <code>etcd</code> 故障排除和灾难
+恢复以及为什么某些所述情境代表永久性
+quorum 丢失和 <code>etcd</code> 集群故障，我们建议您阅读官方 <code>etcd</code>
+<a href="https://coreos.com/etcd/docs/latest/op-guide/recovery.html">灾难恢复</a>
+和 <a href="https://coreos.com/etcd/docs/latest/faq.html">FAQ</a> 文档。</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#etcd">故障排除 etcd</a></li><li class="content__sections-item content__sections-item--h2"><a href="#故障场景">故障场景</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-3">阅读更多</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

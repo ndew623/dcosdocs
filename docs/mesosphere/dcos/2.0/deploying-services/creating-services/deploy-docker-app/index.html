@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Tutorial - Deploying a Docker-based Service - D2iQ Docs</title><meta name="description" content="Deploying a Docker-based service"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/creating-services/deploy-docker-app">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.0"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/creating-services/deploy-docker-app">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/creating-services/deploy-docker-app">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/creating-services/deploy-docker-app">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/deploying-services/creating-services/deploy-docker-app">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.0</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/install/">Installing Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/marathon-parameters/">Marathon Configuration Reference</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/creating-services/"><i data-feather="chevron-right"></i>Creating Services</a></li><ul><li class="active active-on"><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/creating-services/deploy-docker-app/">Tutorial - Deploying a Docker-based Service</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/creating-services/health-checks/">Health Checks</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/task-handling/"><i data-feather="chevron-right"></i>Task Handling</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/config-universe-service/">Configuring Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/fault-domain-awareness/">Fault Domain Awareness and Capacity Extension</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/service-groups/">Granting Access to Services and Groups</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/marathon-constraints/">Marathon Placement Constraints</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/monitor-services/">Monitoring Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/scale-service/">Scaling a Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/service-endpoints/">Service Endpoints</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/service-ports/">Service Ports</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/update-user-service/">Updating a User-Created Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/private-docker-registry/">Using a Private Docker Registry</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/deployments/">Deployments</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/expose-service/">Exposing a Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/uninstall/">Uninstalling Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/package-api/">Package Management API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/marathon-on-marathon/"><i data-feather="chevron-right"></i>Using Custom Marathon</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/marathon-api/">Marathon API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/containerizers/"><i data-feather="chevron-right"></i>Using Containerizers</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/pods/"><i data-feather="chevron-right"></i>Pods</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/multi-tenancy-primitives/">Multi-Tenancy Primitives</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/gpu/">Using GPUs</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/faq/">Frequently Asked Questions</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Tutorial - Deploying a Docker-based Service</h1></div><h4 class="content__header-description">Deploying a Docker-based service</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.0/deploying-services/creating-services/deploy-docker-app/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>In this tutorial, you will create a custom Docker image and deploy it to DC/OS.</p>
+<h2 id="prerequisites"><a class="content__anchor" href="#prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h2>
+<ul>
+<li><a href="https://www.docker.com">Docker</a> installed on your workstation</li>
+<li><a href="https://hub.docker.com">Docker Hub</a> account</li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.0/installing/">DC/OS</a> installed</li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.0/cli/install/">DC/OS CLI</a> installed</li>
+</ul>
+<h1 id="create-a-custom-docker-image"><a class="content__anchor" href="#create-a-custom-docker-image" aria-hidden="true"><i data-feather="bookmark"></i></a>Create a custom Docker image</h1>
+<ol>
+<li>
+<p>Create a file named <code>index.html</code>. Paste the following markup into <code>index.html</code> and save:</p>
+<pre><code class="language-html">&lt;html&gt;
+    &lt;body&gt;
+    &lt;h1&gt; Hello brave new world! &lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</li>
+<li>
+<p>Create a file named <code>Dockerfile</code>. Paste the following Docker commands into it and save:</p>
+<pre><code class="language-dockerfile">FROM nginx:1.9
+COPY index.html /usr/share/nginx/html/index.html
+</code></pre>
+</li>
+<li>
+<p>Build the Docker image, where <code>&lt;username&gt;</code> is your Docker Hub username:</p>
+<pre><code class="language-bash">docker build -t &lt;username&gt;/simple-docker .
+</code></pre>
+<p>The output should resemble:</p>
+<pre><code class="language-bash">Sending build context to Docker daemon 3.072 kB
+Step 1 : FROM nginx:1.9
+1.9: Pulling from library/nginx
+51f5c6a04d83: Pull complete
+a3ed95caeb02: Pull complete
+640c8f3d0eb2: Pull complete
+a4335300aa89: Pull complete
+Digest: sha256:54313b5c376892d55205f13d620bc3dcccc8e70e596d083953f95e94f071f6db
+Status: Downloaded newer image for nginx:1.9
+ ---&gt; c8c29d842c09
+Step 2 : COPY index.html /usr/share/nginx/html/index.html
+ ---&gt; 61373621782c
+Removing intermediate container 225910aa385d
+Successfully built 61373621782c
+</code></pre>
+</li>
+<li>
+<p>Log in to Docker Hub:</p>
+<pre><code class="language-bash">docker login
+</code></pre>
+</li>
+<li>
+<p>Push your image to Docker Hub, where <code>&lt;username&gt;</code> is your Docker Hub username:</p>
+<pre><code class="language-bash">docker push &lt;username&gt;/simple-docker
+</code></pre>
+<p>The output should resemble:</p>
+<pre><code class="language-bash">The push refers to a repository [docker.io/&lt;username&gt;/simple-docker]
+6e2a0db36f4c: Pushed
+5f70bf18a086: Mounted from library/nginx
+49027b789c92: Mounted from library/nginx
+20f8e7504ae5: Mounted from library/nginx
+4dcab49015d4: Mounted from library/nginx
+latest: digest: sha256:f733e23e1f5e83a29a223d0a7d30244b30c0d57d17aa0421d962019545d69c17 size: 2185
+</code></pre>
+</li>
+</ol>
+<h1 id="create-a-docker-app-and-deploy-to-dcos"><a class="content__anchor" href="#create-a-docker-app-and-deploy-to-dcos" aria-hidden="true"><i data-feather="bookmark"></i></a>Create a Docker app and deploy to DC/OS</h1>
+<ol>
+<li>
+<p>Create a Marathon app definition with the following contents and save as <code>hello-nginx.json</code>. In the <code>image</code> field, replace <code>&lt;username&gt;</code> with your Docker Hub username. In the <code>type</code> field, specify <code>MESOS</code> or <code>DOCKER</code> depending on which <a href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/containerizers/">containerizer runtime</a> you prefer. This file specifies a simple Marathon application called <code>hello-nginx</code> that runs one instance of itself on a public node.</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;hello-nginx&quot;,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;[MESOS | DOCKER]&quot;,
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;&lt;username&gt;/simple-docker&quot;
+    },
+    &quot;portMappings&quot;: [
+      { &quot;hostPort&quot;: 80, &quot;containerPort&quot;: 80, &quot;protocol&quot;: &quot;tcp&quot; }
+    ]
+  },
+  &quot;networks&quot;: [
+    {
+      &quot;mode&quot;: &quot;container/bridge&quot;
+    }
+  ],
+  &quot;acceptedResourceRoles&quot;: [&quot;slave_public&quot;],
+  &quot;instances&quot;: 1,
+  &quot;cpus&quot;: 0.1,
+  &quot;mem&quot;: 64
+}
+</code></pre>
+</li>
+</ol>
+<ol>
+<li>
+<p>Add the <code>hello-nginx</code> application to Marathon by using the DC/OS command:</p>
+<pre><code class="language-bash">dcos marathon app add hello-nginx.json
+</code></pre>
+<p>If this is added successfully, there is no output.</p>
+</li>
+<li>
+<p>If you chose the MESOS runtime, you will see this when you verify that the app is added:</p>
+<pre><code class="language-bash">dcos marathon app list
+ID            MEM  CPUS  TASKS  HEALTH  DEPLOYMENT  WAITING  CONTAINER  CMD
+/hello-nginx   64  0.1    1/1    N/A       ---      False      MESOS    N/A
+</code></pre>
+</li>
+<li>
+<p>If you used the <a href="/dcosdocs/mesosphere/dcos/2.0/installing/evaluation/community-supported-methods/aws/">AWS CloudFormation templates</a> to expose the app to the port specified in your app definition (for example, port 80), you must reconfigure the health check on the public ELB.</p>
+<ol>
+<li>In CloudFormation, check the checkbox next to your stack.</li>
+<li>Click the <strong>Resources</strong> tab.</li>
+<li>Search for <strong>PublicSlaveLoadBalancer</strong>.</li>
+<li>Click the link in the Physical ID column.</li>
+<li>Follow the instructions in <a href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-healthchecks.html#update-health-check-config">Update the Health Check Configuration</a>.</li>
+</ol>
+</li>
+<li>
+<p>Go to your public agent to see the site running. To find your public agent IP address, see <a href="/dcosdocs/mesosphere/dcos/2.0/administering-clusters/locate-public-agent/">Finding a Public Agent IP</a>.</p>
+<p>You should see the following message in your browser:</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/helloworld.png" alt="Hello Brave World"></p>
+<p>Figure1. Hello World message</p>
+</li>
+</ol>
+<h1 id="learn-more"><a class="content__anchor" href="#learn-more" aria-hidden="true"><i data-feather="bookmark"></i></a>Learn more</h1>
+<p>Learn how to load balance your app on a public node using <a href="/dcosdocs/mesosphere/dcos/services/marathon-lb/latest/mlb-basic-tutorial/">Marathon-LB</a>.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#prerequisites">Prerequisites</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-a-custom-docker-image">Create a custom Docker image</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-a-docker-app-and-deploy-to-dcos">Create a Docker app and deploy to DC/OS</a></li><li class="content__sections-item content__sections-item--h1"><a href="#learn-more">Learn more</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

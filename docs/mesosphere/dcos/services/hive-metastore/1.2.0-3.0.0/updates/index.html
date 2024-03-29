@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Updating DC/OS Hive Metastore - D2iQ Docs</title><meta name="description" content="Updates and patches"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Hive Metastore Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li><li class="chooser-list-item"><a href="/dkp/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__item"><a href="/dkp/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/hive-metastore/1.2.0-3.0.0/updates">Hive Metastore 1.2.0-3.0.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/hive-metastore/1.1.0-3.0.0/updates">Hive Metastore 1.1.0-3.0.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/hive-metastore/1.0.0-3.0.0/updates">Hive Metastore 1.0.0-3.0.0</a></li></ul><div class="toggle"><p><span class="title">Hive Metastore</span><span class="version"> 1.2.0-3.0.0</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/hive-metastore/1.2.0-3.0.0/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/hive-metastore/1.2.0-3.0.0/getting-started/">Getting Started</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/hive-metastore/1.2.0-3.0.0/supported-databases/">Supported Databases</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/hive-metastore/1.2.0-3.0.0/operations/">Operations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/hive-metastore/1.2.0-3.0.0/configuration/">Configuring</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/hive-metastore/1.2.0-3.0.0/advanced/">Advanced</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/hive-metastore/1.2.0-3.0.0/updates/">Update</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/hive-metastore/1.2.0-3.0.0/cli/">Beeline CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/hive-metastore/1.2.0-3.0.0/security/">Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/hive-metastore/1.2.0-3.0.0/uninstall/">Uninstall</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/hive-metastore/1.2.0-3.0.0/troubleshooting/">Troubleshooting</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/hive-metastore/1.2.0-3.0.0/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/hive-metastore/1.2.0-3.0.0/support-policy/">Support Policy</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Updating DC/OS Hive Metastore</h1></div><h4 class="content__header-description">Updates and patches</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/hive-metastore/1.2.0-3.0.0/updates/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+Updating+DC/OS Hive Metastore&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/services/hive-metastore/1.2.0-3.0.0/updates&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><h2 id="enterprise-dcos-110-and-later"><a class="content__anchor" href="#enterprise-dcos-110-and-later" aria-hidden="true"><i data-feather="bookmark"></i></a>Enterprise DC/OS 1.10 and later</h2>
+<p>Enterprise DC/OS 1.10 introduced a convenient command line option that allows for easier updates to a service’s configuration and version, as well as allowing users to inspect the status of an update, to pause and resume updates, and to restart or complete steps if necessary.</p>
+<p>In Enterprise DC/OS 1.11 and later, configuration updates may be done from the UI as well as from the CLI, but managing the phases and steps of an update must be done from the CLI. Service version updates must always be done from the CLI.</p>
+<h4 id="prerequisites"><a class="content__anchor" href="#prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h4>
+<ul>
+<li>Enterprise DC/OS 1.10 or later</li>
+<li>A DC/OS SDK-based Service with a version later than 2.0.0-x</li>
+<li><a href="/dcosdocs/mesosphere/dcos/latest/cli/install/">The DC/OS CLI</a> installed and available</li>
+<li>The service’s subcommand available and installed on your local machine
+<ul>
+<li>You can install just the subcommand CLI by running <code>dcos package install --cli hive-metastore</code>.</li>
+<li>If you are running an older version of the subcommand CLI that does not have the <code>update</code> command, uninstall and reinstall your CLI.<pre><code class="language-bash">dcos package uninstall --cli hive-metastore
+dcos package install --cli hive-metastore
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="updating-service-version"><a class="content__anchor" href="#updating-service-version" aria-hidden="true"><i data-feather="bookmark"></i></a>Updating service version</h3>
+<h4 id="viewing-available-versions"><a class="content__anchor" href="#viewing-available-versions" aria-hidden="true"><i data-feather="bookmark"></i></a>Viewing available versions</h4>
+<p>The <code>update package-versions</code> command allows you to view the versions of the Hive Metastore service that you can upgrade or downgrade to.</p>
+<p>The CLI command is:</p>
+<pre><code class="language-bash">dcos hive-metastore update package-versions
+</code></pre>
+<p>The result will be of the form:</p>
+<pre><code class="language-bash">Current package version is: &quot;1.0.1-1.2.3&quot;
+Package can be downgraded to: [&quot;1.0.0-1.2.3&quot;]
+Package can be upgraded to: [&quot;1.0.2-1.2.3&quot;]
+</code></pre>
+<h4 id="upgrading-or-downgrading-a-service"><a class="content__anchor" href="#upgrading-or-downgrading-a-service" aria-hidden="true"><i data-feather="bookmark"></i></a>Upgrading or downgrading a service</h4>
+<ol>
+<li>Before updating the service itself, update its CLI subcommand to the new version:</li>
+</ol>
+<pre><code class="language-bash">dcos package uninstall --cli hive-metastore
+dcos package install --cli hive-metastore --package-version=&quot;&lt;version&gt;&quot;
+</code></pre>
+<ol start="2">
+<li>After the CLI subcommand has been updated, call the <code>update start</code> command, passing in the version</li>
+</ol>
+<pre><code class="language-bash">dcos hive-metastore update start --package-version=&quot;&lt;version&gt;&quot;
+</code></pre>
+<p>If you are missing mandatory configuration parameters, the <code>update</code> command will return an error.</p>
+<p>To supply missing configuration values or to override configuration values, you can also provide an <code>options.json</code> file (see <a href="#updating-configuration">Updating configuration</a> below):</p>
+<pre><code class="language-bash">dcos hive-metastore update start --options=options.json --package-version=&quot;&lt;version&gt;&quot;
+</code></pre>
+<p>The default behavior on update is to merge ‘Default’, ‘Stored’ and ‘Provided’ configurations, in that order, and then
+validate against the schema. In some situations, such as when a schema option has been removed, the default behavior
+might result in an invalid configuration. You can work around this with <code>--replace=true</code> which, when specified,
+will override the ‘Stored’ options with the ‘Provided’ options.</p>
+<pre><code class="language-bash">dcos hive-metastore update start --options=options.json --replace=true --package-verion=&quot;&lt;version&gt;&quot;
+</code></pre>
+<p>See <a href="#advanced-update-actions">Advanced update actions</a> for commands you can use to inspect and manipulate an update after it has started.</p>
+<h3 id="updating-configuration"><a class="content__anchor" href="#updating-configuration" aria-hidden="true"><i data-feather="bookmark"></i></a>Updating configuration</h3>
+<h4 id="preparing-configuration"><a class="content__anchor" href="#preparing-configuration" aria-hidden="true"><i data-feather="bookmark"></i></a>Preparing configuration</h4>
+<p>If you installed the service with Enterprise DC/OS 1.10, you can fetch the full configuration of a service (including any default values that were applied during installation).</p>
+<pre><code class="language-bash">dcos hive-metastore describe &gt; options.json
+</code></pre>
+<p>Make any configuration changes to this <code>options.json</code> file.</p>
+<h5 id="updating-after-dcos-19-to-dcos-110-upgrade"><a class="content__anchor" href="#updating-after-dcos-19-to-dcos-110-upgrade" aria-hidden="true"><i data-feather="bookmark"></i></a>Updating after DC/OS 1.9 to DC/OS 1.10 Upgrade</h5>
+<p>If the service was previously installed on DC/OS 1.9, and the cluster has now been upgraded to DC/OS 1.10, it will not have the necessary metadata for the <code>update</code> commands to succeed. You will need to perform an initial update to create the metadata.</p>
+<p>Using the version controlled options file of the service, start a configuration update:</p>
+<pre><code class="language-bash">dcos hive-metastore update start --options=&lt;options-file&gt;
+</code></pre>
+<p>This will update the service metadata with the correct stored options. The service scheduler will be restarted, but service tasks will not. Going forward, you can use the <code>update</code> commands as described elsewhere.</p>
+<p class="message--warning"><strong>WARNING: </strong>It is critical to do the update with the exact options the service is currently running with in this upgrade step. Any option not specified in the options file will be lost and the default used.</p>
+<h4 id="starting-the-update"><a class="content__anchor" href="#starting-the-update" aria-hidden="true"><i data-feather="bookmark"></i></a>Starting the update</h4>
+<p>Once you are ready to begin, initiate an update using the DC/OS CLI, passing in the updated <code>options.json</code> file:</p>
+<pre><code class="language-bash">dcos hive-metastore update start --options=options.json
+</code></pre>
+<p>You will receive an acknowledgement message and the DC/OS package manager will restart the service scheduler which will proceed to update the service.</p>
+<p>See <a href="#advanced-update-actions">Advanced update actions</a> for commands you can use to inspect and manipulate an update after it has started.</p>
+<h3 id="advanced-update-actions"><a class="content__anchor" href="#advanced-update-actions" aria-hidden="true"><i data-feather="bookmark"></i></a>Advanced update actions</h3>
+<p>The following sections describe advanced commands that may be used to interact with an update in progress.</p>
+<h4 id="monitoring-the-update"><a class="content__anchor" href="#monitoring-the-update" aria-hidden="true"><i data-feather="bookmark"></i></a>Monitoring the update</h4>
+<p>Once the service scheduler has been restarted, it will begin a new deployment plan as individual pods are restarted with the new configuration. Depending on the high availability characteristics of the service being updated, you may experience a service disruption.</p>
+<p>You can query the status of the update as follows:</p>
+<pre><code class="language-bash">dcos hive-metastore update status
+</code></pre>
+<p>If the service scheduler is still restarting, DC/OS will not be able to route to it and this command will return an error message. Wait a short while and try again. You can also go to the Services tab of the DC/OS GUI to check the status of the restart.</p>
+<h4 id="pause"><a class="content__anchor" href="#pause" aria-hidden="true"><i data-feather="bookmark"></i></a>Pause</h4>
+<p>To pause an ongoing update, issue a pause command:</p>
+<pre><code class="language-bash">dcos hive-metastore update pause
+</code></pre>
+<p>You will receive an error message if the plan has already completed or has already been paused. Once completed, the update will enter the <code>WAITING</code> state.</p>
+<h4 id="resume"><a class="content__anchor" href="#resume" aria-hidden="true"><i data-feather="bookmark"></i></a>Resume</h4>
+<p>If the update is in a <code>WAITING</code> state, as a result of being paused or reaching a breakpoint that requires manual operator verification, you can use the <code>resume</code> command to continue the update:</p>
+<pre><code class="language-bash">dcos hive-metastore update resume
+</code></pre>
+<p>You will receive an error message if you attempt to <code>resume</code> an update that is already in progress or has already completed.</p>
+<h4 id="force-complete"><a class="content__anchor" href="#force-complete" aria-hidden="true"><i data-feather="bookmark"></i></a>Force Complete</h4>
+<p>In order to manually “complete” a step (such that the service scheduler stops attempting to launch a task), you can issue a <code>force-complete</code> command. This will instruct the service scheduler to mark a specific step within a phase of the update as complete. You need to specify both the phase and the step:</p>
+<pre><code class="language-bash">dcos hive-metastore update force-complete &lt;phase&gt; &lt;step&gt;
+</code></pre>
+<p>The names of the phases and the steps can be determined by running the <code>update status</code> command as described above.</p>
+<h4 id="force-restart"><a class="content__anchor" href="#force-restart" aria-hidden="true"><i data-feather="bookmark"></i></a>Force Restart</h4>
+<p>Similar to <code>force complete</code>, you can also force a restart. This can either be done for an entire update, a phase of the update, or just for a specific step within a phase.</p>
+<p>To restart the entire update:</p>
+<pre><code class="language-bash">dcos hive-metastore update force-restart
+</code></pre>
+<p>Or for all steps in a single phase:</p>
+<pre><code class="language-bash">dcos hive-metastore update force-restart &lt;phase&gt;
+</code></pre>
+<p>Or for a specific step within a specific phase:</p>
+<pre><code class="language-bash">dcos hive-metastore update force-restart &lt;phase&gt; &lt;step&gt;
+</code></pre>
+<h2 id="open-source-dcos-dcos-19-and-earlier"><a class="content__anchor" href="#open-source-dcos-dcos-19-and-earlier" aria-hidden="true"><i data-feather="bookmark"></i></a>Open Source DC/OS, DC/OS 1.9, and Earlier</h2>
+<p>If you do not have Enterprise DC/OS 1.10 or later, the <code>update</code> commands above are not available.</p>
+<h3 id="configuration-updates"><a class="content__anchor" href="#configuration-updates" aria-hidden="true"><i data-feather="bookmark"></i></a>Configuration Updates</h3>
+<p>For Open Source DC/OS of any version, or Enterprise DC/OS 1.9 and earlier, you can perform changes from the DC/OS GUI by editing the service scheduler’s configuration.</p>
+<ol>
+<li>Go to the <strong>Services</strong> tab of the DC/OS GUI and click into the service you want to change.</li>
+<li>Click on the service scheduler task (it will have the name of the service).</li>
+<li>Click the three dots on the right hand side of the page and select <strong>Edit</strong>.</li>
+<li>Find the configuration parameter to change in the list of environment variables.</li>
+<li>Change the parameter and click <code>Change and deploy</code>.</li>
+<li>The service scheduler will be restarted and roll out the configuration change to the service.</li>
+</ol>
+<h4 id="finding-the-correct-environment-variable"><a class="content__anchor" href="#finding-the-correct-environment-variable" aria-hidden="true"><i data-feather="bookmark"></i></a>Finding the correct environment variable</h4>
+<p>While DC/OS Enterprise 1.10 and later support changing the configuration using the option schema directly, DC/OS Open Source and versions 1.9 and earlier require mapping those options to the environment variables that are passed to the service scheduler.</p>
+<p>The correct environment variable for a given setting can vary depending on the service. For instance, some services have multiple types of nodes, each with separate count settings.</p>
+<p>To find the correct environment variable, map from the service configuration to the service scheduler’s Marathon environment. However, most environment variable names are self-explanatory.</p>
+<h3 id="service-version-updates"><a class="content__anchor" href="#service-version-updates" aria-hidden="true"><i data-feather="bookmark"></i></a>Service Version Updates</h3>
+<ol>
+<li>In the DC/OS web interface, destroy the <code>hive-metastore</code> service scheduler to be updated.</li>
+<li>Verify that you no longer see it in the DC/OS web interface.</li>
+<li>Install the latest version of the hive-metastore package with the version controlled service options:</li>
+</ol>
+<pre><code class="language-bash">dcos package install hive-metastore -—options=options.json
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#enterprise-dcos-110-and-later">Enterprise DC/OS 1.10 and later</a></li><li class="content__sections-item content__sections-item--h2"><a href="#open-source-dcos-dcos-19-and-earlier">Open Source DC/OS, DC/OS 1.9, and Earlier</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

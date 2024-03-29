@@ -1,0 +1,421 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Install - D2iQ Docs</title><meta name="description" content="Install and customize Mesosphere Jupyter Service (Beta)"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Beta Jupyter Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li><li class="chooser-list-item"><a href="/dkp/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__item"><a href="/dkp/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><div class="toggle"><p><span class="title">Beta Jupyter</span><span class="version"> 1.2.0-0.33.7-beta</span></p></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/quick-start/">Quick Start</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/installing/">Install</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/overview/">Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/example/">Examples</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/uninstall/">Uninstall</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Install</h1><p class="badge badge--content-header badge--beta">BETA</p></div><h4 class="content__header-description">Install and customize Mesosphere Jupyter Service (Beta)</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/installing/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+Install&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/installing&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><p>If you install Apache JupyterLab as described in the <a href="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/quick-start/">Quick Start</a> section, the service runs using all of the default installation settings. Although the default settings are suitable for some environments, there are many reasons you might want to customize your installation and make specific configuration changes. For example, you might want to customize the installation settings to enable accelerated processing for agents where graphical processing unit (GPU) resources are available or to add support for HDFS file systems.</p>
+<p>The installation instructions is this section illustrate your installation options and how to change the settings that allow you to customize the Apache JupyterLab deployment.</p>
+<p>After installing Apache JupyterLab using any of these procedures, you can access Apache JupyterLab through Marathon-LB and your <code>vhost</code>.</p>
+<h1 id="deploy-jupyterlab-with-custom-settings"><a class="content__anchor" href="#deploy-jupyterlab-with-custom-settings" aria-hidden="true"><i data-feather="bookmark"></i></a>Deploy JupyterLab with custom settings</h1>
+<p>You can deploy the Apache JupyterLab package on your DC/OS cluster with custom settings by using the DC/OS web-based administrative console or by manually editing a configuration file and running command-line programs.</p>
+<p><a name="jupyter-ui"></a></p>
+<h2 id="using-the-web-based-interface"><a class="content__anchor" href="#using-the-web-based-interface" aria-hidden="true"><i data-feather="bookmark"></i></a>Using the web-based interface</h2>
+<p>To deploy the Apache JupyterLab package on a DC/OS cluster using the DC/OS web-based administrative console:</p>
+<ol>
+<li>
+<p>Click <strong>Catalog</strong> and search for the Apache JupyterLab package.</p>
+</li>
+<li>
+<p>Select the package, then click <strong>Review &amp; Run</strong> to display the <strong>Edit Configuration</strong> page.</p>
+</li>
+<li>
+<p>Configure the package settings, as needed, using the DC/OS UI or by clicking <strong>JSON Editor</strong> and modifying the app definition manually. For example, you might customize the package by enabling HDFS support.</p>
+<p>At a minimum, you must specify the external public agent host name as a Networking configuration setting. For more information about customizing the configuration, see <a href="#advanced-installation">Advanced installation options</a>.</p>
+</li>
+<li>
+<p>Click <strong>Networking</strong>.</p>
+</li>
+<li>
+<p>Under External Access, select <strong>Enabled</strong>, and type the public agent host name used to access the JupyterLab package.</p>
+</li>
+<li>
+<p>Click <strong>Review &amp; Run</strong>.</p>
+</li>
+<li>
+<p>Review the installation notes, then select <strong>Run Service</strong> to deploy the Apache JupyterLab package.</p>
+</li>
+</ol>
+<p><a name="jupyter-cmd"></a></p>
+<h2 id="using-the-command-line"><a class="content__anchor" href="#using-the-command-line" aria-hidden="true"><i data-feather="bookmark"></i></a>Using the command-line</h2>
+<p>To deploy the Apache JupyterLab package on the DC/OS cluster from the command-line:</p>
+<ol>
+<li>
+<p>Run the following command to see what options are available for the Apache JupyterLab package:</p>
+<pre><code class="language-bash">dcos package describe jupyterlab --config
+</code></pre>
+<p>You can redirect the output from this command to a file to save the default properties for editing. The default app definition for Apache JupyterLab looks like this:</p>
+<pre><code class="language-json">{
+&quot;service&quot;: {
+    &quot;name&quot;: &quot;/jupyterlab-notebook&quot;,
+    &quot;cmd&quot;: &quot;/usr/local/bin/start.sh ${CONDA_DIR}/bin/jupyter lab --notebook-dir=${MESOS_SANDBOX}&quot;,
+    &quot;cpus&quot;: 2,
+    &quot;force_pull&quot;: false,
+    &quot;mem&quot;: 8192,
+    &quot;user&quot;: &quot;nobody&quot;,
+    &quot;gpu_support&quot;: {
+    &quot;enabled&quot;: false,
+    &quot;gpus&quot;: 0
+    }
+},
+&quot;oidc&quot;: {
+    &quot;enable_oidc&quot;: false,
+    &quot;oidc_discovery_uri&quot;: &quot;https://keycloak.example.com/auth/realms/notebook/.well-known/openid-configuration&quot;,
+    &quot;oidc_redirect_uri&quot;: &quot;/oidc-redirect-callback&quot;,
+    &quot;oidc_client_id&quot;: &quot;notebook&quot;,
+    &quot;oidc_client_secret&quot;: &quot;b874f6e9-8f3f-41a6-a206-53e928d24fb1&quot;,
+    &quot;oidc_tls_verify&quot;: &quot;no&quot;,
+    &quot;enable_windows&quot;: false,
+    &quot;oidc_use_email&quot;: false,
+    &quot;oidc_email&quot;: &quot;user@example.com&quot;,
+    &quot;oidc_upn&quot;: &quot;user007&quot;,
+    &quot;oidc_logout_path&quot;: &quot;/logmeout&quot;,
+    &quot;oidc_post_logout_redirect_uri&quot;: &quot;https://&lt;VHOST&gt;/&lt;optional PATH_PREFIX&gt;/&lt;Service Name&gt;&quot;,
+    &quot;oidc_use_spartan_resolver&quot;: true
+},
+&quot;s3&quot;: {
+    &quot;aws_region&quot;: &quot;us-east-1&quot;,
+    &quot;s3_endpoint&quot;: &quot;s3.us-east-1.amazonaws.com&quot;,
+    &quot;s3_https&quot;: 1,
+    &quot;s3_ssl&quot;: 1
+},
+&quot;spark&quot;: {
+    &quot;enable_spark_monitor&quot;: true,
+    &quot;spark_master_url&quot;: &quot;mesos://zk://zk-1.zk:2181,zk-2.zk:2181,zk-3.zk:2181,zk-4.zk:2181,zk-5.zk:2181/mesos&quot;,
+    &quot;spark_driver_cores&quot;: 2,
+    &quot;spark_driver_memory&quot;: &quot;6g&quot;,
+    &quot;spark_driver_java_options&quot;: &quot;\&quot;-server -XX:+UseG1GC -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/mnt/mesos/sandbox\&quot;&quot;,
+    &quot;spark_history_fs_logdirectory&quot;: &quot;hdfs://hdfs/history&quot;,
+    &quot;spark_conf_spark_scheduler&quot;: &quot;spark.scheduler.minRegisteredResourcesRatio=1.0&quot;,
+    &quot;spark_conf_cores_max&quot;: &quot;spark.cores.max=5&quot;,
+    &quot;spark_conf_executor_cores&quot;: &quot;spark.executor.cores=1&quot;,
+    &quot;spark_conf_executor_memory&quot;: &quot;spark.executor.memory=6g&quot;,
+    &quot;spark_conf_executor_java_options&quot;: &quot;spark.executor.extraJavaOptions=\&quot;-server -XX:+UseG1GC -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/mnt/mesos/sandbox\&quot;&quot;,
+    &quot;spark_conf_eventlog_enabled&quot;: &quot;spark.eventLog.enabled=false&quot;,
+    &quot;spark_conf_eventlog_dir&quot;: &quot;spark.eventLog.dir=hdfs://hdfs/&quot;,
+    &quot;spark_conf_hadoop_fs_s3a_aws_credentials_provider&quot;: &quot;spark.hadoop.fs.s3a.aws.credentials.provider=com.amazonaws.auth.InstanceProfileCredentialsProvider&quot;,
+    &quot;spark_conf_jars_packages&quot;: &quot;spark.jars.packages=org.apache.spark:spark-streaming-kafka-0-10_2.11:2.2.1,org.apache.kafka:kafka_2.11:0.10.2.1&quot;,
+    &quot;spark_conf_mesos_executor_docker_image&quot;: &quot;spark.mesos.executor.docker.image=dcoslabs/dcos-spark:1.11.4-2.2.1&quot;,
+    &quot;spark_conf_mesos_executor_home&quot;: &quot;spark.mesos.executor.home=/opt/spark&quot;,
+    &quot;spark_conf_mesos_containerizer&quot;: &quot;spark.mesos.containerizer=mesos&quot;,
+    &quot;spark_conf_mesos_driver_labels&quot;: &quot;spark.mesos.driver.labels=DCOS_SPACE:&quot;,
+    &quot;spark_conf_mesos_task_labels&quot;: &quot;spark.mesos.task.labels=DCOS_SPACE:&quot;,
+    &quot;spark_conf_executor_krb5_config&quot;: &quot;spark.executorEnv.KRB5_CONFIG=/mnt/mesos/sandbox/krb5.conf&quot;,
+    &quot;spark_conf_executor_java_home&quot;: &quot;spark.executorEnv.JAVA_HOME=/opt/jdk&quot;,
+    &quot;spark_conf_executor_hadoop_hdfs_home&quot;: &quot;spark.executorEnv.HADOOP_HDFS_HOME=/opt/hadoop&quot;,
+    &quot;spark_conf_executor_hadoop_opts&quot;: &quot;spark.executorEnv.HADOOP_OPTS=\&quot;-Djava.library.path=/opt/hadoop/lib/native -Djava.security.krb5.conf=/mnt/mesos/sandbox/krb5.conf\&quot;&quot;,
+    &quot;spark_conf_mesos_executor_docker_forcepullimage&quot;: &quot;spark.mesos.executor.docker.forcePullImage=true&quot;,
+    &quot;spark_user&quot;: &quot;nobody&quot;
+},
+&quot;storage&quot;: {
+    &quot;persistence&quot;: {
+    &quot;host_volume_size&quot;: 4000,
+    &quot;enable&quot;: false
+    }
+},
+&quot;networking&quot;: {
+    &quot;cni_support&quot;: {
+    &quot;enabled&quot;: true
+    },
+    &quot;external_access&quot;: {
+    &quot;enabled&quot;: true,
+    &quot;external_public_agent_hostname&quot;: &quot;jupyter-pistolas&quot;
+    }
+},
+&quot;environment&quot;: {
+    &quot;secrets&quot;: false,
+    &quot;service_credential&quot;: &quot;jupyterlab-notebook/serviceCredential&quot;,
+    &quot;conda_envs_path&quot;: &quot;/mnt/mesos/sandbox/conda/envs:/opt/conda/envs&quot;,
+    &quot;conda_pkgs_dir&quot;: &quot;/mnt/mesos/sandbox/conda/pkgs:/opt/conda/pkgs&quot;,
+    &quot;dcos_dir&quot;: &quot;/mnt/mesos/sandbox/.dcos&quot;,
+    &quot;hadoop_conf_dir&quot;: &quot;/mnt/mesos/sandbox&quot;,
+    &quot;home&quot;: &quot;/mnt/mesos/sandbox&quot;,
+    &quot;java_opts&quot;: &quot;\&quot;-server -XX:+UseG1GC -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/mnt/mesos/sandbox\&quot;&quot;,
+    &quot;jupyter_conf_urls&quot;: &quot;&quot;,
+    &quot;jupyter_config_dir&quot;: &quot;/mnt/mesos/sandbox/.jupyter&quot;,
+    &quot;jupyter_password&quot;: &quot;&quot;,
+    &quot;jupyter_runtime_dir&quot;: &quot;/mnt/mesos/sandbox/.local/share/jupyter/runtime&quot;,
+    &quot;nginx_log_level&quot;: &quot;warn&quot;,
+    &quot;start_dask_distributed&quot;: false,
+    &quot;start_ray_head_node&quot;: false,
+    &quot;start_spark_history_server&quot;: false,
+    &quot;start_tensorboard&quot;: false,
+    &quot;user&quot;: &quot;nobody&quot;,
+    &quot;tensorboard_logdir&quot;: &quot;hdfs://hdfs/&quot;,
+    &quot;term&quot;: &quot;xterm-256color&quot;
+    }
+}
+</code></pre>
+</li>
+<li>
+<p>Create a <code>JupyterLab-options.json</code> file that specifies the properties you want to set for the Apache JupyterLab package.</p>
+<p>For more information about customizing the configuration, see <a href="#advanced-installation">Advanced installation options</a>.</p>
+</li>
+<li>
+<p>Run the following command to install the JupyterLab service with the customized <code>JupyterLab-options.json</code> file:</p>
+<pre><code class="language-bash">dcos package install jupyterlab --options=JupyterLab-options.json --yes
+</code></pre>
+</li>
+</ol>
+<h1 id="install-jupyterlab-with-gpu-support"><a class="content__anchor" href="#install-jupyterlab-with-gpu-support" aria-hidden="true"><i data-feather="bookmark"></i></a>Install JupyterLab with GPU support</h1>
+<p>Before you start, make sure your DC/OS cluster runs at least one GPU agent. If your cluster supports GPU agents, you can enable <code>GPU Support</code> for the JupyterLab service if you want to run your Notebook with GPU acceleration. You can deploy the JupyterLab service using Terraform, from the DC/OS web interface, or from the CLI.</p>
+<h2 id="deploy-jupyterlab-on-aws-using-terraform"><a class="content__anchor" href="#deploy-jupyterlab-on-aws-using-terraform" aria-hidden="true"><i data-feather="bookmark"></i></a>Deploy JupyterLab on AWS using Terraform</h2>
+<p>The instructions below illustrate using a Terraform template to create a DC/OS cluster that consists of one master and one GPU agent node for JupyterLab installed on AWS.</p>
+<p><strong>Prerequisites</strong></p>
+<ul>
+<li>Follow the <a href="https://github.com/dcos/terraform-dcos/blob/master/aws/README.md">Getting Started Guide</a> available from the Terraform repository.</li>
+<li>Set your AWS credentials profile.</li>
+<li>Copy your <code>ssh-key</code> to AWS.</li>
+</ul>
+<p>To deploy on AWS with GPU support:</p>
+<ol>
+<li>
+<p>Create a new directory for Terraform to use to write its files.</p>
+</li>
+<li>
+<p>Initialize the Terraform folder:</p>
+<pre><code class="language-bash">terraform init -from-module github.com/dcos/terraform-dcos//aws
+</code></pre>
+</li>
+<li>
+<p>Rename <code>desired_cluster_profile.tfvars.example</code> to <code>desired_cluster_profile.tfvar</code> and configure it similar to the following:</p>
+<pre><code class="language-bash">dcos_cluster_name = &quot;GPU JupyterLab Testcluster&quot;
+dcos_version = &quot;1.12.3&quot;
+num_of_masters = &quot;1&quot;
+num_of_private_agents = &quot;0&quot;
+num_of_public_agents = &quot;1&quot;
+num_of_gpu_agents = &quot;1&quot;
+#
+aws_region = &quot;us-west-2&quot;
+aws_bootstrap_instance_type = &quot;m3.large&quot;
+aws_master_instance_type = &quot;m4.2xlarge&quot;
+aws_agent_instance_type = &quot;m4.2xlarge&quot;
+aws_profile = &quot;123456-YourAWSProfile&quot;
+aws_public_agent_instance_type = &quot;m4.2xlarge&quot;
+ssh_key_name = &quot;yourSSHKey&quot;
+# Inbound Master Access
+admin_cidr = &quot;0.0.0.0/0&quot;
+</code></pre>
+</li>
+<li>
+<p>Activate the GPU agent installation by renaming <code>dcos-gpu-agents.tf.disabled</code> as <code>dcos-gpu-agents.tf</code>.</p>
+</li>
+<li>
+<p>Enable your GPU script using <code>terraform init</code>.</p>
+</li>
+<li>
+<p>Apply your plan and run: <code>terraform apply -var-file desired_cluster_profile.tfvars</code>.</p>
+</li>
+<li>
+<p>Approve Terraform to perform these actions by entering <code>yes</code> when prompted.</p>
+<p>If everything runs successfully, the output looks like this:</p>
+<pre><code class="language-bash">Apply complete! Resources: 31 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+Bootstrap Host Public IP = 34.215.7.137
+GPU Public IPs = [
+   34.216.236.253
+]
+Master ELB Public IP = fabianbaie-tf7fcf-pub-mas-elb-1180697995.us-west-2.elb.amazonaws.com
+Master Public IPs = [
+   35.164.70.195
+]
+Private Agent Public IPs = []
+Public Agent ELB Public IP = fabianbaie-tf7fcf-pub-agt-elb-2143488909.us-west-2.elb.amazonaws.com
+Public Agent Public IPs = [
+   35.164.70.196
+}
+ssh_user = core
+</code></pre>
+</li>
+<li>
+<p>Connect to your newly installed DC/OS cluster by copying the Master ELB Public IP into your browser.</p>
+<p>For example, copy and paste a string similar to the following:</p>
+<p><code>fabianbaie-tf7fcf-pub-mas-elb-1180697995.us-west-2.elb.amazonaws.com</code></p>
+</li>
+</ol>
+<h2 id="add-gpu-support-for-jupyterlab"><a class="content__anchor" href="#add-gpu-support-for-jupyterlab" aria-hidden="true"><i data-feather="bookmark"></i></a>Add GPU support for JupyterLab</h2>
+<p>You can deploy the Apache JupyterLab package with support for GPU resources by using the DC/OS web-based administrative console or by manually editing a configuration file and running command-line programs. The steps are essentially the same as those described in <a href="#jupyter-ui">Using the web-based console</a> and <a href="#jupyter-cmd">Using the command-line</a>. For convenience, the steps are summarized in this section.</p>
+<h3 id="enable-gpu-support-using-the-dcos-web-based-console"><a class="content__anchor" href="#enable-gpu-support-using-the-dcos-web-based-console" aria-hidden="true"><i data-feather="bookmark"></i></a>Enable GPU support using the DC/OS web-based console</h3>
+<ol>
+<li>
+<p>Click <strong>Catalog</strong> and search for JupyterLab.</p>
+</li>
+<li>
+<p>Select the package, then click <strong>Review &amp; Run</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Enabled</strong> for <strong>Gpu Support</strong></p>
+</li>
+<li>
+<p>Set the number of GPU agents to one and configure additional settings, as needed.</p>
+</li>
+<li>
+<p>Click <strong>Networking</strong>.</p>
+</li>
+<li>
+<p>Under External Access, select <strong>Enabled</strong>, then type the public agent host name used to access JupyterLab.</p>
+</li>
+<li>
+<p>Click <strong>Review &amp; Run</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Run Service</strong>.</p>
+<p>The package is several gigabytes in size. The deployment takes approximately 5 minutes to complete on AWS.</p>
+</li>
+</ol>
+<h3 id="enable-gpu-support-using-the-dcos-command-line"><a class="content__anchor" href="#enable-gpu-support-using-the-dcos-command-line" aria-hidden="true"><i data-feather="bookmark"></i></a>Enable GPU support using the DC/OS command-line</h3>
+<ol>
+<li>
+<p>Review configuration options by running the following command:</p>
+<pre><code class="language-bash">dcos package describe jupyterlab --config
+</code></pre>
+</li>
+<li>
+<p>Create a custom <code>options.json</code> file to specify the properties you want to set.</p>
+<p>For example, create a file named <code>options_advanced_gpu.json</code></p>
+</li>
+<li>
+<p>Edit the <code>options_advanced_gpu.json</code> file to include a <code>gpu_support</code> section similar to the following:</p>
+<pre><code class="language-json">&quot;gpu_support&quot;: {
+      &quot;description&quot;: &quot;GPU support and useful packages for Data Scientists.\n\nGPU specific packages:\nCUDA 9.0.176-1, CUDNN 7.1.4.18-1+cuda9.0, NCCL 2.2.13-1+cuda9.0, TensorFlow-GPU 1.9.0&quot;,
+      &quot;properties&quot;: {
+        &quot;enabled&quot;: true {
+          &quot;default&quot;: false,
+          &quot;description&quot;: &quot;Enable GPU support.\nNote: This requires at least 15GB disk space available with recent NVIDIA drivers installed.&quot;,
+          &quot;type&quot;: &quot;boolean&quot;
+        },
+        &quot;gpus&quot;: 1 {
+          &quot;default&quot;: 0,
+          &quot;description&quot;: &quot;Number of GPUs to allocate to the service instance.\nNote: GPU support has to be enabled.&quot;,
+          &quot;minimum&quot;: 0,
+          &quot;type&quot;: &quot;number&quot;
+        }
+      },
+      &quot;type&quot;: &quot;object&quot;
+    },
+</code></pre>
+<p>Notice that <code>enable</code> in the <code>gpu_support</code> section is set to <code>true</code> and the <code>gpus</code>  is set to <code>1</code>.</p>
+</li>
+<li>
+<p>Run the following command to install the JupyterLab service:</p>
+<pre><code class="language-bash">dcos package install jupyterlab --options=options_advanced_gpu.json --yes
+</code></pre>
+</li>
+</ol>
+<h2 id="verify-your-jupyterlab-deployment"><a class="content__anchor" href="#verify-your-jupyterlab-deployment" aria-hidden="true"><i data-feather="bookmark"></i></a>Verify your JupyterLab deployment</h2>
+<p>After you have installed JupyterLab, you can verify it has been successfully deployed by using the service.</p>
+<p>To begin working with JupyterLab:</p>
+<ol>
+<li>
+<p>Log on and authenticate using the default password for the Apache JupyterLab service account.</p>
+<p>The default password for the service account is <code>jupyter-&lt;Marathon-App-Prefix&gt;</code>as described in the <a href="/dcosdocs/mesosphere/dcos/services/beta-jupyter/1.2.0-0.33.7-beta/quick-start/">Quick Start</a> section.</p>
+</li>
+<li>
+<p>Create a new notebook using Python 3.</p>
+<p>If you need to change the version of Python you are using, see <a href="#change-python">Changing the Python version</a>.</p>
+<p class="message--note"><strong>NOTE: </strong>Make sure you have Edge-LB or Marathon-LB is installed.</p>
+</li>
+<li>
+<p>Verify that you can access GPU acceleration by running the following lines in your new notebook:</p>
+<pre><code class="language-python">from tensorflow.python.client import device_lib
+
+def get_available_devices():
+   local_device_protos = device_lib.list_local_devices()
+   return [x.name for x in local_device_protos]
+
+print(get_available_devices())
+</code></pre>
+<p>The output should look like:</p>
+<pre><code class="language-apple">['/device:CPU:0', '/device:GPU:0']
+</code></pre>
+</li>
+<li>
+<p>Access TensorBoard within your JupyterLab instance by adding <code>/tensorboard/</code> to your browser url: <code>https://&lt;VHOST&gt;/&lt;Service Name&gt;/tensorboard/</code></p>
+<p class="message--note"><strong>NOTE: </strong>If you installed jupyterlab under a different name space, change the name in the URL.</p>
+</li>
+<li>
+<p>Access <a href="http://nbviewer.jupyter.org/github/twosigma/beakerx/blob/master/StartHere.ipynb">tutorials and examples</a> for JupyterLab and BeakerX.</p>
+</li>
+</ol>
+<p><a name="change-python"></a></p>
+<h3 id="changing-the-python-version"><a class="content__anchor" href="#changing-the-python-version" aria-hidden="true"><i data-feather="bookmark"></i></a>Changing the Python version</h3>
+<p>Follow the instructions in <a href="http://ipython.readthedocs.io/en/stable/install/kernel_install.html">Installing the iPython Kernel</a> to change the Python version you are using.</p>
+<ol>
+<li>
+<p>In <code>File</code> click <code>new</code> and open a <code>Terminal</code>.</p>
+</li>
+<li>
+<p>In the terminal, create a new environment with your Python version of choice.
+For example, run the following commands for Python <code>3.5</code>:</p>
+<pre><code class="language-bash">$ conda create -n 3.5 python=3.5 ipykernel
+$ source activate 3.5
+$ python -m ipykernel install --user --name 3.5 --display-name &quot;Python (3.5)&quot;
+$ source deactivate
+</code></pre>
+</li>
+<li>
+<p>Reload the <code>Jupyter</code> page and click <code>Kernel</code>.</p>
+</li>
+<li>
+<p>Click <code>Change Kernel...</code> to change the new installed Python <code>3.5</code> environment.</p>
+</li>
+</ol>
+<p><a name="advanced-installation"> </a></p>
+<h1 id="advanced-installation-options"><a class="content__anchor" href="#advanced-installation-options" aria-hidden="true"><i data-feather="bookmark"></i></a>Advanced installation options</h1>
+<p>You should review and set the following advanced options for the Apache JupyterLab service.</p>
+<h2 id="storage"><a class="content__anchor" href="#storage" aria-hidden="true"><i data-feather="bookmark"></i></a>Storage</h2>
+<p>By enabling persistent storage, data is stored in the <code>persistent_data</code> folder in your JupyterLab container under <code>/mnt/mesos/sandbox</code>. You can then access and upload files for the JupyterLab service by accessing the <code>persistent_data</code> folder.</p>
+<p>If you do not select <code>persistence</code> in the <code>storage</code> section, or provide a valid value for the <code>host_volume</code> on installation, your data is not saved in any way.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>persistence</code></td>
+<td>Creates local persistent volumes for internal storage files to survive across restarts or failures.</td>
+</tr>
+<tr>
+<td><code>host_volume_size</code></td>
+<td>Defines the size of the persistent volume, for example, 4GB.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="networking-and-external-access"><a class="content__anchor" href="#networking-and-external-access" aria-hidden="true"><i data-feather="bookmark"></i></a>Networking and external access</h2>
+<p>To access the JupyterLab service from within the DC/OS cluster, you typically set the <code>port</code> advanced configuration option.</p>
+<p>To access the JupyterLab service from outside the cluster, you must install the <code>Marathon-LB</code> service. You can then enable <code>external_access</code> properties in the <code>options.json</code> file to set the <code>EXTERNAL_PUBLIC_AGENT_HOSTNAME</code> field to the public agent DNS name. In specifying the host name, use the DNS name without any trailing slash (<code>/</code>) or the <code>http://</code> or <code>https://</code> portion of the URI.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>port</code></td>
+<td>Specifies the port number for accessing the DC/OS Apache JupyterLab service from within the DC/OS cluster. The port number is used to access the service from other applications through a NAMED virtual IP (VIP) in the format <code>service_name.marathon.l4lb.thisdcos.directory:port</code>. You can check status of the VIP in the Network tab of the DC/OS Dashboard (Enterprise DC/OS only).</td>
+</tr>
+<tr>
+<td><code>external_access</code></td>
+<td>Creates an entry in Marathon-LB for accessing the service from outside of the cluster.</td>
+</tr>
+<tr>
+<td><code>external_access_port</code></td>
+<td>Specifies the port used in Marathon-LB for accessing the service.</td>
+</tr>
+<tr>
+<td><code>external_public_agent_ip</code></td>
+<td>Specifies the DNS address for services exposed through Marathon-LB. In most cases, this option is set to the public IP address for a public agent.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="hdfs-configuration"><a class="content__anchor" href="#hdfs-configuration" aria-hidden="true"><i data-feather="bookmark"></i></a>HDFS configuration</h2>
+<p>A typical advanced installation that provides HDFS support includes the <code>external_public_agent_hostname</code> property set to the public host name of the AWS Elastic Load Balancing (ELB) service and the <code>jupyter_conf_urls</code> set to the appropriate endpoint.</p>
+<p>You can create the <code>options_advanced_hdfs.json</code> file to provide the options for HDFS support manually or through the DC/OS web interface.</p>
+<p>The Apache JupyterLab service supports <code>HDFS</code> and using <code>HDFS</code> or <code>S3</code> is the recommended configuration for collaborating in multi-user environments. You can install  <code>HDFS</code> for your cluster in the default settings before you install the JupyterLab service. After HDFS is installed, you can set the <strong>Jupyter Conf Urls</strong> (<code>jupyter_conf_urls</code>) property under <strong>Environment</strong> settings to the appropriate URL, such as  <code>http://api.hdfs.marathon.l4lb.thisdcos.directory/v1/endpoints</code> to complete the configuration. If the URL for the HDFS endpoint is not set, the JupyterLab service fails.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#deploy-jupyterlab-with-custom-settings">Deploy JupyterLab with custom settings</a></li><li class="content__sections-item content__sections-item--h2"><a href="#using-the-web-based-interface">Using the web-based interface</a></li><li class="content__sections-item content__sections-item--h2"><a href="#using-the-command-line">Using the command-line</a></li><li class="content__sections-item content__sections-item--h1"><a href="#install-jupyterlab-with-gpu-support">Install JupyterLab with GPU support</a></li><li class="content__sections-item content__sections-item--h2"><a href="#deploy-jupyterlab-on-aws-using-terraform">Deploy JupyterLab on AWS using Terraform</a></li><li class="content__sections-item content__sections-item--h2"><a href="#add-gpu-support-for-jupyterlab">Add GPU support for JupyterLab</a></li><li class="content__sections-item content__sections-item--h2"><a href="#verify-your-jupyterlab-deployment">Verify your JupyterLab deployment</a></li><li class="content__sections-item content__sections-item--h1"><a href="#advanced-installation-options">Advanced installation options</a></li><li class="content__sections-item content__sections-item--h2"><a href="#storage">Storage</a></li><li class="content__sections-item content__sections-item--h2"><a href="#networking-and-external-access">Networking and external access</a></li><li class="content__sections-item content__sections-item--h2"><a href="#hdfs-configuration">HDFS configuration</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

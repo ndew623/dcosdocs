@@ -1,0 +1,426 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Advanced - D2iQ Docs</title><meta name="description" content="This section describes some advanced features of the DC/OS Confluent ZooKeeper service."><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Confluent Zookeeper Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li><li class="chooser-list-item"><a href="/dkp/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__item"><a href="/dkp/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/confluent-zookeeper/2.8.0-5.5.1/advanced">Confluent ZooKeeper 2.8.0-5.5.1</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/confluent-zookeeper/2.7.0-5.1.2e/advanced">Confluent ZooKeeper 2.7.0-5.1.2e</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/confluent-zookeeper/2.5.0-4.1.3e/advanced">Confluent ZooKeeper 2.5.0-4.1.3e</a></li></ul><div class="toggle"><p><span class="title">Confluent Zookeeper</span><span class="version"> 2.8.0-5.5.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/confluent-zookeeper/2.8.0-5.5.1/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/confluent-zookeeper/2.8.0-5.5.1/getting-started/">Getting Started</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/confluent-zookeeper/2.8.0-5.5.1/advanced/">Advanced</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/confluent-zookeeper/2.8.0-5.5.1/configuration/">Configuration</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/confluent-zookeeper/2.8.0-5.5.1/operations/">Operations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/confluent-zookeeper/2.8.0-5.5.1/updates/">Updates</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/confluent-zookeeper/2.8.0-5.5.1/security/">Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/confluent-zookeeper/2.8.0-5.5.1/uninstall/">Uninstall</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/confluent-zookeeper/2.8.0-5.5.1/troubleshooting/">Troubleshooting</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/confluent-zookeeper/2.8.0-5.5.1/api-reference/">API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/confluent-zookeeper/2.8.0-5.5.1/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/confluent-zookeeper/2.8.0-5.5.1/support-policy/">Support Policy</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Advanced</h1></div><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/confluent-zookeeper/2.8.0-5.5.1/advanced/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+Advanced&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/services/confluent-zookeeper/2.8.0-5.5.1/advanced&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><h1 id="advanced"><a class="content__anchor" href="#advanced" aria-hidden="true"><i data-feather="bookmark"></i></a>Advanced</h1>
+<p>This section describes some advanced features of the DC/OS Confluent ZooKeeper service.</p>
+<h2 id="components"><a class="content__anchor" href="#components" aria-hidden="true"><i data-feather="bookmark"></i></a>Components</h2>
+<p>The following components work together to deploy and maintain the DC/OS Confluent ZooKeeper service.</p>
+<ul>
+<li>
+<p>Scheduler</p>
+<p>The Scheduler is the “management layer” of the service. It launches the service nodes and keeps them running. It also exposes endpoints to allow end users to control the service and diagnose problems. The Scheduler is kept online by the cluster’s “init system”, Marathon. The Scheduler itself is effectively a Java application that is configured via passed configuration options.</p>
+</li>
+<li>
+<p>Mesos</p>
+<p>Mesos is the foundation of the DC/OS cluster. Mesos allocates resources and manages everything launched within the cluster. A typical Mesos cluster has one or three Masters that manage resources for the entire cluster. On DC/OS, the machines running the Mesos Masters will typically run other cluster services as well, such as Marathon and Cosmos, as local system processes. The Agent machines are separate from the Master machines; the Agent machines are where in-cluster processes are run. For more information on Mesos architecture, see the <a href="https://mesos.apache.org/documentation/latest/architecture/">Apache Mesos documentation</a>. For more information on DC/OS architecture, see the <a href="/dcosdocs/mesosphere/dcos/latest/overview/architecture/">DC/OS architecture documentation</a>.</p>
+</li>
+<li>
+<p>ZooKeeper</p>
+<p>ZooKeeper is a common foundation for DC/OS system components, like Marathon and Mesos. It provides distributed key-value storage for configuration, synchronization, name registration, and cluster state storage. DC/OS comes with ZooKeeper installed by default, typically with one instance per DC/OS master. DC/OS Confluent ZooKeeper schedulers use the default ZooKeeper instance to store persistent state across restarts (under <code>znodes</code> named <code>dcos-service-&lt;svcname&gt;</code>). This allows Schedulers to be killed at any time and continue where they left off.</p>
+</li>
+<li>
+<p>Marathon</p>
+<p>Marathon is the “init system” of a DC/OS cluster. Marathon launches tasks in the cluster and keeps them running. From the perspective of Mesos, Marathon is itself another Scheduler running its own tasks. Marathon is less specialized than the DC/OS Confluent ZooKeeper scheduler and mainly focuses on tasks that do not require managing a local persistent state. The DC/OS Confluent ZooKeeper service relies on Marathon to run the Scheduler and to provide it with a configuration via environment variables. The Scheduler, however, maintains the service tasks without any direct involvement by Marathon.</p>
+</li>
+<li>
+<p>Packaging</p>
+<p>Confluent ZooKeeper is packaged for deployment on DC/OS. DC/OS packages follow the <a href="https://github.com/mesosphere/universe">Universe schema</a>, which defines how packages expose customization options at initial installation. When a package is installed on the cluster, the packaging service (named ‘Cosmos’) creates a Marathon app that contains a rendered version of the <code>marathon.json.mustache</code> template provided by the package. For DC/OS Confluent ZooKeeper, this Marathon app is the scheduler for the service.</p>
+</li>
+</ul>
+<p>For further discussion of DC/OS components, see the <a href="/dcosdocs/mesosphere/dcos/latest/overview/architecture/components/">architecture documentation</a>.</p>
+<h2 id="deployment"><a class="content__anchor" href="#deployment" aria-hidden="true"><i data-feather="bookmark"></i></a>Deployment</h2>
+<p>Internally, the DC/OS Confluent ZooKeeper service treats “Deployment” as moving from one state to another state. By this definition, “Deployment” applies to many scenarios:</p>
+<ul>
+<li>When the ZooKeeper package is first installed, deployment moves from a null configuration to a deployed configuration.</li>
+<li>When the deployed configuration is changed by updating the service, deployment moves from an initial running configuration to a new proposed configuration.</li>
+</ul>
+<p>In this section, we will describe how these scenarios are handled by the Scheduler.</p>
+<h3 id="initial-install"><a class="content__anchor" href="#initial-install" aria-hidden="true"><i data-feather="bookmark"></i></a>Initial Install</h3>
+<p>This is the process for deploying a new instance of the service:</p>
+<h4 id="steps-handled-by-the-dcos-cluster"><a class="content__anchor" href="#steps-handled-by-the-dcos-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>Steps handled by the DC/OS cluster</h4>
+<ol>
+<li>
+<p>The user runs <code>dcos package install confluent-zookeeper</code> in the DC/OS CLI or clicks <code>Install</code> for a given package on the DC/OS Dashboard.</p>
+</li>
+<li>
+<p>A request is sent to the Cosmos packaging service to deploy the requested package along with a set of configuration options.</p>
+</li>
+<li>
+<p>Cosmos creates a Marathon app definition by rendering the confluent-zookeeper package’s <code>marathon.json.mustache</code> with the configuration options provided in the request, which represents the service’s scheduler. Cosmos POSTs to Marathon to create the app.</p>
+</li>
+<li>
+<p>Marathon launches the confluent-zookeeper package’s scheduler somewhere in the cluster using the rendered app definition provided by Cosmos.</p>
+</li>
+<li>
+<p>The confluent-zookeeper packages’s scheduler is launched. From this point onwards, the Scheduler handles deployment.</p>
+</li>
+</ol>
+<h4 id="steps-handled-by-the-scheduler"><a class="content__anchor" href="#steps-handled-by-the-scheduler" aria-hidden="true"><i data-feather="bookmark"></i></a>Steps handled by the Scheduler</h4>
+<p>Confluent ZooKeeper’s <code>main()</code> function is run like any other Java application. The Scheduler starts with the following state:</p>
+<ul>
+<li>A <code>svc.yml</code> template that represents the service configuration.</li>
+<li>Environment variables provided by Marathon, to be applied onto the <code>svc.yml</code> template.</li>
+</ul>
+<ol>
+<li>
+<p>The <code>svc.yml</code> template is rendered using the environment variables provided by Marathon.</p>
+</li>
+<li>
+<p>The rendered <code>svc.yml</code> “Service Spec” contains the host/port for the ZooKeeper instance, which the Scheduler uses for persistent configuration/state storage. The default is <code>master.mesos:2181</code>, but may be manually configured to use a different ZooKeeper instance. The Scheduler always stores its information under a znode named <code>dcos-service-&lt;svcname&gt;</code>.</p>
+</li>
+<li>
+<p>The service scheduler connects to the DC/OS ZooKeeper instance at <code>master.mesos:2181</code> and checks the znode <code>dcos-service-&lt;svcname&gt;</code> to see if it has previously stored a Mesos Framework ID for itself.</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>If the Framework ID is present, the scheduler will attempt to reconnect to Mesos using that ID. This may result in a “Framework has been removed” error if Mesos doesn’t recognize that Framework ID, indicating an incomplete uninstall.</p>
+</li>
+<li>
+<p>If the Framework ID is not present, the scheduler will attempt to register with Mesos as a Framework. Assuming this is successful, the resulting Framework ID is then immediately stored.</p>
+</li>
+</ul>
+<ol>
+<li>
+<p>Now that the Scheduler has registered as a Mesos Framework, it is able to start interacting with Mesos and receiving offers. When this begins, the scheduler will begin running the <a href="#offer-cycle">Offer Cycle</a> and deploying the service. See that section for more information.</p>
+</li>
+<li>
+<p>The Scheduler retrieves its deployed task state from ZooKeeper and finds that there are tasks that should be launched. This is the first launch, so all tasks need to be launched.</p>
+</li>
+<li>
+<p>The Scheduler deploys those missing tasks through the Mesos offer cycle using a <a href="#plans">Deployment Plan</a> to determine the ordering of that deployment.</p>
+</li>
+<li>
+<p>Once the Scheduler has launched the missing tasks, its current configuration should match the desired configuration defined by the “Service Spec” extracted from <code>svc.yml</code>.</p>
+<ol>
+<li>When the current configuration matches the desired configuration, the Scheduler will tell Mesos to suspend sending new offers, as there’s nothing to be done.</li>
+<li>The Scheduler idles until it receives an RPC from Mesos notifying it of a task status change, it receives an RPC from an end user against one of its HTTP APIs, or until it is killed by Marathon as the result of a configuration change.</li>
+</ol>
+</li>
+</ol>
+<h3 id="reconfiguration"><a class="content__anchor" href="#reconfiguration" aria-hidden="true"><i data-feather="bookmark"></i></a>Reconfiguration</h3>
+<p>This is the process when a configuration update is issued to a running instance of the service.</p>
+<h4 id="steps-handled-by-the-dcos-cluster-2"><a class="content__anchor" href="#steps-handled-by-the-dcos-cluster-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Steps handled by the DC/OS cluster</h4>
+<ol>
+<li>The user edits the Scheduler’s configuration either using the Scheduler CLI’s <code>update</code> command or via the DC/OS web interface.</li>
+<li>The DC/OS package manager instructs Marathon to kill the current Scheduler and launch a new Scheduler with the updated configuration.</li>
+</ol>
+<h4 id="steps-handled-by-the-scheduler-2"><a class="content__anchor" href="#steps-handled-by-the-scheduler-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Steps handled by the Scheduler</h4>
+<p>As with initial install above, at this point the Scheduler is re-launched with the same two sources of information it had before:</p>
+<ul>
+<li><code>svc.yml</code> template</li>
+<li>New environment variables</li>
+</ul>
+<p>In addition, the Scheduler now has an additional piece:</p>
+<ul>
+<li>Pre-existing state in ZooKeeper</li>
+</ul>
+<p>Scheduler reconfiguration is slightly different from initial deployment because the Scheduler is now comparing its current state to a non-empty prior state and determining what needs to be changed.</p>
+<ol>
+<li>After the Scheduler has rendered its <code>svc.yml</code> against the new environment variables, it has two Service Specs, reflecting two different configurations.
+<ol>
+<li>The Service Spec that was just rendered, reflecting the configuration change.</li>
+<li>The prior Service Spec (or “Target Configuration”) that was previously stored in ZooKeeper.</li>
+</ol>
+</li>
+<li>The Scheduler automatically compares the changes between the old and new Service Specs.
+<ol>
+<li><strong>Change validation</strong>: Certain changes, such as editing volumes and scale-down, are not currently supported.
+<ul>
+<li>If an invalid change is detected, the Scheduler will send an error message and refuse to proceed until the user has reverted the change by relaunching the Scheduler app in Marathon with the prior configuration.</li>
+<li>If the changes are valid, the new configuration is stored in ZooKeeper as the new Target Configuration and the change deployment proceeds as described below.</li>
+</ul>
+</li>
+<li><strong>Change deployment</strong>: The Scheduler produces a <code>diff</code> between the current state and some future state, including all of the Mesos calls (reserve, unreserve, launch, destroy, and so on) needed to get there. For example, if the number of tasks has been increased, then the Scheduler will launch the correct number of new tasks. If a task configuration setting has been changed, the Scheduler will deploy that change to the relevant affected tasks by relaunching them. Tasks that are not affected by the configuration change will be left as-is.</li>
+</ol>
+</li>
+</ol>
+<h3 id="uninstall"><a class="content__anchor" href="#uninstall" aria-hidden="true"><i data-feather="bookmark"></i></a>Uninstall</h3>
+<p>This is the process for uninstalling the DC/OS Confluent ZooKeeper service.</p>
+<h4 id="steps-handled-by-the-cluster"><a class="content__anchor" href="#steps-handled-by-the-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>Steps handled by the cluster</h4>
+<ol>
+<li>The user uses the DC/OS CLI’s <code>dcos package uninstall</code> command to uninstall the service.</li>
+<li>The DC/OS package manager instructs Marathon to kill the current Scheduler and to launch a new Scheduler with the environment variable <code>SDK_UNINSTALL</code> set to “true”.</li>
+</ol>
+<h4 id="steps-handled-by-the-scheduler-3"><a class="content__anchor" href="#steps-handled-by-the-scheduler-3" aria-hidden="true"><i data-feather="bookmark"></i></a>Steps handled by the Scheduler</h4>
+<p class="message--warning"><strong>WARNING: </strong>Any data stored in reserved disk resources will be irretrievably lost.</p>
+<p>When started in uninstall mode, the Scheduler performs the following actions:</p>
+<ul>
+<li>All running service tasks are killed.</li>
+<li>Any Mesos resource reservations are unreserved.</li>
+<li>The pre-existing state in ZooKeeper is deleted. The znode <code>dcos-service-&lt;svc-name&gt;</code> will be left behind. This is due to the structure of the ACLs on the root (<code>/</code>) of the DC/OS ZooKeeper.</li>
+</ul>
+<h2 id="offer-cycle"><a class="content__anchor" href="#offer-cycle" aria-hidden="true"><i data-feather="bookmark"></i></a>Offer Cycle</h2>
+<p>The Offer Cycle is a core Mesos concept and often a source of confusion when running services on Mesos.</p>
+<p>Mesos will periodically notify subscribed Schedulers of resources in the cluster. Schedulers are expected to either accept the offered resources or decline them. In this structure, Schedulers never have a complete picture of the cluster, they only know what is being explicitly offered to them at any given time. This allows Mesos the option of only advertising certain resources to specific Schedulers, without requiring any changes on the Scheduler’s end, but it also means that the Scheduler cannot deterministically know whether it has seen everything that is available in the cluster.</p>
+<p>The service scheduler performs the following operations as offers are received from Mesos:</p>
+<ol>
+<li><strong>Task Reconciliation</strong>: Mesos is the source of truth for what is running on the cluster. Task Reconciliation allows Mesos to convey the status of all tasks being managed by the service. The Scheduler will request a Task Reconciliation during initial startup, and Mesos will then send the current status of that Scheduler’s tasks. This allows the Scheduler to catch up with any potential status changes to its tasks that occurred after the Scheduler was last running. A common pattern in Mesos is to reserve most information about tasks, so this only contains status information, not general task information. The Scheduler keeps its own copy of what it knows about tasks in ZooKeeper. During an initial deployment this process is very fast as no tasks have been launched yet.</li>
+<li><strong>Offer Acceptance</strong>: Once the Scheduler has finished Task Reconciliation, it will start evaluating the resource offers it receives to determine if any match the requirements of the next task(s) to be launched. At this point, users on small clusters may find that the Scheduler isn’t launching tasks. This is generally because the Scheduler isn’t able to find offered machines with enough room to fit the tasks. To fix this, add more/bigger machines to the cluster, or reduce the requirements of the service.</li>
+<li><strong>Resource Cleanup</strong>: The Offers provided by Mesos include reservation information if those resources were previously reserved by the Scheduler. The Scheduler will automatically request that any unrecognized but reserved resources be automatically unreserved. This can come up in a few situations; for example, if an agent machine was unavailable for several days and then came back, its resources may still be considered reserved by Mesos as reserved by the service, while the Scheduler does not. At this point, the Scheduler will automatically clean up those resources.</li>
+</ol>
+<p>The service scheduler declines all offers that do not match what it is currently trying to launch “forever”. In the case that the workset of the scheduler changes, it will revive offers from Mesos. Mesos will also send any “novel” offers to the scheduler, such as when a different service is removed and new resources become available on an agent.</p>
+<h4 id="permanent-and-temporary-recovery"><a class="content__anchor" href="#permanent-and-temporary-recovery" aria-hidden="true"><i data-feather="bookmark"></i></a>Permanent and temporary recovery</h4>
+<p>There are two types of recovery, permanent and temporary. The difference is mainly whether the task being recovered should stay on the same machine, and the side effects that result from that.</p>
+<ul>
+<li><strong>Temporary</strong> recovery:
+<ul>
+<li>Temporary recovery is triggered when there is an error in the task or the host machine.</li>
+<li>Recovery involves relaunching the task on the same machine as before.</li>
+<li>Recovery occurs automatically.</li>
+<li>Any data in the task’s persistent volumes survives the outage.</li>
+<li>May be manually triggered by a <code>pod restart</code> command.</li>
+</ul>
+</li>
+<li><strong>Permanent</strong> recovery:
+<ul>
+<li>Permanent recovery can be requested when the host machine fails permanently or when the host machine is scheduled for downtime.</li>
+<li>Recovery involves discarding any persistent volumes that the pod had on the host machine.</li>
+<li>Recovery only occurs in response to a manual <code>pod replace</code> command (or you may build your own tooling to invoke the <code>replace</code> command).</li>
+</ul>
+</li>
+</ul>
+<p>Triggering a permanent recovery is a destructive operation, as it discards any prior persistent volumes for the pod being recovered. This is desirable when the operator knows that the previous machine is not coming back. For safety’s sake, permanent recovery is currently <strong>never</strong> automatically triggered by the service itself.</p>
+<h2 id="persistent-volumes"><a class="content__anchor" href="#persistent-volumes" aria-hidden="true"><i data-feather="bookmark"></i></a>Persistent Volumes</h2>
+<p>Volumes are advertised as resources by Mesos, and Mesos offers multiple types of persistent volumes. The DC/OS Confluent ZooKeeper service supports two of these types: ROOT volumes and MOUNT volumes.</p>
+<ul>
+<li>
+<p><strong>ROOT</strong> volumes:</p>
+<ul>
+<li>Use a shared filesystem tree.</li>
+<li>Share I/O with anything else on that filesystem.</li>
+<li>Are supported by default in new deployments and do not require additional cluster-level configuration.</li>
+<li>Are allocated exactly the amount of disk space that was requested.</li>
+</ul>
+</li>
+<li>
+<p><strong>MOUNT</strong> volumes:</p>
+<ul>
+<li>Use a dedicated partition.</li>
+<li>Have dedicated I/O for the partition.</li>
+<li>Require <a href="/dcosdocs/mesosphere/dcos/latest/storage/mount-disk-resources/">additional configuration</a> when setting up the DC/OS cluster.</li>
+<li>Are allocated the entire partition, so allocated space can far exceed what was originally requested. MOUNT volumes cannot be further subdivided between services.</li>
+</ul>
+</li>
+</ul>
+<p>The fact that MOUNT volumes cannot be subdivided between services means that if multiple services are deployed with MOUNT volumes, they can quickly be unable to densely colocate within the cluster unless many MOUNT volumes are created on each agent. Let’s look at the following deployment scenario across three DC/OS agent machines, each with two enabled MOUNT volumes labeled A and B:</p>
+<pre><code>Agent 1: A B
+Agent 2: A B
+Agent 3: A B
+</code></pre>
+<p>Now we install a service X with two nodes that each use one mount volume. The service consumes volume A on agents 1 and 3:</p>
+<pre><code>Agent 1: X B
+Agent 2: A B
+Agent 3: X B
+</code></pre>
+<p>Now a service Y is installed with two nodes that each use two mount volumes. The service consumes volume A and B on agent 2, but then is stuck without being able to deploy anything else:</p>
+<pre><code>Agent 1: X B
+Agent 2: Y Y
+Agent 3: X B
+</code></pre>
+<p>Configuring <code>ROOT</code> vs <code>MOUNT</code> volumes may depend on the service. Some services will support customizing this setting when it is relevant, while others may assume one or the other.</p>
+<h2 id="secrets-enterprise"><a class="content__anchor" href="#secrets-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>Secrets <span class="badge badge--shortcode badge--large badge--block badge--enterprise">Enterprise</span></h2>
+<p>Enterprise DC/OS provides a secrets store to enable access to sensitive data such as database passwords, private keys, and API tokens. DC/OS manages secure transportation of secret data, access control and authorization, and secure storage of secret content.</p>
+<p>Secrets are available only in Enterprise DC/OS 1.10 and later versions. <a href="/1.11/security/ent/secrets/">Learn more about the secrets store</a>.</p>
+<h3 id="authorization-for-secrets"><a class="content__anchor" href="#authorization-for-secrets" aria-hidden="true"><i data-feather="bookmark"></i></a>Authorization for Secrets</h3>
+<p>The path of a secret defines which service IDs can have access to it. You can think of secret paths as namespaces. <strong>Only</strong> services that are under the same namespace can read the content of the secret.</p>
+<table>
+<thead>
+<tr>
+<th>Secret</th>
+<th>Service ID</th>
+<th>Can service access secret?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Secret_Path1</code></td>
+<td><code>/user</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>Secret_Path1</code></td>
+<td><code>/dev1/user</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>secret-svc/Secret_Path1</code></td>
+<td><code>/user</code></td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>secret-svc/Secret_Path1</code></td>
+<td><code>/user/dev1</code></td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>secret-svc/Secret_Path1</code></td>
+<td><code>/secret-svc</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>secret-svc/Secret_Path1</code></td>
+<td><code>/secret-svc/dev1</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>secret-svc/Secret_Path1</code></td>
+<td><code>/secret-svc/instance2/dev2</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>secret-svc/Secret_Path1</code></td>
+<td><code>/secret-svc/a/b/c/dev3</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>secret-svc/instance1/Secret_Path2</code></td>
+<td><code>/secret-svc/dev1</code></td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>secret-svc/instance1/Secret_Path2</code></td>
+<td><code>/secret-svc/instance2/dev3</code></td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>secret-svc/instance1/Secret_Path2</code></td>
+<td><code>/secret-svc/instance1</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>secret-svc/instance1/Secret_Path2</code></td>
+<td><code>/secret-svc/instance1/dev3</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>secret-svc/instance1/Secret_Path2</code></td>
+<td><code>/secret-svc/instance1/someDir/dev3</code></td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<table class=“table note” bgcolor=#7d58ff>
+<tr> 
+  <td align=justify style=color:white><strong>Note:</strong> Absolute paths (paths with a leading slash) to secrets are not supported. The file path for a secret must be relative to the sandbox.</td> 
+</tr> 
+</table>
+<h3 id="binary-secrets"><a class="content__anchor" href="#binary-secrets" aria-hidden="true"><i data-feather="bookmark"></i></a>Binary Secrets</h3>
+<p>You can store binary files, like a Kerberos keytab, in the DC/OS secrets store. In DC/OS 1.11 and later, you can create secrets from binary files directly. In DC/OS 1.10 or earlier versions, files must be base64-encoded, as specified in RFC 4648, prior to being stored as secrets.</p>
+<h4 id="dcos-111-and-later"><a class="content__anchor" href="#dcos-111-and-later" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS 1.11 and later</h4>
+<p>To create a secret called <code>mysecret</code> with the binary contents of <code>kerb5.keytab</code> run:</p>
+<pre><code class="language-bash">dcos security secrets create --file kerb5.keytab mysecret
+</code></pre>
+<h4 id="dcos-110-or-earlier"><a class="content__anchor" href="#dcos-110-or-earlier" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS 1.10 or earlier</h4>
+<p>To create a secret called <code>mysecret</code> with the binary contents of <code>kerb5.keytab</code>, first encode it using the <code>base64</code> command line utility. The following example uses BSD <code>base64</code> (default on Mac OS).</p>
+<pre><code class="language-bash">base64 --input krb5.keytab &gt; kerb5.keytab.base64-encoded
+</code></pre>
+<p>Alternatively, GNU <code>base64</code> (the default on Linux) inserts line-feeds in the encoded data by default. Disable line-wrapping with the <code>-w 0</code> argument.</p>
+<pre><code class="language-bash">base64 -w 0 krb5.keytab &gt; kerb5.keytab.base64-encoded
+</code></pre>
+<p>Now that the file is encoded it can be stored as a secret.</p>
+<pre><code class="language-bash">dcos security secrets create --text-file kerb5.keytab.base64-encoded some/path/__dcos_base64__mysecret
+</code></pre>
+<p class="message--important"><strong>IMPORTANT: </strong> The secret name <strong>must</strong> be prefixed with "__dcos_base64__".</p>
+<p>When the <code>some/path/__dcos_base64__mysecret</code> secret is <a href="https://mesosphere.github.io/dcos-commons/developer-guide.html">referenced in your service definition</a>, its base64-decoded contents will be made available as a <a href="http://mesos.apache.org/documentation/latest/secrets/#file-based-secrets">temporary file</a> in your service task containers.</p>
+<p class="message--note"><strong>NOTE: </strong> Make sure to only refer to binary secrets as files, since holding binary content in environment variables is discouraged.</p> 
+<h2 id="service-scheduler-metrics"><a class="content__anchor" href="#service-scheduler-metrics" aria-hidden="true"><i data-feather="bookmark"></i></a>Service Scheduler Metrics</h2>
+<p>The service scheduler records a number of metrics that can be used to diagnose issues with the scheduler and monitor the performance of the scheduler. The metrics can be consumed via DC/OS metrics, or pulled directly from the service scheduler.</p>
+<h3 id="json"><a class="content__anchor" href="#json" aria-hidden="true"><i data-feather="bookmark"></i></a>JSON</h3>
+<p>A JSON representation of the metrics is available at the <code>/v1/metrics</code> endpoint of the service scheduler.</p>
+<pre><code class="language-json">{
+	&quot;version&quot;: &quot;3.1.3&quot;,
+	&quot;gauges&quot;: {},
+	&quot;counters&quot;: {
+		&quot;declines.long&quot;: {
+			&quot;count&quot;: 15
+		},
+		&quot;offers.processed&quot;: {
+			&quot;count&quot;: 18
+		},
+		&quot;offers.received&quot;: {
+			&quot;count&quot;: 18
+		},
+		&quot;operation.create&quot;: {
+			&quot;count&quot;: 5
+		},
+		&quot;operation.launch_group&quot;: {
+			&quot;count&quot;: 3
+		},
+		&quot;operation.reserve&quot;: {
+			&quot;count&quot;: 20
+		},
+		&quot;revives&quot;: {
+			&quot;count&quot;: 3
+		},
+		&quot;task_status.task_running&quot;: {
+			&quot;count&quot;: 6
+		}
+	},
+	&quot;histograms&quot;: {},
+	&quot;meters&quot;: {},
+	&quot;timers&quot;: {
+		&quot;offers.process&quot;: {
+			&quot;count&quot;: 10,
+			&quot;max&quot;: 0.684745927,
+			&quot;mean&quot;: 0.15145255818999337,
+			&quot;min&quot;: 5.367950000000001E-4,
+			&quot;p50&quot;: 0.0035879090000000002,
+			&quot;p75&quot;: 0.40317217800000005,
+			&quot;p95&quot;: 0.684745927,
+			&quot;p98&quot;: 0.684745927,
+			&quot;p99&quot;: 0.684745927,
+			&quot;p999&quot;: 0.684745927,
+			&quot;stddev&quot;: 0.24017017290826104,
+			&quot;m15_rate&quot;: 0.5944843686231079,
+			&quot;m1_rate&quot;: 0.5250565015924039,
+			&quot;m5_rate&quot;: 0.583689104996544,
+			&quot;mean_rate&quot;: 0.3809369986002824,
+			&quot;duration_units&quot;: &quot;seconds&quot;,
+			&quot;rate_units&quot;: &quot;calls/second&quot;
+		}
+	}
+}
+</code></pre>
+<h3 id="prometheus"><a class="content__anchor" href="#prometheus" aria-hidden="true"><i data-feather="bookmark"></i></a>Prometheus</h3>
+<p>A Prometheus representation of the metrics is available at the <code>/v1/metrics/prometheus</code> endpoint of the service scheduler.</p>
+<pre><code># HELP declines_long Generated from Dropwizard metric import (metric=declines.long, type=com.codahale.metrics.Counter)
+# TYPE declines_long gauge
+declines_long 20.0
+# HELP offers_processed Generated from Dropwizard metric import (metric=offers.processed, type=com.codahale.metrics.Counter)
+# TYPE offers_processed gauge
+offers_processed 24.0
+# HELP offers_received Generated from Dropwizard metric import (metric=offers.received, type=com.codahale.metrics.Counter)
+# TYPE offers_received gauge
+offers_received 24.0
+# HELP operation_create Generated from Dropwizard metric import (metric=operation.create, type=com.codahale.metrics.Counter)
+# TYPE operation_create gauge
+operation_create 5.0
+# HELP operation_launch_group Generated from Dropwizard metric import (metric=operation.launch_group, type=com.codahale.metrics.Counter)
+# TYPE operation_launch_group gauge
+operation_launch_group 4.0
+# HELP operation_reserve Generated from Dropwizard metric import (metric=operation.reserve, type=com.codahale.metrics.Counter)
+# TYPE operation_reserve gauge
+operation_reserve 20.0
+# HELP revives Generated from Dropwizard metric import (metric=revives, type=com.codahale.metrics.Counter)
+# TYPE revives gauge
+revives 4.0
+# HELP task_status_task_finished Generated from Dropwizard metric import (metric=task_status.task_finished, type=com.codahale.metrics.Counter)
+# TYPE task_status_task_finished gauge
+task_status_task_finished 1.0
+# HELP task_status_task_running Generated from Dropwizard metric import (metric=task_status.task_running, type=com.codahale.metrics.Counter)
+# TYPE task_status_task_running gauge
+task_status_task_running 8.0
+# HELP offers_process Generated from Dropwizard metric import (metric=offers.process, type=com.codahale.metrics.Timer)
+# TYPE offers_process summary
+offers_process{quantile=&quot;0.5&quot;,} 2.0609500000000002E-4
+offers_process{quantile=&quot;0.75&quot;,} 2.2853200000000001E-4
+offers_process{quantile=&quot;0.95&quot;,} 0.005792643
+offers_process{quantile=&quot;0.98&quot;,} 0.005792643
+offers_process{quantile=&quot;0.99&quot;,} 0.111950848
+offers_process{quantile=&quot;0.999&quot;,} 0.396119612
+offers_process_count 244.0
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#advanced">Advanced</a></li><li class="content__sections-item content__sections-item--h2"><a href="#components">Components</a></li><li class="content__sections-item content__sections-item--h2"><a href="#deployment">Deployment</a></li><li class="content__sections-item content__sections-item--h2"><a href="#offer-cycle">Offer Cycle</a></li><li class="content__sections-item content__sections-item--h2"><a href="#persistent-volumes">Persistent Volumes</a></li><li class="content__sections-item content__sections-item--h2"><a href="#secrets-enterprise">Secrets Enterprise</a></li><li class="content__sections-item content__sections-item--h2"><a href="#service-scheduler-metrics">Service Scheduler Metrics</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

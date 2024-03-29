@@ -1,0 +1,174 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>配置 OpenID 身份提供程序 - D2iQ Docs</title><meta name="description" content="配置 OpenID 身份提供程序"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.1/security/ent/sso/setup-openid">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/sso/setup-openid">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/sso/setup-openid">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/sso/setup-openid">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/"><i data-feather="chevron-right"></i>网络</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/"><i data-feather="chevron-right"></i>安全</a></li><ul><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/"><i data-feather="chevron-right"></i>DC/OS Enterprise 安全性</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/users-groups/"><i data-feather="chevron-right"></i>管理用户和组</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/gui-permissions/"><i data-feather="chevron-right"></i>授予访问 UI 的权限</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/perms-management/">权限管理</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/perms-reference/">权限参考</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/ldap/"><i data-feather="chevron-right"></i>LDAP 身份认证</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/secrets/"><i data-feather="chevron-right"></i>密钥</a></li><li class="active"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/sso/"><i data-feather="chevron-right"></i>基于身份提供程序的身份认证</a></li><ul><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/sso/setup-saml/">配置 SAML IdP</a></li><li class="active active-on"><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/sso/setup-openid/">配置 OpenID Connect IdP</a></li></ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/service-auth/"><i data-feather="chevron-right"></i>服务认证</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/restrict-service-access/">限制对 DC/OS 服务组的访问</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/hardening/">强化</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/iam-api/">身份和访问管理 API</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/tls-ssl/"><i data-feather="chevron-right"></i>确保与 TLS 通信的安全</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/oss/"><i data-feather="chevron-right"></i>DC/OS 开源安全</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">配置 OpenID 身份提供程序</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">配置 OpenID 身份提供程序</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/sso/setup-openid/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- The source repository for this topic is https://github.com/dcos/dcos-docs-site -->
+<p>该部分讨论了 OpenID IdP 的一般要求，并提供了设置 OneLogin IdP 的分步程序。</p>
+<p>DC/OS Enterprise 可与使用 OpenID Connect 1.0 的任何身份提供程序 (Idp) 集成。以下程序将采用 Google IdP 作为示例，并引导您完成设置流程的每个步骤。</p>
+<h1 id="openid-connect"><a class="content__anchor" href="#openid-connect" aria-hidden="true"><i data-feather="bookmark"></i></a>添加 OpenID Connect 身份提供程序：</h1>
+<p>您可以在 Google 或 DC/OS 中添加 Google OpenID Connect IdP。</p>
+<h2 id="google-idp"><a class="content__anchor" href="#google-idp" aria-hidden="true"><i data-feather="bookmark"></i></a>在 Google 中配置 IdP</h2>
+<ol>
+<li>
+<p>访问 <a href="https://console.developers.google.com/apis/credentials?project=_">Google Developer Console 的凭据页面</a>.</p>
+</li>
+<li>
+<p>如果您已经有项目，请单击 <strong>Select a Project</strong>，选择项目，然后单击 <strong>Open</strong>。</p>
+<p>如果您还没有项目，请单击 <strong>Create a project</strong>，在 <strong>Project Name</strong> 框中键入项目名称，选择加入或退出电子邮件通信，接受服务条款，然后单击 <strong>Create</strong>。</p>
+</li>
+<li>
+<p>在 <strong>Credentials</strong> 对话框中，选择 <strong>OAuth client ID</strong>。</p>
+</li>
+<li>
+<p>单击 <strong>Configure consent screen</strong>。</p>
+</li>
+<li>
+<p>下一个屏幕允许您提供一系列信息，以便在用户提供凭据时显示给用户。至少，您必须在 <strong>Product name shown to users</strong> 框中指定 IdP 的名称。</p>
+</li>
+<li>
+<p>点击<strong>保存</strong>。</p>
+</li>
+<li>
+<p>选择 <strong>Web 应用程序</strong> 作为 <strong>应用程序类型</strong>。</p>
+</li>
+<li>
+<p>在 <strong>Name</strong> 框中键入 IdP 的名称。</p>
+</li>
+<li>
+<p>将群集的 URL 粘贴到 <strong>Authorized Javascript origins</strong>框中。例如：<code>https://jp-ybwutd-elasticl-1r2iui8i0z9b7-1590150926.us-west-2.elb.amazonaws.com</code></p>
+<p>如果您的群集前端有负载均衡器（推荐），则群集 URL 将成为负载均衡器的路径。群集 URL 与 DC/OS UI 的路径相同，可从浏览器栏复制。或者，您可以登录到 DC/OS CLI 并键入 <code>dcos config show core.dcos_url</code> 以获取群集 URL。</p>
+</li>
+<li>
+<p>也将您的群集 URL 粘贴到 <strong>Authorized redirect URIs</strong> 字段。</p>
+</li>
+<li>
+<p>将 <code>/acs/api/v1/auth/oidc/callback</code> 粘贴到  <strong>Authorized redirect URIs</strong> 字段中您群集 URL 的末尾处。例如：<code>https://jp-ybwutd-elasticl-1r2iui8i0z9b7-1590150926.us-west-2.elb.amazonaws.com/acs/api/v1/auth/oidc/callback</code></p>
+</li>
+<li>
+<p>单击 <strong>Create</strong>。</p>
+</li>
+<li>
+<p>将客户端 ID 和客户端密钥值复制并粘贴到文本文件中。</p>
+</li>
+</ol>
+<h2 id="dcos-idp"><a class="content__anchor" href="#dcos-idp" aria-hidden="true"><i data-feather="bookmark"></i></a>在 DC/OS 中配置 IdP</h2>
+<ol>
+<li>
+<p>以具有 <code>dcos:superuser</code> 权限的用户身份登录 DC/OS UI。</p>
+</li>
+<li>
+<p>打开 <strong>Settings</strong> -&gt; <strong>Identity Providers</strong> 选项卡。</p>
+</li>
+<li>
+<p>单击右上方的 <strong>+</strong> 图标。</p>
+</li>
+<li>
+<p>单击 <strong>OpenID Connect</strong>。</p>
+</li>
+<li>
+<p>在 <strong>Provider ID</strong> 字段中键入您的 IdP 名称。此名称将在 URL 中传递，因此请确保它仅包含小写字母数字和 <code>-</code> 字符。例如：<code>google-idp</code>.</p>
+</li>
+<li>
+<p>在 <strong>Description</strong> 字段中键入 IdP 的可读名称。例如，<code>Google</code>.</p>
+</li>
+<li>
+<p>将以下内容粘贴到 <strong>Issuer</strong> 字段：<code>https://accounts.google.com</code>.</p>
+</li>
+<li>
+<p>将您的群集 URL 粘贴到 <strong>Base URI</strong> 字段。有关获取此值的更多信息，请参阅前一部分。</p>
+</li>
+<li>
+<p>将客户端 ID 值从 Google 粘贴到 <strong>Client ID</strong> 字段。</p>
+</li>
+<li>
+<p>将客户端密钥从 Google 粘贴到 <strong>Client Secret</strong> 字段。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/GUI-LDAP-Add-Oidc.png" alt="Google IdP 配置"></p>
+<p>图 1. Google IdP 配置</p>
+</li>
+<li>
+<p>单击 <strong>添加提供商</strong>。</p>
+</li>
+<li>
+<p>您现在应该能在 DC/OS UI 中看到新的 IdP。</p>
+</li>
+</ol>
+<h2 id="idp"><a class="content__anchor" href="#idp" aria-hidden="true"><i data-feather="bookmark"></i></a>验证 IdP</h2>
+<h3 id="idp-2"><a class="content__anchor" href="#idp-2" aria-hidden="true"><i data-feather="bookmark"></i></a>关于验证 IdP</h3>
+<p>您可以使用以下任一方法来验证您是否已正确设置 IdP。</p>
+<ul>
+<li><a href="#using-gui">使用 DC/OS UI</a></li>
+<li><a href="#using-cli">使用 DC/OS CLI</a></li>
+</ul>
+<h3 id="dcos-gui"><a class="content__anchor" href="#dcos-gui" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="using-gui"></a>使用 DC/OS GUI</h3>
+<ol>
+<li>
+<p>退出 DC/OS GUI。</p>
+</li>
+<li>
+<p>您应该在登录对话框中看到一个新按钮，该按钮显示 <strong>LOGIN WITH GOOGLE</strong>。</p>
+</li>
+<li>
+<p>单击新按钮。</p>
+</li>
+<li>
+<p>您将被重定向至 Google。</p>
+</li>
+<li>
+<p>单击以允许 DC/OS 访问您的 Google 帐户信息。</p>
+</li>
+<li>
+<p>您应该看到来自 DC/OS 的<strong>访问被拒绝</strong>消息。这表示登录成功，用户账户已添加到 DC/OS，但新用户没有权限，因此无法查看 DC/OS Web UI 中的任何内容。</p>
+</li>
+<li>
+<p>单击 <strong>LOG OUT</strong>。</p>
+</li>
+<li>
+<p>使用 <code>dcos:superuser</code> 权限以用户身份重新登录。</p>
+</li>
+<li>
+<p>打开 <strong>Organization</strong> -&gt; <strong>Users</strong> 选项卡。</p>
+</li>
+<li>
+<p>您应该看到所列的新用户。</p>
+</li>
+<li>
+<p>为此用户分配适当的<a href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/perms-reference/">权限</a>.</p>
+</li>
+</ol>
+<h3 id="dcos-cli"><a class="content__anchor" href="#dcos-cli" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="using-cli"></a>使用 DC/OS CLI</h3>
+<p><strong>先决条件：</strong><a href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/install/">已安装 DC/OS CLI</a>.</p>
+<ol>
+<li>
+<p>使用以下命令以新用户身份登录。</p>
+<pre><code class="language-bash">dcos auth login --provider=google-idp --username=&lt;user-email&gt; --password=&lt;secret-password&gt;
+</code></pre>
+</li>
+<li>
+<p>CLI 应返回类似以下内容的消息。</p>
+<pre><code class="language-bash">Please go to the following link in your browser:
+
+ https://eanicich-elasticl-c3kpgqk7jdft-820516824.us-west-2.elb.amazonaws.com/acs/api/v1/auth/login?oidc-provider=google-idp&amp;target=dcos:authenticationresponse:html
+</code></pre>
+</li>
+<li>
+<p>复制路径并将其粘贴到浏览器中。</p>
+</li>
+<li>
+<p>您应该看到类似以下内容的消息。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/cli-auth-token.png" alt="CLI IdP 认证令牌"></p>
+<p>图 2. CLI IdP 认证令牌</p>
+</li>
+<li>
+<p>单击 <strong>Copy to clipboard</strong>。</p>
+</li>
+<li>
+<p>返回到终端提示符并粘贴认证令牌值。</p>
+</li>
+<li>
+<p>您应该收到以下消息。</p>
+<pre><code class="language-bash">Login successful!
+</code></pre>
+</li>
+</ol>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#openid-connect">添加 OpenID Connect 身份提供程序：</a></li><li class="content__sections-item content__sections-item--h2"><a href="#google-idp">在 Google 中配置 IdP</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-idp">在 DC/OS 中配置 IdP</a></li><li class="content__sections-item content__sections-item--h2"><a href="#idp">验证 IdP</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Migrate from Marathon-LB to Edge-LB - D2iQ Docs</title><meta name="description" content="Demonstrates how to migrate from Marathon-LB to Edge-LB Auto Pools"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Edge Lb Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li><li class="chooser-list-item"><a href="/dkp/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services/edge-lb">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__item"><a href="/dkp/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/mlb-to-edge-lb-migration">Edge-LB 1.7</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.6/getting-started/mlb-to-edge-lb-migration">Edge-LB 1.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.5/getting-started">Edge-LB 1.5</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.4/getting-started">Edge-LB 1.4</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.3">Edge-LB 1.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.2">Edge-LB 1.2</a></li></ul><div class="toggle"><p><span class="title">Edge Lb</span><span class="version"> 1.7</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/concepts/"><i data-feather="chevron-right"></i>Edge-LB concepts</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/"><i data-feather="chevron-right"></i>Getting started with Edge-LB</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/installing/">Install Edge-LB</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/comparing-load-balancers/">Comparing load balancing services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/auto-pools/">Automatically exposing apps with Auto Pools and labels</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/single-lb/">Expose and load balance a sample service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/edge-lb-mlb-example/">Compare Edge-LB to Marathon-LB</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/mlb-to-edge-lb-migration/">Migrate from Marathon-LB to Edge-LB</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/how-to-tasks/"><i data-feather="chevron-right"></i>How-to guides for Edge-LB</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/reference/"><i data-feather="chevron-right"></i>Reference information</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/related-documentation/"><i data-feather="chevron-right"></i>Related documentation</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Migrate from Marathon-LB to Edge-LB</h1></div><h4 class="content__header-description">Demonstrates how to migrate from Marathon-LB to Edge-LB Auto Pools</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/mlb-to-edge-lb-migration/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+Migrate+from+Marathon-LB+to+Edge-LB&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/mlb-to-edge-lb-migration&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><h1 id="before-you-begin"><a class="content__anchor" href="#before-you-begin" aria-hidden="true"><i data-feather="bookmark"></i></a>Before you begin</h1>
+<p>You must have:</p>
+<ul>
+<li>The Edge-LB API server installed as described in the Edge-LB
+<a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/installing">installation instructions</a>.</li>
+<li>The DC/OS command-line interface (CLI) installed and configured to
+communicate with the DC/OS™ cluster.</li>
+<li>The <code>edgelb</code> command-line interface (CLI) installed.</li>
+<li>An active and properly-configured DC/OS cluster with at least one DC/OS
+<strong>private agent</strong> node to run the load-balanced service and at least two
+DC/OS <strong>public agent</strong> nodes for exposing the load-balanced service.</li>
+<li>Marathon-LB installed as described in the Marathon-LB
+<a href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.14/mlb-install">installation instructions</a>.</li>
+</ul>
+<h1 id="migrating-from-marathon-lb-to-edge-lb-auto-pools"><a class="content__anchor" href="#migrating-from-marathon-lb-to-edge-lb-auto-pools" aria-hidden="true"><i data-feather="bookmark"></i></a>Migrating from Marathon-LB to Edge-LB Auto Pools</h1>
+<p>Edge-LB Auto Pools and Marathon-LB both support exposing services based on task
+labels. While Marathon-LB only supports Marathon Applications, Edge-LB Auto
+Pools supports all Mesos tasks.</p>
+<h2 id="label-support"><a class="content__anchor" href="#label-support" aria-hidden="true"><i data-feather="bookmark"></i></a>Label Support</h2>
+<p>Marathon-LB supports a mix of high-level labels and low-level labels where
+haproxy configuration sections are inserted directly from the label. The
+ability to override any section of the haproxy configuration, while powerful,
+is fragile and error prone. As such, Edge-LB does not support haproxy override
+directly from labels. Instead, an Edge-LB <a href="https://link/to/pool"><code>pool</code></a> object
+is generated from the labels, and processed as any other Edge-LB pool.</p>
+<p>Some advanced configurations that were possible with Marathon-LB soley with task
+labels containing portions of haproxy configurations are still possible with
+Edge-LB Auto Pools. However, because the haproxy configuration is decoupled
+from the label processing, it requires an edge-lb administrator to modify the
+template for the pool that the Auto Pool creates.</p>
+<p>Since Edge-LB Auto Pools and Marathon-LB labels do not overlap, it is possible
+to transition to Edge-LB Auto Pools by adding the new labels (preserving the
+existing Marathon-LB labels) and testing the Edge-LB Auto Pools configuration
+while Marathon-LB continues to serve traffic as usual.</p>
+<h2 id="label-mapping"><a class="content__anchor" href="#label-mapping" aria-hidden="true"><i data-feather="bookmark"></i></a>Label Mapping</h2>
+<p>The following table Marathon-LB iterates the common Marathon-LB labels and their
+conterpart label for Edge-LB Auto Pools.</p>
+<table>
+<thead>
+<tr>
+<th>Marathon-LB</th>
+<th>Edge-LB Auto Pools</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>HAPROXY_0_BALANCE</code></td>
+<td><code>edgelb.&lt;group&gt;.backend.balance</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>HAPROXY_0_ENABLED</code></td>
+<td><code>edgelb.expose</code></td>
+<td>Must be set for Edge-LB Auto Pools</td>
+</tr>
+<tr>
+<td><code>HAPROXY_GROUP</code></td>
+<td><code>edgelb.template</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>HAPROXY_0_HTTP_BACKEND_PROXYPASS_PATH</code></td>
+<td><code>edgelb.&lt;group&gt;.backend.rewriteHttp.path</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>HAPROXY_0_HTTP_BACKEND_REVPROXY_PATH</code></td>
+<td><code>edgelb.&lt;group&gt;.backend.rewriteHttp.path</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>HAPROXY_0_MODE</code></td>
+<td><code>edgelb.&lt;group&gt;.frontend.protocol</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>HAPROXY_0_PATH</code></td>
+<td><code>edgelb.&lt;group&gt;.frontend.rules</code></td>
+<td><code>pathBeg</code> key in rules</td>
+</tr>
+<tr>
+<td><code>HAPROXY_0_PORT</code></td>
+<td><code>edgelb.&lt;group&gt;.frontend.port</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>HAPROXY_0_REDIRECT_TO_HTTPS</code></td>
+<td><code>edgelb.&lt;group&gt;.frontend.redirectToHttps</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>HAPROXY_0_SSL_CERT</code></td>
+<td><code>edgelb.&lt;group&gt;.frontend.certificates</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>HAPROXY_0_STICKY</code></td>
+<td><code>edgelb.&lt;group&gt;.backend.rewriteHttp.sticky</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>HAPROXY_0_VHOST</code></td>
+<td><code>edgelb.&lt;group&gt;.frontend.rules</code></td>
+<td><code>hostEq</code> key in rules</td>
+</tr>
+</tbody>
+</table>
+<h2 id="migrating-an-nginx-site-from-marathon-lb-to-edge-lb"><a class="content__anchor" href="#migrating-an-nginx-site-from-marathon-lb-to-edge-lb" aria-hidden="true"><i data-feather="bookmark"></i></a>Migrating an NGINX site from Marathon-LB to Edge-LB</h2>
+<p>Since the labels for Edge-LB Auto Pools and Marathon-LB do not overlap, it is
+possible to migration from one to the other without any downtime.</p>
+<p>The following task defines a task that is exposed out via Marathon-LB with
+the domain <code>example.com</code>:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/nginx&quot;,
+  &quot;labels&quot;: {
+    &quot;HAPROXY_GROUP&quot;:&quot;external&quot;,
+    &quot;HAPROXY_0_VHOST&quot;: &quot;example.com&quot;
+  },
+  &quot;container&quot;: {
+    &quot;portMappings&quot;: [ {
+      &quot;containerPort&quot;: 80,
+      &quot;hostPort&quot;: 0,
+      &quot;protocol&quot;: &quot;tcp&quot;,
+      &quot;name&quot;: &quot;web&quot;
+      }],
+    &quot;type&quot;: &quot;MESOS&quot;,
+    &quot;docker&quot;: {&quot;image&quot;: &quot;nginx&quot;}
+  },
+  &quot;cpus&quot;: 0.1,
+  &quot;instances&quot;: 1,
+  &quot;mem&quot;: 128
+}
+</code></pre>
+<p>Assuming the IP of the Marathon-LB instance is <code>192.0.2.2</code>, the <code>--resolve</code>
+parameter to <code>curl</code> can inject this IP and send the correct host header
+for vHosting:</p>
+<pre><code class="language-sh">curl --resolve example.com:80:192.0.2.2 http://example.com
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Welcome to nginx!&lt;/title&gt;
+&lt;style&gt;
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Welcome to nginx!&lt;/h1&gt;
+&lt;p&gt;If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.&lt;/p&gt;
+
+&lt;p&gt;For online documentation and support please refer to
+&lt;a href=&quot;http://nginx.org/&quot;&gt;nginx.org&lt;/a&gt;.&lt;br/&gt;
+Commercial support is available at
+&lt;a href=&quot;http://nginx.com/&quot;&gt;nginx.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Thank you for using nginx.&lt;/em&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>The Edge-LB Auto Pools labels cannot be added to the task:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/nginx&quot;,
+  &quot;labels&quot;: {
+    &quot;HAPROXY_GROUP&quot;:&quot;external&quot;,
+    &quot;HAPROXY_0_VHOST&quot;: &quot;example.com&quot;,
+    &quot;edgelb.expose&quot;: &quot;true&quot;,
+    &quot;edgelb.web.frontend.rules&quot;: &quot;hostEq:example.com&quot;
+  },
+  &quot;container&quot;: {
+    &quot;portMappings&quot;: [ {
+      &quot;containerPort&quot;: 80,
+      &quot;hostPort&quot;: 0,
+      &quot;protocol&quot;: &quot;tcp&quot;,
+      &quot;name&quot;: &quot;web&quot;
+      }],
+    &quot;type&quot;: &quot;MESOS&quot;,
+    &quot;docker&quot;: {&quot;image&quot;: &quot;nginx&quot;}
+  },
+  &quot;cpus&quot;: 0.1,
+  &quot;instances&quot;: 1,
+  &quot;mem&quot;: 128
+}
+</code></pre>
+<p>Shortly after the labels being added to the task, Edge-LB will automatically
+start the <code>auto-default</code> pool:</p>
+<pre><code class="language-sh">dcos edgelb list
+  NAME          APIVERSION  COUNT  ROLE          PORTS
+  auto-default  V2          1      slave_public
+</code></pre>
+<p>The Edge-LB CLI can also show the endpoints for the pool:</p>
+<pre><code class="language-sh">dcos edgelb endpoints auto-default
+  NAME                 PORT  INTERNAL IPS   EXTERNAL IPS
+  frontend_0.0.0.0_80  80    172.16.40.219  192.0.2.103
+  stats                1025  172.16.40.219  192.0.2.103
+Public/private IPs metadata is inaccurate in case of pools that use virtual networks.
+</code></pre>
+<p>Using the <code>--resolve</code> parameter to curl to inject the correct host header, the
+Edge-LB endpoint can be validated to be functional:</p>
+<pre><code class="language-sh">curl --resolve example.com:80:192.0.2.103 http://example.com
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Welcome to nginx!&lt;/title&gt;
+&lt;style&gt;
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Welcome to nginx!&lt;/h1&gt;
+&lt;p&gt;If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.&lt;/p&gt;
+
+&lt;p&gt;For online documentation and support please refer to
+&lt;a href=&quot;http://nginx.org/&quot;&gt;nginx.org&lt;/a&gt;.&lt;br/&gt;
+Commercial support is available at
+&lt;a href=&quot;http://nginx.com/&quot;&gt;nginx.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Thank you for using nginx.&lt;/em&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>At this point the task is being exposed through Edge-LB and Marathon-LB at the
+same time. Now a standard DNS migration can be performed:</p>
+<ol>
+<li>Lower the TTL for <code>A</code> record for <code>example.com</code> to 300 seconds.</li>
+<li>Wait 48 hours, or the time specified in the <code>SOA</code> TTL, whichever is greater</li>
+<li>Change the <code>A</code> record for <code>example.com</code> to point to the Edge-LB endpoint, and
+optionally, reset the TTL back to its desired or original value.</li>
+<li>Within 5 minutes, traffic will start flowing through Edge-LB instead of
+Marathon-LB.</li>
+</ol>
+<p>Once traffic has been migrated over, the Marathon-LB labels can be removed from
+the task:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/nginx&quot;,
+  &quot;labels&quot;: {
+    &quot;edgelb.expose&quot;: &quot;true&quot;,
+    &quot;edgelb.web.frontend.rules&quot;: &quot;hostEq:example.com&quot;
+  },
+  &quot;container&quot;: {
+    &quot;portMappings&quot;: [ {
+      &quot;containerPort&quot;: 80,
+      &quot;hostPort&quot;: 0,
+      &quot;protocol&quot;: &quot;tcp&quot;,
+      &quot;name&quot;: &quot;web&quot;
+      }],
+    &quot;type&quot;: &quot;MESOS&quot;,
+    &quot;docker&quot;: {&quot;image&quot;: &quot;nginx&quot;}
+  },
+  &quot;cpus&quot;: 0.1,
+  &quot;instances&quot;: 1,
+  &quot;mem&quot;: 128
+}
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#before-you-begin">Before you begin</a></li><li class="content__sections-item content__sections-item--h1"><a href="#migrating-from-marathon-lb-to-edge-lb-auto-pools">Migrating from Marathon-LB to Edge-LB Auto Pools</a></li><li class="content__sections-item content__sections-item--h2"><a href="#label-support">Label Support</a></li><li class="content__sections-item content__sections-item--h2"><a href="#label-mapping">Label Mapping</a></li><li class="content__sections-item content__sections-item--h2"><a href="#migrating-an-nginx-site-from-marathon-lb-to-edge-lb">Migrating an NGINX site from Marathon-LB to Edge-LB</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

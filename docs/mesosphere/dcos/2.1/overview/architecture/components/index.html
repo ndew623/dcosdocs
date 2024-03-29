@@ -1,0 +1,527 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Components - D2iQ Docs</title><meta name="description" content="Understanding DC/OS components"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/architecture/components">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/overview/architecture/components">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/overview/architecture/components">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/overview/architecture/components">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/overview/architecture/components">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/overview/"><i data-feather="chevron-right"></i>Overview</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/overview/what-is-dcos/">What is DC/OS</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/overview/architecture/"><i data-feather="chevron-right"></i>Architecture</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/overview/architecture/node-types/">Node Types</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/overview/architecture/task-types/">Task Types</a></li><li class="active active-on"><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/overview/architecture/components/">Components</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/overview/architecture/distributed-process-management/">Distributed Process Management</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/overview/architecture/boot-sequence/">Boot Sequence</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/overview/features/">Features</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/overview/concepts/">Concepts</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/overview/high-availability/">High Availability</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/overview/design/"><i data-feather="chevron-right"></i>Design</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/overview/feature-maturity/">Feature Maturity</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Components</h1></div><h4 class="content__header-description">Understanding DC/OS components</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.1/overview/architecture/components/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>DC/OS is composed of many open source microservice components meticulously tuned and configured to work together. Mesosphere DC/OS Enterprise includes most of the open source DC/OS components but also includes several additional components, modules, and plugins.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.1/img/dcos-components-1-13.png" alt="Mesosphere DC/OS Enterprise Components"></p>
+<p>Figure 1 - DC/OS components</p>
+<p>From the top, DC/OS is an inclusive container platform that handles container orchestration, package management, and security. From the bottom, DC/OS is an operating system built on top of <a href="http://mesos.apache.org/">Apache Mesos</a> that handles cluster management and software defined networking, while simplifying logging and metrics collection.</p>
+<p><a name="cluster-management"><a></p>
+<h1 id="cluster-management"><a class="content__anchor" href="#cluster-management" aria-hidden="true"><i data-feather="bookmark"></i></a>Cluster management</h1>
+<p>DC/OS provides a way to view and operate a large number of individual machine-level systems as a single cluster-level system. It hides the complexity of Mesos, the distributed systems kernel, with higher level abstractions, interfaces, and tools. Cluster management is the core of that functionality, including the kernel, its dependencies, and its user interfaces.</p>
+<p><a name="apache-mesos"></a></p>
+<h2 id="apache-mesos"><a class="content__anchor" href="#apache-mesos" aria-hidden="true"><i data-feather="bookmark"></i></a>Apache Mesos</h2>
+<p>Mesos manages resources and tasks as a distributed systems kernel. Mesos Master exposes scheduler, executor, and operator interfaces to facilitate cluster management. Mesos Agent manages individual executors, tasks, and resources on each <a href="/dcosdocs/mesosphere/dcos/2.1/overview/concepts/#dcos-agent-node">DC/OS agent node</a>. Mesos Agent Public is a Mesos Agent configured to run on <a href="/dcosdocs/mesosphere/dcos/2.1/overview/concepts/#public-agent-node">DC/OS public agent nodes</a>.</p>
+<h3 id="system-services"><a class="content__anchor" href="#system-services" aria-hidden="true"><i data-feather="bookmark"></i></a>System services</h3>
+<ul>
+<li><code>dcos-mesos-master.service</code></li>
+<li><code>dcos-mesos-slave.service</code></li>
+<li><code>dcos-mesos-slave-public.service</code></li>
+</ul>
+<p>Read the following documentation resources to learn more about Apache Mesos:</p>
+<ul>
+<li><a href="http://mesos.apache.org/">Documentation</a></li>
+<li><a href="https://github.com/apache/mesos">Source</a></li>
+<li><a href="https://mesos.apache.org/documentation/latest/endpoints/">API Reference</a></li>
+</ul>
+<p><a name="apache-zookeeper"></a></p>
+<h2 id="apache-zookeeper"><a class="content__anchor" href="#apache-zookeeper" aria-hidden="true"><i data-feather="bookmark"></i></a>Apache ZooKeeper</h2>
+<p>ZooKeeper provides consistent, highly available, distributed key-value storage for configuration, synchronization, name registration, and cluster state storage.</p>
+<h3 id="system-services-2"><a class="content__anchor" href="#system-services-2" aria-hidden="true"><i data-feather="bookmark"></i></a>System services</h3>
+<p>N/A - ZooKeeper is supervised by Exhibitor.</p>
+<p>Read the following documentation resources to learn more about Apache ZooKeeper:</p>
+<ul>
+<li><a href="https://zookeeper.apache.org/">Documentation</a></li>
+<li><a href="https://github.com/apache/zookeeper">Source</a></li>
+</ul>
+<p><a name="exhibitor"></a></p>
+<h2 id="exhibitor"><a class="content__anchor" href="#exhibitor" aria-hidden="true"><i data-feather="bookmark"></i></a>Exhibitor</h2>
+<p>Exhibitor supervises ZooKeeper and provides a management web interface.</p>
+<h3 id="system-service"><a class="content__anchor" href="#system-service" aria-hidden="true"><i data-feather="bookmark"></i></a>System service</h3>
+<ul>
+<li><code>dcos-exhibitor.service</code></li>
+</ul>
+<p>Read the following documentation resources to learn more about Exhibitor:</p>
+<ul>
+<li><a href="https://github.com/soabase/exhibitor/wiki">Documentation</a></li>
+<li><a href="https://github.com/dcos/exhibitor">Source</a></li>
+<li><a href="https://github.com/soabase/exhibitor/wiki/REST-Introduction">API Reference</a></li>
+</ul>
+<p><a name="dcos-installer"></a></p>
+<h2 id="dcos-installer"><a class="content__anchor" href="#dcos-installer" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS Installer</h2>
+<p>The DC/OS Installer (<code>dcos_generate_config.ee.sh</code>) generates install artifacts and installs DC/OS. As part of the install process on each node, the DC/OS Download service downloads the install artifacts from the bootstrap machine and the DC/OS Setup service installs components using the DC/OS Component Package Manager (Pkgpanda).</p>
+<h3 id="system-services-3"><a class="content__anchor" href="#system-services-3" aria-hidden="true"><i data-feather="bookmark"></i></a>System services</h3>
+<ul>
+<li><code>dcos-download.service</code></li>
+<li><code>dcos-setup.service</code></li>
+</ul>
+<p>Read the following documentation resources to learn more about DC/OS and installation methods:</p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/installing/">Documentation</a></li>
+<li><a href="https://github.com/dcos/dcos">Source</a></li>
+</ul>
+<p><a name="dcos-backup"></a></p>
+<h2 id="dcos-backup-enterprise"><a class="content__anchor" href="#dcos-backup-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS backup <span class="badge badge--shortcode badge--large badge--block badge--enterprise">Enterprise</span></h2>
+<p>DC/OS Backup provides backup and restore of DC/OS component state (Marathon-only in 1.10).</p>
+<h3 id="system-services-4"><a class="content__anchor" href="#system-services-4" aria-hidden="true"><i data-feather="bookmark"></i></a>System services</h3>
+<ul>
+<li><code>dcos-backup-master.service</code></li>
+<li><code>dcos-backup-master.socket</code></li>
+</ul>
+<p>Read the following documentation resources to learn more about backing up and restoring your cluster:</p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/administering-clusters/backup-and-restore/">Documentation</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/administering-clusters/backup-and-restore/backup-restore-api/">API Reference</a></li>
+</ul>
+<p><a name="dcos-gui"></a></p>
+<h2 id="dcos-gui"><a class="content__anchor" href="#dcos-gui" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS GUI</h2>
+<p>The DC/OS GUI (web interface) is a browser-based system dashboard and control center.</p>
+<h3 id="system-service-2"><a class="content__anchor" href="#system-service-2" aria-hidden="true"><i data-feather="bookmark"></i></a>System service</h3>
+<p>N/A - The GUI is served by Admin Router.</p>
+<p>Read the following documentation resources to learn more about DC/OS GUI:</p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/gui/">Documentation</a></li>
+<li><a href="https://github.com/dcos/dcos-ui">Source</a></li>
+</ul>
+<p><a name="dcos-cli"></a></p>
+<h2 id="dcos-cli"><a class="content__anchor" href="#dcos-cli" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS CLI</h2>
+<p>The DC/OS CLI is a terminal-based remote client.</p>
+<h3 id="system-service-3"><a class="content__anchor" href="#system-service-3" aria-hidden="true"><i data-feather="bookmark"></i></a>System service</h3>
+<p>N/A - The CLI is a user downloadable binary.</p>
+<p>Read the following documentation resources to learn more about DC/OS CLI:</p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/cli/">Documentation</a></li>
+<li><a href="https://github.com/dcos/dcos-cli">Source</a></li>
+</ul>
+<h1 id="container-orchestration"><a class="content__anchor" href="#container-orchestration" aria-hidden="true"><i data-feather="bookmark"></i></a>Container orchestration</h1>
+<p>Container orchestration is the continuous, automated scheduling, coordination, and management of containerized processes and the resources they consume. DC/OS includes built-in orchestration of the most commonly used high level container-based abstractions: jobs and services. Many use cases are handled directly by these basic abstractions, but they also enable the deployment of custom schedulers for tasks that require more flexible programmatic lifecycle management automation.</p>
+<p><a name="marathon"></a></p>
+<h2 id="marathon"><a class="content__anchor" href="#marathon" aria-hidden="true"><i data-feather="bookmark"></i></a>Marathon</h2>
+<p>Marathon orchestrates long-lived containerized services (apps and pods).</p>
+<h3 id="system-service-4"><a class="content__anchor" href="#system-service-4" aria-hidden="true"><i data-feather="bookmark"></i></a>System service</h3>
+<ul>
+<li><code>dcos-marathon.service</code></li>
+</ul>
+<p>Read the following documentation resources to learn more about DC/OS Marathon:</p>
+<ul>
+<li><a href="https://mesosphere.github.io/marathon/">Website</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/">Documentation</a></li>
+<li><a href="https://github.com/mesosphere/marathon">Source</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/marathon-api/">API Reference</a></li>
+</ul>
+<p><a name="dcos-jobs"></a></p>
+<h2 id="dcos-jobs-metronome"><a class="content__anchor" href="#dcos-jobs-metronome" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS jobs (Metronome)</h2>
+<p>DC/OS jobs (Metronome) orchestrates short-lived, scheduled or immediate, containerized jobs.</p>
+<h3 id="system-service-5"><a class="content__anchor" href="#system-service-5" aria-hidden="true"><i data-feather="bookmark"></i></a>System service</h3>
+<ul>
+<li><code>dcos-metronome.service</code></li>
+</ul>
+<p>Read the following documentation resources to learn more about DC/OS Metronome:</p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/deploying-jobs/">Documentation</a></li>
+<li><a href="https://github.com/dcos/metronome">Source</a></li>
+<li><a href="https://dcos.github.io/metronome/docs/generated/api.html">API Reference</a></li>
+</ul>
+<h1 id="container-runtimes"><a class="content__anchor" href="#container-runtimes" aria-hidden="true"><i data-feather="bookmark"></i></a>Container runtimes</h1>
+<p>Container runtimes execute and manage machine level processes in isolated operating system level environments. DC/OS supports multiple container runtimes using <a href="http://mesos.apache.org/documentation/latest/containerizers/">Mesos’ containerizer abstraction</a>.</p>
+<p><a name="universal-container-runtime"></a></p>
+<h2 id="universal-container-runtime"><a class="content__anchor" href="#universal-container-runtime" aria-hidden="true"><i data-feather="bookmark"></i></a>Universal Container Runtime</h2>
+<p>Universal Container Runtime (Mesos Containerizer) is a logical component built into the Mesos Agent, not technically a separate process. It containerizes Mesos tasks with configurable isolators. Universal Container Runtime supports multiple image formats, including Docker images without using Docker Engine.</p>
+<h3 id="system-service-6"><a class="content__anchor" href="#system-service-6" aria-hidden="true"><i data-feather="bookmark"></i></a>System service</h3>
+<p>N/A - Universal Container Runtime is part of Mesos Agent.</p>
+<p>Read the following documentation resource to learn more about Universal Container Runtime:</p>
+<ul>
+<li><a href="http://mesos.apache.org/documentation/latest/containerizers/">Mesos Containerizer Documentation</a></li>
+</ul>
+<p><a name="docker-engine"></a></p>
+<h2 id="docker-engine"><a class="content__anchor" href="#docker-engine" aria-hidden="true"><i data-feather="bookmark"></i></a>Docker Engine</h2>
+<p>Docker Engine is not installed by the DC/OS Installer, but rather is a system dependency that runs on each node. The Mesos Agent also includes a separate logical component called Docker Containerizer which delegates the containerization of Mesos task to Docker Engine.</p>
+<h3 id="system-service-7"><a class="content__anchor" href="#system-service-7" aria-hidden="true"><i data-feather="bookmark"></i></a>System service</h3>
+<ul>
+<li><code>docker.service</code> - Docker Engine is not installed by the DC/OS Installer.</li>
+</ul>
+<p>Read the following documentation resource to learn more about Docker Engine:</p>
+<ul>
+<li><a href="http://mesos.apache.org/documentation/latest/docker-containerizer">Docker ContainerizerDocumentation</a></li>
+<li><a href="https://docs.docker.com/engine/">Docker Engine Documentation</a></li>
+<li><a href="https://github.com/docker/docker/">Docker Engine Source</a></li>
+</ul>
+<p><a name="docker-gc"></a></p>
+<h2 id="docker-gc"><a class="content__anchor" href="#docker-gc" aria-hidden="true"><i data-feather="bookmark"></i></a>Docker GC</h2>
+<p>Docker GC periodically collects Docker “garbage” containers and images.</p>
+<h3 id="system-services-5"><a class="content__anchor" href="#system-services-5" aria-hidden="true"><i data-feather="bookmark"></i></a>System services</h3>
+<ul>
+<li><code>dcos-docker-gc.service</code></li>
+<li><code>dcos-docker-gc.timer</code></li>
+</ul>
+<p>Read the following documentation resource to learn more about Docker GC:</p>
+<ul>
+<li><a href="https://github.com/spotify/docker-gc">Source</a></li>
+</ul>
+<h1 id="logging-and-metrics"><a class="content__anchor" href="#logging-and-metrics" aria-hidden="true"><i data-feather="bookmark"></i></a>Logging and metrics</h1>
+<p>No software runs perfectly, especially not the first time. Distributing tasks across a cluster, as well as the normal patterns of analyzing and debugging these services, become tedious. DC/OS includes several components to help ease the pain of debugging distributed systems by aggregating, caching, and streaming logs, metrics, and cluster state metadata.</p>
+<p><a name="dcos-network-metrics"></a></p>
+<h2 id="dcos-network-metrics-enterprise"><a class="content__anchor" href="#dcos-network-metrics-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS network metrics <span class="badge badge--shortcode badge--large badge--block badge--enterprise">Enterprise</span></h2>
+<p>DC/OS network metrics exposes networking-related metrics. DC/OS network metrics are also known as the DC/OS Networking API.</p>
+<h3 id="system-service-8"><a class="content__anchor" href="#system-service-8" aria-hidden="true"><i data-feather="bookmark"></i></a>System service</h3>
+<ul>
+<li><code>dcos-networking_api.service</code></li>
+</ul>
+<p><a name="dcos-diagnostics"></a></p>
+<h2 id="dcos-diagnostics"><a class="content__anchor" href="#dcos-diagnostics" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS diagnostics</h2>
+<p>DC/OS diagnostics aggregate and expose component health. DC/OS diagnostics are also known as DC/OS Distributed Diagnostics Tool.</p>
+<h3 id="system-services-6"><a class="content__anchor" href="#system-services-6" aria-hidden="true"><i data-feather="bookmark"></i></a>System services</h3>
+<ul>
+<li><code>dcos-diagnostics.service</code></li>
+<li><code>dcos-diagnostics.socket</code></li>
+</ul>
+<p>Read the following documentation resources to learn more about DC/OS Diagnostics:</p>
+<ul>
+<li><a href="https://github.com/dcos/dcos-diagnostics">Source</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/monitoring/#system-health-http-api-endpoint">API Reference</a></li>
+</ul>
+<p><a name="dcos-log"></a></p>
+<h2 id="dcos-log"><a class="content__anchor" href="#dcos-log" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS log</h2>
+<p>The DC/OS log service exposes node, component, and container (task) logs.</p>
+<h3 id="system-services-7"><a class="content__anchor" href="#system-services-7" aria-hidden="true"><i data-feather="bookmark"></i></a>System services</h3>
+<ul>
+<li><code>dcos-log-master.service</code></li>
+<li><code>dcos-log-master.socket</code></li>
+<li><code>dcos-log-agent.service</code></li>
+<li><code>dcos-log-agent.socket</code></li>
+</ul>
+<p>Read the following documentation resources to learn more about DC/OS Logs:</p>
+<ul>
+<li><a href="https://github.com/dcos/dcos-log">Source</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/monitoring/logging/logging-reference/">API Reference</a></li>
+</ul>
+<p><a name="logrotate"></a></p>
+<h2 id="logrotate"><a class="content__anchor" href="#logrotate" aria-hidden="true"><i data-feather="bookmark"></i></a>Logrotate</h2>
+<p>Logrotate manages rotation, compression, and deletion of historical log files.</p>
+<h3 id="system-services-8"><a class="content__anchor" href="#system-services-8" aria-hidden="true"><i data-feather="bookmark"></i></a>System services</h3>
+<ul>
+<li><code>dcos-logrotate-master.service</code></li>
+<li><code>dcos-logrotate-master.timer</code></li>
+<li><code>dcos-logrotate-agent.service</code></li>
+<li><code>dcos-logrotate-agent.timer</code></li>
+</ul>
+<p>Read the following documentation resources to learn more about DC/OS Logrotate:</p>
+<ul>
+<li><a href="https://linux.die.net/man/8/logrotate">Documentation</a></li>
+<li><a href="https://github.com/logrotate/logrotate">Source</a></li>
+</ul>
+<p><a name="telegraf"></a></p>
+<h2 id="telegraf"><a class="content__anchor" href="#telegraf" aria-hidden="true"><i data-feather="bookmark"></i></a>Telegraf</h2>
+<p>Telegraf is a configurable metrics pipeline. By default, it collects system, container, and application metrics.</p>
+<h3 id="system-services-9"><a class="content__anchor" href="#system-services-9" aria-hidden="true"><i data-feather="bookmark"></i></a>System services</h3>
+<ul>
+<li><code>dcos-telegraf.service</code></li>
+<li><code>dcos-telegraf.socket</code></li>
+</ul>
+<p>Read the following documentation resources to learn more about DC/OS Telegraf:</p>
+<ul>
+<li><a href="https://github.com/dcos/telegraf">Source</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/metrics/metrics-api/">API Reference</a></li>
+</ul>
+<p><a name="dcos-signal"></a></p>
+<h2 id="dcos-signal"><a class="content__anchor" href="#dcos-signal" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS signal</h2>
+<p>The DC/OS signal service reports cluster telemetry and analytics to help improve DC/OS. Administrators can <a href="/dcosdocs/mesosphere/dcos/2.1/installing/production/deploying-dcos/opt-out/#telemetry">opt out of telemetry</a> at installation time.</p>
+<h3 id="system-services-10"><a class="content__anchor" href="#system-services-10" aria-hidden="true"><i data-feather="bookmark"></i></a>System services</h3>
+<ul>
+<li><code>dcos-signal.service</code></li>
+<li><code>dcos-signal.timer</code></li>
+</ul>
+<p>Read the following documentation resources to learn more about DC/OS Signal:</p>
+<ul>
+<li><a href="https://github.com/dcos/dcos-signal">Source</a></li>
+</ul>
+<h1 id="networking"><a class="content__anchor" href="#networking" aria-hidden="true"><i data-feather="bookmark"></i></a>Networking</h1>
+<p>In a world where machines are given numbers instead of names, tasks are scheduled automatically, dependencies are declaratively defined, and services run in distributed sets, network administration also needs to be elevated from plugging in cables to configuring software-defined networks. To accomplish this, DC/OS includes a fleet of networking components for routing, proxying, name resolution, virtual IPs, load balancing, and distributed reconfiguration.</p>
+<p><a name="admin-router"></a></p>
+<h2 id="admin-router"><a class="content__anchor" href="#admin-router" aria-hidden="true"><i data-feather="bookmark"></i></a>Admin Router</h2>
+<p>Admin Router exposes a unified control plane proxy for components and services using <a href="https://www.nginx.com/">NGINX</a>. Admin Router Agent provides proxies for node-specific health, logs, metrics, and package management internal endpoints.</p>
+<h3 id="system-services-11"><a class="content__anchor" href="#system-services-11" aria-hidden="true"><i data-feather="bookmark"></i></a>System services</h3>
+<ul>
+<li><code>dcos-adminrouter.service</code></li>
+<li><code>dcos-adminrouter-agent.service</code></li>
+</ul>
+<p>Read the following documentation resource to learn more about DC/OS Admin Router:</p>
+<ul>
+<li><a href="https://github.com/dcos/adminrouter">Source</a></li>
+</ul>
+<p><a name="calico"></a></p>
+<h2 id="calico"><a class="content__anchor" href="#calico" aria-hidden="true"><i data-feather="bookmark"></i></a>Calico</h2>
+<p>Calico is an open source networking and network security solution for containers, virtual machines, and native host-based workloads.</p>
+<h3 id="system-services-12"><a class="content__anchor" href="#system-services-12" aria-hidden="true"><i data-feather="bookmark"></i></a>System services</h3>
+<ul>
+<li><code>dcos-calico-bird.service</code></li>
+<li><code>dcos-calico-confd.service</code></li>
+<li><code>dcos-calico-felix.service</code></li>
+<li><code>dcos-calico-libnetwork-plugin.service</code></li>
+</ul>
+<p>Read the following documentation resource to learn more about DC/OS Calico integration:</p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/networking/SDN/calico">Documentation</a></li>
+</ul>
+<p><a name="mesos-dns"></a></p>
+<h2 id="mesos-dns"><a class="content__anchor" href="#mesos-dns" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesos DNS</h2>
+<p>Mesos DNS provides domain name based service discovery within the cluster.</p>
+<h3 id="system-service-9"><a class="content__anchor" href="#system-service-9" aria-hidden="true"><i data-feather="bookmark"></i></a>System service</h3>
+<ul>
+<li><code>dcos-mesos-dns.service</code></li>
+</ul>
+<p>Read the following documentation resources to learn more about Mesos DNS:</p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/networking/DNS/mesos-dns">Documentation</a></li>
+<li><a href="https://github.com/mesosphere/mesos-dns">Source</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/networking/DNS/mesos-dns/mesos-dns-api/">API Reference</a></li>
+</ul>
+<p><a name="dns-forwarder"></a></p>
+<h2 id="dcos-net"><a class="content__anchor" href="#dcos-net" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS Net</h2>
+<p><code>dcos-net</code> is an Erlang VM that hosts the following networking applications:</p>
+<ul>
+<li><code>dcos-dns</code>: A distributed DNS-based service discovery.</li>
+<li><code>dcos-overlay</code>: An SDN solution for UCR and Docker containers.</li>
+<li><code>dcos-l4lb</code>: A distributed layer-4 load-balancer.</li>
+</ul>
+<h3 id="system-services-13"><a class="content__anchor" href="#system-services-13" aria-hidden="true"><i data-feather="bookmark"></i></a>System services</h3>
+<ul>
+<li><code>dcos-net.service</code></li>
+<li><code>dcos-net-watchdog.service</code></li>
+</ul>
+<p>Read the following documentation resource to learn more about DC/OS Net:</p>
+<ul>
+<li><a href="https://github.com/dcos/dcos-net">Source</a></li>
+</ul>
+<p><a name="generate-resolv.conf"></a></p>
+<h2 id="generate-resolvconf"><a class="content__anchor" href="#generate-resolvconf" aria-hidden="true"><i data-feather="bookmark"></i></a><code>Generate resolv.conf</code></h2>
+<p><code>Generate resolv.conf</code> configures network name resolution by updating <code>/etc/resolv.conf</code> to facilitate DC/OS’s software defined networking.</p>
+<h3 id="system-services-14"><a class="content__anchor" href="#system-services-14" aria-hidden="true"><i data-feather="bookmark"></i></a>System services</h3>
+<ul>
+<li><code>dcos-gen-resolvconf.service</code></li>
+<li><code>dcos-gen-resolvconf.timer</code></li>
+</ul>
+<p>Read the following documentation resource to learn more about <code>Generate resolv.conf</code>:</p>
+<ul>
+<li><a href="https://github.com/dcos/dcos/blob/master/packages/dcos-net/extra/gen_resolvconf.py">Source</a></li>
+</ul>
+<h1 id="package-management"><a class="content__anchor" href="#package-management" aria-hidden="true"><i data-feather="bookmark"></i></a>Package management</h1>
+<p>Just as machine operating systems need package management to install, upgrade, configure, and remove individual applications and services, a datacenter operating system needs package management to do the same for distributed services. In DC/OS there are two levels of package management: machine-level for components; and cluster-level for user services.</p>
+<p><a name="dcos-package-manager"></a></p>
+<h2 id="dcos-package-manager-cosmos"><a class="content__anchor" href="#dcos-package-manager-cosmos" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS package manager (Cosmos)</h2>
+<p>The DC/OS package manager (Cosmos) installs and manages DC/OS packages from <a href="/dcosdocs/mesosphere/dcos/2.1/administering-clusters/package-registry/">DC/OS package repositories</a>, such as the <a href="https://github.com/mesosphere/universe">Mesosphere Catalog</a>.</p>
+<h3 id="system-service-10"><a class="content__anchor" href="#system-service-10" aria-hidden="true"><i data-feather="bookmark"></i></a>System service</h3>
+<ul>
+<li><code>dcos-cosmos.service</code></li>
+</ul>
+<p>Read the following documentation resources to learn more about DC/OS Package Manager (Cosmos):</p>
+<ul>
+<li><a href="https://github.com/dcos/cosmos">Source</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/package-api/">API Reference</a></li>
+</ul>
+<p><a name="dcos-component-package-manager"></a></p>
+<h2 id="dcos-component-package-manager-pkgpanda"><a class="content__anchor" href="#dcos-component-package-manager-pkgpanda" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS Component Package Manager (Pkgpanda)</h2>
+<p>DC/OS Component Package Manager (Pkgpanda) installs and manages DC/OS components.</p>
+<h3 id="system-service-11"><a class="content__anchor" href="#system-service-11" aria-hidden="true"><i data-feather="bookmark"></i></a>System Service</h3>
+<ul>
+<li><code>dcos-pkgpanda-api.service</code></li>
+<li><code>dcos-pkgpanda-api.socket</code></li>
+</ul>
+<p>Read the following documentation resources to learn more about DC/OS Component Package Manager (Pkgpanda):</p>
+<ul>
+<li><a href="https://github.com/dcos/dcos/tree/master/pkgpanda">Source</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/administering-clusters/component-management/">API Reference</a></li>
+</ul>
+<h1 id="iam-and-security-enterprise"><a class="content__anchor" href="#iam-and-security-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>IAM and Security <span class="badge badge--shortcode badge--large badge--block badge--enterprise">Enterprise</span></h1>
+<p>Identity and access management in DC/OS Enterprise is governed by an internal database of users, user groups, and permissions. External identity providers can also be attached to take advantage of existing databases. Permissions are enforced both at the edge by Admin Router’s reverse proxy and also at the component level for controlling access to specific actions. Secrets, like SSL certificates, can also be securely generated, managed, stored, and injected into user services.</p>
+<p><a name="dcos-iam"></a></p>
+<h2 id="dcos-identity-and-access-manager-bouncer"><a class="content__anchor" href="#dcos-identity-and-access-manager-bouncer" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS Identity and Access Manager (Bouncer)</h2>
+<p>DC/OS Identity and Access Manager (IAM) controls access to DC/OS components and services by managing users, user groups, service accounts, permissions, and identity providers. In addition to managing a local user database, DC/OS IAM can delegate to external identity providers using LDAP, SAML, or Open ID Connect. For fine grained access control, other DC/OS components, like Mesos and Marathon, integrate with DC/OS IAM directly. DC/OS IAM is also known as Bouncer.</p>
+<h3 id="system-service-12"><a class="content__anchor" href="#system-service-12" aria-hidden="true"><i data-feather="bookmark"></i></a>System service</h3>
+<ul>
+<li><code>dcos-bouncer.service</code></li>
+</ul>
+<p>Read the following documentation resources to learn more about DC/OS Identity and Access Manager (Bouncer):</p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/security/">Documentation</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/security/ent/iam-api/">API Reference</a></li>
+</ul>
+<p><a name="cockroachdb"></a></p>
+<h2 id="cockroachdb"><a class="content__anchor" href="#cockroachdb" aria-hidden="true"><i data-feather="bookmark"></i></a>CockroachDB</h2>
+<p>CockroachDB is a distributed SQL database built on a transactional and strongly consistent key-value store.</p>
+<p class="message--note"><strong>NOTE: </strong> CockroachDB is currently only used by <a href="#dcos-iam">DC/OS Identity and Access Manager</a>.</p>
+<h3 id="system-service-13"><a class="content__anchor" href="#system-service-13" aria-hidden="true"><i data-feather="bookmark"></i></a>System service</h3>
+<ul>
+<li><code>dcos-cockroach.service</code></li>
+</ul>
+<p>Read the following documentation resources to learn more about CockroachDB:</p>
+<ul>
+<li><a href="https://www.cockroachlabs.com/docs/">Documentation</a></li>
+<li><a href="https://github.com/cockroachdb/cockroach">Source</a></li>
+</ul>
+<p><a name="dcos-certificate-authority"></a></p>
+<h2 id="dcos-certificate-authority"><a class="content__anchor" href="#dcos-certificate-authority" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS Certificate Authority</h2>
+<p>DC/OS Certificate Authority (CA) issues signed digital certificates for secure communication. DC/OS CA is based on Cloudflare’s <a href="https://github.com/cloudflare/cfssl">Cfssl</a>.</p>
+<h3 id="system-service-14"><a class="content__anchor" href="#system-service-14" aria-hidden="true"><i data-feather="bookmark"></i></a>System service</h3>
+<ul>
+<li><code>dcos-ca.service</code></li>
+</ul>
+<p>Read the following documentation resources to learn more about DC/OS Certificate Authority:</p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/security/ent/tls-ssl/">Documentation</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/security/ent/tls-ssl/ca-api/">API Reference</a></li>
+</ul>
+<p><a name="dcos-secrets"></a></p>
+<h2 id="dcos-secrets"><a class="content__anchor" href="#dcos-secrets" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS secrets</h2>
+<p>DC/OS secrets provide a secure API for storing and retrieving secrets from Vault, a secret store.</p>
+<h3 id="system-service-15"><a class="content__anchor" href="#system-service-15" aria-hidden="true"><i data-feather="bookmark"></i></a>System service</h3>
+<ul>
+<li><code>dcos-secrets.service</code></li>
+</ul>
+<p>Read the following documentation resources to learn more about DC/OS Secrets:</p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/security/ent/secrets/">Documentation</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/security/ent/secrets/secrets-api/">API Reference</a></li>
+</ul>
+<p><a name="vault"></a></p>
+<h2 id="vault"><a class="content__anchor" href="#vault" aria-hidden="true"><i data-feather="bookmark"></i></a>Vault</h2>
+<p>Vault is a tool for securely managing secrets. A secret is anything that you want to control access to, such as API keys, passwords, certificates, and more. Vault provides a unified interface to any secret, while providing tight access control and recording a detailed audit log.</p>
+<h3 id="system-service-16"><a class="content__anchor" href="#system-service-16" aria-hidden="true"><i data-feather="bookmark"></i></a>System service</h3>
+<ul>
+<li><code>dcos-vault.service</code></li>
+</ul>
+<p>Read the following documentation resources to learn more about Vault:</p>
+<ul>
+<li><a href="https://www.vaultproject.io/docs/">Documentation</a></li>
+<li><a href="https://github.com/mesosphere/vault/">Source</a></li>
+<li><a href="https://www.vaultproject.io/api/">API Reference</a></li>
+</ul>
+<h1 id="storage"><a class="content__anchor" href="#storage" aria-hidden="true"><i data-feather="bookmark"></i></a>Storage</h1>
+<p>DC/OS provides many different ways to provision and allocate disk space and volumes to tasks. One of those methods, external persistent volumes, is managed by its own component.</p>
+<p><a name="rex-ray"></a></p>
+<h2 id="rex-ray"><a class="content__anchor" href="#rex-ray" aria-hidden="true"><i data-feather="bookmark"></i></a>REX-Ray</h2>
+<p>REX-Ray orchestrates provisioning, attachment, and mounting of external persistent volumes.</p>
+<h3 id="system-service-17"><a class="content__anchor" href="#system-service-17" aria-hidden="true"><i data-feather="bookmark"></i></a>System service</h3>
+<ul>
+<li><code>dcos-rexray.service</code></li>
+</ul>
+<p>Read the following documentation resources to learn more about REX-Ray:</p>
+<ul>
+<li><a href="http://rexray.readthedocs.io/">Documentation</a></li>
+<li><a href="https://github.com/codedellemc/rexray">Source</a></li>
+</ul>
+<h1 id="sockets-and-timers"><a class="content__anchor" href="#sockets-and-timers" aria-hidden="true"><i data-feather="bookmark"></i></a>Sockets and timers</h1>
+<p>Several components are configured to use on-demand <a href="https://www.freedesktop.org/software/systemd/man/systemd.socket.html">systemd sockets</a> which allows them to be started when a request comes in, rather than running continuously and consuming resources unnecessarily. While these sockets are separate <a href="https://www.freedesktop.org/software/systemd/man/systemd.unit.html">systemd units</a> they are not considered separate components.</p>
+<p>Several components are configured to use <a href="https://www.freedesktop.org/software/systemd/man/systemd.timer.html">systemd timers</a> which allows them to be periodically executed or restarted. Periodic execution avoids continuous execution and consuming resources unnecessarily. Periodic restarting allows for picking up new configurations from downstream dependencies, like time-based DNS cache expiration. While these timers are separate <a href="https://www.freedesktop.org/software/systemd/man/systemd.unit.html">systemd units</a> they are not considered separate components.</p>
+<h1 id="component-installation"><a class="content__anchor" href="#component-installation" aria-hidden="true"><i data-feather="bookmark"></i></a>Component installation</h1>
+<p>DC/OS components are installed, upgraded, and managed by <a href="https://github.com/dcos/dcos/tree/master/pkgpanda">DC/OS Component Package Manager (Pkgpanda)</a>, a package manager for <code>systemd</code> units.</p>
+<p>To see the full list of packages managed by the DC/OS installer, see the <a href="https://github.com/dcos/dcos/tree/master/packages">packages directory of the DC/OS source repository</a>.</p>
+<h1 id="systemd-services"><a class="content__anchor" href="#systemd-services" aria-hidden="true"><i data-feather="bookmark"></i></a><code>Systemd</code> services</h1>
+<p>Most DC/OS components run as <a href="/dcosdocs/mesosphere/dcos/2.1/overview/concepts/#systemd-service">systemd services</a> on the DC/OS nodes.</p>
+<p>To see a list of the <code>systemd</code> components running on any particular node, list the contents of the <code>/etc/systemd/system/dcos.target.wants/</code> directory or execute <code>systemctl | grep dcos-</code> to see their current status.</p>
+<h2 id="master-node"><a class="content__anchor" href="#master-node" aria-hidden="true"><i data-feather="bookmark"></i></a>Master node</h2>
+<pre><code>ls /etc/systemd/system/dcos.target.wants/ -1
+dcos-adminrouter.service
+dcos-backup-master.service
+dcos-backup-master.socket
+dcos-bouncer.service
+dcos-ca.service
+dcos-checks-api.service
+dcos-checks-api.socket
+dcos-checks-poststart.service
+dcos-checks-poststart.timer
+dcos-cluster-linker.service
+dcos-cluster-linker.socket
+dcos-cockroachdb-config-change.service
+dcos-cockroachdb-config-change.timer
+dcos-cockroach.service
+dcos-cosmos.service
+dcos-diagnostics-mesos-state.service
+dcos-diagnostics-mesos-state.timer
+dcos-diagnostics.service
+dcos-diagnostics.socket
+dcos-exhibitor.service
+dcos-fluent-bit.service
+dcos-gen-resolvconf.service
+dcos-gen-resolvconf.timer
+dcos-history.service
+dcos-iam-ldap-sync.service
+dcos-iam-ldap-sync.timer
+dcos-licensing.service
+dcos-licensing.socket
+dcos-log-master.service
+dcos-log-master.socket
+dcos-logrotate-master.service
+dcos-logrotate-master.timer
+dcos-marathon.service
+dcos-mesos-dns.service
+dcos-mesos-master.service
+dcos-metronome.service
+dcos-net.service
+dcos-net-watchdog.service
+dcos-pkgpanda-api.service
+dcos-registry.service
+dcos-secrets.service
+dcos-secrets.socket
+dcos-signal.service
+dcos-signal.timer
+dcos-telegraf.service
+dcos-telegraf.socket
+dcos-ui-update-service.service
+dcos-ui-update-service.socket
+dcos-vault.service
+</code></pre>
+<h2 id="private-agent-node"><a class="content__anchor" href="#private-agent-node" aria-hidden="true"><i data-feather="bookmark"></i></a>Private agent node</h2>
+<pre><code>ls /etc/systemd/system/dcos.target.wants/ -1
+dcos-adminrouter-agent.service
+dcos-checks-api.service
+dcos-checks-api.socket
+dcos-checks-poststart.service
+dcos-checks-poststart.timer
+dcos-diagnostics.service
+dcos-diagnostics.socket
+dcos-docker-gc.service
+dcos-docker-gc.timer
+dcos-fluent-bit.service
+dcos-gen-resolvconf.service
+dcos-gen-resolvconf.timer
+dcos-log-agent.service
+dcos-log-agent.socket
+dcos-logrotate-agent.service
+dcos-logrotate-agent.timer
+dcos-mesos-slave.service
+dcos-net.service
+dcos-net-watchdog.service
+dcos-pkgpanda-api.service
+dcos-rexray.service
+dcos-telegraf.service
+dcos-telegraf.socket
+</code></pre>
+<h2 id="public-agent-node"><a class="content__anchor" href="#public-agent-node" aria-hidden="true"><i data-feather="bookmark"></i></a>Public agent node</h2>
+<pre><code>ls /etc/systemd/system/dcos.target.wants/ -1
+dcos-adminrouter-agent.service
+dcos-checks-api.service
+dcos-checks-api.socket
+dcos-checks-poststart.service
+dcos-checks-poststart.timer
+dcos-diagnostics.service
+dcos-diagnostics.socket
+dcos-docker-gc.service
+dcos-docker-gc.timer
+dcos-fluent-bit.service
+dcos-gen-resolvconf.service
+dcos-gen-resolvconf.timer
+dcos-log-agent.service
+dcos-log-agent.socket
+dcos-logrotate-agent.service
+dcos-logrotate-agent.timer
+dcos-mesos-slave-public.service
+dcos-net.service
+dcos-net-watchdog.service
+dcos-pkgpanda-api.service
+dcos-rexray.service
+dcos-telegraf.service
+dcos-telegraf.socket
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#cluster-management">Cluster management</a></li><li class="content__sections-item content__sections-item--h2"><a href="#apache-mesos">Apache Mesos</a></li><li class="content__sections-item content__sections-item--h2"><a href="#apache-zookeeper">Apache ZooKeeper</a></li><li class="content__sections-item content__sections-item--h2"><a href="#exhibitor">Exhibitor</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-installer">DC/OS Installer</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-backup-enterprise">DC/OS backup Enterprise</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-gui">DC/OS GUI</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-cli">DC/OS CLI</a></li><li class="content__sections-item content__sections-item--h1"><a href="#container-orchestration">Container orchestration</a></li><li class="content__sections-item content__sections-item--h2"><a href="#marathon">Marathon</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-jobs-metronome">DC/OS jobs (Metronome)</a></li><li class="content__sections-item content__sections-item--h1"><a href="#container-runtimes">Container runtimes</a></li><li class="content__sections-item content__sections-item--h2"><a href="#universal-container-runtime">Universal Container Runtime</a></li><li class="content__sections-item content__sections-item--h2"><a href="#docker-engine">Docker Engine</a></li><li class="content__sections-item content__sections-item--h2"><a href="#docker-gc">Docker GC</a></li><li class="content__sections-item content__sections-item--h1"><a href="#logging-and-metrics">Logging and metrics</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-network-metrics-enterprise">DC/OS network metrics Enterprise</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-diagnostics">DC/OS diagnostics</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-log">DC/OS log</a></li><li class="content__sections-item content__sections-item--h2"><a href="#logrotate">Logrotate</a></li><li class="content__sections-item content__sections-item--h2"><a href="#telegraf">Telegraf</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-signal">DC/OS signal</a></li><li class="content__sections-item content__sections-item--h1"><a href="#networking">Networking</a></li><li class="content__sections-item content__sections-item--h2"><a href="#admin-router">Admin Router</a></li><li class="content__sections-item content__sections-item--h2"><a href="#calico">Calico</a></li><li class="content__sections-item content__sections-item--h2"><a href="#mesos-dns">Mesos DNS</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-net">DC/OS Net</a></li><li class="content__sections-item content__sections-item--h2"><a href="#generate-resolvconf">Generate resolv.conf</a></li><li class="content__sections-item content__sections-item--h1"><a href="#package-management">Package management</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-package-manager-cosmos">DC/OS package manager (Cosmos)</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-component-package-manager-pkgpanda">DC/OS Component Package Manager (Pkgpanda)</a></li><li class="content__sections-item content__sections-item--h1"><a href="#iam-and-security-enterprise">IAM and Security Enterprise</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-identity-and-access-manager-bouncer">DC/OS Identity and Access Manager (Bouncer)</a></li><li class="content__sections-item content__sections-item--h2"><a href="#cockroachdb">CockroachDB</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-certificate-authority">DC/OS Certificate Authority</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-secrets">DC/OS secrets</a></li><li class="content__sections-item content__sections-item--h2"><a href="#vault">Vault</a></li><li class="content__sections-item content__sections-item--h1"><a href="#storage">Storage</a></li><li class="content__sections-item content__sections-item--h2"><a href="#rex-ray">REX-Ray</a></li><li class="content__sections-item content__sections-item--h1"><a href="#sockets-and-timers">Sockets and timers</a></li><li class="content__sections-item content__sections-item--h1"><a href="#component-installation">Component installation</a></li><li class="content__sections-item content__sections-item--h1"><a href="#systemd-services">Systemd services</a></li><li class="content__sections-item content__sections-item--h2"><a href="#master-node">Master node</a></li><li class="content__sections-item content__sections-item--h2"><a href="#private-agent-node">Private agent node</a></li><li class="content__sections-item content__sections-item--h2"><a href="#public-agent-node">Public agent node</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Dynamic Allocation - D2iQ Docs</title><meta name="description" content="Enabling Dynamic Allocation with Shuffle Service for DC/OS Data Science Engine in Spark"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Data Science Engine Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li><li class="chooser-list-item"><a href="/dkp/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__item"><a href="/dkp/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/data-science-engine/2.1.0/dynamic-allocation">DC/OS Data Science Engine 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/data-science-engine/2.0.1/dynamic-allocation">DC/OS Data Science Engine 2.0.1</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/data-science-engine/2.0.0/dynamic-allocation">DC/OS Data Science Engine 2.0.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/data-science-engine/1.0.2/dynamic-allocation">DC/OS Data Science Engine 1.0.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/data-science-engine/1.0.1/dynamic-allocation">DC/OS Data Science Engine 1.0.1</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/data-science-engine/1.0.0">DC/OS Data Science Engine 1.0.0</a></li></ul><div class="toggle"><p><span class="title">Data Science Engine</span><span class="version"> 2.1.0</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/data-science-engine/2.1.0/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/data-science-engine/2.1.0/overview/">Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/data-science-engine/2.1.0/quick-start/">Quick Start Guide</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/data-science-engine/2.1.0/customizations/"><i data-feather="chevron-right"></i>Customizations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/data-science-engine/2.1.0/integrations/"><i data-feather="chevron-right"></i>Integrations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/data-science-engine/2.1.0/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/data-science-engine/2.1.0/dynamic-allocation/">Dynamic Allocation</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/data-science-engine/2.1.0/supported-kernels/">Supported Kernels</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/data-science-engine/2.1.0/upgrade/">Upgrade</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/data-science-engine/2.1.0/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/data-science-engine/2.1.0/uninstall/">Uninstall</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Dynamic Allocation</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">Enabling Dynamic Allocation with Shuffle Service for DC/OS Data Science Engine in Spark</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/data-science-engine/2.1.0/dynamic-allocation/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+Dynamic+Allocation&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/services/data-science-engine/2.1.0/dynamic-allocation&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><p>Spark provides a mechanism to dynamically adjust the resources your application occupies based on the workload. This means that your application may give resources back to the cluster if they are no longer used and request them again later when there is demand. This feature is particularly useful if multiple applications share resources in your cluster. For more information click <a href="https://spark.apache.org/docs/2.4.4/job-scheduling.html#dynamic-resource-allocation">here</a>.</p>
+<h1 id="prerequisites"><a class="content__anchor" href="#prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h1>
+<ul>
+<li>
+<p>DC/OS Data Science Engine must use a host networking mode, due to the specifics of Spark executors communication with Shuffle Service and the way shuffle blocks are served.</p>
+<p>Once Executor has written a shuffle block to disk, it registers the block with the driver and the block location includes the host IP address. The block is then fetched by other executors using this IP. Using a virtual network does not fit in this architecture because each executor will have a unique IP address not representing the physical host where the blocks are located.</p>
+</li>
+<li>
+<p>Shuffle Service must be installed on every host where Spark Executors will be running.</p>
+<p>Both Shuffle Service and Spark Executors should use the same shared host folder/volume for saving and serving shuffle blocks.</p>
+</li>
+<li>
+<p>The Spark user (Linux user running the Shuffle Service and Executors) should have read-write privileges for the shared folder.</p>
+</li>
+</ul>
+<h1 id="shuffle-service"><a class="content__anchor" href="#shuffle-service" aria-hidden="true"><i data-feather="bookmark"></i></a>Shuffle Service</h1>
+<p>Run a Marathon application with the configuration shown below. The number of instances should be equal to the number of nodes in the cluster. Suppose the number of nodes are 5 in the cluster:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/mesos-shuffle-service&quot;,
+  &quot;cmd&quot;: &quot;rm -rf /tmp/spark/spark-* &amp;&amp; rm -rf /tmp/spark/blockmgr-* &amp;&amp; /opt/spark/sbin/start-mesos-shuffle-service.sh --conf spark.shuffle.service.enabled=true --conf spark.network.timeout=10s --conf spark.shuffle.io.connectionTimeout=10s &amp;&amp; cd /opt/spark/logs/ &amp;&amp; find . -name 'spark--org.apache.spark.deploy.mesos.MesosExternalShuffleService-*.out' -exec tail -f {} \\;&quot;,
+  &quot;cpus&quot;: 0.05,
+  &quot;mem&quot;: 1024,
+  &quot;disk&quot;: 0,
+  &quot;instances&quot;: 5,
+  &quot;constraints&quot;: [
+    [
+      &quot;hostname&quot;,
+      &quot;UNIQUE&quot;
+    ]
+  ],
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;MESOS&quot;,
+    &quot;docker&quot;: {
+      &quot;forcePullImage&quot;: false,
+      &quot;image&quot;: &quot;mesosphere/jupyter-service-worker:b077952483120bff524200cbb77cb018d79f899d-cpu&quot;,
+      &quot;parameters&quot;: [],
+      &quot;privileged&quot;: false
+    },
+    &quot;volumes&quot;: [
+      {
+        &quot;containerPath&quot;: &quot;/tmp/spark&quot;,
+        &quot;hostPath&quot;: &quot;/tmp/spark&quot;,
+        &quot;mode&quot;: &quot;RW&quot;
+      }
+    ]
+  },
+  &quot;env&quot;: {
+    &quot;SPARK_DAEMON_MEMORY&quot;: &quot;1g&quot;
+  },
+  &quot;healthChecks&quot;: [
+    {
+      &quot;gracePeriodSeconds&quot;: 5,
+      &quot;intervalSeconds&quot;: 60,
+      &quot;maxConsecutiveFailures&quot;: 3,
+      &quot;port&quot;: 7337,
+      &quot;protocol&quot;: &quot;TCP&quot;,
+      &quot;ipProtocol&quot;: &quot;IPv4&quot;,
+      &quot;timeoutSeconds&quot;: 10,
+      &quot;delaySeconds&quot;: 15
+    }
+  ],
+  &quot;portDefinitions&quot;: [
+    {
+      &quot;port&quot;: 7337,
+      &quot;name&quot;: &quot;ssp&quot;,
+      &quot;protocol&quot;: &quot;tcp&quot;
+    }
+  ],
+  &quot;maxLaunchDelaySeconds&quot;: 300,
+  &quot;requirePorts&quot;: true
+}
+</code></pre>
+<h1 id="spark-configurations"><a class="content__anchor" href="#spark-configurations" aria-hidden="true"><i data-feather="bookmark"></i></a>Spark Configurations</h1>
+<p>The key properties for enabling dynamic allocation are:</p>
+<ul>
+<li><code>spark.shuffle.service.enabled=true</code> and <code>spark.dynamicAllocation.enabled=true</code> for enabling the allocation</li>
+<li><code>spark.local.dir=/tmp/spark</code> folder inside a container used for shuffle blocks</li>
+<li><code>spark.mesos.executor.docker.volumes=&lt;host path&gt;:/tmp/spark:rw</code> property for mounting container local folder to the host path to share shuffle blocks with Shuffle Service</li>
+</ul>
+<p>Example application:</p>
+<pre><code class="language-scala">import org.apache.spark.{SparkConf, SparkContext}
+import scala.util.Random
+
+val spark = SparkSession.builder()
+.config(&quot;spark.shuffle.service.enabled&quot;, &quot;true&quot;)
+.config(&quot;spark.dynamicAllocation.enabled&quot;, &quot;true&quot;)
+.config(&quot;spark.dynamicAllocation.minExecutors&quot;, 1)
+.config(&quot;spark.dynamicAllocation.maxExecutors&quot;, 10)
+.config(&quot;spark.local.dir&quot;, &quot;/tmp/spark&quot;)
+.config(&quot;spark.mesos.executor.docker.volumes&quot;, &quot;/tmp/spark:/tmp/spark:rw&quot;)
+.getOrCreate()
+
+val numMappers = 100
+val numKeys = 1000000
+val valSize = 10
+val numReducers = 100
+
+val keyPairs = spark.sparkContext.parallelize(0 until numMappers, numMappers).flatMap { _ =&gt;
+  val random = new Random
+  val result = new Array[(Int, Array[Byte])](numKeys)
+
+  //each partition will contain a full copy of keys to enforce shuffle
+  for (i &lt;- 0 until numKeys) {
+    val byteArr = new Array[Byte](valSize)
+    random.nextBytes(byteArr)
+    result(i) = (i, byteArr)
+  }
+  result
+}
+
+val groupsCount = keyPairs.groupByKey(numReducers).count()
+println(s&quot;Groups count: $groupsCount&quot;)
+</code></pre>
+<p>Expected output would be:</p>
+<pre><code class="language-text">Groups count: 1000000
+ 
+numMappers = 100
+numKeys = 1000000
+valSize = 10
+numReducers = 100
+keyPairs = MapPartitionsRDD[1] at flatMap at &lt;console&gt;:50
+groupsCount = 1000000
+</code></pre>
+<h1 id="executor-and-shuffle-service-logs"><a class="content__anchor" href="#executor-and-shuffle-service-logs" aria-hidden="true"><i data-feather="bookmark"></i></a>Executor and Shuffle Service Logs</h1>
+<p>Here are some excerpts from the logs to verify that Shuffle takes place and no issues occur. Executor logs should not contain any network connectivity or file system related exceptions. When shuffle occurs, it can be seen in the logs where <code>ShuffleBlockFetcherIterator</code> retrieves the blocks from the remote locations:</p>
+<pre><code class="language-log">20/01/10 22:51:58 INFO executor.CoarseGrainedExecutorBackend: Got assigned task 189
+20/01/10 22:51:58 INFO executor.Executor: Running task 85.0 in stage 1.0 (TID 189)
+20/01/10 22:51:58 INFO storage.ShuffleBlockFetcherIterator: Getting 100 non-empty blocks including 15 local blocks and 85 remote blocks
+20/01/10 22:51:58 INFO storage.ShuffleBlockFetcherIterator: Started 7 remote fetches in 2 ms
+20/01/10 22:51:59 INFO executor.Executor: Finished task 85.0 in stage 1.0 (TID 189). 1219 bytes result sent to driver
+</code></pre>
+<p>On the Shuffle Service side, a healthy log in stdout should look as following and include messages about application and executor registration and following removal and cleanup when the application is finished:</p>
+<pre><code class="language-log">20/01/10 22:46:46 INFO mesos.MesosExternalShuffleBlockHandler: Received registration request from app 1d618e80-45be-4d0f-9892-955cc384041d-0023 (remote address /10.0.2.204:46778, heartbeat timeout 120000 ms).
+20/01/10 22:46:50 INFO shuffle.ExternalShuffleBlockResolver: Registered executor AppExecId{appId=1d618e80-45be-4d0f-9892-955cc384041d-0023, execId=f86a1961-aa0e-4a73-af13-dd7c03901b68-0} with ExecutorShuffleInfo{localDirs=[/tmp/spark/blockmgr-99aa7dea-5770-4344-8062-81bca143a06e], subDirsPerLocalDir=64, shuffleManager=org.apache.spark.shuffle.sort.SortShuffleManager}
+20/01/10 22:47:47 INFO shuffle.ExternalShuffleBlockResolver: Registered executor AppExecId{appId=1d618e80-45be-4d0f-9892-955cc384041d-0023, execId=f86a1961-aa0e-4a73-af13-dd7c03901b68-4} with ExecutorShuffleInfo{localDirs=[/tmp/spark/blockmgr-dedfbc72-4464-4eb6-9fc0-fe6532c5cdaf], subDirsPerLocalDir=64, shuffleManager=org.apache.spark.shuffle.sort.SortShuffleManager}
+20/01/10 22:48:45 INFO mesos.MesosExternalShuffleBlockHandler: Application 1d618e80-45be-4d0f-9892-955cc384041d-0022 timed out. Removing shuffle files.
+20/01/10 22:48:45 INFO shuffle.ExternalShuffleBlockResolver: Application 1d618e80-45be-4d0f-9892-955cc384041d-0022 removed, cleanupLocalDirs = true
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#prerequisites">Prerequisites</a></li><li class="content__sections-item content__sections-item--h1"><a href="#shuffle-service">Shuffle Service</a></li><li class="content__sections-item content__sections-item--h1"><a href="#spark-configurations">Spark Configurations</a></li><li class="content__sections-item content__sections-item--h1"><a href="#executor-and-shuffle-service-logs">Executor and Shuffle Service Logs</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

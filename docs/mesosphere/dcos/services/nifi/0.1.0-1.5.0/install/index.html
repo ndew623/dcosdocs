@@ -1,0 +1,190 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Installing and Customizing - D2iQ Docs</title><meta name="description" content="Installing DC/OS Apache NiFi from the UI or the CLI"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Nifi Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/1.0.1-1.9.2">NiFi 1.0.1-1.9.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/1.0.0-1.9.2">NiFi 1.0.0-1.9.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.5.0-1.9.2/install">NiFi 0.5.0-1.9.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.4.1-1.8.0/install">NiFi 0.4.1-1.8.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.4.0-1.8.0/install">NiFi 0.4.0-1.8.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/install">NiFi 0.3.0-1.7.1</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.2.0-1.5.0/install">NiFi 0.2.0-1.5.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.1.0-1.5.0/install">NiFi 0.1.0-1.5.0</a></li></ul><div class="toggle"><p><span class="title">Nifi</span><span class="version"> 0.1.0-1.5.0</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.1.0-1.5.0/overview/">Overview</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.1.0-1.5.0/install/">Installing and Customizing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.1.0-1.5.0/deploy-best-practice/">Deployment Best Practices</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.1.0-1.5.0/uninstall/">Uninstalling</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.1.0-1.5.0/security/">Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.1.0-1.5.0/command-reference/"><i data-feather="chevron-right"></i>Command Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.1.0-1.5.0/connecting-clients/">Connecting Clients</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.1.0-1.5.0/managing/">Managing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.1.0-1.5.0/api-reference/">API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.1.0-1.5.0/troubleshooting/"><i data-feather="chevron-right"></i>Troubleshooting</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.1.0-1.5.0/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.1.0-1.5.0/supported-versions/">Supported Versions</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.1.0-1.5.0/release-notes/">Release Notes</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Installing and Customizing</h1></div><h4 class="content__header-description">Installing DC/OS Apache NiFi from the UI or the CLI</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/nifi/0.1.0-1.5.0/install/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>DC/OS Apache NiFi service is available in the Universe and can be installed using either the UI or the DC/OS CLI.</p>
+<p>The default DC/OS Apache NiFi Service installation provides reasonable defaults for trying out the service, but that may not be sufficient for production use. You may require different configurations depending on the context of the deployment.</p>
+<h2 id="prerequisites"><a class="content__anchor" href="#prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h2>
+<ul>
+<li>
+<p>If you are using DC/OS Enterprise, you may <a href="/dcosdocs/mesosphere/dcos/1.10/security/ent/service-auth/custom-service-auth/">need to provision a service account</a> before installing DC/OS NiFi Service. Only someone with <code>superuser</code> permission can create the service account.</p>
+<ul>
+<li><code>strict</code> <a href="/dcosdocs/mesosphere/dcos/1.10/security/ent/service-auth/custom-service-auth/">security mode</a> requires a service account.</li>
+</ul>
+</li>
+<li>
+<p>In <code>permissive</code> security mode a service account is optional.</p>
+</li>
+<li>
+<p>The <code>disabled</code> security mode does not require a service account.</p>
+</li>
+<li>
+<p>Your cluster must have at least three private nodes.</p>
+</li>
+</ul>
+<p>A complete guide to Configuring DC/OS Access for NiFi can be found <a href="../security/#set-up-the-service-account">here</a>.</p>
+<h1 id="installing-from-the-dcos-cli"><a class="content__anchor" href="#installing-from-the-dcos-cli" aria-hidden="true"><i data-feather="bookmark"></i></a>Installing from the DC/OS CLI</h1>
+<p>To start a basic test cluster of DC/OS Apache NiFi Service, run the following command on the DC/OS CLI. DC/OS Enterprise users must follow additional instructions.</p>
+<pre><code class="language-shell">dcos package install nifi
+</code></pre>
+<p>This command creates a new instance with the default name <code>nifi</code>. Two instances cannot share the same name, so if you install additional instances beyond the default instance you must customize the name at install time for each additional instance. However, the application can be installed using the same name in case of foldered installation, wherein application can have same but in different folders, eg., folder1/nifi and folder2/nifi</p>
+<p>All DC/OS Apache NiFi Service CLI commands have a <code>--name</code>  argument, allowing you to specify which instance to query. If you do not specify a service name, the CLI assumes a default value matching the package name, such as <code>nifi</code>. The default value for <code>--name</code> can be customized via the DC/OS CLI configuration:</p>
+<pre><code class="language-shell">dcos nifi --name=nifi &lt;cmd&gt;
+</code></pre>
+<p>You can specify a custom configuration in an <code>options.json</code> file and pass it to <code>dcos package install</code> using the <code>--options</code> parameter.</p>
+<pre><code class="language-shell">dcos package install nifi --options=options.json
+</code></pre>
+<p>For more information on building the <code>options.json</code> file, see <a href="/dcosdocs/mesosphere/dcos/latest/usage/managing-services/config-universe-service/">DC/OS documentation</a> for service configuration access.</p>
+<h2 id="installing-from-the-dcos-ui"><a class="content__anchor" href="#installing-from-the-dcos-ui" aria-hidden="true"><i data-feather="bookmark"></i></a>Installing from the DC/OS UI</h2>
+<p>Alternatively, you can install DC/OS NiFi Service from the DC/OS UI. Select the app from the Catalog and choose Deploy.</p>
+<p>If you install Apache NiFi from the DC/OS UI, the <code>dcos nifi</code> CLI commands are not automatically installed to your workstation. They may be manually installed using the DC/OS CLI:</p>
+<pre><code class="language-shell">dcos package install nifi --cli
+</code></pre>
+<h2 id="installing-multiple-instances"><a class="content__anchor" href="#installing-multiple-instances" aria-hidden="true"><i data-feather="bookmark"></i></a>Installing multiple instances</h2>
+<p>By default, the Apache NiFi service is installed with a service name of <code>nifi</code>. You may specify a different name using a custom service configuration as follows:</p>
+<pre><code class="language-shell">{
+    &quot;service&quot;: {
+        &quot;name&quot;: &quot;nifi-other&quot;
+    }
+}
+</code></pre>
+<p>When the above JSON configuration is passed to the <code>package install nifi</code>  command via the <code>--options</code> argument, the new service will use the name specified in that JSON configuration:</p>
+<pre><code class="language-shell">dcos package install nifi --options=nifi-other.json
+</code></pre>
+<p>Multiple instances of Apache NiFi may be installed on your DC/OS cluster by customizing the name of each instance. For example, you might have one instance of Apache NiFi named <code>nifi-staging</code> and another named <code>nifi-prod</code>, each with its own custom  configuration.</p>
+<p>After specifying a custom name for your instance, it can be reached using <code>dcos nifi</code> CLI commands or directly over HTTP as described below.</p>
+<p class="message--important"><strong>IMPORTANT: </strong>The service name cannot be changed after initial install. Changing the service name would require installing a new instance of the service against the new name, then copying over any data as necessary to the new instance.<p>
+<h2 id="installing-into-folders"><a class="content__anchor" href="#installing-into-folders" aria-hidden="true"><i data-feather="bookmark"></i></a>Installing into folders</h2>
+<p>In DC/OS 1.10 and later, services may be installed into folders by specifying a slash-delimited service name. The example below will install the service under a path of <code>foldered =&gt; path =&gt; to =&gt; nifi</code>.</p>
+<pre><code class="language-shell">{
+    &quot;service&quot;: {
+        &quot;name&quot;: &quot;/foldered/path/to/nifi&quot;
+    }
+}
+</code></pre>
+<p>It can then be reached using <code>dcos nifi</code> CLI commands or directly over HTTP as described below.</p>
+<p class="message--important"><strong>IMPORTANT: </strong>The service folder location cannot be changed after initial install. Changing the service location would require installing a new instance of the service against the new location, then copying over any data as necessary to the new instance.</p>
+<h2 id="addressing-named-instances"><a class="content__anchor" href="#addressing-named-instances" aria-hidden="true"><i data-feather="bookmark"></i></a>Addressing named instances</h2>
+<p>After you have installed the service under a custom name or under a folder, you can access it from all <code>dcos nifi</code> CLI commands using the <code>--name</code> argument. By default, the <code>--name</code> value defaults to the name of the package, or <code>nifi</code>.</p>
+<p>For example, if you had an instance named <code>nifi-dev</code>, the following command would invoke a <code>pod list</code> command against it:</p>
+<pre><code class="language-shell">dcos nifi --name=nifi-dev pod list
+</code></pre>
+<p>You can make the same query over HTTP:</p>
+<pre><code class="language-shell">curl -H &quot;Authorization:token=$auth_token&quot; &lt;dcos_url&gt;/service/nifi-dev/v1/pod
+</code></pre>
+<p>Likewise, if you had an instance in a folder like <code>/foldered/path/to/nifi</code>, the following command would invoke a <code>pod list</code> command against it:</p>
+<pre><code class="language-shell">dcos nifi --name=/foldered/path/to/nifi pod list
+</code></pre>
+<p>You can make the same query over HTTP:</p>
+<pre><code class="language-shell">curl -H &quot;Authorization:token=$auth_token&quot; &lt;dcos_url&gt;/service/foldered/path/to/nifi-dev/v1/pod
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong> You may add a `-v` (verbose) argument to any `dcos nifi` command to see the underlying HTTP queries that are being made. This can be a useful tool to see where the CLI is getting its information. In practice, `dcos nifi` commands are a thin wrapper around an HTTP interface provided by the DC/OS Apache NiFi Service itself.</p>
+<h2 id="virtual-networks"><a class="content__anchor" href="#virtual-networks" aria-hidden="true"><i data-feather="bookmark"></i></a>Virtual networks</h2>
+<p>DC/OS NiFi Service supports deployment on virtual networks on DC/OS, allowing each container (task) to have its own IP address and not use port resources on the agent machines. This can be specified by passing the following configuration during installation:</p>
+<pre><code class="language-shell">{
+    &quot;service&quot;: {
+        &quot;virtual_network_enabled&quot;: true
+    }
+}
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong> Once the service is deployed on a virtual network, it cannot be updated to use the host network.</p>
+<h2 id="minimal-installation"><a class="content__anchor" href="#minimal-installation" aria-hidden="true"><i data-feather="bookmark"></i></a>Minimal installation</h2>
+<p>For development purposes, you may wish to install Apache NiFi on a local DC/OS cluster. For this, you can use <code>dcos-docker</code> or <code>dcos-vagrant</code>.
+To start a minimal cluster with a single node, create a JSON options file named <code>sample-nifi-minimal.json</code>:</p>
+<pre><code class="language-shell">{
+    &quot;node&quot;: {
+    &quot;count&quot;: 1,
+    &quot;mem&quot;: 512,
+    &quot;cpu&quot;: 0.5
+    }
+}
+</code></pre>
+<p>The following command creates a cluster using <code>sample-nifi-minimal.json</code>:</p>
+<pre><code class="language-shell">dcos package install nifi --options=sample-nifi-minimal.json
+</code></pre>
+<h2 id="example-custom-installation"><a class="content__anchor" href="#example-custom-installation" aria-hidden="true"><i data-feather="bookmark"></i></a>Example custom installation</h2>
+<p>Customize the defaults by creating a JSON file. Then, pass it to <code>dcos package install</code> using the <code>--options</code> parameter.</p>
+<p>Sample JSON options file named <code>sample-nifi-custom.json</code>:</p>
+<pre><code class="language-json">{
+&quot;node&quot;: {
+    &quot;count&quot;: 1,
+    &quot;cpus&quot;: 1
+    },
+&quot;service&quot;: {
+    &quot;name&quot;: &quot;test/integration/nifi&quot;,
+    &quot;security&quot;: {
+        &quot;kerberos&quot;: {
+            &quot;enabled&quot;: true,
+            &quot;cn_dn_node_identity&quot;: &quot;testintegrationnifi&quot;
+        },
+        &quot;tls_ssl&quot;: {
+            &quot;enable&quot;: true
+        }
+    },
+    &quot;service_account&quot;: &quot;dcosnifi&quot;,
+    &quot;service_account_secret&quot;: &quot;dcosnifisecret&quot;,
+    &quot;virtual_network_enabled&quot;: true
+    }
+}
+</code></pre>
+<p>The following command creates a cluster using <code>sample-nifi.json</code>:</p>
+<pre><code class="language-shell">dcos package install nifi --options=sample-nifi-custom.json
+</code></pre>
+<p>Store your custom configuration in source control.</p>
+<p>Alternatively, you can perform a custom installation from the DC/OS UI. Choose <code>ADVANCED INSTALLATION</code> at install time.</p>
+<h2 id="integration-with-dcos-access-controls"><a class="content__anchor" href="#integration-with-dcos-access-controls" aria-hidden="true"><i data-feather="bookmark"></i></a>Integration with DC/OS access controls</h2>
+<p>In DC/OS Enterprise 1.10 and later, you can integrate your SDK-based service with DC/OS ACLs to restrict users and groups to certain services. Do this by installing your service into a folder, and then restricting access to some number of folders. Folders also allow you to namespace services; for instance, <code>staging/nifi</code> and <code>production/nifi</code>.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>
+<p>In the DC/OS GUI, create a group, then add a user to the group. Or, just create a user. Choose <strong>Organization &gt; Groups &gt; +</strong> or <strong>Organization &gt; Users &gt; +</strong>. If you create a group, you must also create a user and add them to the group.</p>
+</li>
+<li>
+<p>Give the user permissions for the folder where you will install your service. In this example, we are creating a user called <code>developer</code>, who will have access to the <code>/testing</code> folder.</p>
+</li>
+<li>
+<p>Select the group or user you created. Select <code>ADD PERMISSION</code> and then toggle to <code>INSERT PERMISSION STRING</code>. Add each of the following permissions to your user or group, and then click <code>ADD PERMISSIONS</code>.</p>
+</li>
+</ol>
+<pre><code class="language-shell">dcos:adminrouter:service:marathon full
+dcos:service:marathon:marathon:services:/testing full
+dcos:adminrouter:ops:mesos full
+dcos:adminrouter:ops:slave full
+</code></pre>
+<ol start="4">
+<li>
+<p>Install your service into a folder called <code>test</code>. Go to the Catalog, then search for <code>nifi</code>.</p>
+</li>
+<li>
+<p>Click <code>CONFIGURE</code> and change the service name to <code>/testing/nifi</code>, then deploy. The slashes in your service name are interpreted as folders. You are deploying <code>nifi</code> in the <code>/testing</code> folder. Any user with access to the <code>/testing</code> folder will have access to the service.</p>
+</li>
+</ol>
+<p class="message--important"><strong>IMPORTANT: </strong>Services cannot be renamed. Because the location of the service is specified in the name, you cannot move services between folders. DC/OS 1.9 does not accept slashes in service names. You may be able to create the service, but you will encounter unexpected problems.</p>
+<h2 id="interacting-with-your-foldered-service"><a class="content__anchor" href="#interacting-with-your-foldered-service" aria-hidden="true"><i data-feather="bookmark"></i></a>Interacting with your foldered service</h2>
+<ol>
+<li>Interact with your foldered service via the DC/OS CLI with this flag: <code>--name=/path/to/myservice</code>.</li>
+<li>To interact with your foldered service over the web directly, use <code>http://&lt;dcos-url&gt;/service/path/to/myservice.</code> For example:  <code>http://&lt;dcos-url&gt;/service/testing/nifi/v1/endpoints</code>.</li>
+</ol>
+<h2 id="placement-constraints"><a class="content__anchor" href="#placement-constraints" aria-hidden="true"><i data-feather="bookmark"></i></a>Placement constraints</h2>
+<p>Placement constraints allow you to customize where a service is deployed in the DC/OS cluster. Depending on the service, some or all components may be configurable using Marathon operators (reference). For example, [[“hostname”, “UNIQUE”]] ensures that at most one pod instance is deployed per agent.</p>
+<p>A common task is to specify a list of whitelisted systems to deploy to. To achieve this, use the following syntax for the placement constraint:</p>
+<pre><code class="language-shell">[[&quot;hostname&quot;, &quot;LIKE&quot;, &quot;10.0.0.159|10.0.1.202|10.0.3.3&quot;]]
+</code></pre>
+<p>You must include spare capacity in this list, so that if one of the whitelisted systems goes down, there is still enough room to repair your service (via <code>pod replace</code>) without requiring that system.</p>
+<p><strong>Example</strong></p>
+<p>In order to define placement constraints as part of an install or update of a service, provide them as a JSON encoded string. For example, you can define a placement constraint in an options file as follows:</p>
+<pre><code class="language-json">cat options.json
+{
+    &quot;hello&quot;: {
+    &quot;placement&quot;: &quot;[[\&quot;hostname\&quot;, \&quot;UNIQUE\&quot;]]&quot;
+    }
+}
+</code></pre>
+<p>You can refer to this file to install a <code>nifi</code> service.</p>
+<pre><code class="language-shell">dcos package install hello-world --options=options.json
+</code></pre>
+<p>Likewise, you can refer to this file in order to update a <code>nifi</code> service.</p>
+<pre><code class="language-shell">dcos nifi update start --options=options.json
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#prerequisites">Prerequisites</a></li><li class="content__sections-item content__sections-item--h1"><a href="#installing-from-the-dcos-cli">Installing from the DC/OS CLI</a></li><li class="content__sections-item content__sections-item--h2"><a href="#installing-from-the-dcos-ui">Installing from the DC/OS UI</a></li><li class="content__sections-item content__sections-item--h2"><a href="#installing-multiple-instances">Installing multiple instances</a></li><li class="content__sections-item content__sections-item--h2"><a href="#installing-into-folders">Installing into folders</a></li><li class="content__sections-item content__sections-item--h2"><a href="#addressing-named-instances">Addressing named instances</a></li><li class="content__sections-item content__sections-item--h2"><a href="#virtual-networks">Virtual networks</a></li><li class="content__sections-item content__sections-item--h2"><a href="#minimal-installation">Minimal installation</a></li><li class="content__sections-item content__sections-item--h2"><a href="#example-custom-installation">Example custom installation</a></li><li class="content__sections-item content__sections-item--h2"><a href="#integration-with-dcos-access-controls">Integration with DC/OS access controls</a></li><li class="content__sections-item content__sections-item--h2"><a href="#interacting-with-your-foldered-service">Interacting with your foldered service</a></li><li class="content__sections-item content__sections-item--h2"><a href="#placement-constraints">Placement constraints</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

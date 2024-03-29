@@ -1,0 +1,289 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>外部入口 - D2iQ Docs</title><meta name="description" content="管理入口控制器"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Kubernetes文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li><li class="chooser-list-item"><a href="/dkp/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services/kubernetes">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__item"><a href="/dkp/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><div class="toggle"><p><span class="title">Kubernetes</span><span class="version"> 1.2.1-1.10.6</span></p></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/install/">安装和自定义</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/advanced-install/">高级安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/quick-start/">快速启动</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/uninstall/">卸载</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/cluster_sizing/">群集大小</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/upgrade/">已升级</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/limitations/">限制</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/exposing-the-kubernetes-api/">暴露 Kubernetes API</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/exposing-the-kubernetes-api-marathonlb/">通过 Marathon-LB 或 Edge-LB 暴露 Kubernetes API</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/connecting-clients/">连接客户端</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/kubernetes-dashboard/">Kubernetes 仪表板</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/authn-and-authz/">授权</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/troubleshooting-etcd/">故障排除</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/disaster-recovery/">灾难恢复</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/ingress/">外部入口</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/supported-versions/">支持的版本</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/release-notes/">版本注释</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">外部入口</h1></div><h4 class="content__header-description">管理入口控制器</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/master/pages/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/ingress/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://dcos-community.slack.com/" target="_blank"><i class="actions__icon" data-feather="slack"></i><span class="actions__text">Discuss</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+外部入口&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/ingress&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><h2 id="ingress"><a class="content__anchor" href="#ingress" aria-hidden="true"><i data-feather="bookmark"></i></a>运行 ingress 控制器</h2>
+<p>如果您想将 HTTP/S (L7) 应用程序暴露到外部世界 - 至少
+DC/OS 集群外部 - 您应创建一个
+<a href="https://kubernetes.io/docs/concepts/services-networking/ingress">Kubernetes <code>Ingress</code></a>
+资源。然而，为了让 Ingress 资源工作，Kubernetes
+集群必须具有 <strong>自定义 ingress 控制器</strong> 在运行。此包不会
+默认安装此控制器，但是允许您选择默认 ingress 控制器。</p>
+<p>您至少需要一个 DC/OS 公用代理，自定义 ingress 控制器可以在该代理上
+运行。在安装 Kubernetes 包之前，确保您拥有足够多的公用
+代理，以满足您的可用性需求，并根据需要
+设置 <code>kubernetes.public_node_count</code> 包选项的值：</p>
+<pre><code>{
+  (...)
+  &quot;kubernetes&quot;: {
+    (...)
+    &quot;public_node_count&quot;: 3
+    (...)
+  }
+  (...)
+}
+(...)
+</code></pre>
+<p>请确保 <code>kubernetes.public_node_count</code> 的设置值
+小于或等于您集群中的公用代理数量。如果您设置
+更高的值，框架将无法安装。</p>
+<h3 id="ingress-2"><a class="content__anchor" href="#ingress-2" aria-hidden="true"><i data-feather="bookmark"></i></a>开源 ingress 控制器</h3>
+<p>您可以选择一些开源、 cloud-agnostic ingress 控制器
+：</p>
+<ul>
+<li><a href="https://docs.traefik.io/user-guide/kubernetes/">Traefik</a></li>
+<li><a href="https://github.com/kubernetes/ingress-nginx">NGINX</a></li>
+<li><a href="https://github.com/appscode/voyager">HAProxy</a></li>
+<li><a href="https://github.com/heptio/contour">Envoy</a></li>
+<li><a href="https://istio.io/docs/tasks/traffic-management/ingress.html">Istio</a></li>
+</ul>
+<p>如果您正在 AWS 上运行，并希望与
+<a href="https://aws.amazon.com/documentation/elastic-load-balancing/">Amazon ELB</a> 集成，
+那么以下项目可能是一个选项：</p>
+<ul>
+<li><a href="https://github.com/coreos/alb-ingress-controller">ALB Ingress 控制器</a></li>
+</ul>
+<h4 id="traefik-ingress"><a class="content__anchor" href="#traefik-ingress" aria-hidden="true"><i data-feather="bookmark"></i></a>示例：使用 Traefik ingress 控制器</h4>
+<p>我们将引导您使用 Traefik ingress 控制器来
+公开暴露在 Kubernetes 集群中运行的
+服务。第一步应该是部署 ingress 控制器本身：</p>
+<pre><code class="language-yaml">---
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: traefik-ingress-controller
+rules:
+  - apiGroups:
+      - &quot;&quot;
+    resources:
+      - services
+      - endpoints
+      - secrets
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - extensions
+    resources:
+      - ingresses
+    verbs:
+      - get
+      - list
+      - watch
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+元数据：
+ 名称：traefik-ingress-controller
+rolEref:
+ apiGroup: rbac.authorization.k8s.io
+ kind: 集群角色
+ 名称：traefik-ingress-controller
+subjects:
+- kind: 服务帐户
+ 名称：traefik-ingress-controller
+ 命名空间： kube-system
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: traefik-ingress-controller
+  namespace: kube-system
+---
+kind: 部署。
+apiVersion：应用程序/v1
+元数据：
+ 名称：traefik-ingress-controller
+ 命名空间： kube-system
+ 标签：
+ k8s-app: traefik-ingress-controller
+规格：
+ 副本：1
+ 选择器：
+ matchLabel:
+ k8s-app: traefik-ingress-controller
+ 模板：
+ 元数据：
+ 标签：
+ k8s-app: traefik-ingress-controller
+ 名称：traefik-ingress-controller
+ 规格：
+ 服务账户名称：traefik-ingress-controller
+ terminationGracePeriodSeconds: 60
+ 容器：
+ - 图像： traefik:v1.6.4-alpine
+ 名称：traefik-ingress-controller
+ args:
+ - --api
+ - --kubernetes
+ - --logLevel=INFO
+# NOTE: 以下是必要的补充：
+# https://docs.traefik.io/user-guide/kubernetes
+# 请在下方查看详细说明
+ 端口：
+ - containerPort: 80
+ hostPort: 80
+ 名称： http
+ 协议：TCP
+ - containerPort: 8080
+ 名称：admin
+ 协议：TCP
+ 亲和性：
+ podAntiAffinity:
+ requiredDuringSchedulingIgnoredDuringExecution:
+ - labelSelector:
+ matchExpression:
+ - 键：k8s-app
+ 操作员：In
+ 值：
+ - traefik-ingress-lb
+ topologyKey: &quot;kubernetes.io/hostname&quot; 
+ nodeSelector:
+ kubernetes.dcos.io/node-type：公用
+ 容忍：
+ - 键：&quot;node-type.kubernetes.dcos.io/public&quot; 
+ 操作员：&quot;Exists&quot; 
+ 效果：&quot;NoSchedule&quot; 
+</code></pre>
+<p>创建这些资源将导致 Traefik 被部署为
+您集群中的 ingress 控制器。我们对
+<a href="https://docs.traefik.io/user-guide/kubernetes">official manifests</a> 进行了一些补充，因此
+部署按预期工作：</p>
+<ul>
+<li>将每个 pod 的<code>:80</code> 端口绑定到主机的 <code>:80</code> 端口。这是
+在公用节点上暴露 ingress 控制器的最简单方式，因为 DC/OS
+已经开启公用代理上的 <code>:80</code> 端口。但是，当使用 <code>hostPort</code> 时，您需要
+负责确保没有其他应用程序
+（在集群中或甚至在 DC/OS 外）在使用每个公用代理上的 <code>:80</code>
+端口。如果端口已被使用，Kubernetes 将无法在特定代理商上
+调度 pod。</li>
+<li>利用 pod 反关联，确保 pod 在可用的
+公用代理之间散开，以确保高可用性。当使用
+如上所述的 <code>hostPort</code> 时，这会有些冗余，但是，当使用
+不同的方法（见下文）暴露控制器会有帮助。</li>
+<li>利用 <code>nodeSelector</code> 约束，以强制 pod
+只在公用节点上调度。</li>
+<li>利用 <code>node-type.kubernetes.dcos.io/public</code> 节点污点，以便
+pod 实际上可在公用节点上运行。</li>
+</ul>
+<p>假设您在集群中有一个附带 IP <code>&lt;public-agent-ip&gt;</code> 的公用代理，
+ingress 控制器将可以在
+http://<public-agent-ip><code>. If you have</code>N<code>公用代理上访问，我们建议 您将</code>.spec.replicas<code>设置成与上述实例中的</code>N<code>相同。就像在一个 场景中，当有单个公用代理时，ingress 控制器 可以在每个代理的</code>:80` 端口上被访问。</p>
+<p>如上所述，使用 <code>hostPort</code> 容易使
+部署受到端口碰撞的影响。如果你想确保安全，
+那么您可以删除上述部署中的 <code>.spec.spec.ports</code> 字段并使用
+<code>NodePort</code>-类型 <code>Service</code> 以暴露 ingress 控制器：</p>
+<pre><code class="language-yaml">apiVersion: v1
+kind: Service
+metadata:
+  name: traefik-ingress-controller
+  namespace: kube-system
+spec:
+  selector:
+    k8s-app: traefik-ingress-controller
+  ports:
+    - port: 80
+      name: http
+  type: NodePort
+</code></pre>
+<p>创建上述 <code>Service</code> 对象将导致 Kubernetes master 分配
+来自标签配置范围（<code>:30000</code> 至 <code>:32767</code>）的端口，并且每个节点会将
+该端口代理到 ingress 控制器。结果端口
+会在 <code>Service</code>的 <code>spec.ports[0].nodePort</code> 字段中被报告。如果您想使用特定的
+端口号，您可以将 <code>nodePort</code> 字段手动添加至 <code>.spec.ports[0]</code>。在任何
+情况下，记录结果 <code>nodePort</code>，</p>
+<pre><code class="language-shell">$ kubectl -n kube-system describe svc traefik-ingress-controller | grep NodePort
+Type:                     NodePort
+NodePort:                 http  &lt;node-port&gt;/TCP
+</code></pre>
+<p>并确保设置防火墙规则，以便每个公用代理中的 <code>:&lt;node-port&gt;</code> 端口
+可以从 <code>0.0.0.0/0</code> 被访问—或者，从
+已知 IP 或范围的受限集合（拥有访问
+通过 ingress 暴露的服务的权限）。例如，如果您正在运行
+AWS 上的 Kubernetes，您可以使用以下命令设置这些防火墙
+规则：</p>
+<pre><code class="language-shell">$ aws ec2 authorize-security-group-ingress \
+    --group-id &quot;&lt;security-group-id&gt;&quot; \
+    --protocol tcp \
+    --port &quot;30000-32767&quot; \
+    --cidr &quot;0.0.0.0/0&quot; \
+    --region &quot;&lt;region&gt;&quot;
+</code></pre>
+<p>运行上述命令时，您必须将 <code>&lt;security-group-id&gt;</code> 替换为
+管理 DC/OS 集群中的公用代理访问权限的安全组的 ID，
+并将 <code>&lt;region&gt;</code> 替换为与您集群部署的区域。请
+注意，此规则可能过于宽容。我们强烈建议您
+设置最严格的防火墙规则集（符合您的场景）。</p>
+<p>防火墙规则到位后，您将准备好部署应用程序，
+并把它暴露在互联网上。在本示例中，我们将暴露一个简单的 HTTP
+服务器，该服务器以 “Hello world!” 消息对 <code>GET /</code> 作出相应。使用
+<code>kubectl</code> 创建以下对象：</p>
+<pre><code class="language-yaml">---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world
+  labels:
+    app: hello-world
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hello-world
+  template:
+    metadata:
+      labels:
+        app: hello-world
+    spec:
+      containers:
+      - name: echo-server
+        image: hashicorp/http-echo
+        args:
+        - -listen=:80
+        - -text=&quot;Hello from Kubernetes!&quot;
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: 服务
+元数据：
+ 名称：hello-world
+规格：
+ 选择器：
+ 应用程序：hello-world
+ 端口：
+ - 端口 80
+ targetPort: 80
+</code></pre>
+<p>现在，创建将暴露 <code>hello-world</code> 服务的 <code>Ingress</code> 对象：</p>
+<pre><code class="language-yaml">apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: traefik
+  name: hello-world
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /
+        backend:
+          serviceName: hello-world
+          servicePort: 80
+</code></pre>
+<p>注意 <code>kubernetes.io/ingress.class</code> 注解 — 这是您指定
+ingress 控制器的位置，负责满足此 ingress。
+创建此资源后，打开浏览器并导航至</p>
+<pre><code>http://&lt;public-agent-ip&gt;/
+</code></pre>
+<p>或</p>
+<pre><code>http://&lt;public-agent-ip&gt;:&lt;node-port&gt;/
+</code></pre>
+<p>基于您选择的上述选项（<code>hostPort</code> vs <code>nodePort</code>）。您应该
+能够看到 <code>Hello from Kubernetes!</code> 消息，意味着 ingress
+已成功创建，Traefik 正在将您的服务暴露给
+互联网。如果您看不到消息，请确保您已设置
+上述防火墙规则。</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#ingress">运行 ingress 控制器</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

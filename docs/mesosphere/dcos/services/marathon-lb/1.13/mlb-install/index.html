@@ -1,0 +1,459 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Installing Marathon-LB - D2iQ Docs</title><meta name="description" content="Installing Marathon-LB using default or custom options for a DC/OS cluster"><link rel="icon" href="/assets/favicon.ico"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search DC/OS site"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><!-- Ethnio Activation Code -->
+<!-- script(type='text/javascript', language='javascript', src='//ethn.io/74286.js', async='true', charset='utf-8') --><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Marathon Lb Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">Ksphere</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/ksphere/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/ksphere/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/ksphere/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/ksphere/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/ksphere/kubeflow">KUDO Kubeflow</a></li><li class="chooser-list-item"><a href="/ksphere/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/services/marathon-lb/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>Ksphere</div></li><li class="header-dropdown__item"><a href="/ksphere/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/ksphere/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/ksphere/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/ksphere/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/ksphere/kubeflow">KUDO Kubeflow</a></li><li class="header-dropdown__item"><a href="/ksphere/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul class="sidebar__dropdown__list"><li class="sidebar__dropdown__item"><a class="sidebar__dropdown__link" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.13/mlb-install">Marathon-LB 1.13.x</a></li><li class="sidebar__dropdown__item"><a class="sidebar__dropdown__link" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.14/mlb-install">Marathon-LB 1.14.x</a></li></ul><div class="sidebar__dropdown__toggle"><p class="sidebar__dropdown__text"><span class="sidebar__dropdown__text__title">Marathon Lb</span><span class="sidebar__dropdown__text__version"> 1.13</span></p><i class="sidebar__dropdown__icon" data-feather="chevron-down"></i></div></div></header><nav class="sidebar__nav" role="navigation"><ul class="sidebar__nav__list sidebar__nav__list--active"><li class="sidebar__nav__item"><a class="sidebar__nav__item__container sidebar__nav__item__container--depth-0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.13/release-notes"><div class="sidebar__nav__text">Release notes</div></a></li><li class="sidebar__nav__item sidebar__nav__item--active sidebar__nav__item--active-on"><a class="sidebar__nav__item__container sidebar__nav__item__container--depth-0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.13/mlb-install"><div class="sidebar__nav__text">Installing Marathon-LB</div></a></li><li class="sidebar__nav__item"><a class="sidebar__nav__item__container sidebar__nav__item__container--depth-0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.13/mlb-overview"><div class="sidebar__nav__text">Marathon-LB overview</div></a></li><li class="sidebar__nav__item"><a class="sidebar__nav__item__container sidebar__nav__item__container--depth-0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.13/mlb-configuration"><div class="sidebar__nav__text">Working with templates and app labels</div></a></li><li class="sidebar__nav__item"><a class="sidebar__nav__item__container sidebar__nav__item__container--depth-0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.13/mlb-basic-tutorial"><div class="sidebar__nav__text">Tutorial - Basic external load balancing</div></a></li><li class="sidebar__nav__item"><a class="sidebar__nav__item__container sidebar__nav__item__container--depth-0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.13/mlb-advanced-tutorial"><div class="sidebar__nav__text">Tutorial - Internal and external load balancing</div></a></li><li class="sidebar__nav__item"><a class="sidebar__nav__item__container sidebar__nav__item__container--depth-0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.13/mlb-scaling-tutorial"><div class="sidebar__nav__text">Tutorial - Scaling apps using Marathon-LB statistics</div></a></li><li class="sidebar__nav__item"><a class="sidebar__nav__item__container sidebar__nav__item__container--depth-0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.13/mlb-troubleshooting"><div class="sidebar__nav__text">Troubleshooting Marathon-LB</div></a></li><li class="sidebar__nav__item"><a class="sidebar__nav__item__container sidebar__nav__item__container--depth-0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.13/mlb-reference"><div class="sidebar__nav__text">Reference information</div></a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2020 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Installing Marathon-LB</h1></div><h4 class="content__header-description">Installing Marathon-LB using default or custom options for a DC/OS cluster</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><a class="actions__link addthis_button" href="/"><i class="actions__icon" data-feather="share"></i><span class="actions__text">Share</span></a></li><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/master/pages/dcosdocs/mesosphere/dcos/services/marathon-lb/1.13/mlb-install/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://dcos-community.slack.com/" target="_blank"><i class="actions__icon" data-feather="slack"></i><span class="actions__text">Discuss</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+Installing+Marathon-LB&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/services/marathon-lb/1.13/mlb-install&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><h1 id="installing-marathon-lb-on-dcos"><a class="content__anchor" href="#installing-marathon-lb-on-dcos" aria-hidden="true"><i data-feather="bookmark"></i></a>Installing Marathon-LB on DC/OS</h1>
+<p>You can install Marathon-LB on a DC/OS open source or DC/OS enterprise cluster. You can install the Marathon-LB package and customize its configuration settings using the DC/OS web-based administrative console or by running DC/OS commands in a shell terminal.</p>
+<h2 id="before-you-begin"><a class="content__anchor" href="#before-you-begin" aria-hidden="true"><i data-feather="bookmark"></i></a>Before you begin</h2>
+<ul>
+<li>You must have a DC/OS open source or enterprise cluster with a bootstrap node, at least one master node, and at least one agent node.</li>
+<li>You must have access to the DC/OS web-based administrative console or DC/OS command-line interface.</li>
+<li>You must have an account with administrative privileges to provision a service account and to store a secret to secure the cluster.</li>
+</ul>
+<p>If you are installing on DC/OS Enterprise, you must log in as a user with the appropriate permissions for the security mode–disabled, permissive, or strict–associated with the cluster. For more information about the permissions required when using different security modes, see <a href="/dcosdocs/mesosphere/dcos/1.13/security/ent/perms-reference/">Permissions reference</a>.</p>
+<h2 id="install-with-the-default-configuration-options"><a class="content__anchor" href="#install-with-the-default-configuration-options" aria-hidden="true"><i data-feather="bookmark"></i></a>Install with the default configuration options</h2>
+<p>You can install Marathon-LB with its default configuration settings on a DC/OS open source cluster or on a DC/OS enterprise cluster by using either the DC/OS web-based administrative console or by running DC/OS commands in a shell terminal.</p>
+<h3 id="to-install-with-the-default-settings-using-the-web-based-dcos-console"><a class="content__anchor" href="#to-install-with-the-default-settings-using-the-web-based-dcos-console" aria-hidden="true"><i data-feather="bookmark"></i></a>To install with the default settings using the web-based DC/OS console:</h3>
+<ol>
+<li>
+<p>Log in to your DC/OS cluster using a web browser.</p>
+</li>
+<li>
+<p>Click <strong>Catalog</strong> and search for the Marathon-LB package.</p>
+</li>
+<li>
+<p>Select the package, then click <strong>Review &amp; Run</strong> to display the <strong>Edit Configuration</strong> page.</p>
+</li>
+<li>
+<p>Configure the package settings, as needed, using the DC/OS UI or by clicking <strong>JSON Editor</strong> and modifying the app definition manually.</p>
+<p>For example, you might customize configuration settings to specify a load balancing group name or the specific number of instances to run.</p>
+<p>For more information about customizing the configuration and the configuration settings available, see <a href="#custom-config-options">Install with custom configuration options</a>.</p>
+</li>
+<li>
+<p>Click <strong>Review &amp; Run</strong>.</p>
+</li>
+<li>
+<p>Review the installation notes, then click <strong>Run Service</strong> to deploy the Marathon-LB package.</p>
+</li>
+</ol>
+<h3 id="to-install-with-the-default-settings-using-the-dcos-cli"><a class="content__anchor" href="#to-install-with-the-default-settings-using-the-dcos-cli" aria-hidden="true"><i data-feather="bookmark"></i></a>To install with the default settings using the DC/OS CLI:</h3>
+<ol>
+<li>Open a terminal and connect to the DC/OS enterprise cluster from a computer where the DC/OS CLI is available.</li>
+<li>Run the following command to install Marathon-LB with its default configuration settings:</li>
+</ol>
+<pre><code class="language-bash">dcos package install marathon-lb
+</code></pre>
+<p>Installing with the default configuration options is most appropriate if you are setting up a test environment, preparing a cluster for development, or establishing a basic pilot program before moving components to production.</p>
+<p>In most cases, you would instead deploy load balancing with at least a few custom configuration settings, such as virtual host information or SSL certificates. If you are installing load balancing on DC/OS Enterprise using <code>strict</code> security, you must also provision a service account with valid credentials to run Marathon-LB. Provisioning a service account with SSL credentials is optional if security for DC/OS Enterprise is <code>disabled</code> or in <code>permissive</code> mode.</p>
+<a name=custom-config-options>
+<h2 id="install-with-custom-configuration-options"><a class="content__anchor" href="#install-with-custom-configuration-options" aria-hidden="true"><i data-feather="bookmark"></i></a>Install with custom configuration options</h2>
+<p>You can install Marathon-LB with custom configuration settings on a DC/OS open source cluster or on a DC/OS enterprise cluster. You can specify the custom configuration options by using either the DC/OS web-based administrative console or by running DC/OS commands in a shell terminal.</p>
+<p>Regardless of whether you install using the web-based console or the CLI, the steps are essentially the same as installing with the default configuration options. However, Marathon-LB offers many basic and advanced load balancing settings that you can customize. At a minimum, most organizations customize the load balancing group, virtual network information, secure socket layer certificates and keys, and service account information. For more information about configuration settings and using templates and app definition label, see <a href="">High availability template reference</a>.</p>
+<h3 id="to-install-with-custom-configuration-settings-using-the-dcos-cli"><a class="content__anchor" href="#to-install-with-custom-configuration-settings-using-the-dcos-cli" aria-hidden="true"><i data-feather="bookmark"></i></a>To install with custom configuration settings using the DC/OS CLI:</h3>
+<ol>
+<li>
+<p>Open a terminal and connect to the DC/OS cluster from a computer where the DC/OS CLI is available.</p>
+</li>
+<li>
+<p>Run the following command to view all of the available Marathon-LB configuration options:</p>
+<pre><code class="language-bash">dcos package describe --config marathon-lb
+</code></pre>
+<p>You can redirect the output from this command to a file to save the configuration properties for editing. The default app definition for Marathon-LB looks like this:</p>
+<pre><code class="language-json">{
+  &quot;properties&quot;: {
+    &quot;marathon-lb&quot;: {
+      &quot;properties&quot;: {
+        &quot;auto-assign-service-ports&quot;: {
+          &quot;default&quot;: false,
+          &quot;description&quot;: &quot;Auto assign service ports for tasks which use IP-per-task. See https://github.com/mesosphere/marathon-lb#mesos-with-ip-per-task-support for details.&quot;,
+          &quot;type&quot;: &quot;boolean&quot;
+        },
+        &quot;bind-http-https&quot;: {
+          &quot;default&quot;: true,
+          &quot;description&quot;: &quot;Reserve ports 80 and 443 for the LB. Use this if you intend to use virtual hosts.&quot;,
+          &quot;type&quot;: &quot;boolean&quot;
+        },
+        &quot;container-syslogd&quot;: {
+          &quot;default&quot;: false,
+          &quot;description&quot;: &quot;Enable verbose syslogd logging to container stdout. This will also capture all HAProxy http connection and other logs.&quot;,
+          &quot;type&quot;: &quot;boolean&quot;
+        },
+        &quot;cpus&quot;: {
+          &quot;default&quot;: 2,
+          &quot;description&quot;: &quot;CPU shares to allocate to each marathon-lb instance.&quot;,
+          &quot;minimum&quot;: 1,
+          &quot;type&quot;: &quot;number&quot;
+        },
+        &quot;haproxy-group&quot;: {
+          &quot;default&quot;: &quot;external&quot;,
+          &quot;description&quot;: &quot;HAProxy group parameter. Matches with HAPROXY_GROUP in the app labels.&quot;,
+          &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;haproxy-map&quot;: {
+          &quot;default&quot;: true,
+          &quot;description&quot;: &quot;Enable HAProxy VHost maps for fast VHost routing.&quot;,
+          &quot;type&quot;: &quot;boolean&quot;
+        },
+        &quot;haproxy_global_default_options&quot;: {
+          &quot;default&quot;: &quot;redispatch,http-server-close,dontlognull&quot;,
+          &quot;description&quot;: &quot;Default global options for HAProxy.&quot;,
+          &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;instances&quot;: {
+          &quot;default&quot;: 1,
+          &quot;description&quot;: &quot;Number of instances to run.&quot;,
+          &quot;minimum&quot;: 1,
+          &quot;type&quot;: &quot;integer&quot;
+        },
+        &quot;marathon-uri&quot;: {
+          &quot;default&quot;: &quot;http://marathon.mesos:8080&quot;,
+          &quot;description&quot;: &quot;URI of Marathon instance&quot;,
+          &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;max-reload-retries&quot;: {
+          &quot;default&quot;: 10,
+          &quot;description&quot;: &quot;Max reload retries before failure. Reloads happen every --reload-interval seconds. Set to 0 to disable or -1 for infinite retries.&quot;,
+          &quot;type&quot;: &quot;integer&quot;
+        },
+        &quot;maximumOverCapacity&quot;: {
+          &quot;default&quot;: 0.2,
+          &quot;description&quot;: &quot;Maximum over capacity.&quot;,
+          &quot;minimum&quot;: 0,
+          &quot;type&quot;: &quot;number&quot;
+        },
+        &quot;mem&quot;: {
+          &quot;default&quot;: 1024.0,
+          &quot;description&quot;: &quot;Memory (MB) to allocate to each marathon-lb task.&quot;,
+          &quot;minimum&quot;: 256.0,
+          &quot;type&quot;: &quot;number&quot;
+        },
+        &quot;minimumHealthCapacity&quot;: {
+          &quot;default&quot;: 0.5,
+          &quot;description&quot;: &quot;Minimum health capacity.&quot;,
+          &quot;minimum&quot;: 0,
+          &quot;type&quot;: &quot;number&quot;
+        },
+        &quot;name&quot;: {
+          &quot;default&quot;: &quot;marathon-lb&quot;,
+          &quot;description&quot;: &quot;Name for this LB instance&quot;,
+          &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;parameters&quot;: {
+          &quot;default&quot;: [],
+          &quot;description&quot;: &quot;Docker parameters&quot;,
+          &quot;items&quot;: {
+            &quot;properties&quot;: {
+              &quot;key&quot;: {
+                &quot;type&quot;: &quot;string&quot;
+              },
+              &quot;value&quot;: {
+                &quot;type&quot;: &quot;string&quot;
+              }
+            },
+            &quot;required&quot;: [
+              &quot;key&quot;,
+              &quot;value&quot;
+            ],
+            &quot;type&quot;: &quot;object&quot;
+          },
+          &quot;type&quot;: &quot;array&quot;
+        },
+        &quot;reload-interval&quot;: {
+          &quot;default&quot;: 10,
+          &quot;description&quot;: &quot;When retry-reload enabled, wait this long before attempting another reload.&quot;,
+          &quot;type&quot;: &quot;integer&quot;
+        },
+        &quot;role&quot;: {
+          &quot;default&quot;: &quot;slave_public&quot;,
+          &quot;description&quot;: &quot;Deploy marathon-lb only on nodes with this role.&quot;,
+          &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;secret_name&quot;: {
+          &quot;default&quot;: &quot;&quot;,
+          &quot;description&quot;: &quot;Name of the Secret Store credentials to use for DC/OS service authentication. This should be left empty unless service authentication is needed.&quot;,
+          &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;ssl-cert&quot;: {
+          &quot;description&quot;: &quot;TLS Cert and private key for HTTPS.&quot;,
+          &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;strict-mode&quot;: {
+          &quot;default&quot;: false,
+          &quot;description&quot;: &quot;Enable strict mode. This requires that you explicitly enable each backend with `HAPROXY_{n}_ENABLED=true`.&quot;,
+          &quot;type&quot;: &quot;boolean&quot;
+        },
+        &quot;sysctl-params&quot;: {
+          &quot;default&quot;: &quot;net.ipv4.tcp_tw_reuse=1 net.ipv4.tcp_fin_timeout=30 net.ipv4.tcp_max_syn_backlog=10240 net.ipv4.tcp_max_tw_buckets=400000 net.ipv4.tcp_max_orphans=60000 net.core.somaxconn=10000&quot;,
+          &quot;description&quot;: &quot;sysctl params to set at startup for HAProxy.&quot;,
+          &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;template-url&quot;: {
+          &quot;default&quot;: &quot;&quot;,
+          &quot;description&quot;: &quot;URL to tarball containing a directory templates/ to customize haproxy config.&quot;,
+          &quot;type&quot;: &quot;string&quot;
+        }
+      },
+      &quot;required&quot;: [
+        &quot;cpus&quot;,
+        &quot;mem&quot;,
+        &quot;haproxy-group&quot;,
+        &quot;instances&quot;,
+        &quot;name&quot;
+      ],
+      &quot;type&quot;: &quot;object&quot;
+    }
+  },
+  &quot;type&quot;: &quot;object&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>Edit the JSON configuration file with your customizations.</p>
+<p>You can choose an any file name, However, you might want to choose a file name that includes a package identifier, such as <code>marathon-lb-options.json</code>, in the name.</p>
+<p>For example:</p>
+<ul>
+<li>
+<p>Change the CPU shares allocated to each Marathon-LB instance to <code>3</code>:</p>
+<pre><code>  &quot;cpus&quot;: {
+    &quot;default&quot;: 3,
+    &quot;description&quot;: &quot;CPU shares to allocate to each marathon-lb instance.&quot;,
+    &quot;minimum&quot;: 3,
+    &quot;type&quot;: &quot;number&quot;
+  },
+</code></pre>
+</li>
+<li>
+<p>Set the load balancing group to <code>na-external</code>:</p>
+<pre><code>  &quot;haproxy-group&quot;: {
+    &quot;default&quot;: &quot;na-external&quot;,
+    &quot;description&quot;: &quot;HAProxy group parameter. Matches with HAPROXY_GROUP in the app labels.&quot;,
+    &quot;type&quot;: &quot;string&quot;
+  },
+</code></pre>
+</li>
+<li>
+<p>Set the memory allocation to <code>2048</code>:</p>
+<pre><code>  &quot;mem&quot;: {
+    &quot;default&quot;: 2048.0,
+    &quot;description&quot;: &quot;Memory (MB) to allocate to each marathon-lb task.&quot;,
+    &quot;minimum&quot;: 2048.0,
+    &quot;type&quot;: &quot;number&quot;
+  },
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Run the following command to install Marathon-LB using the settings in the customized <code>marathon-lb-options.json</code> file:</p>
+</li>
+</ol>
+<pre><code class="language-bash">dcos package install marathon-lb --options=marathon-lb-options.json --yes
+</code></pre>
+<h2 id="install-on-a-cluster-with-a-provisioned-service-account"><a class="content__anchor" href="#install-on-a-cluster-with-a-provisioned-service-account" aria-hidden="true"><i data-feather="bookmark"></i></a>Install on a cluster with a provisioned service account</h2>
+<p>If you are installing Marathon-LB on a DC/OS Enterprise cluster, creating a service account is <strong>optional</strong> when the security mode is disabled or permissive. The service account is <strong>required</strong> if the security mode is strict. If the DC/OS cluster uses strict security, you must create a service account and a certificate that authorizes the service account to access Marathon-LB.</p>
+<p>To increase the security of your cluster and conform to the principle of least privilege, Mesosphere recommends that you provision a service account even if the cluster runs in disabled or permissive security mode. Note that you must have superuser permission for the cluster to create the service account.</p>
+<p>The following steps summarize how to prepare a service account for running Marathon-LB and how set provision the service account to run a Marathon-LB instance that distributes application instances to agent nodes. If you set up multiple Marathon-LB instances that interact with the same Marathon instance, you can use the same service account for each Marathon-LB instance.</p>
+<ul>
+<li>Create a public-private key pair.</li>
+<li>Create a service account.</li>
+<li>Create a service account secret (optional)</li>
+<li>Provision the service account with the necessary permissions.</li>
+<li>Create a customized configuration file.</li>
+<li>Install Marathon-LB.</li>
+</ul>
+<p>If you currently running the cluster in permissive mode and plan to upgrade to strict security in the future, provisioning a service account for Marathon-LB makes upgrading easier.</p>
+<a name="create-key-pair">
+<h3 id="create-a-public-private-key-pair"><a class="content__anchor" href="#create-a-public-private-key-pair" aria-hidden="true"><i data-feather="bookmark"></i></a>Create a public-private key pair</h3>
+<p>You must generate a 2048-bit RSA public-private key pair to use to encrypt and decrypt certificates for secure socket layer (SSL) connections. One convenient way to generate the key pair is by using the DC/OS Enterprise CLI. The DC/OS command-line interface returns the keys in the <code>.pem</code> format required by DC/OS.</p>
+<ol>
+<li>
+<p>Open a terminal and connect to the DC/OS enterprise cluster from a computer where the DC/OS CLI is available.</p>
+</li>
+<li>
+<p>Install the DC/OS Enterprise command-line interface (CLI), if necessary.</p>
+<pre><code class="language-bash">dcos package install dcos-enterprise-cli --yes
+</code></pre>
+</li>
+<li>
+<p>Run the following command to create a public-private key pair and save each value into a separate file within the current directory.</p>
+<pre><code class="language-bash">dcos security org service-accounts keypair mlb-private-key.pem mlb-public-key.pem
+</code></pre>
+<p>In this example, <code>mlb-private-key.pem</code> is the name of the file containing the private key and <code>mlb-public-key.pem</code> is the name of the file containing the public key. Use the modified names to specify the private and public key files.</p>
+</li>
+<li>
+<p>Verify the contents of each file.</p>
+</li>
+</ol>
+<h3 id="create-a-service-account"><a class="content__anchor" href="#create-a-service-account" aria-hidden="true"><i data-feather="bookmark"></i></a>Create a service account</h3>
+<p>You can create a service account to use with Marathon-LB by running DC/OS Enterprise commands or by using the DC/OS web-based administrative console.</p>
+<h4 id="to-create-a-service-account-using-the-dcos-enterprise-cli"><a class="content__anchor" href="#to-create-a-service-account-using-the-dcos-enterprise-cli" aria-hidden="true"><i data-feather="bookmark"></i></a>To create a service account using the DC/OS Enterprise CLI:</h4>
+<ol>
+<li>
+<p>Open a terminal and connect to the DC/OS enterprise cluster from a computer where the DC/OS CLI is available.</p>
+</li>
+<li>
+<p>Run the following command to set your login authentication level to superuser.</p>
+<pre><code class="language-bash">dcos auth login
+</code></pre>
+</li>
+<li>
+<p>Run the following command to create a new service account called <code>marathon-lb-sa</code> containing the public key you just generated.</p>
+<pre><code class="language-bash">dcos security org service-accounts create -p mlb-public-key.pem -d &quot;Marathon-LB service account&quot; marathon-lb-sa
+</code></pre>
+</li>
+<li>
+<p>Verify your new service account using the following command.</p>
+<pre><code class="language-bash">dcos security org service-accounts show marathon-lb-sa
+</code></pre>
+</li>
+</ol>
+<h4 id="to-create-a-service-account-using-the-dcos-enterprise-web-based-console"><a class="content__anchor" href="#to-create-a-service-account-using-the-dcos-enterprise-web-based-console" aria-hidden="true"><i data-feather="bookmark"></i></a>To create a service account using the DC/OS Enterprise web-based console:</h4>
+<ol>
+<li>In the DC/OS web interface, navigate to the Organization &gt; Service Accounts tab.</li>
+<li>Click <strong>New Service Account</strong>.</li>
+<li>Enter a description and the service account ID.</li>
+<li>Copy the contents of the relevant public key file, for example, <code>mlb-public-key.pem</code> into the <strong>Public Key</strong> field.</li>
+</ol>
+<h3 id="create-a-secret-for-the-service-account"><a class="content__anchor" href="#create-a-secret-for-the-service-account" aria-hidden="true"><i data-feather="bookmark"></i></a>Create a secret for the service account</h3>
+<p>For additional security, you can create a secret associated with the service account that contains the private key. You can create the secret by running DC/OS Enterprise commands or by using the DC/OS web-based administrative console.</p>
+<h4 id="to-create-a-secret-for-a-service-account-using-the-dcos-enterprise-cli"><a class="content__anchor" href="#to-create-a-secret-for-a-service-account-using-the-dcos-enterprise-cli" aria-hidden="true"><i data-feather="bookmark"></i></a>To create a secret for a service account using the DC/OS Enterprise CLI:</h4>
+<ol>
+<li>
+<p>Open a terminal and connect to the DC/OS enterprise cluster from a computer where the DC/OS CLI is available.</p>
+</li>
+<li>
+<p>Run the following command to set your login authentication level to superuser.</p>
+<pre><code class="language-bash">dcos auth login
+</code></pre>
+</li>
+<li>
+<p>Run one of the following commands to create a new secret called <code>service-account-secret</code> in the marathon-lb path.</p>
+<ul>
+<li>
+<p>For <strong>strict</strong> or <strong>permissive</strong> security:</p>
+<pre><code class="language-bash">dcos security secrets create-sa-secret --strict mlb-private-key.pem marathon-lb-sa marathon-lb/service-account-secret
+</code></pre>
+</li>
+<li>
+<p>For <strong>disabled</strong> security:</p>
+<pre><code class="language-bash">dcos security secrets create-sa-secret mlb-private-key.pem marathon-lb-sa marathon-lb/service-account-secret
+</code></pre>
+</li>
+</ul>
+<p>The full path to the secret for this example is <code>marathon-lb/service-account-secret</code>. Locating the secret inside the marathon-lb path ensures that only the Marathon-LB service can access it. The secret will contain the private key, the name of the service account, and other data.</p>
+</li>
+<li>
+<p>Ensure the secret was created successfully:</p>
+<pre><code class="language-bash">dcos security secrets list /
+</code></pre>
+<p>If you have jq 1.5 or later installed, you can also use the following command to retrieve the secret and ensure that it contains the correct service account ID and private key.</p>
+<pre><code class="language-bash">dcos security secrets get /marathon-lb/service-account-secret --json | jq -r .value | jq
+</code></pre>
+<p>If the cluster uses strict or permissive security, verify that the <code>login_endpoint</code> URL uses HTTPS protocol. If security is disabled for the cluster, the <code>login_endpoint</code> should use HTTP. If the URL begins with <code>https</code> and the cluster is in disabled mode, try upgrading the DC/OS Enterprise CLI, deleting the secret, and recreating it.</p>
+</li>
+<li>
+<p>Delete the private key file from your file system.</p>
+<p>After you have stored the private key in the DC/OS secret store, you should delete your copy of the private key to prevent unauthorized users from using it to authenticate to DC/OS.</p>
+<pre><code class="language-bash">rm -rf mlb-private-key.pem
+</code></pre>
+</li>
+</ol>
+<h4 id="to-create-a-secret-for-a-service-account-using-the-dcos-web-based-console"><a class="content__anchor" href="#to-create-a-secret-for-a-service-account-using-the-dcos-web-based-console" aria-hidden="true"><i data-feather="bookmark"></i></a>To create a secret for a service account using the DC/OS web-based console:</h4>
+<ol>
+<li>
+<p>Log in to the DC/OS web-based administrative console as a user with the superuser permission.</p>
+</li>
+<li>
+<p>Click <strong>System</strong>, then click <strong>Security</strong>.</p>
+</li>
+<li>
+<p>Click <strong>New Secret</strong>.</p>
+</li>
+<li>
+<p>Type <code>marathon-lb/service-account-secret</code> into the ID field to create a new secret called <code>service-account-secret</code> in the <code>marathon-lb</code> path. Locating the secret inside the <code>marathon-lb</code> path ensures that only the Marathon-LB service can access it.</p>
+<p>If you have a <strong>strict</strong> or <strong>permissive</strong> cluster, paste the following JSON into the Value field.</p>
+<pre><code class="language-bash">{
+  &quot;scheme&quot;: &quot;RS256&quot;,
+  &quot;uid&quot;: &quot;marathon-lb-sa&quot;,
+  &quot;private_key&quot;: &quot;&lt;private-key-value&gt;&quot;,
+  &quot;login_endpoint&quot;: &quot;https://master.mesos/acs/api/v1/auth/login&quot;
+}
+</code></pre>
+<p>If you have a <strong>disabled</strong> cluster, paste the following JSON into the Value field.</p>
+<pre><code class="language-bash">{
+  &quot;scheme&quot;: &quot;RS256&quot;,
+  &quot;uid&quot;: &quot;marathon-lb-sa&quot;,
+  &quot;private_key&quot;: &quot;&lt;private-key-value&gt;&quot;,
+  &quot;login_endpoint&quot;: &quot;http://master.mesos/acs/api/v1/auth/login&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>Replace <private-key-value> with the value of the private key created in <a href="#create-key-pair">Create a public-private key pair</a>.</p>
+</li>
+<li>
+<p>Click <strong>Create</strong> to store the secret.</p>
+</li>
+<li>
+<p>Copy the path to your secret into a text editor. You will need this later.</p>
+</li>
+</ol>
+<h4 id="changing-the-service-name-or-location"><a class="content__anchor" href="#changing-the-service-name-or-location" aria-hidden="true"><i data-feather="bookmark"></i></a>Changing the service name or location</h4>
+<p>If you are not using <code>marathon-lb</code> as the marathon service name or if you are installing Marathon-LB in a custom location, keep in mind that you must change the secret location accordingly. The sample commands also use <code>marathon-lb/service-account-secret</code> as the full path for the secret used to store the credentials for the Marathon-LB service account. If you change the <code>marathon-lb</code> service name, you must also change this path.</p>
+<h4 id="modifying-the-command-strings-for-storing-a-secret"><a class="content__anchor" href="#modifying-the-command-strings-for-storing-a-secret" aria-hidden="true"><i data-feather="bookmark"></i></a>Modifying the command strings for storing a secret</h4>
+<p>If you use the names included in the examples, you can copy and paste the commands directly into a terminal. If you decide to change any names, make sure to modify the commands before issuing them. You should note that storing the secret in the <code>marathon-lb/service-account-secret</code> path protects the secret from other services, so Mesosphere recommends you leave the path unchanged.</p>
+<h3 id="provision-the-service-account-with-permissions"><a class="content__anchor" href="#provision-the-service-account-with-permissions" aria-hidden="true"><i data-feather="bookmark"></i></a>Provision the service account with permissions</h3>
+<p>You can run the following commands to provision the Marathon-LB service account with the required permissions. You can execute these commands from outside of the cluster.</p>
+<ol>
+<li>
+<p>Open a terminal and connect to the DC/OS enterprise cluster from a computer where the DC/OS CLI is available.</p>
+</li>
+<li>
+<p>Run the following command to set your login authentication level to superuser.</p>
+<pre><code class="language-bash">dcos auth login
+</code></pre>
+</li>
+<li>
+<p>Grant permissions and allowed actions to the service account using the following commands.</p>
+<pre><code class="language-bash">  dcos security org users grant marathon-lb-sa dcos:service:marathon:marathon:services:/ read
+  dcos security org users grant marathon-lb-sa dcos:service:marathon:marathon:admin:events read --description &quot;Allows access to Marathon events&quot;
+</code></pre>
+<p>You can optionally specify a description for the permissions granted. However, the <code>--description</code> argument is ignored if an access control list (ACL) already exists for the service account you are modifying.</p>
+</li>
+<li>
+<p>Add the service account secret to the configuration file by modifying the <code>marathon-lb-options.json</code> file to include the secret name.</p>
+<ul>
+<li>
+<p>For <strong>strict</strong> or <strong>permissive</strong> security, copy and paste the following JSON into the <code>marathon-lb-options.json</code> file. Replace <code>marathon-lb/service-account-secret</code> with the secret name you used, if necessary:</p>
+<pre><code class="language-bash">{
+    &quot;marathon-lb&quot;: {
+        &quot;secret_name&quot;: &quot;marathon-lb/service-account-secret&quot;,
+        &quot;marathon-uri&quot;: &quot;https://marathon.mesos:8443&quot;
+    }
+}
+</code></pre>
+<p>This example illustrates changing the port used to communicate with Marathon to 8443. Changing the port is not required for clusters configured for <code>permissive</code> security. However, changing this setting is recommended because it ensures that communication between Marathon-LB and Marathon is encrypted.</p>
+</li>
+<li>
+<p>For <strong>disabled</strong> security, copy and paste the following JSON into the <code>marathon-lb-options.json</code> file. Replace <code>marathon-lb/service-account-secret</code> with the secret name you used, if necessary:</p>
+<pre><code class="language-bash">{
+    &quot;marathon-lb&quot;: {
+        &quot;secret_name&quot;: &quot;marathon-lb/service-account-secret&quot;
+    }
+}
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="install-marathon-lb"><a class="content__anchor" href="#install-marathon-lb" aria-hidden="true"><i data-feather="bookmark"></i></a>Install Marathon-LB</h3>
+<p>You can modify other default values before installing the service. To view the configuration options and default values for Marathon-LB, type the following command:</p>
+<pre><code class="language-bash">dcos package describe --config marathon-lb
+</code></pre>
+<p>After you have reviewed the default <code>config.json</code> file and modified it to include the appropriate required and optional parameters, use a command similar to the following to install the package with the modified <code>marathon-lb-options.json</code> configuration file:</p>
+<pre><code class="language-bash">dcos package install marathon-lb --options=marathon-lb-options.json --yes
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#installing-marathon-lb-on-dcos">Installing Marathon-LB on DC/OS</a></li><li class="content__sections-item content__sections-item--h2"><a href="#before-you-begin">Before you begin</a></li><li class="content__sections-item content__sections-item--h2"><a href="#install-with-the-default-configuration-options">Install with the default configuration options</a></li><li class="content__sections-item content__sections-item--h2"><a href="#install-with-custom-configuration-options">Install with custom configuration options</a></li><li class="content__sections-item content__sections-item--h2"><a href="#install-on-a-cluster-with-a-provisioned-service-account">Install on a cluster with a provisioned service account</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59c6dc5017f3462f" async></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.2.0/dist/instantsearch.min.js"></script><script src="/js/bundle.js"></script></body></html>

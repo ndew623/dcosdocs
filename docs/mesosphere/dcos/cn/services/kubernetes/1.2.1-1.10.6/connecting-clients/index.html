@@ -1,0 +1,89 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>连接客户端 - D2iQ Docs</title><meta name="description" content="将客户端连接到 Kubernetes 群集"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Kubernetes文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li><li class="chooser-list-item"><a href="/dkp/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services/kubernetes">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__item"><a href="/dkp/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><div class="toggle"><p><span class="title">Kubernetes</span><span class="version"> 1.2.1-1.10.6</span></p></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/install/">安装和自定义</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/advanced-install/">高级安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/quick-start/">快速启动</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/uninstall/">卸载</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/cluster_sizing/">群集大小</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/upgrade/">已升级</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/limitations/">限制</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/exposing-the-kubernetes-api/">暴露 Kubernetes API</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/exposing-the-kubernetes-api-marathonlb/">通过 Marathon-LB 或 Edge-LB 暴露 Kubernetes API</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/connecting-clients/">连接客户端</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/kubernetes-dashboard/">Kubernetes 仪表板</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/authn-and-authz/">授权</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/troubleshooting-etcd/">故障排除</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/disaster-recovery/">灾难恢复</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/ingress/">外部入口</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/supported-versions/">支持的版本</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/release-notes/">版本注释</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">连接客户端</h1></div><h4 class="content__header-description">将客户端连接到 Kubernetes 群集</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/master/pages/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/connecting-clients/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://dcos-community.slack.com/" target="_blank"><i class="actions__icon" data-feather="slack"></i><span class="actions__text">Discuss</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+连接客户端&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/connecting-clients&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><h2 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>连接客户端</h2>
+<p>在尝试连接到 Kubernetes 集群之前，您应确保
+您已正确将 Kubernetes API 暴露于 DC/OS 外部
+群集中设置 ingress 的示例和重要信息。这可通过遵循
+<a href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes/1.2.1-1.10.6/exposing-the-kubernetes-api/">暴露 Kubernetes API</a> 中所述的步骤实现。</p>
+<p>您还应确保
+<a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/"><code>kubectl</code></a> 已
+安装并可用于终端会话。如果您已通过
+DC/OS UI 安装 Kubernetes 包，那么您还需要安装
+<code>dcos kubernetes</code> 命令：</p>
+<pre><code># dcos package install kubernetes --cli
+</code></pre>
+<p>在进行之前，您还应确保 <code>dcos</code> 被充分配置，
+可访问所需的 DC/OS 集群。</p>
+<div class="message--important"><p><strong>警告</strong></p>
+<p>在进行之前，<tt>dcos</tt> <b>必须</b> 被配置，可通过 HTTPS 访问
+所需的 DC/OS 群集。您必须确保</p>
+<p><tt>$ dcos config show core.dcos_url</tt></p>
+<p> 返回以<tt>https://</tt> 开头的 URL。</p>
+<p>如果返回的 URL 不是以
+<tt>https://</tt> 开头，那么您必须运行
+<tt>$ dcos config set core.dcos_url https://&lt;master-ip&gt;</tt></p>
+<p>如果 DC/OS 使用的 TLS 证书不受信任，那么您也必须运行以下命令来禁用 TLS 验证：
+<tt>$ dcos config set core.ssl_verify false</tt>
+</p>
+</div>
+<h3 id="tls"><a class="content__anchor" href="#tls" aria-hidden="true"><i data-feather="bookmark"></i></a>无 TLS 验证</h3>
+<p>要将 <code>kubectl</code> 配置为无需验证所提供的 TLS 证书
+即可访问 Kubernetes API，您必须运行以下命令：</p>
+<pre><code>$ dcos kubernetes kubeconfig \
+    --apiserver-url https://kube-apiserver.example.com:6443 \
+    --insecure-skip-tls-verify
+</code></pre>
+<p>您必须将 <code>https://kube-apiserver.example.com:6443</code> 替换为
+Kubernetes API 暴露于 DC/OS 集群外部的 URL。</p>
+<h3 id="tls-2"><a class="content__anchor" href="#tls-2" aria-hidden="true"><i data-feather="bookmark"></i></a>有 TLS 验证</h3>
+<p>要将 <code>kubectl</code> 配置为访问 Kubernetes API 的同时验证
+即可访问 Kubernetes API，您必须运行以下命令：</p>
+<pre><code>$ dcos kubernetes kubeconfig \
+    --apiserver-url https://kube-apiserver.example.com:6443 \
+    --path-to-custom-ca ca.pem
+</code></pre>
+<p>哪个 <code>ca.crt</code> 是访问 CA（签署用于暴露 Kubernetes API 的证书）
+证书的路径。您必须将
+<code>https://kube-apiserver.example.com:6443</code> 替换为 Kubernetes
+API 暴露于 DC/OS 集群外部的 URL。</p>
+<p>从此，任何 <code>kubectl</code> 调用都可以轻松运行，基于
+已配置 Kubernetes API 授权模式以及授予您 Kubernetes 服务帐户的权限。</p>
+<h2 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>管理多个集群</h2>
+<p>如文档中所述，DC/OS Kubernetes 仅支持一个 Kubernetes 集群
+部署。然而，您可能想要使用多个 Kubernetes 集群，
+有可能是在其他 Kubernetes 提供者上运行的集群。 <code>kubectl</code> 支持多个上下文环境，您随后可以切换至
+所需的环境。</p>
+<p>要在不切换上下文环境的情况下创建 DC/OS Kubernetes config，请执行以下操作：</p>
+<pre><code class="language-bash">$ dcos kubernetes kubeconfig \
+    --apiserver-url https://kube-apiserver.example.com:6443 \
+    --path-to-custom-ca ca.pem \
+    --no-activate-context
+kubeconfig context 'kube-apiserver-example-com6443' created successfully
+</code></pre>
+<p>要切换到 DC/OS Kubernetes 集群上下文环境，
+您必须运行：</p>
+<pre><code class="language-bash">$ kubectl config use-context kube-apiserver-example-com6443
+Switched to context &quot;kube-apiserver-example-com6443&quot;.
+</code></pre>
+<p>或在运行命令时指定上下文环境：</p>
+<pre><code class="language-bash">$ kubectl get nodes --context=kube-apiserver-example-com6443
+NAME                                   STATUS    AGE        VERSION
+kube-node-0-kubelet.kubernetes.mesos   Ready     10m        v1.10.6
+</code></pre>
+<p>默认情况下，<code>kubeconfig</code> 上下文环境名称源自
+<code>--apiserver-url</code> 标签的值。要使上下文环境名称更容易记住和相互切换，
+您可以通过使用 <code>--context-name</code> 标签指定一个名称：</p>
+<pre><code class="language-bash">$ dcos kubernetes kubeconfig \
+    --apiserver-url https://kube-apiserver.example.com:6443 \
+    --path-to-custom-ca ca.pem \
+    --context-name=my-context
+</code></pre>
+<p>你应该注意，<code>dcos kubernetes kubeconfig</code> 将拒绝覆盖
+现有的 <code>user</code>、<code>context</code> 和 <code>cluster</code> 条目（其名称与
+<code>--context-name</code> 标签的值相匹配）（或从
+<code>--apiserver-url</code> 标签的值中获取的值，以防 <code>--context-name</code> 未被指定）。您
+应确保您为 <code>--context-name</code> 提供一个唯一、当前不存在的值。</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#连接客户端">连接客户端</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-2">管理多个集群</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

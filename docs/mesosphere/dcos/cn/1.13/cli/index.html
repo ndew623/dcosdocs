@@ -1,0 +1,130 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>CLI - D2iQ Docs</title><meta name="description" content="了解 DC/OS 中的命令行界面实用程序"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li><li class="chooser-list-item"><a href="/dkp/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/1.13/cli">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__item"><a href="/dkp/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/cli">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/cli">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/cli">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/install/">安装 CLI</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/configure/">配置CLI</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/update/">更新 CLI</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/uninstall/">卸载 CLI</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/plugins/">CLI 插件</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/enterprise-cli/">DC/OS Enterprise CLI</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/autocompletion/">CLI 自动完成</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/"><i data-feather="chevron-right"></i>Command Reference</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">CLI</h1></div><h4 class="content__header-description">了解 DC/OS 中的命令行界面实用程序</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/1.13/cli/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+CLI&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/cn/1.13/cli&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><p>DC/OS 命令行界面 (DC/OS CLI) 实用程序允许您管理群集以及管理服务和任务。</p>
+<h1 id="dcos-cli"><a class="content__anchor" href="#dcos-cli" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS CLI 版本和配置文件</h1>
+<p>不同的 CLI 版本与不同版本的 DC/OS 兼容。要确定支持哪些组合，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/version-policy/#cli-support-matrix">CLI 支持矩阵</a>.</p>
+<p>DC/OS CLI 0.4.x 和 0.5.x 针对配置文件的位置使用不同的结构。</p>
+<p>DC/OS CLI 0.4.x 具有单个配置文件，默认情况下存储在 <code>~/.dcos/dcos.toml</code>. 在 DC/OS CLI 0.4.x 中，您可以选择使用 <a href="#dcos-config"><code>DCOS_CONFIG</code></a> 环境变量更改配置文件的位置。</p>
+<p>DC/OS CLI 0.5.x 具有每个连接群集的配置文件，默认情况下存储在  中。<code>~/.dcos/clusters/&lt;cluster_id&gt;/dcos.toml</code>. 在 DC/OS CLI 0.5.x 中，您可以选择使用 <a href="#dcos-cdir"><code>~/.dcos</code></a> 环境变量更改配置目录的基本部分（<code>DCOS_DIR</code></p>
+<ul>
+<li>如果更新到 DC/OS CLI 0.5.x 并运行任何 CLI 命令，它将触发从旧配置结构到新配置结构的转换。</li>
+<li>在调用 <code>dcos cluster setup</code> 后（或已经发生转换），如果您尝试使用 <code>dcos config set</code> 命令更新群集配置，该命令将显示一条警告消息，指出该命令已弃用且群集配置状态现在可能已损坏。</li>
+</ul>
+<h2 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>最新版本安装</h2>
+<p>DC/OS 1.13 需要 DC/OS CLI &gt;= 0.8。安装时，<a href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/install/">请遵循这些说明</a>.</p>
+<h2 id="cli"><a class="content__anchor" href="#cli" aria-hidden="true"><i data-feather="bookmark"></i></a>CLI 命令</h2>
+<p>若要列出 DC/OS CLI 中的可用命令，请运行不带参数的 <code>dcos</code></p>
+<pre><code class="language-bash">$ dcos
+
+Usage:
+  dcos [command]
+
+Commands:
+  auth
+      Authenticate to DC/OS cluster
+  cluster
+      Manage your DC/OS clusters
+  config
+      Manage the DC/OS configuration file
+  help
+      Help about any command
+  job
+      Deploy and manage jobs in DC/OS
+  marathon
+      Deploy and manage applications to DC/OS
+  node
+      View DC/OS node information
+  package
+      Install and manage DC/OS software packages
+  plugin
+      Manage CLI plugins
+  service
+      Manage DC/OS services
+  task
+      Manage DC/OS tasks
+
+Options:
+  --version
+      Print version information
+  -v, -vv
+      Output verbosity (verbose or very verbose)
+  -h, --help
+      Show usage help
+Use &quot;dcos [command] --help&quot; for more information about a command.
+</code></pre>
+<p>以下命令仅在 CLI 的 Enterprise 版本中可用：</p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-backup/"><code>dcos backup</code></a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-license/"><code>dcos license</code></a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-security/"><code>dcos security</code></a></li>
+</ul>
+<p>有关安装 CLI 的 DC/OS Enterprise 版本的说明，<a href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/enterprise-cli/#installing-the-dcos-enterprise-cli">请参阅文档</a>.</p>
+<p><a name="setupcluster"></a></p>
+<h1 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>设置群集</h1>
+<p>要与群集进行交互，首先需要设置 CLI。</p>
+<p>若要显示 DC/OS CLI 版本，请运行：</p>
+<pre><code class="language-bash">dcos --version
+</code></pre>
+<p><a name="configuration-files"></a></p>
+<h1 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>环境变量</h1>
+<p>DC/OS CLI 支持以下环境变量，可以动态设置。</p>
+<p><a name="dcos-cluster"></a></p>
+<h4 id="dcos-cluster-dcos-cli-05x"><a class="content__anchor" href="#dcos-cluster-dcos-cli-05x" aria-hidden="true"><i data-feather="bookmark"></i></a><code>DCOS_CLUSTER</code>（仅限 DC/OS CLI 0.5.x 及更高版本）</h4>
+<p><a href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference/dcos-cluster/dcos-cluster-attach/">连接的</a>群集。要设置连接的群集，请使用以下命令设置变量：</p>
+<pre><code class="language-bash">dcos cluster setup &lt;cluster-url&gt;
+</code></pre>
+<p>在完成登录程序后，您的 CLI 已准备好与您的群集进行交互。您会注意到，现在它有其他命令，例如，<code>marathon</code>、<code>node</code>、<code>package</code> 等。这些命令来自 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/plugins/">插件</a>、<code>dcos-core-cli</code> 和 <code>dcos-enterprise-cli</code>（如适用），它作为设置命令的一部分自动安装。</p>
+<p><a name="dcos-config"></a></p>
+<h4 id="dcos-config-dcos-cli-04x"><a class="content__anchor" href="#dcos-config-dcos-cli-04x" aria-hidden="true"><i data-feather="bookmark"></i></a><code>DCOS_CONFIG</code>（仅限 DC/OS CLI 0.4.x）</h4>
+<p>此命令显示 DC/OS 配置文件的路径。如果将 DC/OS 配置文件放入 <code>/home/jdoe/config/dcos.toml</code>，请使用以下命令设置变量：</p>
+<pre><code class="language-bash">export DCOS_CONFIG=/home/jdoe/config/dcos.toml
+</code></pre>
+<p>如果您已经配置了 <code>DCOS_CONFIG</code> 环境变量：</p>
+<ul>
+<li>在转换为<a href="#configuration-files">新配置结构</a> 后，不再接受 <code>DCOS_CONFIG</code></li>
+<li>在调用 <code>dcos cluster setup</code> 之前，您可使用 <code>DCOS_CONFIG</code> 更改 <code>dcos config set</code>. 指向的配置。该命令会显示一条警告消息，指出该命令已弃用，建议使用 <code>dcos cluster setup</code>.</li>
+</ul>
+<h1 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>列出群集</h1>
+<p>DC/OS CLI 可以与多个群集配合使用。以下命令显示最新配置的群集：</p>
+<p><a name="dcos-dir"></a></p>
+<h4 id="dcos-dir-dcos-cli-05x"><a class="content__anchor" href="#dcos-dir-dcos-cli-05x" aria-hidden="true"><i data-feather="bookmark"></i></a><code>DCOS_DIR</code>（仅限 DC/OS CLI 0.5.x 及更高版本）</h4>
+<p>如果您希望 DC/OS 配置目录为 <code>/home/jdoe/config</code> 等特定路径，请使用以下命令设置变量：</p>
+<pre><code class="language-bash">export DCOS_DIR=/home/jdoe/config
+</code></pre>
+<p>可选择地设置 <code>DCOS_DIR</code> 并运行 <code>dcos cluster setup</code> 命令。</p>
+<pre><code>```
+export DCOS_DIR=&lt;path/to/config_dir&gt; (optional, default when not set is ~/.dcos)
+dcos cluster setup &lt;url&gt;
+```
+</code></pre>
+<p>此设置根据  下的群集配置生成和更新。<code>$DCOS_DIR/clusters/&lt;cluster_id&gt;</code>. 将新设置的群集设置为连接的群集。</p>
+<p><a name="dcos-ssl-verify"></a></p>
+<h4 id="dcos-ssl-verify"><a class="content__anchor" href="#dcos-ssl-verify" aria-hidden="true"><i data-feather="bookmark"></i></a><code>DCOS_SSL_VERIFY</code></h4>
+<p>该命令指示是否验证 SSL 证书或设置 SSL 证书路径。您必须手动设置此变量。设置此环境变量相当于在 DC/OS 配置<a href="#configuration-files">文件</a> 中设置 <code>dcos config set core.ssl_verify</code> 选项。例如，指示您想要设置 SSL 证书的路径：</p>
+<pre><code class="language-bash">$ dcos cluster list
+        NAME               ID                        STATUS     VERSION      URL
+  *   cluster 26f72c2f-8d03-47d7-b95f-972b1fd3dea2  AVAILABLE    1.13  &lt;cluster-url&gt;
+</code></pre>
+<p class="message--note"><strong>注意：</strong>* 表示 CLI 当前已连接到群集名称。如果使用另一个群集再次运行设置命令，您将在列表中看到一个新项目。</p>
+<p><a name="dcos-log-level"></a></p>
+<h4 id="dcos-log-level"><a class="content__anchor" href="#dcos-log-level" aria-hidden="true"><i data-feather="bookmark"></i></a><code>DCOS_LOG_LEVEL</code></h4>
+<p>该命令向指示级别或更高级别的 <code>stderr</code> 显示日志消息。这相当于 <code>--log-level</code> 命令行选项。严重级别为：</p>
+<ul>
+<li><strong>调试</strong> 将所有消息打印到 <code>stderr</code>，包括信息、警告、错误和关键消息。</li>
+<li><strong>信息</strong> 将提示信息、警告、错误和关键消息打印到 <code>stderr</code>.</li>
+<li><strong>警告</strong> 将警告、错误和关键消息打印到 <code>stderr</code>.</li>
+<li><strong>错误</strong> 将错误和关键消息打印到 <code>stderr</code>.</li>
+<li><strong>关键</strong> 仅将关键信息打印到 <code>stderr</code>.</li>
+</ul>
+<p>例如，将日志级别设置为警告：</p>
+<pre><code class="language-bash">export DCOS_LOG_LEVEL=warning
+</code></pre>
+<p><a name="dcos-debug"></a></p>
+<h4 id="dcos-debug"><a class="content__anchor" href="#dcos-debug" aria-hidden="true"><i data-feather="bookmark"></i></a><code>DCOS_DEBUG</code></h4>
+<p>该命令指示是否将其他调试消息打印到 <code>stdout</code>. 该参数默认设置为 <code>false</code>. 例如：</p>
+<pre><code class="language-bash">export DCOS_DEBUG=true
+</code></pre>
+<div class="grid"><a class="grid__item" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/install"><div class="grid__header__wrapper"><h3 class="grid__header">安装 CLI</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">安装 DC/OS 命令行界面<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/configure"><div class="grid__header__wrapper"><h3 class="grid__header">配置CLI</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">配置命令行界面<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/update"><div class="grid__header__wrapper"><h3 class="grid__header">更新 CLI</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">更新命令行界面<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/uninstall"><div class="grid__header__wrapper"><h3 class="grid__header">卸载 CLI</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">卸载 DC/OS 命令行界面<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/plugins"><div class="grid__header__wrapper"><h3 class="grid__header">CLI 插件</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">如何扩展命令行界面<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/enterprise-cli"><div class="grid__header__wrapper"><h3 class="grid__header">DC/OS Enterprise CLI</h3><div class="grid__label__wrapper"><h6 class="grid__label grid__label--enterprise">ENTERPRISE</h6></div></div><div class="grid__desc__wrapper"><p class="grid__desc">配置 DC/OS Enterprise 命令行界面<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/autocompletion"><div class="grid__header__wrapper"><h3 class="grid__header">CLI 自动完成</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">启用 CLI 自动完成<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/command-reference"><div class="grid__header__wrapper"><h3 class="grid__header">Command Reference</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">探索 DC/OS 独有的命令<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a></div></article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#dcos-cli">DC/OS CLI 版本和配置文件</a></li><li class="content__sections-item content__sections-item--h2"><a href="#最新版本安装">最新版本安装</a></li><li class="content__sections-item content__sections-item--h2"><a href="#cli">CLI 命令</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-2">设置群集</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-3">环境变量</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-4">列出群集</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Creating Kubernetes clusters on DC/OS using MKE - D2iQ Docs</title><meta name="description" content="Learn to create Kubernetes clusters on DC/OS using MKE and the DC/OS Kubernetes CLI."><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Kubernetes Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.8.0-1.19.2/getting-started/creating-clusters">Kubernetes 2.8.0-1.19.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.7.0-1.18.6/getting-started/creating-clusters">Kubernetes 2.7.0-1.18.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.6.1-1.17.8/getting-started/creating-clusters">Kubernetes 2.6.1-1.17.8</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.6.0-1.17.7/getting-started/creating-clusters">Kubernetes 2.6.0-1.17.7</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.5.0-1.16.9/getting-started/creating-clusters">Kubernetes 2.5.0-1.16.9</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/getting-started/creating-clusters">Kubernetes 2.4.9-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/getting-started/creating-clusters">Kubernetes 2.4.8-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.7-1.15.10/getting-started/creating-clusters">Kubernetes 2.4.7-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.6-1.15.6/getting-started/creating-clusters">Kubernetes 2.4.6-1.15.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.5-1.15.5/getting-started/creating-clusters">Kubernetes 2.4.5-1.15.5</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/getting-started/creating-clusters">Kubernetes 2.4.4-1.15.4</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/getting-started/creating-clusters">Kubernetes 2.4.3-1.15.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.2-1.15.3/getting-started/creating-clusters">Kubernetes 2.4.2-1.15.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/getting-started/creating-clusters">Kubernetes 2.4.1-1.15.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.10-1.15.10/getting-started/creating-clusters">Kubernetes 2.4.10-1.15.10</a></li></ul><div class="toggle"><p><span class="title">Kubernetes</span><span class="version"> 2.4.8-1.15.10</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/overview/">Overview</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/getting-started/"><i data-feather="chevron-right"></i>Tutorial - Kubernetes on DC/OS Enterprise</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/getting-started/setting-up/">Setting Up</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/getting-started/installing-mke/">Installing MKE</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/getting-started/creating-clusters/">Creating Kubernetes clusters using MKE</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/getting-started/config-edgelb-for-k8s/">Configuring Edge-LB</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/getting-started/test-connect/">Testing Connections</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/operations/"><i data-feather="chevron-right"></i>Operations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/cli/">CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/changelog/">Changelog</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/supported-versions/">Supported Versions</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Creating Kubernetes clusters on DC/OS using MKE</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">Learn to create Kubernetes clusters on DC/OS using MKE and the DC/OS Kubernetes CLI.</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/getting-started/creating-clusters/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>At this point, you should have <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/getting-started/installing-mke/">installed MKE</a> - using the DC/OS <code>kubernetes</code> package on your DC/OS Enterprise cluster and installed the <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/cli/">latest DC/OS Kubernetes CLI</a>. As when installing the MKE, to run this Kubernetes cluster as a service on our DC/OS Enterprise cluster, we need a service account for it. Like before, to do so we need to first provision a service account for this Kubernetes cluster, then grant it the necessary permissions for operating on DC/OS Enterprise.</p>
+<h2 id="provision-a-service-account-for-dcos-kubernetes"><a class="content__anchor" href="#provision-a-service-account-for-dcos-kubernetes" aria-hidden="true"><i data-feather="bookmark"></i></a>Provision a Service Account for DC/OS Kubernetes</h2>
+<p>As with MKE on DC/OS Enterprise, when installing DC/OS Kubernetes on a DC/OS Enterprise cluster, configuring a service account for DC/OS Kubernetes on Enterprise is necessary. Since the pattern is similar here, we will move through it just a little faster than when <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/getting-started/installing-mke/">provisioning the service account for MKE</a> earlier.</p>
+<ol>
+<li>
+<p><strong>Start by creating a unique keypair to use for the service account, here we specify </strong><code>kube1-priv.pem</code><strong> and</strong> <code>kube1-pub.pem</code><strong>:</strong></p>
+<pre><code class="language-bash">dcos security org service-accounts keypair kube1-priv.pem kube1-pub.pem
+</code></pre>
+<p>You will find the resulting keypair in your working directory. As before, no other output is produced when the command is run successfully.</p>
+</li>
+<li>
+<p><strong>Now, create a service account this first Kuberneters cluster, </strong><code>kubernetes-cluster1</code><strong>, associated with the public key</strong>.</p>
+<p>In this case, enter:</p>
+<pre><code class="language-bash">dcos security org service-accounts create -p kube1-pub.pem -d 'Service account for kubernetes-cluster1' kubernetes-cluster1
+</code></pre>
+</li>
+<li>
+<p><strong>Then, associate a secret with the cluster’s service account using the newly generated private key.</strong></p>
+<pre><code class="language-bash">dcos security secrets create-sa-secret kube1-priv.pem kubernetes-cluster1 kubernetes-cluster1/sa
+</code></pre>
+<p>Again, it is expected behavior in these steps for no output from the CLI to happen unless an error has occurred.</p>
+</li>
+</ol>
+<h2 id="grant-permisions"><a class="content__anchor" href="#grant-permisions" aria-hidden="true"><i data-feather="bookmark"></i></a>Grant Permisions</h2>
+<p>We provide code snippets here for ease of granting the necessary permissions. After all, you have already learned some of this pattern when <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/getting-started/installing-mke/">setting up the service account for MKE</a> previously. The list of commands is certainly a fair bit more extensive here but the pattern is similar.</p>
+<h4 id="copy-and-paste-in-groups"><a class="content__anchor" href="#copy-and-paste-in-groups" aria-hidden="true"><i data-feather="bookmark"></i></a>Copy and Paste in Groups</h4>
+<p>If everything has gone right up until here, you should be able to paste these permissions in the following grouping of <code>dcos security</code> commands at a time without any errors. Here we have the Mesos master node permissions for creating and deleting tasks and reservations, followed by the secret permissions for the cluster, admin router permissions, and public agent node permissions.</p>
+<ol>
+<li>
+<p><strong>Enter master node permissions:</strong></p>
+<pre><code class="language-bash">dcos security org users grant kubernetes-cluster1 dcos:mesos:master:framework:role:kubernetes-cluster1-role create
+dcos security org users grant kubernetes-cluster1 dcos:mesos:master:task:user:root create
+dcos security org users grant kubernetes-cluster1 dcos:mesos:agent:task:user:root create
+dcos security org users grant kubernetes-cluster1 dcos:mesos:master:reservation:role:kubernetes-cluster1-role create
+dcos security org users grant kubernetes-cluster1 dcos:mesos:master:reservation:principal:kubernetes-cluster1 delete
+dcos security org users grant kubernetes-cluster1 dcos:mesos:master:volume:role:kubernetes-cluster1-role create
+dcos security org users grant kubernetes-cluster1 dcos:mesos:master:volume:principal:kubernetes-cluster1 delete
+</code></pre>
+</li>
+<li>
+<p><strong>Enter secret permissions:</strong></p>
+<pre><code class="language-bash">dcos security org users grant kubernetes-cluster1 dcos:secrets:default:/kubernetes-cluster1/* full
+dcos security org users grant kubernetes-cluster1 dcos:secrets:list:default:/kubernetes-cluster1 read
+</code></pre>
+</li>
+<li>
+<p><strong>Enter Admin Router permissions:</strong></p>
+<pre><code class="language-bash">dcos security org users grant kubernetes-cluster1 dcos:adminrouter:ops:ca:rw full
+dcos security org users grant kubernetes-cluster1 dcos:adminrouter:ops:ca:ro full
+</code></pre>
+</li>
+<li>
+<p><strong>Enter public agent permissions:</strong></p>
+<pre><code class="language-bash">dcos security org users grant kubernetes-cluster1 dcos:mesos:master:framework:role:slave_public/kubernetes-cluster1-role create
+dcos security org users grant kubernetes-cluster1 dcos:mesos:master:framework:role:slave_public/kubernetes-cluster1-role read
+dcos security org users grant kubernetes-cluster1 dcos:mesos:master:reservation:role:slave_public/kubernetes-cluster1-role create
+dcos security org users grant kubernetes-cluster1 dcos:mesos:master:volume:role:slave_public/kubernetes-cluster1-role create
+dcos security org users grant kubernetes-cluster1 dcos:mesos:master:framework:role:slave_public read
+dcos security org users grant kubernetes-cluster1 dcos:mesos:agent:framework:role:slave_public read
+</code></pre>
+<p>Again, as before, you should not receive any feedback in your CLI when these commands run successfully.</p>
+</li>
+</ol>
+<h2 id="create-your-first-kubernetes-cluster"><a class="content__anchor" href="#create-your-first-kubernetes-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>Create your first Kubernetes cluster</h2>
+<p>Now that permissions have been granted to the service account, we need to make sure that the package installer is aware of the account.</p>
+<ol>
+<li>
+<p><strong>First, open the options JSON file associated with the account. If you do not already have an options JSON file, create a new one. In the CLI, enter:</strong></p>
+<pre><code class="language-bash">touch kubernetes1-options.json
+</code></pre>
+<p>This will create the file in your current working directory, in this example we name the file <code>kubernetes1-options.json</code>.</p>
+</li>
+<li>
+<p><strong>Open the file in a text editor and add the service account information.</strong></p>
+<p>Place the following snippet in the newly configured <code>kubernetes1-options.json</code> file:</p>
+<pre><code class="language-json">{
+    &quot;service&quot;: {
+        &quot;name&quot;: &quot;kubernetes-cluster1&quot;,
+        &quot;service_account&quot;: &quot;kubernetes-cluster1&quot;,
+        &quot;service_account_secret&quot;: &quot;kubernetes-cluster1/sa&quot;
+    }
+}
+</code></pre>
+<p>Save and close the file.</p>
+</li>
+<li>
+<p><strong>Initiate the Kubernetes cluster creation using the associated</strong> <code>kubernetes1-options.json</code> <strong>configured for the package in last step.</strong>.</p>
+<p>In the CLI, enter:</p>
+<pre><code class="language-bash">dcos kubernetes cluster create --options=kubernetes1-options.json --yes
+</code></pre>
+<p>You can easily use the DC/OS Kubernetes CLI to <strong>monitor your Kubernetes cluster creation by running the following:</strong></p>
+<pre><code class="language-bash">dcos kubernetes cluster debug plan status deploy --cluster-name=kubernetes-cluster1
+</code></pre>
+<p>When successful, you will see the complete cluster plan, like shown here:</p>
+<pre><code class="language-bash">$ dcos kubernetes cluster debug plan status deploy --cluster-name=kubernetes-cluster1
+Using Kubernetes cluster: kubernetes-cluster1
+deploy (serial strategy) (COMPLETE)
+├─ etcd (serial strategy) (COMPLETE)
+│  └─ etcd-0:[peer] (COMPLETE)
+├─ control-plane (dependency strategy) (COMPLETE)
+│  └─ kube-control-plane-0:[instance] (COMPLETE)
+├─ mandatory-addons (serial strategy) (COMPLETE)
+│  └─ mandatory-addons-0:[instance] (COMPLETE)
+├─ node (dependency strategy) (COMPLETE)
+│  └─ kube-node-0:[kubelet] (COMPLETE)
+└─ public-node (dependency strategy) (COMPLETE)
+</code></pre>
+</li>
+</ol>
+<!-- *** maybe some more validation here? via DC/OS CLI or GUI? -->
+<h2 id="create-a-second-kubernetes-cluster-on-your-dcos-cluster"><a class="content__anchor" href="#create-a-second-kubernetes-cluster-on-your-dcos-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>Create a second Kubernetes cluster on your DC/OS cluster</h2>
+<p>You are now going to follow the same pattern to create <code>kubernetes-cluster2</code> as used to create the first cluster, <code>kubernetes-cluster1</code>.</p>
+<p>It is a good practice to use of a different keypair to be used with the service account, so as to not mix this keypair up with any of the others we are using. As before, paste in the following snippets to your CLI, just as we just did for the first cluster:</p>
+<ol>
+<li>
+<p><strong>Create the</strong> <code>kubernetes-cluster2</code> <strong>service account:</strong></p>
+<pre><code class="language-bash">dcos security org service-accounts keypair kube2-priv.pem kube2-pub.pem
+dcos security org service-accounts create -p kube2-pub.pem -d 'Kubernetes service account' kubernetes-cluster2
+dcos security secrets create-sa-secret kube2-priv.pem kubernetes-cluster2 kubernetes-cluster2/sa
+</code></pre>
+</li>
+<li>
+<p><strong>Grant the</strong> <code>kubernetes-cluster2</code> <strong>service account the required permissions for Kubernetes clusters</strong>:</p>
+<pre><code class="language-bash">dcos security org users grant kubernetes-cluster2 dcos:mesos:master:framework:role:kubernetes-cluster2-role create
+dcos security org users grant kubernetes-cluster2 dcos:mesos:master:task:user:root create
+dcos security org users grant kubernetes-cluster2 dcos:mesos:agent:task:user:root create
+dcos security org users grant kubernetes-cluster2 dcos:mesos:master:reservation:role:kubernetes-cluster2-role create
+dcos security org users grant kubernetes-cluster2 dcos:mesos:master:reservation:principal:kubernetes-cluster2 delete
+dcos security org users grant kubernetes-cluster2 dcos:mesos:master:volume:role:kubernetes-cluster2-role create
+dcos security org users grant kubernetes-cluster2 dcos:mesos:master:volume:principal:kubernetes-cluster2 delete
+</code></pre>
+<pre><code class="language-bash">dcos security org users grant kubernetes-cluster2 dcos:secrets:default:/kubernetes-cluster2/* full
+dcos security org users grant kubernetes-cluster2 dcos:secrets:list:default:/kubernetes-cluster2 read
+dcos security org users grant kubernetes-cluster2 dcos:adminrouter:ops:ca:rw full
+dcos security org users grant kubernetes-cluster2 dcos:adminrouter:ops:ca:ro full
+</code></pre>
+<pre><code class="language-bash">dcos security org users grant kubernetes-cluster2 dcos:mesos:master:framework:role:slave_public/kubernetes-cluster2-role create
+dcos security org users grant kubernetes-cluster2 dcos:mesos:master:framework:role:slave_public/kubernetes-cluster2-role read
+dcos security org users grant kubernetes-cluster2 dcos:mesos:master:reservation:role:slave_public/kubernetes-cluster2-role create
+dcos security org users grant kubernetes-cluster2 dcos:mesos:master:volume:role:slave_public/kubernetes-cluster2-role create
+dcos security org users grant kubernetes-cluster2 dcos:mesos:master:framework:role:slave_public read
+dcos security org users grant kubernetes-cluster2 dcos:mesos:agent:framework:role:slave_public read
+</code></pre>
+<p>As usual, no output is expected upon successfully granting permissions.</p>
+</li>
+<li>
+<p><strong>Next, create an options JSON file for this cluster named</strong> <code>kubernetes2-options.json</code><strong>:</strong></p>
+<p>This options JSON provides an example of some of the configuration options available, listing some of the variable names and their default values. In this example, we will be deploying with <code>&quot;kube_cpus&quot;: 1</code>, instead of the default value of <code>2</code>.</p>
+<p>Use the following to create <code>kubernetes2-options.json</code>:</p>
+<pre><code class="language-json">{
+    &quot;service&quot;: {
+        &quot;name&quot;: &quot;kubernetes-cluster2&quot;,
+        &quot;service_account&quot;: &quot;kubernetes-cluster2&quot;,
+        &quot;service_account_secret&quot;: &quot;kubernetes-cluster2/sa&quot;
+    },
+    &quot;kubernetes&quot;: {
+        &quot;authorization_mode&quot;: &quot;AlwaysAllow&quot;,
+        &quot;control_plane_placement&quot;: &quot;[[\&quot;hostname\&quot;, \&quot;UNIQUE\&quot;]]&quot;,
+        &quot;control_plane_reserved_resources&quot;: {
+            &quot;cpus&quot;: 1.5,
+            &quot;disk&quot;: 10240,
+            &quot;mem&quot;: 4096
+        },
+        &quot;high_availability&quot;: false,
+        &quot;private_node_count&quot;: 1,
+        &quot;private_node_placement&quot;: &quot;&quot;,
+        &quot;private_reserved_resources&quot;: {
+            &quot;kube_cpus&quot;: 1,
+            &quot;kube_disk&quot;: 10240,
+            &quot;kube_mem&quot;: 2048,
+            &quot;system_cpus&quot;: 1,
+            &quot;system_mem&quot;: 1024
+        }
+    },
+    &quot;etcd&quot;: {
+        &quot;cpus&quot;: 0.5,
+        &quot;mem&quot;: 1024
+    }
+}
+</code></pre>
+</li>
+<li>
+<p><strong>Create the</strong> <code>kubernetes-cluster2</code> <strong>cluster with the options JSON file you just created:</strong></p>
+<p>Using the DC/OS Kubernetes CLI, enter the following command:</p>
+<pre><code class="language-bash">dcos kubernetes cluster create --options=kubernetes2-options.json --yes
+</code></pre>
+<p>and your Kubernetes cluster service should start spinning up.</p>
+</li>
+<li>
+<p><strong>As above, to monitor</strong> <code>kubernetes-cluster2</code> <strong>while being created, use the DC/OS Kubernetes CLI:</strong></p>
+<pre><code class="language-bash">dcos kubernetes cluster debug plan status deploy --cluster-name=kubernetes-cluster2
+</code></pre>
+<p>And you should receive output similar to the following:</p>
+<pre><code class="language-bash">$ dcos kubernetes cluster debug plan status deploy --cluster-name=kubernetes-cluster2
+Using Kubernetes cluster: kubernetes-cluster2
+deploy (serial strategy) (COMPLETE)
+├─ etcd (serial strategy) (COMPLETE)
+│  └─ etcd-0:[peer] (COMPLETE)
+├─ control-plane (dependency strategy) (COMPLETE)
+│  └─ kube-control-plane-0:[instance] (COMPLETE)
+├─ mandatory-addons (serial strategy) (COMPLETE)
+│  └─ mandatory-addons-0:[instance] (COMPLETE)
+├─ node (dependency strategy) (COMPLETE)
+│  └─ kube-node-0:[kubelet] (COMPLETE)
+└─ public-node (dependency strategy) (COMPLETE)
+</code></pre>
+<p>If you use your GUI, you should see both clusters and the MKE as services in under <strong>Services</strong>.</p>
+</li>
+</ol>
+<!-- *** NEED SCREENSHOT FOR VALIDATION HERE. -->
+<h2 id="next-step-connecting-to-kubernetes-on-dcos-enterprise"><a class="content__anchor" href="#next-step-connecting-to-kubernetes-on-dcos-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>Next Step: Connecting to Kubernetes on DC/OS Enterprise</h2>
+<p>Nice work! You now have multiple Kubernetes clusters running throughout your DC/OS Enterprise cluster. With the internal workings of the cluster all set, you can move on to <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/getting-started/config-edgelb-for-k8s/">Configuring Edge-LB</a> to set up a load balancer for your cluster.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#provision-a-service-account-for-dcos-kubernetes">Provision a Service Account for DC/OS Kubernetes</a></li><li class="content__sections-item content__sections-item--h2"><a href="#grant-permisions">Grant Permisions</a></li><li class="content__sections-item content__sections-item--h2"><a href="#create-your-first-kubernetes-cluster">Create your first Kubernetes cluster</a></li><li class="content__sections-item content__sections-item--h2"><a href="#create-a-second-kubernetes-cluster-on-your-dcos-cluster">Create a second Kubernetes cluster on your DC/OS cluster</a></li><li class="content__sections-item content__sections-item--h2"><a href="#next-step-connecting-to-kubernetes-on-dcos-enterprise">Next Step: Connecting to Kubernetes on DC/OS Enterprise</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

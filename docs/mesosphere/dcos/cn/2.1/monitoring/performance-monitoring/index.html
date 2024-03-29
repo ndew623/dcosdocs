@@ -1,0 +1,141 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>性能监控 - D2iQ Docs</title><meta name="description" content="监控 DC/OS 群集"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.1/monitoring/performance-monitoring">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/performance-monitoring">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/performance-monitoring">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/performance-monitoring">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><ul><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/performance-monitoring/"><i data-feather="chevron-right"></i>性能监控</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/performance-monitoring/nagios/">使用 Nagios 监控</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/"><i data-feather="chevron-right"></i>日志记录</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/debugging/"><i data-feather="chevron-right"></i>调试</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">性能监控</h1></div><h4 class="content__header-description">监控 DC/OS 群集</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/performance-monitoring/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>以下是监控 DC/OS 群集的一些建议。您可以使用任何监控工具。下面列出的端点有助于您在发生问题时解决问题。</p>
+<p>您的监控工具应利用历史数据点，以便跟踪变更和偏差。已知处于健康状态和不健康状态时，您应对群集进行监控。这可以为 DC/OS 环境中的“正常”提供基准。使用此历史数据，您可以微调工具，设置适当的阈值和条件。超出这些阈值时，您可以向管理员发送警报。</p>
+<p>Mesos 和 Marathon 揭示以下类型的度量标准：</p>
+<ul>
+<li>仪表是指在查询时提供当前状态的度量标准。</li>
+<li>计数器具有添加性的度量标准，包括过去和现在的结果。这些度量标准不会在故障切换过程中持续存在。</li>
+</ul>
+<p>Marathon 有一个计时器度量标准，用以确定事件出现了多长时间。计时器对 Mesos 可观察性度量标准而言不存在。</p>
+<h2 id="marathon"><a class="content__anchor" href="#marathon" aria-hidden="true"><i data-feather="bookmark"></i></a>Marathon 度量标准</h2>
+<p>Marathon 提供了许多用于监控的 <a href="https://mesosphere.github.io/marathon/docs/metrics.html">度量标准</a>。您可以在  查询 DC/OS 群集中的度量标准 HTTP 端点。<code>&lt;Master-Public-IP&gt;/marathon/metrics</code>. 以下是对 DC/OS 特别有用的内容。</p>
+<h3 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>重要度量标准</h3>
+<ul>
+<li><code>marathon.apps.active.gauge</code> — 活跃应用程序的数量。</li>
+<li><code>marathon.deployments.active.gauge</code> — 活跃部署的数量。</li>
+<li><code>marathon.deployments.counter</code> — 自当前 Marathon 实例成为领导者以来收到的部署数量。</li>
+<li><code>marathon.deployments.dismissed.counter</code> — 自当前 Marathon 实例成为领导者以来，被解散部署的数量；当并发部署太多时，Marathon 可能会解散部署。</li>
+<li><code>marathon.groups.active.gauge</code> — 活跃组数。</li>
+<li><code>marathon.leadership.duration.gauge.seconds</code> — 当前领导者的持续时间。这一度量标准提供时间量。使用此度量标准来诊断稳定性问题并确定领导者选举的频率。</li>
+<li><code>marathon.persistence.gc.runs.counter</code> — 自成为领导者以来，Marathon GC 的数量一直在增加。</li>
+<li><code>marathon.persistence.gc.compaction.duration.timer.seconds</code> — Marathon GC 压缩阶段持续时间的直方图，以及压缩持续时间的计量器。</li>
+<li><code>marathon.persistence.gc.scan.duration.timer.seconds</code> — Marathon GC 扫描阶段持续时间的直方图，以及扫描持续时间的计量器。</li>
+<li><code>marathon.instances.running.gauge</code> — 当前运行的实例数。</li>
+<li><code>marathon.instances.staged.gauge</code> — 当前暂停的实例数。实例在启动后立即分阶段。持续大量的分阶段实例可能表示无法快速启动或正在重新启动大量实例。</li>
+<li><code>marathon.uptime.gauge.seconds</code> — 当前 Marathon 实例的正常运行时间。使用此度量标准来诊断可能导致 Marathon 重启的稳定性问题。</li>
+</ul>
+<h4 id="mesos"><a class="content__anchor" href="#mesos" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesos 特定度量标准</h4>
+<ul>
+<li><code>marathon.tasks.launched.counter</code> — 自成为领导者以来，当前 Marathon 实例发起的 Mesos 任务数量。</li>
+<li><code>marathon.mesos.calls.revive.counter</code> — 自当前 Marathon 实例成为领导者以来，Mesos <code>revive</code> 调用的数量。</li>
+<li><code>marathon.mesos.calls.suppress.counter</code> — 自当前 Marathon 实例成为领导者以来，Mesos <code>suppress</code> 调用的数量。</li>
+<li><code>marathon.mesos.offer-operations.launch-group.counter</code> — 自当前 Marathon 实例成为领导者以来，<code>LaunchGroup</code> 提供的操作数量。</li>
+<li><code>marathon.mesos.offer-operations.launch.counter</code> — 自当前 Marathon 实例成为领导者以来，<code>Launch</code> 提供的操作数量。</li>
+<li><code>marathon.mesos.offer-operations.reserve.counter</code> — 自当前 Marathon 实例成为领导者以来，<code>Reserve</code> 提供的操作数量。</li>
+<li><code>marathon.mesos.offers.declined.counter</code> — 自当前 Marathon 实例成为领导者以来，offer 数量有所下降。</li>
+<li><code>marathon.mesos.offers.incoming.counter</code> — 自当前 Marathon 实例成为领导者以来收到的 offer 数量。</li>
+<li><code>marathon.mesos.offers.used.counter</code> — 自当前 Marathon 实例成为领导者以来使用的 offer 计数。</li>
+</ul>
+<h4 id="http"><a class="content__anchor" href="#http" aria-hidden="true"><i data-feather="bookmark"></i></a>HTTP 特定度量标准</h4>
+<ul>
+<li><code>marathon.http.event-streams.responses.size.counter.bytes</code> — 自当前 Marathon 实例成为领导者以来，通过事件流发送给客户端的数据大小。</li>
+<li><code>marathon.http.requests.size.counter.bytes</code> — 自当前 Marathon 实例成为领导者以来所有请求的总大小。</li>
+<li><code>marathon.http.requests.size.gzipped.counter.bytes</code> — 自当前 Marathon 实例成为领导者以来所有 gzip 压缩请求的
+总大小。</li>
+<li><code>marathon.http.responses.size.counter.bytes</code> — 自当前 Marathon 实例成为领导者以来所有响应的总大小。</li>
+<li><code>marathon.http.responses.size.gzipped.counter.bytes</code> — 自当前 Marathon 实例成为领导者以来所有 gzip 压缩的响应的总大小。</li>
+<li><code>marathon.http.requests.active.gauge</code> — 活跃请求的数量。</li>
+<li><code>marathon.http.responses.1xx.rate``1xx</code> 响应率。</li>
+<li><code>marathon.http.responses.2xx.rate``2xx</code> 响应率。</li>
+<li><code>marathon.http.responses.3xx.rate``3xx</code> 响应率。</li>
+<li><code>marathon.http.responses.4xx.rate``4xx</code> 响应率。</li>
+<li><code>marathon.http.responses.5xx.rate``5xx</code> 响应率。</li>
+<li><code>marathon.http.requests.duration.timer.seconds</code> — 请求持续时间的直方图，以及请求持续时间的计量器。</li>
+<li><code>marathon.http.requests.get.duration.timer.seconds</code> — 同样但仅针对 <code>GET</code> 请求。</li>
+<li><code>marathon.http.requests.post.duration.timer.seconds</code> — 同样但仅针对 <code>POST</code> 请求。</li>
+<li><code>marathon.http.requests.put.duration.timer.seconds</code> — 同样但仅针对 <code>PUT</code> 请求。</li>
+<li><code>marathon.http.requests.delete.duration.timer.seconds</code> — 同样但仅针对 <code>DELETE</code> 请求。</li>
+</ul>
+<p>有关 Marathon 度量标准的更多详细信息，请参阅其 [文档] <a href="https://mesosphere.github.io/marathon/docs/metrics.html">1</a>。</p>
+<h2 id="mesos-2"><a class="content__anchor" href="#mesos-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesos 度量标准</h2>
+<p>Mesos 提供了许多用于监控的 <a href="http://mesos.apache.org/documentation/latest/monitoring/">度量标准</a>。以下是对 DC/OS 特别有用的内容。</p>
+<h3 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>管理节点</h3>
+<p>** 这些度量标准不应随时间推移而增加** 如果这些度量标准增加，则可能哪里出错了。</p>
+<ul>
+<li><code>master/slave_reregistrations</code>（计数器）此度量标准提供代理节点重新注册和重新启动的次数。使用此度量标准以及历史数据来确定发生网络分区时的偏差和峰值。如果此数字大幅增加，则群集出现停机，但已重新连接。</li>
+<li><code>master/slave_removals</code>（计数器）此度量标准提供因各种原因（包括维护）而移除的代理节点的数量。在大量代理节点断开连接后，使用此度量标准确定网络分区。如果此数字严重偏离上一数字，应通知系统管理员（PagerDuty 等）。</li>
+<li><code>master/tasks_error</code>（计数器）此度量标准提供无效任务的数量。</li>
+<li><code>master/tasks_failed</code>（计数器）此度量标准提供失败任务的数量。</li>
+<li><code>master/tasks_killed</code>（计数器）此度量标准提供被杀死任务的数量。</li>
+<li><code>master/tasks_lost</code>（计数器）此度量标准提供丢失任务的数量。丢失任务是指任务被外部因素杀死或断开。当大量任务偏离前一历史数字时，使用此度量标准。</li>
+<li><code>master/slaves_disconnected</code>（仪表）此度量标准提供断开的代理节点的数量。此度量标准与  一起很有用。<code>master/slave_removals</code>. 如果代理节点断开连接，此数字将增加。如果代理节点重新连接，此数字将减少。</li>
+<li><code>master/messages_kill_task</code>（计数器）此度量标准提供被杀死任务消息的数量。</li>
+<li><code>master/slave_removals</code>（计数器）此度量标准提供在管理节点故障切换期间未重新注册的代理节点的数量。这是一个广泛的端点，结合了 <code>../reason_unhealthy</code>、<code>../reason_unregistered</code> 和 <code>../reason_registered</code>. 您可以明确地监控或利用 <code>master/slave_removals/reason_unhealthy</code>、<code>master/slave_removals/reason_unregistered</code> 和 <code>master/slave_removals/reason_registered</code> 了解详情。</li>
+<li><code>master/slave_removals/reason_unhealthy</code>（计数器）此度量标准提供由于未通过健康检查而失败的代理节点的数量。此端点返回不健康的代理节点的总数。</li>
+<li><code>master/slave_removals/reason_unregistered</code>（计数器）此度量标准提供未注册代理节点的数量。如果此数字大幅增加，则表示管理节点或代理节点无法正常通信。使用此端点确定网络分区。</li>
+<li><code>master/slave_removals/reason_registered</code>（计数器）此度量标准提供在新代理节点于同一地址处注册时被移除的代理节点的数量。新代理节点替代旧代理节点。此类事件应该很少见。如果此数字增加，则应通知系统管理员（PagerDuty 等）。</li>
+</ul>
+<p><strong>这些度量标准不应随时间推移而减少</strong></p>
+<ul>
+<li><code>master/slaves_active</code>（计数器）此度量标准提供活跃代理节点的数量。活跃代理节点的数量通过将 <code>slaves_connected</code> 和 <code>slave_disconnected</code>. 加起来进行计算。</li>
+<li><code>master/slaves_connected</code>（计数器）此度量标准提供已连接代理节点的数量。此数字应等于 Mesos 代理节点的总数 (<code>slaves_active</code>). 使用此度量确定群集总体健康状况为占总数的百分比。</li>
+<li><code>master/elected</code>（仪表）此度量标准表示这是选择的管理节点。此度量标准应从所有管理节点获取并总计达 1。如果此数字在一段时间内不是 1，则应通知系统管理员（PagerDuty 等）。</li>
+<li><code>master/uptime_secs</code>（仪表）此度量标准提供管理节点的正常运行时间，以秒为单位。此数字应至少为 5 分钟（300 秒），表示管理节点稳定。您可以使用这些度量标准来检测“波动”。例如，如果管理节点在 10 多分钟内正常运行时间少于 1 分钟（60 秒），则它可能已重启 10 次或更多次。</li>
+<li><code>master/messages_decline_offers</code>（计数器）此度量标准提供被拒绝任务的数量。此数字应等于代理节点的数量乘以框架的数量。如果此数字降至一个较低值，则有些东西可能会变得匮乏。</li>
+</ul>
+<h3 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>代理节点</h3>
+<p><strong>这些度量标准不应随时间推移而减少</strong></p>
+<ul>
+<li><code>slave/uptime_secs</code>（仪表）此度量标准提供代理节点的正常运行时间，以秒为单位。此数字应始终在增加。此数字重新设置为 <code>0</code> 时，表示代理节点进程已重启。您可以使用这些度量标准来检测“波动”。例如，如果代理节点在 10 多分钟内正常运行时间少于 1 分钟（60 秒），则它可能已重启 10 次或更多次。</li>
+<li><code>slave/registered</code>（仪表）此度量标准指出该代理节点是否已向管理节点注册。该值应始终是 <code>1</code>. <code>0</code> 表示代理节点正在寻求加入新的管理节点。</li>
+</ul>
+<h2 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>概述</h2>
+<ul>
+<li>
+<p>检查关键应用程序 API 端点的 Marathon 应用程序健康 API <a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/marathon-api/#/apps/">端点</a>。</p>
+</li>
+<li>
+<p>检查代理节点是否关闭：</p>
+<ul>
+<li>跟踪 <code>/var/log/mesos</code> 警告日志并注意 <code>Shutting down</code></li>
+<li>指出已关闭多少代理节点的 Mesos 端点增加</li>
+</ul>
+</li>
+<li>
+<p>检查 Mesos 管理节点的正常运行时间是否较短，这显示在 Mesos 度量标准中。</p>
+</li>
+<li>
+<p>将 mom-marathon-service 日志记录级别从 <code>WARN</code> 变为 <code>INFO</code>。</p>
+</li>
+<li>
+<p>修改 <code>mesos-master</code> 日志轮换配置以存储完整日志至少一天。</p>
+<ul>
+<li>
+<p>确保管理节点有大量磁盘空间。</p>
+</li>
+<li>
+<p>将 <code>logrotation</code> 选项从 <code>rotate 7</code> 变为 <code>maxage 14</code> 或更多。例如：</p>
+<pre><code>...
+/var/log/mesos/* {
+    olddir /var/log/mesos/archive
+    maxsize 2000k
+    daily
+    maxage 14
+    copytruncate
+    postrotate
+        find  /var/log/mesos /var/log/mesos/archive -mtime +14 -delete
+    endscript
+}
+EOF
+...
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<p>有关 Mesos 基本警报，请参阅 Apache Mesos <a href="http://mesos.apache.org/documentation/latest/monitoring/">文档</a>。</p>
+<div class="grid"><a class="grid__item" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/performance-monitoring/nagios"><div class="grid__header__wrapper"><h3 class="grid__header">使用 Nagios 监控</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">使用 Nagios 监控 DC/OS 群集<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a></div></article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#marathon">Marathon 度量标准</a></li><li class="content__sections-item content__sections-item--h2"><a href="#mesos-2">Mesos 度量标准</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-4">概述</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

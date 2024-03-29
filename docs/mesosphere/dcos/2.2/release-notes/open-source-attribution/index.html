@@ -1,0 +1,3543 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Open Source Attribution - D2iQ Docs</title><meta name="description" content="List of third party open source software provided by Mesosphere"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.2"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/release-notes/open-source-attribution">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/release-notes/open-source-attribution">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/release-notes/open-source-attribution">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/release-notes/open-source-attribution">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/release-notes/2.2.1/">DC/OS 2.2.1 Release Notes</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/release-notes/2.2/">DC/OS 2.2.0 Release Notes</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/release-notes/open-source-attribution/">Open Source Attribution</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/release-notes/version-policy/">Versioning and Release Policy</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/archives/">Access Documentation Archives</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Open Source Attribution</h1></div><h4 class="content__header-description">List of third party open source software provided by Mesosphere</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.2/release-notes/open-source-attribution/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>This table lists the third party open source software provided by Mesosphere in connection with Mesosphere DC/OS.</p>
+<table>
+<thead>
+<tr>
+<th>Component Name</th>
+<th>Component Version</th>
+<th>License</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>“Java Concurrency in Practice” book annotations</td>
+<td>1</td>
+<td><a href="https://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5</a></td>
+</tr>
+<tr>
+<td>@gosls/tencent-django</td>
+<td>0.0.6</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>18F/domain-scan</td>
+<td>20181130-snapshot-988de72b</td>
+<td>Public Domain</td>
+</tr>
+<tr>
+<td>abego TreeLayout Core</td>
+<td>1.0.1</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>adal-python3</td>
+<td>1.2.2</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>aeternity/elixir-node</td>
+<td>v0.2.0</td>
+<td><a href="https://opensource.org/licenses/ISC">ISC License</a></td>
+</tr>
+<tr>
+<td>aeternity/epoch</td>
+<td>v0.3.4-big-spenders</td>
+<td><a href="https://opensource.org/licenses/ISC">ISC License</a></td>
+</tr>
+<tr>
+<td>aiohttp</td>
+<td>0.22.4</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>airbnb/streamalert</td>
+<td>v3.3.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>alembic</td>
+<td>0.9.10</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>alibaba/x-deeplearning</td>
+<td>v1.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Animal Sniffer Annotations</td>
+<td>1.17</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>Animal Sniffer Annotations</td>
+<td>1.14</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>ANTLR</td>
+<td>4.5.1-1</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>ANTLR</td>
+<td>3.1.3</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>ANTLR</td>
+<td>4.3</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>Aopalliance Version 1.0 Repackaged As A Module</td>
+<td>2.4.0-b31</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>Apache ActiveMQ</td>
+<td>activemq-5.15.11</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Commons BeanUtils</td>
+<td>1.8.3</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Commons Codec</td>
+<td>1.11</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Commons Codec</td>
+<td>1.9</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Commons Collections</td>
+<td>3.2.2</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Commons Lang</td>
+<td>3.4</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Commons Lang</td>
+<td>2.6</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Commons Lang</td>
+<td>3.3.2</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Commons Logging</td>
+<td>1.2</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Commons Pool</td>
+<td>1.6</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Directory API All</td>
+<td>1.0.0-M20</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Directory API ASN.1 BER</td>
+<td>1.0.0-M19</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Directory LDAP API Client All</td>
+<td>1.0.0-M27</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Directory LDAP API Client API</td>
+<td>1.0.0-M20</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Directory LDAP API Codec Core</td>
+<td>1.0.0-M20</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Directory LDAP API DSML Parser</td>
+<td>1.0.0-M20</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Directory LDAP API Extras ACI</td>
+<td>1.0.0-M20</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Directory LDAP API Extras Codec</td>
+<td>1.0.0-M20</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Directory LDAP API Extras Trigger</td>
+<td>1.0.0-M20</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Directory LDAP API Extras Util</td>
+<td>1.0.0-M30</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Directory LDAP API Model</td>
+<td>1.0.0-M20</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Directory LDAP API Network MINA</td>
+<td>1.0.0-M19</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Directory LDAP API Schema Converter</td>
+<td>1.0.0-M19</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Directory LDAP API Schema Data</td>
+<td>1.0.0-M19</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Directory LDAP API Utilities</td>
+<td>1.0.0-M19</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Directory Studio</td>
+<td>2.0.0-M10</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Directory Studio</td>
+<td>2.0.0-M15</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Felix HTTP Service</td>
+<td>2.2.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Hadoop</td>
+<td>2.7.3.2.6.5.3014-12</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache HttpClient</td>
+<td>4.5.2</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache HttpClient</td>
+<td>4.5.5</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache HttpComponents Core</td>
+<td>4.4.9</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache HttpComponents Core</td>
+<td>4.4.4</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache HttpComponents Core</td>
+<td>4.0.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Ivy</td>
+<td>2.4.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Karaf :: HTTP :: Core</td>
+<td>4.2.6.fuse-750016-redhat-00001</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Karaf :: JAAS Modules</td>
+<td>2.4.0.redhat-630475</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache log4j</td>
+<td>1.2.16</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache log4j</td>
+<td>1.2.17</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache log4j</td>
+<td>2.8.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache log4j</td>
+<td>1.2.15</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Mesos</td>
+<td>1.9.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache MINA Core API</td>
+<td>2.0.7</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache Yetus - Audience Annotations</td>
+<td>0.5.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache ZooKeeper</td>
+<td>3.4.8</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache ZooKeeper</td>
+<td>3.4.14</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache ZooKeeper</td>
+<td>3.4.11</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache ZooKeeper - Contrib - Loggraph</td>
+<td>3.5.5.7.1.1.2002-3</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache ZooKeeper - Contrib - Rest</td>
+<td>3.6.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Apache ZooKeeper - Recipes - Queue</td>
+<td>3.5.5.7.1.3.0-100</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>ApacheDS Authentication Interceptor</td>
+<td>2.0.0-M15</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>ApacheDS Authorization Interceptor</td>
+<td>2.0.0-M15</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>ApacheDS Core API</td>
+<td>2.0.0-M15</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>ApacheDS Core AVL</td>
+<td>2.0.0-M15</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>ApacheDS Core Shared</td>
+<td>2.0.0-M15</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>ApacheDS Event Interceptor</td>
+<td>2.0.0-M17</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>ApacheDS Generalized (X) DBM Partition</td>
+<td>2.0.0-M15</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>ApacheDS JDBM Original Implementation</td>
+<td>2.0.0-M2</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>ApacheDS JDBM Partition</td>
+<td>2.0.0-M15</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>ApacheDS Mavibot Partition</td>
+<td>2.0.0-M15</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>ApacheDS MVCC BTree implementation</td>
+<td>1.0.0-M1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>ApacheDS Protocol Kerberos</td>
+<td>2.0.0-M14</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>ApacheDS Protocol Kerberos Codec</td>
+<td>2.0.0-M15</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>ApacheDS Protocol Ldap</td>
+<td>2.0.0-M15</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>ApacheDS Protocol Shared</td>
+<td>2.0.0-M11</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>ApacheDS Schema Interceptor</td>
+<td>2.0.0-M11</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>ApacheDS Subtree Interceptor</td>
+<td>2.0.0-M15</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>ApacheDS Triggers Interceptor</td>
+<td>2.0.0-M16</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>ASM</td>
+<td>3.1</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>ASM</td>
+<td>5.0.4</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>ASM based accessors helper used by json-smart</td>
+<td>1.2</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>ASN.1 library for Python</td>
+<td>0.4.4</td>
+<td><a href="https://opensource.org/licenses/BSD-2-Clause">BSD 2-Clause License</a></td>
+</tr>
+<tr>
+<td>asn1crypto</td>
+<td>0.22.0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>Asynchronous Http Client</td>
+<td>2.5.4</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Atlassian REST - Module Types</td>
+<td>6.0.0</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>attrs-python</td>
+<td>18.2.0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon API Gateway</td>
+<td>1.11.215</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon AppStream</td>
+<td>1.11.215</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon Athena</td>
+<td>1.11.212</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon CloudDirectory</td>
+<td>1.11.220</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon CloudFront</td>
+<td>1.11.232</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon CloudSearch</td>
+<td>1.11.217</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon CloudWatch</td>
+<td>1.11.231</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon CloudWatch Events</td>
+<td>1.11.167</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon CloudWatch Logs</td>
+<td>1.11.208</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon Cognito Identity</td>
+<td>1.11.218</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon Cognito Identity Provider Service</td>
+<td>1.11.181</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon Cognito Sync</td>
+<td>1.11.181</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon DynamoDB</td>
+<td>1.11.184</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon DynamoDB Accelerator (DAX)</td>
+<td>1.11.218</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon EC2</td>
+<td>1.11.224</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon Elastic File System</td>
+<td>1.11.177</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon Elastic Transcoder</td>
+<td>1.11.192</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon ElastiCache</td>
+<td>1.11.223</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon Elasticsearch Service</td>
+<td>1.11.216</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon EMR</td>
+<td>1.11.186</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon Glacier</td>
+<td>1.11.190</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon Inspector Service</td>
+<td>1.11.219</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon Kinesis</td>
+<td>1.11.215</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon Lex Model Building</td>
+<td>1.11.217</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon Lightsail</td>
+<td>1.11.219</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon Machine Learning</td>
+<td>1.11.170</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon Mechanical Turk Requester</td>
+<td>1.11.212</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon Pinpoint</td>
+<td>1.11.221</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon Polly</td>
+<td>1.11.221</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon RDS</td>
+<td>1.11.214</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon Redshift</td>
+<td>1.11.270</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon Rekognition</td>
+<td>1.11.191</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon Route53</td>
+<td>1.11.210</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon S3</td>
+<td>1.11.432</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon S3</td>
+<td>1.11.214</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon SES</td>
+<td>1.11.224</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon SimpleDB</td>
+<td>1.11.131</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon Snowball</td>
+<td>1.11.190</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon SNS</td>
+<td>1.11.246</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon SQS</td>
+<td>1.11.244</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon SWF</td>
+<td>1.11.330</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon WorkDocs</td>
+<td>1.11.174</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Amazon WorkSpaces</td>
+<td>1.11.212</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Auto Scaling</td>
+<td>1.11.228</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Application Auto Scaling</td>
+<td>1.11.217</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Application Discovery Service</td>
+<td>1.11.186</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Batch</td>
+<td>1.11.219</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Budgets</td>
+<td>1.11.212</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Certificate Manager</td>
+<td>1.11.212</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS CloudFormation</td>
+<td>1.11.233</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS CloudHSM V2</td>
+<td>1.11.220</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS CloudTrail</td>
+<td>1.11.168</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Code Build</td>
+<td>1.11.217</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS CodeCommit</td>
+<td>1.11.220</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS CodeDeploy</td>
+<td>1.11.182</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS CodePipeline</td>
+<td>1.11.220</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS CodeStar</td>
+<td>1.11.218</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Config</td>
+<td>1.11.221</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Cost and Usage Report</td>
+<td>1.11.217</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Data Pipeline</td>
+<td>1.11.180</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Database Migration Service</td>
+<td>1.11.218</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Device Farm</td>
+<td>1.11.214</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Direct Connect</td>
+<td>1.11.173</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Directory Service</td>
+<td>1.11.183</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Elastic Beanstalk</td>
+<td>1.11.253</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS GameLift</td>
+<td>1.11.213</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Glue</td>
+<td>1.11.220</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Greengrass</td>
+<td>1.11.210</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Health APIs and Notifications</td>
+<td>1.11.176</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS IAM</td>
+<td>1.11.239</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Import/Export</td>
+<td>1.11.267</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS IoT</td>
+<td>1.11.176</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS KMS</td>
+<td>1.11.430</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS KMS</td>
+<td>1.11.180</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Lambda</td>
+<td>1.11.181</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Lex</td>
+<td>1.11.221</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Marketplace Commerce Analytics</td>
+<td>1.11.170</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Marketplace Entitlement</td>
+<td>1.11.150</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Marketplace Metering Service</td>
+<td>1.11.221</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Migration Hub</td>
+<td>1.11.208</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Mobile</td>
+<td>1.11.188</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS OpsWorks</td>
+<td>1.11.189</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS OpsWorks for Chef Automate</td>
+<td>1.11.220</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Organizations</td>
+<td>1.11.221</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Resource Groups Tagging API</td>
+<td>1.11.187</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Server Migration</td>
+<td>1.11.219</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Service Catalog</td>
+<td>1.11.221</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Shield</td>
+<td>1.11.173</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Step Functions</td>
+<td>1.11.187</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Storage Gateway</td>
+<td>1.11.183</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS STS</td>
+<td>1.11.197</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS Support</td>
+<td>1.11.198</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS WAF</td>
+<td>1.11.220</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for AWS X-Ray</td>
+<td>1.11.197</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Elastic Load Balancing</td>
+<td>1.11.244</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for Elastic Load Balancing</td>
+<td>1.11.235</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for the Amazon EC2 Container Registry</td>
+<td>1.11.217</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for the Amazon EC2 Container Service</td>
+<td>1.11.217</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for the AWS CloudHSM</td>
+<td>1.11.180</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS Java SDK for the AWS Simple Systems Management (SSM) Service</td>
+<td>1.11.219</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS SDK for Java - Core</td>
+<td>1.11.221</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS SDK for Java - Core</td>
+<td>1.11.427</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS SDK for Java - Models</td>
+<td>1.11.224</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>AWS SDK For Java for OSGi</td>
+<td>1.11.221</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>awslabs/aws-data-wrangler</td>
+<td>0.1.4</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>awslabs/aws-sam-cli</td>
+<td>v0.51.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>awslabs/aws-sam-cli</td>
+<td>v0.43.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>azure-storage</td>
+<td>0.36.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>beanvalidation-api</td>
+<td>1.1.0.Final</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>bijection-core</td>
+<td>0.9.6</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>bijection-util</td>
+<td>0.9.6</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Boost C++ Libraries - boost</td>
+<td>1.65.1</td>
+<td><a href="https://www.boost.org/LICENSE_1_0.txt">Boost Software License 1.0</a></td>
+</tr>
+<tr>
+<td>Boost C++ Libraries - boost</td>
+<td>gb-sisyphus-task187562.100</td>
+<td><a href="https://www.gnu.org/licenses/old-licenses/fdl-1.2.en.html">GNU Free Documentation License v1.2</a></td>
+</tr>
+<tr>
+<td>bootstrap-filestyle</td>
+<td>v2.0.0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>botocore</td>
+<td>1.8.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>botocore</td>
+<td>1.16.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>botocore</td>
+<td>1.8.11</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Bouncy Castle</td>
+<td>1.57</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>Bouncy Castle PKIX, CMS, EAC, TSP, PKCS, OCSP, CMP, and CRMF APIs</td>
+<td>1.57</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>btf</td>
+<td>1.2</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a> <a href="https://github.com/PyCQA/flake8-import-order/blob/0.6/COPYING">GNU Lesser General Public License v3.0</a></td>
+</tr>
+<tr>
+<td>Bundled Oracle Java JRE</td>
+<td>8.0.232</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a> AND <a href="https://spdx.org/licenses/GPL-2.0-with-classpath-exception.html">GNU General Public License v2.0 w/Classpath exception</a></td>
+</tr>
+<tr>
+<td>cachetools</td>
+<td>v2.1.0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>Caffeine cache</td>
+<td>2.3.4</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Calico SDN</td>
+<td>v3.8.8</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Cats core</td>
+<td>1.5.0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>Cats core</td>
+<td>1.5.0-RC1</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>Cats kernel</td>
+<td>1.5.0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>Cats kernel</td>
+<td>1.5.0-RC1</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>Cats kernel laws</td>
+<td>1.5.0-RC1</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>Cats kernel laws</td>
+<td>1.5.0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>Cats laws</td>
+<td>1.5.0-RC1</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>Cats laws</td>
+<td>1.5.0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>Cats macros</td>
+<td>1.5.0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>cats-effect</td>
+<td>0.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>cffi</td>
+<td>1.11.5</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>cfn-certificate-provider-prebuilt</td>
+<td>0.0.0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>Checker Qual</td>
+<td>2.8.1</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>Checker Qual</td>
+<td>2.5.2</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>circe</td>
+<td>0.18.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Circe numbers</td>
+<td>0.11.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Circe numbers testing</td>
+<td>0.11.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Circe parser</td>
+<td>0.11.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Click - Python Command Line Utility</td>
+<td>6.7</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>ClickHouse</td>
+<td>v1.1.54288-testing</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>client_python</td>
+<td>v0.5.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Cloud Storage API v1beta1 (revision 28)</td>
+<td>v1-rev33-1.19.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Cloudfoundry UAA</td>
+<td>v64.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>cloudfoundry/conda-cnb</td>
+<td>v0.0.75</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>codeowners</td>
+<td>0.1.2</td>
+<td><a href="https://opensource.org/licenses/BSD-2-Clause">BSD 2-Clause License</a></td>
+</tr>
+<tr>
+<td>colorama</td>
+<td>0.3.9</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>coloredlogs</td>
+<td>7.3.1</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>coloredlogs</td>
+<td>10</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>com.papertrail:profiler</td>
+<td>1.0.2</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>com.springsource.javax.xml.bind</td>
+<td>2.1.7</td>
+<td><a href="https://opensource.org/licenses/CDDL-1.0">Common Development and Distribution License 1.0</a></td>
+</tr>
+<tr>
+<td>com.twitter.common:collections</td>
+<td>0.0.111</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>com.twitter.common:quantity</td>
+<td>0.0.100</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>com.twitter.common:util-system-mocks</td>
+<td>0.0.105</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Commons IO</td>
+<td>2.6</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Commons IO</td>
+<td>2.4</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>compiler - com.github.spullara.mustache.java:compiler</td>
+<td>0.9.2</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>compiler - com.github.spullara.mustache.java:compiler</td>
+<td>0.9.6</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>core</td>
+<td>2.3.3</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>core</td>
+<td>0.18.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>core</td>
+<td>0.11.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>core</td>
+<td>0.17.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>cosmos-common</td>
+<td>0.6.2</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>cosmos-server</td>
+<td>0.6.2</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>cowboy</td>
+<td>2.6.3</td>
+<td><a href="https://opensource.org/licenses/ISC">ISC License</a></td>
+</tr>
+<tr>
+<td>cowlib</td>
+<td>2.7.3</td>
+<td><a href="https://opensource.org/licenses/ISC">ISC License</a></td>
+</tr>
+<tr>
+<td>Curator Client</td>
+<td>2.8.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Curator Client</td>
+<td>2.12.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Curator Client</td>
+<td>4.0.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Curator Framework</td>
+<td>2.12.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Curator Framework</td>
+<td>2.7.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Curator Framework</td>
+<td>4.0.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Curator Recipes</td>
+<td>2.12.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Curator Recipes</td>
+<td>4.0.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Curator Recipes</td>
+<td>2.7.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Curator Testing</td>
+<td>2.12.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>curl</td>
+<td>7.65.1</td>
+<td><a href="https://curl.haxx.se/docs/copyright.html">curl License</a></td>
+</tr>
+<tr>
+<td>Cython</td>
+<td>0.29.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>DC/OS</td>
+<td>2.1.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>defusedxml</td>
+<td>0.5.0</td>
+<td><a href="https://www.python.org/download/releases/2.0/license/">Python License 2.0</a></td>
+</tr>
+<tr>
+<td>discipline</td>
+<td>0.9.0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>djay</td>
+<td>0.0.8</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>dnsimple/dns_erlang</td>
+<td>1.0.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>dnsimple/erldns</td>
+<td>20181214-snapshot-5d7da2b7</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>docker-compose</td>
+<td>1.25.4-rc5</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Docutils</td>
+<td>0.12</td>
+<td>Public Domain</td>
+</tr>
+<tr>
+<td>enacl</td>
+<td>20181108-snapshot-885662c0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>erlang</td>
+<td>23.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Erlang</td>
+<td>21.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Erlang</td>
+<td>22.0.4</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Erlang</td>
+<td>22.0.5</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>erlang</td>
+<td>22.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>erlang</td>
+<td>23</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Erlang</td>
+<td>22.0.3</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Erlang</td>
+<td>22.0.7</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>erlang-base</td>
+<td>22.0.5</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>erlang-base</td>
+<td>22.0.7</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>erlang-sidejob</td>
+<td>0.2.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>erlzk</td>
+<td>0.6.4</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>error-prone annotations</td>
+<td>2.3.2</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>exhibitor</td>
+<td>1.5.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>exhibitor</td>
+<td>1.7.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Expression Language API</td>
+<td>2.2.4</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>Expression Language Implementation</td>
+<td>2.2.4</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>fastparse</td>
+<td>1.0.0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>fastparse-utils</td>
+<td>1.0.0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>file</td>
+<td>5.32</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>files</td>
+<td>0.17.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>finagle-base-http</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>finagle-core</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>finagle-http</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>finagle-http-cookie</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>finagle-http2</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>finagle-init</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>finagle-netty3</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>finagle-netty4</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>finagle-netty4-http</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>finagle-stats</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>finagle-toggle</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>finagle-tunable</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>FindBugs jsr305</td>
+<td>3.0.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>FindBugs jsr305</td>
+<td>3.0.2</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>FindBugs-Annotations</td>
+<td>2.0.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Flask</td>
+<td>1.0.2</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>Flask</td>
+<td>0.11.1</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>fmriprep</td>
+<td>1.5.1rc1</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>folsom</td>
+<td>0.8.8</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>folsom</td>
+<td>0.8.7</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>generic</td>
+<td>0.11.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>GNU Ncurses</td>
+<td>6</td>
+<td><a href="https://opensource.org/licenses/MIT">Free Software Foundation - MIT License (MIT +)</a></td>
+</tr>
+<tr>
+<td>GNU Ncurses</td>
+<td>5.9+20150516</td>
+<td><a href="https://opensource.org/licenses/MIT">Free Software Foundation - MIT License (MIT +)</a></td>
+</tr>
+<tr>
+<td>Google HTTP Client Library for Java</td>
+<td>1.20.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>google-api-core</td>
+<td>1.20.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>google-gson</td>
+<td>2.7</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>grizzly-framework</td>
+<td>1.9.8</td>
+<td><a href="https://opensource.org/licenses/CDDL-1.0">Common Development and Distribution License 1.0</a></td>
+</tr>
+<tr>
+<td>grizzly-http</td>
+<td>1.9.2</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>grizzly-http</td>
+<td>1.9.8</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>grizzly-http-servlet</td>
+<td>1.9.8</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>grizzly-portunif</td>
+<td>1.9.8</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>grizzly-rcm</td>
+<td>1.9.8</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>grizzly-servlet-webserver</td>
+<td>1.9.8</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>Guava InternalFutureFailureAccess and InternalFutures</td>
+<td>1.0.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Guava ListenableFuture only</td>
+<td>9999.0-empty-to-avoid-conflict-with-guava</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Guava: Google Core Libraries for Java</td>
+<td>26.0-android</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Guava: Google Core Libraries for Java</td>
+<td>18.0-rc2</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Guava: Google Core Libraries for Java</td>
+<td>28.0-jre</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Guava: Google Core Libraries for Java</td>
+<td>16.0.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Gunicorn</td>
+<td>19.9.0</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>GusPI</td>
+<td>0.0.41</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>hark-lang</td>
+<td>0.5.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>HdrHistogram</td>
+<td>2.1.10</td>
+<td><a href="https://opensource.org/licenses/BSD-2-Clause">BSD 2-clause “Simplified” License</a> AND <a href="https://spdx.org/licenses/CC-PDDC.html">Creative Commons Public Domain Dedication and Certification</a></td>
+</tr>
+<tr>
+<td>HK2 API module</td>
+<td>2.4.0-b34</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>HK2 Implementation Utilities</td>
+<td>2.4.0-b34</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>humanfriendly</td>
+<td>1.44.7</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>humanfriendly</td>
+<td>8.2</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>httpstan</td>
+<td>0.2.5</td>
+<td><a href="https://opensource.org/licenses/ISC">ISC License</a></td>
+</tr>
+<tr>
+<td>idan/oauthlib</td>
+<td>2.0.0</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>idna</td>
+<td>v2.8</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>Injection API (JSR 330) version 1 repackaged as OSGi bundle</td>
+<td>2.4.0-b15</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>inotify</td>
+<td>0.4.3</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>io.opentracing.contrib.specialagent:opentracing-specialagent</td>
+<td>1.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>isodate</td>
+<td>0.6.0</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>istack common utility code runtime</td>
+<td>2.9</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>iteratee</td>
+<td>0.9.0-M3</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>iteratee</td>
+<td>0.9.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>iteratee</td>
+<td>0.18.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>itsdangerous</td>
+<td>1.0.0</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>j2html</td>
+<td>1.2.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>J2ObjC Annotations</td>
+<td>1.3</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Jackson 2 extensions to the Google HTTP Client Library for Java.</td>
+<td>1.20.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Jackson Integration for Metrics</td>
+<td>3.2.5</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Jackson module: Paranamer</td>
+<td>2.8.4</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Jackson Protobuf Support</td>
+<td>0.9.11-jackson2.9</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>jackson-annotations</td>
+<td>2.9.9.redhat-00001</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>jackson-annotations</td>
+<td>2.8.4</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>jackson-annotations</td>
+<td>2.1.5</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>jackson-core</td>
+<td>1.9.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>jackson-core</td>
+<td>1.1.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>jackson-core</td>
+<td>2.8.4</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>jackson-core</td>
+<td>2.9.9</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>jackson-core</td>
+<td>2.1.5</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>jackson-core</td>
+<td>2.9.6</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>jackson-coreutils</td>
+<td>1.8</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a> <a href="https://github.com/PyCQA/flake8-import-order/blob/0.6/COPYING">GNU Lesser General Public License v3.0</a></td>
+</tr>
+<tr>
+<td>jackson-databind</td>
+<td>2.9.6</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>jackson-databind</td>
+<td>2.6.7.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>jackson-databind</td>
+<td>2.8.4</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>jackson-databind</td>
+<td>2.9.9</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Jackson-dataformat-CBOR</td>
+<td>2.6.6</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>jackson-dataformat-yaml</td>
+<td>2.9.9</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>jackson-datatype-guava</td>
+<td>2.6.3</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Jackson-datatype-jdk8</td>
+<td>2.9.9</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Jackson-datatype-json.org</td>
+<td>2.9.9</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Jackson-JAXRS-base</td>
+<td>2.5.4</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>jackson-module-jaxb-annotations</td>
+<td>2.5.4</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>jackson-module-scala</td>
+<td>2.8.4</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>jakarta.jws API</td>
+<td>2.1.0</td>
+<td><a href="https://www.eclipse.org/org/documents/edl-v10.php">Eclipse Distribution License - v 1.0</a></td>
+</tr>
+<tr>
+<td>Java API for XML Processing</td>
+<td>1.4</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a> OR <a href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">W3C Software Notice and License</a></td>
+</tr>
+<tr>
+<td>Java Architecture for XML Binding</td>
+<td>2.3.0</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>Java Architecture for XML Binding</td>
+<td>2.2.2-promoted-b93</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>Java Architecture for XML Binding</td>
+<td>2.1</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>Java Concurrency Tools Core Library</td>
+<td>2.1.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Java JWT</td>
+<td>3.2.0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>Java Libraries for Amazon Simple WorkFlow</td>
+<td>1.10.64.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Java Platform Standard Edition (JRE) (J2RE)</td>
+<td>8u102</td>
+<td>Oracle Java SE and JavaFX License</td>
+</tr>
+<tr>
+<td>Java Platform Standard Edition (JRE) (J2RE)</td>
+<td>8u191</td>
+<td>Oracle Java SE and JavaFX License</td>
+</tr>
+<tr>
+<td>Java Servlet API</td>
+<td>3.1.0</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>Java Servlet API</td>
+<td>2.5</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>Java Toaster</td>
+<td>1.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>java-diff-utils</td>
+<td>1.3.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Java™ API for XML-Based Web Services 2.3</td>
+<td>2.0.0.Final</td>
+<td><a href="https://www.eclipse.org/org/documents/edl-v10.php">Eclipse Distribution License - v 1.0</a></td>
+</tr>
+<tr>
+<td>JavaBeans Activation Framework</td>
+<td>1.1</td>
+<td><a href="https://opensource.org/licenses/CDDL-1.0">Common Development and Distribution License 1.0</a></td>
+</tr>
+<tr>
+<td>JavaCPP Presets for CPython</td>
+<td>3.7.3-1.5.1</td>
+<td><a href="https://www.python.org/download/releases/2.0/license/">Python License 2.0</a></td>
+</tr>
+<tr>
+<td>Javax Inject from the JSR-330 Expert Group</td>
+<td>1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>javax.annotation API</td>
+<td>1.2</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>javax.ws.rs-api</td>
+<td>2.0.1</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>jawn</td>
+<td>0.11.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>JAX-RS Analyzer</td>
+<td>0.16</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>JAXB XML Binding Code Generator Package</td>
+<td>2.2.3-u1</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>JAXB XML Binding Code Generator Package</td>
+<td>2.1.12</td>
+<td>(<a href="https://opensource.org/licenses/CDDL-1.0">Common Development and Distribution License 1.0</a></td>
+</tr>
+<tr>
+<td>JCIP Annotations under Apache License</td>
+<td>1.0-1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>JCL 1.2 Implemented Over SLF4J</td>
+<td>1.7.25</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>JCL 1.2 Implemented Over SLF4J</td>
+<td>1.7.10</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>Jenkins Swarm Plugin Client</td>
+<td>3.17</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>Jersey</td>
+<td>2.23</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>Jersey</td>
+<td>1.18.3</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>Jersey</td>
+<td>1.1.5.1</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>jersey-container-jetty-http</td>
+<td>2.23</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>jersey-container-servlet-core</td>
+<td>2.23</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>jersey-core-server</td>
+<td>2.23</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>jersey-ext-entity-filtering</td>
+<td>2.23</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>jersey-json</td>
+<td>1.1.5.1</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>jersey-json</td>
+<td>1.18.3</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>jersey-media-jaxb</td>
+<td>2.23</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>jersey-media-json-jackson</td>
+<td>2.23</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>jersey-media-multipart</td>
+<td>2.23</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>jersey-repackaged-guava</td>
+<td>2.23</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>jersey-server</td>
+<td>1.1.5.1</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>Jettison - Json Stax implementation</td>
+<td>1.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>jetty</td>
+<td>6.1.22</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Jetty :: Servlet Handling</td>
+<td>9.4.9.v20180320</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a> <a href="https://www.eclipse.org/legal/epl-v10.html">Eclipse Public LIcense, Version 1.0</a></td>
+</tr>
+<tr>
+<td>Jetty: Java based HTTP/1.x, HTTP/2, Servlet, WebSocket Server</td>
+<td>9.4.9.v20180320</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a> <a href="https://www.eclipse.org/legal/epl-v10.html">Eclipse Public LIcense, Version 1.0</a></td>
+</tr>
+<tr>
+<td>Jetty: Java based HTTP/1.x, HTTP/2, Servlet, WebSocket Server</td>
+<td>9.1.1.v20140108</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a> <a href="https://www.eclipse.org/legal/epl-v10.html">Eclipse Public LIcense, Version 1.0</a></td>
+</tr>
+<tr>
+<td>Jetty: Java based HTTP/1.x, HTTP/2, Servlet, WebSocket Server</td>
+<td>6.1.22</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a> <a href="https://www.eclipse.org/legal/epl-v10.html">Eclipse Public LIcense, Version 1.0</a></td>
+</tr>
+<tr>
+<td>jiffy</td>
+<td>1.0.2</td>
+<td>(<a href="https://opensource.org/licenses/MIT">MIT License</a> AND BSD 3-clause “New” or “Revised” License)</td>
+</tr>
+<tr>
+<td>Jinja</td>
+<td>2.8.1</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>Jinja</td>
+<td>2.10</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>JLine - Java Console input Library</td>
+<td>0.9.94</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>JMole Core</td>
+<td>1.4.1</td>
+<td>GNU Lesser General Public License v3.0 or later</td>
+</tr>
+<tr>
+<td>jMonkeyEngine/sdk</td>
+<td>v3.2.3-stable-sdk2</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>Joda Time</td>
+<td>2.3</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Joda Time</td>
+<td>2.8.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Joda Time</td>
+<td>2.9.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>JOpt Simple</td>
+<td>4.6</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>JSON Schema Validator</td>
+<td>2.2.6</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a> <a href="https://github.com/PyCQA/flake8-import-order/blob/0.6/COPYING">GNU Lesser General Public License v3.0</a></td>
+</tr>
+<tr>
+<td>JSON Web Token support for the JVM</td>
+<td>0.9.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>JSON-java</td>
+<td>20171018</td>
+<td>JSON License</td>
+</tr>
+<tr>
+<td>JSON-java</td>
+<td>20140107</td>
+<td>JSON License</td>
+</tr>
+<tr>
+<td>json-smart-v1</td>
+<td>2.3</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>jsr166y</td>
+<td>1.7.0</td>
+<td>Creative Commons Zero v1.0 Universal</td>
+</tr>
+<tr>
+<td>jsr311-api</td>
+<td>1.1.1</td>
+<td><a href="https://opensource.org/licenses/CDDL-1.0">Common Development and Distribution License 1.0</a></td>
+</tr>
+<tr>
+<td>jsx</td>
+<td>2.10.0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>JUL to SLF4J bridge</td>
+<td>1.7.25</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>JUnit</td>
+<td>3.8.1</td>
+<td>Eclipse Public License 1.0</td>
+</tr>
+<tr>
+<td>JUnit</td>
+<td>r4.12</td>
+<td>Eclipse Public License 1.0</td>
+</tr>
+<tr>
+<td>JVM Integration for Metrics</td>
+<td>3.2.5</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>kazoo-python</td>
+<td>2.2.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Kerby ASN1 Project</td>
+<td>1.1.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Kerby Config</td>
+<td>1.1.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Kerby PKIX Project</td>
+<td>1.1.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Kerby Util</td>
+<td>1.1.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Kerby XDR Project</td>
+<td>1.1.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Kerby-kerb Admin</td>
+<td>1.1.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Kerby-kerb Client</td>
+<td>1.1.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Kerby-kerb Common</td>
+<td>1.1.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Kerby-kerb core</td>
+<td>1.1.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Kerby-kerb Crypto</td>
+<td>1.1.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Kerby-kerb Identity</td>
+<td>1.1.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Kerby-kerb Server</td>
+<td>1.1.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Kerby-kerb Util</td>
+<td>1.1.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>ldap3</td>
+<td>2.4.1</td>
+<td>GNU Lesser General Public License v3.0 or later</td>
+</tr>
+<tr>
+<td>libncurses5-dbg</td>
+<td>5.9+20150516</td>
+<td>BigInteger License</td>
+</tr>
+<tr>
+<td>libopenstorage/openstorage-sdk-clients</td>
+<td>0.42.24.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>libopenstorage/openstorage-sdk-clients</td>
+<td>0.42.24</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>libphonenumber</td>
+<td>6.2</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>libsodium</td>
+<td>1.0.17</td>
+<td><a href="https://opensource.org/licenses/ISC">ISC License</a></td>
+</tr>
+<tr>
+<td>libxml2</td>
+<td>2.9.4</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>libxslt</td>
+<td>1.1.34</td>
+<td>Alternative Commercial License Available</td>
+</tr>
+<tr>
+<td>liris/websocket-client</td>
+<td>0.37.0</td>
+<td>GNU Lesser General Public License v3.0 or later</td>
+</tr>
+<tr>
+<td>Log4J API</td>
+<td>2.8.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Log4j Implemented Over SLF4J</td>
+<td>1.7.25</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Log4j Implemented Over SLF4J</td>
+<td>1.7.10</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>log4j-systemd-journal-appender</td>
+<td>1.3.2</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>lxml</td>
+<td>3.7.2</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>machinist</td>
+<td>0.6.6</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>macro-compat</td>
+<td>1.1.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>macros</td>
+<td>0.6</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Mako</td>
+<td>1.0.7</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>MarkupSafe</td>
+<td>1.1.0</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>MarkupSafe</td>
+<td>0.23</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>mesos-http-adapter</td>
+<td>0.4.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Metrics Core</td>
+<td>3.0.2</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Metrics Core</td>
+<td>3.2.5</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Metrics Core</td>
+<td>4.0.3</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Metrics Health Checks</td>
+<td>3.2.5</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Metrics Integration for Jetty 9</td>
+<td>3.0.2</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Metrics Integration for Servlets</td>
+<td>3.2.5</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Metrics Utility Servlets</td>
+<td>3.2.5</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>metrics-statsd-common</td>
+<td>4.2.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>metrics3-statsd</td>
+<td>4.2.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Metro OSGi API bundle for GlassFish V3</td>
+<td>2.4.2</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>MIME streaming extension</td>
+<td>1.9.6</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>monix-eval</td>
+<td>3.0.0-RC1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>monix-execution</td>
+<td>3.0.0-RC1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>monix-java</td>
+<td>3.0.0-RC1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>monix-reactive</td>
+<td>3.0.0-RC1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>monix-tail</td>
+<td>3.0.0-RC1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>more-itertools</td>
+<td>4.1.0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>Mozilla Rhino</td>
+<td>1.7R4</td>
+<td><a href="https://github.com/certifi/python-certifi/blob/2017.11.05/LICENSE">Mozilla Public License 2.0</a></td>
+</tr>
+<tr>
+<td>msg-simple</td>
+<td>1.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a> OR GNU Lesser General Public License v3.0 or later)</td>
+</tr>
+<tr>
+<td>msrestazure-python3</td>
+<td>0.6.1</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>Netty Project</td>
+<td>4.1.30.Final</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Netty Project</td>
+<td>3.10.1.Final</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Netty Project</td>
+<td>3.10.6.Final</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Netty Project</td>
+<td>4.1.16.Final</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Netty Project</td>
+<td>3.7.0.Final</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Netty Project</td>
+<td>3.10.5.Final</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Netty Reactive Streams Implementation</td>
+<td>2.0.2</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Netty/TomcatNative [BoringSSL - Static]</td>
+<td>2.0.6.Final</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Netty/TomcatNative [OpenSSL - Dynamic]</td>
+<td>2.0.18.Final</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Netty/Transport/Native/Unix/Common</td>
+<td>4.1.16.Final</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Netty/Transport/Native/Unix/Common</td>
+<td>4.1.33.Final</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Nimbus-JOSE-JWT</td>
+<td>4.41.2</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>OpenJDK</td>
+<td>8u232-b09</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>openresty</td>
+<td>1.15.8.2</td>
+<td><a href="https://opensource.org/licenses/BSD-2-Clause">BSD 2-Clause License</a></td>
+</tr>
+<tr>
+<td>openresty</td>
+<td>1.15.8.3</td>
+<td><a href="https://opensource.org/licenses/BSD-2-Clause">BSD 2-Clause License</a></td>
+</tr>
+<tr>
+<td>openresty-doc</td>
+<td>1.15.8.2</td>
+<td><a href="https://opensource.org/licenses/BSD-2-Clause">BSD 2-Clause License</a></td>
+</tr>
+<tr>
+<td>OpenSSL</td>
+<td>1.1.1g</td>
+<td>(SSLeay License AND OpenSSL License)</td>
+</tr>
+<tr>
+<td>OpenSSL</td>
+<td>OpenSSL_1_1_1h</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Openstack all repositories</td>
+<td>20160414-snapshot-08c1fbf9</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>OpenWhisk</td>
+<td>20180531-snapshot-5f2dedb1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>OSGi resource locator bundle - used by various API providers that rely on META-INF/services mechanism to locate providers.</td>
+<td>1.0.1</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>otp</td>
+<td>22</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>p6spy</td>
+<td>3.9.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>ParaNamer Core</td>
+<td>2.8</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>parboiled</td>
+<td>2.1.7</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>parser</td>
+<td>0.13.0-RC1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>parser</td>
+<td>0.14.2</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>passlib</td>
+<td>1.7.1</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>pcep-testtool</td>
+<td>0.9.4</td>
+<td>Eclipse Public License 1.0</td>
+</tr>
+<tr>
+<td>pip</td>
+<td>18.1</td>
+<td>Expat License</td>
+</tr>
+<tr>
+<td>pip</td>
+<td>20.1.1</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>platform</td>
+<td>0.6</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>PostgreSQL Database Server</td>
+<td>10.1</td>
+<td>PostgreSQL License</td>
+</tr>
+<tr>
+<td>procket</td>
+<td>0.9.3</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>Prometheus Java Simpleclient</td>
+<td>0.0.26</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Prometheus Java Simpleclient Common</td>
+<td>0.0.26</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Prometheus Java Simpleclient Dropwizard</td>
+<td>0.0.26</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Prometheus Java Simpleclient Servlet</td>
+<td>0.0.26</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>prometheus.erl</td>
+<td>v4.4.0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>protobuf-java-format</td>
+<td>1.4</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>Protocol Buffer Java API</td>
+<td>3.8.0</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>Protocol Buffer Java Util Package</td>
+<td>3.8.0</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>psycopg</td>
+<td>2_7_6_1</td>
+<td>GNU Lesser General Public License v3.0 or later</td>
+</tr>
+<tr>
+<td>py-beautifulsoup4</td>
+<td>4.6.1</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>py-cffi</td>
+<td>1.11.5</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>py-dnspython</td>
+<td>1.15.0</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>py-future</td>
+<td>0.17.0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>py-importlib-metadata</td>
+<td>0.23</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>py-pexpect-doc</td>
+<td>4.2.1</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>py-pluggy</td>
+<td>0.7.1</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>py-pluggy</td>
+<td>0.9.0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>py-ptyprocess</td>
+<td>0.6.0</td>
+<td>ISC License</td>
+</tr>
+<tr>
+<td>py-pycryptodome</td>
+<td>3.4.6</td>
+<td>(<a href="https://opensource.org/licenses/BSD-2-Clause">BSD 2-clause “Simplified” License</a> OR Public Domain)</td>
+</tr>
+<tr>
+<td>py-requests</td>
+<td>2.21.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>py-yaml</td>
+<td>3.12</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>py-yaml</td>
+<td>5.1.1</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>py3-attrs</td>
+<td>18.2.0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>py3-execnet</td>
+<td>1.5.0</td>
+<td><a href="https://opensource.org/licenses/MIT">MIT License</a></td>
+</tr>
+<tr>
+<td>py3-isodate</td>
+<td>0.6.0</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>pyca/cryptography</td>
+<td>2.8</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a> <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>pyca/cryptography</td>
+<td>2.4.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a> <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>pycparser</td>
+<td>2.19</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>pycparser</td>
+<td>2.18</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>pycryptodome</td>
+<td>3.4.8</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>pyjwkest</td>
+<td>1.0.10</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>PyJWT</td>
+<td>1.7.1</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>pylockfile</td>
+<td>0.12.2</td>
+<td><a href="https://opensource.org/licenses/MIT">MIT License</a></td>
+</tr>
+<tr>
+<td>pypa/setuptools</td>
+<td>39.0.1</td>
+<td><a href="https://www.python.org/download/releases/2.0/license/">Python License 2.0</a></td>
+</tr>
+<tr>
+<td>pypa/setuptools</td>
+<td>40.6.2</td>
+<td><a href="https://www.python.org/download/releases/2.0/license/">Python License 2.0</a></td>
+</tr>
+<tr>
+<td>PyPy</td>
+<td>1.8.0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>PyPy</td>
+<td>1.7.0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>pyrasterframes</td>
+<td>0.8.3.post0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>pytest</td>
+<td>4.4.0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>pytest</td>
+<td>5.4.0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>Python Keyring Lib</td>
+<td>9.3.1</td>
+<td><a href="https://opensource.org/licenses/MIT">MIT License</a> AND Python 3.0a1 License</td>
+</tr>
+<tr>
+<td>Python programming language</td>
+<td>3.6.8</td>
+<td><a href="https://www.python.org/download/releases/2.0/license/">Python License 2.0</a></td>
+</tr>
+<tr>
+<td>Python programming language</td>
+<td>3.6.0</td>
+<td><a href="https://www.python.org/download/releases/2.0/license/">Python License 2.0</a></td>
+</tr>
+<tr>
+<td>Python programming language</td>
+<td>v3.6.0a3</td>
+<td><a href="https://www.python.org/download/releases/2.0/license/">Python License 2.0</a></td>
+</tr>
+<tr>
+<td>python-atomicwrites</td>
+<td>1.3.0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>python-certifi</td>
+<td>2019.3.9</td>
+<td><a href="https://github.com/certifi/python-certifi/blob/2017.11.05/LICENSE">Mozilla Public License 2.0</a></td>
+</tr>
+<tr>
+<td>python-certifi</td>
+<td>2016.9.26</td>
+<td><a href="https://github.com/certifi/python-certifi/blob/2017.11.05/LICENSE">Mozilla Public License 2.0</a></td>
+</tr>
+<tr>
+<td>python-dateutil</td>
+<td>2.6.1</td>
+<td><a href="https://opensource.org/licenses/BSD-2-Clause">BSD 2-Clause License</a></td>
+</tr>
+<tr>
+<td>python-dateutil</td>
+<td>2.4.2</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>python-dateutil</td>
+<td>2.4.1</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>python-ecdsa</td>
+<td>0.13</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>python-jose</td>
+<td>2.0.2</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>python-jsonschema</td>
+<td>2.6.0</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>python-poetry</td>
+<td>0.12.0a2</td>
+<td><a href="https://opensource.org/licenses/MIT">MIT License</a></td>
+</tr>
+<tr>
+<td>Python-RSA</td>
+<td>4</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>python-s3transfer</td>
+<td>0.1.10</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>python-s3transfer</td>
+<td>0.2.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>python3-Cython</td>
+<td>0.25.2</td>
+<td><a href="https://www.python.org/download/releases/2.0/license/">Python License 2.0</a></td>
+</tr>
+<tr>
+<td>Quartz Enterprise Job Scheduler</td>
+<td>2.1.3</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>rabbitmq-server</td>
+<td>v3.7.17-rc.3</td>
+<td><a href="https://www.mozilla.org/en-US/MPL/1.1/">Mozilla Public License 1.1</a></td>
+</tr>
+<tr>
+<td>rabbitmq/erlang-rpm</td>
+<td>v20.0.4</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>ranch</td>
+<td>1.7.1</td>
+<td>ISC License</td>
+</tr>
+<tr>
+<td>ranch</td>
+<td>1.7.1</td>
+<td>ISC License</td>
+</tr>
+<tr>
+<td>reactive-streams</td>
+<td>1.0.0</td>
+<td>Creative Commons Zero v1.0 Universal</td>
+</tr>
+<tr>
+<td>requests</td>
+<td>2.20.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>requests-oauthlib</td>
+<td>0.7.0</td>
+<td>ISC License</td>
+</tr>
+<tr>
+<td>requests-oauthlib</td>
+<td>1.3.0</td>
+<td>ISC License</td>
+</tr>
+<tr>
+<td>retrying</td>
+<td>1.3.3</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>riak</td>
+<td>2.1.2</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>rs_parsepatch</td>
+<td>0.3.1</td>
+<td><a href="https://github.com/certifi/python-certifi/blob/2017.11.05/LICENSE">Mozilla Public License 2.0</a></td>
+</tr>
+<tr>
+<td>rudder-sdk-python</td>
+<td>1.0.0b1</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>satori-com/mzbench</td>
+<td>0.5.4</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>Scala</td>
+<td>v2.12.9</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>scala-parser-combinators</td>
+<td>1.0.4</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>scala-uri</td>
+<td>1.4.10</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>scala-xml</td>
+<td>1.0.6</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>scalacheck</td>
+<td>1.13.5</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>scalacheck-toolbox</td>
+<td>0.2.2</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>scalactic</td>
+<td>3.0.5</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>scalatest</td>
+<td>3.0.5</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>scalatestCore</td>
+<td>3.0.0-SNAP13</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>selenium</td>
+<td>3.11.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>ServiceLocator Default Implementation</td>
+<td>2.4.0-b34</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>servo-core</td>
+<td>0.5.2</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>shaded-asynchttpclient</td>
+<td>2.0.0-M5</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>sidejob</td>
+<td>2.1.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>SLF4J API Module</td>
+<td>1.7.25</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>SLF4J API Module</td>
+<td>1.7.6</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>SLF4J API Module</td>
+<td>1.6.1</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>SLF4J API Module</td>
+<td>1.7.24</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>SLF4J Binding</td>
+<td>2.8.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>SLF4J LOG4J-12 Binding</td>
+<td>1.6.1</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>SLF4J LOG4J-12 Binding</td>
+<td>1.7.25</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>SnakeYAML</td>
+<td>1.23</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>software.amazon.ion:ion-java</td>
+<td>1.0.2</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>sourcecode</td>
+<td>0.1.4</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>SQLAlchemy</td>
+<td>1.2.12</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>sqlalchemy-utils</td>
+<td>0.33.6</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>stainless verification framework</td>
+<td>v0.7.3</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>StAX</td>
+<td>1.0-2</td>
+<td><a href="https://opensource.org/licenses/CDDL-1.0">Common Development and Distribution License 1.0</a></td>
+</tr>
+<tr>
+<td>StAX</td>
+<td>1.0.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Switchboard</td>
+<td>0.3.2</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>teal-lang</td>
+<td>0.4.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Terasology</td>
+<td>v4.0.0-rc.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>test-interface</td>
+<td>1</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>test-interface</td>
+<td>0.5</td>
+<td><a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a></td>
+</tr>
+<tr>
+<td>testing</td>
+<td>0.11.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>Thonny</td>
+<td>v3.2.7</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>Token provider</td>
+<td>1.1.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>trufflesuite/ganache</td>
+<td>v2.3.0-internal.4</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>twitter</td>
+<td>0.21.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>twitter-server</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>txw2</td>
+<td>20110809</td>
+<td><a href="https://spdx.org/licenses/CDDL-1.1.html">Common Development and Distribution License 1.1</a></td>
+</tr>
+<tr>
+<td>TXW2 Runtime</td>
+<td>2.3.3-b02</td>
+<td><a href="https://www.eclipse.org/org/documents/edl-v10.php">Eclipse Distribution License - v 1.0</a></td>
+</tr>
+<tr>
+<td>Type arithmetic library for Java5</td>
+<td>1.3</td>
+<td><a href="https://opensource.org/licenses/CDDL-1.0">Common Development and Distribution License 1.0</a></td>
+</tr>
+<tr>
+<td>uri-template</td>
+<td>0.9</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a> <a href="https://github.com/PyCQA/flake8-import-order/blob/0.6/COPYING">GNU Lesser General Public License v3.0</a></td>
+</tr>
+<tr>
+<td>urllib3</td>
+<td>1.24.1</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>util</td>
+<td>18.3.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>util-app</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>util-cache</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>util-codec</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>util-collection</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>util-core</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>util-core</td>
+<td>18.11.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>util-function</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>util-hashing</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>util-jvm</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>util-lint</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>util-logging</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>util-registry</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>util-security</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>util-slf4j-api</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>util-slf4j-jul-bridge</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>util-stats</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>util-tunable</td>
+<td>18.7.0</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>vitessio/vitess</td>
+<td>v4.0.1</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>waitress</td>
+<td>1.0.2</td>
+<td><a href="https://spdx.org/licenses/ZPL">Zope Public License 2.1</a></td>
+</tr>
+<tr>
+<td>waitress</td>
+<td>1.1.0</td>
+<td><a href="https://spdx.org/licenses/ZPL">Zope Public License 2.1</a></td>
+</tr>
+<tr>
+<td>wavesplatform/Waves</td>
+<td>v0.16.3</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>wavesplatform/Waves</td>
+<td>v1.1.3</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>wavesplatform/Waves</td>
+<td>v0.17.3</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>wcwidth</td>
+<td>0.1.7</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>WebOb</td>
+<td>1.8.1</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>Werkzeug</td>
+<td>0.11.15</td>
+<td><a href="https://github.com/weapp/boto/blob/master/LICENSE.txt">MIT License</a></td>
+</tr>
+<tr>
+<td>Wrappers - FindBugs Annotations</td>
+<td>1.3.2-201002241900</td>
+<td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td>XML Security Library</td>
+<td>1.2.28</td>
+<td>(X11 License AND libxml2 License)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="software-sources"><a class="content__anchor" href="#software-sources" aria-hidden="true"><i data-feather="bookmark"></i></a>Software Sources</h2>
+<p>The table below lists the Sources for the Free Software under GNU General Public License, and Mozilla Public License
+utilized by Mesosphere DC/OS.</p>
+<table class="table">
+    <tr>
+        <th>Software</th>
+        <th>Software Source</th>
+        <th>License</th>
+    </tr>
+    <tr>
+        <td>certifi</td>
+        <td><a href="https://packages.d2iq.com/dcos/certifi-2017.11.5.tar.gz">https://packages.d2iq.com/dcos/certifi-2017.11.5.tar.gz</a></td>
+        <td><a href="https://github.com/certifi/python-certifi/blob/2017.11.05/LICENSE">Mozilla Public License 2.0</a></td>
+    </tr>
+    <tr>
+        <td>flake8-import-order</td>
+        <td><a href="https://packages.d2iq.com/dcos/flake8-import-order-0.6.linux-x86_64.tar.gz">https://packages.d2iq.com/dcos/flake8-import-order-0.6.linux-x86_64.tar.gz</a></td>
+        <td><a href="https://github.com/PyCQA/flake8-import-order/blob/0.6/COPYING">GNU Lesser General Public License v3.0</a></td>
+    </tr>
+    <tr>
+        <td>libaio</td>
+        <td><a href="https://packages.d2iq.com/dcos/libaio-0.3.110.tar.gz">https://packages.d2iq.com/dcos/libaio-0.3.110.tar.gz</a></td>
+        <td><a href="https://github.com/lvmteam/lvm2/blob/master/COPYING">GNU GENERAL PUBLIC LICENSE, Version 2</a></td>
+    </tr>
+    <tr>
+        <td>liblvm2</td>
+        <td><a href="https://packages.d2iq.com/dcos/LVM2.2.02.183.tgz">https://packages.d2iq.com/dcos/LVM2.2.02.183.tgz</a></td>
+        <td><a href="https://github.com/lvmteam/lvm2/blob/v2_02_183/COPYING">GNU GENERAL PUBLIC LICENSE, Version 2</a></td>
+	</tr>
+    <tr>
+        <td>libtool-ltdl</td>
+        <td><a href="https://packages.d2iq.com/dcos/libtool-2.4.6.tar.gz">https://packages.d2iq.com/dcos/libtool-2.4.6.tar.gz</a></td>
+        <td><a href="http://git.savannah.gnu.org/cgit/libtool.git/tree/HACKING?h=v2.4.6">GNU GENERAL PUBLIC LICENSE, Version 2</a></td>
+    </tr>
+    <tr>
+        <td>openjdk</td>
+        <td><a href="https://downloads.mesosphere.com/java/OpenJDK8U-jdk_x64_linux_hotspot_8u232b09.tar.gz">https://downloads.mesosphere.com/java/OpenJDK8U-jdk_x64_linux_hotspot_8u232b09.tar.gz</a></td>
+        <td><a href="https://openjdk.java.net/legal/gplv2+ce.html">GNU GENERAL PUBLIC LICENSE, Version 2</a></td>
+    </tr>
+    <tr>
+        <td>vault</td>
+        <td><a href="https://packages.d2iq.com/dcos/vault-0.5.3-zkfix.zip">https://packages.d2iq.com/dcos/vault-0.5.3-zkfix.zip</a></td>
+        <td><a href="https://github.com/mesosphere/vault/blob/v0.5.3-zkfix/LICENSE">Mozilla Public License 2.0</a></td>
+     </tr>
+</table>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#software-sources">Software Sources</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

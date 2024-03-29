@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>在 Admin Router 前配置 HAProxy - D2iQ Docs</title><meta name="description" content="使用 HAProxy 为 DC/OS Admin Router 设置 HTTP 代理"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/1.13/security/ent/tls-ssl/haproxy-adminrouter">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/tls-ssl/haproxy-adminrouter">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/tls-ssl/haproxy-adminrouter">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/tls-ssl/haproxy-adminrouter">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/networking/"><i data-feather="chevron-right"></i>网络</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/"><i data-feather="chevron-right"></i>安全</a></li><ul><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/"><i data-feather="chevron-right"></i>DC/OS Enterprise 安全性</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/users-groups/"><i data-feather="chevron-right"></i>管理用户和组</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/gui-permissions/"><i data-feather="chevron-right"></i>授予访问 UI 的权限</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/perms-management/">权限管理</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/perms-reference/">权限参考</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/ldap/"><i data-feather="chevron-right"></i>LDAP 身份认证</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/secrets/"><i data-feather="chevron-right"></i>密钥</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/sso/"><i data-feather="chevron-right"></i>基于身份提供程序的身份认证</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/service-auth/"><i data-feather="chevron-right"></i>服务认证</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/restrict-service-access/">限制对 DC/OS 服务组的访问</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/hardening/">强化</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/iam-api/">身份和访问管理 API</a></li><li class="active"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/tls-ssl/"><i data-feather="chevron-right"></i>确保与 TLS 通信的安全</a></li><ul><li class="active active-on"><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/tls-ssl/haproxy-adminrouter/">在 Admin Router 前配置 HAProxy</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/tls-ssl/ca-custom/">配置自定义 CA 证书</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/tls-ssl/get-cert/">获取 DC/OS CA 捆绑包</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/tls-ssl/ca-trust-browser/">在 DC/OS CA 中建立信任</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/tls-ssl/ca-trust-cli/">在 CLI 中建立信任</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/tls-ssl/ca-trust-curl/">在 curl 命令中建立信任</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/tls-ssl/ca-api/">使用证书颁发机构 API</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/tls-ssl/exhibitor/">通过双向 TLS 保护 Exhibitor</a></li></ul></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/oss/"><i data-feather="chevron-right"></i>DC/OS 开源安全</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">在 Admin Router 前配置 HAProxy</h1></div><h4 class="content__header-description">使用 HAProxy 为 DC/OS Admin Router 设置 HTTP 代理</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/tls-ssl/haproxy-adminrouter/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- The source repository for this topic is https://github.com/dcos/dcos-docs-site -->
+<p>您可以使用 HAProxy 在 DC/OS [Admin Router] 前设置 HTTP 代理。(/dcosdocs/mesosphere/dcos/cn/1.13/overview/architecture/components/#admin-router). 例如，如果您想向通过 HTTPS 连接到群集的用户代理程序提供自定义服务器证书，这可能非常有用。DC/OS 不支持直接将自定义的外部证书添加到 Admin Route 中，但可以提供 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/tls-ssl/ca-custom/">自定义 CA 证书</a> 作为 DC/OS CA。</p>
+<p>HTTP 代理必须执行即时 HTTP 请求和响应标头修改，因为 DC/OS 不知道用户代理程序用于寻址 HTTP 代理的自定义主机名和端口。</p>
+<p>以下说明提供了经测试的 <a href="http://www.haproxy.org/">HAProxy</a> 配置示例，其处理命名请求/响应重写。此示例确保 HAProxy 和 DC/OS Admin Router 之间的通信是 TLS 加密的。</p>
+<ol>
+<li>
+<p>安装 HAProxy <a href="http://www.haproxy.org/#down">1.6.9</a>。</p>
+</li>
+<li>
+<p>为 DC/OS 创建 HAProxy 配置。本示例适用于 AWS 上的 DC/OS 群集。有关 HAProxy 配置参数的更多信息，请参阅<a href="https://cbonte.github.io/haproxy-dconv/configuration-1.6.html#3">文档</a>.</p>
+<p>您可以使用代理 IP 地址 DNS 条目找到您的任务 IP。</p>
+<pre><code>&lt;taskname&gt;.&lt;framework_name&gt;.agentip.dcos.thisdcos.directory
+</code></pre>
+<p>其中：</p>
+<ul>
+<li><code>taskname</code>：任务名称。</li>
+<li><code>framework_name</code>：框架名称，如果您不确定，则可能是 <code>marathon</code>。</li>
+</ul>
+<pre><code>global
+  daemon
+  log 127.0.0.1 local0
+  log 127.0.0.1 local1 notice
+  maxconn 20000
+  pidfile /var/run/haproxy.pid
+defaults
+  log            global
+  option         dontlog-normal
+  mode		 http
+  retries             3
+  maxconn          20000
+  timeout connect  5000
+  timeout client  50000
+  timeout server  50000
+
+frontend http
+  # Bind on port 9090. HAProxy will listen on port 9090 on each
+  # available network for new HTTP connections.
+  bind 0.0.0.0:9090
+  # Specify your own server certificate chain and associated private key.
+  # See https://cbonte.github.io/haproxy-dconv/configuration-1.6.html#5.1-crt
+  # bind *:9091 ssl crt /path/to/browser-trusted.crt
+  #
+  # Name of backend configuration for DC/OS.
+  default_backend dcos
+
+  # Store request Host header temporarily in transaction scope
+  # so that its value is accessible during response processing.
+  # Note: RFC 7230 requires clients to send the Host header and
+  # specifies it to contain both, host and port information.
+  http-request set-var(txn.request_host_header) req.hdr(Host)
+
+  # Overwrite Host header to 'dcoshost'. This makes the Location
+  # header in DC/OS Admin Router upstream responses contain a
+  # predictable hostname (NGINX uses this header value when
+  # constructing absolute redirect URLs). That value is used
+  # in the response Location header rewrite logic (see regular
+  # expression-based rewrite in the backend section below).
+  http-request set-header Host dcoshost
+
+backend dcos
+  # Option 1: use TLS-encrypted communication with DC/OS Admin Router and
+  # perform server certificate verification (including hostname verification).
+  # If you are using the community-supported version of DC/OS, you must
+  # configure Admin Router with a custom TLS server certificate, see
+  # /1.13/administering-clusters/. This step
+  # is not required for DC/OS Enterprise.
+  #
+  # Explanation for the parameters in the following `server` definition line:
+  #
+  # 1.2.3.4:443
+  #
+  #   IP address and port that HAProxy uses to connect to DC/OS Admin
+  #   Router. This needs to be adjusted to your setup.
+  #
+  #
+  # ssl verify required
+  #
+  #   Instruct HAProxy to use TLS, and to error out if server certificate
+  #   verification fails.
+  #
+  # ca-file dcos-ca.crt
+  #
+  #   The local file `dcos-ca.crt` is expected to contain the CA certificate
+  #   that Admin Router's certificate will be verified against. It must be
+  #   retrieved out-of-band (on Mesosphere DC/OS Enterprise this can be
+  #   obtained via https://dcoshost/ca/dcos-ca.crt)
+  #
+  # verifyhost frontend-xxx.eu-central-1.elb.amazonaws.com
+  #
+  #   When verifying the TLS certificate presented by DC/OS Admin Router,
+  #   perform hostname verification using the hostname specified here
+  #   (expect the server certificate to contain a DNSName SAN that is
+  #   equivalent to the hostname defined here). The hostname shown here is
+  #   just an example and needs to be adjusted to your setup.
+
+  server dcos-1 1.2.3.4:443 ssl verify required ca-file dcos-ca.crt verifyhost frontend-xxx.eu-central-1.elb.amazonaws.com
+
+  # Option 2: use TLS-encrypted communication with DC/OS Admin Router, but do
+  # not perform server certificate verification (warning: this is insecure, and
+  # we hope that you know what you are doing).
+  # server dcos-1 1.2.3.4:443 ssl verify none
+  #
+  # Rewrite response Location header if it contains an absolute URL
+  # pointing to the 'dcoshost' host: replace 'dcoshost' with original
+  # request Host header (containing hostname and port).
+  http-response replace-header Location https?://dcoshost((/.*)?) &quot;http://%[var(txn.request_host_header)]\1&quot;
+</code></pre>
+</li>
+<li>
+<p>使用这些设置启动 HAProxy。</p>
+</li>
+</ol>
+</article></div></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

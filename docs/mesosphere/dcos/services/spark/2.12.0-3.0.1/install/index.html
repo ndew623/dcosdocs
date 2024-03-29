@@ -1,0 +1,317 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Install and Customize - D2iQ Docs</title><meta name="description" content="Installing and customizing your DC/OS Apache Spark service"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Spark Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services/spark">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/install">Spark 2.12.0-3.0.1</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/spark/2.11.0-2.4.6/install">Spark 2.11.0-2.4.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/spark/2.6.0-2.3.2/install">Spark 2.6.0-2.3.2</a></li></ul><div class="toggle"><p><span class="title">Spark</span><span class="version"> 2.12.0-3.0.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/quickstart/">Quick Start</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/install/">Install and Customize</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/usage-examples/">Usage Examples</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/hdfs/">HDFS</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/history-server/">History Server</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/security/">Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/upgrade/">Upgrade</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/uninstall/">Uninstall</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/runtime-config-change/">Runtime Configuration Changes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/run-job/">Run a Spark Job</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/spark-shell/">Spark Shell</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/custom-docker/">Custom Docker Images</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/fault-tolerance/">Fault Tolerance</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/job-scheduling/">Job Scheduling</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/kerberos/">Kerberos</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/troubleshooting/">Troubleshooting</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/version-policy/">Version Policy</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/limits/">Tested Limits</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/spark-auth/">Spark Auth</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Install and Customize</h1></div><h4 class="content__header-description">Installing and customizing your DC/OS Apache Spark service</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/install/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>Spark is available in the Universe and can be installed by using either the DC/OS GUI or the DC/OS CLI.</p>
+<p><strong>Prerequisites</strong></p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/latest/installing/">DC/OS and DC/OS CLI installed</a></li>
+<li>Depending on your <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/">security mode</a>, Spark requires service authentication for access to DC/OS.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Security mode</th>
+<th>Service account</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Disabled</td>
+<td>Not available</td>
+</tr>
+<tr>
+<td>Permissive</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Strict</td>
+<td><strong>Required</strong></td>
+</tr>
+</tbody>
+</table>
+<p>For more information about service accounts, see <a href="/dcosdocs/mesosphere/dcos/latest/security/">Security</a>:</p>
+<h1 id="default-installation"><a class="content__anchor" href="#default-installation" aria-hidden="true"><i data-feather="bookmark"></i></a>Default installation</h1>
+<p>To install the DC/OS Apache Spark service, run the following command on the DC/OS CLI. This installs the Spark DC/OS service, Spark CLI, dispatcher, and, optionally, the history server. See <a href="#custom">Custom installation</a> to install the history server.</p>
+<pre><code class="language-bash">dcos package install spark
+</code></pre>
+<p>Go to the <strong>Services</strong> &gt; <strong>Deployments</strong> tab of the DC/OS GUI to monitor the deployment. When it has finished deploying, visit Spark at <code>http://&lt;dcos-url&gt;/service/spark/</code>.</p>
+<p>You can also <a href="/dcosdocs/mesosphere/dcos/latest/installing/">install Spark via the DC/OS GUI</a>.</p>
+<h2 id="spark-cli"><a class="content__anchor" href="#spark-cli" aria-hidden="true"><i data-feather="bookmark"></i></a>Spark CLI</h2>
+<p>You can install the Spark CLI with this command. This is useful if you already have a Spark cluster running, but need the Spark CLI.</p>
+<p class="message--important"><strong>IMPORTANT: </strong>If you install Spark via the DC/OS GUI, you must install the Spark CLI as a separate step from the DC/OS CLI.</p>
+<pre><code class="language-bash">dcos package install spark --cli
+</code></pre>
+<p><a name="custom"></a></p>
+<h1 id="custom-installation"><a class="content__anchor" href="#custom-installation" aria-hidden="true"><i data-feather="bookmark"></i></a>Custom installation</h1>
+<p>You can customize the default configuration properties by creating a JSON options file and passing it to <code>dcos package install --options</code>. For example, to launch the Dispatcher using the Universal Container Runtime (UCR), create a file called <code>options.json</code>.</p>
+<p>To customize the installation:</p>
+<ol>
+<li>
+<p>Create the <code>options.json</code> configuration file.</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;UCR_containerizer&quot;: true
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>Install Spark with the configuration specified in the <code>options.json</code> file:</p>
+<pre><code class="language-bash">dcos package install --options=options.json spark
+</code></pre>
+</li>
+<li>
+<p>Run this command to see all configuration options:</p>
+<pre><code class="language-bash">dcos package describe spark --config
+</code></pre>
+</li>
+</ol>
+<h2 id="customize-spark-distribution"><a class="content__anchor" href="#customize-spark-distribution" aria-hidden="true"><i data-feather="bookmark"></i></a>Customize Spark distribution</h2>
+<p>DC/OS Apache Spark does not support arbitrary Spark distributions, but Mesosphere does provide multiple pre-built distributions, primarily used to select Hadoop versions.</p>
+<p>To use one of these distributions, select the corresponding Docker image from <a href="https://hub.docker.com/r/mesosphere/spark/tags/">here</a>, then use that value to set the following configuration variable:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;docker-image&quot;: &quot;&lt;docker-image&gt;&quot;
+  }
+}
+</code></pre>
+<h2 id="customize-spark-user"><a class="content__anchor" href="#customize-spark-user" aria-hidden="true"><i data-feather="bookmark"></i></a>Customize Spark user</h2>
+<p>DC/OS Spark user defaults to <code>nobody</code>, to override it set the following configuration variable:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;user&quot;: &quot;&lt;user&gt;&quot;
+  }
+}
+</code></pre>
+<p>Spark runs all of its components in Docker containers. Since the Docker image contains a full Linux userspace with
+its own <code>/etc/users</code> file, it is possible for the user <code>nobody</code> to have a different UID inside the
+container than on the host system. Although user <code>nobody</code> has UID 65534 by convention on many systems, this is not
+always the case. As Mesos does not perform UID mapping between Linux user namespaces for a Docker containerizer,
+specifying a service user of <code>nobody</code> in this case will cause access failures when the container user attempts to open or execute a filesystem
+resource owned by a user with a different UID, preventing the service from launching. If the hosts in your cluster
+have a UID for <code>nobody</code> other than 65534, you will need to a provide valid UID for <code>nobody</code> in the configuration to run the service
+successfully. For example, on RHEL/Centos based distributions:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;user&quot;: &quot;nobody&quot;,
+    &quot;docker_user&quot;: &quot;99&quot;
+  }
+}
+</code></pre>
+<h2 id="configure-spark-virtual-network"><a class="content__anchor" href="#configure-spark-virtual-network" aria-hidden="true"><i data-feather="bookmark"></i></a>Configure Spark virtual network</h2>
+<p>DC/OS Spark can be launched in a virtual network and configured with network labels.</p>
+<p>Here’s an example of a Spark configuration for DC/OS overlay network:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;virtual_network_enabled&quot;: true,
+    &quot;virtual_network_name&quot;: &quot;dcos&quot;,
+    &quot;virtual_network_plugin_labels&quot;: [
+        {&quot;key&quot;: &quot;key_1&quot;, &quot;value&quot;: &quot;value_1&quot;},
+        {&quot;key&quot;: &quot;key_2&quot;, &quot;value&quot;: &quot;value_2&quot;}
+    ]
+  }
+}
+</code></pre>
+<p>When DC/OS Spark is deployed in a virtual network, all submitted jobs will run in the same
+network until another network is specified in job submit arguments.</p>
+<p>You can check the existing limitations of virtual network support <a href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/limitations/">here</a>.</p>
+<h2 id="configure-spark-role-enforcement"><a class="content__anchor" href="#configure-spark-role-enforcement" aria-hidden="true"><i data-feather="bookmark"></i></a>Configure Spark role enforcement</h2>
+<p>DC/OS Spark by default launches submitted applications (Drivers) with the same role it is running itself.
+Users can always provide <code>spark.mesos.role</code> as a part of their application configuration and override the role of Dispatcher.
+For the cases when Dispatcher role needs to be enforced so that users are not allowed to override it, add the following configuration flag:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;role&quot;: &quot;&lt;dispatcher role&gt;&quot;,
+    &quot;enforce_role&quot;: true
+  }
+}
+</code></pre>
+<p>If <code>spark.mesos.role</code> is not provided via <code>spark-submit</code> or <code>dcos spark run</code> the Dispatcher will assign its own role to the Drivers. In case <code>spark.mesos.role</code> has a different value than the Dispatcher’s role - the submission will be rejected.</p>
+<p class="message--note"><strong>NOTE: </strong>When Spark is installed in a Marathon group with group role enforced, it will use Marathon group to register with Mesos and will automatically enforce that role.</p>
+<h1 id="minimal-installation"><a class="content__anchor" href="#minimal-installation" aria-hidden="true"><i data-feather="bookmark"></i></a>Minimal installation</h1>
+<p>For development purposes, use <a href="https://github.com/mesosphere/dcos-vagrant">dcos-vagrant</a> to install Spark on a local DC/OS cluster.</p>
+<ol>
+<li>
+<p>Install a minimal DC/OS Vagrant according to the instructions <a href="https://github.com/mesosphere/dcos-vagrant">here</a>.</p>
+</li>
+<li>
+<p>Install Spark:</p>
+<pre><code class="language-bash">dcos package install spark
+</code></pre>
+</li>
+<li>
+<p>Run a simple job:</p>
+<pre><code class="language-bash">dcos spark run --submit-args=&quot;--class org.apache.spark.examples.SparkPi https://downloads.mesosphere.com/spark/assets/spark-examples_2.12-3.0.1.jar 30&quot;
+</code></pre>
+</li>
+</ol>
+<p class="message--important"><strong>IMPORTANT: </strong>A limited resource environment such as DC/OS Vagrant restricts some of the features available in DC/OS Apache Spark. For example, you must have enough resources to start up a 5-agent cluster, otherwise you will not be able to install DC/OS HDFS an enable the history server.</p>
+<p>Also, a limited resource environment can restrict how you size your executors, for example with <code>spark.executor.memory</code>.</p>
+<h1 id="multiple-installations"><a class="content__anchor" href="#multiple-installations" aria-hidden="true"><i data-feather="bookmark"></i></a>Multiple installations</h1>
+<p>Installing multiple instances of the DC/OS Apache Spark package provides basic multi-team support. Each dispatcher displays only the jobs submitted to it by a given team, and each team can be assigned different resources.</p>
+<p>To install multiple instances of the DC/OS Apache Spark package, set each <code>service.name</code> to a unique name (for example, <code>spark-dev</code>) in your JSON configuration file during installation. For example, create a JSON options file name <code>multiple.json</code>:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;name&quot;: &quot;spark-dev&quot;
+  }
+}
+</code></pre>
+<ol>
+<li>
+<p>Install Spark with the options file specified:</p>
+<pre><code class="language-bash">dcos package install --options=multiple.json spark
+</code></pre>
+</li>
+<li>
+<p>To specify which instance of Spark to use add <code>--name=&lt;service_name&gt;</code> to your CLI, for example</p>
+<pre><code class="language-bash">dcos spark --name=spark-dev run ...
+</code></pre>
+</li>
+</ol>
+<h1 id="installation-for-strict-mode"><a class="content__anchor" href="#installation-for-strict-mode" aria-hidden="true"><i data-feather="bookmark"></i></a>Installation for strict mode</h1>
+<p>If your cluster is set up for <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/#strict">strict</a> security then you will follow these steps to install and run Spark.</p>
+<h2 id="service-accounts-and-secrets"><a class="content__anchor" href="#service-accounts-and-secrets" aria-hidden="true"><i data-feather="bookmark"></i></a>Service accounts and secrets</h2>
+<ol>
+<li>
+<p>Install the <code>dcos-enterprise-cli</code> to get CLI security commands (if you have not already done so):</p>
+<pre><code class="language-bash">dcos package install dcos-enterprise-cli
+</code></pre>
+</li>
+<li>
+<p>Create a 2048-bit RSA public-private key pair using the Enterprise DC/OS CLI. Create a public-private key pair and save each value into a separate file within the current directory.</p>
+<pre><code class="language-bash">dcos security org service-accounts keypair &lt;your-private-key&gt;.pem &lt;your-public-key&gt;.pem
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-bash">dcos security org service-accounts keypair private-key.pem public-key.pem
+</code></pre>
+</li>
+<li>
+<p>Create a new service account, <code>service-account-id</code> (for example, <code>spark-principal</code>) containing the public key,
+<code>your-public-key.pem</code>.</p>
+<pre><code class="language-bash">dcos security org service-accounts create -p &lt;your-public-key&gt;.pem -d &quot;Spark service account&quot; &lt;service-account&gt;
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-bash">dcos security org service-accounts create -p public-key.pem -d &quot;Spark service account&quot; spark-principal
+</code></pre>
+<p>In Mesos parlance, a <code>service-account</code> is called a <code>principal</code> and so we use the terms interchangeably here.</p>
+<p>You can verify your new service account using the following command.</p>
+<pre><code class="language-bash">dcos security org service-accounts show &lt;service-account&gt;
+</code></pre>
+</li>
+<li>
+<p>Create a secret (for example, <code>spark/&lt;secret-name&gt;</code>) with your service account, <code>service-account</code>, and private key specified, <code>your-private-key.pem</code>.</p>
+<pre><code class="language-bash"># permissive mode
+dcos security secrets create-sa-secret &lt;your-private-key&gt;.pem &lt;service-account&gt; spark/&lt;secret-name&gt;
+# strict mode
+dcos security secrets create-sa-secret --strict &lt;private-key&gt;.pem &lt;service-account&gt; spark/&lt;secret-name&gt;
+</code></pre>
+<p>For example, on a strict-mode DC/OS cluster:</p>
+<pre><code class="language-bash">dcos security secrets create-sa-secret --strict private-key.pem spark-principal spark/spark-secret
+</code></pre>
+</li>
+<li>
+<p>Use the <code>dcos security secrets list /</code> command to verify that the secrets were created:</p>
+<pre><code class="language-bash">dcos security secrets list /
+</code></pre>
+</li>
+</ol>
+<h2 id="assigning-permissions"><a class="content__anchor" href="#assigning-permissions" aria-hidden="true"><i data-feather="bookmark"></i></a>Assigning permissions</h2>
+<p>Permissions must be created so that the Spark service will be able to start Spark jobs and so the jobs themselves can launch the executors that perform the work on their behalf. There are a few points to keep in mind depending on your cluster:</p>
+<ul>
+<li>Spark runs by default under the Mesos default role, which is represented by the <code>*</code> symbol. You can deploy multiple instances of Spark without modifying this default. If you want to override the default Spark role, you must modify these code samples accordingly. We use <code>spark-service-role</code> to designate the role used below.</li>
+</ul>
+<p>Permissions can also be assigned through the GUI.</p>
+<ol>
+<li>
+<p>Run the following to create the required permissions for Spark:</p>
+<pre><code class="language-bash">dcos security org users grant &lt;service-account&gt; dcos:mesos:master:task:user:&lt;user&gt; create --description &quot;Allows the Linux user to execute tasks&quot;
+dcos security org users grant &lt;service-account&gt; dcos:mesos:master:framework:role:&lt; spark-service-role&gt; create --description &quot;Allows a framework to register with the Mesos master using the Mesos default role&quot;
+dcos security org users grant &lt;service-account&gt; dcos:mesos:master:task:app_id:/&lt;service_name&gt; create --description &quot;Allows reading of the task state&quot;
+</code></pre>
+<p>Note that above the <code>dcos:mesos:master:task:app_id:/&lt;service_name&gt;</code> will likely be <code>dcos:mesos:master:task:app_id:/spark</code></p>
+<p>For example, continuing from above:</p>
+<pre><code class="language-bash">dcos security org users grant spark-principal dcos:mesos:master:task:user:nobody create --description &quot;Allows the Linux user to execute tasks&quot;
+dcos security org users grant spark-principal dcos:mesos:master:framework:role:* create --description &quot;Allows a framework to register with the Mesos master using the Mesos default role&quot;
+dcos security org users grant spark-principal dcos:mesos:master:task:app_id:/spark create --description &quot;Allows reading of the task state&quot;
+
+</code></pre>
+<p>Here, we are using the service account <code>spark-principal</code> and the user <code>nobody</code>.</p>
+</li>
+<li>
+<p>If you are running the Spark service as <code>nobody</code> (as we are in this example) you will need to add an additional permission for Marathon:</p>
+<pre><code class="language-bash">dcos security org users grant dcos_marathon dcos:mesos:master:task:user:nobody create --description &quot;Allow Marathon to launch containers as nobody&quot;
+</code></pre>
+</li>
+</ol>
+<h2 id="install-spark-with-necessary-configuration"><a class="content__anchor" href="#install-spark-with-necessary-configuration" aria-hidden="true"><i data-feather="bookmark"></i></a>Install Spark with necessary configuration</h2>
+<ol>
+<li>
+<p>Make a configuration file with the following before installing Spark, these settings can also be set through the GUI:</p>
+<pre><code class="language-json">cat spark-strict-options.json
+{
+  &quot;service&quot;: {
+    &quot;service_account&quot;: &quot;&lt;service-account-id&gt;&quot;,
+    &quot;user&quot;: &quot;&lt;user&gt;&quot;,
+    &quot;service_account_secret&quot;: &quot;spark/&lt;secret_name&gt;&quot;
+  }
+}
+</code></pre>
+<p>A minimal example would be:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;service_account&quot;: &quot;spark-principal&quot;,
+    &quot;user&quot;: &quot;nobody&quot;,
+    &quot;service_account_secret&quot;: &quot;spark/spark-secret&quot;
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>Then install:</p>
+<pre><code class="language-bash">dcos package install spark --options=spark-strict-options.json
+</code></pre>
+</li>
+</ol>
+<h1 id="additional-configuration-for-spark-jobs"><a class="content__anchor" href="#additional-configuration-for-spark-jobs" aria-hidden="true"><i data-feather="bookmark"></i></a>Additional configuration for Spark jobs</h1>
+<p>You must add configuration parameters to your Spark jobs when submitting them.</p>
+<h2 id="running-jobs-in-strict-mode-cluster"><a class="content__anchor" href="#running-jobs-in-strict-mode-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>Running jobs in strict mode cluster</h2>
+<p>To run a job on a strict mode cluster, you must add the <code>principal</code> to the command line. For example:</p>
+<pre><code class="language-bash">dcos spark run --verbose --submit-args=&quot; \
+--conf spark.mesos.principal=&lt;service-account&gt; \
+--conf spark.mesos.containerizer=mesos \
+--class org.apache.spark.examples.SparkPi http://downloads.mesosphere.com/spark/assets/spark-examples_2.12-3.0.1.jar 100&quot;
+</code></pre>
+<h2 id="running-jobs-as-a-different-user"><a class="content__anchor" href="#running-jobs-as-a-different-user" aria-hidden="true"><i data-feather="bookmark"></i></a>Running jobs as a different user</h2>
+<p>Spark Mesos Dispatcher uses the same user for running Spark jobs as itself and defaults to <code>nobody</code>.
+If you run Dispatcher as <code>root</code> and want to submit a job as a different user e.g. <code>nobody</code>, you must provide user property in the following way.</p>
+<h3 id="universal-container-runtime"><a class="content__anchor" href="#universal-container-runtime" aria-hidden="true"><i data-feather="bookmark"></i></a>Universal Container Runtime</h3>
+<p>For UCR containerizer it is sufficient to provide <code>spark.mesos.driverEnv.SPARK_USER=nobody</code> configuration property when submitting a job:</p>
+<pre><code class="language-bash">dcos spark run --verbose --submit-args=&quot;\
+--conf spark.mesos.driverEnv.SPARK_USER=nobody \
+--class org.apache.spark.examples.SparkPi http://downloads.mesosphere.com/spark/assets/spark-examples_2.12-3.0.1.jar 100&quot;
+</code></pre>
+<h3 id="docker-engine"><a class="content__anchor" href="#docker-engine" aria-hidden="true"><i data-feather="bookmark"></i></a>Docker Engine</h3>
+<p>If you want to use the <a href="/dcosdocs/mesosphere/dcos/latest/deploying-services/containerizers/docker-containerizer/">Docker Engine</a> instead of the <a href="/dcosdocs/mesosphere/dcos/latest/deploying-services/containerizers/ucr/">Universal Container Runtime</a>, you must specify <code>spark.mesos.executor.docker.parameters=user=nobody</code> in addition to <code>spark.mesos.driverEnv.SPARK_USER=nobody</code> to run the Docker container as this user:</p>
+<pre><code class="language-bash">dcos spark run --verbose --submit-args=&quot;\
+--conf spark.mesos.driverEnv.SPARK_USER=nobody \
+--conf spark.mesos.executor.docker.parameters=user=nobody \
+--class org.apache.spark.examples.SparkPi http://downloads.mesosphere.com/spark/assets/spark-examples_2.12-3.0.1.jar 100&quot;
+</code></pre>
+<p>If the hosts in your cluster have a UID for <code>nobody</code> other than 65534 (see <a href="#custom-user">Customize Spark user</a>), you will need to provide a valid UID as a parameter to Docker containerizer via
+<code>--conf spark.mesos.executor.docker.parameters=user=UID</code>:</p>
+<pre><code class="language-bash">dcos spark run --verbose --submit-args=&quot;\
+--conf spark.mesos.driverEnv.SPARK_USER=nobody \
+--conf spark.mesos.executor.docker.parameters=user=99 \
+--class org.apache.spark.examples.SparkPi http://downloads.mesosphere.com/spark/assets/spark-examples_2.12-3.0.1.jar 100&quot;
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>UID should typically be set to 99 when running as nobody (default) on RHEL/CentOS</p>
+<h2 id="running-jobs-in-virtual-network"><a class="content__anchor" href="#running-jobs-in-virtual-network" aria-hidden="true"><i data-feather="bookmark"></i></a>Running jobs in virtual network</h2>
+<p>To run a job in a virtual network and/or with network plugin labels assigned, one need to specify network name and labels in submit arguments:</p>
+<pre><code class="language-bash">dcos spark run --verbose --submit-args=&quot;\
+--conf spark.mesos.network.name=dcos \
+--conf spark.mesos.network.labels=key_1:value_1,key_2:value_2 \
+--class org.apache.spark.examples.GroupByTest http://downloads.mesosphere.com/spark/assets/spark-examples_2.12-3.0.1.jar&quot;
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#default-installation">Default installation</a></li><li class="content__sections-item content__sections-item--h2"><a href="#spark-cli">Spark CLI</a></li><li class="content__sections-item content__sections-item--h1"><a href="#custom-installation">Custom installation</a></li><li class="content__sections-item content__sections-item--h2"><a href="#customize-spark-distribution">Customize Spark distribution</a></li><li class="content__sections-item content__sections-item--h2"><a href="#customize-spark-user">Customize Spark user</a></li><li class="content__sections-item content__sections-item--h2"><a href="#configure-spark-virtual-network">Configure Spark virtual network</a></li><li class="content__sections-item content__sections-item--h2"><a href="#configure-spark-role-enforcement">Configure Spark role enforcement</a></li><li class="content__sections-item content__sections-item--h1"><a href="#minimal-installation">Minimal installation</a></li><li class="content__sections-item content__sections-item--h1"><a href="#multiple-installations">Multiple installations</a></li><li class="content__sections-item content__sections-item--h1"><a href="#installation-for-strict-mode">Installation for strict mode</a></li><li class="content__sections-item content__sections-item--h2"><a href="#service-accounts-and-secrets">Service accounts and secrets</a></li><li class="content__sections-item content__sections-item--h2"><a href="#assigning-permissions">Assigning permissions</a></li><li class="content__sections-item content__sections-item--h2"><a href="#install-spark-with-necessary-configuration">Install Spark with necessary configuration</a></li><li class="content__sections-item content__sections-item--h1"><a href="#additional-configuration-for-spark-jobs">Additional configuration for Spark jobs</a></li><li class="content__sections-item content__sections-item--h2"><a href="#running-jobs-in-strict-mode-cluster">Running jobs in strict mode cluster</a></li><li class="content__sections-item content__sections-item--h2"><a href="#running-jobs-as-a-different-user">Running jobs as a different user</a></li><li class="content__sections-item content__sections-item--h2"><a href="#running-jobs-in-virtual-network">Running jobs in virtual network</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

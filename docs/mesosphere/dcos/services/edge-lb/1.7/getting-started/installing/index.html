@@ -1,0 +1,296 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Install Edge-LB - D2iQ Docs</title><meta name="description" content="Describes how to install Edge-LB"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Edge Lb Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services/edge-lb">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/installing">Edge-LB 1.7</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.6/getting-started/installing">Edge-LB 1.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.5/getting-started/installing">Edge-LB 1.5</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.4/getting-started/installing">Edge-LB 1.4</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.3">Edge-LB 1.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.2">Edge-LB 1.2</a></li></ul><div class="toggle"><p><span class="title">Edge Lb</span><span class="version"> 1.7</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/concepts/"><i data-feather="chevron-right"></i>Edge-LB concepts</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/"><i data-feather="chevron-right"></i>Getting started with Edge-LB</a></li><ul><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/installing/">Install Edge-LB</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/comparing-load-balancers/">Comparing load balancing services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/auto-pools/">Automatically exposing apps with Auto Pools and labels</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/single-lb/">Expose and load balance a sample service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/edge-lb-mlb-example/">Compare Edge-LB to Marathon-LB</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/mlb-to-edge-lb-migration/">Migrate from Marathon-LB to Edge-LB</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/how-to-tasks/"><i data-feather="chevron-right"></i>How-to guides for Edge-LB</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/reference/"><i data-feather="chevron-right"></i>Reference information</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/related-documentation/"><i data-feather="chevron-right"></i>Related documentation</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Install Edge-LB</h1></div><h4 class="content__header-description">Describes how to install Edge-LB</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/installing/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>This section guides you through the basic steps to prepare and install Edge-LB for load balancing in a DC/OS™ cluster.</p>
+<p>The steps to follow depend on the deployment scenario you want to implement. For example, if you are setting up a demonstration or small-scale cluster for testing, evaluation, or personal use, you can use an account that is a member of the <code>superusers</code> group. In this case, you would use the default configuration settings to get started without creating a dedicated service account with specific permissions and a signed certificate.</p>
+<p>For most production deployments, however, you should create a unique service account for installing and managing Edge-LB.</p>
+<h1 id="before-you-begin"><a class="content__anchor" href="#before-you-begin" aria-hidden="true"><i data-feather="bookmark"></i></a>Before you begin</h1>
+<ul>
+<li>You must have the <a href="/dcosdocs/mesosphere/dcos/2.0/cli/install/">DC/OS CLI</a> and <a href="/dcosdocs/mesosphere/dcos/2.0/cli/enterprise-cli/">DC/OS Enterprise CLI</a> installed.</li>
+<li>You must be logged in with an account that has <code>superuser</code> permission or the permissions listed in <a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/reference/permissions/#installation-permissions">Installation permissions</a>.</li>
+</ul>
+<h2 id="preparing-a-service-account"><a class="content__anchor" href="#preparing-a-service-account" aria-hidden="true"><i data-feather="bookmark"></i></a>Preparing a service account</h2>
+<p>After you download the package artifacts and add the Edge-LB packages to the repository, you are ready to create and configure permissions for the service account you want to use to manage Edge-LB server and load balancer operations.</p>
+<p>If you have successfully downloaded and added Edge-LB packages, you can continue to the instructions for <a href="#create-service-account">creating a service account</a>.</p>
+<h2 id="editing-settings-before-adding-a-service-account"><a class="content__anchor" href="#editing-settings-before-adding-a-service-account" aria-hidden="true"><i data-feather="bookmark"></i></a>Editing settings before adding a service account</h2>
+<p>If you are not configuring a dedicated service account for managing Edge-LB pools, you can begin configuring Edge-LB settings by selecting the Edge-LB tiles in the Catalog, then clicking <strong>Review &amp; Run</strong>.</p>
+<ol>
+<li>
+<p>Open the DC/OS web-based console, then click <strong>Catalog</strong>.</p>
+</li>
+<li>
+<p>Type a string such as <code>edge</code> in the <strong>Search catalog</strong> field.</p>
+</li>
+<li>
+<p>Click <strong>edgelb</strong> to display the service summary.</p>
+</li>
+<li>
+<p>Click <strong>Review &amp; Run</strong> to edit the Edge-LB configuration settings by modifying the fields displayed, or by selecting JSON Editor to edit the JSON file directly.</p>
+</li>
+<li>
+<p>Click <strong>Review &amp; Run</strong>, then click <strong>Run Service</strong> to install the Edge-LB API server package with the configuration settings you specified.</p>
+</li>
+<li>
+<p>Repeat steps 1 through 4 to configure <strong>Service</strong> settings for the Edge-LB pool.</p>
+</li>
+<li>
+<p>Click <strong>Edgelbpool</strong> to specify the following required properties:</p>
+<ul>
+<li>count</li>
+<li>cpus</li>
+<li>mem</li>
+<li>disk</li>
+</ul>
+<p>You can specify additional pool configuration properties as needed, then click <strong>Review &amp; Run</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Run Service</strong> to install the Edge-LB pool service.</p>
+</li>
+<li>
+<p>Click <strong>Services</strong> to verify the Edge-LB API and Edge-LB pool services are installed and running.</p>
+ <p>
+ <img src="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/img/edgelb-deployment-status.png" alt="Configuring Edge-LB API settings">
+ </p>
+</li>
+</ol>
+<p class="message--important"><strong>IMPORTANT: </strong>Although you can add and modify settings directly in the web-based console from the Catalog, do not start the services until you have created the service account principal, configured the appropriate permissions, and completed the remaining installation steps. If you attempt to start the Edge-LB pool service without completing the other installation steps, the deployment will start, but it will not be able to resolve to a healthy Running state.</p>
+<p><a name="create-service-account"></a></p>
+<h1 id="create-a-service-account"><a class="content__anchor" href="#create-a-service-account" aria-hidden="true"><i data-feather="bookmark"></i></a>Create a service account</h1>
+<p>The Edge-LB API server must be associated with a service account so that it can launch Edge-LB pools on public and private nodes, based on user requests. <a href="/dcosdocs/mesosphere/dcos/2.0/security/ent/service-auth/">Service accounts</a> are used in conjunction with public/private key pairs, secrets, permissions, and authentication tokens to provide secure access for services running on DC/OS Enterprise clusters. For DC/OS Open Source clusters Service Accounts, provide the service with a login other than the user’s login.</p>
+<h2 id="dcos-enterprise-service-accounts"><a class="content__anchor" href="#dcos-enterprise-service-accounts" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS Enterprise Service Accounts</h2>
+<p>Creating a service account for DC/OS Enterprise involves the following steps:</p>
+<ul>
+<li>Create a public/private key pair</li>
+<li>Create a security principal for the service account</li>
+<li>Assign permissions to the service account principal</li>
+<li>Create and store a secret associated with the service account principal</li>
+</ul>
+<p>The secret store is used by Edge-LB to retrieve and install SSL certificates on the Edge-LB pools. The SSL certificates enable transport layer security (TLS) for all HTTP-based traffic between client requests and service backends.</p>
+<h3 id="to-create-a-service-account-for-edge-lb-on-dcos-enterprise"><a class="content__anchor" href="#to-create-a-service-account-for-edge-lb-on-dcos-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>To create a service account for Edge-LB on DC/OS Enterprise</h3>
+<ol>
+<li>
+<p>Open a shell terminal where you have access to the <a href="/dcosdocs/mesosphere/dcos/2.0/cli/enterprise-cli/#installing-the-dcos-enterprise-cli">DC/OS Enterprise command-line interface (CLI)</a>.</p>
+</li>
+<li>
+<p>Create a public/private key pair and save each value into a separate file:</p>
+<pre><code class="language-bash">dcos security org service-accounts keypair edge-lb-private-key.pem edge-lb-public-key.pem
+</code></pre>
+<p>This code sample creates the keys in the current directory. You must have write permission for the directory for the command to complete the operation successfully. Executing this command creates a 2048-bit RSA public/private key pair.</p>
+</li>
+<li>
+<p>Create the security principal (<code>edge-lb-principal</code>) for the new service account containing the public key (<code>edge-lb-public-key.pem</code>) created in the previous step:</p>
+<pre><code class="language-bash">dcos security org service-accounts create -p edge-lb-public-key.pem -d &quot;Edge-LB service account&quot; edge-lb-principal
+</code></pre>
+</li>
+<li>
+<p>Verify the new service account:</p>
+<pre><code class="language-bash">dcos security org service-accounts show edge-lb-principal
+</code></pre>
+<p>The command displays output similar to the following:</p>
+<pre><code>description: Edge-LB service account
+is_remote: false
+is_service: true
+provider_id: ''
+provider_type: internal
+public_key: '-----BEGIN PUBLIC KEY-----
+
+    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt9cmQPvWq4F/DWDy0HQq
+
+    4wv4eaxKvF7L2do0Cwv3eM01D/W4wEAB7VKLyRCcpZuhCuvwgdblKl2E3ZmdUkTQ
+
+    eJDMIp4QarBy7aeC9XqmHujT+AVsnj4RLsnKq1yGzxNpSGcX4n9IB/dRXZjz+i/z
+
+    yBNA2T3s12FYonThJM+CcRkyforSxkoYlrPj9+fL5V36/1tNl+jP/9q1ZvfOIRPG
+
+    vUPbMw9hXzDDw16rDBFwa91NGddGOGol4/aUTVLYwPoX3f02/cU35rA5qaDcJx92
+
+    6V9627feg55qxCGCqYw6kVVPSiSiUTkhA87PLqOEMIJmMg+V9gxYGRbfZyROPuGU
+
+    5QIDAQAB
+
+    -----END PUBLIC KEY-----'
+</code></pre>
+</li>
+<li>
+<p>Create a secret (<code>dcos-edgelb/edge-lb-secret</code>) for the service account principal (<code>edge-lb-principal</code>) and private key (<code>edge-lb-private-key.pem</code>):</p>
+<pre><code class="language-bash">dcos security secrets create-sa-secret edge-lb-private-key.pem edge-lb-principal dcos-edgelb/edge-lb-secret
+</code></pre>
+<p>For more information about creating and storing secrets for services, see <a href="/dcosdocs/mesosphere/dcos/2.0/security/ent/secrets/use-secrets/">Configuring services and pods</a> and <a href="/dcosdocs/mesosphere/dcos/2.0/security/ent/#spaces">Spaces</a>.</p>
+</li>
+<li>
+<p>List the secrets created:</p>
+<pre><code class="language-bash">dcos security secrets list /
+</code></pre>
+<p>The command displays output similar to the following:</p>
+<pre><code>- dcos-edgelb/edge-lb-secret
+</code></pre>
+</li>
+<li>
+<p>Provision the Edge-LB service account with the required permissions by doing one of the following:</p>
+<ul>
+<li>Adding the service account principal to the <code>superusers</code> group.</li>
+<li>Granting the permissions required to perform specific Edge-LB tasks.</li>
+</ul>
+<p><strong>Granting all permissions using the superusers group</strong>:  Adding the service account principal (<code>edge-lb-principal</code>) to the <code>superusers</code> group ensures that the account has sufficient permissions to perform all Edge-LB operations and upgrades. You can add the service account principal to the <code>superusers</code> group by running a command similar to the following:</p>
+<pre><code class="language-bash">dcos security org groups add_user superusers edge-lb-principal
+</code></pre>
+<p>After adding the service principal to the <code>supergroups</code> group, you can continue to <a href="#create-json">Create a configuration file for service authentication</a> and complete the installation.</p>
+<p><strong>Granting specific permissions to the service account</strong>:  If you follow the principle of least-privilege, you should not add the service account principal to the <code>superusers</code> group. Instead, you should limit the permissions granted to allow only management of DC/OS packages, Marathon tasks, and Edge-LB pool-related activity. You can grant specific permissions to the service account principal using commands similar to the following:</p>
+<pre><code class="language-bash">dcos security org users grant edge-lb-principal dcos:adminrouter:ops:ca:rw full
+dcos security org users grant edge-lb-principal dcos:adminrouter:ops:ca:ro full
+dcos security org users grant edge-lb-principal dcos:adminrouter:service:marathon full
+dcos security org users grant edge-lb-principal dcos:adminrouter:package full
+dcos security org users grant edge-lb-principal dcos:adminrouter:service:edgelb full
+dcos security org users grant edge-lb-principal dcos:service:marathon:marathon:services:/dcos-edgelb full
+dcos security org users grant edge-lb-principal dcos:mesos:master:endpoint:path:/api/v1 full
+dcos security org users grant edge-lb-principal dcos:mesos:master:endpoint:path:/api/v1/scheduler full
+dcos security org users grant edge-lb-principal dcos:mesos:master:framework:principal:edge-lb-principal full
+dcos security org users grant edge-lb-principal dcos:mesos:master:framework:role full
+dcos security org users grant edge-lb-principal dcos:mesos:master:reservation:principal:edge-lb-principal full
+dcos security org users grant edge-lb-principal dcos:mesos:master:reservation:role full
+dcos security org users grant edge-lb-principal dcos:mesos:master:volume:principal:edge-lb-principal full
+dcos security org users grant edge-lb-principal dcos:mesos:master:volume:role full
+dcos security org users grant edge-lb-principal dcos:mesos:master:task:user:root full
+dcos security org users grant edge-lb-principal dcos:mesos:master:task:app_id full
+dcos security org users grant edge-lb-principal 'dcos:secrets:default:/dcos-edgelb/*' full
+dcos security org users grant edge-lb-principal 'dcos:secrets:list:default:/dcos-edgelb/*' full
+</code></pre>
+<p>These sample permissions also enable Edge-LB pool framework schedulers to register with Mesos master nodes and to launch load-balancer tasks. You must also grant the following permission for <strong>each Edge-LB pool</strong> created:</p>
+<pre><code class="language-bash">dcos security org users grant edge-lb-principal dcos:adminrouter:service:dcos-edgelb/pools/&lt;pool-name&gt; full
+</code></pre>
+<p>For more information about the permissions required to perform specific tasks, see the Edge-LB <a href="/services/edge-lb/1.7/reference/permissions">Permissions</a> reference section.</p>
+</li>
+</ol>
+<p>After you have created a service account principal, stored the certificate as a secret, and assigned appropriate permissions, you are ready to <a href="#create-json">create a configuration file</a> and complete the installation.</p>
+<h3 id="dcos-open-source-service-accounts"><a class="content__anchor" href="#dcos-open-source-service-accounts" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS Open Source Service Accounts</h3>
+<p>Creating a service account for DC/OS Open Source involves the following steps:</p>
+<ul>
+<li>Create a public/private key pair</li>
+<li>Create a security principal for the service account</li>
+</ul>
+<h3 id="to-create-a-service-account-for-edge-lb-on-dcos-open-source"><a class="content__anchor" href="#to-create-a-service-account-for-edge-lb-on-dcos-open-source" aria-hidden="true"><i data-feather="bookmark"></i></a>To create a service account for Edge-LB on DC/OS Open Source</h3>
+<ol>
+<li>
+<p>Open a shell terminal where you have access to the <a href="/dcosdocs/mesosphere/dcos/2.0/cli/install/#prerequisites">DC/OS command-line interface (CLI)</a>, curl, openssl, and sed.</p>
+</li>
+<li>
+<p>Create a public/private key pair and save each value into a separate file:</p>
+<pre><code class="language-bash">openssl genpkey -algorithm RSA -out private-key.pem -pkeyopt rsa_keygen_bits:2048
+openssl rsa -pubout -in private-key.pem -out public-key.pem
+</code></pre>
+<p>This code sample creates the keys in the current directory. You must have write permission for the directory for the command to complete the operation successfully. Executing this command creates a 2048-bit RSA public/private key pair.</p>
+</li>
+<li>
+<p>Create the security principal (<code>edge-lb-principal</code>) for the new service account containing the public key (<code>edge-lb-public-key.pem</code>) created in the previous step:</p>
+<pre><code class="language-bash">curl \
+    --insecure \
+    --header &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; \
+    --header 'Content-Type: application/json' &quot;$(dcos config show core.dcos_url)/acs/api/v1/users/edge-lb-principal&quot; \
+    --request PUT \
+    --data '{&quot;public_key&quot;: &quot;'&quot;$(sed ':a;N;$!ba;s/\n/\\n/g' public-key.pem)&quot;'&quot;}'
+</code></pre>
+</li>
+</ol>
+<p>After you have created a service account principal, stored the certificate as a secret, and assigned appropriate permissions, you are ready to <a href="#create-json">create a configuration file</a> and complete the installation.</p>
+<p><a name="create-json"></a></p>
+<h1 id="create-a-configuration-file-for-service-authentication"><a class="content__anchor" href="#create-a-configuration-file-for-service-authentication" aria-hidden="true"><i data-feather="bookmark"></i></a>Create a configuration file for service authentication</h1>
+<p>After configuring service authentication, you must create a JSON options file with your credentials. This file is passed to DC/OS when you install Edge-LB.</p>
+<ol>
+<li>
+<p>For DC/OS Enterprise, open a new file for Edge-LB configuration options in a text editor.</p>
+<p>For example:</p>
+<pre><code class="language-bash">vi edge-lb-options.json
+</code></pre>
+<p>Edit the file to specify the service account secret (<code>dcos-edgelb/edge-lb-secret</code>) that you created earlier.</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;secretName&quot;: &quot;dcos-edgelb/edge-lb-secret&quot;,
+    &quot;principal&quot;: &quot;edge-lb-principal&quot;
+  }
+}
+</code></pre>
+<p>For DC/OS Open Source, specify the <code>dcosServiceAccountCreds</code> directly, newlines in the <code>private-key.pem</code> must be embeded. The simplist way to do this is using <code>bash</code> redirection:</p>
+<pre><code class="language-sh">tee edge-lb-options.json &lt;&lt;EOF
+{
+  &quot;service&quot;: {
+    &quot;dcosServiceAccountCreds&quot;: &quot;{\&quot;login_endpoint\&quot;: \&quot;http://leader.mesos/acs/api/v1/auth/login\&quot;, \&quot;private_key\&quot;: \&quot;$(sed ':a;N;$!ba;s/\n/\\\\n/g' private-key.pem)\&quot;, \&quot;uid\&quot;: \&quot;edge-lb-principal\&quot;}&quot;
+  }
+}
+EOF
+</code></pre>
+</li>
+<li>
+<p>Specify other configuration settings, as needed.</p>
+ <p class="message--note"><strong>NOTE: </strong>If you are using the install --options= approach and you modify the service name to be something other than the default, edgelb, then you must be explicit when specifying the service name when you use any "dcos edgelb xxxx" commands.</p>
+<p>As an example of this effect, suppose you deployed a service with the JSON configuration file:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;name&quot;: &quot;dcos-edgelb/api&quot;,
+    &quot;secretName&quot;: &quot;dcos-edgelb/edge-lb-secret&quot;,
+    &quot;principal&quot;: &quot;edge-lb-principal&quot;
+  }
+}
+</code></pre>
+<p>This command creates a service called <code>dcos-edgelb/api</code> from the Edge-LB service’s point of view. But that service name causes creation of the <strong>task</strong> name, <code>dcos-edgelb/api/api</code>, which could become confusing! The string value, /api, is always (implicitly) appended to the name.</p>
+<p>As an alternative, after creating the edge-lb-options.json file and installing the edgelb/api service, execute the following command to rename the service so that you don’t have to track the name:</p>
+<pre><code class="language-bash">dcos config set edgelb.service_name &quot;dcos-edgelb&quot;
+</code></pre>
+<p>Examples of other configuration settings you can change include specifying the service path for the <code>apiserver</code> where <code>dcos-edgelb</code> corresponds to the <code>pool.namespace</code> when <a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/reference/pool-configuration-reference/">configuring pools</a>. Other common configuration settings specify the CPU, memory, disk, and log level (<code>debug</code>, <code>info</code>, <code>warn</code>, or <code>error</code>) as shown here.</p>
+<pre><code class="language-json">{
+    &quot;service&quot;: {
+        &quot;name&quot;: &quot;dcos-edgelb/api&quot;,
+        &quot;cpus&quot;: 1,
+        &quot;mem&quot;: 1024,
+        &quot;disk&quot;: 10,
+        &quot;mesosProtocol&quot;: &quot;https&quot;,
+        &quot;mesosAuthNZ&quot;: true,
+        &quot;logLevel&quot;: &quot;info&quot;
+    }
+}
+</code></pre>
+</li>
+<li>
+<p>Save the configuration file.</p>
+</li>
+<li>
+<p>Add the configuration file to source control so that you can update configuration at a later time.</p>
+</li>
+</ol>
+<h1 id="install-edge-lb"><a class="content__anchor" href="#install-edge-lb" aria-hidden="true"><i data-feather="bookmark"></i></a>Install Edge-LB</h1>
+<p>After you have added the packages to the cluster catalog, created a secure service account, and configured settings for Edge-LB in a JSON file, you can install Edge-LB to begin creating and managing load balancing pools.</p>
+<ol>
+<li>
+<p>Install Edge-LB using the command:</p>
+<pre><code class="language-bash">dcos package install --options=edge-lb-options.json edgelb
+</code></pre>
+<p>This command prompts you to accept the terms and conditions to continue.</p>
+<pre><code>By Deploying, you agree to the Terms and Conditions https://d2iq.com/catalog-terms-conditions/#certified-services
+Continue installing? [yes/no]
+</code></pre>
+</li>
+<li>
+<p>Enter yes to continue and review the output.</p>
+<pre><code>Installing Marathon app for package [edgelb] version [v1.7.0]
+Installing CLI subcommand for package [edgelb] version [v1.7.0]
+New command available: dcos edgelb
+DC/OS edgelb is being installed!
+</code></pre>
+</li>
+<li>
+<p>Run a command similar to the following to determine whether the Edge-LB service is ready for use:</p>
+<pre><code class="language-bash">until dcos edgelb ping; do sleep 1; done
+</code></pre>
+<p>When Edge-LB is ready, the ping command should return the <code>pong</code> response in standard output (<code>stdout</code>).</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>For more information about configuring Edge-LB, see the Edge-LB <a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/reference/pool-configuration-reference">pool configuration</a> reference section.</p>
+</li>
+<li>
+<p>For more information about the available Edge-LB commands, see the Edge-LB <a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/reference/cli-reference">command-line</a> reference section.</p>
+</li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#before-you-begin">Before you begin</a></li><li class="content__sections-item content__sections-item--h2"><a href="#preparing-a-service-account">Preparing a service account</a></li><li class="content__sections-item content__sections-item--h2"><a href="#editing-settings-before-adding-a-service-account">Editing settings before adding a service account</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-a-service-account">Create a service account</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-enterprise-service-accounts">DC/OS Enterprise Service Accounts</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-a-configuration-file-for-service-authentication">Create a configuration file for service authentication</a></li><li class="content__sections-item content__sections-item--h1"><a href="#install-edge-lb">Install Edge-LB</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

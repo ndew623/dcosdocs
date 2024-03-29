@@ -1,0 +1,354 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Operations - D2iQ Docs</title><meta name="description" content="Managing your DC/OS NiFi service"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Nifi Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/1.0.1-1.9.2/managing">NiFi 1.0.1-1.9.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/1.0.0-1.9.2/managing">NiFi 1.0.0-1.9.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.5.0-1.9.2/managing">NiFi 0.5.0-1.9.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.4.1-1.8.0/managing">NiFi 0.4.1-1.8.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.4.0-1.8.0/managing">NiFi 0.4.0-1.8.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/managing">NiFi 0.3.0-1.7.1</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.2.0-1.5.0/managing">NiFi 0.2.0-1.5.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.1.0-1.5.0/managing">NiFi 0.1.0-1.5.0</a></li></ul><div class="toggle"><p><span class="title">Nifi</span><span class="version"> 0.4.0-1.8.0</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.4.0-1.8.0/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.4.0-1.8.0/overview/">Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.4.0-1.8.0/install/">Installing and Customizing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.4.0-1.8.0/deploy-best-practice/">Deployment Best Practices</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.4.0-1.8.0/managing/">Operations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.4.0-1.8.0/uninstall/">Uninstalling</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.4.0-1.8.0/offload-node/">Offload Node</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.4.0-1.8.0/security/">Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.4.0-1.8.0/secret-upload/">Secret Upload</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.4.0-1.8.0/command-reference/"><i data-feather="chevron-right"></i>Command Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.4.0-1.8.0/connecting-clients/">Connecting Clients</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.4.0-1.8.0/api-reference/">API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.4.0-1.8.0/troubleshooting/"><i data-feather="chevron-right"></i>Troubleshooting</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.4.0-1.8.0/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.4.0-1.8.0/supported-versions/">Supported Versions</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Operations</h1></div><h4 class="content__header-description">Managing your DC/OS NiFi service</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/nifi/0.4.0-1.8.0/managing/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>This section describes various operations tasks you may need. DC/OS NiFi allows you to</p>
+<ul>
+<li>Update your configuration after launch</li>
+<li>Update your placement constraints</li>
+<li>Add, replace, restart or resize a node</li>
+<li>Back up your application</li>
+<li>Use the DC/OS NiFi Administration Toolkit</li>
+<li>User metrics to troubleshoot your nodes</li>
+</ul>
+<h1 id="updating-configuration"><a class="content__anchor" href="#updating-configuration" aria-hidden="true"><i data-feather="bookmark"></i></a>Updating Configuration</h1>
+<p>You can make changes to the service after it has been launched. Configuration management is handled by the Scheduler process, which in turn handles DC/OS NiFi deployment itself.</p>
+<p>After making a change, the Scheduler will be restarted, and it will automatically deploy any detected changes to the service, one node at a time. For example, a given change will first be applied to <code>nifi-0</code>, then <code>nifi-1</code>, and so on.</p>
+<p>Nodes are configured with a “Readiness check” to ensure that the underlying service appears to be in a healthy state before continuing with applying a given change to the next node in the sequence.</p>
+<p>Some changes, such as decreasing the number of nodes or changing volume requirements, are not supported after initial deployment. See <a href="../limitations">Limitations</a>.</p>
+<p>The instructions below describe how to update the configuration for a running DC/OS service.</p>
+<h3 id="dcos-enterprise-110-and-later"><a class="content__anchor" href="#dcos-enterprise-110-and-later" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS Enterprise 1.10 and later</h3>
+<p>DC/OS Enterprise 1.10 introduces a convenient command line option that allows for easier updates to a service’s configuration, as well as allowing users to inspect the status of an update, to pause and resume updates, and to restart or complete steps if necessary.</p>
+<h4 id="prerequisites"><a class="content__anchor" href="#prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h4>
+<ul>
+<li>DC/OS Enterprise 1.10 or later.</li>
+<li>Service with 1.5.0 version or later.</li>
+<li><a href="/dcosdocs/mesosphere/dcos/latest/cli/install/">The DC/OS CLI</a> installed and available.</li>
+<li>The service’s subcommand available and installed on your local machine.
+<ul>
+<li>You can install just the subcommand CLI by running<pre><code class="language-shell">dcos package install --cli --yes nifi
+</code></pre>
+</li>
+<li>If you are running an older version of the subcommand CLI that doesn’t have the <code>update</code> command, uninstall and reinstall your CLI.<pre><code class="language-shell">dcos package uninstall --cli nifi
+dcos package install --cli nifi
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="preparing-configuration"><a class="content__anchor" href="#preparing-configuration" aria-hidden="true"><i data-feather="bookmark"></i></a>Preparing configuration</h4>
+<p>If you installed this service with DC/OS Enterprise 1.10 or later, you can fetch the full configuration of a service (including any default values that were applied during installation). For example:</p>
+<pre><code class="language-shell">dcos nifi describe &gt; options.json
+</code></pre>
+<p>Make any configuration changes to the <code>options.json</code> file.</p>
+<p>If you installed this service with a prior version of DC/OS, this configuration will not have been persisted by the DC/OS package manager. You can instead use the <code>options.json</code> file that was used when <a href="../install">installing the service</a>.</p>
+<p class="message--note"><strong>NOTE: </strong> You need to specify all configuration values in the <tt>options.json</tt> file when performing a configuration update. Any unspecified values will be reverted to the default values specified by the DC/OS service. See the "Recreating <tt>options.json</tt>" section below for information on recovering these values.</p>
+<h4 id="recreating-optionsjson-optional"><a class="content__anchor" href="#recreating-optionsjson-optional" aria-hidden="true"><i data-feather="bookmark"></i></a>Recreating <code>options.json</code> (optional)</h4>
+<p>If the <code>options.json</code> from the last service installation or update is not available, you will need to manually recreate it using the following steps.</p>
+<p>First, we’ll fetch the default application’s environment, current application’s environment, and the actual nifi that maps config values to the environment:</p>
+<ol>
+<li>Ensure you have <a href="https://stedolan.github.io/jq/">jq</a> installed.</li>
+<li>Set the service name that you’re using, for example:<pre><code class="language-shell">SERVICE_NAME=nifi
+</code></pre>
+</li>
+<li>Get the version of the package that is currently installed:<pre><code class="language-shell">PACKAGE_VERSION=$(dcos package list | grep $SERVICE_NAME | awk '{print $2}')
+</code></pre>
+</li>
+<li>Then fetch and save the environment variables that have been set for the service:<pre><code class="language-shell">dcos marathon app show $SERVICE_NAME | jq .env &gt; current_env.json
+</code></pre>
+</li>
+<li>To identify customized values, we’ll get the default environment variables for this version of the service:<pre><code class="language-shell">dcos package describe --package-version=$PACKAGE_VERSION --render --app $SERVICE_NAME | jq .env &gt; default_env.json
+</code></pre>
+</li>
+<li>We’ll also get the entire application nifi:<pre><code class="language-shell">dcos package describe $SERVICE_NAME --app &gt; marathon.json.mustache
+</code></pre>
+</li>
+</ol>
+<p>Now that you have these files, we’ll attempt to recreate the <code>options.json</code>.</p>
+<ol>
+<li>Use JQ and <code>diff</code> to compare the two:<pre><code class="language-shell">diff &lt;(jq -S . default_env.json) &lt;(jq -S . current_env.json)
+</code></pre>
+</li>
+<li>Now compare these values to the values contained in the <code>env</code> section in application nifi:<pre><code class="language-shell">less marathon.json.mustache
+</code></pre>
+</li>
+<li>Use the variable names (e.g. {{service.name}} ) to create a new <code>options.json</code> file as described in <a href="#initial-service-configuration">Initial service configuration</a>.</li>
+</ol>
+<h4 id="starting-the-update"><a class="content__anchor" href="#starting-the-update" aria-hidden="true"><i data-feather="bookmark"></i></a>Starting the update</h4>
+<p>When you are ready to begin, initiate an update using the DC/OS CLI, passing in the updated <code>options.json</code> file:</p>
+<pre><code class="language-shell">dcos nifi update start --options=options.json
+</code></pre>
+<p>You will receive an acknowledgement message and the DC/OS package manager will restart the Scheduler in Marathon.</p>
+<p>See <a href="#advanced-update-actions">Advanced update actions</a> for commands you can use to inspect and manipulate an update after it has started.</p>
+<p>To see a full listing of available options, run</p>
+<pre><code class="language-shell">dcos package describe --config nifi
+</code></pre>
+<p>in the CLI, or browse the DC/OS nifi Service install dialog in the DC/OS Dashboard.</p>
+<p><a name="updating-placement-constraints"></a></p>
+<h1 id="updating-placement-constraints"><a class="content__anchor" href="#updating-placement-constraints" aria-hidden="true"><i data-feather="bookmark"></i></a>Updating Placement Constraints</h1>
+<p>Placement constraints may be updated after initial deployment using the following procedure. See <a href="#service-settings">Service Settings</a> above for more information on placement constraints.</p>
+<p>Let’s say we have the following deployment of our nodes</p>
+<ul>
+<li>
+<p>Placement constraint of: <code>hostname:LIKE:10.0.10.3|10.0.10.8|10.0.10.26|10.0.10.28|10.0.10.84</code></p>
+</li>
+<li>
+<p>Tasks:</p>
+<pre><code class="language-shell">10.0.10.3: nifi-0
+10.0.10.8: nifi-1
+10.0.10.26: nifi-2
+10.0.10.28: empty
+10.0.10.84: empty
+</code></pre>
+</li>
+</ul>
+<p><code>10.0.10.8</code> is being decommissioned and we should move away from it.</p>
+<ol>
+<li>
+<p>Remove the decommissioned IP and add a new IP to the placement rule whitelist by editing <code>placement_constraint</code>:</p>
+<pre><code class="language-shell">hostname:LIKE:10.0.10.3|10.0.10.26|10.0.10.28|10.0.10.84|10.0.10.123
+</code></pre>
+</li>
+<li>
+<p>Redeploy <code>_NODEPOD_-1</code> from the decommissioned node to somewhere within the new whitelist:</p>
+<pre><code class="language-shell">dcos nifi pod replace _NODEPOD_-1
+</code></pre>
+</li>
+<li>
+<p>Wait for <code>_NODEPOD_-1</code> to be up and healthy before continuing with any other replacement operations.</p>
+</li>
+</ol>
+<p>The placement constraints can be modified by configuring the “placement constraint” section of the config.json file:</p>
+<pre><code class="language-json">&quot;placement_constraint&quot;: {
+        &quot;type&quot;: &quot;string&quot;,
+        &quot;title&quot;: &quot;Placement Constraint&quot;,
+        &quot;description&quot;: &quot;Marathon-style placement constraint for nodes. Example: [[\&quot;hostname\&quot;, \&quot;UNIQUE\&quot;]]&quot;,
+        &quot;default&quot;: &quot;[[\&quot;hostname\&quot;, \&quot;UNIQUE\&quot;]]&quot;,
+        &quot;media&quot;: {
+        &quot;type&quot;: &quot;application/x-zone-constraints+json&quot;
+    }
+</code></pre>
+<h1 id="managing-nodes"><a class="content__anchor" href="#managing-nodes" aria-hidden="true"><i data-feather="bookmark"></i></a>Managing nodes</h1>
+<p><a name="adding-a-node"></a></p>
+<h3 id="adding-a-node"><a class="content__anchor" href="#adding-a-node" aria-hidden="true"><i data-feather="bookmark"></i></a>Adding a Node</h3>
+<p>The service deploys two nodes by default. You can customize this value at initial deployment or after the cluster is already running. Shrinking the cluster is not supported.</p>
+<p>Modify the COUNT <code>&quot;node&quot;:{&quot;count&quot;:3}</code> environment variable to update the node count. If you decrease this value, the Scheduler will prevent the configuration change until it is reverted back to its original value or larger.</p>
+<p><a name="resizing-a-node"></a></p>
+<h3 id="resizing-a-node"><a class="content__anchor" href="#resizing-a-node" aria-hidden="true"><i data-feather="bookmark"></i></a>Resizing a Node</h3>
+<p>The CPU and memory requirements of each node can be increased or decreased as follows:</p>
+<ul>
+<li>CPU:</li>
+</ul>
+<pre><code class="language-json">&quot;node&quot;:{
+   &quot;cpus&quot;:&lt;CPU Value&gt;
+}
+</code></pre>
+<ul>
+<li>Memory (in MB):</li>
+</ul>
+<pre><code class="language-json">&quot;node&quot;:{
+   &quot;mem&quot;:4096
+}
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>Volume requirements (type and/or size) cannot be changed after initial deployment.</p>
+<p><a name="restarting-a-node"></a></p>
+<h2 id="restarting-a-node"><a class="content__anchor" href="#restarting-a-node" aria-hidden="true"><i data-feather="bookmark"></i></a>Restarting a Node</h2>
+<p>This operation will restart a node, while keeping it at its current location and with its current persistent volume data. This may be thought of as similar to restarting a system process, but it also deletes any data that is not on a persistent volume.</p>
+<p>Run</p>
+<pre><code class="language-shell">dcos nifi pod restart nifi-&lt;NUM&gt;`, e.g. `nifi_-2
+</code></pre>
+<p><a name="replacing-a-node"></a></p>
+<h2 id="replacing-a-node"><a class="content__anchor" href="#replacing-a-node" aria-hidden="true"><i data-feather="bookmark"></i></a>Replacing a Node</h2>
+<p class="message--note"><strong>NOTE: </strong>Nodes are not moved automatically. You must perform the following steps manually to move nodes to new systems. You can automate node replacement according to your own preferences.</p>
+<p>This operation will move a node to a new agent and will discard the persistent volumes at the prior system to be rebuilt at the new system. Perform this operation if a given system is about to be offlined or has already been offlined.</p>
+<ol>
+<li>
+<p>Run <code>dcos nifi pod replace nifi-&lt;NUM&gt;</code>, e.g. <code>nifi_-2</code> to halt the current instance with id <code>&lt;NUM&gt;</code> (if still running) and launch a new instance on a different agent. For example, let’s say <code>nifi-2</code>'s host system has died and <code>nifi-2</code> needs to be moved.</p>
+</li>
+<li>
+<p>Now that the node has been decommissioned (if needed by your service) start <code>nifi-2</code> at a new location in the cluster.</p>
+<pre><code class="language-shell">dcos nifi pod replace nifi-2
+</code></pre>
+</li>
+</ol>
+<h1 id="advanced-update-actions"><a class="content__anchor" href="#advanced-update-actions" aria-hidden="true"><i data-feather="bookmark"></i></a>Advanced update actions</h1>
+<p>The following sections describe advanced commands that be used to interact with an update in progress.</p>
+<h2 id="monitoring-the-update"><a class="content__anchor" href="#monitoring-the-update" aria-hidden="true"><i data-feather="bookmark"></i></a>Monitoring the update</h2>
+<p>Once the Scheduler has been restarted, it will begin a new deployment plan as individual pods are restarted with the new configuration.</p>
+<p>You can query the status of the update as follows:</p>
+<pre><code class="language-shell">dcos nifi update status
+</code></pre>
+<p>If the Scheduler is still restarting, DC/OS will not be able to route to it and this command will return an error message. Wait a short while and try again. You can also go to the Services tab of the DC/OS UI to check the status of the restart.</p>
+<h3 id="pause"><a class="content__anchor" href="#pause" aria-hidden="true"><i data-feather="bookmark"></i></a>Pause</h3>
+<p>To pause an ongoing update, issue a <code>pause</code> command:</p>
+<pre><code class="language-shell">dcos nifi update pause
+</code></pre>
+<p>You will receive an error message if the plan has already completed or has been paused. Once completed, the plan will enter the WAITING state.</p>
+<h3 id="resume"><a class="content__anchor" href="#resume" aria-hidden="true"><i data-feather="bookmark"></i></a>Resume</h3>
+<p>If a plan is in a WAITING state, as a result of being paused or reaching a breakpoint that requires manual operator verification, you can use the <code>resume</code> command to continue the plan:</p>
+<pre><code class="language-shell">dcos nifi update resume
+</code></pre>
+<p>You will receive an error message if you attempt to resume a plan that is already in progress or has already completed.</p>
+<h3 id="force-complete"><a class="content__anchor" href="#force-complete" aria-hidden="true"><i data-feather="bookmark"></i></a>Force-Complete</h3>
+<p>In order to manually “complete” a step (such that the Scheduler stops attempting to launch a task), you can issue a <code>force-complete</code> command. This will instruct to Scheduler to mark a specific step within a phase as complete. You need to specify both the phase and the step, for example:</p>
+<pre><code class="language-shell">dcos nifi update force-complete service-phase service-0:[node]
+</code></pre>
+<h3 id="force-restart"><a class="content__anchor" href="#force-restart" aria-hidden="true"><i data-feather="bookmark"></i></a>Force-Restart</h3>
+<p>Similarly to <code>force-complete</code>, you can also force a restart. This can either be done for an entire plan, a phase, or just for a specific step.</p>
+<p>To restart the entire plan:</p>
+<pre><code class="language-shell">dcos nifi update force-restart
+</code></pre>
+<p>Or for all steps in a single phase:</p>
+<pre><code class="language-shell">dcos nifi update force-restart service-phase
+</code></pre>
+<p>Or for a specific step within a specific phase:</p>
+<pre><code class="language-shell">dcos nifi update force-restart service-phase service-0:[node]
+</code></pre>
+<h1 id="disaster-recovery"><a class="content__anchor" href="#disaster-recovery" aria-hidden="true"><i data-feather="bookmark"></i></a>Disaster recovery</h1>
+<h2 id="backing-up"><a class="content__anchor" href="#backing-up" aria-hidden="true"><i data-feather="bookmark"></i></a>Backing up</h2>
+<p>The DC/OS NiFi framework allows you to back up your DC/OS NiFi application to Amazon S3. The following information/values are required for backup.</p>
+<ol>
+<li>AWS_ACCESS_KEY_ID</li>
+<li>AWS_SECRET_ACCESS_KEY</li>
+<li>AWS_REGION</li>
+<li>S3_BUCKET_NAME</li>
+</ol>
+<p>To enable backup, trigger the backup-S3 plan with the following plan parameters:</p>
+<pre><code class="language-shell">{
+ 'AWS_ACCESS_KEY_ID': key_id,
+ 'AWS_SECRET_ACCESS_KEY': aws_secret_access_key,
+ 'AWS_REGION': 'us-east-1',
+ 'S3_BUCKET_NAME': bucket_name
+}
+</code></pre>
+<p>This plan can be executed with the following command:</p>
+<pre><code class="language-shell">{
+ dcos nifi --name=&lt;service_name&gt; plan start &lt;plan_name&gt; -p &lt;plan_parameters&gt;
+}
+</code></pre>
+<p>or with a command, including plan parameters itself:</p>
+<pre><code class="language-shell">{
+ dcos nifi --name=&lt;SERVICE_NAME&gt; plan start backup-s3 \
+  -p AWS_ACCESS_KEY_ID=&lt;ACCESS_KEY&gt; \
+  -p AWS_SECRET_ACCESS_KEY=&lt;SECRET_ACCESS_KEY&gt; \
+  -p AWS_REGION=&lt;REGION&gt; \
+  -p S3_BUCKET_NAME=&lt;BUCKET_NAME&gt;
+}
+</code></pre>
+<!-- However, the backup can also be started with the following command: -->
+<p>Once this plan execution is completed, the backup will be uploaded to S3.
+The DC/OS NiFi backup is taken using the DC/OS NiFi toolkit. The DC/OS NiFi backup will be done using three sidecar tasks:</p>
+<ol>
+<li>
+<p><strong>Backup</strong> - Back up to local node (ROOT/MOUNT). The Backup task is responsible for backing up the local application to the local node, which may be on the ROOT or Mount Volume.</p>
+<p><a href="../img/Backup.png"><img src="../img/Backup.png" alt="backup" width="800"/></a></p>
+<p>Figure 1. Backing up to local node</p>
+</li>
+</ol>
+<ol>
+<li>
+<p><strong>Upload_to_S3</strong> - Upload the backup from the local node to S3. This sidecar task takes the backup created in Step 1, from the ROOT/Mount volume, and uploads it to Amazon S3 in the Bucket Name specified.</p>
+<p><a href="../img/S3Upload.png"><img src="../img/S3Upload.png" alt="S3Upload.png" width="800"/></a></p>
+<p>Figure 2. S3 upload</p>
+</li>
+<li>
+<p><strong>Cleanup</strong> - Remove the backup from local node. When Step 2 is complete and the backup has been uploaded to S3, a sidecar task known as Cleanup is triggered. This task cleans up/removes the backup folder from the local Root/Mount volumes.</p>
+<p><a href="../img/Cleanup.png"><img src="../img/Cleanup.png" alt="cleanup" width="800"/></a></p>
+<p>Figure 3. Cleanup service</p>
+</li>
+</ol>
+<!-- How does a user restore the service? -->
+<h1 id="dcos-nifi-toolkit-commands"><a class="content__anchor" href="#dcos-nifi-toolkit-commands" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS NiFi Toolkit Commands</h1>
+<p>The Admin Toolkit contains command line utilities for administrators to support DC/OS NiFi maintenance in standalone and clustered environments. These utilities include:</p>
+<ul>
+<li><strong>Notify</strong> — The notification tool allows administrators to send bulletins to the DC/OS NiFi UI using the command line.</li>
+<li><strong>Node Manager</strong> — The node manager tool allows administrators to perform a status check on a node as well as to connect, disconnect, or remove nodes that are part of a cluster.</li>
+<li><strong>File Manager</strong> — The file manager tool allows administrators to backup, install or restore a DC/OS NiFi installation from backup.</li>
+</ul>
+<p>The Administration Toolkit is bundled with the <code>nifi-toolkit</code> and can be executed with scripts found in the <code>bin</code> folder. Further documentation is available at <a href="https://nifi.apache.org/docs/nifi-docs/html/administration-guide.html#admin-toolkit">DC/OS NiFi Administration Toolkit</a>.</p>
+<p>To execute the DC/OS NiFi Administration Toolkit commands, run  a <code>dcos task exec</code> command to a DC/OS NiFi node.</p>
+<ol>
+<li>
+<p>Set the JAVA_HOME using the command:</p>
+<pre><code class="language-shell">export JAVA_HOME=$(ls -d $MESOS_SANDBOX/jdk*/jre*/) &amp;&amp; export JAVA_HOME=${JAVA_HOME%/} &amp;&amp; export PATH=$(ls -d $JAVA_HOME/bin):$PATH
+</code></pre>
+</li>
+<li>
+<p>Run the node manager commands from the <code>$MESOS_SANDBOX/nifi-toolkit-1.5.0/bin</code> directory:</p>
+<p>To connect, disconnect, or remove a node from a cluster:</p>
+<pre><code class="language-shell">node-manager.sh -d &lt;NIFI_HOME&gt; –b &lt;nifi bootstrap file path&gt;
+-o {remove|disconnect|connect|status} [-u {url list}] [-p {proxy name}] [-v]
+</code></pre>
+<p>To show help:</p>
+<pre><code class="language-shell">node-manager.sh -h
+</code></pre>
+<p>The following are available options:</p>
+<pre><code class="language-shell">-b,--bootstrapConf &lt;arg&gt; Existing Bootstrap Configuration file (required)
+
+-d,--nifiInstallDir &lt;arg&gt; nifi Root Folder (required)
+
+-h,--help Help Text (optional)
+
+-o, --operation &lt;arg&gt; Operations supported: status, connect (cluster), disconnect (cluster), remove (cluster)
+
+-p,--proxyDN &lt;arg&gt; Proxy or User DN (required for secured nodes doing connect, disconnect and remove operations)
+
+-u,--clusterUrls &lt;arg&gt; Comma delimited list of active urls for cluster (optional). Not required for disconnecting a node yet will be needed when connecting or removing from a cluster
+
+-v,--verbose Verbose messaging (optional)
+</code></pre>
+</li>
+</ol>
+<p><strong>Example</strong></p>
+<p>To check for <code>dcos</code> tasks:</p>
+<pre><code class="language-shell">dcos task
+
+NAME            HOST         USER   STATE  ID                                                    MESOS ID
+nifi            10.0.0.196   root     R    nifi.9b11498f-415f-11e8-81a4-e25c6192ea05             1d166af3-8666-4f3e-8add-dcaad139c900-S3
+nifi-0-metrics  10.0.0.199  nobody    R    nifi-0-metrics__958e2af9-c7d0-4cb9-b1fc-08c810b05254  1d166af3-8666-4f3e-8add-dcaad139c900-S1
+nifi-0-node     10.0.0.199  nobody    R    nifi-0-node__68c0d8a0-4c36-4a86-a287-5dc67ce19fde     1d166af3-8666-4f3e-8add-dcaad139c900-S1
+nifi-1-metrics  10.0.0.58   nobody    R    nifi-1-metrics__e58b8f2d-e19f-48f7-b154-6d11e65c54a9  1d166af3-8666-4f3e-8add-dcaad139c900-S5
+nifi-1-node     10.0.0.58   nobody    R    nifi-1-node__1a3d71c6-3c23-4a96-bba3-859de2c0615d     1d166af3-8666-4f3e-8add-dcaad139c900-S5
+</code></pre>
+<p>To enter into a <code>dcos</code> node</p>
+<pre><code class="language-shell">dcos task exec -ti nifi-0-node__68c0d8a0-4c36-4a86-a287-5dc67ce19fde bash
+</code></pre>
+<p>To set the Java Path</p>
+<pre><code class="language-shell">export JAVA_HOME=$(ls -d $MESOS_SANDBOX/jdk*/jre*/) &amp;&amp; export JAVA_HOME=${JAVA_HOME%/} &amp;&amp; export PATH=$(ls -d $JAVA_HOME/bin):$PATH
+</code></pre>
+<p>To check for Java Home, run the following command:</p>
+<pre><code class="language-shell">echo $JAVA_HOME
+</code></pre>
+<p>This returns the Java home path:</p>
+<pre><code class="language-shell">/var/lib/mesos/slave/slaves/1d166af3-8666-4f3e-8add-dcaad139c900-S1/frameworks/1d166af3-8666-4f3e-8add-dcaad139c900-0003/executors/nifi__78b829b7-3963-4083-b33b-4147fcab559f/runs/fb826e37-17e6-4349-b7c4-63060b51ff0a/containers/8bd354e5-a2a6-4185-9454-647b98b9b327/jdk1.8.0_162/jre
+</code></pre>
+<p><strong>Example of Backup Command through Toolkit</strong></p>
+<pre><code class="language-shell"> sh $MESOS_SANDBOX/nifi-toolkit-${NIFI_VERSION}/bin/file-manager.sh -o backup -b nifi-backup -c $MESOS_SANDBOX/../../tasks/nifi-$POD_INSTANCE_INDEX-node*/nifi- -v;
+</code></pre>
+<h1 id="metrics"><a class="content__anchor" href="#metrics" aria-hidden="true"><i data-feather="bookmark"></i></a>Metrics</h1>
+<p>To check the metrics for the DC/OS NiFi instances on individual agent nodes, we need to do the following:</p>
+<ol>
+<li>
+<p>In the first step we need to obtain the <code>dcos auth</code> token by issuing the following command:</p>
+<pre><code class="language-shell">    dcos config show core.dcos_acs_token
+</code></pre>
+<p>Keep a copy of this token for later use.</p>
+</li>
+<li>
+<p>In the next step we need to ssh into the private agent on which we have the tasks running:</p>
+<pre><code class="language-shell">    dcos node ssh --master-proxy --mesos-id=&lt;agent-mesos-id&gt;
+</code></pre>
+</li>
+<li>
+<p>Finally we need to make the following curl requests as per the security settings:</p>
+<p><strong>TLS and KDC Mode:</strong></p>
+<pre><code class="language-shell">curl -k -H &quot;Authorization: token=&lt;acs_token&gt;&quot; https://localhost:61002/system/v1/metrics/v0/containers | jq
+</code></pre>
+<p><strong>Non TLS and KDC Mode:</strong></p>
+<pre><code class="language-shell">curl -k -H &quot;Authorization: token=&lt;acs_token&gt;&quot; http://localhost:61001/system/v1/metrics/v0/containers | jq
+</code></pre>
+</li>
+</ol>
+<p>More details about Metrics can be found <a href="/dcosdocs/mesosphere/dcos/latest/metrics/quickstart/">here</a>.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#updating-configuration">Updating Configuration</a></li><li class="content__sections-item content__sections-item--h1"><a href="#updating-placement-constraints">Updating Placement Constraints</a></li><li class="content__sections-item content__sections-item--h1"><a href="#managing-nodes">Managing nodes</a></li><li class="content__sections-item content__sections-item--h2"><a href="#restarting-a-node">Restarting a Node</a></li><li class="content__sections-item content__sections-item--h2"><a href="#replacing-a-node">Replacing a Node</a></li><li class="content__sections-item content__sections-item--h1"><a href="#advanced-update-actions">Advanced update actions</a></li><li class="content__sections-item content__sections-item--h2"><a href="#monitoring-the-update">Monitoring the update</a></li><li class="content__sections-item content__sections-item--h1"><a href="#disaster-recovery">Disaster recovery</a></li><li class="content__sections-item content__sections-item--h2"><a href="#backing-up">Backing up</a></li><li class="content__sections-item content__sections-item--h1"><a href="#dcos-nifi-toolkit-commands">DC/OS NiFi Toolkit Commands</a></li><li class="content__sections-item content__sections-item--h1"><a href="#metrics">Metrics</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

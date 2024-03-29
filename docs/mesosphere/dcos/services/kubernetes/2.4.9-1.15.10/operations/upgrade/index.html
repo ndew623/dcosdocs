@@ -1,0 +1,424 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Upgrade - D2iQ Docs</title><meta name="description" content="Upgrade options for DC/OS Kubernetes"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Kubernetes Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.8.0-1.19.2/operations/upgrade">Kubernetes 2.8.0-1.19.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.7.0-1.18.6/operations/upgrade">Kubernetes 2.7.0-1.18.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.6.1-1.17.8/operations/upgrade">Kubernetes 2.6.1-1.17.8</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.6.0-1.17.7/operations/upgrade">Kubernetes 2.6.0-1.17.7</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.5.0-1.16.9/operations/upgrade">Kubernetes 2.5.0-1.16.9</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/upgrade">Kubernetes 2.4.9-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/operations/upgrade">Kubernetes 2.4.8-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.7-1.15.10/operations/upgrade">Kubernetes 2.4.7-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.6-1.15.6/operations/upgrade">Kubernetes 2.4.6-1.15.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.5-1.15.5/operations/upgrade">Kubernetes 2.4.5-1.15.5</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/upgrade">Kubernetes 2.4.4-1.15.4</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/upgrade">Kubernetes 2.4.3-1.15.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.2-1.15.3/operations/upgrade">Kubernetes 2.4.2-1.15.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/operations/upgrade">Kubernetes 2.4.1-1.15.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.10-1.15.10/operations/upgrade">Kubernetes 2.4.10-1.15.10</a></li></ul><div class="toggle"><p><span class="title">Kubernetes</span><span class="version"> 2.4.9-1.15.10</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/overview/">Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/getting-started/"><i data-feather="chevron-right"></i>Tutorial - Kubernetes on DC/OS Enterprise</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/"><i data-feather="chevron-right"></i>Operations</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/cluster-sizing/">Cluster Sizing</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/kubernetes-audit/">Kubernetes Auditing</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/kubernetes-dashboard/">Kubernetes Dashboard</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/metrics-exporter/">Metrics Exporter</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/quota-support/">Quota Support</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/ingress/">External Ingress</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/admission-controllers/">Admission Controllers</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/authn-and-authz/">Authentication and Authorization</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/encrypt-data/">Encrypt Data</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/customizing-install/">Customizing</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/gatekeeper/">Enforce policies using Gatekeeper</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/upgrade/">Upgrade</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/exposing-the-kubernetes-api/">Exposing the Kubernetes API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/exposing-the-kubernetes-api-marathonlb-edgelb/">Exposing the Kubernetes API via Marathon-LB or Edge-LB</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/connecting-clients/">Connecting Clients</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/uninstall/">Uninstall</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/private-docker-registry/">Use private Docker registry</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/disaster-recovery/">Disaster Recovery</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/troubleshooting/">Troubleshooting</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/cli/">CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/changelog/">Changelog</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/supported-versions/">Supported Versions</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Upgrade</h1></div><h4 class="content__header-description">Upgrade options for DC/OS Kubernetes</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/upgrade/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- This source repo for this topic is https://github.com/mesosphere/dcos-kubernetes-cluster -->
+<h1 id="mesosphere-kubernetes-engine"><a class="content__anchor" href="#mesosphere-kubernetes-engine" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesosphere Kubernetes Engine</h1>
+<p>The <code>kubernetes</code> CLI provides an option that allows for easier updates to a service’s configuration and version of the manager, as well as allowing users to inspect the status of updates, to pause and resume updates, and to restart or complete steps if necessary.</p>
+<h2 id="updating-the-manager-version"><a class="content__anchor" href="#updating-the-manager-version" aria-hidden="true"><i data-feather="bookmark"></i></a>Updating the manager version</h2>
+<p>Before starting the update process, it is mandatory to update the <code>kubernetes</code> CLI to the new version:</p>
+<pre><code class="language-shell">dcos package install kubernetes --cli --package-version=NEW-VERSION
+</code></pre>
+<p>To update the manager, the <code>dcos kubernetes manager update start --package-version=PACKAGE-VERSION</code> subcommand is available.</p>
+<pre><code class="language-shell">$  dcos kubernetes manager update start -h
+Launches an update operation
+
+Flags:
+    --options=OPTIONS  Path to a JSON file that contains customized package installation options, or 'stdin' to read from stdin
+    --package-version=PACKAGE-VERSION
+                       The desired package version
+    --replace          Replace the existing configuration in whole. Otherwise, the existing configuration and options are merged.
+</code></pre>
+<h2 id="updating-the-manager-options"><a class="content__anchor" href="#updating-the-manager-options" aria-hidden="true"><i data-feather="bookmark"></i></a>Updating the manager options</h2>
+<p>To update the service configuration of the Mesosphere Kubernetes Engine, e.g. to increase the CPU or memory resources to <code>mesosphere_kubernetes_engine</code>.
+As an example, we will describe how to achieve the latter.</p>
+<ol>
+<li>Assuming you have configured the Mesosphere Kubernetes Engine with its default options, all that is required is creating a <code>new_options.json</code> file with the following contents:</li>
+</ol>
+<pre><code class="language-json">{
+  &quot;mesosphere_kubernetes_engine&quot;: {
+    &quot;cpus&quot;: 0.5,
+    &quot;mem&quot;: 1024
+  }
+}
+</code></pre>
+<ol start="2">
+<li>Run:</li>
+</ol>
+<pre><code class="language-shell">dcos kubernetes manager update start --options=new_options.json
+</code></pre>
+<h1 id="kubernetes-cluster"><a class="content__anchor" href="#kubernetes-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>Kubernetes Cluster</h1>
+<p>Before you start, keep in mind that updating the cluster may trigger a restart of a subset or all the components managed by this framework, depending on whether new versions of these components or related ones are part of the new release.</p>
+<p>Updating these components means the Kubernetes cluster may experience some downtime or, in the worst-case scenario, cease to function properly.
+And while we are committed to make the user experience as robust and smooth as possible, in fact is there is no such thing as fail-proof software.</p>
+<p class="message--important"><strong>IMPORTANT: </strong>Before updating the cluster version, proceed cautiously and always back up your data.</p>
+<p>In the future, we will be integrating the disaster-recovery functionality so you can easily revert to the previous functioning state.</p>
+<h2 id="updating-the-version-vs-updating-cluster-options"><a class="content__anchor" href="#updating-the-version-vs-updating-cluster-options" aria-hidden="true"><i data-feather="bookmark"></i></a>Updating the version vs updating cluster options</h2>
+<p>When a new version is available, you will have the option to update to the new version.
+If you have not updated the version in a while, it may be that an update to the most recent version is not allowed and you will be informed on how to proceed.</p>
+<p>However, you may only want to update the options, for example, in order to change the resources allocated to one type of Kubernetes component.
+Keep in mind that options updates may also mean the Kubernetes cluster may experience some downtime or, in the worst-case scenario, cease to function properly.</p>
+<p class="message--important"><strong>IMPORTANT: </strong>Before updating the options, proceed cautiously and always back up your data.</p>
+<h2 id="updating-the-cluster-version"><a class="content__anchor" href="#updating-the-cluster-version" aria-hidden="true"><i data-feather="bookmark"></i></a>Updating the cluster version</h2>
+<p>Before starting the update process, it is mandatory to update the <code>kubernetes</code> CLI to the new version:</p>
+<pre><code class="language-shell">dcos package install kubernetes --cli --package-version=NEW-VERSION
+</code></pre>
+<p>The version upgrade is only supported on DC/OS Enterprise Edition. To update the cluster version, the <code>dcos kubernetes cluster update --cluster-name=CLUSTER-NAME</code> subcommand is available.</p>
+<pre><code class="language-shell">$ dcos kubernetes cluster update --cluster-name=CLUSTER-NAME -h
+usage: dcos kubernetes cluster update --cluster-name=CLUSTER-NAME [&lt;flags&gt;]
+
+Flags:
+  -h, --help             Show context-sensitive help.
+  -v, --verbose          Enable extra logging of requests/responses
+      --version          Show application version.
+      --cluster-name=CLUSTER-NAME
+                         Name of the Kubernetes cluster
+      --options=OPTIONS  Path to a JSON file containing the target package options
+      --package-version=PACKAGE-VERSION
+                         The target package version
+      --yes              Do not ask for confirmation before starting the update process
+      --force            Force the update operation
+</code></pre>
+<p class="message--important"><strong>IMPORTANT: </strong>Due to the number of variables such as the DC/OS cluster resources available, CPU and internet speed, etc., the installer cannot automatically determine a proper <tt>--timeout</tt> value and is recommended to increase it when updating larger clusters.</p>
+<p>Starting the cluster version update:</p>
+<pre><code class="language-shell">$ dcos kubernetes cluster update  --cluster-name=CLUSTER-NAME --package-version=NEW-VERSION
+About to start an update from version CURRENT-VERSION to NEW-VERSION
+
+Updating these components means the Kubernetes cluster may experience some downtime or, in the worst-case scenario, cease to function properly. Before updating proceed cautiously and always back up your data.
+
+This operation is long-running and has to run to completion.
+Are you sure you want to continue? [yes/no] yes
+
+Starting upgrade process...
+Upgrade is in progress. Check status of deploy plan for more information.
+</code></pre>
+<h2 id="updating-the-cluster-options"><a class="content__anchor" href="#updating-the-cluster-options" aria-hidden="true"><i data-feather="bookmark"></i></a>Updating the cluster options</h2>
+<p>This service exposes certain options that advanced users can use to adapt the Kubernetes cluster to their need.
+For instance, you may want to increase the <code>kube-apiserver</code> count or the resources available to <code>kube-proxy</code>.
+As an example, we will describe how to achieve the latter.</p>
+<ol>
+<li>Assuming you have installed the cluster with its default options, all that is required is creating a <code>new_options.json</code> file with the following contents:</li>
+</ol>
+<pre><code class="language-json">{
+  &quot;kube_proxy&quot;: {
+    &quot;cpus&quot;: 0.5,
+    &quot;mem&quot;: 1024
+  }
+}
+</code></pre>
+<ol start="2">
+<li>Run:</li>
+</ol>
+<pre><code class="language-shell">dcos kubernetes cluster update --cluster-name=CLUSTER-NAME --options=new_options.json
+</code></pre>
+<p>Here is the expected output:</p>
+<pre><code class="language-text">The following differences were detected between service configurations (CHANGED, CURRENT):
+ ==  {
+ ==  &quot;kube_proxy&quot;: {
+ -      &quot;cpus&quot;: 0.1,
+ +      &quot;cpus&quot;: 0.5,
+ -      &quot;mem&quot;: 512,
+ +      &quot;mem&quot;: 1024,
+ ==  }
+ == }
+
+The components of the cluster will be updated according to the changes in the options file [new_options.json].
+
+Updating these components means the Kubernetes cluster may experience some downtime or, in the worst-case scenario, cease to function properly.
+Before updating proceed cautiously and always back up your data.
+
+This operation is long-running and has to run to completion.
+Are you sure you want to continue? [yes/no] yes
+
+Starting update process...
+Update is in progress. Check status of deploy plan for more information.
+</code></pre>
+<p>Some options are special in the sense that they <strong>must</strong> only ever be updated <strong>once</strong> after cluster installation, and only towards a specific target value. Also, some options <strong>must not</strong> be changed <strong>at all</strong> after the cluster is installed for the first time.</p>
+<p>These options are:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th style="text-align:center">ONCE</th>
+<th style="text-align:center">ALWAYS</th>
+<th style="text-align:center">NEVER</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>service.name</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+</tr>
+<tr>
+<td><code>service.region</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+</tr>
+<tr>
+<td><code>service.virtual_network_name</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>service.service_account_secret</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+</tr>
+<tr>
+<td><code>service.service_account</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+</tr>
+<tr>
+<td><code>service.sleep</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>service.log_level</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>etcd.disk_type</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+</tr>
+<tr>
+<td><code>etcd.data_disk</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+</tr>
+<tr>
+<td><code>etcd.wal_disk</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+</tr>
+<tr>
+<td><code>etcd.cpus</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>etcd.mem</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>kubernetes.authorization_mode</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+</tr>
+<tr>
+<td><code>kubernetes.high_availability</code></td>
+<td style="text-align:center">X (<code>false</code>-&gt;<code>true</code>)</td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>kubernetes.service_cidr</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+</tr>
+<tr>
+<td><code>kubernetes.use_agent_docker_certs</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>kubernetes.control_plane_placement</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>kubernetes.control_plane_reserved_resources.cpus</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>kubernetes.control_plane_reserved_resources.mem</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>kubernetes.control_plane_reserved_resources.disk</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>kubernetes.proxy.override_injection</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>kubernetes.proxy.http_proxy</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>kubernetes.proxy.https_proxy</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>kubernetes.proxy.no_proxy</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>kubernetes.private_node_count</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>kubernetes.private_node_placement</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>kubernetes.private_reserved_resources.kube_disk</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>kubernetes.private_reserved_resources.kube_mem</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>kubernetes.private_reserved_resources.kube_cpus</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>kubernetes.private_reserved_resources.system_mem</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>kubernetes.private_reserved_resources.system_cpus</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>kubernetes.public_node_count</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>kubernetes.public_node_placement</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>kubernetes.public_reserved_resources.kube_mem</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>kubernetes.public_reserved_resources.kube_cpus</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>kubernetes.public_reserved_resources.system_mem</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>kubernetes.public_reserved_resources.system_cpus</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>kubernetes.public_reserved_resources.kube_disk</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>calico.calico_ipv4pool_cidr</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>calico.cni_mtu</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>calico.ip_autodetection_method</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>calico.ipv4pool_ipip</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>calico.felix_ipinipmtu</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>calico.felix_ipinipenabled</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>calico.typha.enabled</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+<tr>
+<td><code>calico.typha.replicas</code></td>
+<td style="text-align:center">–</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">–</td>
+</tr>
+</tbody>
+</table>
+<p>Please make sure you understand and respect these rules. Otherwise you may render your cluster unusable and risk losing data.</p>
+<p>Note that, whenever any invalid configuration is provided, the Kubernetes service
+scheduler might enter into a crash loop. To revert these changes you will need to
+use the flag <code>--force</code>. This flag will overwrite the service configuration with the
+new settings.</p>
+<pre><code class="language-shell">dcos kubernetes cluster update --cluster-name=CLUSTER-NAME --options=new_options.json --force
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#mesosphere-kubernetes-engine">Mesosphere Kubernetes Engine</a></li><li class="content__sections-item content__sections-item--h2"><a href="#updating-the-manager-version">Updating the manager version</a></li><li class="content__sections-item content__sections-item--h2"><a href="#updating-the-manager-options">Updating the manager options</a></li><li class="content__sections-item content__sections-item--h1"><a href="#kubernetes-cluster">Kubernetes Cluster</a></li><li class="content__sections-item content__sections-item--h2"><a href="#updating-the-version-vs-updating-cluster-options">Updating the version vs updating cluster options</a></li><li class="content__sections-item content__sections-item--h2"><a href="#updating-the-cluster-version">Updating the cluster version</a></li><li class="content__sections-item content__sections-item--h2"><a href="#updating-the-cluster-options">Updating the cluster options</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

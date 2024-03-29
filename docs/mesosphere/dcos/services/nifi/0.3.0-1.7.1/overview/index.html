@@ -1,0 +1,222 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Overview - D2iQ Docs</title><meta name="description" content="Getting started with DC/OS Apache NiFi Service"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Nifi Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/1.0.1-1.9.2">NiFi 1.0.1-1.9.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/1.0.0-1.9.2">NiFi 1.0.0-1.9.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.5.0-1.9.2/overview">NiFi 0.5.0-1.9.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.4.1-1.8.0/overview">NiFi 0.4.1-1.8.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.4.0-1.8.0/overview">NiFi 0.4.0-1.8.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/overview">NiFi 0.3.0-1.7.1</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.2.0-1.5.0/overview">NiFi 0.2.0-1.5.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.1.0-1.5.0/overview">NiFi 0.1.0-1.5.0</a></li></ul><div class="toggle"><p><span class="title">Nifi</span><span class="version"> 0.3.0-1.7.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/release-notes/">Release Notes</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/overview/">Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/install/">Installing and Customizing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/deploy-best-practice/">Deployment Best Practices</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/managing/">Operations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/uninstall/">Uninstalling</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/security/">Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/secret-upload/">Secret Upload</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/command-reference/"><i data-feather="chevron-right"></i>Command Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/connecting-clients/">Connecting Clients</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/api-reference/">API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/troubleshooting/"><i data-feather="chevron-right"></i>Troubleshooting</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/supported-versions/">Supported Versions</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Overview</h1></div><h4 class="content__header-description">Getting started with DC/OS Apache NiFi Service</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1/overview/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><h1 id="components"><a class="content__anchor" href="#components" aria-hidden="true"><i data-feather="bookmark"></i></a>Components</h1>
+<p>The following components work together to deploy and maintain the service.</p>
+<ul>
+<li>
+<p>Mesos</p>
+<p>Mesos is the foundation of the DC/OS cluster. Everything launched within the cluster is allocated resources and managed by Mesos. A typical Mesos cluster has one or three Masters that manage resources for the entire cluster. On DC/OS, the machines running the Mesos Masters will typically run other cluster services as well, such as Marathon and Cosmos, as local system processes. Separately from the Master machines are the Agent machines, which are where in-cluster processes are run. For more information on Mesos architecture, see the <a href="https://mesos.apache.org/documentation/latest/architecture/">Apache Mesos documentation</a>. For more information on DC/OS architecture, see the <a href="/dcosdocs/mesosphere/dcos/latest/overview/architecture/">DC/OS architecture documentation</a>.</p>
+</li>
+<li>
+<p>ZooKeeper</p>
+<p>ZooKeeper is a common foundation for DC/OS system components, like Marathon and Mesos. It provides distributed key-value storage for configuration, synchronization, name registration, and cluster state storage. DC/OS comes with ZooKeeper installed by default, typically with one instance per DC/OS master.</p>
+<p>SDK Schedulers use the default ZooKeeper instance to store persistent state across restarts (under znodes named dcos-service-<svcname>). This allows Schedulers to be killed at any time and continue where they left off.</p>
+  <p class="message--note"><strong>NOTE: </strong> SDK Schedulers currently require ZooKeeper, but any persistent configuration storage (such as etcd) could fit this role. ZooKeeper is a convenient default because it is always present in a DC/OS cluster. </p>
+</li>
+<li>
+<p>Marathon</p>
+<p>Marathon is the “init system” of a DC/OS cluster. Marathon launches tasks in the cluster and keeps them running. From the perspective of Mesos, Marathon is itself another Scheduler running its own tasks. Marathon is more general than SDK Schedulers and mainly focuses on tasks that don’t require managing a local persistent state. SDK services rely on Marathon to run the Scheduler and to provide it with a configuration via environment variables. The Scheduler, however, maintains its own service tasks without any direct involvement by Marathon.</p>
+</li>
+<li>
+<p>Scheduler</p>
+<p>The Scheduler is the “management layer” of the service. It launches the service nodes and keeps them running. It also exposes endpoints to allow end users to control the service and diagnose problems. The Scheduler is kept online by the cluster’s “init system”, Marathon. The Scheduler itself is effectively a Java application that is configured via environment variables provided by Marathon.</p>
+</li>
+<li>
+<p>Packaging</p>
+<p>Apache NiFi is packaged for deployment on DC/OS. DC/OS packages follow the <a href="https://github.com/mesosphere/universe">Universe schema</a>, which defines how packages expose customization options at initial installation. When a package is installed on the cluster, the packaging service (named ‘Cosmos’) creates a Marathon app that contains a rendered version of the marathon.json.mustache template provided by the package. For DC/OS Apache NiFi, this Marathon app is the Scheduler for the service</p>
+<p>For further discussion of DC/OS components, see the <a href="/dcosdocs/mesosphere/dcos/latest/overview/architecture/components/">architecture documentation</a>.</p>
+</li>
+</ul>
+<h1 id="deployment"><a class="content__anchor" href="#deployment" aria-hidden="true"><i data-feather="bookmark"></i></a>Deployment</h1>
+<p>Internally, DC/OS NiFi treats “Deployment” as moving from one state to another state. By this definition, “Deployment” applies to many scenarios:</p>
+<ul>
+<li>When DC/OS NiFi is first installed, deployment is moving from a null configuration to a deployed configuration.</li>
+<li>When the deployed configuration is changed by editing an environment variable in the Scheduler, deployment is moving from an initial running configuration to a new proposed configuration.</li>
+</ul>
+<p>In this section, we’ll describe how these scenarios are handled by the Scheduler.</p>
+<h2 id="initial-install"><a class="content__anchor" href="#initial-install" aria-hidden="true"><i data-feather="bookmark"></i></a>Initial Install</h2>
+<p>This is the flow for deploying a new service:</p>
+<h3 id="steps-handled-by-the-dcos-cluster"><a class="content__anchor" href="#steps-handled-by-the-dcos-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>Steps handled by the DC/OS cluster</h3>
+<ol>
+<li>
+<p>Run <code>dcos package install nifi</code> in the DC/OS CLI or click <strong>Install</strong> for a given package on the DC/OS Dashboard.</p>
+</li>
+<li>
+<p>A request is sent to the Cosmos packaging service to deploy the requested package along with a set of configuration options.</p>
+</li>
+<li>
+<p>Cosmos creates a Marathon app definition by rendering DC/OS NiFi’s marathon.json.mustache with the configuration options provided in the request, which represents DC/OS NiFi’s Scheduler. Cosmos queries Marathon to create the app.</p>
+</li>
+<li>
+<p>Marathon launches the DC/OS NiFi’s Scheduler somewhere in the cluster using the rendered app definition provided by Cosmos.</p>
+</li>
+<li>
+<p>DC/OS NiFi’s Scheduler is launched. From this point onwards, the SDK handles deployment.</p>
+</li>
+</ol>
+<h3 id="steps-handled-by-the-scheduler"><a class="content__anchor" href="#steps-handled-by-the-scheduler" aria-hidden="true"><i data-feather="bookmark"></i></a>Steps handled by the Scheduler</h3>
+<p>The Scheduler starts with the following state:</p>
+<ul>
+<li>A <code>svc.yml</code> template that represents the service configuration.</li>
+<li>Environment variables provided by Marathon, to be applied to the <code>svc.yml</code> template.</li>
+<li>Any custom logic implemented by the service developer in their Main function (we’ll be assuming this is left with defaults for the purposes of this explanation).</li>
+</ul>
+<ol>
+<li>
+<p>The <code>svc.yml</code> template is rendered using the environment variables provided by Marathon.</p>
+</li>
+<li>
+<p>The rendered <code>svc.yml</code> “Service Spec” contains the host/port for the ZooKeeper instance, which the Scheduler uses for persistent configuration/state storage. The default is <code>master.mesos:2181</code>, but may be manually configured to use a different ZooKeeper instance. The Scheduler always stores its information under a znode named <code>dcos-service-&lt;svcname&gt;</code>.</p>
+</li>
+<li>
+<p>The Scheduler connects to that ZooKeeper instance and checks to see if it has previously stored a Mesos Framework ID for itself.</p>
+<ul>
+<li>If the Framework ID is present, the Scheduler will attempt to reconnect to Mesos using that ID. This may result in a “Framework has been removed” error if Mesos doesn’t recognize that Framework ID, indicating an incomplete uninstall.</li>
+<li>If the Framework ID is not present, the Scheduler will attempt to register with Mesos as a Framework. Assuming this is successful, the resulting Framework ID is then immediately stored.</li>
+</ul>
+</li>
+<li>
+<p>Now that the Scheduler has registered as a Mesos Framework, it is able to start interacting with Mesos and receiving offers. When this begins, the Scheduler will begin running the Offer Cycle and deploying DC/OS NiFi. See that section for more information.</p>
+</li>
+<li>
+<p>The Scheduler retrieves its deployed task state from ZooKeeper and finds that there are tasks that should be launched. This is the first launch, so all tasks need to be launched.</p>
+</li>
+<li>
+<p>The Scheduler deploys those missing tasks through the Mesos offer cycle using a Deployment Plan to determine the ordering of that deployment.</p>
+</li>
+<li>
+<p>Once the Scheduler has launched the missing tasks, its current configuration should match the desired configuration defined by the “Service Spec” extracted from <code>svc.yml</code>.</p>
+<p>a. When the current configuration matches the desired configuration, the Scheduler will tell Mesos to suspend sending new offers, as there is nothing to be done.</p>
+<p>b. The Scheduler idles until it receives an RPC from Mesos notifying it of a task status change, it receives an RPC from an end user against one of its HTTP APIs, or until it is killed by Marathon as the result of a configuration change.</p>
+</li>
+</ol>
+<h2 id="reconfiguration"><a class="content__anchor" href="#reconfiguration" aria-hidden="true"><i data-feather="bookmark"></i></a>Reconfiguration</h2>
+<p>This is the flow for reconfiguring a DC/OS service either in order to update specific configuration values, or to upgrade it to a new package version.</p>
+<h3 id="steps-handled-by-the-scheduler-2"><a class="content__anchor" href="#steps-handled-by-the-scheduler-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Steps handled by the Scheduler</h3>
+<p>As with initial install above, at this point the Scheduler is re-launched with the same three sources of information it had before:</p>
+<ul>
+<li><code>svc.yml</code> template.</li>
+<li>New environment variables.</li>
+<li>Custom logic implemented by the service developer (if any).</li>
+</ul>
+<p>In addition, the Scheduler now has a fourth piece:</p>
+<ul>
+<li>Pre-existing state in ZooKeeper</li>
+</ul>
+<p>Scheduler reconfiguration is slightly different from initial deployment because the Scheduler is now comparing its current state to a non-empty prior state and determining what needs to be changed.</p>
+<ol>
+<li>
+<p>After the Scheduler has rendered its <code>svc.yml</code> against the new environment variables, it has two Service Specs, reflecting two different configurations.</p>
+<ul>
+<li>The Service Spec that was just rendered, reflecting the configuration change.</li>
+<li>The prior Service Spec (or “Target Configuration”) that was previously stored in ZooKeeper.</li>
+</ul>
+</li>
+<li>
+<p>The Scheduler automatically compares the changes between the old and new Service Specs.</p>
+<p>a. Change validation: Certain changes, such as editing volumes and scale-down, are not currently supported because they are complicated and dangerous to get wrong.</p>
+<ul>
+<li>If an invalid change is detected, the Scheduler will send an error message and refuse to proceed until the user has reverted the change by relaunching the Scheduler app in Marathon with the prior config.</li>
+<li>If the changes are valid, the new configuration is stored in ZooKeeper as the new Target Configuration and the change deployment proceeds as described below.</li>
+</ul>
+<p>b. Change deployment: The Scheduler produces a diff between the current state and some future state, including all of the Mesos calls (reserve, unreserve, launch, destroy, etc.) needed to get there. For example, if the number of tasks has been increased, then the Scheduler will launch the correct number of new tasks. If a task configuration setting has been changed, the Scheduler will deploy that change to the relevant affected tasks by relaunching them. Tasks that aren’t affected by the configuration change will be left as-is.</p>
+<p>c. Custom update logic: Some services may have defined a custom update Plan in its svc.yml, in cases where different logic is needed for an update/upgrade than is needed for the initial deployment. When a custom update plan is defined, the Scheduler will automatically use this Plan, instead of the default deploy Plan, when rolling out an update to the service.</p>
+</li>
+</ol>
+<h2 id="uninstallation"><a class="content__anchor" href="#uninstallation" aria-hidden="true"><i data-feather="bookmark"></i></a>Uninstallation</h2>
+<p>This is the flow for uninstalling DC/OS NiFi.</p>
+<h3 id="steps-handled-by-the-cluster"><a class="content__anchor" href="#steps-handled-by-the-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>Steps handled by the Cluster</h3>
+<ol>
+<li>The user uses the DC/OS CLI’s <code>dcos package uninstall</code> command to uninstall the service.</li>
+<li>The DC/OS package manager instructs Marathon to kill the current Scheduler and to launch a new Scheduler with the environment variable <code>SDK_UNINSTALL</code> set to “true”.</li>
+</ol>
+<h3 id="steps-handled-by-the-scheduler-3"><a class="content__anchor" href="#steps-handled-by-the-scheduler-3" aria-hidden="true"><i data-feather="bookmark"></i></a>Steps handled by the Scheduler</h3>
+<p>When started in uninstall mode, the Scheduler performs the following actions.</p>
+<p class="message--warning"><strong>WARNING: </strong>Any data stored in reserved disk resources will be irretrievably lost.</p>
+<ul>
+<li>Any Mesos resource reservations are unreserved.</li>
+<li>Preexisting state in ZooKeeper is deleted.</li>
+</ul>
+<h1 id="pods"><a class="content__anchor" href="#pods" aria-hidden="true"><i data-feather="bookmark"></i></a>Pods</h1>
+<p>A Task generally maps to a single process within the service. A Pod is a collection of co-located Tasks that share an environment. All Tasks in a Pod will come up and go down together. Therefore, most maintenance operations against the service are at Pod granularity rather than Task granularity.</p>
+<h1 id="plans"><a class="content__anchor" href="#plans" aria-hidden="true"><i data-feather="bookmark"></i></a>Plans</h1>
+<p>The Scheduler organizes its work into a list of Plans. Every SDK Scheduler has at least a Deployment Plan and a Recovery Plan, but other Plans may also be added for things like custom backup operations. The Deployment Plan performs an initial deployment of the service. It is also used for rolling out configuration changes to the service (or in more abstract terms, handling the transition needed to get the service from some state to another state), unless the service developer provided a custom update Plan. The Recovery Plan is in charge of relaunching any exited tasks that should always be running.</p>
+<p>Plans have a fixed three-level hierarchy. Plans contain Phases, and Phases contain Steps.</p>
+<p>For example, imagine a service with two index nodes and three data nodes. The Plan structure for a Scheduler in this configuration could look like this:</p>
+<pre><code>Deployment Plan (deploy)
+    Index Node Phase
+        Index Node 0 Step
+        Index Node 1 Step
+    Data Node Phase
+        Data Node 0 Step
+        Data Node 1 Step
+        Data Node 2 Step
+Custom Update Plan (update)
+    (custom logic, if any, for rolling out a config update or software upgrade)
+Recovery Plan (recovery)
+    (phases and steps are autogenerated as failures occur)
+Index Backup Plan
+    Run Reindex Phase
+        Index Node 0 Step
+        Index Node 1 Step
+    Upload Data Phase
+        Index Node 0 Step
+        Index Node 1 Step
+Data Backup Plan
+    Data Backup Phase
+        Data Node 0 Step
+        Data Node 1 Step
+        Data Node 2 Step
+</code></pre>
+<p>As you can see, in addition to the default Deployment and Recovery Plans, this Scheduler also has a custom Update Plan which provides custom logic for rolling out a change to the service. If a custom plan is not defined, then the Deployment Plan is used for this scenario. In addition, the service defines auxiliary Plans that support other custom behavior, specifically one Plan that handles backing up Index nodes, and another for that backs up Data nodes. In practice, there would likely also be Plans for restoring these backups. These auxiliary Plans could all be invoked manually by an operator, and may include additional parameters such as credentials or a backup location. Those are omitted here for brevity.</p>
+<p>In short, Plans are the SDK’s abstraction for a sequence of tasks to be performed by the Scheduler. By default, these include deploying and maintaining the cluster, but additional maintenance operations may also be fit into this structure.</p>
+<h2 id="custom-update-plan"><a class="content__anchor" href="#custom-update-plan" aria-hidden="true"><i data-feather="bookmark"></i></a>Custom Update Plan</h2>
+<p>By default, the service will use the Deployment Plan when rolling out a configuration change or software upgrade, but some services may need custom logic in this scenario, in which case the service developer may have defined a custom plan named <code>update</code>.</p>
+<h1 id="virtual-networks"><a class="content__anchor" href="#virtual-networks" aria-hidden="true"><i data-feather="bookmark"></i></a>Virtual networks</h1>
+<p>The SDK allows pods to join virtual networks, with the <code>dcos</code> virtual network available by defualt. You can specify that a pod should join the virtual network by using the networks keyword in your YAML definition. Refer to the <a href="https://mesosphere.github.io/dcos-commons/developer-guide/">Developer Guide</a> for more information about how to define virtual networks in your service.</p>
+<p>When a pod is on a virtual network such as the <code>dcos</code>:</p>
+<ul>
+<li>Every pod gets its own IP address and its own array of ports.</li>
+<li>Pods do not use the ports on the host machine.</li>
+<li>Pod IP addresses can be resolved with the DNS: <code>&lt;task_name&gt;.&lt;service_name&gt;.autoip.dcos.thisdcos.directory</code>.</li>
+<li>You can also pass labels while invoking CNI plugins. Refer to the Developer Guide for more information about adding CNI labels.</li>
+</ul>
+<h1 id="placement-constraints"><a class="content__anchor" href="#placement-constraints" aria-hidden="true"><i data-feather="bookmark"></i></a>Placement Constraints</h1>
+<p>Placement constraints allow you to customize where a service is deployed in the DC/OS cluster. Depending on the service, some or all components may be configurable using Marathon operators with this syntax: field:OPERATOR[:parameter]. For example, if the reference lists [[“hostname”, “UNIQUE”]], you should use <code>hostname:UNIQUE</code>.</p>
+<p>A common task is to specify a list of whitelisted systems to deploy to. To achieve this, use the following syntax for the placement constraint:</p>
+<pre><code class="language-shell">hostname:LIKE:10.0.0.159|10.0.1.202|10.0.3.3
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>You must include spare capacity in this list, so that if one of the whitelisted systems goes down, there is still enough room to repair your service (via pod replace) without requiring that system.</p>
+<h1 id="integration-with-dcos-access-controls"><a class="content__anchor" href="#integration-with-dcos-access-controls" aria-hidden="true"><i data-feather="bookmark"></i></a>Integration with DC/OS access controls</h1>
+<p>In DC/OS 1.10 and later versions, you can integrate your SDK-based service with DC/OS ACLs to grant users and groups access to only certain services. You do this by installing your service into a folder, and then restricting access to some number of folders. Folders also allow you to namespace services. For instance, <code>staging/nifi</code> and <code>production/nifi</code>.</p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li>
+<p>In the DC/OS UI, create a group, then add a user to the group. Or, just create a user. Click <strong>Organization &gt; Groups &gt; +</strong> or <strong>Organization &gt; Users &gt; +</strong>. If you create a group, you must also create a user and add them to the group.</p>
+</li>
+<li>
+<p>Give the user permissions for the folder where you will install your service. In this example, we are creating a user called <code>developer</code>, who will have access to the /testing folder. Select the group or user you created. Select ADD PERMISSION and then toggle to INSERT PERMISSION STRING. Add each of the following permissions to your user or group, and then click ADD PERMISSIONS.</p>
+<pre><code class="language-shell">dcos:adminrouter:service:marathon full
+dcos:service:marathon:marathon:services:/testing full
+dcos:adminrouter:ops:mesos full
+dcos:adminrouter:ops:slave full
+</code></pre>
+</li>
+<li>
+<p>Install a service (in this example, nifi) into a folder called <code>test</code>. Go to Catalog, then search for <code>beta-nifi</code>.</p>
+</li>
+<li>
+<p>Click CONFIGURE and change the service name to /testing/nifi, then deploy. The slashes in your service name are interpreted as folders. You are deploying nifi in the /testing folder. Any user with access to the /testing folder will have access to the service.</p>
+</li>
+</ol>
+<p class="message--important"><strong>IMPORTANT: </strong>Services cannot be renamed. Because the location of the service is specified in the name, you cannot move services between folders. DC/OS 1.9 do not accept slashes in service names. You may be able to create the service, but you will encounter unexpected problems.</p>
+<h3 id="interacting-with-your-foldered-service"><a class="content__anchor" href="#interacting-with-your-foldered-service" aria-hidden="true"><i data-feather="bookmark"></i></a>Interacting with your foldered service</h3>
+<p>Interact with your foldered service via the DC/OS CLI with this flag: <code>--name=/path/to/myservice</code>.</p>
+<p>To interact with your foldered service over the web directly, use <code>http://&lt;dcos-url&gt;/service/path/to/myservice</code>.</p>
+<p>Example:</p>
+<pre><code class="language-shell">http://&lt;dcos-url&gt;/service/testing/nifi/v1/endpoints
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#components">Components</a></li><li class="content__sections-item content__sections-item--h1"><a href="#deployment">Deployment</a></li><li class="content__sections-item content__sections-item--h2"><a href="#initial-install">Initial Install</a></li><li class="content__sections-item content__sections-item--h2"><a href="#reconfiguration">Reconfiguration</a></li><li class="content__sections-item content__sections-item--h2"><a href="#uninstallation">Uninstallation</a></li><li class="content__sections-item content__sections-item--h1"><a href="#pods">Pods</a></li><li class="content__sections-item content__sections-item--h1"><a href="#plans">Plans</a></li><li class="content__sections-item content__sections-item--h2"><a href="#custom-update-plan">Custom Update Plan</a></li><li class="content__sections-item content__sections-item--h1"><a href="#virtual-networks">Virtual networks</a></li><li class="content__sections-item content__sections-item--h1"><a href="#placement-constraints">Placement Constraints</a></li><li class="content__sections-item content__sections-item--h1"><a href="#integration-with-dcos-access-controls">Integration with DC/OS access controls</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

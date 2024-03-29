@@ -1,0 +1,272 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>遥测 - D2iQ Docs</title><meta name="description" content="了解遥测报告组件"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/1.13/overview">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/overview">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/telemetry">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/telemetry">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/"><i data-feather="chevron-right"></i>概述</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/what-is-dcos/">什么是 DC/OS</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/architecture/"><i data-feather="chevron-right"></i>架构</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/features/">特性</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/concepts/">概念</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/high-availability/">高可用性</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/telemetry/">遥测</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/feature-maturity/">特性成熟度</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/design/"><i data-feather="chevron-right"></i>设计</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">遥测</h1></div><h4 class="content__header-description">了解遥测报告组件</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/1.13/overview/telemetry/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>为持续改善 DC/OS 体验，包含了一个将匿名使用数据报告给 Mesosphere 的遥测组件。此数据用于监控核心 DC/OS 组件、安装、用户界面的可靠性，并了解哪些特性最受欢迎。</p>
+<ul>
+<li><a href="#core">核心遥测</a></li>
+<li><a href="#user-interface">用户界面遥测</a></li>
+</ul>
+<h1 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="core"></a>核心遥测</h1>
+<p><a href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/architecture/components/#dcos-signal">DC/OS 信号</a> 组件查询领导管理节点上的诊断服务 <code>/system/health/v1/report</code> 端点，并将此数据发送给 <a href="https://segment.com/docs/">区块</a>，Mesosphere 然后用它来跟踪使用率度量标准和客户支持。</p>
+<p>DC/OS 信号报告的信息来自多个组件：DC/OS 诊断、Apache Mesos 和 DC/OS 包管理器 (Cosmos)。</p>
+<p>此数据针对每个类别进行收集：</p>
+<table class="table">
+<tr>
+<th>类型</th>
+<th>描述</th>
+</tr>
+<tr><td>anonymousId</td>
+<td>这是在启动时为每个群集创建的匿名 ID。此 ID 在您的群集中持续存在。例如：
+<pre>
+"anonymousId": "70b28f00-e38f-41b2-a723-aab344f535b9
+</pre></td></tr>
+<tr><td>clusterId</td>
+<td>这是在启动时为每个群集创建的 <code>anonymousID</code> 值。此 ID 在您的群集中持续存在。例如：
+<pre>
+"clusterId": "70b28f00-e38f-41b2-a723-aab344f535b9"
+</pre>
+</td></tr>
+<tr><td>customerKey (DC/OS Enterprise)</td>
+<td>这是 DC/OS  Enterprise 客户密钥。客户密钥通过电子邮件发送给获授权支持联系人。例如：
+<pre>
+"customerKey": "ab1c23de-45f6-7g8h-9012-i345j6k7lm8n",
+</pre>
+</td></tr>
+<tr><td>licenseId (DC/OS Enterprise)</td>
+<td>这是 DC/OS Enterprise 许可证 ID。许可证 ID 通过电子邮件发送给获授权支持联系人。例如：
+<pre>
+"licenseId": "acme-dev-cluster",
+</pre>
+</td></tr>
+<tr><td>event</td>
+<td>这是在区块中出现的类别。可能的值为 <code>package_list</code>（包管理器）、<code>health</code>（诊断）和 <code>mesos_track</code> (Mesos)。例如：
+<pre>
+"event": "package_list"
+</pre>
+</td>
+</tr>
+<tr><td>environmentVersion</td>
+<td>这是 DC/OS 的版本。例如，如果您使用的是 DC/OS 1.12：
+<pre>
+"environmentVersion": "1.12",
+</pre></td></tr>
+<tr><td>提供程序</td>
+<td>这是 DC/OS 运行所在的平台。可能的值为 <code>aws</code>、<code>on-prem</code> 和 <code>azure</code>。例如，如果您是在 AWS 上运行：
+<pre>
+"provider": "aws",
+</pre></td></tr>
+<tr><td>来源</td>
+<td>这表示群集的硬编码设置。例如：
+<pre>
+"source": "cluster",
+</pre></td></tr>
+<tr><td>变量</td>
+<td>这表示群集是 DC/OS 还是 DC/OS Enterprise。例如，如果您使用的是 DC/OS Open Source：
+<pre>
+"variant": "open"
+</pre>
+</td></tr>
+</table>
+<h2 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>诊断</h2>
+<p>此信息从 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/architecture/components/#dcos-diagnostics">DC/OS 诊断</a> 组件收集。对于每个 <code>systemd</code> 单元，将收集以下信息，其中 <code>&lt;UNIT_NAME&gt;</code> 是组件名称：</p>
+<pre><code>&quot;health-unit-dcos-&lt;UNIT_NAME&gt;-total&quot;: 3, &quot;health-unit-dcos-&lt;UNIT_NAME&gt;-unhealthy&quot;: 0,
+</code></pre>
+<h2 id="mesos"><a class="content__anchor" href="#mesos" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesos</h2>
+<p>此信息从 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/architecture/components/#apache-mesos">Apache Mesos</a> 组件收集。</p>
+<table class="table">
+<tr>
+<th>类型</th>
+<th>描述</th>
+</tr>
+<tr><td>agents_active</td><td>活动代理的数量。例如：<pre>"agents_active": 2,</pre></td></tr>
+<tr><td>agents_connected</td><td>连接的代理数量。例如：<pre>"agents_connected": 2,</pre></td></tr>
+<tr><td>cpu_total</td><td>可用的 CPU 数量。例如：<pre>"cpu_total": 8,</pre></td></tr>
+<tr><td>cpu_used</td><td>已分配的 CPU 数量。例如：<pre>"cpu_used": 0,</pre></td></tr>
+<tr><td>disk_total</td><td>可用磁盘空间（MB）。例如：<pre>"disk_total": 71154,</pre></td></tr>
+<tr><td>disk_used</td><td>已分配磁盘空间（MB）。例如：<pre>"disk_used": 0,</pre></td></tr>
+<tr><td>framework_count</td><td>已安装的 DC/OS 服务数量。例如：<pre>"framework_count": 2,</pre></td></tr>
+<tr><td>frameworks</td><td>安装了哪些 DC/OS 服务。例如：
+<pre>
+"frameworks": [
+                {
+                    "name": "marathon"
+                },
+                {
+                    "name": "metronome"
+                }
+            ],
+</pre></td></tr>
+<tr><td>mem_total</td><td>可用内存（MB）。例如：<pre>"mem_total": 28036,</pre></td></tr>
+<tr><td>mem_used</td><td>分配的内存（MB）。例如：<pre>"mem_used": 0,</pre></td></tr>
+<tr><td>task_count</td><td>任务数量。例如：<pre>"task_count": 0,</pre></td></tr>
+</tr>
+</table>
+<h2 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>包管理器</h2>
+<p>此信息从 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/architecture/components/#dcos-package-manager">DC/OS 包管理器 (Cosmos) </a> 组件收集。</p>
+<table class="table">
+<tr>
+<th>类型</th>
+<th>描述</th>
+</tr>
+<tr>
+<td>package_list</td>
+<td>安装了哪些包。例如，如果您有 Kafka 和 Spark：
+<pre>"package_list": [
+{
+"name": "kafka"
+},
+{
+"name": "spark"
+}
+],
+</pre></td>
+</tr>
+</table>
+<p>以下是收集的 JSON 遥测报告的示例：</p>
+<pre><code class="language-json">{
+    &quot;cosmos&quot;: {
+        &quot;properties&quot;: {
+            &quot;clusterId&quot;: &quot;70b28f00-e38f-41b2-a723-aab344f535b9&quot;,
+            &quot;customerKey&quot;: &quot;&quot;,
+            &quot;licenseId&quot;: &quot;acme-dev-cluster&quot;,
+            &quot;environmentVersion&quot;: &quot;1.8&quot;,
+            “package_list”: [
+            {
+            “name”: “kafka”
+            },
+            {
+            “name”: “spark”
+            }
+            ],
+            &quot;provider&quot;: &quot;aws&quot;,
+            &quot;source&quot;: &quot;cluster&quot;,
+            &quot;variant&quot;: &quot;open&quot;
+        },
+        &quot;anonymousId&quot;: &quot;70b28f00-e38f-41b2-a723-aab344f535b9&quot;,
+        &quot;event&quot;: &quot;package_list&quot;
+    },
+    &quot;diagnostics&quot;: {
+        &quot;properties&quot;: {
+            &quot;clusterId&quot;: &quot;70b28f00-e38f-41b2-a723-aab344f535b9&quot;,
+            &quot;customerKey&quot;: &quot;&quot;,
+            &quot;licenseId&quot;: &quot;acme-dev-cluster&quot;,
+            &quot;environmentVersion&quot;: &quot;1.8&quot;,
+            &quot;health-unit-dcos-diagnostics-service-total&quot;: 3,
+            &quot;health-unit-dcos-diagnostics-service-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-diagnostics-socket-total&quot;: 2,
+            &quot;health-unit-dcos-diagnostics-socket-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-adminrouter-agent-service-total&quot;: 2,
+            &quot;health-unit-dcos-adminrouter-agent-service-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-adminrouter-reload-service-total&quot;: 3,
+            &quot;health-unit-dcos-adminrouter-reload-service-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-adminrouter-reload-timer-total&quot;: 3,
+            &quot;health-unit-dcos-adminrouter-reload-timer-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-adminrouter-service-total&quot;: 1,
+            &quot;health-unit-dcos-adminrouter-service-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-cosmos-service-total&quot;: 1,
+            &quot;health-unit-dcos-cosmos-service-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-epmd-service-total&quot;: 3,
+            &quot;health-unit-dcos-epmd-service-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-exhibitor-service-total&quot;: 1,
+            &quot;health-unit-dcos-exhibitor-service-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-gen-resolvconf-service-total&quot;: 3,
+            &quot;health-unit-dcos-gen-resolvconf-service-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-gen-resolvconf-timer-total&quot;: 3,
+            &quot;health-unit-dcos-gen-resolvconf-timer-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-history-service-total&quot;: 1,
+            &quot;health-unit-dcos-history-service-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-logrotate-agent-service-total&quot;: 2,
+            &quot;health-unit-dcos-logrotate-agent-service-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-logrotate-agent-timer-total&quot;: 2,
+            &quot;health-unit-dcos-logrotate-agent-timer-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-logrotate-master-service-total&quot;: 1,
+            &quot;health-unit-dcos-logrotate-master-service-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-logrotate-master-timer-total&quot;: 1,
+            &quot;health-unit-dcos-logrotate-master-timer-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-marathon-service-total&quot;: 1,
+            &quot;health-unit-dcos-marathon-service-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-mesos-dns-service-total&quot;: 1,
+            &quot;health-unit-dcos-mesos-dns-service-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-mesos-master-service-total&quot;: 1,
+            &quot;health-unit-dcos-mesos-master-service-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-mesos-slave-public-service-total&quot;: 1,
+            &quot;health-unit-dcos-mesos-slave-public-service-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-mesos-slave-service-total&quot;: 1,
+            &quot;health-unit-dcos-mesos-slave-service-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-metronome-service-total&quot;: 1,
+            &quot;health-unit-dcos-metronome-service-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-navstar-service-total&quot;: 3,
+            &quot;health-unit-dcos-navstar-service-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-oauth-service-total&quot;: 1,
+            &quot;health-unit-dcos-oauth-service-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-pkgpanda-api-service-total&quot;: 3,
+            &quot;health-unit-dcos-pkgpanda-api-service-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-pkgpanda-api-socket-total&quot;: 3,
+            &quot;health-unit-dcos-pkgpanda-api-socket-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-rexray-service-total&quot;: 2,
+            &quot;health-unit-dcos-rexray-service-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-signal-service-total&quot;: 1,
+            &quot;health-unit-dcos-signal-service-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-signal-timer-total&quot;: 3,
+            &quot;health-unit-dcos-signal-timer-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-spartan-service-total&quot;: 3,
+            &quot;health-unit-dcos-spartan-service-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-spartan-watchdog-service-total&quot;: 3,
+            &quot;health-unit-dcos-spartan-watchdog-service-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-spartan-watchdog-timer-total&quot;: 3,
+            &quot;health-unit-dcos-spartan-watchdog-timer-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-vol-discovery-priv-agent-service-total&quot;: 1,
+            &quot;health-unit-dcos-vol-discovery-priv-agent-service-unhealthy&quot;: 0,
+            &quot;health-unit-dcos-vol-discovery-pub-agent-service-total&quot;: 1,
+            &quot;health-unit-dcos-vol-discovery-pub-agent-service-unhealthy&quot;: 0,
+            &quot;provider&quot;: &quot;aws&quot;,
+            &quot;source&quot;: &quot;cluster&quot;,
+            &quot;variant&quot;: &quot;open&quot;
+        },
+        &quot;anonymousId&quot;: &quot;70b28f00-e38f-41b2-a723-aab344f535b9&quot;,
+        &quot;event&quot;: &quot;health&quot;
+    },
+    &quot;mesos&quot;: {
+        &quot;properties&quot;: {
+            &quot;agents_active&quot;: 2,
+            &quot;agents_connected&quot;: 2,
+            &quot;clusterId&quot;: &quot;70b28f00-e38f-41b2-a723-aab344f535b9&quot;,
+            &quot;licenseId&quot;: &quot;acme-dev-cluster&quot;,
+            &quot;cpu_total&quot;: 8,
+            &quot;cpu_used&quot;: 0,
+            &quot;customerKey&quot;: &quot;&quot;,
+            &quot;disk_total&quot;: 71154,
+            &quot;disk_used&quot;: 0,
+            &quot;environmentVersion&quot;: &quot;1.8&quot;,
+            &quot;framework_count&quot;: 2,
+            &quot;frameworks&quot;: [
+                {
+                    &quot;name&quot;: &quot;marathon&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;metronome&quot;
+                }
+            ],
+            &quot;mem_total&quot;: 28036,
+            &quot;mem_used&quot;: 0,
+            &quot;provider&quot;: &quot;aws&quot;,
+            &quot;source&quot;: &quot;cluster&quot;,
+            &quot;task_count&quot;: 0,
+            &quot;variant&quot;: &quot;open&quot;
+        },
+        &quot;anonymousId&quot;: &quot;70b28f00-e38f-41b2-a723-aab344f535b9&quot;,
+        &quot;event&quot;: &quot;mesos_track&quot;
+    }
+}
+</code></pre>
+<h1 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="user-interface"></a>用户界面遥测</h1>
+<p>DC/OS UI 向 <a href="https://segment.com/docs/">区块</a> 发送两种通知，Mesosphere 然后用它来跟踪使用度量标准和客户支持：</p>
+<ul>
+<li>登录信息</li>
+<li>在浏览 UI 时查看的页面</li>
+</ul>
+<h2 id="-5"><a class="content__anchor" href="#-5" aria-hidden="true"><i data-feather="bookmark"></i></a>选择退出</h2>
+<p>您也可选择退出遥测功能。如需更多信息，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/deploying-dcos/opt-out/">退出</a></p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#核心遥测">核心遥测</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-2">诊断</a></li><li class="content__sections-item content__sections-item--h2"><a href="#mesos">Mesos</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-3">包管理器</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-4">用户界面遥测</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-5">选择退出</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

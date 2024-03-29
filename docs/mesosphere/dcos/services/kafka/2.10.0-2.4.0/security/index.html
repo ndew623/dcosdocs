@@ -1,0 +1,508 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Security - D2iQ Docs</title><meta name="description" content="Securing your service"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Kafka Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services/kafka">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/kafka/2.10.0-2.4.0/security">Kafka 2.10.0-2.4.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kafka/2.8.1-2.3.1/security">Kafka 2.8.1-2.3.1</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kafka/2.8.0-2.3.0/security">Kafka 2.8.0-2.3.0</a></li></ul><div class="toggle"><p><span class="title">Kafka</span><span class="version"> 2.10.0-2.4.0</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kafka/2.10.0-2.4.0/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kafka/2.10.0-2.4.0/started/">Getting Started</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kafka/2.10.0-2.4.0/operations/">Operations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kafka/2.10.0-2.4.0/configuration/">Configuration</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kafka/2.10.0-2.4.0/updates/">Updates</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kafka/2.10.0-2.4.0/security/">Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kafka/2.10.0-2.4.0/uninstall/">Uninstall</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kafka/2.10.0-2.4.0/troubleshooting/">Troubleshooting</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kafka/2.10.0-2.4.0/advanced/">Advanced</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kafka/2.10.0-2.4.0/reference/">API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kafka/2.10.0-2.4.0/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kafka/2.10.0-2.4.0/policy/">Support Policy</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Security</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">Securing your service</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/kafka/2.10.0-2.4.0/security/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><h1 id="dcos-apache-kafka-security"><a class="content__anchor" href="#dcos-apache-kafka-security" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS Apache Kafka Security</h1>
+<p>The DC/OS Apache Kafka service supports Kafka’s native transport encryption, authentication, and authorization mechanisms. The service provides automation and orchestration to simplify the use of these important features.
+For more information on Kafka’s security, read the following:</p>
+<ul>
+<li><a href="http://kafka.apache.org/documentation/#security">Security Overview</a></li>
+<li><a href="https://www.confluent.io/blog/apache-kafka-security-authorization-authentication-encryption/">Security Features</a></li>
+</ul>
+<p class="message--note"><strong>NOTE: </strong>These security features are only available on DC/OS Enterprise 1.10 and later.</p>
+<h1 id="provisioning-a-service-account"><a class="content__anchor" href="#provisioning-a-service-account" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="provision-a-service-account"></a>Provisioning a service account</h1>
+<p>This section describes how to configure DC/OS access for Apache Kafka. Depending on your <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/#security-modes/">security mode</a>, Apache Kafka may require <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/service-auth/">service authentication</a> for access to DC/OS.</p>
+<p>A service like Apache Kafka typically performs certain privileged actions on the cluster, which might require authenticating with the cluster. A service account associated with the service is used to authenticate with the DC/OS cluster. It is recommended to provisioning a separate service account for each service that would perform privileged operations. Service accounts authenticate using public-private keypair. The public key is used to create the service account in the cluster, while the corresponding private key is stored in the <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/secrets/">secret store</a>. The service account and the service account secret are passed to the service as install time options.</p>
+<table>
+<thead>
+<tr>
+<th>Security mode</th>
+<th>Service Account</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Disabled</td>
+<td>Not available</td>
+</tr>
+<tr>
+<td>Permissive</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Strict</td>
+<td>Required</td>
+</tr>
+</tbody>
+</table>
+<p>If you install a service in permissive mode and do not specify a service account, Metronome and Marathon will act as if requests made by this service are made by an account with the <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/perms-reference/#superuser">superuser permission</a>.</p>
+<h2 id="prerequisites"><a class="content__anchor" href="#prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites:</h2>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/latest/cli/install/">DC/OS CLI installed</a> and be logged in as a superuser.</li>
+<li><a href="/dcosdocs/mesosphere/dcos/latest/cli/enterprise-cli/#ent-cli-install">Enterprise DC/OS CLI 0.4.14 or later installed</a>.</li>
+</ul>
+<h1 id="create-a-key-pair"><a class="content__anchor" href="#create-a-key-pair" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="create-a-keypair"></a>Create a Key Pair</h1>
+<p>In this step, a 2048-bit RSA public-private key pair is created using the Enterprise DC/OS CLI.</p>
+<p>Create a public-private key pair and save each value into a separate file within the current directory.</p>
+<pre><code class="language-bash">dcos security org service-accounts keypair &lt;private-key&gt;.pem &lt;public-key&gt;.pem
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>You can use the <a href="https://docs.d2iq.com/dcosdocs/mesosphere/dcos/latest/security/ent/secrets/">DC/OS Secret Store</a> to secure the key pair.</p>
+<h1 id="create-a-service-account"><a class="content__anchor" href="#create-a-service-account" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="create-a-service-account"></a>Create a Service Account</h1>
+<p>From a terminal prompt, create a new service account (for example, <code>kafka</code>) containing the public key (<code>&lt;your-public-key&gt;.pem</code>).</p>
+<pre><code class="language-bash">dcos security org service-accounts create -p &lt;your-public-key&gt;.pem -d &lt;description&gt; kafka
+</code></pre>
+<p>You can verify your new service account using the following command.</p>
+<pre><code class="language-bash">dcos security org service-accounts show kafka
+</code></pre>
+<h1 id="create-a-secret"><a class="content__anchor" href="#create-a-secret" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="create-an-sa-secret"></a>Create a Secret</h1>
+<p>Create a secret (<code>kafka/&lt;secret-name&gt;</code>) with your service account and private key specified (<code>&lt;private-key&gt;.pem</code>).</p>
+<p class="message--note"><strong>NOTE: </strong>If you store your secret in a path that matches the service name, for example, service name and secret path are both kafka, then only the service named kafka can access it.</p>
+<pre><code class="language-bash">dcos security secrets create-sa-secret &lt;private-key&gt;.pem &lt;service-account-id&gt; kafka/&lt;secret-name&gt;
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>If you are running, now EOL-ed, DC/OS 1.11 or older you would need to add <tt>--strict</tt> to the above command. For example, <tt>dcos security secrets --strict create-sa-secret <private-key>.pem <service-account-id> kafka/sa-secret</tt> .</p>
+<p>You can list the secrets with this command:</p>
+<pre><code class="language-bash">dcos security secrets list /
+</code></pre>
+<h1 id="create-and-assign-permissions"><a class="content__anchor" href="#create-and-assign-permissions" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="give-perms"></a>Create and Assign Permissions</h1>
+<p>Use the following DC/OS CLI commands to rapidly provision the Apache Kafka service account with the required permissions.</p>
+<ol>
+<li>Create the permission.</li>
+</ol>
+<p class="message--important"><strong>IMPORTANT: </strong>The value to be used for <tt>&lt;service-role&gt;</tt> will be based on the service name. The table below shows a few examples of service names and the corresponding Mesos roles they would use. If you need help configuring the permissions for kafka, please feel to reach out to D2iQ support by filing a support ticket. Replace the instances of <tt>&lt;service-role&gt;</tt> with the correct name (<tt>&lt;name&gt;-role</tt>).</p>
+<table>
+<thead>
+<tr>
+<th>Service name</th>
+<th>&lt;service-role&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/kafka</code></td>
+<td><code>kafka-role</code></td>
+</tr>
+<tr>
+<td><code>/kafka-prod</code></td>
+<td><code>kafka-prod-role</code></td>
+</tr>
+<tr>
+<td><code>/team01/kafka</code></td>
+<td><code>team01__kafka-role</code></td>
+</tr>
+<tr>
+<td><code>/team01/prod/kafka</code></td>
+<td><code>team01__prod__kafka-role</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="permissive"><a class="content__anchor" href="#permissive" aria-hidden="true"><i data-feather="bookmark"></i></a>Permissive</h2>
+<p>Run these commands with the service account name you created for the service in the <em>Create a Service Account</em> step above. For example we are using kafka</p>
+<pre><code class="language-bash">dcos security org users grant kafka dcos:mesos:master:framework:role:&lt;service-role&gt; create --description &quot;Allow registering as a framework of role &lt;service-role&gt; with Mesos master&quot;
+dcos security org users grant kafka dcos:mesos:master:reservation:role:&lt;service-role&gt; create --description &quot;Allow creating Mesos resource reservations of role &lt;service-role&gt;&quot;
+dcos security org users grant kafka dcos:mesos:master:volume:role:&lt;service-role&gt; create --description &quot;Allow creating Mesos persistent volumes of role &lt;service-role&gt;&quot;
+dcos security org users grant kafka dcos:mesos:master:reservation:principal:kafka delete --description &quot;Allow unreserving Mesos resource reservations with principal kafka&quot;
+dcos security org users grant kafka dcos:mesos:master:volume:principal:kafka delete --description &quot;Allow deleting Mesos persistent volumes with principal kafka&quot;
+</code></pre>
+<h2 id="strict"><a class="content__anchor" href="#strict" aria-hidden="true"><i data-feather="bookmark"></i></a>Strict</h2>
+<p>Run these commands with the service account name you created for the service in the <em>Create a Service Account</em> step above. For example we are using kafka</p>
+<pre><code class="language-bash">dcos security org users grant kafka dcos:mesos:master:task:user:nobody create --description &quot;Allow running a task as linux user nobody&quot;
+dcos security org users grant kafka dcos:mesos:master:framework:role:&lt;service-role&gt; create --description &quot;Allow registering as a framework of role &lt;service-role&gt; with Mesos master&quot;
+dcos security org users grant kafka dcos:mesos:master:reservation:role:&lt;service-role&gt; create --description &quot;Allow creating Mesos resource reservations of role &lt;service-role&gt;&quot;
+dcos security org users grant kafka dcos:mesos:master:volume:role:&lt;service-role&gt; create --description &quot;Allow creating Mesos persistent volumes of role &lt;service-role&gt;&quot;
+dcos security org users grant kafka dcos:mesos:master:reservation:principal:kafka delete --description &quot;Allow unreserving Mesos resource reservations with principal kafka&quot;
+dcos security org users grant kafka dcos:mesos:master:volume:principal:kafka delete --description &quot;Allow deleting Mesos persistent volumes with principal kafka&quot;
+</code></pre>
+<h2 id="transport-encryption"><a class="content__anchor" href="#transport-encryption" aria-hidden="true"><i data-feather="bookmark"></i></a>Transport Encryption</h2>
+<p>With transport encryption enabled, DC/OS Apache Kafka will automatically deploy all nodes with the correct configuration to encrypt communication via SSL. The nodes will communicate securely between themselves using SSL.</p>
+<p>The service uses the <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/tls-ssl/">DC/OS CA</a> to generate the SSL artifacts that it uses to secure the service. Any client that trusts the DC/OS CA will consider the service’s certificates valid.</p>
+<p class="message--note"><strong>NOTE: </strong> Enabling transport encryption is <strong>required</strong> to use [SSL authentication](#ssl-authentication) for [authentication](#authentication), but is optional for [Kerberos authentication](#kerberos-authentication).</p>
+<h3 id="prerequisites-2"><a class="content__anchor" href="#prerequisites-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h3>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/latest/security/ent/service-auth/custom-service-auth/">A DC/OS Service Account with a secret stored in the DC/OS Secret Store</a>.</li>
+<li>DC/OS Superuser permissions for modifying the permissions of the Service Account.</li>
+</ul>
+<h3 id="configure-transport-encryption"><a class="content__anchor" href="#configure-transport-encryption" aria-hidden="true"><i data-feather="bookmark"></i></a>Configure Transport Encryption</h3>
+<h4 id="set-up-the-service-account"><a class="content__anchor" href="#set-up-the-service-account" aria-hidden="true"><i data-feather="bookmark"></i></a>Set up the service account</h4>
+<p><a href="/dcosdocs/mesosphere/dcos/latest/security/ent/perms-management/">Grant</a> the service account the correct permissions.</p>
+<ul>
+<li>In DC/OS 1.10, the required permission is <code>dcos:superuser full</code>.</li>
+<li>In DC/OS 1.11 and later, the required permissions are:</li>
+</ul>
+<pre><code>dcos:secrets:default:/&lt;service name&gt;/* full
+dcos:secrets:list:default:/&lt;service name&gt; read
+dcos:adminrouter:ops:ca:rw full
+dcos:adminrouter:ops:ca:ro full
+</code></pre>
+<p>where <code>&lt;service name&gt;</code> is the name of the service to be installed.</p>
+<!-- Not clear if this is the right location DCOS-39455 --> 
+<p>Run the following DC/OS Enterprise CLI commands to set permissions for the service account on a strict cluster:</p>
+<pre><code>dcos security org users grant ${SERVICE_ACCOUNT} dcos:mesos:master:task:app_id:&lt;service/name&gt; create
+dcos security org users grant ${SERVICE_ACCOUNT} dcos:mesos:master:reservation:principal:dev_hdfs create
+dcos security org users grant ${SERVICE_ACCOUNT} dcos:mesos:master:volume:principal:dev_hdfs create
+</code></pre>
+<h4 id="install-the-service"><a class="content__anchor" href="#install-the-service" aria-hidden="true"><i data-feather="bookmark"></i></a>Install the service</h4>
+<p>Install the DC/OS Apache Kafka service including the following options in addition to your own:</p>
+<pre><code class="language-json">{
+    &quot;service&quot;: {
+        &quot;service_account&quot;: &quot;&lt;your service account name&gt;&quot;,
+        &quot;service_account_secret&quot;: &quot;&lt;full path of service secret&gt;&quot;,
+        &quot;security&quot;: {
+            &quot;transport_encryption&quot;: {
+                &quot;enabled&quot;: true, &quot;allow_plaintext&quot;: &lt;true|false default false&gt;
+
+            }
+        }
+    }
+}
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>It is possible to update a running DC/OS Apache Kafka service to enable transport encryption after initial installation, but the service may be unavailable during the transition. Additionally, your Kafka clients will need to be reconfigured unless `service.security.transport_encryption.allow_plaintext` is set to true.</p>
+<h3 id="using-custom-tls-certificate"><a class="content__anchor" href="#using-custom-tls-certificate" aria-hidden="true"><i data-feather="bookmark"></i></a>Using Custom TLS certificate</h3>
+<h4 id="configuration-options"><a class="content__anchor" href="#configuration-options" aria-hidden="true"><i data-feather="bookmark"></i></a>Configuration Options</h4>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>transport_encryption.enabled</strong></td>
+<td>Enables Transport Encryption</td>
+</tr>
+<tr>
+<td><strong>transport_encryption.custom_transport_encryption</strong></td>
+<td>Enables custom TLS certificates</td>
+</tr>
+<tr>
+<td><strong>transport_encryption.key_store</strong></td>
+<td>The path to the secret in the Secret Store that has the contents of the keystore.</td>
+</tr>
+<tr>
+<td><strong>transport_encryption.key_store_password_file</strong></td>
+<td>The path to the secret in the Secret Store that has the contents of the keystore password file.</td>
+</tr>
+<tr>
+<td><strong>transport_encryption.trust_store</strong></td>
+<td>The path to the secret in the Secret Store that has the contents of the truststore.</td>
+</tr>
+<tr>
+<td><strong>transport_encryption.trust_store_password_file</strong></td>
+<td>The path to the secret in the Secret Store that has the contents of the truststore password.</td>
+</tr>
+</tbody>
+</table>
+<p>To use the custom TLS certs for kafka service, we need to add the following options in the configuration of the package:</p>
+<pre><code class="language-json">&quot;service&quot;: {
+    &quot;name&quot; : &quot;&lt;service name&gt;&quot;,
+    &quot;transport_encryption&quot;: {
+        &quot;enabled&quot;: true,
+        &quot;custom_transport_encryption&quot;: true,
+        &quot;key_store&quot;: &quot;&lt;service name&gt;/keystore&quot;,
+        &quot;key_store_password_file&quot;: &quot;&lt;service name&gt;/keystorepass&quot;,
+        &quot;trust_store&quot;: &quot;&lt;service name&gt;/truststore&quot;,
+        &quot;trust_store_password_file&quot;: &quot;&lt;service name&gt;/truststorepass&quot;,
+        &quot;allow_plaintext&quot;: false,
+        &quot;ciphers&quot;: &lt;Add Default ciphers present in Kafka config&gt;
+
+    }
+}
+</code></pre>
+<h3 id="example-with-self-signed-certificate"><a class="content__anchor" href="#example-with-self-signed-certificate" aria-hidden="true"><i data-feather="bookmark"></i></a>Example with self-signed certificate</h3>
+<p>Generate CA-cert and CA-private-key, called <code>ca-cert</code> and <code>ca-key</code> respectively</p>
+<pre><code class="language-bash">openssl req -new -newkey rsa:4096 -days 365 -x509 -subj &quot;/C=US/ST=CA/L=SF/O=Mesosphere/OU=Mesosphere/CN=kafka&quot; -keyout ca-key -out ca-cert -nodes
+</code></pre>
+<p>Generate a keystore, called <code>broker.keystore</code></p>
+<pre><code class="language-bash">keytool -genkey -keyalg RSA -keystore broker.keystore -validity 365 -storepass changeit -keypass changeit -dname &quot;CN=kafka&quot; -storetype JKS
+</code></pre>
+<p>Generate Certificate Signing Request (CSR) called <code>cert-file</code></p>
+<pre><code class="language-bash">keytool -keystore broker.keystore -certreq -file cert-file -storepass changeit -keypass changeit
+</code></pre>
+<p>Sign the Generated certificate</p>
+<pre><code class="language-bash">openssl x509 -req -CA ca-cert -CAkey ca-key -in cert-file -out cert-signed -days 365 -CAcreateserial -passin pass:changeit
+</code></pre>
+<p>Generate a truststore with ca-cert</p>
+<pre><code class="language-bash">keytool -keystore broker.truststore -alias CARoot -import -file ca-cert -storepass changeit -keypass changeit -noprompt
+</code></pre>
+<p>Generate a truststore called <code>broker.truststore</code> with ca-cert</p>
+<pre><code class="language-bash">keytool -keystore broker.truststore -alias CARoot -importcert -file ca-cert -storepass changeit -keypass changeit -noprompt
+</code></pre>
+<p>Generate a truststore with self-signed cert</p>
+<pre><code class="language-bash">keytool -keystore broker.truststore -alias CertSigned -importcert -file cert-signed -storepass changeit -keypass changeit -noprompt
+</code></pre>
+<p>Generate files containing truststore and keystore passwords</p>
+<pre><code class="language-bash">cat &lt;&lt;EOF &gt;&gt; trust_store_pass
+changeit
+EOF
+</code></pre>
+<pre><code class="language-bash">cat &lt;&lt;EOF &gt;&gt; key_store_pass
+changeit
+EOF
+</code></pre>
+<p>Create necessary secrets in DC/OS for custom tls certificate</p>
+<pre><code class="language-bash">#  Keystore secrets
+dcos security secrets create -f broker.keystore kafka/keystore
+dcos security secrets create -f key_store_pass kafka/keystorepass
+</code></pre>
+<pre><code class="language-bash"># Truststore secrets
+dcos security secrets create -f broker.truststore kafka/truststore
+dcos security secrets create -f trust_store_pass kafka/truststorepass
+</code></pre>
+<blockquote>
+<p>Note: The truststore and keystore should be named as <code>broker.truststore</code> and <code>broker.keystore</code> respectively.</p>
+</blockquote>
+<p>Create a file named <code>dcos-kafka-options-customtls.json</code> with following configuration</p>
+<pre><code class="language-json">cat &lt;&lt;EOF &gt;&gt;dcos-kafka-options-customtls.json
+{
+  &quot;service&quot;: {
+    &quot;name&quot;: &quot;kafka&quot;,
+    &quot;service_account&quot;: &quot;&lt;your service account name&gt;&quot;,
+    &quot;service_account_secret&quot;: &quot;&lt;full path of service secret&gt;&quot;,
+    &quot;security&quot;: {
+      &quot;transport_encryption&quot;: {
+        &quot;enabled&quot;: true,
+        &quot;custom_transport_encryption&quot;: true,
+        &quot;key_store&quot;: &quot;kafka/keystore&quot;,
+        &quot;key_store_password_file&quot;: &quot;kafka/keystorepass&quot;,
+        &quot;trust_store&quot;: &quot;kafka/truststore&quot;,
+        &quot;trust_store_password_file&quot;: &quot;kafka/truststorepass&quot;,
+        &quot;allow_plaintext&quot;: false,
+        &quot;ciphers&quot;: &lt;Add default ciphers present in Kafka config&gt;
+      }
+    }
+  }
+}
+EOF
+</code></pre>
+<p><strong>Tip:</strong> If you store your secret in a path that matches the service name (e.g. service name and secret path are <code>kafka</code>), then only the service named <code>kafka</code> can access it.</p>
+<p>Install the kafka service</p>
+<pre><code class="language-bash">dcos package install kafka --options=dcos-kafka-options-customtls.json --yes
+</code></pre>
+<h4 id="verify-transport-encryption-enabled"><a class="content__anchor" href="#verify-transport-encryption-enabled" aria-hidden="true"><i data-feather="bookmark"></i></a>Verify Transport Encryption Enabled</h4>
+<p>After service deployment completes, check the list of <a href="../reference/#connection-information">Kafka endpoints</a> for the endpoint <code>broker-tls</code>. If <code>service.security.transport_encryption.allow_plaintext</code> is <code>true</code>, then the <code>broker</code> endpoint will also be available.</p>
+<h4 id="transport-encryption-for-clients"><a class="content__anchor" href="#transport-encryption-for-clients" aria-hidden="true"><i data-feather="bookmark"></i></a>Transport Encryption for Clients</h4>
+<p>With Transport Encryption enabled, service clients will need to be configured to use the <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/tls-ssl/get-cert/">DC/OS CA bundle</a> to verify the connections they make to the service. Consult your client’s documentation for trusting a CA and configure your client appropriately.</p>
+<h2 id="authentication"><a class="content__anchor" href="#authentication" aria-hidden="true"><i data-feather="bookmark"></i></a>Authentication</h2>
+<p>DC/OS Apache Kafka supports two authentication mechanisms, SSL and Kerberos. The two are supported independently and may not be combined. If both SSL and Kerberos authentication are enabled, the service will use Kerberos authentication.</p>
+<p class="message--note"><strong>NOTE: </strong> Kerberos authentication can, however, be combined with transport encryption.</p>
+<h3 id="kerberos-authentication"><a class="content__anchor" href="#kerberos-authentication" aria-hidden="true"><i data-feather="bookmark"></i></a>Kerberos Authentication</h3>
+<p>Kerberos authentication relies on a central authority to verify that Kafka clients (be it broker, consumer, or producer) are who they say they are. DC/OS Apache Kafka integrates with your existing Kerberos infrastructure to verify the identity of clients.</p>
+<h4 id="prerequisites-3"><a class="content__anchor" href="#prerequisites-3" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h4>
+<ul>
+<li>The hostname and port of a KDC reachable from your DC/OS cluster</li>
+<li>Sufficient access to the KDC to create Kerberos principals</li>
+<li>Sufficient access to the KDC to retrieve a keytab for the generated principals</li>
+<li><a href="/dcosdocs/mesosphere/dcos/1.10/cli/enterprise-cli/#installing-the-dcos-enterprise-cli">The DC/OS Enterprise CLI</a></li>
+<li>DC/OS Superuser permissions</li>
+</ul>
+<h4 id="configure-kerberos-authentication"><a class="content__anchor" href="#configure-kerberos-authentication" aria-hidden="true"><i data-feather="bookmark"></i></a>Configure Kerberos Authentication</h4>
+<h4 id="create-principals"><a class="content__anchor" href="#create-principals" aria-hidden="true"><i data-feather="bookmark"></i></a>Create principals</h4>
+<p>The DC/OS Apache Kafka service requires a Kerberos principal for each broker to be deployed. Each principal must be of the form</p>
+<pre><code>&lt;service primary&gt;/kafka-&lt;broker index&gt;-broker.&lt;service subdomain&gt;.autoip.dcos.thisdcos.directory@&lt;service realm&gt;
+</code></pre>
+<p>with:</p>
+<ul>
+<li><code>service primary = service.security.kerberos.primary</code></li>
+<li><code>broker index = 0 up to brokers.count - 1</code></li>
+<li><code>service subdomain = service.name with all</code>/<code>'s removed</code></li>
+<li><code>service realm = service.security.kerberos.realm</code></li>
+</ul>
+<p>For example, if installing with these options:</p>
+<pre><code class="language-json">{
+    &quot;service&quot;: {
+        &quot;name&quot;: &quot;a/good/example&quot;,
+        &quot;security&quot;: {
+            &quot;kerberos&quot;: {
+                &quot;primary&quot;: &quot;example&quot;,
+                &quot;realm&quot;: &quot;EXAMPLE&quot;
+            }
+        }
+    },
+    &quot;brokers&quot;: {
+        &quot;count&quot;: 3
+    }
+}
+</code></pre>
+<p>then the principals to create would be:</p>
+<pre><code>example/kafka-0-broker.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE
+example/kafka-1-broker.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE
+example/kafka-2-broker.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE
+</code></pre>
+<h5 id="active-directory"><a class="content__anchor" href="#active-directory" aria-hidden="true"><i data-feather="bookmark"></i></a>Active Directory</h5>
+<p>Microsoft Active Directory can be used as a Kerberos KDC. Doing so requires creating a mapping between Active Directory users and Kerberos principals.</p>
+<p>The utility <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/ktpass">ktpass</a> can be used to both create a keytab from Active Directory and generate the mapping at the same time.</p>
+<p>The mapping <em>can</em>, however, be created manually. For a Kerberos principal like <code>&lt;primary&gt;/&lt;host&gt;@&lt;REALM&gt;</code>, the Active Directory user should have its <code>servicePrincipalName</code> and <code>userPrincipalName</code> attributes set to,</p>
+<pre><code>servicePrincipalName = &lt;primary&gt;/&lt;host&gt;
+userPrincipalName = &lt;primary&gt;/&lt;host&gt;@&lt;REALM&gt;
+</code></pre>
+<p>For example, with the Kerberos principal <code>example&amp;#x2F;kafka-0-broker.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE</code>, then the correct mapping would be,</p>
+<pre><code>servicePrincipalName = example&amp;#x2F;kafka-0-broker.agoodexample.autoip.dcos.thisdcos.directory
+userPrincipalName = example&amp;#x2F;kafka-0-broker.agoodexample.autoip.dcos.thisdcos.directory@EXAMPLE
+</code></pre>
+<p>If either mapping is incorrect or not present, the service will fail to authenticate that Principal. The symptom in the Kerberos debug logs will be an error of the form</p>
+<pre><code>KRBError:
+sTime is Wed Feb 07 03:22:47 UTC 2018 1517973767000
+suSec is 697984
+error code is 6
+error Message is Client not found in Kerberos database
+sname is krbtgt/AD.MESOSPHERE.COM@AD.MESOSPHERE.COM
+msgType is 30
+</code></pre>
+<p>when the <code>userPrincipalName</code> is set incorrectly, and an error of the form</p>
+<pre><code>KRBError:
+sTime is Wed Feb 07 03:44:57 UTC 2018 1517975097000
+suSec is 128465
+error code is 7
+error Message is Server not found in Kerberos database
+sname is kafka/kafka-1-broker.confluent-kafka.autoip.dcos.thisdcos.directory@AD.MESOSPHERE.COM
+msgType is 30
+</code></pre>
+<p>when the <code>servicePrincipalName</code> is set incorrectly.</p>
+<h4 id="place-service-keytab-in-dcos-secret-store"><a class="content__anchor" href="#place-service-keytab-in-dcos-secret-store" aria-hidden="true"><i data-feather="bookmark"></i></a>Place Service Keytab in DC/OS Secret Store</h4>
+<p>The DC/OS Apache Kafka service uses a keytab containing all node principals (service keytab). After creating the principals above, generate the service keytab making sure to include all the node principals. This will be stored as a secret in the DC/OS Secret Store.</p>
+<p class="message--note"><strong>NOTE: </strong>DC/OS 1.10 does not support adding binary secrets directly to the secret store, only text files are supported. Instead, first base64 encode the file, and save it to the secret store as <tt>/desired/path/__dcos_base64__secret_name</tt>. The DC/OS security modules will handle decoding the file when it is used by the service. </p>
+<p>The service keytab should be stored at <code>service/path/name/service.keytab</code>. As noted above. for DC/OS 1.10, it would be <code>__dcos_base64__service.keytab</code>), where <code>service/path/name</code> matches the path and name of the service. For example, if installing with the options</p>
+<pre><code class="language-json">{
+    &quot;service&quot;: {
+        &quot;name&quot;: &quot;a/good/example&quot;
+    }
+}
+</code></pre>
+<p>then the service keytab should be stored at <code>a/good/example/service.keytab</code>.</p>
+<p>Documentation for adding a file to the secret store can be found <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/secrets/create-secrets/#creating-secrets-from-a-file-via-the-dcos-enterprise-cli">here</a>.</p>
+<p class="message--note"><strong>NOTE: </strong>Secrets access is controlled by <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/#spaces-for-secrets">DC/OS Spaces</a>, which function like namespaces. Any secret in the same DC/OS Space as the service will be accessible by the service. However, matching the two paths is the most secure option. Additionally the secret name <tt>service.keytab</tt> is a convention and not a requirement.</p>
+<h4 id="install-the-service-2"><a class="content__anchor" href="#install-the-service-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Install the Service</h4>
+<p>Install the DC/OS Apache Kafka service with the following options in addition to your own:</p>
+<pre><code class="language-json">{
+    &quot;service&quot;: {
+        &quot;security&quot;: {
+            &quot;kerberos&quot;: {
+                &quot;enabled&quot;: true,
+                &quot;enabled_for_zookeeper&quot;: &lt;true|false default false&gt;,
+                &quot;kdc&quot;: {
+                    &quot;hostname&quot;: &quot;&lt;kdc host&gt;&quot;,
+                    &quot;port&quot;: &lt;kdc port&gt;
+                },
+                &quot;primary&quot;: &quot;&lt;service primary default kafka&gt;&quot;,
+                &quot;realm&quot;: &quot;&lt;realm&gt;&quot;,
+                &quot;keytab_secret&quot;: &quot;&lt;path to keytab secret&gt;&quot;,
+                &quot;debug&quot;: &lt;true|false default false&gt;
+            }
+        }
+    }
+}
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong> If <tt>service.kerberos.enabled_for_zookeeper</tt> is set to true, then the additional setting <tt>kafka.kafka_zookeeper_uri</tt> must be configured to point at a kerberized Apache Zookeeper as follows:
+<pre><code class="language-json">{
+    &quot;kafka&quot;: {
+        &quot;kafka_zookeeper_uri&quot;: &lt;list of zookeeper hosts&gt;
+    }
+}
+</code></pre>
+<p>The DC/OS Apache Zookeeper service (<code>kafka-zookeeper</code> package) is intended for this purpose and supports Kerberos.</p></p>
+<p class="message--note"><strong>NOTE: </strong> It is possible to enable Kerberos after initial installation but the service may be unavailable during the transition. Additionally, your Kafka clients will need to be reconfigured.</p>
+<h3 id="ssl-authentication"><a class="content__anchor" href="#ssl-authentication" aria-hidden="true"><i data-feather="bookmark"></i></a>SSL Authentication</h3>
+<p>SSL authentication requires that all clients be they brokers, producers, or consumers present a valid certificate from which their identity can be derived. DC/OS Apache Kafka uses the <code>CN</code> of the SSL certificate as the principal for a given client. For example, from the certificate <code>CN=bob@example.com,OU=,O=Example,L=London,ST=London,C=GB</code> the principal <code>bob@example.com</code> will be extracted.</p>
+<h4 id="prerequisites-4"><a class="content__anchor" href="#prerequisites-4" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h4>
+<ul>
+<li>Completion of the section <a href="#transport-encryption">Transport Encryption</a> above</li>
+</ul>
+<h4 id="install-the-service-3"><a class="content__anchor" href="#install-the-service-3" aria-hidden="true"><i data-feather="bookmark"></i></a>Install the Service</h4>
+<p>Install the DC/OS Apache Kafka service with the following options in addition to your own:</p>
+<pre><code class="language-json">{
+    &quot;service&quot;: {
+        &quot;service_account&quot;: &quot;&lt;service-account&gt;&quot;,
+        &quot;service_account_secret&quot;: &quot;&lt;secret path&gt;&quot;,
+        &quot;security&quot;: {
+            &quot;transport_encryption&quot;: {
+                &quot;enabled&quot;: true
+            },
+            &quot;ssl_authentication&quot;: {
+                &quot;enabled&quot;: true
+            }
+        }
+    }
+}
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong> It is possible to enable SSL authentication after initial installation, but the service may be unavailable during the transition. Additionally, your Kafka clients will need to be reconfigured.</p>
+<h4 id="authenticating-a-client"><a class="content__anchor" href="#authenticating-a-client" aria-hidden="true"><i data-feather="bookmark"></i></a>Authenticating a Client</h4>
+<p>To authenticate a client against DC/OS Apache Kafka, you will need to configure it to use a certificate signed by the DC/OS CA. After generating a <a href="https://www.ssl.com/how-to/manually-generate-a-certificate-signing-request-csr-using-openssl/">certificate signing request</a>, you can issue it to the DC/OS CA by calling the API <code>&lt;dcos-cluster&gt;/ca/api/v2/sign</code>. Using <code>curl</code> the request would look like:</p>
+<pre><code class="language-bash">curl -X POST \
+    -H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; \
+    &lt;dcos-cluster&gt;/ca/api/v2/sign \
+    -d '{&quot;certificate_request&quot;: &quot;&lt;json-encoded-value-of-request.csr&gt;&quot;}'
+</code></pre>
+<p>The <code>&lt;json-encoded-value-of-request.csr&gt;</code> field represents the content of the <code>csr</code> file as a single line, where new lines are replaced with <code>\n</code>.</p>
+<pre><code class="language-bash">curl -X POST \
+    -H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; \
+    &lt;dcos-cluster&gt;/ca/api/v2/sign \
+    -d '{&quot;certificate_request&quot;: &quot;&quot;-----BEGIN CERTIFICATE REQUEST-----\nMIIC&lt;snipped for brevity&gt;o39lBi1w=\n-----END CERTIFICATE REQUEST-----\n&quot;&quot;}'
+</code></pre>
+<p>The response will contain a signed public certificate. More information on DC/OS CA API can be found <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/tls-ssl/ca-api/">here</a>.</p>
+<h2 id="authorization"><a class="content__anchor" href="#authorization" aria-hidden="true"><i data-feather="bookmark"></i></a>Authorization</h2>
+<p>The DC/OS Apache Kafka service supports Kafka’s <a href="https://docs.confluent.io/current/kafka/authorization.html#using-acls">ACL-based</a> authorization system. To use Kafka’s ACLs, either SSL or Kerberos authentication must be enabled as detailed above.</p>
+<h3 id="enable-authorization"><a class="content__anchor" href="#enable-authorization" aria-hidden="true"><i data-feather="bookmark"></i></a>Enable Authorization</h3>
+<h4 id="prerequisites-5"><a class="content__anchor" href="#prerequisites-5" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h4>
+<ul>
+<li>Completion of either <a href="#ssl-authentication">SSL</a> or <a href="#kerberos-authentication">Kerberos</a> authentication above.</li>
+</ul>
+<h4 id="install-the-service-4"><a class="content__anchor" href="#install-the-service-4" aria-hidden="true"><i data-feather="bookmark"></i></a>Install the Service</h4>
+<p>Install the DC/OS Apache Kafka service with the following options in addition to your own (remember, either SSL authentication or Kerberos must be enabled):</p>
+<pre><code class="language-json">{
+    &quot;service&quot;: {
+        &quot;security&quot;: {
+            &quot;authorization&quot;: {
+                &quot;enabled&quot;: true,
+                &quot;super_users&quot;: &quot;&lt;list of super users&gt;&quot;,
+                &quot;allow_everyone_if_no_acl_found&quot;: &lt;true|false default false&gt;
+            }
+        }
+    }
+}
+</code></pre>
+<p><code>service.security.authorization.super_users</code> should be set to a semi-colon delimited list of principals to treat as super users (all permissions). The format of the list is <code>User:&lt;user1&gt;;User:&lt;user2&gt;;...</code>. Using Kerberos authentication, the “user” value is the Kerberos primary, and for SSL authentication the “user” value is the <code>CN</code> of the certificate. The Kafka brokers themselves are automatically designated as super users.</p>
+<p class="message--note"><strong>NOTE: </strong> It is possible to enable Authorization after initial installation, but the service may be unavailable during the transition. Additionally, Kafka clients may fail to function if they do not have the correct ACLs assigned to their principals. During the transition `service.security.authorization.allow_everyone_if_no_acl_found` can be set to `true` to prevent clients from being failing until their ACLs can be set correctly. After the transition, `service.security.authorization.allow_everyone_if_no_acl_found` should be reversed to `false`</p>
+<h2 id="securely-exposing-dcos-apache-kafka-outside-the-cluster"><a class="content__anchor" href="#securely-exposing-dcos-apache-kafka-outside-the-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>Securely Exposing DC/OS Apache Kafka Outside the Cluster.</h2>
+<p>Both transport encryption and Kerberos are tightly coupled to the DNS hosts of the Kafka brokers. Therefore, exposing a secure Apache Kafka service outside of the cluster requires additional setup.</p>
+<h3 id="broker-to-client-connection"><a class="content__anchor" href="#broker-to-client-connection" aria-hidden="true"><i data-feather="bookmark"></i></a>Broker to Client Connection</h3>
+<p>To expose a secure Apache Kafka service outside of the cluster, any client connecting to it must be able to access all brokers of the service via the IP address assigned to the broker. This IP address will be one of: an IP address on a virtual network or the IP address of the agent the broker is running on.</p>
+<h3 id="forwarding-dns-and-custom-domain"><a class="content__anchor" href="#forwarding-dns-and-custom-domain" aria-hidden="true"><i data-feather="bookmark"></i></a>Forwarding DNS and Custom Domain</h3>
+<p>Every DC/OS cluster has a unique cryptographic ID which can be used to forward DNS queries to that Cluster. To securely expose the service outside the cluster, external clients must have an upstream resolver configured to forward DNS queries to the DC/OS cluster of the service as described <a href="/dcosdocs/mesosphere/dcos/latest/networking/DNS/mesos-dns/expose-mesos-zone/">here</a>.</p>
+<p>With only forwarding configured, DNS entries within the DC/OS cluster will be resolvable at <code>&lt;task-domain&gt;.autoip.dcos.&lt;cryptographic-id&gt;.dcos.directory</code>. However, if you configure a DNS alias, you can use a custom domain. For example, <code>&lt;task-domain&gt;.cluster-1.acmeco.net</code>. In either case, the DC/OS Apache Kafka service will need to be installed with an additional security option:</p>
+<pre><code class="language-json">{
+    &quot;service&quot;: {
+        &quot;security&quot;: {
+            &quot;custom_domain&quot;: &quot;&lt;custom-domain&gt;&quot;
+        }
+    }
+}
+</code></pre>
+<p>where <code>&lt;custom-domain&gt;</code> is one of <code>autoip.dcos.&lt;cryptographic-id&gt;.dcos.directory</code> or your organization specific domain (e.g., <code>cluster-1.acmeco.net</code>).</p>
+<p>As a concrete example, using the custom domain of <code>cluster-1.acmeco.net</code> the broker 0 task would have a host of <code>kafka-0-broker.&lt;service-name&gt;.cluster-1.acmeco.net</code>.</p>
+<h3 id="kerberos-principal-changes"><a class="content__anchor" href="#kerberos-principal-changes" aria-hidden="true"><i data-feather="bookmark"></i></a>Kerberos Principal Changes</h3>
+<p>Transport encryption alone does not require any additional changes. Endpoint discovery will work as normal, and clients will be able to connect securely with the custom domain as long as they are configured as described <a href="#transport-encryption-for-clients">here</a>.</p>
+<p>Kerberos, however, does require slightly different configuration. As noted in the section <a href="#create-principals">Create Principals</a>, the principals of the service depend on the hostname of the service. When creating the Kerberos principals, be sure to use the correct domain.</p>
+<p>For example, if you install with the following settings:</p>
+<pre><code class="language-json">{
+    &quot;service&quot;: {
+        &quot;name&quot;: &quot;a/good/example&quot;,
+        &quot;security&quot;: {
+            &quot;custom_domain&quot;: &quot;cluster-1.example.net&quot;,
+            &quot;kerberos&quot;: {
+                &quot;primary&quot;: &quot;example&quot;,
+                &quot;realm&quot;: &quot;EXAMPLE&quot;
+            }
+        }
+    },
+    &quot;brokers&quot;: {
+        &quot;count&quot;: 3
+    }
+}
+</code></pre>
+<p>The principals to create are as follows:</p>
+<pre><code>example/kafka-0-broker.agoodexample.cluster-1.example.net@EXAMPLE
+example/kafka-1-broker.agoodexample.cluster-1.example.net@EXAMPLE
+example/kafka-2-broker.agoodexample.cluster-1.example.net@EXAMPLE
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#dcos-apache-kafka-security">DC/OS Apache Kafka Security</a></li><li class="content__sections-item content__sections-item--h1"><a href="#provisioning-a-service-account">Provisioning a service account</a></li><li class="content__sections-item content__sections-item--h2"><a href="#prerequisites">Prerequisites:</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-a-key-pair">Create a Key Pair</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-a-service-account">Create a Service Account</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-a-secret">Create a Secret</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-and-assign-permissions">Create and Assign Permissions</a></li><li class="content__sections-item content__sections-item--h2"><a href="#permissive">Permissive</a></li><li class="content__sections-item content__sections-item--h2"><a href="#strict">Strict</a></li><li class="content__sections-item content__sections-item--h2"><a href="#transport-encryption">Transport Encryption</a></li><li class="content__sections-item content__sections-item--h2"><a href="#authentication">Authentication</a></li><li class="content__sections-item content__sections-item--h2"><a href="#authorization">Authorization</a></li><li class="content__sections-item content__sections-item--h2"><a href="#securely-exposing-dcos-apache-kafka-outside-the-cluster">Securely Exposing DC/OS Apache Kafka Outside the Cluster.</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

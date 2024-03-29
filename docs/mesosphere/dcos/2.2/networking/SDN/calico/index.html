@@ -1,0 +1,462 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Calico - D2iQ Docs</title><meta name="description" content="Understanding DC/OS Calico Integration"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.2"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/networking/SDN/calico">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/networking/SDN/calico">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/networking/SDN">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/networking/SDN">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/networking/"><i data-feather="chevron-right"></i>Networking</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/networking/load-balancing-vips/"><i data-feather="chevron-right"></i>Load Balancing and Virtual IPs (VIPs)</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/networking/SDN/"><i data-feather="chevron-right"></i>Software Defined Networks</a></li><ul><li class="active active-on"><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/networking/SDN/calico/">Calico</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/networking/SDN/dcos-overlay/">DC/OS Overlay</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/networking/SDN/usage/">Using SDNs</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/networking/SDN/cni-plugins/">CNI Plugin Support</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/networking/DNS/"><i data-feather="chevron-right"></i>DNS</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/archives/">Access Documentation Archives</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Calico</h1></div><h4 class="content__header-description">Understanding DC/OS Calico Integration</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.2/networking/SDN/calico/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><h2 id="overview"><a class="content__anchor" href="#overview" aria-hidden="true"><i data-feather="bookmark"></i></a>Overview</h2>
+<p>This package provides DC/OS Calico component to support Calico networking containers and network policy in DC/OS.</p>
+<h2 id="dcos-calico-components"><a class="content__anchor" href="#dcos-calico-components" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS Calico components</h2>
+<p>DC/OS Calico component integrates the <a href="https://www.projectcalico.org">Calico networking</a> into DC/OS, by providing the Calico CNI plugin for Mesos Universal Container Runtime and the Calico libnetwork plugin for Docker Engine. In addition, the calico control panel will provide the functionality of configuring the network policy for DC/OS workloads.</p>
+<h3 id="dcos-calico-services"><a class="content__anchor" href="#dcos-calico-services" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS Calico services</h3>
+<p>DC/OS Calico integrates Calico into DC/OS for managing container networking and network security, three services are introduced:</p>
+<ul>
+<li><code>dcos-calico-bird.service</code>: A BGP client that exchanges routing information between hosts for Calico. <a href="https://github.com/projectcalico/bird">(source)</a></li>
+<li><code>dcos-calico-confd.service</code>: The confd templating engine monitors etcd datastores and generating and reloading bird configuration dynamically. <a href="https://github.com/projectcalico/node">(source)</a></li>
+<li><code>dcos-calico-felix.service</code>: the control panel for Calico networking to program routes and ACL’s for containers. <a href="https://github.com/projectcalico/node">(source)</a></li>
+<li><code>dcos-calico-libntwork-plugin.service</code>: the network plugin for Docker that provides Calico networking to the Docker Engine. <a href="https://github.com/projectcalico/libnetwork-plugin">(source)</a></li>
+</ul>
+<h3 id="dcos-calico-cli"><a class="content__anchor" href="#dcos-calico-cli" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS Calico CLI</h3>
+<p>The DC/OS command line includes a <code>calico</code> plugin that allows running <code>calicoctl</code> commands from outside the cluster. To run any <code>calicoctl</code> command intead run it as <code>dcos calico</code> for example <code>dcos calico get nodes</code>:</p>
+<pre><code class="language-sh">dcos calico get nodes
+NAME
+172.16.0.23
+172.16.2.241
+172.16.21.4
+172.16.9.234
+
+</code></pre>
+<h2 id="dcos-configuration-reference-networking"><a class="content__anchor" href="#dcos-configuration-reference-networking" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS configuration reference (networking)</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>calico_network_cidr</td>
+<td>Subnet allocated for calico. The subnet specified by <code>calico_network_cidr</code> MUST not overlap with those for VXLAN backends or virtual networks defined for <a href="/dcosdocs/mesosphere/dcos/2.2/installing/production/advanced-configuration/configuration-reference/#dcos-overlay-enable">DC/OS virtual networks</a>. [ Default: 172.29.0.0/16 ]</td>
+</tr>
+<tr>
+<td>calico_vxlan_enabled</td>
+<td>Control, whether IP-in-IP or VXLAN mode is used for calico, by default VXLAN, is suggested to be used instead of VXLAN. <code>calico_vxlan_enabled</code> is supposed to set to ‘true’ for the environment that IP in IP is not supported, like Azure. [Default: ‘true’]</td>
+</tr>
+<tr>
+<td>calico_ipinip_mtu</td>
+<td>The MTU to set on the Calico IPIP tunnel device. This configuration works when calico_vxlan_enabled is set to be false. Please refer to the <a href="https://docs.projectcalico.org/networking/mtu">calico documentation</a> for a suitable MTU configuration. [Default: 1480]</td>
+</tr>
+<tr>
+<td>calico_vxlan_port</td>
+<td>The UDP port used for calico VXLAN. This configuration works when calico_vxlan_enabled is set to be true. [Default: 4789]</td>
+</tr>
+<tr>
+<td>calico_vxlan_vni</td>
+<td>The virtual network ID used for calico VXLAN. This configuration works when calico_vxlan_enabled is set to be true. [Default: 4096]</td>
+</tr>
+<tr>
+<td>calico_vxlan_mtu</td>
+<td>The MTU to set on the Calico VXLAN tunnel device. This configuration works when calico_vxlan_enabled is set to be true. Please refer to the <a href="https://docs.projectcalico.org/networking/mtu">calico documentation</a> for a suitable MTU configuration [Default: 1450]</td>
+</tr>
+<tr>
+<td>calico_veth_mtu</td>
+<td>The MTU to set on the veth pair devices, e.g. both the container interface and host-end interface. Please refer to the <a href="https://docs.projectcalico.org/networking/mtu">calico documentation</a> for a suitable MTU configuration [Default: 1500]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="calico-networking-universal-container-runtime"><a class="content__anchor" href="#calico-networking-universal-container-runtime" aria-hidden="true"><i data-feather="bookmark"></i></a>Calico networking (universal container runtime)</h3>
+<p>To use Calico networking containers, you only have to specify the network name as <code>calico</code>.</p>
+<p>The following marathon app definition example will launch a container using the <em>Mesos UCR engine</em> and plug it to the <code>calico</code> network:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/calico-ucr&quot;,
+  &quot;instances&quot;: 1,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;MESOS&quot;,
+    &quot;volumes&quot;: [],
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;mesosphere/id-server:2.1.0&quot;
+    },
+    &quot;portMappings&quot;: []
+  },
+  &quot;cpus&quot;: 0.1,
+  &quot;mem&quot;: 128,
+  &quot;requirePorts&quot;: false,
+  &quot;networks&quot;: [
+    {
+      &quot;mode&quot;: &quot;container&quot;,
+      &quot;name&quot;: &quot;calico&quot;
+    }
+  ],
+  &quot;healthChecks&quot;: [],
+  &quot;fetch&quot;: [],
+  &quot;constraints&quot;: []
+}
+</code></pre>
+<h3 id="calico-networking-docker-engine"><a class="content__anchor" href="#calico-networking-docker-engine" aria-hidden="true"><i data-feather="bookmark"></i></a>Calico networking (Docker engine)</h3>
+<p>Like with the previous example, the following marathon app definition will launch a container using the <em>Docker Engine</em> and plug it to the <code>calico</code> network:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/calico-docker&quot;,
+  &quot;instances&quot;: 1,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;DOCKER&quot;,
+    &quot;volumes&quot;: [],
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;mesosphere/id-server:2.1.0&quot;
+    },
+    &quot;portMappings&quot;: []
+  },
+  &quot;cpus&quot;: 0.1,
+  &quot;mem&quot;: 128,
+  &quot;requirePorts&quot;: false,
+  &quot;networks&quot;: [
+    {
+      &quot;mode&quot;: &quot;container&quot;,
+      &quot;name&quot;: &quot;calico&quot;
+    }
+  ],
+  &quot;healthChecks&quot;: [],
+  &quot;fetch&quot;: [],
+  &quot;constraints&quot;: []
+}
+</code></pre>
+<h2 id="administration-topics"><a class="content__anchor" href="#administration-topics" aria-hidden="true"><i data-feather="bookmark"></i></a>Administration topics</h2>
+<h3 id="network-policies"><a class="content__anchor" href="#network-policies" aria-hidden="true"><i data-feather="bookmark"></i></a>Network policies</h3>
+<p>Network policy provides the ability to control network traffic by an ordered set of rules applied to the endpoints specified by a label selector, please refer to the <a href="https://docs.projectcalico.org/reference/resources/networkpolicy">calico documentation</a> for a detailed explanation of policy rule definitions and label selector syntax.</p>
+<p>In DC/OS, Calico network policy is exposed directly to the operators, so that the operator can manage their traffic control according to different scenarios.</p>
+<p>limitations on network policy we have in DC/OS:</p>
+<ul>
+<li>Calico network policy is a namespaced resource, but for now, we support only <code>default</code> namespace in DC/OS, and all the namespaced Calico resources should be defined under <code>default</code> namespace.</li>
+<li>Calico network policy takes effect only on Calico networking containers, which means labels set on non-Calico networking containers like <code>hostnetwork</code>, <code>dcos</code> and <code>bridge</code> will not count in Calico network policy.</li>
+<li>UCR containers: Labels for network policy MUST be set in <code>NetworkInfo.Labels</code> for Mesos, and for Marathon, they should be in <code>networks.[].labels</code>, for example:</li>
+</ul>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/client&quot;,
+  &quot;instances&quot;: 1,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;MESOS&quot;,
+    ...
+  },
+   ...
+  &quot;networks&quot;: [
+    {
+      &quot;mode&quot;: &quot;container&quot;,
+      &quot;name&quot;: &quot;calico&quot;,
+      &quot;labels&quot;: {
+        &quot;role&quot;: &quot;client&quot;
+      }
+    }
+  ],
+  ...
+}
+</code></pre>
+<ul>
+<li>Docker Containers: Labels for network policy MUST be set in <code>container.docker.paramaters</code> and prefixed with <code>org.projectcalico.label</code>, for example:</li>
+</ul>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/client&quot;,
+  &quot;instances&quot;: 1,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;Docker&quot;,
+    &quot;docker&quot;: {
+      &quot;parameters&quot;: [
+        {
+          &quot;key&quot;: &quot;label&quot;,
+          &quot;value&quot;: &quot;org.projectcalico.label.role=client&quot;
+        },
+        {
+          &quot;key&quot;: &quot;label&quot;,
+          &quot;value&quot;: &quot;org.projectcalico.label.public=yes&quot;
+        }
+      ]
+    },
+    ...
+  },
+  ...
+}
+</code></pre>
+<h3 id="default-profile"><a class="content__anchor" href="#default-profile" aria-hidden="true"><i data-feather="bookmark"></i></a>Default profile</h3>
+<p>Calico Profile groups endpoints which inherit labels defined in the profile, for example, each namespace has one corresponding profile to granting labels to Pods in the namespace. Calico profile supports policy rules for traffic control but is deprecated in favor of much more flexible NetworkPolicy and GlobalNetworkPolicy resources.</p>
+<p>In our case, all Calico networking containers will be assigned with a default profile with the same name as CNI network, <code>calico</code> by default, and this profile allows all requests. L4LB and L7 proxy requests in which the source IP address is NATed to that of tunnel interfaces generated by Calico are currently not supported. This profile can found in the following YAML definition:</p>
+<pre><code class="language-yaml">apiVersion: projectcalico.org/v3
+kind: Profile
+metadata:
+  name: calico
+spec:
+  egress:
+  - action: Allow
+    destination: {}
+    source: {}
+  ingress:
+  - action: Allow
+    destination: {}
+    source: {}
+  labelsToApply:
+    calico: &quot;&quot;
+</code></pre>
+<p>For a more detailed description of the Calico profile, please read the <a href="https://docs.projectcalico.org/reference/resources/profile">calico documentation</a>.</p>
+<h3 id="network-policy-examples"><a class="content__anchor" href="#network-policy-examples" aria-hidden="true"><i data-feather="bookmark"></i></a>Network policy examples</h3>
+<p>In the following business isolation example, we have three application definitions as shown below, and both bookstore-frontend and bookstore-server are labeled with <code>&quot;biz_type&quot;: &quot;bookstore&quot;</code>, while fruitstore-frontend is labeled with <code>&quot;biz_type&quot;: &quot;fruitstore&quot;</code>. Here we will create a network policy to deny the requests from fruitstore-frontend to bookstore-server while allow requests from bookstore-frontend to bookstore-server.</p>
+<pre><code>+----------------------+      +------------------------+
+|                      |      |                        |
+|  bookstore-frontend  |      |   fruitstore-frontend  |
+|                      |      |                        |
++-----------------+----+      +----+-------------------+
+                  |                |
+                  |                |
+                  |                x
+                  |                |
+             +----v----------------v--+
+             |                        |
+             |   bookstore-server     |
+             |                        |
+             +------------------------+
+</code></pre>
+<h4 id="launch-marathon-531-applications"><a class="content__anchor" href="#launch-marathon-531-applications" aria-hidden="true"><i data-feather="bookmark"></i></a>Launch Marathon 5.3.1. applications</h4>
+<p>The Marathon application definition of bookstore-frontend with policy label <code>&quot;biz_type&quot;: &quot;bookstore&quot;</code>:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/bookstore-frontend&quot;,
+  &quot;instances&quot;: 1,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;MESOS&quot;,
+    &quot;volumes&quot;: [],
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;mesosphere/id-server:2.1.0&quot;
+    },
+    &quot;portMappings&quot;: []
+  },
+  &quot;cpus&quot;: 0.1,
+  &quot;mem&quot;: 128,
+  &quot;requirePorts&quot;: false,
+  &quot;networks&quot;: [
+    {
+      &quot;mode&quot;: &quot;container&quot;,
+      &quot;name&quot;: &quot;calico&quot;,
+      &quot;labels&quot;: {
+        &quot;biz_type&quot;: &quot;bookstore&quot;
+      }
+    }
+  ],
+  &quot;healthChecks&quot;: [],
+  &quot;fetch&quot;: [],
+  &quot;constraints&quot;: []
+}
+</code></pre>
+<p>The Marathon application definition of bookstore-server with policy label <code>&quot;biz_type&quot;: &quot;bookstore&quot;</code> and <code>&quot;role&quot;: &quot;server&quot;</code>, available on port 80:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/bookstore-server&quot;,
+  &quot;instances&quot;: 1,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;MESOS&quot;,
+    &quot;volumes&quot;: [],
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;mesosphere/id-server:2.1.0&quot;
+    },
+    &quot;portMappings&quot;: []
+  },
+  &quot;cpus&quot;: 0.1,
+  &quot;mem&quot;: 128,
+  &quot;requirePorts&quot;: false,
+  &quot;networks&quot;: [
+    {
+      &quot;mode&quot;: &quot;container&quot;,
+      &quot;name&quot;: &quot;calico&quot;,
+      &quot;labels&quot;: {
+        &quot;biz_type&quot;: &quot;bookstore&quot;,
+        &quot;role&quot;: &quot;server&quot;
+      }
+    }
+  ],
+  &quot;healthChecks&quot;: [],
+  &quot;fetch&quot;: [],
+  &quot;constraints&quot;: []
+}
+</code></pre>
+<p>The Marathon application definition of fruitstore-frontend with policy label <code>&quot;biz_type&quot;: &quot;fruitstore&quot;</code>:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/fruitstore-frontend&quot;,
+  &quot;instances&quot;: 1,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;MESOS&quot;,
+    &quot;volumes&quot;: [],
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;mesosphere/id-server:2.1.0&quot;
+    },
+    &quot;portMappings&quot;: []
+  },
+  &quot;cpus&quot;: 0.1,
+  &quot;mem&quot;: 128,
+  &quot;requirePorts&quot;: false,
+  &quot;networks&quot;: [
+    {
+      &quot;mode&quot;: &quot;container&quot;,
+      &quot;name&quot;: &quot;calico&quot;,
+      &quot;labels&quot;: {
+        &quot;biz_type&quot;: &quot;fruitstore&quot;
+      }
+    }
+  ],
+  &quot;healthChecks&quot;: [],
+  &quot;fetch&quot;: [],
+  &quot;constraints&quot;: []
+}
+</code></pre>
+<p>Lauch the above three Marathon applications by executing <code>dcos marathon app add ${app_definition_yaml_file}</code>, and we will then obtain three running Marathon applications as show below:</p>
+<pre><code class="language-sh">dcos task list
+         NAME              HOST      USER     STATE                                         ID                                                    AGENT ID                  REGION  ZONE
+  fruitstore-frontend  172.16.2.233  root  TASK_RUNNING  fruitstore-frontend.instance-8a3ed6db-2a47-11ea-91b3-66db602e14f5._app.1  0a1399a2-fe1f-4613-a618-f45159e12f2a-S0  N/A     N/A
+  bookstore-server     172.16.29.45  root  TASK_RUNNING  bookstore-server.instance-825bcbda-2a47-11ea-91b3-66db602e14f5._app.1     0a1399a2-fe1f-4613-a618-f45159e12f2a-S1  N/A     N/A
+  bookstore-frontend   172.16.2.233  root  TASK_RUNNING  bookstore-frontend.instance-79853919-2a47-11ea-91b3-66db602e14f5._app.1   0a1399a2-fe1f-4613-a618-f45159e12f2a-S0  N/A     N/A
+</code></pre>
+<h4 id="frontends-and-server-connectivity-test"><a class="content__anchor" href="#frontends-and-server-connectivity-test" aria-hidden="true"><i data-feather="bookmark"></i></a>Frontends and server connectivity test</h4>
+<p>Before applying network policy, the requests from bookstore-frontend and fruitstore-frontend to bookstore-server are successful, here we expect the FQDN <code>bookstore-server.marathon.containerip.dcos.thisdcos.directory</code> to return the bookstore-server container IP address:</p>
+<pre><code class="language-sh">dcos task exec fruitstore-frontend wget -qO- bookstore-server.marathon.containerip.dcos.thisdcos.directory:80/id
+hubfeu2yculh%
+
+dcos task exec bookstore-frontend wget -qO- bookstore-server.marathon.containerip.dcos.thisdcos.directory:80/id
+hubfeu2yculh%
+</code></pre>
+<h4 id="apply-network-policy"><a class="content__anchor" href="#apply-network-policy" aria-hidden="true"><i data-feather="bookmark"></i></a>Apply network policy</h4>
+<p>This network policy takes effect on bookstore-server and allows requests from applications with label <code>biz_type</code> set as <code>bookstore</code> while rejects those from applications with label <code>biz_type</code> set as <code>fruitstore</code>:</p>
+<pre><code class="language-yaml">apiVersion: projectcalico.org/v3
+kind: NetworkPolicy
+metadata:
+  name: allow-bookstore-cliient-to-server
+spec:
+  selector: biz_type == 'bookstore' &amp;&amp; role == 'server'
+  types:
+  - Ingress
+  ingress:
+  - action: Allow
+    protocol: TCP
+    source:
+      selector:  biz_type == 'bookstore'
+    destination:
+      ports:
+      - 80
+  - action: Deny
+    protocol: TCP
+    source:
+      selector: biz_type == 'fruitstore'
+    destination:
+      ports:
+      - 80
+</code></pre>
+<p>Temporarily, we can log into a DC/OS node, and apply the network policy by executing <code>dcos calico apply -f ${network_policy_yaml_file}</code>.</p>
+<p>Request from bookstore-frontend is successful as expected:</p>
+<pre><code class="language-sh">dcos task exec bookstore-frontend wget -qO- bookstore-server.marathon.containerip.dcos.thisdcos.directory:80/id
+hubfeu2yculh%
+</code></pre>
+<p>Request from fruitstore-frontend is timed out for packets are dropped.</p>
+<pre><code class="language-sh">dcos task exec fruitstore-frontend wget -qO- --timeout=5 bookstore-server.marathon.containerip.dcos.thisdcos.directory:80/id
+wget: can't connect to remote host (192.168.219.133): Connection timed out
+</code></pre>
+<h3 id="adding-network-profiles"><a class="content__anchor" href="#adding-network-profiles" aria-hidden="true"><i data-feather="bookmark"></i></a>Adding network profiles</h3>
+<p>In most of the use cases a single calico profile is enough. However if for any reason more networks needs to be created, you should be aware of some corner cases.</p>
+<blockquote>
+<p>⚠️ NOTE: The <code>calico-libnetwork-plugin</code> (the network interface to Docker Runtime) implicitly links the IP Pool to the calico profile associated with the respective calico docker network.</p>
+</blockquote>
+<p>That said, to add a network profile, you should:</p>
+<ol>
+<li>Create a new IP pool. For example:</li>
+</ol>
+<pre><code class="language-yaml">apiVersion: projectcalico.org/v3
+kind: IPPool
+metadata:
+  name: &lt;network-name&gt;
+spec:
+  cidr: 10.1.0.0/16
+  natOutgoing: true
+  disabled: false
+</code></pre>
+<p>Save the above yaml to <code>ip.yml</code> then run:</p>
+<pre><code class="language-sh">dcos calico create -f ip.yml
+</code></pre>
+<ol start="2">
+<li>Create a new calico profile. For example:</li>
+</ol>
+<pre><code class="language-yaml">apiVersion: projectcalico.org/v3
+kind: Profile
+metadata:
+  name: &lt;profile-name&gt;
+spec:
+  egress:
+  - action: Allow
+    destination: {}
+    source: {}
+  ingress:
+  - action: Allow
+    destination: {}
+    source: {}
+  labelsToApply:
+    calico: &quot;&quot;
+</code></pre>
+<p>Save the above yaml to <code>profile.yml</code> then run:</p>
+<pre><code class="language-sh">dcos calico create -f profile.yml
+</code></pre>
+<ol start="3">
+<li>On <strong>every agent</strong>, create a new docker network that will use the new profile. You can use the following command, making sure the subnet matches the cidr from the pool:</li>
+</ol>
+<pre><code class="language-sh">docker network create \
+    --opt org.projectcalico.profile=&lt;profile-name&gt; \
+    --driver calico \
+    --ipam-driver calico-ipam \
+    --subnet=10.1.0.0/16 \
+    &lt;network-name&gt;
+</code></pre>
+<h2 id="migrate-applications-from-dcos-overlay-to-calico"><a class="content__anchor" href="#migrate-applications-from-dcos-overlay-to-calico" aria-hidden="true"><i data-feather="bookmark"></i></a>Migrate Applications from DC/OS Overlay to Calico</h2>
+<p>Automatic Migration for all services existing within a DC/OS cluster is impossible. Services can be launched by a variety of Apache Mesos frameworks ranging from production-proven platform <a href="https://mesosphere.github.io/marathon/">Marathon</a> to services built on top of [dcos-common](https://github.com/mesosphere/dcos-commons. This includes existing, stateful services such as <a href="https://docs.d2iq.com/dcosdocs/mesosphere/dcos/services/cassandra">Cassandra</a> and <a href="https://docs.d2iq.com/dcosdocs/mesosphere/dcos/services/spark">Spark</a>, or services being hosted from your environment.</p>
+<h3 id="marathon-applicationaka-dcos-services"><a class="content__anchor" href="#marathon-applicationaka-dcos-services" aria-hidden="true"><i data-feather="bookmark"></i></a>Marathon application(aka DC/OS services)</h3>
+<p>There are at least two ways to effect a change for the Marathon application:</p>
+<ul>
+<li>DC/OS CLI
+Update the application definition to replace the network name <code>dcos</code> with <code>calico</code>
+<code>dcos app update calico_network_app.json</code></li>
+</ul>
+<p>for this method, the corresponding file, <code>calico_network_app.json</code> contains the definition of a Calico network application that differs from a DC/OS network application as follows:</p>
+<pre><code class="language-json">  {
+   &quot;networks&quot;: [
+     {
+       &quot;mode&quot;: &quot;container&quot;,
+-      &quot;name&quot;: &quot;dcos&quot;
++      &quot;name&quot;: &quot;calico&quot;
+     }
+   ]
+  }
+</code></pre>
+<ul>
+<li>DC/OS GUI</li>
+</ul>
+<p>Navigate to the networking tab for services, and change the network type from <code>Virtual Network: dcos</code> to <code>Virtual Network: calico</code>.</p>
+<h3 id="dcos-services-built-on-top-of-dcos-common"><a class="content__anchor" href="#dcos-services-built-on-top-of-dcos-common" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS services built on top of dcos-common</h3>
+<p>Normally, there are two components in DC/OS services:</p>
+<ul>
+<li>Scheduler - a Marathon application executing a plan to launch a Pod</li>
+<li>Pods - worker applications performing the service’s responsibilities.</li>
+</ul>
+<p>As the definition of the scheduler and pods are defined as release packages, and to make a permanent change in case the scheduler and Pods are using a virtual network, we have to generate new releases of DC/OS services after executing the following changes:</p>
+<ul>
+<li>
+<p>For Schedulers
+The Marathon application definition of a scheduler is defined as a template, marathon.json.mustache, inside the package definition, and is filled out by the operators according to the variables defined in <code>config.json</code>. The operator is expected to make sure <code>VIRTUAL_NETWORK_NAME</code> to be <code>calico</code> when the virtual network is enabled.</p>
+</li>
+<li>
+<p>For Pods
+<code>dcos-common</code> allows pods to join virtual networks, with the <code>dcos</code> virtual network available by default. Migrating the application from <code>dcos</code> to <code>calico</code> requires the change as follows:</p>
+</li>
+</ul>
+<pre><code class="language-yaml">pods:
+  pod-on-virtual-network:
+    count: 
+    networks:
+-     dcos:
++     calico:
+    tasks:
+      ...
+  pod-on-host:
+    count: 
+    tasks:
+      ...
+</code></pre>
+<h2 id="troubleshooting"><a class="content__anchor" href="#troubleshooting" aria-hidden="true"><i data-feather="bookmark"></i></a>Troubleshooting</h2>
+<p>Diagnostic info including Calico resources, components logs, and BGP peer status are collected in DC/OS node diagnostic bundle to debug Calico networking issues, please execute  <code>dcos node diagnostic create</code> to create a diagnostic bundle, and download the diagnostic bundle by executing <code>dcos node diagnostic download &lt;diagnostic-bundle-name&gt;</code>.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#overview">Overview</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-calico-components">DC/OS Calico components</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-configuration-reference-networking">DC/OS configuration reference (networking)</a></li><li class="content__sections-item content__sections-item--h2"><a href="#administration-topics">Administration topics</a></li><li class="content__sections-item content__sections-item--h2"><a href="#migrate-applications-from-dcos-overlay-to-calico">Migrate Applications from DC/OS Overlay to Calico</a></li><li class="content__sections-item content__sections-item--h2"><a href="#troubleshooting">Troubleshooting</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

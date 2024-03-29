@@ -1,0 +1,179 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>指定身份认证和参数 - D2iQ Docs</title><meta name="description" content="为 LDAP 目录指定身份认证方法和参数"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/1.13/security/ent/ldap/ldap-auth">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/ldap/ldap-auth">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/ldap/ldap-auth">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/ldap/ldap-auth">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/networking/"><i data-feather="chevron-right"></i>网络</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/"><i data-feather="chevron-right"></i>安全</a></li><ul><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/"><i data-feather="chevron-right"></i>DC/OS Enterprise 安全性</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/users-groups/"><i data-feather="chevron-right"></i>管理用户和组</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/gui-permissions/"><i data-feather="chevron-right"></i>授予访问 UI 的权限</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/perms-management/">权限管理</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/perms-reference/">权限参考</a></li><li class="active"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/ldap/"><i data-feather="chevron-right"></i>LDAP 身份认证</a></li><ul><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/ldap/ldap-conn/">连接</a></li><li class="active active-on"><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/ldap/ldap-auth/">指定身份认证和参数</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/ldap/ldap-verify/">验证</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/ldap/ldap-sync/">同步</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/ldap/ldap-troubleshooting/">排除 LDAP 错误</a></li></ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/secrets/"><i data-feather="chevron-right"></i>密钥</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/sso/"><i data-feather="chevron-right"></i>基于身份提供程序的身份认证</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/service-auth/"><i data-feather="chevron-right"></i>服务认证</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/restrict-service-access/">限制对 DC/OS 服务组的访问</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/hardening/">强化</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/iam-api/">身份和访问管理 API</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/tls-ssl/"><i data-feather="chevron-right"></i>确保与 TLS 通信的安全</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/oss/"><i data-feather="chevron-right"></i>DC/OS 开源安全</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">指定身份认证和参数</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">为 LDAP 目录指定身份认证方法和参数</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/ldap/ldap-auth/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- The source repository for this topic is https://github.com/dcos/dcos-docs-site -->
+<p>在此部分中，您将为 LDAP 目录设置身份认证方法和参数。您可以使用两种绑定类型和两种身份认证方法。</p>
+<h1 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>绑定类型</h1>
+<p>绑定操作用于对目录服务器进行客户端身份认证，建立用于该连接上后续操作的授权身份，并指定客户端要使用的 LDAP 协议版本。</p>
+<p>您可以使用两种绑定类型：</p>
+<ul>
+<li>匿名绑定 - 使用简单绑定或搜索绑定。任何人都可以连接到 LDAP 服务器。此绑定类型不需要 <strong>查找 DN</strong> 或 <strong>查找密码</strong>。</li>
+<li>LDAP 凭据 - 需要 <strong>查找 DN</strong> 和 <strong>查找密码</strong>。必须先确立 LDAP 凭据。</li>
+</ul>
+<h1 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>身份认证方法</h1>
+<p>您可以使用两种身份认证方法。</p>
+<ul>
+<li>
+<p>简单绑定。通过简单绑定的身份认证是验证 LDAP 客户端的最常见方式，但您也可以选择搜索绑定身份认证方法。您可以匿名绑定，也可以提供 LDAP 凭据，例如“查找 DN”和“查找密码”。在任一情况下，您都必须提供用户 DN 模板。如果您的 LDAP 用户名是 [可分辨名称 (DN)] 的一部分，请选择简单绑定。(https://www.ldap.com/ldap-dns-and-rdns).</p>
+</li>
+<li>
+<p>搜索绑定。虽然简单的绑定连接只需一步即可完成，但搜索/绑定操作需要两个步骤。首先，在目录中搜索用户名属性。如果找到，则进行绑定操作以检查用户对外部目录的凭据。您必须指定用户搜索库和用户搜索筛选模板。在某些方法中，您还必须指定“查找 DN”和“查找密码”。如果您的 LDAP 用户名不是 [可分辨名称 (DN) 的一部分]，请选择搜索绑定。(https://www.ldap.com/ldap-dns-and-rdns).</p>
+</li>
+</ul>
+<h2 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>使用简单绑定的匿名绑定</h2>
+<p>当您选择“使用简单绑定的匿名绑定”时，您必须提供 <strong>用户 DN 模板</strong>。</p>
+<ol>
+<li>
+<p>在 <strong>添加目录</strong> 窗口中，单击 <strong>身份认证</strong>。</p>
+</li>
+<li>
+<p>在 <strong>绑定类型</strong>下，单击 <strong>匿名绑定</strong>。</p>
+</li>
+<li>
+<p>在 <strong>身份认证方法</strong>下，单击 <strong>简单绑定</strong>。</p>
+</li>
+<li>
+<p>键入外部 LDAP 目录可用于在 <strong>用户 DN 模板</strong> 字段中查找用户账户的 DN 模板。此字符串必须包含 <code>%(username)s</code>，DC/OS 会将其替换为用户在登录时提供的用户名。示例如下：</p>
+<pre><code class="language-bash">cn=%(username)s,dc=los-pollos,dc=io
+uid=%(username)s,cn=users,cn=accounts,dc=demo1,dc=freeipa,dc=org
+uid=%(username)s,ou=users,dc=example,dc=com
+</code></pre>
+</li>
+<li>
+<p>完成输入后，对话框应如下所示。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/1.13/img/GUI-LDAP-anonymous-simple-bind.png" alt="简单绑定参数"></p>
+<p>图 1. “使用简单绑定的匿名绑定”参数</p>
+</li>
+<li>
+<p>单击 <strong>Add Directory</strong>。</p>
+</li>
+<li>
+<p><a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/ldap/ldap-verify/">验证您的连接</a>.</p>
+</li>
+</ol>
+<h2 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>使用搜索绑定的匿名绑定</h2>
+<p>当您选择“使用搜索绑定的匿名绑定”时，您必须提供 <strong>用户搜索库</strong> 和 <strong>用户搜素筛选模板</strong>。</p>
+<ol>
+<li>
+<p>在 <strong>添加目录</strong> 窗口中，单击 <strong>身份认证</strong>。</p>
+</li>
+<li>
+<p>在 <strong>绑定类型</strong>下，单击 <strong>匿名绑定</strong>。</p>
+</li>
+<li>
+<p>在 <strong>身份认证方法</strong>下，单击 <strong>搜索绑定</strong>。</p>
+</li>
+<li>
+<p>在 <strong>User Search Base</strong>（用户搜索库）字段中，指定目录中要开始搜索 LDAP 用户名的位置。这应为[搜索库对象]的 DN。(https://technet.microsoft.com/en-us/library/cc978021.aspx). 例如：</p>
+<pre><code class="language-bash">cn=Users,dc=example,dc=com 
+</code></pre>
+</li>
+<li>
+<p>在 <strong>User Search Filter Template</strong> 字段中指定将 LDAP 用户名转换为有效 LDAP 搜索筛选器的模板。该条目必须包含以下占位符：<code>%(username)s</code>。例如：</p>
+<pre><code class="language-bash">(sAMAccountName=%(username)s)
+(uid=%(username)s)
+</code></pre>
+</li>
+<li>
+<p>完成输入后，对话框应如下所示：</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/1.13/img/GUI-LDAP-anonymous-search-bind.png" alt="使用搜索绑定的匿名绑定"></p>
+<p>图 2. “使用搜索绑定的匿名绑定”参数</p>
+</li>
+<li>
+<p>单击 <strong>Add Directory</strong>。</p>
+</li>
+<li>
+<p><a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/ldap/ldap-verify/">验证您的连接</a>.</p>
+</li>
+</ol>
+<h2 id="ldap"><a class="content__anchor" href="#ldap" aria-hidden="true"><i data-feather="bookmark"></i></a>使用简单绑定的 LDAP 凭据</h2>
+<p>选择 <strong>LDAP 凭据</strong> 作为绑定类型并选择 <strong>简单绑定</strong> 作为身份认证类型时，您必须提供 <strong>查找 DN</strong>、<strong>查找密码</strong> 和 <strong>用户 DN 模板</strong>。</p>
+<ol>
+<li>
+<p>在 <strong>添加目录</strong> 窗口中，单击 <strong>身份认证</strong>。</p>
+</li>
+<li>
+<p>在 <strong>绑定类型</strong> 下，单击 <strong>LDAP 凭据</strong>。</p>
+</li>
+<li>
+<p>在 <strong>身份认证方法</strong>下，单击 <strong>简单绑定</strong>。</p>
+</li>
+<li>
+<p>提供用于连接到 LDAP 服务器的用户帐户的完整 DN，以在 <strong>Lookup DN</strong> 字段中导入用户、组以及检查用户凭据。一些示例如下：</p>
+<pre><code class="language-bash">    cn=read-only-user,dc=los-pollos,dc=io
+    uid=read-only-user,cn=users,cn=accounts,dc=demo1,dc=freeipa,dc=org
+    uid=read-only-user,ou=users,dc=example,dc=com
+</code></pre>
+ <p class="message--note"><strong>注意：</strong>我们建议使用只读用户账户。</p>
+</li>
+<li>
+<p>在 <strong>Lookup Password</strong> 字段中提供帐户的密码。</p>
+</li>
+<li>
+<p>键入外部 LDAP 目录可用于在 <strong>用户 DN 模板</strong> 字段中查找用户账户的 DN 模板。此字符串必须包含 <code>%(username)s</code>，DC/OS 会将其替换为用户在登录时提供的用户名。示例如下：</p>
+<pre><code class="language-bash">cn=%(username)s,dc=los-pollos,dc=io
+uid=%(username)s,cn=users,cn=accounts,dc=demo1,dc=freeipa,dc=org
+uid=%(username)s,ou=users,dc=example,dc=com
+</code></pre>
+</li>
+<li>
+<p>完成输入后，对话框应如下所示。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/1.13/img/GUI-LDAP-credentials-simple.png" alt="简单绑定参数"></p>
+<p>图 3. “使用简单绑定的 LDAP 凭据”参数</p>
+</li>
+<li>
+<p>单击 <strong>Add Directory</strong>。</p>
+</li>
+<li>
+<p><a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/ldap/ldap-verify/">验证您的连接</a>.</p>
+</li>
+</ol>
+<h2 id="ldap-2"><a class="content__anchor" href="#ldap-2" aria-hidden="true"><i data-feather="bookmark"></i></a>使用搜索绑定的 LDAP 凭据</h2>
+<p>选择 <strong>LDAP 凭据</strong> 作为绑定类型并选择 <strong>搜索绑定</strong> 作为身份认证类型时，您必须提供 <strong>查找 DN</strong>、<strong>查找密码</strong>、<strong>用户搜索库</strong> 和 <strong>用户搜索筛选模板</strong>。</p>
+<ol>
+<li>
+<p>在 <strong>添加目录</strong> 窗口中，单击 <strong>身份认证</strong>。</p>
+</li>
+<li>
+<p>在 <strong>绑定类型</strong> 下，单击 <strong>LDAP 凭据</strong>。</p>
+</li>
+<li>
+<p>提供用于连接到 LDAP 服务器的用户帐户的完整 DN，以在 <strong>Lookup DN</strong> 字段中导入用户、组以及检查用户凭据。一些示例如下：</p>
+<pre><code class="language-bash">    cn=read-only-user,dc=los-pollos,dc=io
+    uid=read-only-user,cn=users,cn=accounts,dc=demo1,dc=freeipa,dc=org
+    uid=read-only-user,ou=users,dc=example,dc=com
+</code></pre>
+ <p class="message--note"><strong>注意：</strong>我们建议使用只读用户账户。</p>
+</li>
+<li>
+<p>在 <strong>Lookup Password</strong> 字段中提供帐户的密码。</p>
+</li>
+<li>
+<p>在 <strong>身份认证方法</strong>下，单击 <strong>搜索绑定</strong>。</p>
+</li>
+<li>
+<p>在 <strong>User Search Base</strong>（用户搜索库）字段中，指定目录中要开始搜索 LDAP 用户名的位置。这应当是 [搜索库对象] 的 DN。例如：</p>
+<pre><code class="language-bash">cn=Users,dc=example,dc=com 
+</code></pre>
+</li>
+<li>
+<p>在 <strong>User Search Filter Template</strong> 字段中指定将 LDAP 用户名转换为有效 LDAP 搜索筛选器的模板。该条目必须包含以下占位符：<code>%(username)s</code>。例如：</p>
+<pre><code class="language-bash">(sAMAccountName=%(username)s)
+(uid=%(username)s)
+</code></pre>
+</li>
+<li>
+<p>完成输入后，对话框应如下所示：</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/1.13/img/GUI-LDAP-credentials-search.png" alt="使用搜索绑定的 LDAP 凭据"></p>
+<p>图 4. “使用搜索绑定的 LDAP 凭据”参数</p>
+</li>
+<li>
+<p>单击 <strong>Add Directory</strong>。</p>
+</li>
+<li>
+<p><a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/ldap/ldap-verify/">验证您的连接</a>.</p>
+</li>
+</ol>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#绑定类型">绑定类型</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-2">身份认证方法</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-3">使用简单绑定的匿名绑定</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-4">使用搜索绑定的匿名绑定</a></li><li class="content__sections-item content__sections-item--h2"><a href="#ldap">使用简单绑定的 LDAP 凭据</a></li><li class="content__sections-item content__sections-item--h2"><a href="#ldap-2">使用搜索绑定的 LDAP 凭据</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

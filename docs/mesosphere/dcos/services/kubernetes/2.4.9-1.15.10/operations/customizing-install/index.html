@@ -1,0 +1,273 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Customizing your installation - D2iQ Docs</title><meta name="description" content="Customizing your installation of Kubernetes on DC/OS"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Kubernetes Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.8.0-1.19.2/operations/customizing-install">Kubernetes 2.8.0-1.19.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.7.0-1.18.6/operations/customizing-install">Kubernetes 2.7.0-1.18.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.6.1-1.17.8/operations/customizing-install">Kubernetes 2.6.1-1.17.8</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.6.0-1.17.7/operations/customizing-install">Kubernetes 2.6.0-1.17.7</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.5.0-1.16.9/operations/customizing-install">Kubernetes 2.5.0-1.16.9</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/customizing-install">Kubernetes 2.4.9-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/operations/customizing-install">Kubernetes 2.4.8-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.7-1.15.10/operations/customizing-install">Kubernetes 2.4.7-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.6-1.15.6/operations/customizing-install">Kubernetes 2.4.6-1.15.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.5-1.15.5/operations/customizing-install">Kubernetes 2.4.5-1.15.5</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/customizing-install">Kubernetes 2.4.4-1.15.4</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/customizing-install">Kubernetes 2.4.3-1.15.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.2-1.15.3/operations/customizing-install">Kubernetes 2.4.2-1.15.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/operations/customizing-install">Kubernetes 2.4.1-1.15.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.10-1.15.10/operations/customizing-install">Kubernetes 2.4.10-1.15.10</a></li></ul><div class="toggle"><p><span class="title">Kubernetes</span><span class="version"> 2.4.9-1.15.10</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/overview/">Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/getting-started/"><i data-feather="chevron-right"></i>Tutorial - Kubernetes on DC/OS Enterprise</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/"><i data-feather="chevron-right"></i>Operations</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/cluster-sizing/">Cluster Sizing</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/kubernetes-audit/">Kubernetes Auditing</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/kubernetes-dashboard/">Kubernetes Dashboard</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/metrics-exporter/">Metrics Exporter</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/quota-support/">Quota Support</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/ingress/">External Ingress</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/admission-controllers/">Admission Controllers</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/authn-and-authz/">Authentication and Authorization</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/encrypt-data/">Encrypt Data</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/customizing-install/">Customizing</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/gatekeeper/">Enforce policies using Gatekeeper</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/upgrade/">Upgrade</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/exposing-the-kubernetes-api/">Exposing the Kubernetes API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/exposing-the-kubernetes-api-marathonlb-edgelb/">Exposing the Kubernetes API via Marathon-LB or Edge-LB</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/connecting-clients/">Connecting Clients</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/uninstall/">Uninstall</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/private-docker-registry/">Use private Docker registry</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/disaster-recovery/">Disaster Recovery</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/troubleshooting/">Troubleshooting</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/cli/">CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/changelog/">Changelog</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/supported-versions/">Supported Versions</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Customizing your installation</h1></div><h4 class="content__header-description">Customizing your installation of Kubernetes on DC/OS</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/customizing-install/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>The default DC/OS Kubernetes package installation provides reasonable defaults.
+However, there are many available options for advanced users to further modify the installation. This section describes those options.</p>
+<p>This section continues on from the instructions given in the <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/getting-started/creating-clusters/">Basic Installation</a> section.</p>
+<h1 id="advanced-installation"><a class="content__anchor" href="#advanced-installation" aria-hidden="true"><i data-feather="bookmark"></i></a>Advanced Installation</h1>
+<h2 id="change-the-kubernetes-nodes-resource-specification"><a class="content__anchor" href="#change-the-kubernetes-nodes-resource-specification" aria-hidden="true"><i data-feather="bookmark"></i></a>Change the Kubernetes nodes resource specification</h2>
+<p>The default, as mentioned above, is 3 CPUs, 3GB of RAM, and 10GB of disk.
+However, the kubelet and the container runtime will reserve 1 CPU and 1GB of RAM.
+This means that each Kubernetes node will have 2 CPUs, 2 GB of RAM, and 10GB of disk allocatable to Kubernetes pods.</p>
+<p>For more information, read the official documentation for <a href="https://kubernetes.io/docs/tasks/administer-cluster/reserve-compute-resources/#node-allocatable">Kubernetes node-allocatable</a>.</p>
+<p>DC/OS Kubernetes allows you to specify the resources for public and private nodes separately.</p>
+<p>As an example, we are going to request 2 private Kubernetes nodes with 4 CPU, 8GB of RAM and 100GB of disk, and 1 public Kubernetes node with 2 CPU, 4GB of RAM and 10GB of disk allocatable to Kubernetes pods.</p>
+<p>Create an <code>options.json</code> file, or edit an existing one:</p>
+<pre><code class="language-json">{
+  &quot;kubernetes&quot;: {
+    &quot;private_node_count&quot;: 2,
+    &quot;private_reserved_resources&quot;: {
+      &quot;kube_cpus&quot;: 4,
+      &quot;kube_mem&quot;: 8192,
+      &quot;kube_disk&quot;: 102400,
+    },
+    &quot;public_node_count&quot;: 1,
+    &quot;public_reserved_resources&quot;: {
+      &quot;kube_cpus&quot;: 2,
+      &quot;kube_mem&quot;: 1024,
+      &quot;kube_disk&quot;: 512
+    }
+  }
+}
+</code></pre>
+<p>See the <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/cluster-sizing/">Cluster Sizing</a> page for a more detailed explanation.</p>
+<h2 id="change-the-number-of-kubernetes-nodes"><a class="content__anchor" href="#change-the-number-of-kubernetes-nodes" aria-hidden="true"><i data-feather="bookmark"></i></a>Change the number of Kubernetes nodes</h2>
+<p>DC/OS Kubernetes allows you to specify the number of private and public Kubernetes nodes in your cluster.</p>
+<h3 id="private-nodes"><a class="content__anchor" href="#private-nodes" aria-hidden="true"><i data-feather="bookmark"></i></a>Private nodes</h3>
+<p>The default private node count is 1. To change this value, specify <code>kubernetes.private_node_count</code> in a JSON options file, as shown below.</p>
+<p>As an example, we are going to request 10 private Kubernetes nodes.</p>
+<p>Create an <code>options.json</code> file, or edit an existing one and install:</p>
+<pre><code class="language-json">{
+  &quot;kubernetes&quot;: {
+    &quot;private_node_count&quot;: 10
+  }
+}
+</code></pre>
+<h3 id="public-nodes"><a class="content__anchor" href="#public-nodes" aria-hidden="true"><i data-feather="bookmark"></i></a>Public nodes</h3>
+<p>The default public node count is 0. To change this value, specify <code>kubernetes.public_node_count</code> in a JSON options file, as shown below.</p>
+<p>As an example, we are going to request 2 additional public Kubernetes nodes to the previous 10 private Kubernetes nodes.</p>
+<p>Create an <code>options.json</code> file, or edit an existing one and install:</p>
+<pre><code class="language-json">{
+  &quot;kubernetes&quot;: {
+    &quot;private_node_count&quot;: 10,
+    &quot;public_node_count&quot;: 2
+  }
+}
+</code></pre>
+<h2 id="configure-pods-log-files-thresholds"><a class="content__anchor" href="#configure-pods-log-files-thresholds" aria-hidden="true"><i data-feather="bookmark"></i></a>Configure pods log files thresholds</h2>
+<p>Each Kubernetes node stores each of its pods’ containers’ logs in a dedicated log file per container.
+By default, each log file can grow up to 1MB in size.
+When the maximum size is reached, older log entries are automatically deleted.
+To increase this limit, create or edit the <code>options.json</code> file according to the following example:</p>
+<pre><code class="language-json">{
+  &quot;kubernetes&quot;: {
+    &quot;maximum_container_log_size&quot;: 10
+  }
+}
+</code></pre>
+<p>The value of <code>kubernetes.maximum_container_log_size</code> is expressed in MB (e.g. the above value of <code>10</code> means 10MB).</p>
+<h2 id="region-selection"><a class="content__anchor" href="#region-selection" aria-hidden="true"><i data-feather="bookmark"></i></a>Region Selection</h2>
+<p>By default, region placement is set to the <code>local region</code> of the DC/OS installation.
+If DC/OS spans multiple regions then it is possible to launch Kubernetes in one and only one region of choice.
+It is possible that the region may not have the resources required, make sure to read and understand <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/cluster-sizing/">Cluster Sizing</a> before attempting a deployment.</p>
+<p>There are two ways to deploy a Kubernetes cluster to a region:</p>
+<ul>
+<li>
+<p>The drop down under the <code>service</code> tab of the UI.</p>
+</li>
+<li>
+<p>Through the CLI define the options json as follows:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;name&quot;: &quot;kubernetes-cluster&quot;,
+    &quot;region&quot;: &quot;RegionName&quot;
+  }
+}
+</code></pre>
+</li>
+</ul>
+<p>Considerations:</p>
+<ul>
+<li>An empty string means deploy to the local region of DC/OS.</li>
+<li>Regions are case sensitive.</li>
+<li>Once deployed, region changes are not supported and can leave the scheduler in a crash loop.</li>
+</ul>
+<p><strong>NOTE:</strong> Multi-Region deployment is not supported, see <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/limitations/">Limitations</a>.</p>
+<h2 id="mesos-roles"><a class="content__anchor" href="#mesos-roles" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesos Roles</h2>
+<p><a href="http://mesos.apache.org/documentation/latest/roles/">Mesos roles</a> are used to reserve certain resources for the use of one or more DC/OS services.</p>
+<p>In this case, it’s allowed to define the roles for:</p>
+<ul>
+<li>the Kubernetes control-plane, which includes <code>etcd</code>, <code>kube-apiserver</code>, <code>kube-controller-manager</code> and <code>kube-scheduler</code>;</li>
+<li>the Kubernetes private worker nodes;</li>
+<li>the Kubernetes public worker nodes.</li>
+</ul>
+<p>Options example:</p>
+<pre><code class="language-json">{
+  &quot;kubernetes&quot;: {
+    &quot;control_plane_pre_reserved_role&quot;: &quot;kube-x-cp&quot;,
+    &quot;private_node_pre_reserved_role&quot;: &quot;kube-x-private&quot;,
+    &quot;public_node_pre_reserved_role&quot;: &quot;kube-x-public&quot;
+  },
+  &quot;etcd&quot;: {
+    &quot;pre_reserved_role&quot;: &quot;etcd-x&quot;
+  }
+}
+</code></pre>
+<p>Each role must be uniquely named (with the exception of the <code>*</code> and <code>slave-public</code> default roles), as name collisions will cause deployment to fail.
+Each role must have the necessary resource counts for each of the intended deployment tasks, again failure to set those reservation values will cause deployment to fail.</p>
+<h2 id="placement-constraints"><a class="content__anchor" href="#placement-constraints" aria-hidden="true"><i data-feather="bookmark"></i></a>Placement Constraints</h2>
+<p>Placement constraints allow you to customize where a service is deployed in the DC/OS cluster.</p>
+<p>Placement constraints use the <a href="http://mesosphere.github.io/marathon/docs/constraints.html">Marathon operators</a> syntax.
+For example, <code>[[&quot;hostname&quot;, &quot;UNIQUE&quot;]]</code> ensures that at most one pod instance is deployed per agent.</p>
+<p>A common task is to specify a list of whitelisted systems to deploy to and can be achieved using the following:</p>
+<p><code>[[&quot;hostname&quot;, &quot;LIKE&quot;, &quot;10.0.0.159|10.0.1.202|10.0.3.3&quot;]]</code></p>
+<p class="message--note"><strong>NOTE: </strong>Be sure to include excess capacity in such a scenario so that if one of the whitelisted systems goes down, there is still enough capacity to repair your service.</p>
+<p>Create an <code>options.json</code> file, or edit an existing one and install:</p>
+<pre><code class="language-json">{
+  &quot;kubernetes&quot;: {
+    &quot;control_plane_placement&quot;: &quot;[[\&quot;disk\&quot;,\&quot;IS\&quot;,\&quot;fast-ssd\&quot;]]&quot;,
+    &quot;private_node_placement&quot;: &quot;[\&quot;hostname\&quot;,\&quot;UNIQUE\&quot;]&quot;,
+    &quot;public_node_placement&quot;: &quot;[\&quot;hostname\&quot;,\&quot;UNIQUE\&quot;]&quot;
+  },
+  &quot;etcd&quot;: {
+        &quot;placement&quot;: &quot;[\&quot;hostname\&quot;,\&quot;UNIQUE\&quot;]&quot;
+  }
+}
+</code></pre>
+<h3 id="updating-placement-constraints"><a class="content__anchor" href="#updating-placement-constraints" aria-hidden="true"><i data-feather="bookmark"></i></a>Updating Placement Constraints</h3>
+<p class="message--note"><strong>NOTE: </strong>Already-running service pods will not be affected by changes in placement constraints. This is because altering a placement constraint might invalidate the current placement of a running pod; the pod will not be relocated automatically as doing so is a destructive action.</p>
+<p>We recommend using the following procedure to update the placement constraints of a pod:</p>
+<ul>
+<li>Update the placement constraint definition in the service.</li>
+<li>For each affected pod, one at a time, perform a pod replace. This will (destructively) move the pod to be in accordance with the new placement constraints.</li>
+</ul>
+<h2 id="tls"><a class="content__anchor" href="#tls" aria-hidden="true"><i data-feather="bookmark"></i></a>TLS</h2>
+<p>This package enforces TLS for mutual-authentication and communications encryption wherever possible.
+Below, you can find more details where, when, and how it happens.</p>
+<h3 id="encryption-and-mutual-authentication"><a class="content__anchor" href="#encryption-and-mutual-authentication" aria-hidden="true"><i data-feather="bookmark"></i></a>Encryption and mutual-authentication</h3>
+<p>TLS for mutual-authentication and communications encryption implemented as:</p>
+<ul>
+<li><code>etcd</code> cluster peers - only encryption is enabled but not mutual-authentication since <code>etcd</code> doesn’t validate peer certificates based on the provided hostname but rather on the IP addresses the peer sees as peers, or DNS SRV discovery which DC/OS doesn’t support.</li>
+<li><code>etcd</code> client-server - both encryption and mutual-authentication are enabled. The only client in place is the <code>kube-control-plane</code>, meaning that the communication between the Kubernetes API and <code>etcd</code> is secured.</li>
+<li>All Kubernetes components have encryption and mutual-authentication enabled, including <code>kube-control-plane</code>, <code>kube-proxy</code> and the <code>kubelet</code>.</li>
+<li>All included (mandatory) add-ons, including on-demand backup/restore, respect mutual-authentication against the Kubernetes API.</li>
+</ul>
+<h3 id="tls-open-source-vs-enterprise-dcos"><a class="content__anchor" href="#tls-open-source-vs-enterprise-dcos" aria-hidden="true"><i data-feather="bookmark"></i></a>TLS Open Source vs Enterprise DC/OS</h3>
+<p>TLS artifacts, such as key pairs (private and public) and certificates, are created, signed, and exchanged in order to prove identity of entities like people, organizations, applications, etc., with the purpose of establishing trust. For this trust establishment to happen, you need a <a href="https://en.wikipedia.org/wiki/Public_key_infrastructure">Public Key Infrastructure or PKI</a>.</p>
+<p>In the past, this package supported TLS only when running on DC/OS Enterprise which provides the mechanisms needed for PKI:</p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/1.12/security/ent/tls-ssl/">DC/OS CA</a> - a centralized certificate-authority (CA) for validating and, eventually, signing certificate signing requests (CSRs).</li>
+<li><a href="/dcosdocs/mesosphere/dcos/1.12/security/ent/secrets/">DC/OS Secrets</a> - a centralized and secure way to distribute TLS artifacts to package components, such as the Kubernetes components, and other applications living in the same DC/OS cluster.</li>
+<li><a href="/dcosdocs/mesosphere/dcos/1.12/security/ent/service-auth/">DC/OS Service Accounts</a> - needed for our package and applications to authenticate against the services named above.</li>
+</ul>
+<p>DC/OS does not provide the functionality describe above. The following diagram describes how this was achieved on DC/OS.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/img/tls.png" alt="alt text" title="TLS design"></p>
+<p>Figure 1. TLS Design</p>
+<h3 id="tls-provisioning-in-dcos-enterprise"><a class="content__anchor" href="#tls-provisioning-in-dcos-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>TLS Provisioning in DC/OS Enterprise</h3>
+<p>When installing DC/OS Kubernetes on a DC/OS Enterprise cluster, a <a href="/dcosdocs/mesosphere/dcos/1.12/security/ent/service-auth/">service account</a> is mandatory.</p>
+<p>This service account must be setup with adequate permissions in order to manage CA and secrets, and it <strong>MUST</strong> be provisioned before installing DC/OS Kubernetes.</p>
+<ol>
+<li>
+<p>In order to provision such service account, first you need to install the <a href="/dcosdocs/mesosphere/dcos/1.12/cli/">DC/OS Enterprise CLI</a>. Then, run the following:</p>
+<pre><code class="language-shell">dcos security org service-accounts keypair private-key.pem public-key.pem
+dcos security org service-accounts delete kubernetes-cluster
+dcos security org service-accounts create -p public-key.pem -d 'Kubernetes service account' kubernetes-cluster
+dcos security secrets delete kubernetes-cluster/sa
+dcos security secrets create-sa-secret private-key.pem kubernetes-cluster kubernetes-cluster/sa
+</code></pre>
+</li>
+<li>
+<p>Next, you need to <a href="/dcosdocs/mesosphere/dcos/1.12/security/ent/perms-management/">grant</a> the service account the correct <a href="/dcosdocs/mesosphere/dcos/1.12/security/ent/perms-reference/">permissions</a>. The required permissions are:</p>
+<pre><code class="language-shell">dcos:mesos:master:framework:role:&lt;service name&gt;-role create
+dcos:mesos:master:task:user:root create
+dcos:mesos:agent:task:user:root create
+dcos:mesos:master:reservation:role:&lt;service name&gt;-role create
+dcos:mesos:master:reservation:principal:&lt;service name&gt; delete
+dcos:mesos:master:volume:role:&lt;service name&gt;-role create
+dcos:mesos:master:volume:principal:&lt;service name&gt; delete
+
+dcos:secrets:default:/&lt;service name&gt;/* full
+dcos:secrets:list:default:/&lt;service name&gt; read
+dcos:adminrouter:ops:ca:rw full
+dcos:adminrouter:ops:ca:ro full
+
+dcos:mesos:master:framework:role:slave_public/&lt;service name&gt;-role create
+dcos:mesos:master:framework:role:slave_public/&lt;service name&gt;-role read
+dcos:mesos:master:reservation:role:slave_public/&lt;service name&gt;-role create
+dcos:mesos:master:volume:role:slave_public/&lt;service name&gt;-role create
+dcos:mesos:master:framework:role:slave_public read
+dcos:mesos:agent:framework:role:slave_public read
+</code></pre>
+<p>where <code>&lt;service name&gt;</code> is the name of the service to be installed, for example, <code>kubernetes-cluster</code>. It should be noted that failing to adequately grant these permissions to the service account will cause the framework scheduler to enter a crash loop and the installation to fail.</p>
+</li>
+<li>
+<p>Finally, to tell the package installer about the service-account you just created and where to find its credentials.
+Create an <code>options.json</code> file, or edit an existing one:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;service_account&quot;: &quot;kubernetes-cluster&quot;,
+    &quot;service_account_secret&quot;: &quot;kubernetes-cluster/sa&quot;
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>Install the package:</p>
+<pre><code class="language-shell">dcos kubernetes cluster create --options=options.json
+</code></pre>
+</li>
+</ol>
+<p class="message--warning"><strong>WARNING: </strong>It is not possible to install DC/OS Kubernetes in DC/OS Enterprise without specifying adequate values for <tt>service.service_account</tt> and <tt>service.service_account_secret</tt>. Attempting to install the package without specifying these values or while specifying a service account with inadequate permissions will cause the framework scheduler to enter a crash loop, and hence the installation to fail.
+</p>
+<h2 id="when-you-have-a-proxy"><a class="content__anchor" href="#when-you-have-a-proxy" aria-hidden="true"><i data-feather="bookmark"></i></a>When you have a proxy</h2>
+<p>When there is a proxy setup between the DC/OS cluster(s) and the Internet, improper configuration may result in issues installing this package, namely failing to run <code>kube-dns</code> and other add-ons pods.
+Below is an example of such failure:</p>
+<pre><code class="language-text">Normal Created 5m (x2502 over 8d) kubelet, kube-node-5-kubelet.kubernetes-cluster.mesos Created container
+Normal Started 5m (x2502 over 8d) kubelet, kube-node-5-kubelet.kubernetes-cluster.mesos Started container
+Normal Pulled 5m (x2501 over 8d) kubelet, kube-node-5-kubelet.kubernetes-cluster.mesos Container image &quot;gcr.io/google_containers/k8s-dns-dnsmasq-nanny-amd64:1.14.5&quot; already present on machine
+Warning BackOff 3m (x32719 over 8d) kubelet, kube-node-5-kubelet.kubernetes-cluster.mesos Back-off restarting failed container
+Warning Unhealthy 3m (x10009 over 8d) kubelet, kube-node-5-kubelet.kubernetes-cluster.mesos Liveness probe failed: Get http://9.0.6.3:10054/healthcheck/dnsmasq: net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+Normal Pulled 3m (x2645 over 8d) kubelet, kube-node-5-kubelet.kubernetes-cluster.mesos Container image &quot;gcr.io/google_containers/k8s-dns-sidecar-amd64:1.14.5&quot; already present on machine
+Normal Created 3m (x2646 over 8d) kubelet, kube-node-5-kubelet.kubernetes-cluster.mesos Created container
+Normal Killing 3m (x2502 over 8d) kubelet, kube-node-5-kubelet.kubernetes-cluster.mesos Killing container with id docker://dnsmasq:pod &quot;kube-dns-2102953216-qwvtn_kube-system(fd285861-ce3a-11e7-9ca9-005056945d21)&quot; container &quot;dnsmasq&quot; is unhealthy, it will be killed and re-created.
+(...)
+</code></pre>
+<p>Looking closely, the issue here is that the <code>kubelet</code> is not able to HTTP GET the <code>kube-dns</code> endpoints used in liveness and readiness probes causing containers to restart.
+This occurs when <code>HTTP_PROXY</code> and/or <code>HTTPS_PROXY</code> on a DC/OS agent are set, causing the <code>kubelet</code> task to inherit these settings and inadvertently use the proxy when connecting to the containers it manages.</p>
+<p>The solution is to set <code>NO_PROXY</code> environment variables with the pod overlay value, eg. <code>NO_PROXY=9.0.0.0/8</code>.</p>
+<h3 id="override-proxy-configuration"><a class="content__anchor" href="#override-proxy-configuration" aria-hidden="true"><i data-feather="bookmark"></i></a>Override proxy configuration</h3>
+<p>By default, MKE automatically injects the DC/OS proxy related environment variables to the Kubernetes cluster(s). For instance, if DC/OS is installed with <code>http_proxy</code> set, all Kubernetes tasks will also have <code>http_proxy</code> set to the same value as configured for DC/OS.</p>
+<pre><code class="language-json">{
+  &quot;kubernetes&quot;: {
+    &quot;proxy&quot;: {
+        &quot;override_injection&quot;: true,
+        &quot;http_proxy&quot;: &quot;http://username:password@ip:port/&quot;,
+        &quot;https_proxy&quot;: &quot;https://username:password@ip:port/&quot;,
+        &quot;no_proxy&quot;: &quot;.thisdcos.directory,.dcos.directory,.zk,127.0.0.1,localhost&quot;
+    }
+  }
+}
+</code></pre>
+<p>or, alternatively, options may be left blank (default values are empty strings), which effectively disables entirely the proxy configuration:</p>
+<pre><code class="language-json">{
+  &quot;kubernetes&quot;: {
+    &quot;proxy&quot;: {
+        &quot;override_injection&quot;: true
+    }
+  }
+}
+</code></pre>
+<p>In either case, you must opt-out inheriting DC/OS proxy configuration by setting the <code>override_injection</code> to <code>true</code>.</p>
+<h2 id="when-101000016-is-in-use"><a class="content__anchor" href="#when-101000016-is-in-use" aria-hidden="true"><i data-feather="bookmark"></i></a>When 10.100.0.0/16 is in use</h2>
+<p>By default, the Kubernetes cluster will use <code>10.100.0.0/16</code> as the service CIDR. If this CIDR is already in use on your network, a change to the Kubernetes cluster service CIDR is required.</p>
+<p>Create an <code>options.json</code> file, or edit an existing one and install:</p>
+<pre><code class="language-json">{
+  &quot;kubernetes&quot;: {
+    &quot;service_cidr&quot;: &quot;&lt;YOUR_CIDR_HERE&gt;&quot;
+  }
+}
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong> Replace <tt>&lt;YOUR_CIDR_HERE&gt;</tt> with a CIDR block that is not already assigned somewhere in your network, such as <tt>10.90.0.0/16</tt>.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#advanced-installation">Advanced Installation</a></li><li class="content__sections-item content__sections-item--h2"><a href="#change-the-kubernetes-nodes-resource-specification">Change the Kubernetes nodes resource specification</a></li><li class="content__sections-item content__sections-item--h2"><a href="#change-the-number-of-kubernetes-nodes">Change the number of Kubernetes nodes</a></li><li class="content__sections-item content__sections-item--h2"><a href="#configure-pods-log-files-thresholds">Configure pods log files thresholds</a></li><li class="content__sections-item content__sections-item--h2"><a href="#region-selection">Region Selection</a></li><li class="content__sections-item content__sections-item--h2"><a href="#mesos-roles">Mesos Roles</a></li><li class="content__sections-item content__sections-item--h2"><a href="#placement-constraints">Placement Constraints</a></li><li class="content__sections-item content__sections-item--h2"><a href="#tls">TLS</a></li><li class="content__sections-item content__sections-item--h2"><a href="#when-you-have-a-proxy">When you have a proxy</a></li><li class="content__sections-item content__sections-item--h2"><a href="#when-101000016-is-in-use">When 10.100.0.0/16 is in use</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

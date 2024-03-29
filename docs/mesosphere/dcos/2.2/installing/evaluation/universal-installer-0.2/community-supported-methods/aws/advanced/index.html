@@ -1,0 +1,315 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Running DC/OS on AWS EC2 Advanced - D2iQ Docs</title><meta name="description" content="Creating and extending DC/OS clusters with AWS CloudFormation templates"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li><li class="chooser-list-item"><a href="/dkp/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.2"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__item"><a href="/dkp/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.2/community-supported-methods/aws/advanced">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/installing/evaluation/universal-installer-0.2/community-supported-methods/aws/advanced">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/installing/evaluation">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/installing/evaluation">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/installing/"><i data-feather="chevron-right"></i>Installing</a></li><ul><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/"><i data-feather="chevron-right"></i>Cloud Installation</a></li><ul><li class="active"><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.2/"><i data-feather="chevron-right"></i>Deprecated Universal Installer 0.2</a></li><ul><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.2/aws/"><i data-feather="chevron-right"></i>AWS</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.2/azure/"><i data-feather="chevron-right"></i>Azure</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.2/gcp/"><i data-feather="chevron-right"></i>GCP</a></li><li class="active"><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.2/community-supported-methods/"><i data-feather="chevron-right"></i>Other Installation methods</a></li><ul><li class="active"><a class="d4" href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.2/community-supported-methods/aws/"><i data-feather="chevron-right"></i>AWS</a></li><ul><li><a class="d5" href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.2/community-supported-methods/aws/basic/">Basic</a></li><li class="active active-on"><a class="d5" href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.2/community-supported-methods/aws/advanced/"><i data-feather="chevron-right"></i>Advanced</a></li><ul><li><a class="d6" href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.2/community-supported-methods/aws/advanced/template-reference/">Template Reference</a></li></ul><li><a class="d5" href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.2/community-supported-methods/aws/removeaws/">Uninstalling</a></li></ul><li><a class="d4" href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.2/community-supported-methods/azure/">Azure</a></li><li><a class="d4" href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.2/community-supported-methods/packet/">Packet</a></li></ul></ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.3/"><i data-feather="chevron-right"></i>Universal Installer 0.3</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/installing/production/"><i data-feather="chevron-right"></i>On-Prem Installation</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/installing/installation-faq/">Frequently Asked Questions</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/installing/troubleshooting/">Troubleshooting</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/archives/">Access Documentation Archives</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Running DC/OS on AWS EC2 Advanced</h1></div><h4 class="content__header-description">Creating and extending DC/OS clusters with AWS CloudFormation templates</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/master/pages/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.2/community-supported-methods/aws/advanced/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://dcos-community.slack.com/" target="_blank"><i class="actions__icon" data-feather="slack"></i><span class="actions__text">Discuss</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+Running+DC/OS on AWS EC2 Advanced&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.2/community-supported-methods/aws/advanced&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><p>You can create and extend DC/OS clusters with AWS CloudFormation templates. The advanced templates are:</p>
+<ul>
+<li>Highly customizable</li>
+<li>Composable; for example, you can deploy multiple agent pools to a single cluster</li>
+<li>Complicated; more setup work is required</li>
+</ul>
+<p>The advanced AWS CloudFormation templates bring power and flexibility to creating and extending DC/OS clusters. With these templates you can choose from the complete set of DC/OS configuration options.</p>
+<ul>
+<li>Instantiate a complete DC/OS cluster on an existing VPC/Subnet combination.</li>
+<li>Extend and update existing DC/OS clusters by adding more <a href="/dcosdocs/mesosphere/dcos/2.2/overview/concepts/#agent-nodes">agent</a> nodes.</li>
+</ul>
+<p>The templates are used together to create a DC/OS cluster. The templates are driven by parameters that AWS CloudFormation uses to create each stack.</p>
+<table class=“table” bgcolor=#858585>
+<tr>
+  <td align=justify style=color:white><strong>Important:</strong> Upgrades are not supported with this installation method.</td>
+</tr>
+</table>
+<h2 id="prerequisites"><a class="content__anchor" href="#prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h2>
+<h3 id="hardware"><a class="content__anchor" href="#hardware" aria-hidden="true"><i data-feather="bookmark"></i></a>Hardware</h3>
+<p>You must have an AWS EC2 <a href="https://aws.amazon.com/ec2/pricing/" target="_blank">m3.xlarge</a> instance. Selecting smaller-sized VMs is not recommended, and selecting fewer VMs will likely cause certain resource-intensive services, such as distributed datastores, to work improperly.</p>
+<h3 id="software"><a class="content__anchor" href="#software" aria-hidden="true"><i data-feather="bookmark"></i></a>Software</h3>
+<ul>
+<li>The <code>dcos_generate_config</code> file:
+<ul>
+<li>Enterprise users should use the <a href="https://support.mesosphere.com/hc/en-us/articles/213198586-Mesosphere-Enterprise-DC-OS-Downloads">dcos_generate_config file</a>. Contact your sales representative or <a href="mailto:sales@mesosphere.com">sales@mesosphere.com</a> to access the config file. <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></li>
+<li>Open Source users should use the <a href="https://downloads.dcos.io/dcos/stable/dcos_generate_config.sh">dcos_generate_config file</a>. <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--oss">Open Source</span></span></li>
+</ul>
+</li>
+<li>An Amazon Web Services account with root <a href="https://aws.amazon.com/iam/">IAM</a> privileges. Advanced privileges are required to install the advanced templates. Contact your AWS administrator for more information.</li>
+<li>An AWS EC2 Key Pair for the same region as your cluster. Key pairs cannot be shared across regions. The AWS key pair uses public-key cryptography to provide secure login to your AWS cluster. For more information about creating an AWS EC2 Key Pair, see the <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair" target="_blank">documentation</a>.</li>
+<li>AWS <a href="https://aws.amazon.com/cli/">Command Line Interface</a>.</li>
+<li>The CLI JSON processor <a href="https://github.com/stedolan/jq/wiki/Installation">jq</a>.</li>
+<li>A node that meets the bootstrap node <a href="/dcosdocs/mesosphere/dcos/2.2/installing/production/system-requirements/">system requirements</a>.</li>
+<li>An AWS S3 bucket with read-write access.
+<ul>
+<li>
+<p>The S3 bucket must have a bucket policy that allows the launched AWS instances to download the files from the s3 bucket. Here is a sample policy that allows anyone to download:</p>
+<pre><code class="language-json">{
+  &quot;Version&quot;:&quot;2012-10-17&quot;,
+  &quot;Statement&quot;:[
+    {
+      &quot;Sid&quot;:&quot;AddPerm&quot;,
+      &quot;Effect&quot;:&quot;Allow&quot;,
+      &quot;Principal&quot;: &quot;*&quot;,
+      &quot;Action&quot;:[&quot;s3:GetObject&quot;],
+      &quot;Resource&quot;:[&quot;arn:aws:s3:::&lt;bucket_name&gt;/&lt;bucket_path&gt;/*&quot;]
+    }
+  ]
+}
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<p>For more information about s3 bucket policies, see the <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html">AWS Documentation</a>.</p>
+<h1 id="create-your-templates"><a class="content__anchor" href="#create-your-templates" aria-hidden="true"><i data-feather="bookmark"></i></a>Create your templates</h1>
+<ol>
+<li>
+<p>Create a directory named <code>genconf</code> in the home directory of your node and navigate to it.</p>
+<pre><code class="language-bash">mkdir -p genconf
+</code></pre>
+</li>
+<li>
+<p>Create a configuration file in the <code>genconf</code> directory and save as <code>config.yaml</code>. This configuration file specifies your AWS credentials and the S3 location to store the generated artifacts.</p>
+</li>
+</ol>
+<p>The required parameters for Enterprise and Open Source users are:</p>
+<p><span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></p>
+<pre><code>aws_template_storage_bucket: &lt;your-bucket&gt;
+aws_template_storage_bucket_path: &lt;path-to-directory&gt;
+aws_template_upload: true
+aws_template_storage_access_key_id: &lt;your-access-key-id&gt;
+aws_template_storage_secret_access_key: &lt;your-secret-access_key&gt;
+cluster_name: &lt;cluster-name&gt;
+security: [permissive|strict]
+superuser_password_hash: &lt;hashed-password&gt;
+superuser_username: &lt;username&gt;
+zk_super_credentials: &lt;userid&gt;:&lt;password&gt;
+zk_master_credentials: &lt;userid&gt;:&lt;password&gt;
+zk_agent_credentials: &lt;userid&gt;:&lt;password&gt;
+</code></pre>
+<p><span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--oss">Open Source</span></span></p>
+<pre><code>aws_template_storage_bucket: &lt;your-bucket&gt;
+aws_template_storage_bucket_path: &lt;path-to-directory&gt;
+aws_template_upload: true
+aws_template_storage_access_key_id: &lt;your-access-key-id&gt;
+aws_template_storage_secret_access_key: &lt;your-secret-access_key&gt;
+</code></pre>
+<p>For parameters descriptions and configuration examples, see the <a href="/dcosdocs/mesosphere/dcos/2.2/installing/production/advanced-configuration/configuration-reference/">documentation</a>.</p>
+<ol start="3">
+<li>Run the DC/OS installer script with the AWS argument specified. This command creates and uploads a custom build of the DC/OS artifacts and templates to the specified S3 bucket.</li>
+</ol>
+<p><span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></p>
+<pre><code class="language-bash">sudo bash dcos_generate_config.ee.sh --aws-cloudformation
+</code></pre>
+<p><span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--oss">Open Source</span></span></p>
+<pre><code class="language-bash">sudo bash dcos_generate_config.sh --aws-cloudformation
+</code></pre>
+<p>The root URL for this bucket location is at the end of this step. You should see a message like this:</p>
+<pre><code class="language-bash">AWS CloudFormation templates now available at: https://&lt;amazon-web-endpoint&gt;/&lt;path-to-directory&gt;
+</code></pre>
+<ol start="4">
+<li>
+<p>Go to <a href="https://console.aws.amazon.com/s3/home">S3</a> and navigate to your S3 bucket shown above in <code>&lt;path-to-directory&gt;</code>.</p>
+<ol>
+<li>Select <strong>cloudformation</strong> and then select the zen template for the number of desired masters. For example, select <strong>el7-zen-1.json</strong> for a single master configuration.</li>
+<li>Right-click and select <strong>Properties</strong>, and then copy the AWS S3 template URL.</li>
+</ol>
+</li>
+<li>
+<p>Go to <a href="https://console.aws.amazon.com/cloudformation/home">CloudFormation</a> and click <strong>Create Stack</strong>.</p>
+</li>
+<li>
+<p>On the <strong>Select Template</strong> page, specify the AWS S3 template URL path to your Zen template. For example:</p>
+<pre><code>https://s3-us-west-2.amazonaws.com/user-aws/templates/config_id/14222z9104081387447be59e178438749d154w3g/cloudformation/ee.el7-zen-1.json
+</code></pre>
+</li>
+</ol>
+<h1 id="create-your-template-dependencies"><a class="content__anchor" href="#create-your-template-dependencies" aria-hidden="true"><i data-feather="bookmark"></i></a>Create your template dependencies</h1>
+<p>Use the <code>zen.sh</code> script to create the template dependencies. These dependencies will be used as input to create your stack in CloudFormation.</p>
+<ol>
+<li>
+<p>Save this script as <code>zen.sh</code></p>
+<pre><code class="language-bash">#!/bin/bash
+export AWS_DEFAULT_OUTPUT=&quot;json&quot;
+set -o errexit -o nounset -o pipefail
+
+if [ -z &quot;${1:-}&quot; ]
+then
+  echo Usage: $(basename &quot;$0&quot;) STACK_NAME
+  exit 1
+fi
+
+STACK_NAME=&quot;$1&quot;
+VPC_CIDR=10.0.0.0/16
+PRIVATE_SUBNET_CIDR=10.0.0.0/17
+PUBLIC_SUBNET_CIDR=10.0.128.0/20
+
+echo &quot;Creating Zen Template Dependencies&quot;
+
+vpc=$(aws ec2 create-vpc --cidr-block &quot;$VPC_CIDR&quot; --instance-tenancy default | jq -r .Vpc.VpcId)
+aws ec2 wait vpc-available --vpc-ids &quot;$vpc&quot;
+aws ec2 create-tags --resources &quot;$vpc&quot; --tags Key=Name,Value=&quot;$STACK_NAME&quot;
+echo &quot;VpcId: $vpc&quot;
+
+ig=$(aws ec2 create-internet-gateway | jq -r .InternetGateway.InternetGatewayId)
+aws ec2 attach-internet-gateway --internet-gateway-id &quot;$ig&quot; --vpc-id &quot;$vpc&quot;
+aws ec2 create-tags --resources &quot;$ig&quot; --tags Key=Name,Value=&quot;$STACK_NAME&quot;
+echo &quot;InternetGatewayId: $ig&quot;
+
+private_subnet=$(aws ec2 create-subnet --vpc-id &quot;$vpc&quot; --cidr-block &quot;$PRIVATE_SUBNET_CIDR&quot; | jq -r .Subnet.SubnetId)
+aws ec2 wait subnet-available --subnet-ids &quot;$private_subnet&quot;
+aws ec2 create-tags --resources &quot;$private_subnet&quot; --tags Key=Name,Value=&quot;${STACK_NAME}-private&quot;
+echo &quot;Private SubnetId: $private_subnet&quot;
+
+public_subnet=$(aws ec2 create-subnet --vpc-id &quot;$vpc&quot; --cidr-block &quot;$PUBLIC_SUBNET_CIDR&quot; | jq -r .Subnet.SubnetId)
+aws ec2 wait subnet-available --subnet-ids &quot;$public_subnet&quot;
+aws ec2 create-tags --resources &quot;$public_subnet&quot; --tags Key=Name,Value=&quot;${STACK_NAME}-public&quot;
+echo &quot;Public SubnetId: $public_subnet&quot;
+</code></pre>
+</li>
+<li>
+<p>Run the <code>zen.sh</code> script with an optional tag value for your specified DC/OS stack (<code>STACK_NAME</code>), or use the default <code>dcos</code>. This value will be used to tag your DC/OS cluster in AWS.</p>
+<pre><code class="language-bash">bash ./zen.sh &lt;STACK_NAME&gt;
+</code></pre>
+<p>The output should look like this:</p>
+<pre><code class="language-bash">Creating Zen Template Dependencies
+VpcId: vpc-e0bd2c84
+InternetGatewayID: igw-38071a5d
+Private SubnetId: subnet-b32c82c5
+Public SubnetId: subnet-b02c55c4
+</code></pre>
+<p>Use these dependency values as input to create your stack in CloudFormation in the next steps.</p>
+</li>
+</ol>
+<h1 id="launch-the-templates-on-cloudformation"><a class="content__anchor" href="#launch-the-templates-on-cloudformation" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="launch"></a>Launch the templates on CloudFormation</h1>
+<ol>
+<li>Go to <a href="https://console.aws.amazon.com/cloudformation/home">CloudFormation</a> and click <strong>Create Stack</strong>.</li>
+</ol>
+<ul>
+<li>On the <strong>Select Template</strong> page, upload the <a href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/community-supported-methods/aws/">Zen</a> template from your workstation and click <strong>Next</strong>.</li>
+</ul>
+<p>Template examples:</p>
+<ul>
+<li>
+<p><code>https://s3-us-west-2.amazonaws.com/dcos/templates/dcos/config_id/6a7451f6dec/cloudformation/ee.el7-zen-1.json</code> <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></p>
+</li>
+<li>
+<p><code>https://s3-us-west-2.amazonaws.com/dcos/templates/dcos/config_id/6a7451f6dec/cloudformation/el7-zen-1.json</code> <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--oss">Open Source</span></span></p>
+</li>
+</ul>
+<ol start="2">
+<li>
+<p>On the <strong>Specify Details</strong> page, specify these values and and click <strong>Next</strong>.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/aws-advanced-1.png" alt="AWS UI"></p>
+<p>Figure 1. AWS Advanced web interface</p>
+<ul>
+<li><strong>Stack name</strong> Specify the cluster name.</li>
+<li><strong>CustomAMI</strong> Optional: Specify the AMI ID. For more information, see <a href="/dcosdocs/mesosphere/dcos/2.2/installing/production/system-requirements/custom-ami/">Installing using a Custom AMI</a>.</li>
+<li><strong>InternetGateway</strong> Specify the <code>InternetGatewayID</code> output value from the <code>zen.sh</code> script. The Internet Gateway ID must be attached to the VPC. This Internet Gateway will be used by all nodes for outgoing internet access.</li>
+<li><strong>KeyName</strong> Specify your AWS EC2 Key Pair.</li>
+<li><strong>MasterInstanceType</strong> Specify the AWS EC2 instance type. The <a href="https://aws.amazon.com/ec2/pricing/" target="_blank">m3.xlarge</a> instance type is recommended.</li>
+<li><strong>PrivateAgentInstanceCount</strong> Specify the number of private agents.</li>
+<li><strong>PrivateAgentInstanceType</strong> Specify the AWS EC2 instance type for the private agent nodes. The <a href="https://aws.amazon.com/ec2/pricing/" target="_blank">m3.xlarge</a> instance type is recommended.</li>
+<li><strong>PrivateSubnet</strong> Specify the <code>Private SubnetId</code> output value from the <code>zen.sh</code> script. This subnet ID will be used by all private agents.</li>
+<li><strong>PublicAgentInstanceCount</strong> Specify the number of public agents.</li>
+<li><strong>PublicAgentInstanceType</strong> Specify the AWS EC2 instance type for the public agent nodes. The <a href="https://aws.amazon.com/ec2/pricing/" target="_blank">m3.xlarge</a> instance type is recommended.</li>
+<li><strong>PublicSubnet</strong> Specify the <code>Public SubnetId</code> output value from the <code>zen.sh</code> script. This subnet ID will be used by all public agents.</li>
+<li><strong>Vpc</strong> Specify the <code>VpcId</code> output value from the <code>zen.sh</code> script. All nodes will be launched by using subnets and Internet Gateway under this VPC.</li>
+</ul>
+</li>
+<li>
+<p>On the <strong>Options</strong> page, accept the defaults and click <strong>Next</strong>.</p>
+<p><strong>Note:</strong> You can choose whether to roll back on failure. By default this option is set to <strong>Yes</strong>.</p>
+</li>
+<li>
+<p>On the <strong>Review</strong> page, check the acknowledgement box and then click <strong>Create</strong>.</p>
+<p><strong>Note:</strong> If the <strong>Create New Stack</strong> page is shown, either AWS is still processing your request or you are looking at a different region. Navigate to the correct region and refresh the page to see your stack.</p>
+</li>
+</ol>
+<h1 id="monitor-the-dcos-cluster-convergence-process"><a class="content__anchor" href="#monitor-the-dcos-cluster-convergence-process" aria-hidden="true"><i data-feather="bookmark"></i></a>Monitor the DC/OS cluster convergence process</h1>
+<p>In CloudFormation you should see that:</p>
+<ul>
+<li>
+<p>The cluster stack spins up over a period of 15 to 20 minutes. You will have a stack created for each of these, where <code>&lt;stack-name&gt;</code> is the value you specified for <strong>Stack name</strong> and <code>&lt;stack-id&gt;</code> is an auto-generated ID.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/aws-advanced-2.png" alt="AWS UI"></p>
+<p>Figure 2. AWS Stack details</p>
+<ul>
+<li>Zen template: <code>&lt;stack-name&gt;</code></li>
+<li>Public agents: <code>&lt;stack-name&gt;-PublicAgentStack-&lt;stack-id&gt;</code></li>
+<li>Private agents: <code>&lt;stack-name&gt;-PrivateAgentStack-&lt;stack-id&gt;</code></li>
+<li>Masters: <code>&lt;stack-name&gt;-MasterStack-&lt;stack-id&gt;</code></li>
+<li>Infrastructure: <code>&lt;stack-name&gt;-Infrastructure-&lt;stack-id&gt;</code></li>
+</ul>
+</li>
+<li>
+<p>The status changes from <code>CREATE_IN_PROGRESS</code> to <code>CREATE_COMPLETE</code>.</p>
+</li>
+</ul>
+<table class=“table” bgcolor=#858585>
+<tr>
+  <td align=justify style=color:white><strong>Important:</strong> A ROLLBACK_COMPLETE status means the deployment has failed. See the Events tab for useful information about failures.</td>
+</tr>
+</table>
+<h1 id="launch-dcos"><a class="content__anchor" href="#launch-dcos" aria-hidden="true"><i data-feather="bookmark"></i></a>Launch DC/OS</h1>
+<p>You can launch the DC/OS web interface by entering the master hostname. Follow these instructions to find our Mesos Master hostname.</p>
+<ol>
+<li>
+<p>From the <a href="https://console.aws.amazon.com/cloudformation/home" target="_blank">AWS CloudFormation Management</a> page, click to check the box next to your stack.</p>
+</li>
+<li>
+<p>Click on the <strong>Outputs</strong> tab and copy/paste the Mesos Master hostname into your browser to open the DC/OS web interface. The interface runs on the standard HTTP port 80, so you do not need to specify a port number after the hostname.</p>
+<p><strong>Note:</strong> You might need to resize your window to see this tab. You can find your DC/OS hostname any time from the <a href="https://console.aws.amazon.com/cloudformation/home" target="_blank">AWS CloudFormation Management</a> page.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/dcos-aws-step3a.png" alt="Monitor stack creation"></p>
+<p>Figure 3. Mesos master hostname</p>
+</li>
+<li>
+<p>Click <strong>Log In To DC/OS</strong>.</p>
+<table class=“table” bgcolor=#858585>
+<tr>
+<td align=justify style=color:white><strong>Important:</strong> After clicking "Log In To DC/OS", your browser may show a warning that your connection is not secure. This is because DC/OS uses self-signed certificates. You can ignore this error and click to proceed.</td>
+</tr>
+</table>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/gui-installer-success-ee.gif" alt="UI installer success"></p>
+<p>Figure 4. Success screen</p>
+</li>
+<li>
+<p>Enter the username and password of the superuser account.</p>
+<p><strong>Note:</strong> The default username is <code>bootstrapuser</code> and default password is <code>deleteme</code>.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/ui-installer-auth2.png" alt="alt text"></p>
+<p>Figure 5. Sign-in screen</p>
+<p>You are done!</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/dashboard-ee.png" alt="UI dashboard"></p>
+<p>Figure 6. DC/OS dashboard</p>
+</li>
+</ol>
+<h1 id="next-steps"><a class="content__anchor" href="#next-steps" aria-hidden="true"><i data-feather="bookmark"></i></a>Next steps</h1>
+<p>Now that your advanced template DC/OS installation is up and running, you can add more agent nodes.</p>
+<h3 id="add-more-agent-nodes"><a class="content__anchor" href="#add-more-agent-nodes" aria-hidden="true"><i data-feather="bookmark"></i></a>Add more agent nodes</h3>
+<p>You can add more agent nodes by creating a new stack. Use the <a href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/community-supported-methods/aws/">advanced-priv-agent.json</a> or <a href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/community-supported-methods/aws/">advanced-pub-agent.json</a> templates. These templates create agents which are then attached to the <code>PrivateAgentStack</code> or <code>PublicAgentStack</code> as a part of an AutoScalingGroup.</p>
+<p>Use the output values from the <code>zen.sh</code> script and your Master and Infra stacks. These new agent nodes will automatically be added to your DC/OS cluster.</p>
+<p>Private agents:</p>
+<ul>
+<li><strong>InternalMasterLoadBalancerDnsName</strong> Specify the <code>InternalMasterLoadBalancerDnsName</code> value from your master stack (<code>&lt;stack-name&gt;-MasterStack-&lt;stack-id&gt;</code>). You can find this value in the <strong>Outputs</strong> tab.</li>
+<li><strong>KeyName</strong> Specify your AWS EC2 Key Pair.</li>
+<li><strong>PrivateAgentInstanceCount</strong> Specify the number of private agents.</li>
+<li><strong>PrivateAgentInstanceType</strong> Specify the AWS EC2 instance type for the private agent nodes. The <a href="https://aws.amazon.com/ec2/pricing/" target="_blank">m3.xlarge</a> instance type is recommended.</li>
+<li><strong>PrivateAgentSecurityGroup</strong> Specify the security group ID for private agents. This group should have limited external access. You can find this value in the <strong>Outputs</strong> tab of the Infrastructure stack (<code>&lt;stack-name&gt;-Infrastructure-&lt;stack-id&gt;</code>).</li>
+<li><strong>PrivateSubnet</strong> Specify the <code>Private SubnetId</code> output value from the <code>zen.sh</code> script. This subnet ID will be used by all private agents.</li>
+</ul>
+<p>Public agents:</p>
+<ul>
+<li><strong>InternalMasterLoadBalancerDnsName</strong> Specify the <code>InternalMasterLoadBalancerDnsName</code> value from your master stack (<code>&lt;stack-name&gt;-MasterStack-&lt;stack-id&gt;</code>). You can find this value in the <strong>Outputs</strong> tab.</li>
+<li><strong>KeyName</strong> Specify your AWS EC2 Key Pair.</li>
+<li><strong>PublicAgentInstanceCount</strong> Specify the number of public agents.</li>
+<li><strong>PublicAgentInstanceType</strong> Specify the AWS EC2 instance type for the public agent nodes. The <a href="https://aws.amazon.com/ec2/pricing/" target="_blank">m3.xlarge</a> instance type is recommended.</li>
+<li><strong>PublicAgentSecurityGroup</strong> Specify the security group ID for public agents. This group should have limited external access. You can find this value in the <strong>Outputs</strong> tab of the Infrastructure stack (<code>&lt;stack-name&gt;-Infrastructure-&lt;stack-id&gt;</code>).</li>
+<li><strong>PublicSubnet</strong> Specify the <code>Public SubnetId</code> output value from the <code>zen.sh</code> script. This subnet ID will be used by all public agents.</li>
+</ul>
+<p>For all of the advanced configuration options, see the template reference <a href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/community-supported-methods/aws/">documentation</a>.</p>
+<h1 id="limitations"><a class="content__anchor" href="#limitations" aria-hidden="true"><i data-feather="bookmark"></i></a>Limitations</h1>
+<ul>
+<li>Modified templates are not supported for upgrades.</li>
+<li>Adding agents and task isolation is not supported.</li>
+<li>You cannot expand the master node size.</li>
+<li>You must be in a flat network space (this is controlled by our infrastructure template). If you can not use our infrastructure template, you can hack our template at your own risk. We may change the infrastructure template and you will have to support these changes downstream.</li>
+</ul>
+<h1 id="template-reference"><a class="content__anchor" href="#template-reference" aria-hidden="true"><i data-feather="bookmark"></i></a>Template reference</h1>
+<p>For the complete advanced configuration options, see the template reference <a href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/community-supported-methods/aws/">documentation</a>.</p>
+<div class="grid"><a class="grid__item" href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.2/community-supported-methods/aws/advanced/template-reference"><div class="grid__header__wrapper"><h3 class="grid__header">Template Reference</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">Advanced template parameters<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a></div></article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#prerequisites">Prerequisites</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-your-templates">Create your templates</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-your-template-dependencies">Create your template dependencies</a></li><li class="content__sections-item content__sections-item--h1"><a href="#launch-the-templates-on-cloudformation">Launch the templates on CloudFormation</a></li><li class="content__sections-item content__sections-item--h1"><a href="#monitor-the-dcos-cluster-convergence-process">Monitor the DC/OS cluster convergence process</a></li><li class="content__sections-item content__sections-item--h1"><a href="#launch-dcos">Launch DC/OS</a></li><li class="content__sections-item content__sections-item--h1"><a href="#next-steps">Next steps</a></li><li class="content__sections-item content__sections-item--h1"><a href="#limitations">Limitations</a></li><li class="content__sections-item content__sections-item--h1"><a href="#template-reference">Template reference</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

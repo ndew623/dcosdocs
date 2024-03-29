@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>HDFS - D2iQ Docs</title><meta name="description" content="Using HDFS with DC/OS Data Science Engine"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Data Science Engine Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/data-science-engine/2.1.0/integrations">DC/OS Data Science Engine 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/data-science-engine/2.0.1/integrations">DC/OS Data Science Engine 2.0.1</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/data-science-engine/2.0.0/integrations">DC/OS Data Science Engine 2.0.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/data-science-engine/1.0.2/integrations/hdfs">DC/OS Data Science Engine 1.0.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/data-science-engine/1.0.1/integrations/hdfs">DC/OS Data Science Engine 1.0.1</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/data-science-engine/1.0.0/integrations/hdfs">DC/OS Data Science Engine 1.0.0</a></li></ul><div class="toggle"><p><span class="title">Data Science Engine</span><span class="version"> 1.0.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/data-science-engine/1.0.2/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/data-science-engine/1.0.2/overview/">Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/data-science-engine/1.0.2/quick-start/">Quick Start Guide</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/data-science-engine/1.0.2/integrations/"><i data-feather="chevron-right"></i>Integrations</a></li><ul><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/services/data-science-engine/1.0.2/integrations/hdfs/">HDFS</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/data-science-engine/1.0.2/integrations/spark/">Spark</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/data-science-engine/1.0.2/integrations/tensorflow/">TensorFlow</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/data-science-engine/1.0.2/custom-images/">Custom Images</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/data-science-engine/1.0.2/dynamic-allocation/">Dynamic Allocation</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/data-science-engine/1.0.2/supported-kernels/">Supported Kernels</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/data-science-engine/1.0.2/upgrade/">Upgrade</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/data-science-engine/1.0.2/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/data-science-engine/1.0.2/uninstall/">Uninstall</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">HDFS</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">Using HDFS with DC/OS Data Science Engine</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/data-science-engine/1.0.2/integrations/hdfs/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><h1 id="prerequisites"><a class="content__anchor" href="#prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h1>
+<p class="message--note"><strong>NOTE: </strong> If you are planning to use <a href="https://docs.d2iq.com/dcosdocs/mesosphere/dcos/services/data-science-engine/1.0.2/integrations/hdfs/">HDFS</a> on DC&#x2F;OS Data Science Engine, you will need a minimum of five nodes.</p>
+<p>If you plan to read and write from HDFS using DC/OS Data Science Engine, there are two Hadoop configuration files that you should include in the  classpath:</p>
+<ul>
+<li><code>hdfs-site.xml</code>, which provides default behaviors for the HDFS client.</li>
+<li><code>core-site.xml</code>, which sets the default file system name.</li>
+</ul>
+<p>You can specify the location of these files at install time or for each DC/OS Data Science Engine instance.</p>
+<h1 id="configuring-dcos-data-science-engine-to-work-with-hdfs"><a class="content__anchor" href="#configuring-dcos-data-science-engine-to-work-with-hdfs" aria-hidden="true"><i data-feather="bookmark"></i></a>Configuring DC/OS Data Science Engine to work with HDFS</h1>
+<p>Within the DC/OS Data Science Engine service configuration, set <code>service.jupyter_conf_urls</code> to be a list of URLs that serves your <code>hdfs-site.xml</code> and <code>core-site.xml</code>. The following example uses <code>http://mydomain.com/hdfs-config/hdfs-site.xml</code> and <code>http://mydomain.com/hdfs-config/core-site.xml</code> URLs:</p>
+<pre><code class="language-json">{
+ &quot;service&quot;: {
+   &quot;jupyter_conf_urls&quot;: &quot;http://mydomain.com/hdfs-config&quot;
+ }
+}
+</code></pre>
+<p>You can also specify the URLs through the UI. If you are using the default installation of HDFS from Mesosphere, this would be <code>http://api.hdfs.marathon.l4lb.thisdcos.directory/v1/endpoints</code> for HDFS service installed with the <code>hdfs</code> name.</p>
+<h2 id="example-of-using-hdfs-with-spark"><a class="content__anchor" href="#example-of-using-hdfs-with-spark" aria-hidden="true"><i data-feather="bookmark"></i></a>Example of Using HDFS with Spark</h2>
+<p>Here is an example notebook for <code>Tensorflow on Spark</code> using <code>HDFS</code> as a storage backend.</p>
+<ol>
+<li>
+<p>Launch <strong>Terminal</strong> from the Notebook UI. This step is mandatory; all subsequent commands will be executed from the Terminal.</p>
+</li>
+<li>
+<p>Clone the <code>TensorFlow on Spark</code> repository and download the sample dataset:</p>
+<pre><code class="language-bash">rm -rf TensorFlowOnSpark &amp;&amp; git clone https://github.com/yahoo/TensorFlowOnSpark
+rm -rf mnist &amp;&amp; mkdir mnist
+curl -fsSL -O https://infinity-artifacts.s3-us-west-2.amazonaws.com/jupyter/mnist.zip
+unzip -d mnist/ mnist.zip
+</code></pre>
+</li>
+<li>
+<p>List the files in the target HDFS directory and remove it if it is not empty.</p>
+<pre><code class="language-bash">hdfs dfs -ls -R mnist/ &amp;&amp; hdfs dfs -rm -R mnist/
+</code></pre>
+</li>
+<li>
+<p>Generate sample data and save to HDFS.</p>
+<pre><code class="language-bash">spark-submit \
+  --verbose \
+  $(pwd)/TensorFlowOnSpark/examples/mnist/mnist_data_setup.py \
+  --output mnist/csv \
+  --format csv
+
+hdfs dfs -ls -R  mnist
+</code></pre>
+</li>
+<li>
+<p>Train the model and checkpoint it to the target directory in HDFS.</p>
+<pre><code class="language-bash">spark-submit \
+  --verbose \
+  --py-files $(pwd)/TensorFlowOnSpark/examples/mnist/spark/mnist_dist.py \
+  $(pwd)/TensorFlowOnSpark/examples/mnist/spark/mnist_spark.py \
+  --cluster_size 4 \
+  --images mnist/csv/train/images \
+  --labels mnist/csv/train/labels \
+  --format csv \
+  --mode train \
+  --model mnist/mnist_csv_model
+</code></pre>
+</li>
+<li>
+<p>Verify that the model has been saved.</p>
+<pre><code class="language-bash">hdfs dfs -ls -R mnist/mnist_csv_model
+</code></pre>
+</li>
+</ol>
+<h1 id="s3"><a class="content__anchor" href="#s3" aria-hidden="true"><i data-feather="bookmark"></i></a>S3</h1>
+<p>To set up S3 connectivity, you must be on a cluster in permissive or strict mode. If a service account has not been created, follow the steps described in the <a href="/dcosdocs/mesosphere/dcos/services/data-science-engine/1.0.2/security/">Security</a> section to create one.</p>
+<p>After your service account is created, follow these steps to create AWS credentials secrets and configure DC/OS Data Science Engine to use them for authenticating with S3:</p>
+<ol>
+<li>
+<p>Upload your credentials to the DC/OS secret store:</p>
+<pre><code class="language-bash">dcos security secrets create &lt;secret_path_for_key_id&gt; -v &lt;AWS_ACCESS_KEY_ID&gt;
+dcos security secrets create &lt;secret_path_for_secret_key&gt; -v &lt;AWS_SECRET_ACCESS_KEY&gt;
+</code></pre>
+</li>
+<li>
+<p>Grant read access to the secrets to the previously created service account:</p>
+<pre><code class="language-bash">dcos security org users grant &lt;SERVICE_ACCOUNT&gt; dcos:secrets:list:default:&lt;secret_path_for_key_id&gt; read
+dcos security org users grant &lt;SERVICE_ACCOUNT&gt; dcos:secrets:list:default:&lt;secret_path_for_secret_key&gt; read
+</code></pre>
+</li>
+<li>
+<p>After uploading your credentials, DC/OS Data Science Engine service can get the credentials via service options:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+      &quot;service_account&quot;: &quot;&lt;service-account-id&gt;&quot;,
+      &quot;service_account_secret&quot;: &quot;&lt;service-account-secret&gt;&quot;,
+  },
+  &quot;s3&quot;: {
+    &quot;aws_access_key_id&quot;: &quot;&lt;secret_path_for_key_id&gt;&quot;,
+    &quot;aws_secret_access_key&quot;: &quot;&lt;secret_path_for_secret_key&gt;&quot;
+  }
+}
+</code></pre>
+ <p class="message--note"><strong>NOTE: </strong> It is mandatory to provide values for <tt>service_account</tt> and <tt>service_account_secret</tt> in the service configuration, in order to access any secrets.</p>
+</li>
+<li>
+<p>To make Spark integration, use credentials-based access to S3. Change Spark’s credentials provider to <code>com.amazonaws.auth.EnvironmentVariableCredentialsProvider</code> in the service options:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+      &quot;service_account&quot;: &quot;&lt;service-account-id&gt;&quot;,
+      &quot;service_account_secret&quot;: &quot;&lt;service-account-secret&gt;&quot;,
+  },
+  &quot;spark&quot;: {
+    &quot;spark_hadoop_fs_s3a_aws_credentials_provider&quot;: &quot;com.amazonaws.auth.EnvironmentVariableCredentialsProvider&quot;
+  },
+  &quot;s3&quot;: {
+    &quot;aws_access_key_id&quot;: &quot;&lt;secret_path_for_key_id&gt;&quot;,
+    &quot;aws_secret_access_key&quot;: &quot;&lt;secret_path_for_secret_key&gt;&quot;
+  }
+}
+</code></pre>
+ <p class="message--note"><strong>NOTE: </strong> The provided <tt>aws_access_key_id</tt> and <tt>aws_secret_access_key</tt> are the names of secrets, so in order to access them, a service account and service account secret must be specified in the DC&#x2F;OS Data Science Engine configuration.</p>
+</li>
+</ol>
+<!-- You can also specify credentials through the UI. -->
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#prerequisites">Prerequisites</a></li><li class="content__sections-item content__sections-item--h1"><a href="#configuring-dcos-data-science-engine-to-work-with-hdfs">Configuring DC/OS Data Science Engine to work with HDFS</a></li><li class="content__sections-item content__sections-item--h2"><a href="#example-of-using-hdfs-with-spark">Example of Using HDFS with Spark</a></li><li class="content__sections-item content__sections-item--h1"><a href="#s3">S3</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

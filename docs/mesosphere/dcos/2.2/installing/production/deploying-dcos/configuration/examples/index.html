@@ -1,0 +1,398 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Examples - D2iQ Docs</title><meta name="description" content="Common example configurations for DC/OS Enterprise"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li><li class="chooser-list-item"><a href="/dkp/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.2"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__item"><a href="/dkp/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/installing/production/deploying-dcos/configuration/examples">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/installing/production/deploying-dcos/configuration/examples">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/installing/production/deploying-dcos/configuration/examples">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/installing/production/deploying-dcos/configuration/examples">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/installing/"><i data-feather="chevron-right"></i>Installing</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/"><i data-feather="chevron-right"></i>Cloud Installation</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/installing/production/"><i data-feather="chevron-right"></i>On-Prem Installation</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/installing/production/virt-infra/">Virtual Infrastructure</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/installing/production/system-requirements/"><i data-feather="chevron-right"></i>System Requirements</a></li><li class="active"><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/installing/production/deploying-dcos/"><i data-feather="chevron-right"></i>Deploying DC/OS</a></li><ul><li class="active"><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/installing/production/deploying-dcos/configuration/"><i data-feather="chevron-right"></i>Configuration</a></li><ul><li class="active active-on"><a class="d4" href="/dcosdocs/mesosphere/dcos/2.2/installing/production/deploying-dcos/configuration/examples/">Examples</a></li></ul><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/installing/production/deploying-dcos/installation/">Production Installation</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/installing/production/deploying-dcos/opt-out/">Opt-Out</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/installing/production/deploying-dcos/node-cluster-health-check/">Node and Cluster Health Checks</a></li></ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/installing/production/advanced-configuration/"><i data-feather="chevron-right"></i>Advanced Configuration</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/installing/production/dcos-ansible/"><i data-feather="chevron-right"></i>DC/OS with Ansible</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/installing/production/patching/">Patching</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/installing/production/upgrading/">Upgrading</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/installing/production/uninstalling/">Uninstalling</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/installing/installation-faq/">Frequently Asked Questions</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/installing/troubleshooting/">Troubleshooting</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/archives/">Access Documentation Archives</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Examples</h1></div><h4 class="content__header-description">Common example configurations for DC/OS Enterprise</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/master/pages/dcosdocs/mesosphere/dcos/2.2/installing/production/deploying-dcos/configuration/examples/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://dcos-community.slack.com/" target="_blank"><i class="actions__icon" data-feather="slack"></i><span class="actions__text">Discuss</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+Examples&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/2.2/installing/production/deploying-dcos/configuration/examples&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><p>This page provides several common example configurations. Except where explicitly indicated, the configuration parameters apply to both <a href="https://dcos.io/">DC/OS Open Source</a> and <a href="https://mesosphere.com/product/">DC/OS Enterprise</a>. These comments are used in this sample <code>config.yaml</code> to indicate DC/OS product type.</p>
+<ul>
+<li><code># DC/OS Open Source only</code> - Applies to DC/OS only. <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--oss">Open Source</span></span></li>
+<li><code># DC/OS Enterprise only</code> - Applies to DC/OS Enterprise only. <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></li>
+</ul>
+<h1 id="all-parameters"><a class="content__anchor" href="#all-parameters" aria-hidden="true"><i data-feather="bookmark"></i></a>All parameters</h1>
+<p>This sample <code>config.yaml</code> file includes all of the available configuration parameters for DC/OS.</p>
+<pre><code class="language-yaml">agent_list:
+- &lt;agent-private-ip-1&gt;
+- &lt;agent-private-ip-2&gt;
+- &lt;agent-private-ip-3&gt;
+# DC/OS Enterprise only
+auth_cookie_secure_flag: `&lt;true|false&gt;`
+bootstrap_url: &lt;path-to-installer&gt;
+# DC/OS Enterprise only
+bouncer_expiration_auth_token_days: `&lt;time&gt;`
+cluster_docker_credentials:
+  auths:
+    '&lt;path-to-credentials&gt;':
+      auth: &lt;username&gt;
+      email: &lt;email&gt;
+  cluster_docker_credentials_dcos_owned: &lt;true|false&gt;
+    cluster_docker_credentials_write_to_etc: &lt;true|false&gt;
+cluster_docker_credentials_enabled: &lt;true|false&gt;
+cluster_docker_registry_url: &lt;url&gt;
+cluster_name: '&lt;cluster-name&gt;'
+cosmos_config:
+staged_package_storage_uri: &lt;temp-path-to-files&gt;
+package_storage_uri: &lt;permanent-path-to-files&gt;
+# DC/OS Enterprise only
+ca_certificate_path: &lt;path-to-certificate&gt;
+ca_certificate_key_path: &lt;path-to-private-key&gt;
+ca_certificate_chain_path: &lt;path-to-certificate-chain&gt;
+custom_checks:
+  cluster_checks:
+    custom-check-1:
+      description: Foobar cluster service is healthy
+      cmd:
+        - echo
+        - hello
+      timeout: 1s
+  node_checks:
+    checks:
+      custom-check-2:
+        description: Foobar node service is healthy
+        cmd:
+          - echo
+          - hello
+        timeout: 1s
+        roles:
+          - agent
+    poststart:
+      - custom-check-2
+dcos_overlay_enable: `&lt;true|false&gt;`
+dcos_overlay_config_attempts: &lt;num-failed-attempts&gt;
+dcos_overlay_mtu: &lt;mtu&gt;
+dcos_overlay_network:
+  vtep_subnet: &lt;address&gt;
+  vtep_mac_oui: &lt;mac-address&gt;
+  overlays:
+    - name: &lt;name&gt;
+      subnet: &lt;address&gt;
+      prefix: &lt;size&gt;
+dns_search: &lt;domain1 domain2 domain3&gt;
+docker_remove_delay: &lt;num&gt;hrs
+enable_docker_gc: `&lt;true|false&gt;`
+exhibitor_storage_backend: static
+exhibitor_storage_backend: zookeeper
+exhibitor_zk_hosts: `&lt;list-of-ip-port&gt;`
+exhibitor_zk_path: &lt;filepath-to-data&gt;
+exhibitor_storage_backend: aws_s3
+external_certificate_path: &lt;path-to-certificate&gt;
+external_certificate_key_path: &lt;path-to-private-key&gt;
+external_certificate_servernames:
+  - hostname
+  - hostname
+external_certificate_validation_disable: &lt;true|false&gt;
+aws_access_key_id: &lt;key-id&gt;
+aws_region: &lt;bucket-region&gt;
+aws_secret_access_key: &lt;secret-access-key&gt;
+exhibitor_explicit_keys: &lt;true|false&gt;
+s3_bucket: &lt;s3-bucket&gt;
+s3_prefix: &lt;s3-prefix&gt;
+exhibitor_storage_backend: azure
+exhibitor_azure_account_name: &lt;storage-account-name&gt;
+exhibitor_azure_account_key: &lt;storage-account-key&gt;
+exhibitor_azure_prefix: &lt;blob-prefix&gt;
+gc_delay: &lt;num&gt;days
+log_directory: `&lt;path-to-install-logs&gt;`
+master_discovery: static
+master_list:
+- &lt;master-private-ip-1&gt;
+- &lt;master-private-ip-2&gt;
+- &lt;master-private-ip-3&gt;
+master_discovery: master_http_loadbalancer
+exhibitor_address: &lt;loadbalancer-ip&gt;
+master_dns_bindall: `&lt;true|false&gt;`
+num_masters: &lt;num-of-masters&gt;
+# DC/OS Open Source only
+oauth_enabled: `&lt;true|false&gt;`
+public_agent_list:
+- &lt;agent-private-ip&gt;
+platform: &lt;platform&gt;
+process_timeout: &lt;num-seconds&gt;
+rexray_config:
+    rexray:
+      loglevel:
+      service:
+    libstorage:
+      integration:
+        volume:
+          operations:
+            unmount:
+              ignoreusedcount:
+      server:
+        tasks:
+          logTimeout: 5m
+# DC/OS Enterprise only
+security: &lt;security-mode&gt;
+# DC/OS Enterprise only
+superuser_username: &lt;username&gt;
+ssh_key_path: &lt;path-to-ssh-key&gt;
+ssh_port: '&lt;port-number&gt;'
+ssh_user: &lt;username&gt;
+# DC/OS Enterprise only
+superuser_password_hash: &lt;hashed-password&gt;
+# DC/OS Enterprise only
+superuser_username: &lt;username&gt;
+telemetry_enabled: `&lt;true|false&gt;`
+use_proxy: `&lt;true|false&gt;`
+http_proxy: http://&lt;proxy_host&gt;:&lt;http_proxy_port&gt;
+https_proxy: https://&lt;proxy_host&gt;:&lt;https_proxy_port&gt;
+no_proxy:
+- '&lt;blocked.address1.com&gt;'
+- '&lt;blocked.address2.com&gt;'
+# DC/OS Enterprise only
+zk_super_credentials: 'super:&lt;long, random string&gt;'
+zk_master_credentials: 'dcos-master:&lt;long, random string&gt;'
+zk_agent_credentials: 'dcos-agent:&lt;long, random string&gt;'
+</code></pre>
+<h1 id="example-configurations"><a class="content__anchor" href="#example-configurations" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="examples1"></a>Example Configurations</h1>
+<p>DC/OS cluster with three masters, five private agents, and Exhibitor/ZooKeeper managed internally:</p>
+<pre><code class="language-yaml">---
+agent_list:
+- &lt;agent-private-ip-1&gt;
+- &lt;agent-private-ip-2&gt;
+- &lt;agent-private-ip-3&gt;
+- &lt;agent-private-ip-4&gt;
+- &lt;agent-private-ip-5&gt;
+bootstrap_url: 'file:///opt/dcos_install_tmp'
+cluster_name: '&lt;cluster-name&gt;'
+log_directory: /genconf/logs
+master_discovery: static
+master_list:
+- &lt;master-private-ip-1&gt;
+- &lt;master-private-ip-2&gt;
+- &lt;master-private-ip-3&gt;
+process_timeout: 120
+resolvers:
+- &lt;dns-resolver-1&gt;
+- &lt;dns-resolver-2&gt;
+ssh_key_path: /genconf/ssh-key
+ssh_port: '&lt;port-number&gt;'
+ssh_user: &lt;username&gt;
+</code></pre>
+<h2 id="aws"><a class="content__anchor" href="#aws" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="aws"></a>AWS</h2>
+<p>DC/OS cluster with three masters, an Exhibitor/ZooKeeper backed by an AWS S3 bucket, five private agents, and one public agent node:</p>
+<pre><code class="language-yaml">---
+agent_list:
+- &lt;agent-private-ip-1&gt;
+- &lt;agent-private-ip-2&gt;
+- &lt;agent-private-ip-3&gt;
+- &lt;agent-private-ip-4&gt;
+- &lt;agent-private-ip-5&gt;
+aws_access_key_id: AKIAIOSFODNN7EXAMPLE
+aws_region: us-west-2
+aws_secret_access_key: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+bootstrap_url: file:///tmp/dcos
+cluster_name: s3-example
+exhibitor_storage_backend: aws_s3
+exhibitor_explicit_keys: 'true'
+log_directory: /genconf/logs
+master_discovery: static
+master_list:
+- &lt;master-private-ip-1&gt;
+- &lt;master-private-ip-2&gt;
+- &lt;master-private-ip-3&gt;
+process_timeout: 120
+resolvers:
+- &lt;dns-resolver-1&gt;
+- &lt;dns-resolver-2&gt;
+s3_bucket: mybucket
+s3_prefix: s3-example
+ssh_key_path: /genconf/ssh-key
+ssh_port: '&lt;port-number&gt;'
+ssh_user: &lt;username&gt;
+</code></pre>
+<h2 id="zookeeper"><a class="content__anchor" href="#zookeeper" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="zk"></a>ZooKeeper</h2>
+<p>DC/OS cluster with three masters, an Exhibitor/ZooKeeper backed by ZooKeeper, masters that have an HTTP load balancer in front of them, one public agent node, five private agents, and Google DNS:</p>
+<pre><code class="language-yaml">---
+agent_list:
+- &lt;agent-private-ip-1&gt;
+- &lt;agent-private-ip-2&gt;
+- &lt;agent-private-ip-3&gt;
+- &lt;agent-private-ip-4&gt;
+- &lt;agent-private-ip-5&gt;
+bootstrap_url: file:///tmp/dcos
+cluster_name: zk-example
+exhibitor_storage_backend: zookeeper
+exhibitor_zk_hosts: 10.0.0.1:2181, 10.0.0.2:2181, 10.0.0.3:2181
+exhibitor_zk_path: /zk-example
+log_directory: /genconf/logs
+master_discovery: master_http_loadbalancer
+num_masters: 3
+public_agent_list:
+- &lt;public-agent-private-ip&gt;
+exhibitor_address: 67.34.242.55
+process_timeout: 120
+resolvers:
+- &lt;dns-resolver-1&gt;
+- &lt;dns-resolver-2&gt;
+ssh_key_path: /genconf/ssh-key
+ssh_port: '&lt;port-number&gt;'
+ssh_user: &lt;username&gt;
+</code></pre>
+<h2 id="overlay"><a class="content__anchor" href="#overlay" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="overlay"></a>Overlay</h2>
+<p>DC/OS cluster with three masters, an Exhibitor/ZooKeeper managed internally, two DC/OS virtual networks, two private agents, and Google DNS:</p>
+<pre><code class="language-yaml">agent_list:
+- &lt;agent-private-ip-1&gt;
+- &lt;agent-private-ip-2&gt;
+# Use this bootstrap_url value unless you have moved the DC/OS installer assets.
+bootstrap_url: file:///opt/dcos_install_tmp
+cluster_name: &lt;cluster-name&gt;
+master_discovery: static
+master_list:
+- &lt;master-private-ip-1&gt;
+- &lt;master-private-ip-2&gt;
+- &lt;master-private-ip-3&gt;
+resolvers:
+# You probably do not want to use these values since they point to public DNS servers.
+# Instead, use values that are more specific to your particular infrastructure.
+- 8.8.4.4
+- 8.8.8.8
+ssh_port: 22
+ssh_user: centos
+dcos_overlay_enable: true
+dcos_overlay_mtu: 9001
+dcos_overlay_config_attempts: 6
+dcos_overlay_network:
+  vtep_subnet: 44.128.0.0/20
+  vtep_mac_oui: 70:B3:D5:00:00:00
+  overlays:
+    - name: dcos
+      subnet: 9.0.0.0/8
+      prefix: 26
+    - name: dcos-1
+      subnet: 192.168.0.0/16
+      prefix: 24
+</code></pre>
+<h2 id="http-proxy"><a class="content__anchor" href="#http-proxy" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="http-proxy"></a>HTTP Proxy</h2>
+<p>DC/OS cluster with three masters, an Exhibitor/ZooKeeper managed internally, a custom HTTP proxy, two private agents, and Google DNS:</p>
+<pre><code class="language-yaml">agent_list:
+- &lt;agent-private-ip-1&gt;
+- &lt;agent-private-ip-2&gt;
+# Use this bootstrap_url value unless you have moved the DC/OS installer assets.
+bootstrap_url: file:///opt/dcos_install_tmp
+cluster_name: &lt;cluster-name&gt;
+master_discovery: static
+master_list:
+- &lt;master-private-ip-1&gt;
+- &lt;master-private-ip-2&gt;
+- &lt;master-private-ip-3&gt;
+resolvers:
+# You probably do not want to use these values since they point to public DNS servers.
+# Instead use values that are more specific to your particular infrastructure.
+- 8.8.4.4
+- 8.8.8.8
+ssh_port: 22
+ssh_user: centos
+use_proxy: 'true'
+http_proxy: http://&lt;user&gt;:&lt;pass&gt;@&lt;proxy_host&gt;:&lt;http_proxy_port&gt;
+https_proxy: https://&lt;user&gt;:&lt;pass&gt;@&lt;proxy_host&gt;:&lt;https_proxy_port&gt;
+no_proxy:
+- 'foo.bar.com'
+- '.baz.com'
+</code></pre>
+<h2 id="docker-credentials"><a class="content__anchor" href="#docker-credentials" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="docker-credentials"></a>Docker Credentials</h2>
+<p>DC/OS cluster with three masters, an Exhibitor/ZooKeeper managed internally, custom Docker credentials, two private agents, and Google DNS:</p>
+<pre><code class="language-yaml">agent_list:
+- &lt;agent-private-ip-1&gt;
+- &lt;agent-private-ip-2&gt;
+# Use this bootstrap_url value unless you have moved the DC/OS installer assets.
+bootstrap_url: file:///opt/dcos_install_tmp
+cluster_docker_credentials:
+  auths:
+    'https://registry.example.com/v1/':
+      auth: foo
+      email: user@example.com
+cluster_docker_credentials_enabled: true
+cluster_docker_credentials_dcos_owned: true
+cluster_docker_registry_url: https://registry.example.com
+cluster_name: &lt;cluster-name&gt;
+master_discovery: static
+master_list:
+- &lt;master-private-ip-1&gt;
+- &lt;master-private-ip-2&gt;
+- &lt;master-private-ip-3&gt;
+resolvers:
+# You probably do not want to use these values since they point to public DNS servers.
+# Instead use values that are more specific to your particular infrastructure.
+- 8.8.4.4
+- 8.8.8.8
+ssh_port: 22
+ssh_user: centos
+</code></pre>
+<h2 id="cosmos-configuration"><a class="content__anchor" href="#cosmos-configuration" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="cosmos-config"></a>Cosmos Configuration</h2>
+<p>DC/OS cluster with one master, an Exhibitor/ZooKeeper managed internally, three private agents, Google DNS, and DC/OS Package Manager (Cosmos) configured with persistent storage:</p>
+<pre><code class="language-yaml">agent_list:
+- &lt;agent-private-ip-1&gt;
+- &lt;agent-private-ip-2&gt;
+- &lt;agent-private-ip-3&gt;
+# Use this bootstrap_url value unless you have moved the DC/OS installer assets.
+bootstrap_url: file:///opt/dcos_install_tmp
+cluster_name: &lt;cluster-name&gt;
+master_discovery: static
+master_list:
+- &lt;master-private-ip-1&gt;
+resolvers:
+# You probably do not want to use these values since they point to public DNS servers.
+# Instead use values that are more specific to your particular infrastructure.
+- 8.8.4.4
+- 8.8.8.8
+ssh_port: 22
+ssh_user: centos
+cosmos_config:
+  staged_package_storage_uri: file:///var/lib/dcos/cosmos/staged-packages
+  package_storage_uri: file:///var/lib/dcos/cosmos/packages
+</code></pre>
+<h2 id="custom-checks"><a class="content__anchor" href="#custom-checks" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="custom-checks"></a>Custom Checks</h2>
+<p>DC/OS cluster with one master, an Exhibitor/ZooKeeper managed internally, three private agents, Google DNS, and custom health checks defined for:</p>
+<ul>
+<li>A user Marathon instance (<code>user-marathon-on-marathon</code>)</li>
+<li>Local mounts on masters (<code>master-mounts</code>)</li>
+<li>Local mounts on agents (<code>agent-mounts</code>)</li>
+</ul>
+<pre><code class="language-yaml">agent_list:
+- &lt;agent-private-ip-1&gt;
+- &lt;agent-private-ip-2&gt;
+- &lt;agent-private-ip-3&gt;
+# Use this bootstrap_url value unless you have moved the DC/OS installer assets.
+bootstrap_url: file:///opt/dcos_install_tmp
+cluster_name: &lt;cluster-name&gt;
+master_discovery: static
+master_list:
+- &lt;master-private-ip-1&gt;
+resolvers:
+# You probably do not want to use these values since they point to public DNS servers.
+# Instead use values that are more specific to your particular infrastructure.
+- 8.8.4.4
+- 8.8.8.8
+ssh_port: 22
+ssh_user: centos
+custom_checks:
+  cluster_checks:
+    user-marathon-on-marathon:
+      description: The user Marathon-on-Marathon is healthy
+      cmd:
+        - &quot;check_marathon&quot;
+        - &quot;--location&quot;
+        - &quot;user-marathon.marathon.mesos&quot;
+      timeout: 5s
+  node_checks:
+    checks:
+      master-mounts:
+        description: Local mounts on masters are present
+        cmd:
+          - “check_mounts”
+          - &quot;--role&quot;
+          - &quot;master&quot;
+        roles:
+          - master
+        timeout: 5s
+      agent-mounts:
+        description: Local mounts on agents are present
+        cmd:
+          - “check_mounts”
+          - &quot;--role&quot;
+          - &quot;agent&quot;
+        roles:
+          - agent
+        timeout: 5s
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#all-parameters">All parameters</a></li><li class="content__sections-item content__sections-item--h1"><a href="#example-configurations">Example Configurations</a></li><li class="content__sections-item content__sections-item--h2"><a href="#aws">AWS</a></li><li class="content__sections-item content__sections-item--h2"><a href="#zookeeper">ZooKeeper</a></li><li class="content__sections-item content__sections-item--h2"><a href="#overlay">Overlay</a></li><li class="content__sections-item content__sections-item--h2"><a href="#http-proxy">HTTP Proxy</a></li><li class="content__sections-item content__sections-item--h2"><a href="#docker-credentials">Docker Credentials</a></li><li class="content__sections-item content__sections-item--h2"><a href="#cosmos-configuration">Cosmos Configuration</a></li><li class="content__sections-item content__sections-item--h2"><a href="#custom-checks">Custom Checks</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

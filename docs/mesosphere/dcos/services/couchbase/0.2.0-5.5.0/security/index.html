@@ -1,0 +1,100 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Security - D2iQ Docs</title><meta name="description" content="Using native transport encryption, authentication and authorization on Couchbase"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Couchbase Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/couchbase/1.0.1-6.0.0/security">Couchbase 1.0.1-6.0.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/couchbase/1.0.0-6.0.0/security">Couchbase 1.0.0-6.0.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/couchbase/0.3.0-5.5.3/security">Couchbase 0.3.0-5.5.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/couchbase/0.2.0-5.5.0/security">Couchbase 0.2.0-5.5.0</a></li></ul><div class="toggle"><p><span class="title">Couchbase</span><span class="version"> 0.2.0-5.5.0</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/couchbase/0.2.0-5.5.0/getting-started/">Getting Started</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/couchbase/0.2.0-5.5.0/configuration/">Configuration</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/couchbase/0.2.0-5.5.0/operations/">Operations</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/couchbase/0.2.0-5.5.0/security/">Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/couchbase/0.2.0-5.5.0/uninstall/">Uninstall</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/couchbase/0.2.0-5.5.0/troubleshooting/">Troubleshooting</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/couchbase/0.2.0-5.5.0/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/couchbase/0.2.0-5.5.0/supported-versions/">Supported Versions</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/couchbase/0.2.0-5.5.0/release-notes/">Release Notes</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Security</h1></div><h4 class="content__header-description">Using native transport encryption, authentication and authorization on Couchbase</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/couchbase/0.2.0-5.5.0/security/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>Refer to the <a href="https://developer.couchbase.com/documentation/server/current/security/security-x509certsintro.html">Couchbase documentation</a>.</p>
+<h1 id="dcos-couchbase-security"><a class="content__anchor" href="#dcos-couchbase-security" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS Couchbase Security</h1>
+<p>The DC/OS Couchbase service supports Couchbase’s native transport encryption, authentication, and authorization mechanisms. The service provides automation and orchestration to simplify the use of these important features.</p>
+<table class=“table note” bgcolor=#7d58ff>
+<tr> 
+  <td align=justify style=color:white><strong>NOTE:</strong> These security features are only available on DC/OS Enterprise 1.10 and later.</td> 
+</tr> 
+</table>
+<h2 id="transport-encryption"><a class="content__anchor" href="#transport-encryption" aria-hidden="true"><i data-feather="bookmark"></i></a>Transport Encryption</h2>
+<p>With transport encryption enabled, DC/OS Couchbase will automatically deploy all nodes with the correct configuration to encrypt communication via SSL.</p>
+<table class=“table note” bgcolor=#7d58ff>
+<tr> 
+  <td align=justify style=color:white><strong>NOTE:</strong> Couchbase Server currently supports TLS for client interactions and cross data center replication. There is no TLS for node to node communication. See the [Couchbase documentation](https://developer.couchbase.com/documentation/server/current/security/security-x509certsintro.html) for more details.</td> 
+</tr> 
+</table>
+<p>The service uses the <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/tls-ssl/">DC/OS CA</a> to generate the SSL artifacts that it uses to secure the service. Any client that trusts the DC/OS CA will consider the service’s certificates valid.</p>
+<h3 id="prerequisites"><a class="content__anchor" href="#prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h3>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/latest/security/ent/service-auth/custom-service-auth/">A DC/OS Service Account with a secret stored in the DC/OS Secret Store</a>.</li>
+<li>DC/OS Superuser permissions for modifying the permissions of the Service Account.</li>
+</ul>
+<h3 id="configure-transport-encryption"><a class="content__anchor" href="#configure-transport-encryption" aria-hidden="true"><i data-feather="bookmark"></i></a>Configure Transport Encryption</h3>
+<h4 id="set-up-the-service-account"><a class="content__anchor" href="#set-up-the-service-account" aria-hidden="true"><i data-feather="bookmark"></i></a>Set up the service account</h4>
+<p><a href="/dcosdocs/mesosphere/dcos/latest/security/ent/perms-management/">Grant</a> the service account the correct permissions.</p>
+<ul>
+<li>In DC/OS 1.10, the required permission is <code>dcos:superuser full</code>.</li>
+<li>In DC/OS 1.11 and later, the required permissions are:</li>
+</ul>
+<pre><code>dcos:secrets:default:/&lt;service name&gt;/* full
+dcos:secrets:list:default:/&lt;service name&gt; read
+dcos:adminrouter:ops:ca:rw full
+dcos:adminrouter:ops:ca:ro full
+</code></pre>
+<p>where <code>&lt;service name&gt;</code> is the name of the service to be installed.</p>
+<!-- Not clear if this is the right location DCOS-39455 --> 
+<p>Run the following DC/OS Enterprise CLI commands to set permissions for the service account on a strict cluster:</p>
+<pre><code>dcos security org users grant ${SERVICE_ACCOUNT} dcos:mesos:master:task:app_id:&lt;service/name&gt; create
+dcos security org users grant ${SERVICE_ACCOUNT} dcos:mesos:master:reservation:principal:dev_hdfs create
+dcos security org users grant ${SERVICE_ACCOUNT} dcos:mesos:master:volume:principal:dev_hdfs create
+</code></pre>
+<h4 id="install-the-service"><a class="content__anchor" href="#install-the-service" aria-hidden="true"><i data-feather="bookmark"></i></a>Install the service</h4>
+<p>Install the DC/OS Couchbase service including the following options in addition to your own:</p>
+<pre><code class="language-json">{
+    &quot;service&quot;: {
+        &quot;service_account&quot;: &quot;&lt;your service account name&gt;&quot;,
+        &quot;service_account_secret&quot;: &quot;&lt;full path of service secret&gt;&quot;,
+        &quot;security&quot;: {
+            &quot;transport_encryption&quot;: {
+                &quot;enabled&quot;: true
+            }
+        }
+    }
+}
+</code></pre>
+<p>Service account and service account secret plus enabling TLS can also be configured when launching the Couchbase Server via the DC/OS console.</p>
+<h4 id="secure-ports"><a class="content__anchor" href="#secure-ports" aria-hidden="true"><i data-feather="bookmark"></i></a>Secure ports</h4>
+<p>Couchbase uses the following ports, see <code>(SSL)</code></p>
+<pre><code>8091: Couchbase Web console, REST/HTTP interface
+8092: Views, queries, XDCR
+8093: Query services (4.0+)
+8094: Full-text Search (4.5+)
+8095: Analytics (5.5+)
+8096: Eventing (5.5+)
+11207: Smart client library data node access (SSL)
+11210: Smart client library/moxi data node access
+11211: Legacy non-smart client library data node access
+18091: Couchbase Web console, REST/HTTP interface (SSL)
+18092: Views, query, XDCR (SSL)
+18093: Query services (SSL) (4.0+)
+18094: Full-text Search (SSL) (4.5+)
+18095: Analytics (SSL) (5.5+)
+18096: Eventing (SSL) (5.5+)
+</code></pre>
+<table class=“table note” bgcolor=#7d58ff>
+<tr> 
+  <td align=justify style=color:white><strong>NOTE:</strong> Even if TLS is enabled, the non-TLS Couchbase ports stay open.</td> 
+</tr> 
+</table>
+<p>The important ports for clients to interact with Couchbase are 8091 (non-SSL) and 18091 (SSL).</p>
+<h4 id="tls-and-couchbase-sync-gateway"><a class="content__anchor" href="#tls-and-couchbase-sync-gateway" aria-hidden="true"><i data-feather="bookmark"></i></a>TLS and Couchbase Sync Gateway</h4>
+<p>The Couchbase Sync Gateway also supports TLS on its inbound side. The following two lines must be added to your gateway configuration.</p>
+<pre><code>SSLCert: node.crt
+SSLKey: node.key
+...
+</code></pre>
+<h2 id="authentication"><a class="content__anchor" href="#authentication" aria-hidden="true"><i data-feather="bookmark"></i></a>Authentication</h2>
+<p>DC/OS Couchbase supports the Couchbase native authentication mechanism. More details can be found <a href="https://developer.couchbase.com/documentation/server/current/security/security-authentication.html">here</a>.</p>
+<table class=“table note” bgcolor=#7d58ff>
+<tr> 
+  <td align=justify style=color:white><strong>NOTE:</strong> Non-native methods like LDAP and PAM are not supported at this time.</td> 
+</tr> 
+</table>
+<h2 id="authorization"><a class="content__anchor" href="#authorization" aria-hidden="true"><i data-feather="bookmark"></i></a>Authorization</h2>
+<p>DC/OS Couchbase service supports the Couchbase native authorization mechanism. More details can be found <a href="https://developer.couchbase.com/documentation/server/current/security/security-authorization.html">here</a>.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#dcos-couchbase-security">DC/OS Couchbase Security</a></li><li class="content__sections-item content__sections-item--h2"><a href="#transport-encryption">Transport Encryption</a></li><li class="content__sections-item content__sections-item--h2"><a href="#authentication">Authentication</a></li><li class="content__sections-item content__sections-item--h2"><a href="#authorization">Authorization</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

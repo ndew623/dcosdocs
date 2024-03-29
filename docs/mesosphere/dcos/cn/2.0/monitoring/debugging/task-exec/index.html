@@ -1,0 +1,202 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>使用 dcos task exec - D2iQ Docs</title><meta name="description" content="在任务容器内使用 dcos task exec 命令"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.0/monitoring/debugging/task-exec">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.0"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/debugging/task-exec">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/debugging/task-exec">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/debugging/task-exec">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.0</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/performance-monitoring/"><i data-feather="chevron-right"></i>性能监控</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/logging/"><i data-feather="chevron-right"></i>日志记录</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/debugging/"><i data-feather="chevron-right"></i>调试</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/debugging/gui-debugging/">从 DC/OS UI 调试</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/debugging/cli-debugging/">从 DC/OS CLI 调试</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/debugging/debug-perms/">授予 dcos task exec的访问权限</a></li><li class="active active-on"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/debugging/task-exec/">使用 dcos task exec</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/debugging/stuck-deployment/">部署卡住</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/debugging/slow-docker/">Docker 应用和部署缓慢</a></li></ul></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">使用 dcos task exec</h1></div><h4 class="content__header-description">在任务容器内使用 dcos task exec 命令</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/debugging/task-exec/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- The source repo for this topic is https://github.com/dcos/dcos-docs-site -->
+<p><code>dcos task exec</code> 命令允许您在任务的容器内执行任意命令，并将其输出返回到本地终端，以了解有关某个特定任务如何表现的更多信息。它提供了非常类似于 <a href="https://docs.docker.com/engine/reference/commandline/exec/"><code>docker exec</code></a> 体验，不需要 SSH 密钥。</p>
+<p>要使用调试功能，必须使用 Mesos 容器运行时或通用容器运行时来启动服务或作业。调试不能用于用 Docker 运行时启动的容器。如需更多信息，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/containerizers/">使用 Mesos 容器化工具</a></p>
+<p>您可以在下列模式下执行此命令。</p>
+<ul>
+<li>
+<p><code>dcos task exec &lt;task-id&gt; &lt;command&gt;</code>（无标记）：将 STDOUT 和 STDERR 作为原始字节从远程终端传输到本地终端。</p>
+</li>
+<li>
+<p><code>dcos task exec --tty &lt;task-id&gt; &lt;command&gt;</code>：将 STDOUT 和 STDERR 从远程终端传输到本地终端，但不作为原始字节。相反，此选项将本地终端置于原始模式，分配远程伪终端 (PTY)，并通过远程 PTY 来传输 STDOUT 和 STDERR。</p>
+</li>
+<li>
+<p><code>dcos task exec --interactive &lt;task-id&gt; &lt;command&gt;</code> 将 STDOUT 和 STDERR 从远程终端传输到本地终端，并将 STDIN 从本地终端传输到远程命令。</p>
+</li>
+<li>
+<p><code>dcos task exec --interactive --tty &lt;task-id&gt; &lt;command&gt;</code>：将 STDOUT 和 STDERR 从远程终端传输到本地终端，并将 STDIN 从本地终端传输到远程终端。此外，还将本地终端置于原始模式，分配远程伪终端 (PTY)，并通过远程 PTY 传输 STDOUT、STDERR 和 STDIN。此模式提供最大功能。</p>
+</li>
+</ul>
+<p>有关 <code>dcos task exec</code> 命令的更多信息，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/2.0/cli/command-reference/dcos-task/dcos-task-exec/">CLI 参考部分</a>.</p>
+<h3 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>提示</h3>
+<ul>
+<li>为方便查看，我们已经包含了上述完整标记的文本，但每一个都可以缩短。不是输入 <code>--interactive</code>，您只需输入 <code>-i</code>. 同样，不是输入 <code>--tty</code>，您只需输入 <code>-t</code>.</li>
+<li>如果您的模式传输原始字节，您将无法启动 <code>vim</code> 等类似程序，因为这些程序需要使用控制字符。</li>
+</ul>
+<h1 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>快速入门</h1>
+<p>使用本指南开始使用 <code>dcos task exec</code> 调试命令。</p>
+<p><strong>前提条件：</strong></p>
+<ul>
+<li>使用 [DC/OS 通用容器运行时] 启动的容器(/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/containerizers/)</li>
+</ul>
+<h1 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>使用在容器内运行的命令传送输出</h1>
+<p>您可以使用 <code>dcos task exec</code> 命令在容器内运行命令。此例中，启动了一个长期运行的 Marathon 应用程序，然后使用 <code>dcos task exec</code> 命令获取运行此应用程序的节点的主机名。</p>
+<ol>
+<li>
+<p>创建 Marathon 应用定义，并使用以下内容为其命名 <code>my-app.json</code></p>
+<pre><code class="language-bash">{
+   &quot;id&quot;: &quot;/my-app&quot;,
+   &quot;cmd&quot;: &quot;sleep 100000000&quot;,
+   &quot;cpus&quot;: 1,
+   &quot;instances&quot;: 1
+ }
+</code></pre>
+</li>
+<li>
+<p>在 DC/OS 上部署服务：</p>
+<pre><code class="language-bash">dcos marathon app add my-app.json
+</code></pre>
+</li>
+<li>
+<p>使用此 CLI 命令获取作业的任务 ID：</p>
+<pre><code class="language-bash">dcos task
+</code></pre>
+<p>输出应与此类似：</p>
+<pre><code class="language-bash">NAME        HOST        USER  STATE  ID                                               
+my-app      10.0.1.106  root    R    &lt;task_id&gt;
+</code></pre>
+</li>
+<li>
+<p>运行此命令以显示运行应用程序的容器的主机名，其中 <code>&lt;task-ID&gt;</code> 是您的任务 ID。</p>
+<pre><code class="language-bash">dcos task exec &lt;task_id&gt; hostname
+</code></pre>
+<p>输出应与此类似：</p>
+<pre><code class="language-bash">ip-10-0-1-105.us-west-2.compute.internal
+</code></pre>
+</li>
+</ol>
+<p>有关 <code>dcos task exec</code> 命令的更多信息，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/2.0/cli/command-reference/dcos-task/dcos-task-exec/">CLI 参考部分</a>.</p>
+<h1 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>在任务容器内运行交互命令</h1>
+<p>您可以使用 <code>dcos task exec</code> 命令，在群集中的机器上运行交互命令。此例中，<code>dcos task exec</code> 命令用来将简单脚本从本地计算机复制到节点上的任务容器。然后使用 <code>dcos task exec</code> 命令对脚本进行管理。</p>
+<ol>
+<li>
+<p>创建 Marathon 应用定义，并使用以下内容为其命名 <code>my-interactive-app.json</code></p>
+<pre><code class="language-bash">{
+   &quot;id&quot;: &quot;/my-interactive-app&quot;,
+   &quot;cmd&quot;: &quot;sleep 100000000&quot;,
+   &quot;cpus&quot;: 1,
+   &quot;instances&quot;: 1
+}
+</code></pre>
+</li>
+<li>
+<p>在 DC/OS 上部署应用程序：</p>
+<pre><code class="language-bash">dcos marathon app add my-interactive-app.json
+</code></pre>
+</li>
+<li>
+<p>使用此 CLI 命令获取应用程序的任务 ID：</p>
+<pre><code class="language-bash">dcos task
+</code></pre>
+<p>输出应与此类似：</p>
+<pre><code class="language-bash">NAME                HOST        USER  STATE  ID                                               
+my-interactive-app  10.0.1.106  root    R    &lt;task_id&gt;
+</code></pre>
+</li>
+<li>
+<p>用以下内容编写名为 <code>hello-world.sh</code> 的脚本：</p>
+<pre><code class="language-bash">echo &quot;Hello World&quot;
+</code></pre>
+</li>
+<li>
+<p>将脚本上传到任务容器：</p>
+<pre><code class="language-bash">cat hello-world.sh | dcos task exec -i &lt;task_id&gt; bash -c &quot;cat &gt; hello-world.sh&quot;
+</code></pre>
+</li>
+<li>
+<p>提供文件可执行权限：</p>
+<pre><code class="language-bash">dcos task exec &lt;task_id&gt; chmod a+x hello-world.sh
+</code></pre>
+</li>
+<li>
+<p>在容器内运行脚本：</p>
+<pre><code class="language-bash">dcos task exec &lt;task_id&gt; ./hello-world.sh
+</code></pre>
+<p>输出应与此类似：</p>
+<pre><code class="language-bash">Hello World
+</code></pre>
+</li>
+</ol>
+<h1 id="bash"><a class="content__anchor" href="#bash" aria-hidden="true"><i data-feather="bookmark"></i></a>启动长期运行的交互式 Bash 会话</h1>
+<p>此例中，长期运行的 <a href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-jobs/">作业</a> 通过使用 <code>dcos job run</code> 命令来启动，<code>dcos task exec</code> 命令用于在该作业的容器内启动交互式 Bash shell。</p>
+<ol>
+<li>
+<p>使用 DC/OS CLI 部署和运行作业：</p>
+<ol>
+<li>
+<p>创建以下应用定义并另存为 <code>my-job.json</code>. 这将指定运行 <code>10000000</code> 秒的休眠作业。</p>
+<pre><code class="language-bash">{
+  &quot;id&quot;: &quot;my-job&quot;,
+  &quot;labels&quot;: {},
+  &quot;run&quot;: {
+    &quot;artifacts&quot;: [],
+    &quot;cmd&quot;: &quot;sleep 100000000&quot;,
+    &quot;cpus&quot;: 0.01,
+    &quot;disk&quot;: 0,
+    &quot;env&quot;: {},
+    &quot;maxLaunchDelaySeconds&quot;: 300,
+    &quot;mem&quot;: 32,
+    &quot;placement&quot;: {
+      &quot;constraints&quot;: []
+    },
+    &quot;restart&quot;: {
+      &quot;policy&quot;: &quot;NEVER&quot;
+    },
+    &quot;volumes&quot;: []
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>使用此 CLI 命令部署该作业：</p>
+<pre><code class="language-bash">dcos job add my-job.json
+</code></pre>
+</li>
+<li>
+<p>验证作业是否已成功部署：</p>
+<pre><code class="language-bash">dcos job list
+</code></pre>
+<p>输出应类似于：</p>
+<pre><code class="language-bash">ID      DESCRIPTION  STATUS       LAST SUCCESFUL RUN        
+my-job               Unscheduled         None
+</code></pre>
+</li>
+<li>
+<p>运行作业：</p>
+<pre><code class="language-bash">dcos job run my-job
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p>使用此 CLI 命令获取作业的任务 ID：</p>
+<pre><code class="language-bash">dcos task
+</code></pre>
+<p>输出应与此类似：</p>
+<pre><code class="language-bash">NAME                          HOST       USER  STATE  ID                                                                       
+20161209183121nz2F5.my-job    10.0.2.53  root    R    &lt;task_id&gt;
+</code></pre>
+</li>
+<li>
+<p>在容器内部启动一个指定了任务 ID（<code>&lt;task_id&gt;</code>）的进程，并将 TTY 附加到该进程。这将启动交互式 Bash 会话。</p>
+<pre><code class="language-bash">dcos task exec --interactive --tty &lt;task_id&gt; bash
+</code></pre>
+<p>您现在应该是位于运行交互式 Bash 会话 的容器内部。</p>
+<pre><code class="language-bash">root@ip-10-0-2-53 / #
+</code></pre>
+</li>
+<li>
+<p>从交互式 Bash 会话运行一个命令。例如 <code>ls</code> 命令：</p>
+<pre><code class="language-bash">root@ip-10-0-1-104 / # ls
+bin   dev  home  lib64	     media  opt   root	sbin  sys  usr
+boot  etc  lib	 lost+found  mnt    proc  run	srv   tmp  var
+</code></pre>
+</li>
+</ol>
+<p><strong>提示</strong></p>
+<p>您可以简写，例如 <code>-i</code> 的<code>--interactive</code> 或 <code>-t</code> 的 <code>--tty</code>. 此外，只需要 <code>&lt;task_id&gt;</code> 的开头唯一字符。例如，如果您的任务 ID 是 <code>exec-test_20161214195</code> 并且没有以字母 <code>e</code> 开头的其他任务 ID，则有效的命令语法如下：<code>dcos task exec -i -t e bash</code>如需更多信息，请参阅 CLI 命令 [参考]。(/dcosdocs/mesosphere/dcos/cn/2.0/cli/command-reference/).</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#-2">快速入门</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-3">使用在容器内运行的命令传送输出</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-4">在任务容器内运行交互命令</a></li><li class="content__sections-item content__sections-item--h1"><a href="#bash">启动长期运行的交互式 Bash 会话</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

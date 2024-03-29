@@ -1,0 +1,543 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Metrics Reference - D2iQ Docs</title><meta name="description" content="Understanding metrics collected by DC/OS"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li><li class="chooser-list-item"><a href="/dkp/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/2.0/metrics/reference">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.0"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__item"><a href="/dkp/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/metrics/reference">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/metrics/reference">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/metrics/reference">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/metrics/reference">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.0</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/metrics/architecture/">Metrics Plugin Architecture</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/metrics/quickstart/">Quick Start</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/metrics/mesos/">Mesos Metrics</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/metrics/datadog/">Export DC/OS Metrics to Datadog</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/metrics/metrics-api/">Metrics API</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/metrics/reference/">Metrics Reference</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Metrics Reference</h1></div><h4 class="content__header-description">Understanding metrics collected by DC/OS</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.0/metrics/reference/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+Metrics+Reference&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/2.0/metrics/reference&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><!-- The source repo for this topic is https://github.com/dcos/dcos-docs-site -->
+<p>Mesosphere® DC/OS™ collects basic system metrics - such as CPU and memory - for nodes and containers automatically. Mesosphere DC/OS also collects metadata about the different categories of metrics. For more information about the metadata metrics, see <a href="#Dimensions">Dimensions</a>.</p>
+<p>You should note that automatically-collected metrics are only available for containers that provide endpoint statistics. For example, Docker® containers do not provide networking data for DC/OS to consume, so the networking metrics that are available for UCR containers are not available for Docker containers.</p>
+<p><a name="Node"></a></p>
+<h1 id="node"><a class="content__anchor" href="#node" aria-hidden="true"><i data-feather="bookmark"></i></a>Node</h1>
+<p><a name="NodeCPUMem"></a></p>
+<h2 id="cpu-and-memory-metrics"><a class="content__anchor" href="#cpu-and-memory-metrics" aria-hidden="true"><i data-feather="bookmark"></i></a>CPU and memory metrics</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cpu.idle</code></td>
+<td>Percentage of CPUs idle.</td>
+</tr>
+<tr>
+<td><code>cpu.system</code></td>
+<td>Percentage of system used.</td>
+</tr>
+<tr>
+<td><code>cpu.total</code></td>
+<td>Percentage of CPUs used.</td>
+</tr>
+<tr>
+<td><code>cpu.user</code></td>
+<td>Percentage of CPU used by the user.</td>
+</tr>
+<tr>
+<td><code>cpu.wait</code></td>
+<td>Percentage idle while waiting for an operation to complete.</td>
+</tr>
+<tr>
+<td><code>load.1min</code></td>
+<td>Load average for the past minute.</td>
+</tr>
+<tr>
+<td><code>load.5min</code></td>
+<td>Load average for the past 5 minutes.</td>
+</tr>
+<tr>
+<td><code>load.15min</code></td>
+<td>Load average for the past 15 minutes.</td>
+</tr>
+<tr>
+<td><code>memory.buffers</code></td>
+<td>Number of memory buffers.</td>
+</tr>
+<tr>
+<td><code>memory.cached</code></td>
+<td>Amount of cached memory.</td>
+</tr>
+<tr>
+<td><code>memory.free</code></td>
+<td>Amount of free memory in bytes.</td>
+</tr>
+<tr>
+<td><code>memory.total</code></td>
+<td>Total memory in bytes.</td>
+</tr>
+<tr>
+<td><code>process.count</code></td>
+<td>Number of processes that are running.</td>
+</tr>
+<tr>
+<td><code>swap.free</code></td>
+<td>Amount of free swap space.</td>
+</tr>
+<tr>
+<td><code>swap.total</code></td>
+<td>Total swap space.</td>
+</tr>
+<tr>
+<td><code>swap.used</code></td>
+<td>Amount of swap space used.</td>
+</tr>
+<tr>
+<td><code>system.uptime</code></td>
+<td>The system uptime.</td>
+</tr>
+</tbody>
+</table>
+<p><a name="NodeFiles"></a></p>
+<h2 id="file-system-metrics"><a class="content__anchor" href="#file-system-metrics" aria-hidden="true"><i data-feather="bookmark"></i></a>File system metrics</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>filesystem.capacity.free</code></td>
+<td>Amount of available capacity in bytes.</td>
+</tr>
+<tr>
+<td><code>filesystem.capacity.total</code></td>
+<td>Total capacity in bytes.</td>
+</tr>
+<tr>
+<td><code>filesystem.capacity.used</code></td>
+<td>Capacity used in bytes.</td>
+</tr>
+<tr>
+<td><code>filesystem.inode.free</code></td>
+<td>Amount of available inodes in bytes.</td>
+</tr>
+<tr>
+<td><code>filesystem.inode.total</code></td>
+<td>Total inodes in bytes.</td>
+</tr>
+<tr>
+<td><code>filesystem.inode.used</code></td>
+<td>Inodes used in bytes.</td>
+</tr>
+</tbody>
+</table>
+<p class="message--note"><strong>NOTE: </strong>The tag <code>path</code> is automatically populated based on the mount path of the local filesystem (for example, <code>/</code>, <code>/boot</code>, and so on).</p>
+<p><a name="NodeNetwork"></a></p>
+<h2 id="network-interface-metrics"><a class="content__anchor" href="#network-interface-metrics" aria-hidden="true"><i data-feather="bookmark"></i></a>Network interface metrics</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>network.in</code></td>
+<td>Number of bytes downloaded.</td>
+</tr>
+<tr>
+<td><code>network.in.dropped</code></td>
+<td>Number of downloaded bytes dropped.</td>
+</tr>
+<tr>
+<td><code>network.in.errors</code></td>
+<td>Number of downloaded bytes in error.</td>
+</tr>
+<tr>
+<td><code>network.in.packets</code></td>
+<td>Number of packets downloaded.</td>
+</tr>
+<tr>
+<td><code>network.out</code></td>
+<td>Number of bytes uploaded.</td>
+</tr>
+<tr>
+<td><code>network.out.dropped</code></td>
+<td>Number of uploaded bytes dropped.</td>
+</tr>
+<tr>
+<td><code>network.out.errors</code></td>
+<td>Number of uploaded bytes in error.</td>
+</tr>
+<tr>
+<td><code>network.out.packets</code></td>
+<td>Number of packets uploaded.</td>
+</tr>
+</tbody>
+</table>
+<p class="message--note"><strong>NOTE: </strong>The tag <code>interface</code> is automatically populated based on the type of the network interface (for example, <code>spartan</code>, <code>d-dcos</code>, <code>minuteman</code>, and so on).</p>
+<h2 id="process"><a class="content__anchor" href="#process" aria-hidden="true"><i data-feather="bookmark"></i></a>Process</h2>
+<p>The following per-process resource utilization metrics are collected.</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>procstat.cpu_time_guest</td>
+<td>The amount of time that the CPU is running a virtual CPU for a guest operating system.</td>
+</tr>
+<tr>
+<td>procstat.cpu_time_guest_nice</td>
+<td>The amount of time that the CPU is running a virtual CPU for a guest operating system, which is low-priority and can be interrupted by other processes.</td>
+</tr>
+<tr>
+<td>procstat.cpu_time_idle</td>
+<td>The amount of time that the CPU is idle.</td>
+</tr>
+<tr>
+<td>procstat.cpu_time_iowait</td>
+<td>The amount of time that the CPU is waiting for I/O operations to complete.</td>
+</tr>
+<tr>
+<td>procstat.cpu_time_irq</td>
+<td>The amount of time that the CPU is servicing interrupts.</td>
+</tr>
+<tr>
+<td>procstat.cpu_time_nice</td>
+<td>The amount of time that the CPU is in user mode with low-priority processes, which can easily be interrupted by higher-priority processes.</td>
+</tr>
+<tr>
+<td>procstat.cpu_time_soft_irq</td>
+<td>The amount of time that the CPU is servicing software interrupts.</td>
+</tr>
+<tr>
+<td>procstat.cpu_time_steal</td>
+<td>The amount of time that the CPU is in stolen time, which is time spent in other operating systems in a virtualized environment.</td>
+</tr>
+<tr>
+<td>procstat.cpu_time_system</td>
+<td>The amount of time that the CPU is in system mode.</td>
+</tr>
+<tr>
+<td>procstat.cpu_time_user</td>
+<td>The amount of time that the CPU is in user mode.</td>
+</tr>
+<tr>
+<td>procstat.cpu_usage</td>
+<td>The percentage of time that the process is active in any capacity.</td>
+</tr>
+<tr>
+<td>procstat.involuntary_context_switches</td>
+<td>The number of times the process was involuntarily context-switched.</td>
+</tr>
+<tr>
+<td>procstat.memory_data</td>
+<td>The amount of memory the process uses for data.</td>
+</tr>
+<tr>
+<td>procstat.memory_locked</td>
+<td>The amount of memory the process has locked.</td>
+</tr>
+<tr>
+<td>procstat.memory_rss</td>
+<td>The amount of real memory (resident set) that the process is using.</td>
+</tr>
+<tr>
+<td>procstat.memory_stack</td>
+<td>The amount of stack memory the process is using.</td>
+</tr>
+<tr>
+<td>procstat.memory_swap</td>
+<td>The amount of swap memory the process is using.</td>
+</tr>
+<tr>
+<td>procstat.memory_vms</td>
+<td>The amount of virtual memory the process is using.</td>
+</tr>
+<tr>
+<td>procstat.nice_priority</td>
+<td>The current usage of nice priority for the process.</td>
+</tr>
+<tr>
+<td>procstat.num_threads</td>
+<td>The number of threads in the process.</td>
+</tr>
+<tr>
+<td>procstat.pid</td>
+<td>Process identifier (ID).</td>
+</tr>
+<tr>
+<td>procstat.realtime_priority</td>
+<td>The current usage of realtime priority for the process.</td>
+</tr>
+<tr>
+<td>procstat.rlimit_cpu_time_hard</td>
+<td>The hard resource limit on the process for memory used for data.</td>
+</tr>
+<tr>
+<td>procstat.rlimit_cpu_time_soft</td>
+<td>The soft resource limit on the process for memory used for data.</td>
+</tr>
+<tr>
+<td>procstat.rlimit_file_locks_hard</td>
+<td>The hard file locks resource limit for the process.</td>
+</tr>
+<tr>
+<td>procstat.rlimit_file_locks_soft</td>
+<td>The soft file locks resource limit for the process.</td>
+</tr>
+<tr>
+<td>procstat.rlimit_memory_data_hard</td>
+<td>The hard resource limit on the process for memory used for data.</td>
+</tr>
+<tr>
+<td>procstat.rlimit_memory_data_soft</td>
+<td>The soft resource limit on the process for memory used for data.</td>
+</tr>
+<tr>
+<td>procstat.rlimit_memory_locked_hard</td>
+<td>The hard resource limit on the process for locked memory.</td>
+</tr>
+<tr>
+<td>procstat.rlimit_memory_locked_soft</td>
+<td>The soft resource limit on the process for locked memory.</td>
+</tr>
+<tr>
+<td>procstat.rlimit_memory_rss_hard</td>
+<td>The hard resource limit on the process for physical memory.</td>
+</tr>
+<tr>
+<td>procstat.rlimit_memory_rss_soft</td>
+<td>The soft resource limit on the process for physical memory.</td>
+</tr>
+<tr>
+<td>procstat.rlimit_memory_stack_hard</td>
+<td>The hard resource limit on the process stack.</td>
+</tr>
+<tr>
+<td>procstat.rlimit_memory_stack_soft</td>
+<td>The soft resource limit on the process stack.</td>
+</tr>
+<tr>
+<td>procstat.rlimit_memory_vms_hard</td>
+<td>The hard resource limit on the process for virtual memory.</td>
+</tr>
+<tr>
+<td>procstat.rlimit_memory_vms_soft</td>
+<td>The soft resource limit on the process for virtual memory.</td>
+</tr>
+<tr>
+<td>procstat.rlimit_nice_priority_hard</td>
+<td>The hard resource limit on the ceiling for the process’s nice priority value.</td>
+</tr>
+<tr>
+<td>procstat.rlimit_nice_priority_soft</td>
+<td>The soft resource limit on the ceiling for the process’s nice priority value.</td>
+</tr>
+<tr>
+<td>procstat.rlimit_num_fds_hard</td>
+<td>The hard resource limit on the file descriptors for the process.</td>
+</tr>
+<tr>
+<td>procstat.rlimit_num_fds_soft</td>
+<td>The soft resource limit on the file descriptors for the process.</td>
+</tr>
+<tr>
+<td>procstat.rlimit_realtime_priority_hard</td>
+<td>The hard resource limit on the ceiling for the process’s real-time priority value.</td>
+</tr>
+<tr>
+<td>procstat.rlimit_realtime_priority_soft</td>
+<td>The soft resource limit on the ceiling for the process’s real-time priority value.</td>
+</tr>
+<tr>
+<td>procstat.rlimit_signals_pending_hard</td>
+<td>The hard resource limit on the number of signals that are pending for delivery to the process.</td>
+</tr>
+<tr>
+<td>procstat.rlimit_signals_pending_soft</td>
+<td>The soft resource limit on the number of signals that are pending for delivery to the process.</td>
+</tr>
+<tr>
+<td>procstat.signals_pending</td>
+<td>The number of signals pending to be handled by the process.</td>
+</tr>
+<tr>
+<td>procstat.voluntary_context_switches</td>
+<td>The number of times the process was context-switched voluntarily.</td>
+</tr>
+</tbody>
+</table>
+<p>Source: <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-procstat-process-metrics.html">AWS® DOCS - Collect Process Metrics with the procstat Plugin</a></p>
+<p><a name="Container"></a></p>
+<h1 id="container"><a class="content__anchor" href="#container" aria-hidden="true"><i data-feather="bookmark"></i></a>Container</h1>
+<p>The following per-container resource utilization metrics are collected.</p>
+<p><a name="ConCPU"></a></p>
+<h2 id="cpu-usage-metrics"><a class="content__anchor" href="#cpu-usage-metrics" aria-hidden="true"><i data-feather="bookmark"></i></a>CPU usage metrics</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cpus.limit</code></td>
+<td>The number of CPU shares allocated.</td>
+</tr>
+<tr>
+<td><code>cpus.system_time_secs</code></td>
+<td>Total CPU time spent in kernel mode in seconds.</td>
+</tr>
+<tr>
+<td><code>cpus.throttled_time_secs</code></td>
+<td>Total time, in seconds, that CPU was throttled.</td>
+</tr>
+<tr>
+<td><code>cpus.user_time_sec</code>s</td>
+<td>Total CPU time spent in user mode.</td>
+</tr>
+</tbody>
+</table>
+<p><a name="ConDisk"></a></p>
+<h2 id="disk-metrics"><a class="content__anchor" href="#disk-metrics" aria-hidden="true"><i data-feather="bookmark"></i></a>Disk metrics</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>disk.limit_bytes</code></td>
+<td>Hard capacity limit for disk in bytes.</td>
+</tr>
+<tr>
+<td><code>disk.used_bytes</code></td>
+<td>Hard capacity used in bytes.</td>
+</tr>
+</tbody>
+</table>
+<p><a name="ConMem"></a></p>
+<h2 id="memory-metrics"><a class="content__anchor" href="#memory-metrics" aria-hidden="true"><i data-feather="bookmark"></i></a>Memory metrics</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mem.limit_bytes</code></td>
+<td>Hard memory limit for a container.</td>
+</tr>
+<tr>
+<td><code>mem.total_bytes</code></td>
+<td>Total memory of a process in RAM (as opposed to in swap).</td>
+</tr>
+</tbody>
+</table>
+<p><a name="ConNetwork"></a></p>
+<h2 id="network-metrics"><a class="content__anchor" href="#network-metrics" aria-hidden="true"><i data-feather="bookmark"></i></a>Network metrics</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>net.rx.bytes</code></td>
+<td>Bytes received.</td>
+</tr>
+<tr>
+<td><code>net.rx.dropped</code></td>
+<td>Packets dropped on receive.</td>
+</tr>
+<tr>
+<td><code>net.rx.errors</code></td>
+<td>Errors reported on receive.</td>
+</tr>
+<tr>
+<td><code>net.rx.packets</code></td>
+<td>Packets received.</td>
+</tr>
+<tr>
+<td><code>net.tx.bytes</code></td>
+<td>Bytes sent.</td>
+</tr>
+<tr>
+<td><code>net.tx.dropped</code></td>
+<td>Packets dropped on send.</td>
+</tr>
+<tr>
+<td><code>net.tx.errors</code></td>
+<td>Errors reported on send.</td>
+</tr>
+<tr>
+<td><code>net.tx.packets</code></td>
+<td>Packets sent.</td>
+</tr>
+</tbody>
+</table>
+<p><a name="Dimensions"></a></p>
+<h1 id="dimensions"><a class="content__anchor" href="#dimensions" aria-hidden="true"><i data-feather="bookmark"></i></a>Dimensions</h1>
+<p>Dimensions are metadata about the metrics. The following table lists the available dimensions and the entities where they appear.</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Description</th>
+<th>Entity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mesos_id</code></td>
+<td>The Apache® Mesos® ID of the node.</td>
+<td>node, container</td>
+</tr>
+<tr>
+<td><code>cluster_id</code></td>
+<td>The ID of the Mesos cluster.</td>
+<td>node, container</td>
+</tr>
+<tr>
+<td><code>container_id</code></td>
+<td>The ID of the container.</td>
+<td>metric, container</td>
+</tr>
+<tr>
+<td><code>executor_name</code></td>
+<td>The name of the task executor.</td>
+<td>metric</td>
+</tr>
+<tr>
+<td><code>framework_name</code></td>
+<td>The name of the framework.</td>
+<td>container</td>
+</tr>
+<tr>
+<td><code>hostname</code></td>
+<td>The IP address of the node.</td>
+<td>container, node</td>
+</tr>
+<tr>
+<td><code>labels</code></td>
+<td>Key-value pairs describing the metric.</td>
+<td>container</td>
+</tr>
+<tr>
+<td><code>task_name</code></td>
+<td>The task name.</td>
+<td>container</td>
+</tr>
+</tbody>
+</table>
+<p>Read the following resource for more information on Metrics:</p>
+<ol>
+<li><a href="http://mesos.apache.org/documentation/latest/monitoring/">Additional Mesos volume and Network metrics</a> documentation.</li>
+</ol>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#node">Node</a></li><li class="content__sections-item content__sections-item--h2"><a href="#cpu-and-memory-metrics">CPU and memory metrics</a></li><li class="content__sections-item content__sections-item--h2"><a href="#file-system-metrics">File system metrics</a></li><li class="content__sections-item content__sections-item--h2"><a href="#network-interface-metrics">Network interface metrics</a></li><li class="content__sections-item content__sections-item--h2"><a href="#process">Process</a></li><li class="content__sections-item content__sections-item--h1"><a href="#container">Container</a></li><li class="content__sections-item content__sections-item--h2"><a href="#cpu-usage-metrics">CPU usage metrics</a></li><li class="content__sections-item content__sections-item--h2"><a href="#disk-metrics">Disk metrics</a></li><li class="content__sections-item content__sections-item--h2"><a href="#memory-metrics">Memory metrics</a></li><li class="content__sections-item content__sections-item--h2"><a href="#network-metrics">Network metrics</a></li><li class="content__sections-item content__sections-item--h1"><a href="#dimensions">Dimensions</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

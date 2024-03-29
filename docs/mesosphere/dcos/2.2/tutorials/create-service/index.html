@@ -1,0 +1,159 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Tutorial - Creating and Running a Service - D2iQ Docs</title><meta name="description" content="Creating and deploying a service and a containerized service"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.2"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/tutorials/create-service">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/tutorials/create-service">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/tutorials/create-service">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/tutorials">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/dcos-101/"><i data-feather="chevron-right"></i>DC/OS 101</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/create-service/">Creating and Running a Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/stateful-services/">Running Stateful Services on DC/OS</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/autoscaling/"><i data-feather="chevron-right"></i>Autoscaling with Marathon</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/iot_pipeline/">Deploying a Load-Balanced Data Pipeline</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/deploy-on-marathon/">Deploying Marathon Apps with Jenkins</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/task-labels/">Labeling Tasks and Jobs</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/dcos-debug/"><i data-feather="chevron-right"></i>Debugging Applications on DC/OS</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/archives/">Access Documentation Archives</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Tutorial - Creating and Running a Service</h1></div><h4 class="content__header-description">Creating and deploying a service and a containerized service</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.2/tutorials/create-service/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- This disclaimer should be included at the beginning of each page of a tutorial. -->
+<p class="message--important"><strong>IMPORTANT: </strong>Tutorials are intended to give you hands-on experience working with a limited set of DC/OS features with no implied or explicit warranty of any kind. None of the information provided--including sample scripts, commands, or applications--is officially supported by Mesosphere. You should not use this information in a production environment without independent testing and validation.</p>
+<p>This tutorial shows how to create and deploy a simple one-command service and a containerized service using both the DC/OS web interface and the CLI.</p>
+<h3 id="prerequisites"><a class="content__anchor" href="#prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h3>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/2.2/installing/">A DC/OS cluster</a></li>
+</ul>
+<h1 id="one-command-service"><a class="content__anchor" href="#one-command-service" aria-hidden="true"><i data-feather="bookmark"></i></a>One-command service</h1>
+<h2 id="dcos-web-interface"><a class="content__anchor" href="#dcos-web-interface" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS web interface</h2>
+<p>Create and run a simple service from the DC/OS web interface:</p>
+<ol>
+<li>
+<p>Click the <strong>Services</strong> tab of the DC/OS web interface, then click <strong>RUN A SERVICE</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Single Container</strong>.</p>
+<ol>
+<li>
+<p>In the <strong>SERVICE ID</strong> field, enter a name for your service.</p>
+</li>
+<li>
+<p>In the <strong>COMMAND</strong> field, enter <code>sleep 10</code>.</p>
+</li>
+<li>
+<p>Click <strong>MORE SETTINGS</strong> and choose your container runtime.</p>
+<ul>
+<li><strong>DOCKER ENGINE</strong> Use this option if you require specific features of the Docker package. If you select this option, you must specify a Docker container image in the <strong>CONTAINER IMAGE</strong> field.</li>
+<li><strong>UNIVERSAL CONTAINER RUNTIME (UCR)</strong>  Universal Container Runtime (UCR) using native Mesos engine. Supports Docker file format, multiple containers (pods), and GPU resources. If you select this option, you can optionally specify a Docker container image in the <strong>CONTAINER IMAGE</strong> field.</li>
+</ul>
+<p>For more information, see <a href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/containerizers/">Using Containerizers</a>.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click <strong>REVIEW &amp; RUN</strong> and <strong>RUN SERVICE</strong>.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/deploy-svs-ui.png" alt="Create a service in the DC/OS UI"></p>
+<p>Figure 1. Create a service in the web interface</p>
+</li>
+<li>
+<p>Click the name of your service in the <strong>Services</strong> view to see it running and monitor health.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/GUI-Services-Running_Services_View-1_12.png" alt="Running service in the DC/OS UI"></p>
+<p>Figure 2. Viewing a running service in the web interface</p>
+</li>
+</ol>
+<h2 id="dcos-cli"><a class="content__anchor" href="#dcos-cli" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS CLI</h2>
+<p>Create and run a simple service from the DC/OS CLI:</p>
+<ol>
+<li>
+<p>Create a JSON file called <code>my-app-cli.json</code> with the following contents:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/my-app-cli&quot;,
+  &quot;cmd&quot;: &quot;sleep 10&quot;,
+  &quot;instances&quot;: 1,
+  &quot;cpus&quot;: 1,
+  &quot;mem&quot;: 128,
+  &quot;portDefinitions&quot;: [
+    {
+      &quot;protocol&quot;: &quot;tcp&quot;,
+      &quot;port&quot;: 10000
+    }
+  ],
+  &quot;requirePorts&quot;: false
+}
+</code></pre>
+</li>
+<li>
+<p>Run the service with the following command.</p>
+<pre><code class="language-bash">dcos marathon app add my-app-cli.json
+</code></pre>
+</li>
+<li>
+<p>Run the following command to verify that your service is running:</p>
+<pre><code class="language-bash">dcos marathon app list
+</code></pre>
+<p>You can also click the name of your service in the <strong>Services</strong> view of the DC/OS web interface to see it running and monitor health.</p>
+</li>
+</ol>
+<h1 id="containerized-service"><a class="content__anchor" href="#containerized-service" aria-hidden="true"><i data-feather="bookmark"></i></a>Containerized service</h1>
+<h2 id="dcos-web-interface-2"><a class="content__anchor" href="#dcos-web-interface-2" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS web interface</h2>
+<p>Create and run a containerized service from the DC/OS web interface:</p>
+<ol>
+<li>
+<p>Go to the <code>hello-dcos</code> page of the <a href="https://hub.docker.com/r/mesosphere/hello-dcos/tags/">Mesosphere Docker Hub repository</a> and note down the latest image tag.</p>
+</li>
+<li>
+<p>Click the <strong>Services</strong> tab of the DC/OS web interface, then click the <strong>RUN A SERVICE</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Single Container</strong> and enter a name for your service in the <strong>SERVICE ID</strong> field.</p>
+</li>
+<li>
+<p>Click the <strong>Container Settings</strong> tab and enter the following in the <strong>CONTAINER IMAGE</strong> field: <code>mesosphere/hello-dcos:&lt;image-tag&gt;</code>. Replace <code>&lt;image-tag&gt;</code> with the tag you copied in step 1.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/deploy-container-ui.png" alt="Containerized service in the DC/OS UI"></p>
+<p>Figure 3. Containerized service in the web interface</p>
+</li>
+<li>
+<p>Click <strong>REVIEW &amp; RUN</strong> and <strong>RUN SERVICE</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Services</strong> tab, click the name of your service, then choose one of the task instances. Click <strong>Logs</strong>, then toggle to the <strong>STDERR</strong> and <strong>STDOUT</strong> to see the output of the service.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/container-running-ui.png" alt="Running containerized service in the DC/OS UI"></p>
+<p>Figure 4. Viewing a containerized service in the web interface</p>
+</li>
+</ol>
+<h2 id="dcos-cli-2"><a class="content__anchor" href="#dcos-cli-2" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS CLI</h2>
+<p>Create and run a containerized service from the CLI:</p>
+<ol>
+<li>
+<p>Go to the <code>hello-dcos</code> page of the <a href="https://hub.docker.com/r/mesosphere/hello-dcos/tags/">Mesosphere Docker Hub repository</a> and note down the latest image tag.</p>
+</li>
+<li>
+<p>Create a JSON file called <code>hello-dcos-cli.json</code> with the following contents. Replace <code>&lt;image-tag&gt;</code> in the <code>docker:image</code> field with the tag you copied in step 1.</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/hello-dcos-cli&quot;,
+  &quot;instances&quot;: 1,
+  &quot;cpus&quot;: 1,
+  &quot;mem&quot;: 128,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;DOCKER&quot;,
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;mesosphere/hello-dcos:&lt;image-tag&gt;&quot;,
+      &quot;forcePullImage&quot;: false,
+      &quot;privileged&quot;: false
+    }
+  },
+  &quot;acceptedResourceRoles&quot;: [&quot;slave_public&quot;],
+  &quot;portDefinitions&quot;: [
+    {
+      &quot;protocol&quot;: &quot;tcp&quot;,
+      &quot;port&quot;: 10001
+    }
+  ],
+  &quot;requirePorts&quot;: false
+}
+</code></pre>
+</li>
+<li>
+<p>Run the service with the following command.</p>
+<pre><code class="language-bash">dcos marathon app add hello-dcos-cli.json
+</code></pre>
+</li>
+<li>
+<p>Run the following command to verify that your service is running:</p>
+<pre><code class="language-bash">dcos marathon app list
+</code></pre>
+</li>
+<li>
+<p>In the <strong>Services</strong> tab of the DC/OS web interface, click the name of your service, then choose one of the task instances.</p>
+</li>
+<li>
+<p>Click <strong>Logs</strong>, then toggle to the <strong>OUTPUT (STDOUT)</strong> view to see the output of the service.</p>
+</li>
+</ol>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#one-command-service">One-command service</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-web-interface">DC/OS web interface</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-cli">DC/OS CLI</a></li><li class="content__sections-item content__sections-item--h1"><a href="#containerized-service">Containerized service</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-web-interface-2">DC/OS web interface</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-cli-2">DC/OS CLI</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

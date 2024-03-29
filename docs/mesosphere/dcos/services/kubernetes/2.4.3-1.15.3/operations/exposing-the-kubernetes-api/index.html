@@ -1,0 +1,243 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Exposing the Kubernetes API - D2iQ Docs</title><meta name="description" content="Setting up HAProxy to expose the Kubernetes API"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Kubernetes Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services/kubernetes">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.8.0-1.19.2/operations/exposing-the-kubernetes-api">Kubernetes 2.8.0-1.19.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.7.0-1.18.6/operations/exposing-the-kubernetes-api">Kubernetes 2.7.0-1.18.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.6.1-1.17.8/operations/exposing-the-kubernetes-api">Kubernetes 2.6.1-1.17.8</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.6.0-1.17.7/operations/exposing-the-kubernetes-api">Kubernetes 2.6.0-1.17.7</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.5.0-1.16.9/operations/exposing-the-kubernetes-api">Kubernetes 2.5.0-1.16.9</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.9-1.15.10/operations/exposing-the-kubernetes-api">Kubernetes 2.4.9-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.8-1.15.10/operations/exposing-the-kubernetes-api">Kubernetes 2.4.8-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.7-1.15.10/operations/exposing-the-kubernetes-api">Kubernetes 2.4.7-1.15.10</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.6-1.15.6/operations/exposing-the-kubernetes-api">Kubernetes 2.4.6-1.15.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.5-1.15.5/operations/exposing-the-kubernetes-api">Kubernetes 2.4.5-1.15.5</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.4-1.15.4/operations/exposing-the-kubernetes-api">Kubernetes 2.4.4-1.15.4</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/exposing-the-kubernetes-api">Kubernetes 2.4.3-1.15.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.2-1.15.3/operations/exposing-the-kubernetes-api">Kubernetes 2.4.2-1.15.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.1-1.15.2/operations/exposing-the-kubernetes-api">Kubernetes 2.4.1-1.15.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.10-1.15.10/operations/exposing-the-kubernetes-api">Kubernetes 2.4.10-1.15.10</a></li></ul><div class="toggle"><p><span class="title">Kubernetes</span><span class="version"> 2.4.3-1.15.3</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/overview/">Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/getting-started/"><i data-feather="chevron-right"></i>Tutorial - Kubernetes on DC/OS Enterprise</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/"><i data-feather="chevron-right"></i>Operations</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/cluster-sizing/">Cluster Sizing</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/kubernetes-audit/">Kubernetes Auditing</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/kubernetes-dashboard/">Kubernetes Dashboard</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/metrics-exporter/">Metrics Exporter</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/quota-support/">Quota Support</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/ingress/">External Ingress</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/authn-and-authz/">Authentication and Authorization</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/customizing-install/">Customizing</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/upgrade/">Upgrade</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/exposing-the-kubernetes-api/">Exposing the Kubernetes API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/exposing-the-kubernetes-api-marathonlb-edgelb/">Exposing the Kubernetes API via Marathon-LB or Edge-LB</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/connecting-clients/">Connecting Clients</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/uninstall/">Uninstall</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/private-docker-registry/">Use private Docker registry</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/disaster-recovery/">Disaster Recovery</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/troubleshooting/">Troubleshooting</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/cli/">CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/changelog/">Changelog</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/supported-versions/">Supported Versions</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Exposing the Kubernetes API</h1></div><h4 class="content__header-description">Setting up HAProxy to expose the Kubernetes API</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/exposing-the-kubernetes-api/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- This source repo for this topic is https://github.com/mesosphere/dcos-kubernetes-cluster -->
+<h1 id="using-haproxy"><a class="content__anchor" href="#using-haproxy" aria-hidden="true"><i data-feather="bookmark"></i></a>Using HAProxy</h1>
+<p>DC/OS Kubernetes does not automatically expose the Kubernetes API for a given Kubernetes cluster outside of the DC/OS cluster.
+Hence, in order to access the Kubernetes API for one or more Kubernetes clusters from outside the DC/OS cluster, you can set up a proxy that can reach the DC/OS VIP(s) exposing the Kubernetes API instance(s) inside the DC/OS cluster.
+This VIP is <code>apiserver.&lt;SERVICE_NAME&gt;.l4lb.thisdcos.directory:6443</code>, where <code>&lt;SERVICE_NAME&gt;</code> is the service name you have provided when creating the Kubernetes cluster. By default the <code>&lt;SERVICE_NAME&gt;</code> is <code>kubernetes-cluster</code>, so, by default, the VIP is <code>apiserver.kubernetes-cluster.l4lb.thisdcos.directory:6443</code>.</p>
+<p class="message--warning"><strong>WARNING: </strong>If the Kubernetes cluster is installed under a group (for example,  <tt>dev/kubernetes01</tt>) then you must remove any slashes from <tt>&lt;SERVICE_NAME&gt;</tt> (for example, <tt>apiserver.devkubernetes01.l4lb.thisdcos.directory:6443</tt>).
+</p>
+<p>In the next sections we present two examples you can follow in order to expose the Kubernetes API for a given Kubernetes cluster to outside the DC/OS cluster.</p>
+<ul>
+<li><a href="#example-1">The first example</a> provides a way for quickly trying out DC/OS Kubernetes without being concerned about establishing trust. This example also only covers exposing a single Kubernetes API.</li>
+<li><a href="#example-2">The second example</a> is an extension of the first that builds a fully-secured setup exposing multiple instances of the Kubernetes API for multiple Kubernetes clusters.</li>
+</ul>
+<p>Alternately, if you are running Marathon-LB and/or Edge-LB in your DC/OS cluster, you may wish to expose the Kubernetes API for a given Kubernetes cluster via one of those. Details on how to do this are documented <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/exposing-the-kubernetes-api-marathonlb-edgelb/">here</a>.</p>
+<p>In order for you to follow the examples successfully, your DC/OS cluster <strong>MUST</strong> have at least one <a href="/dcosdocs/mesosphere/dcos/1.12/overview/architecture/node-types/#public-agent-nodes">public agent</a> (that is, an agent that is on a network that allows ingress from outside the cluster). In the examples, <code>&lt;ip-of-public-agent&gt;</code> is the IP address you use to reach said public DC/OS agent. You  <strong>MUST</strong> also have SSH access to this DC/OS public agent. Having followed these examples, you will end up with a setup similar to the following:</p>
+<p><img src="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/img/haproxy.png" alt="Exposing the Kubernetes API using HAProxy"></p>
+<p>Figure 1. Exposing the Kubernetes API using HAProxy</p>
+<p><a name="example-1"></a></p>
+<h2 id="example-1-using-haproxy-and-a-self-signed-certificate"><a class="content__anchor" href="#example-1-using-haproxy-and-a-self-signed-certificate" aria-hidden="true"><i data-feather="bookmark"></i></a>Example 1: Using HAProxy and a self-signed certificate</h2>
+<p class="message--warning"><strong>WARNING: </strong>This example is meant to provide a quick and easy way to expose the Kubernetes API for a given Kubernetes cluster to outside the DC/OS cluster that works out-of-the-box.
+It is not meant to be a fully-secure, production grade solution for exposing said Kubernetes API.
+</p>
+<p>This example focuses on exposing the Kubernetes API for a given Kubernetes cluster to outside the DC/OS cluster using HAProxy as an intermediate proxy and a self-signed wildcard certificate meant to secure the communication between the user and HAProxy.</p>
+<h3 id="step-1-creating-a-self-signed-wildcard-certificate"><a class="content__anchor" href="#step-1-creating-a-self-signed-wildcard-certificate" aria-hidden="true"><i data-feather="bookmark"></i></a>Step 1: Creating a self-signed wildcard certificate</h3>
+<p>In order for HAProxy to secure connections between itself and the user, it must be given a TLS certificate and private key.
+Since this example is meant only for exposing the Kubernetes API for a given Kubernetes cluster without any additional security concerns, a self-signed wildcard certificate will be generated and used.
+In order to achieve this, you can use <code>openssl</code>:</p>
+<pre><code class="language-shell">openssl genrsa 2048 &gt; haproxy-key.pem
+openssl req -new -x509 -nodes -sha1 -days 3650 -key haproxy-key.pem \
+  -subj &quot;/C=US/ST=CA/L=SF/O=Mesosphere/OU=dcos-kubernetes/CN=*&quot; &gt; haproxy-crt.pem
+cat haproxy-crt.pem haproxy-key.pem &gt; haproxy.pem
+</code></pre>
+<p>Running these commands will create an <code>haproxy.pem</code> file in the current directory which will be used later on.</p>
+<h3 id="step-2-creating-the-haproxy-configuration"><a class="content__anchor" href="#step-2-creating-the-haproxy-configuration" aria-hidden="true"><i data-feather="bookmark"></i></a>Step 2: Creating the HAProxy configuration</h3>
+<p>Run the following command (replacing the <code>&lt;SERVICE_NAME&gt;</code> placeholder as appropriate) in order to create a working HAProxy configuration:</p>
+<pre><code class="language-shell">$ cat &lt;&lt;EOF &gt; haproxy.conf
+global
+    log 127.0.0.1 local0
+    # Sets the maximum size of the Diffie-Hellman parameters used for generating
+    # the ephemeral/temporary Diffie-Hellman key in case of DHE key exchange.
+    tune.ssl.default-dh-param 2048
+    # Enables debug mode which dumps to stdout all exchanges.
+    # This should be disabled in production, as tokens will also be logged.
+    debug
+
+defaults
+    log global
+    mode http
+    option httplog
+    option dontlognull
+    # Set appropriate values for timeouts. This is important so that calls such
+    # as &quot;kubectl exec&quot; or &quot;kubectl logs -f&quot; do not exit prematurely due to
+    # inactivity in the connection.
+    timeout connect 10s
+    timeout client 86400s
+    timeout server 86400s
+    timeout tunnel 86400s
+
+frontend frontend_all
+    bind :6443 ssl crt /haproxy/haproxy.pem
+    mode http
+    default_backend backend_kube_apiserver
+
+backend backend_kube_apiserver
+    mode http
+    balance leastconn
+    server kube-apiserver apiserver.&lt;SERVICE_NAME&gt;.l4lb.thisdcos.directory:6443 check ssl verify none
+EOF
+</code></pre>
+<p>Running this command will create an <code>haproxy.conf</code> file in the current directory which will be used later on.</p>
+<h3 id="step-3-copying-the-certificate-and-the-haproxy-configuration-to-the-public-agent"><a class="content__anchor" href="#step-3-copying-the-certificate-and-the-haproxy-configuration-to-the-public-agent" aria-hidden="true"><i data-feather="bookmark"></i></a>Step 3: Copying the certificate and the HAProxy configuration to the public agent</h3>
+<p>HAProxy will read its configuration and the required TLS certificates from a directory on the DC/OS public agent’s filesystem.
+This can be any directory that the HAProxy process can access (represented as <code>&lt;path-to-haproxy-config-directory&gt;</code> in the steps below).
+To copy the required TLS material over SSH to the DC/OS public agent, run the following commands (replacing the placeholders as appropriate):</p>
+<pre><code class="language-shell">$ ssh &lt;user&gt;@&lt;ip-of-public-agent&gt; \
+    mkdir &lt;path-to-haproxy-config-directory&gt;
+$ scp haproxy.pem \
+    haproxy.conf \
+    &lt;user&gt;@&lt;ip-of-public-agent&gt;:&lt;path-to-haproxy-config-directory&gt;
+haproxy.pem     100%    2985    16.9KB/s    00:00
+haproxy.conf    100%    1041     5.9KB/s    00:00
+</code></pre>
+<p>For example, if your SSH user is <code>core</code>, the IP of your public agent is <code>35.233.213.97</code>, and you want to install certificates in <code>/opt/haproxy</code>, you should run:</p>
+<pre><code class="language-shell">$ ssh core@35.233.213.97 mkdir /opt/haproxy
+$ scp haproxy.pem haproxy.conf core@35.233.213.97:/opt/haproxy
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>In the instructions above it is assumed that <tt>&lt;user&gt;</tt> has permissions to create the <tt>&lt;path-to-haproxy-config-directory&gt;</tt>. If this is not the case in your setup, you will probably need to ask your systems administrator to perform this step and set up adequate permissions on said directory.
+</p>
+<p class="message--note"><strong>NOTE: </strong>If your cluster has multiple public DC/OS agents you will have to repeat these steps for every public DC/OS agent. Alternatively, you must set an appropriate placement constraint in the Marathon application that you will create in the next step so that HAProxy only runs on this same public DC/OS agent. Failure to do this will cause the HAProxy deployment to enter a crash loop.</p>
+<h3 id="step-4-running-haproxy"><a class="content__anchor" href="#step-4-running-haproxy" aria-hidden="true"><i data-feather="bookmark"></i></a>Step 4: Running HAProxy</h3>
+<p>In this step, HAProxy is configured to run as a Marathon application on the DC/OS public agent.
+Use the following commands to do so (replacing <code>&lt;path-to-haproxy-config-directory&gt;</code> as appropriate):</p>
+<pre><code class="language-shell">$ cat &lt;&lt;EOF &gt; marathon.json
+{
+  &quot;id&quot;: &quot;/kubernetes-haproxy&quot;,
+  &quot;acceptedResourceRoles&quot;: [
+    &quot;slave_public&quot;
+  ],
+  &quot;cmd&quot;: &quot;/usr/local/sbin/haproxy -f /haproxy/haproxy.conf&quot;,
+  &quot;constraints&quot;: [
+    [
+      &quot;hostname&quot;,
+      &quot;UNIQUE&quot;
+    ]
+  ],
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;MESOS&quot;,
+    &quot;volumes&quot;: [
+      {
+        &quot;containerPath&quot;: &quot;/haproxy&quot;,
+        &quot;hostPath&quot;: &quot;&lt;path-to-haproxy-config-directory&gt;&quot;,
+        &quot;mode&quot;: &quot;RO&quot;
+      }
+    ],
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;haproxy:1.8.14&quot;,
+      &quot;forcePullImage&quot;: false,
+      &quot;parameters&quot;: []
+    }
+  },
+  &quot;cpus&quot;: 0.1,
+  &quot;instances&quot;: 1,
+  &quot;mem&quot;: 128,
+  &quot;networks&quot;: [
+    {
+      &quot;mode&quot;: &quot;host&quot;
+    }
+  ],
+  &quot;portDefinitions&quot;: [
+    {
+      &quot;protocol&quot;: &quot;tcp&quot;,
+      &quot;port&quot;: 6443
+    }
+  ],
+  &quot;requirePorts&quot;: true
+}
+EOF
+</code></pre>
+<pre><code class="language-shell">dcos marathon app add marathon.json
+</code></pre>
+<p>When HAProxy is deployed, you should see the following:</p>
+<pre><code class="language-shell">$ dcos task
+NAME                HOST        USER    STATE  ID                                                       MESOS ID                                 REGION    ZONE
+(...)
+kubernetes-haproxy  10.138.0.7  root    R      kubernetes-haproxy.beaca041-5e7c-11e8-8c11-ce5fc4b24b83  cc965893-270f-4809-9617-e190904dae27-S0  us-west1  us-west1-b
+</code></pre>
+<p>It should now be possible to reach the Kubernetes API:</p>
+<pre><code class="language-shell">$ curl -k https://&lt;ip-of-public-agent&gt;:6443
+{
+  &quot;kind&quot;: &quot;Status&quot;,
+  &quot;apiVersion&quot;: &quot;v1&quot;,
+  &quot;metadata&quot;: {
+
+  },
+  &quot;status&quot;: &quot;Failure&quot;,
+  &quot;message&quot;: &quot;forbidden: User \&quot;system:anonymous\&quot; cannot get path \&quot;/\&quot;&quot;,
+  &quot;reason&quot;: &quot;Forbidden&quot;,
+  &quot;details&quot;: {
+
+  },
+  &quot;code&quot;: 403
+}
+</code></pre>
+<p>To configure <code>kubectl</code> to access the Kubernetes API using this setup, follow the steps described in the <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/connecting-clients#without-tls-verification">“Without TLS verification”</a> subsection of the <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/connecting-clients/">Connecting Clients</a> page.</p>
+<p><a name="example-2"></a></p>
+<h2 id="example-2-using-haproxy-and-establishing-trust"><a class="content__anchor" href="#example-2-using-haproxy-and-establishing-trust" aria-hidden="true"><i data-feather="bookmark"></i></a>Example 2: Using HAProxy and establishing trust</h2>
+<p>The solution presented in <a href="#example-1">Example 1</a> has a few shortcomings:</p>
+<ul>
+<li>The certificate presented by the Kubernetes API to HAProxy is not validated.</li>
+<li>The certificate presented by HAProxy to the user is too broad (and also not validated).</li>
+<li>The target Kubernetes API will be accessed at the DC/OS public agent’s IP address.</li>
+<li>HAProxy will route <strong>all</strong> incoming traffic to the target Kubernetes API VIP.</li>
+<li>It does not support exposing multiple Kubernetes APIs for multiple Kubernetes clusters.</li>
+</ul>
+<p>In a production scenario, the above points should be addressed, both in order to increase the overall security of the solution and to be able to expose the Kubernetes API for multiple Kubernetes clusters using the same HAProxy instance.</p>
+<p>This example builds on the previous one and focuses on addressing all these shortcomings. In what follows, <code>&lt;SERVICE_NAME_1&gt;</code> and <code>&lt;SERVICE_NAME_2&gt;</code> represent the names of two different Kubernetes clusters (e.g. <code>dev/kubernetes01</code> and <code>dev/kubernetes02</code>).</p>
+<h3 id="step-1-validating-the-kubernetes-api-certificate"><a class="content__anchor" href="#step-1-validating-the-kubernetes-api-certificate" aria-hidden="true"><i data-feather="bookmark"></i></a>Step 1: Validating the Kubernetes API certificate</h3>
+<p>In order for HAProxy to fully secure connections between itself and each instance of the Kubernetes API, it must be told how to trust the TLS certificate presented by these instances.
+This is done by letting HAProxy know that the certificate authority that signs each of the abovementioned certificates is trustworthy. To do this, retrieve each of these certificate authorities:</p>
+<pre><code class="language-shell">dcos task exec &lt;SERVICE_NAME_1&gt;.kube-control-plane-0-instance cat ca-crt.pem &gt; &lt;SERVICE_NAME_1&gt;-ca.pem
+</code></pre>
+<p>It should be noted that if <code>&lt;SERVICE_NAME_1&gt;</code> contains slashes, these slashes should be replaced by a dot (<code>.</code>) in the command above. For example, if one of your Kubernetes clusters is called <code>dev/kubernetes01</code>, you must run:</p>
+<pre><code class="language-shell">dcos task exec dev.kubernetes01__kube-control-plane-0-instance cat ca-crt.pem &gt; dev.kubernetes01-ca.pem
+</code></pre>
+<p>Running this command will create a <code>&lt;SERVICE_NAME_1&gt;-ca.pem</code> file in the current directory which must be copied to the <code>&lt;path-to-haproxy-config-directory&gt;</code> directory in the DC/OS public agent.
+In DC/OS, these instructions must be repeated for <code>&lt;SERVICE_NAME_2&gt;</code>. In DC/OS Enterprise it is enough to run this step once, and <code>&lt;SERVICE_NAME_1&gt;-ca.pem</code> can be renamed to something more generic (e.g. <code>dcos-ca.pem</code>).</p>
+<p>The HAProxy configuration must also be updated accordingly:</p>
+<pre><code class="language-text">backend backend_&lt;SERVICE_NAME_1&gt;
+    (...)
+    server kube-apiserver apiserver.&lt;SERVICE_NAME_1&gt;.l4lb.thisdcos.directory:6443 check ssl verify required ca-file /haproxy/&lt;SERVICE_NAME_1&gt;-ca.pem
+
+backend backend_&lt;SERVICE_NAME_2&gt;
+    (...)
+    server kube-apiserver apiserver.&lt;SERVICE_NAME_2&gt;.l4lb.thisdcos.directory:6443 check ssl verify required ca-file /haproxy/&lt;SERVICE_NAME_2&gt;-ca.pem
+</code></pre>
+<p>Notice how the existing <code>backend</code> entry is being updated to contain <code>&lt;SERVICE_NAME_1&gt;</code> in its name and definition, and duplicated so that HAProxy knows how to reach the two instances of the Kubernetes API.
+This configuration requires further updates. Hence, it is not necessary to copy it over to the public DC/OS agent(s) just yet.</p>
+<h3 id="step-2-validating-the-haproxy-certificate"><a class="content__anchor" href="#step-2-validating-the-haproxy-certificate" aria-hidden="true"><i data-feather="bookmark"></i></a>Step 2: Validating the HAProxy certificate</h3>
+<p>In <a href="#example-1">Example 1</a> a self-signed, wildcard certificate was used.
+In a production scenario, a valid certificate signed by a well-known, trusted certificate authority should be used instead.
+Each instance of the Kubernetes API should also be accessed using a stable domain name such as <code>devkubernetes01.example.com</code> rather than an IP address.</p>
+<p><strong>Requirements:</strong></p>
+<ul>
+<li>A certificate (and matching private key) valid for each of the domains used to expose the Kubernetes API (for example, <code>devkubernetes01.example.com</code> and <code>devkubernetes02.example.com</code>).</li>
+<li>The CA certificate(s) of above certificate (in case these are not already trusted by the operating system);</li>
+<li>DNS is configured in such a way that each of the abovementioned domains resolve to the IP address(es) of the public DC/OS agent(s) where HAProxy will be running (for example, <code>devkubernetes01.example.com</code> and <code>devkubernetes02.example.com</code> both resolve to <code>35.233.213.97s</code>).</li>
+</ul>
+<p>How these three items are addressed is highly dependent on your setup, and as such, for the remaining of this example it is assumed that these requirements have been met.</p>
+<p>Replace the <code>haproxy.pem</code> file created in <a href="#example-1">Example 1</a> with new files, each containing:</p>
+<ul>
+<li>The certificate for the target domain;</li>
+<li>The private key for the target domain;</li>
+<li>The CA certificate (or certificate chain) for the target domain;</li>
+</ul>
+<p>Certificates and keys <strong>MUST</strong> be concatenated in that particular order.
+Then, copy each new file over to the <code>&lt;path-to-haproxy-config-directory&gt;</code> directory of the public DC/OS agent(s).
+Finally, update the HAProxy configuration according to the following example:</p>
+<pre><code class="language-text">frontend frontend_all
+    # /haproxy/devkubernetes01.pem contains the certificate and key for devkubernetes01.example.com
+    # /haproxy/devkubernetes02.pem contains the certificate and key for devkubernetes02.example.com
+    bind :6443 ssl crt /haproxy/devkubernetes01.pem crt /haproxy/devkubernetes02.pem
+    (...)
+</code></pre>
+<h3 id="step-3-serving-multiple-kubernetes-api-instances-using-haproxy"><a class="content__anchor" href="#step-3-serving-multiple-kubernetes-api-instances-using-haproxy" aria-hidden="true"><i data-feather="bookmark"></i></a>Step 3: Serving multiple Kubernetes API instances using HAProxy</h3>
+<p>In order to expose the Kubernetes API for both <code>&lt;SERVICE_NAME_1&gt;</code> and <code>&lt;SERVICE_NAME_2&gt;</code> using the same instance of HAProxy, we will use HAProxy’s <a href="https://en.wikipedia.org/wiki/Server_Name_Indication">Server Name Indication</a> feature.
+To do this, update the <code>frontend</code> section of the HAProxy configuration accordingly to forward requests to each Kubernetes API VIP based on the domain used in the request. For example, when wanting to expose the Kubernetes API for both <code>dev/kubernetes01</code> and <code>dev/kubernetes02</code>, you should configure HAProxy according to the following example:</p>
+<pre><code class="language-text">frontend frontend_all
+    (...)
+    # Inspect the SNI field from incoming TLS connections so we can forward to
+    # the appropriate backend based on the server name.
+    use_backend backend_devkubernetes01 if { ssl_fc_sni devkubernetes01.example.com }
+    use_backend backend_devkubernetes02 if { ssl_fc_sni devkubernetes02.example.com }
+</code></pre>
+<p>Notice how <code>backend_devkubernetes01</code> and <code>backend_devkubernetes02</code> match the names of the backends defined in the first step.
+Additional forwarding rules can be set up for other domains as required, regardless of whether they correspond to other instances of the Kubernetes API or to completely different services.
+For further information, refer to the <a href="https://cbonte.github.io/haproxy-dconv/1.8/configuration.html">HAProxy documentation</a>.</p>
+<h3 id="step-4-configuring-kubectl"><a class="content__anchor" href="#step-4-configuring-kubectl" aria-hidden="true"><i data-feather="bookmark"></i></a>Step 4: Configuring <code>kubectl</code></h3>
+<p>To configure <code>kubectl</code> to access the Kubernetes API using this setup, follow the steps described in the <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/connecting-clients#with-tls-verification">“With TLS verification”</a> subsection of the <a href="/dcosdocs/mesosphere/dcos/services/kubernetes/2.4.3-1.15.3/operations/connecting-clients/">Connecting Clients</a> page.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#using-haproxy">Using HAProxy</a></li><li class="content__sections-item content__sections-item--h2"><a href="#example-1-using-haproxy-and-a-self-signed-certificate">Example 1: Using HAProxy and a self-signed certificate</a></li><li class="content__sections-item content__sections-item--h2"><a href="#example-2-using-haproxy-and-establishing-trust">Example 2: Using HAProxy and establishing trust</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Production Installation - D2iQ Docs</title><meta name="description" content="Installing production-ready DC/OS"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/production/deploying-dcos/installation">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.0"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/installing/production/deploying-dcos/installation">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/installing/production/deploying-dcos/installation">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/installing/production/deploying-dcos/installation">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/installing/production/deploying-dcos/installation">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.0</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/installing/"><i data-feather="chevron-right"></i>Installing</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/installing/evaluation/"><i data-feather="chevron-right"></i>Cloud Installation</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/installing/production/"><i data-feather="chevron-right"></i>On-Prem Installation</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/installing/production/virt-infra/">Virtual Infrastructure</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/installing/production/system-requirements/"><i data-feather="chevron-right"></i>System Requirements</a></li><li class="active"><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/installing/production/deploying-dcos/"><i data-feather="chevron-right"></i>Deploying DC/OS</a></li><ul><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.0/installing/production/deploying-dcos/configuration/"><i data-feather="chevron-right"></i>Configuration</a></li><li class="active active-on"><a class="d3" href="/dcosdocs/mesosphere/dcos/2.0/installing/production/deploying-dcos/installation/">Production Installation</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.0/installing/production/deploying-dcos/opt-out/">Opt-Out</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.0/installing/production/deploying-dcos/node-cluster-health-check/">Node and Cluster Health Checks</a></li></ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/installing/production/advanced-configuration/"><i data-feather="chevron-right"></i>Advanced Configuration</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/installing/production/dcos-ansible/"><i data-feather="chevron-right"></i>DC/OS with Ansible</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/installing/production/patching/">Patching</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/installing/production/upgrading/">Upgrading</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/installing/production/uninstalling/">Uninstalling</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/installing/installation-faq/">Frequently Asked Questions</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/installing/troubleshooting/">Troubleshooting</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Production Installation</h1></div><h4 class="content__header-description">Installing production-ready DC/OS</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.0/installing/production/deploying-dcos/installation/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>This page outlines how to install DC/OS for production. Using this method, you can package the DC/OS distribution and connect to every node manually to run the DC/OS installation commands. This installation method is recommended if you want to integrate with an existing system or if you do not have SSH access to your cluster.</p>
+<p>The DC/OS installation process requires a bootstrap node, master node, public agent node, and a private agent node. You can view the <a href="/dcosdocs/mesosphere/dcos/2.0/overview/concepts/#node">nodes</a> documentation for more information.</p>
+<h1 id="production-installation-process"><a class="content__anchor" href="#production-installation-process" aria-hidden="true"><i data-feather="bookmark"></i></a>Production Installation Process</h1>
+<p>The following steps are required to install DC/OS clusters:</p>
+<ol>
+<li>Configure bootstrap node</li>
+<li>Install DC/OS on master node</li>
+<li>Install DC/OS on agent node</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/advanced-installer.png" alt="Production Installation Process">
+Figure 1. The production installation process</p>
+<p>This installation method requires the following:</p>
+<ul>
+<li>The bootstrap node must be network accessible from the cluster nodes.</li>
+<li>The bootstrap node must have the HTTP(S) ports open from the cluster nodes.</li>
+</ul>
+<p>The DC/OS installation creates the following folders:</p>
+<table>
+<thead>
+<tr>
+<th>Folder</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/opt/mesosphere</code></td>
+<td>Contains the DC/OS binaries, libraries, and cluster configuration. Do not modify.</td>
+</tr>
+<tr>
+<td><code>/etc/systemd/system/dcos.target.wants</code></td>
+<td>Contains the systemd services that start the systemd components. They must be located outside of <code>/opt/mesosphere</code> because of systemd constraints.</td>
+</tr>
+<tr>
+<td><code>/etc/systemd/system/dcos.&lt;units&gt;</code></td>
+<td>Contains copies of the units in <code>/etc/systemd/system/dcos.target.wants</code>. They must be at the top folder as well as inside <code>dcos.target.wants</code>.</td>
+</tr>
+<tr>
+<td><code>/var/lib/dcos/exhibitor/zookeeper</code></td>
+<td>Contains the <a href="/dcosdocs/mesosphere/dcos/2.0/overview/concepts/#exhibitor-zookeeper">ZooKeeper</a> data.</td>
+</tr>
+<tr>
+<td><code>/var/lib/docker</code></td>
+<td>Contains the Docker data.</td>
+</tr>
+<tr>
+<td><code>/var/lib/dcos</code></td>
+<td>Contains the DC/OS data.</td>
+</tr>
+<tr>
+<td><code>/var/lib/mesos</code></td>
+<td>Contains the Mesos data.</td>
+</tr>
+</tbody>
+</table>
+<p class="message--warning"><strong>WARNING: </strong>Changes to <code>/opt/mesosphere</code> are unsupported. They can lead to unpredictable behavior in DC/OS and prevent upgrades.</p>
+<h2 id="prerequisites"><a class="content__anchor" href="#prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h2>
+<p>Before installing DC/OS, your cluster must meet the software and hardware <a href="/dcosdocs/mesosphere/dcos/2.0/installing/production/system-requirements/">requirements</a>.</p>
+<h1 id="configure-your-cluster"><a class="content__anchor" href="#configure-your-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="configure-cluster"></a>Configure your cluster</h1>
+<ol>
+<li>
+<p>Create a directory named <code>genconf</code> on your bootstrap node and navigate to it.</p>
+<pre><code class="language-bash">mkdir -p genconf
+</code></pre>
+</li>
+</ol>
+<h1 id="store-license-file-enterprise"><a class="content__anchor" href="#store-license-file-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="license"></a>Store license file <span class="badge badge--shortcode badge--large badge--block badge--enterprise">Enterprise</span></h1>
+<ol>
+<li>Create a <a href="/dcosdocs/mesosphere/dcos/2.0/administering-clusters/licenses/">license file</a> containing the license text received in email sent by your Authorized Support Contact and save as <code>genconf/license.txt</code>.</li>
+</ol>
+<h1 id="create-an-ip-detection-script"><a class="content__anchor" href="#create-an-ip-detection-script" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="ip-detect-script"></a>Create an IP detection script</h1>
+<p>In this step, an IP detection script is created. This script reports the IP address of each node across the cluster. Each node in a DC/OS cluster has a unique IP address that is used to communicate between nodes in the cluster. The IP detection script prints the unique IPv4 address of a node to STDOUT each time DC/OS is started on the node.</p>
+<p class="message--note"><strong>NOTE: </strong>The IP address of a node must not change after DC/OS is installed on the node. For example, the IP address should not change when a node is rebooted or if the DHCP lease is renewed. If the IP address of a node does change, the node must be <a href="/dcosdocs/mesosphere/dcos/2.0/installing/production/uninstalling/">uninstalled</a>.</p>
+<p class="message--note"><strong>NOTE: </strong>The script must return the same IP address as specified in the <code>config.yaml</code>. For example, if the private master IP is specified as <code>10.2.30.4</code> in the <code>config.yaml</code>, your script should return this same value when run on the master.</p>
+<ol>
+<li>
+<p>Create an IP detection script for your environment and save as <code>genconf/ip-detect</code>. This script needs to be <code>UTF-8</code> encoded and have a valid <a href="https://en.wikipedia.org/wiki/Shebang_(Unix)">shebang</a> line. You can use the examples below.</p>
+<ul>
+<li>
+<h4 id="use-the-aws-metadata-server"><a class="content__anchor" href="#use-the-aws-metadata-server" aria-hidden="true"><i data-feather="bookmark"></i></a>Use the AWS Metadata Server</h4>
+<p>This method uses the AWS Metadata service to get the IP address:</p>
+<pre><code class="language-bash">#!/bin/sh
+# Example ip-detect script using an external authority
+# Uses the AWS Metadata Service to get the node's internal
+# ipv4 address
+curl -fsSL http://169.254.169.254/latest/meta-data/local-ipv4
+</code></pre>
+</li>
+<li>
+<h4 id="use-the-gce-metadata-server"><a class="content__anchor" href="#use-the-gce-metadata-server" aria-hidden="true"><i data-feather="bookmark"></i></a>Use the GCE Metadata Server</h4>
+<p>This method uses the GCE Metadata Server to get the IP address:</p>
+<pre><code class="language-bash">#!/bin/sh
+# Example ip-detect script using an external authority
+# Uses the GCE metadata server to get the node's internal
+# ipv4 address
+
+curl -fsSl -H &quot;Metadata-Flavor: Google&quot; http://169.254.169.254/computeMetadata/v1/instance/network-interfaces/0/ip
+</code></pre>
+</li>
+<li>
+<h4 id="use-the-ip-address-of-an-existing-interface"><a class="content__anchor" href="#use-the-ip-address-of-an-existing-interface" aria-hidden="true"><i data-feather="bookmark"></i></a>Use the IP address of an existing interface</h4>
+<p>This method discovers the IP address of a particular interface of the node.</p>
+<p>If you have multiple generations of hardware with different internal IP address, the interface names can change between hosts. The IP detect script must account for the interface name changes. The example script could also be confused if you attach multiple IP addresses to a single interface, or do complex Linux networking, etc.</p>
+<pre><code class="language-bash">#!/usr/bin/env bash
+set -o nounset -o errexit
+export PATH=/usr/sbin:/usr/bin:$PATH
+echo $(ip addr show eth0 | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
+</code></pre>
+</li>
+<li>
+<h4 id="use-the-network-route-to-the-mesos-master"><a class="content__anchor" href="#use-the-network-route-to-the-mesos-master" aria-hidden="true"><i data-feather="bookmark"></i></a>Use the network route to the Mesos master</h4>
+<p>This method uses the route to a Mesos master to find the source IP address to then communicate with that node.</p>
+<p>In this example, we assume that the Mesos master has an IP address of <code>172.28.128.3</code>. You can use any language for this script. Your Shebang line must be pointed at the correct environment for the language used and the output must be the correct IP address.</p>
+<p><span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></p>
+</li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-bash">#!/usr/bin/env bash
+set -o nounset -o errexit
+MASTER_IP=&quot;172.28.128.3&quot;
+echo $(ip route show to match $MASTER_IP | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | tail -1)
+</code></pre>
+<p><span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--oss">Open Source</span></span></p>
+<pre><code class="language-bash">#!/usr/bin/env bash
+set -o nounset -o errexit -o pipefail
+export PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
+MASTER_IP=$(dig +short master.mesos || true)
+MASTER_IP=${MASTER_IP:-172.28.128.3}
+INTERFACE_IP=$(ip r g ${MASTER_IP} | \
+awk -v master_ip=${MASTER_IP} '
+BEGIN { ec = 1 }
+ {
+  if($1 == master_ip) {
+        print $7
+        ec = 0
+ } else if($1 == &quot;local&quot;) {
+        print $6
+        ec = 0
+ }
+      if (ec == 0) exit;
+    }
+      END { exit ec }
+    ')
+    echo $INTERFACE_IP
+</code></pre>
+<h1 id="create-a-fault-domain-detection-script-enterprise"><a class="content__anchor" href="#create-a-fault-domain-detection-script-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>Create a fault domain detection script <span class="badge badge--shortcode badge--large badge--block badge--enterprise">Enterprise</span></h1>
+<p>By default, DC/OS clusters have <a href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/fault-domain-awareness/">fault domain awareness</a> enabled, so no changes to your <code>config.yaml</code> are required to use this feature. However, you must include a fault domain detection script named <code>fault-domain-detect</code> in your <code>./genconf</code> directory. To opt out of fault domain awareness, set the <code>fault_domain_enabled</code> parameter of your <code>config.yaml</code> file to <code>false</code>.</p>
+<ol>
+<li>
+<p>Create a fault domain detect script named <code>fault-domain-detect</code> to run on each node to detect the node’s fault domain. During installation, the output of this script is passed to Mesos.</p>
+<p>We recommend a script like this:</p>
+<pre><code class="language-sh">#!/bin/sh
+
+REGION=&quot;&lt;enter region name&gt;&quot;
+ZONE=&quot;&lt;enter zone name&gt;&quot;
+
+echo &quot;{
+    \&quot;fault_domain\&quot;: {
+        \&quot;region\&quot;: {
+            \&quot;name\&quot;: \&quot;${REGION}\&quot;
+        },
+        \&quot;zone\&quot;: {
+            \&quot;name\&quot;: \&quot;${ZONE}\&quot;
+        }
+    }
+}&quot;
+</code></pre>
+<p>We provide <a href="https://github.com/dcos/dcos/tree/master/gen/fault-domain-detect">fault domain detect scripts for AWS and Azure nodes</a>. For a cluster that has aws nodes and azure nodes you would combine the two into one script. You can use these as a model for creating a fault domain detect script for an on premises cluster.</p>
+ <p class="message--important"><strong>IMPORTANT: </strong>This script will not work if you use proxies in your environment. If you use a proxy, modifications will be required.</p>
+</li>
+</ol>
+<ol start="2">
+<li>Add your newly created <code>fault-domain-detect</code> script to the <code>/genconf</code> directory of your bootstrap node.</li>
+</ol>
+<h1 id="create-a-configuration-file"><a class="content__anchor" href="#create-a-configuration-file" aria-hidden="true"><i data-feather="bookmark"></i></a>Create a configuration file</h1>
+<p>In this step, you can create a YAML configuration file that is customized for your environment. DC/OS uses this configuration file during installation to generate your cluster installation files.</p>
+<h2 id="set-up-a-super-user-password-enterprise"><a class="content__anchor" href="#set-up-a-super-user-password-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>Set up a super user password <span class="badge badge--shortcode badge--large badge--block badge--enterprise">Enterprise</span></h2>
+<p>In the following instructions, we assume that you are using ZooKeeper for shared storage.</p>
+<ol>
+<li>
+<p>From the bootstrap node, run this command to create a hashed password for superuser authentication, where <code>&lt;superuser_password&gt;</code> is the superuser password.</p>
+</li>
+<li>
+<p>Save the hashed password key for use in the <code>superuser_password_hash</code> parameter in your <code>config.yaml</code> file.</p>
+<pre><code class="language-bash">sudo bash dcos_generate_config.ee.sh --hash-password &lt;superuser_password&gt;
+</code></pre>
+<p>Here is an example of a hashed password output.</p>
+<pre><code class="language-text">Extracting an image from this script and loading it into a docker daemon, can take a few minutes.
+dcos-genconf.9eda4ae45de5488c0c-c40556fa73a00235f1.tar
+Running mesosphere/dcos-genconf docker with BUILD_DIR set to /home/centos/genconf
+00:42:10 dcos_installer.action_lib.prettyprint:: ====&gt; HASHING PASSWORD TO SHA512
+00:42:11 root:: Hashed password for 'password' key:
+$6$rounds=656000$v55tdnlMGNoSEgYH$1JAznj58MR.Bft2wd05KviSUUfZe45nsYsjlEl84w34pp48A9U2GoKzlycm3g6MBmg4cQW9k7iY4tpZdkWy9t1
+</code></pre>
+</li>
+</ol>
+<h2 id="create-the-configuration"><a class="content__anchor" href="#create-the-configuration" aria-hidden="true"><i data-feather="bookmark"></i></a>Create the configuration</h2>
+<ol>
+<li>Create a configuration file and save as <code>genconf/config.yaml</code>. You can use this template to get started.</li>
+</ol>
+<p>The Enterprise template specifies three Mesos masters, static master discovery list, internal storage backend for Exhibitor, a custom proxy, security mode specified, and cloud specific DNS resolvers. <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></p>
+<p>The Open Source template specifies three Mesos masters, three ZooKeeper instances for Exhibitor storage, static master discovery list, internal storage backend for Exhibitor, a custom proxy, and cloud specific DNS resolvers. <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--oss">Open Source</span></span></p>
+<p>If your servers are installed with a domain name in your <code>/etc/resolv.conf</code>, add the <code>dns_search</code> parameter. For parameter descriptions and configuration examples, see the <a href="/dcosdocs/mesosphere/dcos/2.0/installing/production/advanced-configuration/configuration-reference/">documentation</a>.</p>
+<p class="message--note"><strong>NOTE: </strong>If AWS DNS IP is not available in your country, you can replace the AWS DNS IP servers <code>8.8.8.8</code> and <code>8.8.4.4</code> with your local DNS servers.</p>
+<p class="message--note"><strong>NOTE: </strong>If you specify <code>master_discovery: static</code>, you must also create a script to map internal IPs to public IPs on your bootstrap node (for example, <code>genconf/ip-detect-public</code>). This script is then referenced in <code>ip_detect_public_filename: "relative-path-from-dcos-generate-config.sh"</code>.</p>
+<p class="message--note"><strong>NOTE: </strong>In AWS, or any other environment where you can not control a node's IP address, master_discovery needs to be set to use <code>master_http_load_balancer</code>, and a load balancer needs to be set up.</p>
+<h2 id="enterprise-template-enterprise"><a class="content__anchor" href="#enterprise-template-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>Enterprise template <span class="badge badge--shortcode badge--large badge--block badge--enterprise">Enterprise</span></h2>
+<pre><code class="language-bash">bootstrap_url: http://&lt;bootstrap_ip&gt;:80
+cluster_name: &lt;cluster-name&gt;
+superuser_username:
+superuser_password_hash:
+exhibitor_storage_backend: static
+master_discovery: static
+ip_detect_public_filename: &lt;relative-path-to-ip-script&gt;
+master_list:
+- &lt;master-private-ip-1&gt;
+- &lt;master-private-ip-2&gt;
+- &lt;master-private-ip-3&gt;
+resolvers:
+- 169.254.169.253
+# Choose your security mode: permissive or strict
+security: &lt;security-mode&gt;
+superuser_password_hash: &lt;hashed-password&gt; # Generated above
+superuser_username: &lt;username&gt; # This can be whatever you like
+# A custom proxy is optional. For details, see the configuration documentation.
+use_proxy: 'true'
+http_proxy: http://&lt;user&gt;:&lt;pass&gt;@&lt;proxy_host&gt;:&lt;http_proxy_port&gt;
+https_proxy: https://&lt;user&gt;:&lt;pass&gt;@&lt;proxy_host&gt;:&lt;https_proxy_port&gt;
+no_proxy:
+- 'foo.bar.com'
+- '.baz.com'
+fault_domain_enabled: false
+#If IPv6 is disabled in your kernel, you must disable it in the config.yaml
+enable_ipv6: 'false'
+</code></pre>
+<h2 id="open-source-template-open-source"><a class="content__anchor" href="#open-source-template-open-source" aria-hidden="true"><i data-feather="bookmark"></i></a>Open Source template <span class="badge badge--shortcode badge--large badge--block badge--oss">Open Source</span></h2>
+<pre><code>bootstrap_url: http://&lt;bootstrap_ip&gt;:80
+cluster_name: &lt;cluster-name&gt;
+exhibitor_storage_backend: static
+master_discovery: static
+ip_detect_public_filename: &lt;relative-path-to-ip-script&gt;
+master_list:
+- &lt;master-private-ip-1&gt;
+- &lt;master-private-ip-2&gt;
+- &lt;master-private-ip-3&gt;
+resolvers:
+- 169.254.169.253
+use_proxy: 'true'
+http_proxy: http://&lt;user&gt;:&lt;pass&gt;@&lt;proxy_host&gt;:&lt;http_proxy_port&gt;
+https_proxy: https://&lt;user&gt;:&lt;pass&gt;@&lt;proxy_host&gt;:&lt;https_proxy_port&gt;
+no_proxy:
+- 'foo.bar.com'
+- '.baz.com'
+</code></pre>
+<h2 id="create-a-bootstrap-pre-shared-key-optional-enterprise"><a class="content__anchor" href="#create-a-bootstrap-pre-shared-key-optional-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>Create a bootstrap pre-shared key (Optional) <span class="badge badge--shortcode badge--large badge--block badge--enterprise">Enterprise</span></h2>
+<p>For additional security, create a random pre-shared key. This key will be used to authenticate requests very early in the installation process. This key will later be transferred to your master nodes and should be present on your bootstrap node at genconf/ca/psk for the duration of the installation process.</p>
+<pre><code class="language-bash">mkdir genconf/ca
+cat /dev/urandom | tr -dc 'a-z' | fold -w 16 | head -n1 &gt; genconf/ca/psk
+chmod 600 genconf/ca/psk
+</code></pre>
+<p><a name="custom-build-file"></a></p>
+<h1 id="install-dcos"><a class="content__anchor" href="#install-dcos" aria-hidden="true"><i data-feather="bookmark"></i></a>Install DC/OS</h1>
+<p>In this step, you will create a custom DC/OS build file on your bootstrap node and then install DC/OS onto your cluster. With this method you</p>
+<ol>
+<li>Package the DC/OS distribution yourself</li>
+<li>Connect to every server manually</li>
+<li>Run the commands</li>
+</ol>
+<p class="message--note"><strong>NOTE: </strong>Due to a cluster configuration issue with overlay networks, we recommend setting <code>enable_ipv6</code> to <code>false</code> in <code>config.yaml</code> when upgrading or configuring a new cluster. If you have already upgraded to DC/OS 1.12.x without configuring <code>enable_ipv6</code> or if <code>config.yaml</code> file is set to <code>true</code>, then do not add new nodes.</p>
+<p>You can find additional information and a more detailed remediation procedure in our latest critical <a href="https://support.mesosphere.com/s/login/?startURL=%2Fs%2Farticle%2FCritical-Issue-with-Overlay-Networking&amp;ec=302">product advisory</a>. <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></p>
+<p class="message--important"><strong>IMPORTANT: </strong>Do not install DC/OS until you have these items working: <code>ip-detect script</code>, <code>DNS</code>, and <code>NTP</code> on all DC/OS nodes with time synchronized. See <a href="/dcosdocs/mesosphere/dcos/2.0/installing/troubleshooting/">troubleshooting</a> for more information.</p>
+<p class="message--note"><strong>NOTE: </strong>If something goes wrong and you want to rerun your setup, use the cluster <a href="/dcosdocs/mesosphere/dcos/2.0/installing/production/uninstalling/">uninstall</a> instructions.</p>
+<p><strong>Prerequisites</strong></p>
+<ul>
+<li>A <code>genconf/config.yaml</code> file that is optimized for manual distribution of DC/OS across your nodes.</li>
+<li>A <code>genconf/license.txt</code> file containing your DC/OS Enterprise license. <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></li>
+<li>A <code>genconf/ip-detect</code> script.</li>
+</ul>
+<p>The term <code>dcos_generate_config file</code> refers to either a <code>dcos_generate_config.ee.sh</code> file or <code>dcos_generate_config.sh</code> file, based on whether you are using the Enterprise or Open Source version of DC/OS.</p>
+<ul>
+<li>
+<p>Download and save the <a href="https://support.mesosphere.com/hc/en-us/articles/213198586-Mesosphere-Enterprise-DC-OS-Downloads">dcos_generate_config file</a> to your bootstrap node. This file is used to create your customized DC/OS build file. Contact your sales representative or <a href="mailto:sales@mesosphere.com">sales@mesosphere.com</a> for access to this file. <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></p>
+<p>OR</p>
+</li>
+<li>
+<p>Download and save the <a href="https://downloads.dcos.io/dcos/stable/dcos_generate_config.sh">dcos_generate_config file</a> to your bootstrap node. This file is used to create your customized DC/OS build file. <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--oss">Open Source</span></span></p>
+<pre><code class="language-bash">curl -O https://downloads.dcos.io/dcos/stable/dcos_generate_config.sh
+</code></pre>
+</li>
+</ul>
+<ol>
+<li>
+<p>From the bootstrap node, run the DC/OS installer shell script to generate a customized DC/OS build file. The setup script extracts a Docker container that uses the generic DC/OS install files to create customized DC/OS build files for your cluster. The build files are output to <code>./genconf/serve/</code>.</p>
+<p>You can view all of the automated command line installer options with:</p>
+<ul>
+<li><code>dcos_generate_config.ee.sh --help</code>  flag <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span>
+OR</li>
+<li><code>dcos_generate_config.sh --help</code> flag. <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--oss">Open Source</span></span></li>
+</ul>
+</li>
+</ol>
+<p><span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></p>
+<pre><code>sudo bash dcos_generate_config.ee.sh
+</code></pre>
+<p>At this point your directory structure should resemble:</p>
+<pre><code>├── dcos-genconf.c9722490f11019b692-cb6b6ea66f696912b0.tar
+├── dcos_generate_config.ee.sh
+├── genconf
+│   ├── config.yaml
+│   ├── ip-detect
+│   ├── license.txt
+</code></pre>
+<p><span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--oss">Open Source</span></span></p>
+<pre><code>sudo bash dcos_generate_config.sh
+</code></pre>
+<p>At this point your directory structure should resemble:</p>
+<pre><code>    ├── dcos-genconf.&lt;HASH&gt;.tar
+    ├── dcos_generate_config.sh
+    ├── genconf
+    │   ├── config.yaml
+    │   ├── ip-detect
+</code></pre>
+<ul>
+<li>For the install script to work, you must have created <code>genconf/config.yaml</code> and <code>genconf/ip-detect</code>.</li>
+</ul>
+<p><a name="nginx-cmd"></a></p>
+<ol start="2">
+<li>
+<p>From your home directory, run the following command to host the DC/OS install package through an NGINX Docker container. For <code>&lt;your-port&gt;</code>, specify the port value that is used in the <code>bootstrap_url</code>.</p>
+<pre><code class="language-bash">sudo docker run -d -p &lt;your-port&gt;:80 -v $PWD/genconf/serve:/usr/share/nginx/html:ro nginx
+</code></pre>
+</li>
+<li>
+<p><A name="masterinstall"></A> Run the following commands on each of your master nodes in succession to install DC/OS using your custom build file:</p>
+<ul>
+<li>
+<p>If created, copy the pre-shared key to your master nodes at /var/lib/dcos/.dcos-bootstrap-ca-psk</p>
+<pre><code class="language-bash">scp -p genconf/ca/psk &lt;master-ip&gt;:/var/lib/dcos/.dcos-bootstrap-ca-psk
+</code></pre>
+</li>
+<li>
+<p>SSH to your master nodes.</p>
+<pre><code class="language-bash">ssh &lt;master-ip&gt;
+</code></pre>
+</li>
+<li>
+<p>Make a new directory and navigate to it.</p>
+<pre><code class="language-bash">mkdir /tmp/dcos &amp;&amp; cd /tmp/dcos
+</code></pre>
+</li>
+<li>
+<p>Download the DC/OS installer from the NGINX Docker container, where <code>&lt;bootstrap-ip&gt;</code> and <code>&lt;your_port&gt;</code> are specified in <code>bootstrap_url</code>.</p>
+<pre><code class="language-bash">curl -O http://&lt;bootstrap-ip&gt;:&lt;your_port&gt;/dcos_install.sh
+</code></pre>
+</li>
+<li>
+<p>Run the following command to install DC/OS on your master nodes.</p>
+<pre><code class="language-bash">sudo bash dcos_install.sh master
+</code></pre>
+</li>
+</ul>
+<p class="message--note"><strong>NOTE: </strong>Although there is no actual harm to your cluster, DC/OS may issue error messages until all of your master nodes are configured.</p>
+</li>
+<li>
+<p><A name="slaveinstall"></A> Run the following commands on each of your agent nodes to install DC/OS using your custom build file:</p>
+<ul>
+<li>
+<p>SSH to your agent nodes.</p>
+<pre><code class="language-bash">ssh &lt;agent-ip&gt;
+</code></pre>
+</li>
+<li>
+<p>Make a new directory and navigate to it.</p>
+<pre><code class="language-bash">mkdir /tmp/dcos &amp;&amp; cd /tmp/dcos
+</code></pre>
+</li>
+<li>
+<p>Download the DC/OS installer from the NGINX Docker container, where <code>&lt;bootstrap-ip&gt;</code> and <code>&lt;your_port&gt;</code> are specified in <code>bootstrap_url</code>.</p>
+<pre><code class="language-bash">curl -O http://&lt;bootstrap-ip&gt;:&lt;your_port&gt;/dcos_install.sh
+</code></pre>
+</li>
+<li>
+<p>Run this command to install DC/OS on your agent nodes. You must designate your agent nodes as <a href="/dcosdocs/mesosphere/dcos/2.0/overview/concepts/#public">Public agent nodes</a> or <a href="/dcosdocs/mesosphere/dcos/2.0/overview/concepts/#private">Private agent nodes</a>.</p>
+<ul>
+<li>
+<p>Private agent nodes:</p>
+<pre><code class="language-bash">sudo bash dcos_install.sh slave
+</code></pre>
+</li>
+<li>
+<p>Public agent nodes:</p>
+<pre><code class="language-bash">sudo bash dcos_install.sh slave_public
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<p class="message--note"><strong>NOTE: </strong> If you encounter errors such as `Time is marked as bad`, `adjtimex`, or `Time not in sync` in journald, verify that Network Time Protocol (NTP) is enabled on all nodes. For more information, see the <a href="/dcosdocs/mesosphere/dcos/2.0/installing/production/system-requirements/ports/">system requirements</a> documentation.</p>
+</li>
+<li>
+<p>Monitor the DC/OS web interface and wait for it to display at: <code>http://&lt;master-node-public-ip&gt;/</code>.</p>
+<p class="message--note"><strong>NOTE: </strong>This process can take about 10 minutes.</p>
+<p class="message--note"><strong>NOTE: </strong>After clicking <strong>Log In To DC/OS</strong>, your browser may show a warning that your connection is not secure. This is because DC/OS uses self-signed certificates. You can ignore this error and click to proceed.</p>
+</li>
+</ol>
+<p>If the panel does not load, take a look at the <a href="/dcosdocs/mesosphere/dcos/2.0/installing/production/uninstalling/">troubleshooting</a> documentation.</p>
+<ol start="6">
+<li>Enter your administrator username and password.</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/ui-installer-auth2.png" alt="Login screen"></p>
+<p>Figure 3. Sign in dialogue</p>
+<p>You are done! The UI dashboard will now be displayed.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/dashboard-ee-1-12.png" alt="UI dashboard"></p>
+<p>Figure 4. DC/OS UI dashboard</p>
+<p class="message--note"><strong>NOTE: </strong>You can also use <a href="/dcosdocs/mesosphere/dcos/2.0/installing/evaluation/">Universal Installer</a> to deploy DC/OS on AWS, Azure, or GCP in production.</p>
+<h3 id="next-steps-enterprise-and-open-source-users"><a class="content__anchor" href="#next-steps-enterprise-and-open-source-users" aria-hidden="true"><i data-feather="bookmark"></i></a>Next Steps: Enterprise and Open Source users</h3>
+<p>You can find information on the next steps listed below:</p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/2.0/security/ent/users-groups/">Assign user roles</a>.</li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.0/installing/production/system-requirements/">System Requirements</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.0/overview/concepts/#public">Public agent nodes</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.0/overview/concepts/#private">Private agent nodes</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.0/cli/install/">Install the DC/OS Command-Line Interface (CLI)</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.0/installing/production/deploying-dcos/node-cluster-health-check/">Using node and cluster health checks</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.0/installing/troubleshooting/">Troubleshooting DC/OS installation</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.0/installing/production/uninstalling/">Uninstalling DC/OS</a></li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#production-installation-process">Production Installation Process</a></li><li class="content__sections-item content__sections-item--h2"><a href="#prerequisites">Prerequisites</a></li><li class="content__sections-item content__sections-item--h1"><a href="#configure-your-cluster">Configure your cluster</a></li><li class="content__sections-item content__sections-item--h1"><a href="#store-license-file-enterprise">Store license file Enterprise</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-an-ip-detection-script">Create an IP detection script</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-a-fault-domain-detection-script-enterprise">Create a fault domain detection script Enterprise</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-a-configuration-file">Create a configuration file</a></li><li class="content__sections-item content__sections-item--h2"><a href="#set-up-a-super-user-password-enterprise">Set up a super user password Enterprise</a></li><li class="content__sections-item content__sections-item--h2"><a href="#create-the-configuration">Create the configuration</a></li><li class="content__sections-item content__sections-item--h2"><a href="#enterprise-template-enterprise">Enterprise template Enterprise</a></li><li class="content__sections-item content__sections-item--h2"><a href="#open-source-template-open-source">Open Source template Open Source</a></li><li class="content__sections-item content__sections-item--h2"><a href="#create-a-bootstrap-pre-shared-key-optional-enterprise">Create a bootstrap pre-shared key (Optional) Enterprise</a></li><li class="content__sections-item content__sections-item--h1"><a href="#install-dcos">Install DC/OS</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

@@ -1,0 +1,1085 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Pod 示例 - D2iQ Docs</title><meta name="description" content="了解字段定义和 Pod 示例"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/pods/examples">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.0"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/pods/examples">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/pods/examples">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/pods/examples">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.0</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/marathon-parameters/">Marathon 配置参考</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/install/">安装服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/task-handling/"><i data-feather="chevron-right"></i>任务处理</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/creating-services/"><i data-feather="chevron-right"></i>创建服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/config-universe-service/">配置服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/marathon-constraints/">Marathon 布局约束</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/scale-service/">扩展服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/service-groups/">授权访问服务和组</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/fault-domain-awareness/">故障域感知和容量扩展</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/update-user-service/">更新用户创建的服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/service-ports/">服务端口</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/service-endpoints/">服务端点</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/monitor-services/">监控服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/private-docker-registry/">使用专用 Docker 注册表</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/expose-service/">公开服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/deployments/">部署</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/uninstall/">卸载服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/package-api/">包管理 API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/marathon-on-marathon/"><i data-feather="chevron-right"></i>使用自定义 Marathon</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/marathon-api/">Marathon  API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/containerizers/"><i data-feather="chevron-right"></i>使用容器化工具</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/pods/"><i data-feather="chevron-right"></i>Pod</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/pods/quickstart/">快速入门</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/pods/technical-overview/">技术概述</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/pods/using-pods/">使用 Pod</a></li><li class="active active-on"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/pods/examples/">Pod 示例</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/multi-tenancy-primitives/">多租户原始文件</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/gpu/">使用 GPU</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/faq/">常见问题</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Pod 示例</h1></div><h4 class="content__header-description">了解字段定义和 Pod 示例</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/pods/examples/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>本专题提供 Pod 字段定义和使用示例。如需字段定义的详细信息，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/marathon-parameters/">Marathon 配置参考</a>.</p>
+<h1 id="pod"><a class="content__anchor" href="#pod" aria-hidden="true"><i data-feather="bookmark"></i></a>带注释的简单 Pod 定义</h1>
+<p>这个名为 <code>simple-pod</code> 的 Pod 只有一个容器 <code>simpletask1</code>. 容器展开镜像（<code>python:3.5.2-alpine</code>）并运行命令。</p>
+<pre><code class="language-json">{
+   &quot;id&quot;:&quot;/simple-pod&quot;,
+   &quot;containers&quot;:[
+      {
+         &quot;name&quot;:&quot;simpletask1&quot;,
+         &quot;exec&quot;:{
+            &quot;command&quot;:{
+               &quot;shell&quot;:&quot;env &amp;&amp; sleep 10000&quot;
+            }
+         },
+         &quot;resources&quot;:{
+            &quot;cpus&quot;:0.1,
+            &quot;mem&quot;:32
+         },
+         &quot;image&quot;:{
+            &quot;kind&quot;:&quot;DOCKER&quot;,
+            &quot;id&quot;:&quot;python:3.5.2-alpine&quot;
+         }
+      }
+   ],
+   &quot;networks&quot;:[
+      {
+         &quot;mode&quot;:&quot;host&quot;
+      }
+   ]
+}
+</code></pre>
+<h2 id="pod-2"><a class="content__anchor" href="#pod-2" aria-hidden="true"><i data-feather="bookmark"></i></a>基本 Pod 字段</h2>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>类型</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code> （必填）</td>
+<td>字符串</td>
+<td>pod 的唯一 ID。</td>
+</tr>
+<tr>
+<td><code>containers</code> （必填）</td>
+<td>阵列</td>
+<td>参见 <a href="#basic-pod-container-fields">基本 pod 容器字段</a>.</td>
+</tr>
+<tr>
+<td><code>volumes</code></td>
+<td>阵列</td>
+<td>与 pod 关联的所有卷。</td>
+</tr>
+<tr>
+<td><code>volumes.name</code></td>
+<td>字符串</td>
+<td>共享卷的名称。</td>
+</tr>
+<tr>
+<td><code>volumes.host</code></td>
+<td>字符串</td>
+<td>代理上文件或目录的绝对路径，或者执行器沙箱中目录的相对路径。有助于映射代理上或执行器沙箱内存在的目录。</td>
+</tr>
+<tr>
+<td><code>networks</code></td>
+<td>阵列</td>
+<td>接受以下参数：<code>mode</code>、<code>name</code> 和 <code>labels</code>.</td>
+</tr>
+<tr>
+<td><code>networks.mode</code></td>
+<td>字符串</td>
+<td>网络模式： <code>host</code> 或 <code>container</code>。 <code>host</code> 使用主机的网络命名空间。 <code>container</code> 使用虚拟网络，并且必须指定虚拟网络名称。</td>
+</tr>
+<tr>
+<td><code>networks:name</code></td>
+<td>字符串</td>
+<td>为<code>container</code>网络模式所必需。</td>
+</tr>
+<tr>
+<td><code>networks.labels</code></td>
+<td>对象</td>
+<td>键/值对（即，将元数据传递到 Mesos 模块）。</td>
+</tr>
+<tr>
+<td><code>scaling</code></td>
+<td>阵列</td>
+<td>接受以下参数：<code>kind</code>、<code>instances</code> 和 <code>maxInstances</code>.</td>
+</tr>
+<tr>
+<td><code>scaling.kind</code></td>
+<td>字符串</td>
+<td>扩展类型。当前仅支持 <code>fixed</code></td>
+</tr>
+<tr>
+<td><code>scaling.instances</code></td>
+<td>整数</td>
+<td>pod 实例的初始数量（默认值：1）。</td>
+</tr>
+<tr>
+<td><code>scaling.maxInstances</code></td>
+<td>整数</td>
+<td>此 pod 的最大实例数。</td>
+</tr>
+</tbody>
+</table>
+<p><a name="basic-pod-container-fields"></a></p>
+<h2 id="pod-3"><a class="content__anchor" href="#pod-3" aria-hidden="true"><i data-feather="bookmark"></i></a>基本 Pod 容器字段</h2>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>类型</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>containers</code> （必填）</td>
+<td>阵列</td>
+<td>所有属于 pod 的容器的容器定义。</td>
+</tr>
+<tr>
+<td><code>containers.name</code></td>
+<td>字符串</td>
+<td>容器的唯一名称。</td>
+</tr>
+<tr>
+<td><code>containers.exec</code></td>
+<td>对象</td>
+<td>接受 <code>command</code> 参数。</td>
+</tr>
+<tr>
+<td><code>containers.exec.command</code></td>
+<td>对象</td>
+<td>Mesos 执行的命令。</td>
+</tr>
+<tr>
+<td><code>containers.exec.command.shell</code></td>
+<td>字符串</td>
+<td>要执行的命令。如果使用容器进入点，请使用空字符串。</td>
+</tr>
+<tr>
+<td><code>containers.exec.overrideEntrypoint</code></td>
+<td>布尔值</td>
+<td>如果提供 <code>command</code>，将该值默示设置为 <code>true</code>. 要使用默认进入点，则设置为 <code>false</code>.</td>
+</tr>
+<tr>
+<td><code>containers:resources</code> （必填）</td>
+<td>对象</td>
+<td>资源的容器规范。</td>
+</tr>
+<tr>
+<td><code>containers.resources.cpus</code></td>
+<td>数字</td>
+<td>CPU 份额（默认值：1.0）。</td>
+</tr>
+<tr>
+<td><code>containers.resources.mem</code></td>
+<td>数字</td>
+<td>MiB 中的内存资源（默认值：128）。</td>
+</tr>
+<tr>
+<td><code>containers.resources.disk</code></td>
+<td>双整数</td>
+<td>MiB 中的磁盘资源（默认值：128）。</td>
+</tr>
+<tr>
+<td><code>containers.resources.gpus</code></td>
+<td>整数</td>
+<td>GPU 资源（默认值：0）。</td>
+</tr>
+<tr>
+<td><code>containers.image</code></td>
+<td>对象</td>
+<td>如果省略 <code>image</code>，就使用 Mesos 容器。</td>
+</tr>
+<tr>
+<td><code>containers.image.kind</code></td>
+<td>字符串</td>
+<td>容器镜像格式（<code>DOCKER</code> 或 <code>APPC</code>).</td>
+</tr>
+<tr>
+<td><code>containers.image.id</code></td>
+<td>字符串</td>
+<td>容器镜像标签。</td>
+</tr>
+<tr>
+<td><code>containers.image.forcePull</code></td>
+<td>布尔值</td>
+<td>设置为 true 以始终拉取镜像（默认值：false）。</td>
+</tr>
+<tr>
+<td><code>containers.volumeMounts</code></td>
+<td>阵列</td>
+<td>接受以下参数：<code>name</code> 和 <code>mountPath</code>.</td>
+</tr>
+<tr>
+<td><code>containers.volumeMounts.name</code></td>
+<td>字符串</td>
+<td>共享卷的名称（必须是在 pod 层定义的有效卷）。</td>
+</tr>
+<tr>
+<td><code>containers.volumeMounts.mountPath</code></td>
+<td>字符串</td>
+<td>挂载卷的容器路径。</td>
+</tr>
+<tr>
+<td><code>containers.endpoints</code></td>
+<td>阵列</td>
+<td>对象阵列。</td>
+</tr>
+<tr>
+<td><code>containers.endpoints.name</code></td>
+<td>字符串</td>
+<td>端口的唯一名称。</td>
+</tr>
+<tr>
+<td><code>containers.endpoints.containerPort</code></td>
+<td>数字</td>
+<td>容器任务正在侦听的容器点。如果网络模式为 ，则必填。</td>
+</tr>
+<tr>
+<td><code>containers.endpoints.hostPort</code></td>
+<td>数字</td>
+<td>主机上的映射端口。如果设置为 <code>0</code>，Marathon 就会灵活分配端口。</td>
+</tr>
+<tr>
+<td><code>containers.endpoints.protocol</code></td>
+<td>阵列</td>
+<td>端口协议（<code>tcp</code> 或 <code>http</code>).</td>
+</tr>
+<tr>
+<td><code>containers.endpoints.labels</code></td>
+<td>对象</td>
+<td>元数据作为键/值对。</td>
+</tr>
+</tbody>
+</table>
+<p><a name="multi-pod"></a></p>
+<h1 id="pod-4"><a class="content__anchor" href="#pod-4" aria-hidden="true"><i data-feather="bookmark"></i></a>带注释的多个 Pod 及所有参数</h1>
+<p>下面的示例显示了一个 pod（<code>test-pod</code>），以及三个容器（ <code>healthtask1</code>、 <code>healthtask2</code>、和 <code>clienttask</code>. Pod 使用共享卷和本地 DC/OS 虚拟网络解决方案。</p>
+<pre><code class="language-json">{
+   &quot;id&quot;:&quot;/test-pod&quot;,
+   &quot;labels&quot;:{
+      &quot;pod_label&quot;:&quot;pod&quot;
+   },
+   &quot;environment&quot;:{
+      &quot;POD_ENV&quot;:&quot;pod&quot;
+   },
+   &quot;containers&quot;:[
+      {
+         &quot;name&quot;:&quot;healthtask1&quot;,
+         &quot;exec&quot;:{
+            &quot;command&quot;:{
+               &quot;shell&quot;:&quot;./read-write-server.py 8080 mount1/test-file.txt&quot;
+            }
+         },
+         &quot;resources&quot;:{
+            &quot;cpus&quot;:0.1,
+            &quot;mem&quot;:32,
+            &quot;disk&quot;:32,
+            &quot;gpus&quot;:0
+         },
+         &quot;endpoints&quot;:[
+            {
+               &quot;name&quot;:&quot;httpendpoint&quot;,
+               &quot;containerPort&quot;:8080,
+               &quot;hostPort&quot;:0,
+               &quot;protocol&quot;:[
+                  &quot;tcp&quot;
+               ],
+               &quot;labels&quot;:{
+                  &quot;ep1_label&quot;:&quot;ep1&quot;
+               }
+            }
+         ],
+         &quot;image&quot;:{
+            &quot;kind&quot;:&quot;DOCKER&quot;,
+            &quot;id&quot;:&quot;python:3.5.2-alpine&quot;
+         },
+         &quot;environment&quot;:{
+            &quot;C1_ENV&quot;:&quot;c1&quot;
+         },
+         &quot;healthCheck&quot;:{
+            &quot;http&quot;:{
+               &quot;endpoint&quot;:&quot;httpendpoint&quot;,
+               &quot;path&quot;:&quot;/ping&quot;,
+               &quot;scheme&quot;:&quot;HTTP&quot;
+            },
+            &quot;gracePeriodSeconds&quot;:30,
+            &quot;intervalSeconds&quot;:5,
+            &quot;maxConsecutiveFailures&quot;:3,
+            &quot;timeoutSeconds&quot;:3,
+            &quot;delaySeconds&quot;:2
+         },
+         &quot;volumeMounts&quot;:[
+            {
+               &quot;name&quot;:&quot;sharedvolume&quot;,
+               &quot;mountPath&quot;:&quot;mount1&quot;
+            }
+         ],
+         &quot;artifacts&quot;:[
+            {
+               &quot;uri&quot;:&quot;https://s3-us-west-2.amazonaws.com/mesos-soak-cluster/read-write-server.py&quot;,
+               &quot;extract&quot;:false,
+               &quot;executable&quot;:true,
+               &quot;cache&quot;:true,
+               &quot;destPath&quot;:&quot;read-write-server.py&quot;
+            }
+         ],
+         &quot;labels&quot;:{
+            &quot;c1_label&quot;:&quot;c1&quot;
+         }
+      },
+      {
+         &quot;name&quot;:&quot;healthtask2&quot;,
+         &quot;exec&quot;:{
+            &quot;command&quot;:{
+               &quot;shell&quot;:&quot;./read-write-server.py 8081 mount2/test-file.txt&quot;
+            }
+         },
+         &quot;resources&quot;:{
+            &quot;cpus&quot;:0.1,
+            &quot;mem&quot;:32,
+            &quot;disk&quot;:32,
+            &quot;gpus&quot;:0
+         },
+         &quot;endpoints&quot;:[
+            {
+               &quot;name&quot;:&quot;httpendpoint2&quot;,
+               &quot;containerPort&quot;:8081,
+               &quot;hostPort&quot;:0,
+               &quot;protocol&quot;:[
+                  &quot;tcp&quot;
+               ],
+               &quot;labels&quot;:{
+                  &quot;ep2_label&quot;:&quot;ep2&quot;
+               }
+            }
+         ],
+         &quot;image&quot;:{
+            &quot;kind&quot;:&quot;DOCKER&quot;,
+            &quot;id&quot;:&quot;python:3.5.2-alpine&quot;
+         },
+         &quot;environment&quot;:{
+            &quot;C2_ENV&quot;:&quot;c2&quot;
+         },
+         &quot;healthCheck&quot;:{
+            &quot;http&quot;:{
+               &quot;endpoint&quot;:&quot;httpendpoint2&quot;,
+               &quot;path&quot;:&quot;/ping&quot;,
+               &quot;scheme&quot;:&quot;HTTP&quot;
+            },
+            &quot;gracePeriodSeconds&quot;:30,
+            &quot;intervalSeconds&quot;:5,
+            &quot;maxConsecutiveFailures&quot;:3,
+            &quot;timeoutSeconds&quot;:3,
+            &quot;delaySeconds&quot;:2
+         },
+         &quot;volumeMounts&quot;:[
+            {
+               &quot;name&quot;:&quot;sharedvolume&quot;,
+               &quot;mountPath&quot;:&quot;mount2&quot;
+            }
+         ],
+         &quot;artifacts&quot;:[
+            {
+               &quot;uri&quot;:&quot;https://s3-us-west-2.amazonaws.com/mesos-soak-cluster/read-write-server.py&quot;,
+               &quot;extract&quot;:false,
+               &quot;executable&quot;:true,
+               &quot;cache&quot;:true,
+               &quot;destPath&quot;:&quot;read-write-server.py&quot;
+            }
+         ],
+         &quot;labels&quot;:{
+            &quot;c2_label&quot;:&quot;c2&quot;
+         }
+      },
+      {
+         &quot;name&quot;:&quot;clienttask&quot;,
+         &quot;exec&quot;:{
+            &quot;command&quot;:{
+               &quot;shell&quot;:&quot;while true; do sleep 5 &amp;&amp; curl -X GET localhost:8080/write &amp;&amp; curl -X GET localhost:8081/read; done&quot;
+            }
+         },
+         &quot;resources&quot;:{
+            &quot;cpus&quot;:0.1,
+            &quot;mem&quot;:32,
+            &quot;disk&quot;:32,
+            &quot;gpus&quot;:0
+         },
+         &quot;endpoints&quot;:[
+
+         ],
+         &quot;environment&quot;:{
+            &quot;C3_ENV&quot;:&quot;c3&quot;
+         },
+         &quot;volumeMounts&quot;:[
+
+         ],
+         &quot;artifacts&quot;:[
+
+         ],
+         &quot;labels&quot;:{
+            &quot;c3_label&quot;:&quot;c3&quot;
+         }
+      }
+   ],
+   &quot;secrets&quot;:{
+
+   },
+   &quot;volumes&quot;:[
+      {
+         &quot;name&quot;:&quot;sharedvolume&quot;
+      }
+   ],
+   &quot;networks&quot;:[
+      {
+         &quot;name&quot;:&quot;dcos&quot;,
+         &quot;mode&quot;:&quot;container&quot;,
+         &quot;labels&quot;:{
+            &quot;net_label&quot;:&quot;net&quot;
+         }
+      }
+   ],
+   &quot;scaling&quot;:{
+      &quot;kind&quot;:&quot;fixed&quot;,
+      &quot;instances&quot;:1,
+      &quot;maxInstances&quot;:null
+   },
+   &quot;scheduling&quot;:{
+      &quot;backoff&quot;:{
+         &quot;backoff&quot;:1,
+         &quot;backoffFactor&quot;:1.15,
+         &quot;maxLaunchDelaySeconds&quot;:300
+      },
+      &quot;upgrade&quot;:{
+         &quot;minimumHealthCapacity&quot;:1,
+         &quot;maximumOverCapacity&quot;:1
+      },
+      &quot;placement&quot;:{
+         &quot;constraints&quot;:[
+
+         ],
+         &quot;acceptedResourceRoles&quot;:[
+
+         ]
+      },
+      &quot;killSelection&quot;:&quot;YOUNGEST_FIRST&quot;,
+      &quot;unreachableStrategy&quot;:{
+         &quot;inactiveAfterSeconds&quot;:900,
+         &quot;expungeAfterSeconds&quot;:604800
+      }
+   },
+   &quot;executorResources&quot;:{
+      &quot;cpus&quot;:0.1,
+      &quot;mem&quot;:32,
+      &quot;disk&quot;:10
+   }
+}
+</code></pre>
+<h2 id="pod-5"><a class="content__anchor" href="#pod-5" aria-hidden="true"><i data-feather="bookmark"></i></a>其他 Pod 字段</h2>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>类型</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>labels</code></td>
+<td>对象</td>
+<td>Pod 元数据作为键/值对。</td>
+</tr>
+<tr>
+<td><code>environment</code></td>
+<td>对象</td>
+<td>pod 级别的环境变量。所有 pod 容器都将继承这些环境变量。必须为大写形式。</td>
+</tr>
+<tr>
+<td><code>secrets</code></td>
+<td>对象</td>
+<td>存储库中的密钥的完全限定路径。</td>
+</tr>
+<tr>
+<td><code>scheduling</code></td>
+<td>对象</td>
+<td>定义故障应用程序的指数退避行为以防止沙盒填满。</td>
+</tr>
+<tr>
+<td><code>scheduling.backoff</code></td>
+<td>数字</td>
+<td>启动实例失败时应用的初始退避（秒）（默认值：1）。</td>
+</tr>
+<tr>
+<td><code>scheduling.backoffFactor</code></td>
+<td>数字</td>
+<td>应用于当前退避的因数以确定新的退避（默认值：1.15）。</td>
+</tr>
+<tr>
+<td><code>scheduling.maxLaunchDelaySeconds</code></td>
+<td>数字</td>
+<td>检测到后续失败时应用的最大退避（秒）（默认值：300）。</td>
+</tr>
+<tr>
+<td><code>scheduling.unreachableStrategy</code></td>
+<td>字符串或对象</td>
+<td>定义不可访问实例的处理。</td>
+</tr>
+<tr>
+<td><code>scheduling.unreachableStrategy.inactiveAfterSeconds</code></td>
+<td>数字</td>
+<td>实例被标记为非活动后无法访问的时长。</td>
+</tr>
+<tr>
+<td><code>scheduling.unreachableStrategy.expungeAfterSeconds</code></td>
+<td>数字</td>
+<td>实例被排除后无法访问的时长。</td>
+</tr>
+<tr>
+<td><code>scheduling.upgrade</code></td>
+<td>对象</td>
+<td>控制 pod 更新的升级策略。</td>
+</tr>
+<tr>
+<td><code>scheduling.upgrade.minimumHealthCapacity</code></td>
+<td>数字</td>
+<td>介于 0 和 1 之间的数字，表示在升级期间保持的最少健康节点数量（默认值：1）。</td>
+</tr>
+<tr>
+<td><code>scheduling.upgrade.maximumOverCapacity</code></td>
+<td>数字</td>
+<td>0 至 1 之间的数字，表示升级期间启动的最大附加实例数（默认值：1）。</td>
+</tr>
+<tr>
+<td><code>placement</code></td>
+<td>对象</td>
+<td>pod 任务的控件放置。</td>
+</tr>
+<tr>
+<td><code>placement.constraints</code></td>
+<td>字符串[]</td>
+<td>约束控制 pod 任务的布局策略。选项：<code>UNIQUE</code>, <code>CLUSTER</code>, <code>GROUP_BY</code>, <code>LIKE</code>, <code>UNLIKE</code>, <code>MAX_PER</code>。</td>
+</tr>
+<tr>
+<td><code>placement.acceptedResourceRoles</code></td>
+<td>字符串[]</td>
+<td>资源角色列表。Marathon 组件只会考虑在此列表中列出角色，为此 Pod 的任务提供的资源邀约。</td>
+</tr>
+<tr>
+<td><code>killSelection</code></td>
+<td>字符串</td>
+<td>定义应用程序处于过度调配状态时首先被关闭的实例。选项：<code>YOUNGEST_FIRST</code>, <code>OLDEST_FIRST</code>.</td>
+</tr>
+<tr>
+<td><code>unreachableStrategy</code></td>
+<td></td>
+<td>代理节点从管理节点分区后的行为。</td>
+</tr>
+<tr>
+<td><code>killSelection.inactiveAfterSeconds</code></td>
+<td>整数</td>
+<td>替换任务前等待的时间（秒）（默认值：900）。</td>
+</tr>
+<tr>
+<td><code>killSelection.expungeAfterSeconds</code></td>
+<td>整数</td>
+<td>在排除前等待任务恢复的时间（秒）（默认值：603800）。</td>
+</tr>
+<tr>
+<td><code>executorResources</code></td>
+<td>对象</td>
+<td>为 pod 执行器保留的资源。</td>
+</tr>
+<tr>
+<td><code>executorResources.cpus</code></td>
+<td>数字</td>
+<td>CPU 份额（默认值：0.1）。</td>
+</tr>
+<tr>
+<td><code>executorResources.mem</code></td>
+<td>数字</td>
+<td>MiB 中的内存资源（默认值：32）。</td>
+</tr>
+<tr>
+<td><code>executorResources.disk</code></td>
+<td>数字</td>
+<td>MiB 中的磁盘资源（默认值：10.0）,</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pod-6"><a class="content__anchor" href="#pod-6" aria-hidden="true"><i data-feather="bookmark"></i></a>其他 Pod 容器字段</h2>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>类型</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>labels</code></td>
+<td>对象</td>
+<td>作为键/值对的容器元数据。</td>
+</tr>
+<tr>
+<td><code>environment</code></td>
+<td>对象</td>
+<td>容器环境变量。可覆盖 pod 环境变量。必须为大写形式。</td>
+</tr>
+<tr>
+<td><code>healthCheck</code></td>
+<td>对象</td>
+<td>接受以下参数：<code>http</code>、<code>tcp</code> 和 <code>exec</code>.</td>
+</tr>
+<tr>
+<td><code>healthCheck.http</code></td>
+<td></td>
+<td>协议类型。选项：<code>http</code>, <code>tcp</code>, <code>exec</code>。</td>
+</tr>
+<tr>
+<td><code>healthCheck.http.endpoint</code></td>
+<td>字符串</td>
+<td>要使用的端点名称。</td>
+</tr>
+<tr>
+<td><code>healthCheck.http.path</code></td>
+<td>字符串</td>
+<td>由提供运行状况的任务公开的端点路径。</td>
+</tr>
+<tr>
+<td><code>healthCheck.http.scheme</code></td>
+<td>字符串</td>
+<td>对于 httpHealthCheck，使用 <code>http</code>。</td>
+</tr>
+<tr>
+<td><code>healthCheck.gracePeriodSeconds</code></td>
+<td>整数</td>
+<td>忽略运行状况检查失败距离第一次启动任务，或距离任务初次显示健康的时间间隔（默认值：300）。</td>
+</tr>
+<tr>
+<td><code>healthCheck.intervalSeconds</code></td>
+<td>整数</td>
+<td>运行状况检查时间间隔（默认值：60）。</td>
+</tr>
+<tr>
+<td><code>healthCheck.maxConsecutiveFailures</code></td>
+<td>整数</td>
+<td>任务被关闭之前连续失败的次数（默认值：3）。</td>
+</tr>
+<tr>
+<td><code>healthCheck.timeoutSeconds</code></td>
+<td>整数</td>
+<td>等待运行状况检查完成的时间（默认值：20）。</td>
+</tr>
+<tr>
+<td><code>healthCheck.delaySeconds</code></td>
+<td>整数</td>
+<td>开始运行状况检查之前等待的时间（默认值：2）。</td>
+</tr>
+<tr>
+<td><code>artifacts</code></td>
+<td>阵列</td>
+<td>工件对象阵列</td>
+</tr>
+<tr>
+<td><code>healthCheck.uri</code></td>
+<td>字符串</td>
+<td>要下载的资源的 URI（即 <code>.tgz</code>、<code>tar.gz</code>、<code>.zip</code>、<code>.txz</code>、等）。</td>
+</tr>
+<tr>
+<td><code>healthCheck.extract</code></td>
+<td>布尔值</td>
+<td>提取抓取的工件。</td>
+</tr>
+<tr>
+<td><code>healthCheck.executable</code></td>
+<td>布尔值</td>
+<td>将抓取的工件设置为可执行。</td>
+</tr>
+<tr>
+<td><code>healthCheck.cache</code></td>
+<td>布尔值</td>
+<td>缓存抓取的工件。</td>
+</tr>
+<tr>
+<td><code>healthCheck.destPath</code></td>
+<td>字符串</td>
+<td>工件的目标路径。</td>
+</tr>
+</tbody>
+</table>
+<h1 id="pod-7"><a class="content__anchor" href="#pod-7" aria-hidden="true"><i data-feather="bookmark"></i></a>带有多个容器的 Pod</h1>
+<p>以下 pod 定义指定了带有 3 个容器的 pod。<!-- Validated by suzanne 6-23-17 --></p>
+<pre><code class="language-json">{
+   &quot;id&quot;:&quot;/pod-with-multiple-containers&quot;,
+   &quot;version&quot;:&quot;2017-01-03T18:21:19.31Z&quot;,
+   &quot;containers&quot;:[
+      {
+         &quot;name&quot;:&quot;sleep1&quot;,
+         &quot;exec&quot;:{
+            &quot;command&quot;:{
+               &quot;shell&quot;:&quot;sleep 1000&quot;
+            }
+         },
+         &quot;resources&quot;:{
+            &quot;cpus&quot;:0.01,
+            &quot;mem&quot;:32,
+            &quot;disk&quot;:0,
+            &quot;gpus&quot;:0
+         }
+      },
+      {
+         &quot;name&quot;:&quot;sleep2&quot;,
+         &quot;exec&quot;:{
+            &quot;command&quot;:{
+               &quot;shell&quot;:&quot;sleep 1000&quot;
+            }
+         },
+         &quot;resources&quot;:{
+            &quot;cpus&quot;:0.01,
+            &quot;mem&quot;:32,
+            &quot;disk&quot;:0,
+            &quot;gpus&quot;:0
+         }
+      },
+      {
+         &quot;name&quot;:&quot;sleep3&quot;,
+         &quot;exec&quot;:{
+            &quot;command&quot;:{
+               &quot;shell&quot;:&quot;sleep 1000&quot;
+            }
+         },
+         &quot;resources&quot;:{
+            &quot;cpus&quot;:0.01,
+            &quot;mem&quot;:32,
+            &quot;disk&quot;:0,
+            &quot;gpus&quot;:0
+         }
+      }
+   ],
+   &quot;networks&quot;:[
+      {
+         &quot;mode&quot;:&quot;host&quot;
+      }
+   ],
+   &quot;scaling&quot;:{
+      &quot;kind&quot;:&quot;fixed&quot;,
+      &quot;instances&quot;:10,
+      &quot;maxInstances&quot;:null
+   },
+   &quot;scheduling&quot;:{
+      &quot;backoff&quot;:{
+         &quot;backoff&quot;:1,
+         &quot;backoffFactor&quot;:1.15,
+         &quot;maxLaunchDelaySeconds&quot;:300
+      },
+      &quot;upgrade&quot;:{
+         &quot;minimumHealthCapacity&quot;:1,
+         &quot;maximumOverCapacity&quot;:1
+      },
+      &quot;killSelection&quot;:&quot;Youngest_First&quot;,
+      &quot;unreachableStrategy&quot;:{
+         &quot;inactiveAfterSeconds&quot;:900,
+         &quot;expungeAfterSeconds&quot;:604800
+      }
+   },
+   &quot;executorResources&quot;:{
+      &quot;cpus&quot;:0.1,
+      &quot;mem&quot;:32,
+      &quot;disk&quot;:10
+   }
+}
+</code></pre>
+<h1 id="pod-8"><a class="content__anchor" href="#pod-8" aria-hidden="true"><i data-feather="bookmark"></i></a>使用临时卷的 Pod</h1>
+<p>以下 pod 定义指定了称为 <code>v1</code>.  的临时卷。<!-- Validated by suzanne 6-23-17 --></p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/with-ephemeral-vol&quot;,
+  &quot;version&quot;: &quot;2017-01-03T17:36:39.389Z&quot;,
+  &quot;containers&quot;: [
+    {
+      &quot;name&quot;: &quot;ct1&quot;,
+      &quot;exec&quot;: {
+        &quot;command&quot;: {
+          &quot;shell&quot;: &quot;while true; do echo the current time is $(date) &gt; ./jdef-v1/clock; sleep 1; done&quot;
+        }
+      },
+      &quot;resources&quot;: {
+        &quot;cpus&quot;: 0.1,
+        &quot;mem&quot;: 32,
+        &quot;disk&quot;: 0,
+        &quot;gpus&quot;: 0
+      },
+      &quot;volumeMounts&quot;: [
+        {
+          &quot;name&quot;: &quot;v1&quot;,
+          &quot;mountPath&quot;: &quot;jdef-v1&quot;
+        }
+      ]
+    },
+    {
+      &quot;name&quot;: &quot;ct2&quot;,
+      &quot;exec&quot;: {
+        &quot;command&quot;: {
+          &quot;shell&quot;: &quot;while true; do cat ./etc/clock; sleep 1; done&quot;
+        }
+      },
+      &quot;resources&quot;: {
+        &quot;cpus&quot;: 0.1,
+        &quot;mem&quot;: 32,
+        &quot;disk&quot;: 0,
+        &quot;gpus&quot;: 0
+      },
+      &quot;volumeMounts&quot;: [
+        {
+          &quot;name&quot;: &quot;v1&quot;,
+          &quot;mountPath&quot;: &quot;etc&quot;
+        }
+      ]
+    }
+  ],
+  &quot;volumes&quot;: [
+    {
+      &quot;name&quot;: &quot;v1&quot;
+    }
+  ],
+  &quot;networks&quot;: [
+    {
+      &quot;mode&quot;: &quot;host&quot;
+    }
+  ],
+  &quot;scaling&quot;: {
+    &quot;kind&quot;: &quot;fixed&quot;,
+    &quot;instances&quot;: 1,
+    &quot;maxInstances&quot;: null
+  },
+  &quot;scheduling&quot;: {
+    &quot;backoff&quot;: {
+      &quot;backoff&quot;: 1,
+      &quot;backoffFactor&quot;: 1.15,
+      &quot;maxLaunchDelaySeconds&quot;: 300
+    },
+    &quot;upgrade&quot;: {
+      &quot;minimumHealthCapacity&quot;: 1,
+      &quot;maximumOverCapacity&quot;: 1
+    },
+    &quot;killSelection&quot;: &quot;Youngest_First&quot;,
+    &quot;unreachableStrategy&quot;: {
+      &quot;inactiveAfterSeconds&quot;: 900,
+      &quot;expungeAfterSeconds&quot;: 604800
+    }
+  },
+  &quot;executorResources&quot;: {
+    &quot;cpus&quot;: 0.1,
+    &quot;mem&quot;: 32,
+    &quot;disk&quot;: 10
+  }
+}
+</code></pre>
+<h1 id="pod-9"><a class="content__anchor" href="#pod-9" aria-hidden="true"><i data-feather="bookmark"></i></a>使用持久卷的 Pod</h1>
+<p>如需查看使用持久卷的 pod 的示例，请参见 <a href="/dcosdocs/mesosphere/dcos/cn/2.0/storage/persistent-volume/#create-a-pod-with-a-local-persistent-volume">创建具有本地持久卷的 pod</a>.</p>
+<h2 id="pod-ip"><a class="content__anchor" href="#pod-ip" aria-hidden="true"><i data-feather="bookmark"></i></a>各 Pod 的 IP 网络</h2>
+<p>以下 pod 定义指定名为  的虚拟（用户）网络。<code>dcos</code>. <code>networks:mode:container</code> 字段创建虚拟网络。<code>name</code> 字段为可选。如果您已使用 <a href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/evaluation/community-supported-methods/aws/">我们的 AWS 模板</a> 安装 DC/OS，则默认虚拟网络名称为 <code>dcos</code>. <!-- Validated by suzanne 6-23-17 --></p>
+<pre><code class="language-json">{
+   &quot;id&quot;:&quot;/pod-with-virtual-network&quot;,
+   &quot;scaling&quot;:{
+      &quot;kind&quot;:&quot;fixed&quot;,
+      &quot;instances&quot;:1
+   },
+   &quot;containers&quot;:[
+      {
+         &quot;name&quot;:&quot;sleep1&quot;,
+         &quot;exec&quot;:{
+            &quot;command&quot;:{
+               &quot;shell&quot;:&quot;sleep 1000&quot;
+            }
+         },
+         &quot;resources&quot;:{
+            &quot;cpus&quot;:0.1,
+            &quot;mem&quot;:32
+         }
+      }
+   ],
+   &quot;networks&quot;:[
+      {
+         &quot;mode&quot;:&quot;container&quot;,
+         &quot;name&quot;:&quot;dcos&quot;
+      }
+   ]
+}
+</code></pre>
+<p>此 pod 声明端口 80 的侦听“web”端点。<!-- Validated by suzanne 6-23-17 --></p>
+<pre><code class="language-json">{
+   &quot;id&quot;:&quot;/pod-with-endpoint&quot;,
+   &quot;containers&quot;:[
+      {
+         &quot;name&quot;:&quot;simple-docker&quot;,
+         &quot;resources&quot;:{
+            &quot;cpus&quot;:1,
+            &quot;mem&quot;:128,
+            &quot;disk&quot;:0,
+            &quot;gpus&quot;:0
+         },
+         &quot;image&quot;:{
+            &quot;kind&quot;:&quot;DOCKER&quot;,
+            &quot;id&quot;:&quot;nginx&quot;
+         },
+         &quot;endpoints&quot;:[
+            {
+               &quot;name&quot;:&quot;web&quot;,
+               &quot;containerPort&quot;:80,
+               &quot;protocol&quot;:[
+                  &quot;http&quot;
+               ]
+            }
+         ]
+      }
+   ],
+   &quot;networks&quot;:[
+      {
+         &quot;mode&quot;:&quot;container&quot;
+      }
+   ]
+}
+</code></pre>
+<p>此 pod 添加引用了 <code>web</code> 端点的运行状况检查。Mesos 将根据  执行 HTTP 请求。<code>&lt;container_ip&gt;:80</code>. 如果 Mesos 收到 HTTP 200 响应，则会通过运行状况检查。</p>
+<!-- validated by suzanne 6-23-17 -->
+<pre><code class="language-json">{
+   &quot;id&quot;:&quot;/pod-with-healthcheck&quot;,
+   &quot;containers&quot;:[
+      {
+         &quot;name&quot;:&quot;simple-docker&quot;,
+         &quot;resources&quot;:{
+            &quot;cpus&quot;:1,
+            &quot;mem&quot;:128,
+            &quot;disk&quot;:0,
+            &quot;gpus&quot;:0
+         },
+         &quot;image&quot;:{
+            &quot;kind&quot;:&quot;DOCKER&quot;,
+            &quot;id&quot;:&quot;nginx&quot;
+         },
+         &quot;endpoints&quot;:[
+            {
+               &quot;name&quot;:&quot;web&quot;,
+               &quot;containerPort&quot;:80,
+               &quot;protocol&quot;:[
+                  &quot;http&quot;
+               ]
+            }
+         ],
+         &quot;healthCheck&quot;:{
+            &quot;http&quot;:{
+               &quot;endpoint&quot;:&quot;web&quot;,
+               &quot;path&quot;:&quot;/&quot;
+            }
+         }
+      }
+   ],
+   &quot;networks&quot;:[
+      {
+         &quot;mode&quot;:&quot;container&quot;
+      }
+   ]
+}
+</code></pre>
+<h1 id="pod-10"><a class="content__anchor" href="#pod-10" aria-hidden="true"><i data-feather="bookmark"></i></a>完成 Pod</h1>
+<p>以下 pod 定义可作为参考，用于创建更复杂的 Pod。</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/complete-pod&quot;,
+  &quot;labels&quot;: {
+    &quot;owner&quot;: &quot;zeus&quot;,
+    &quot;note&quot;: &quot;Away from olympus&quot;
+  },
+  &quot;environment&quot;: {
+    &quot;XPS1&quot;: &quot;Test&quot;
+  },
+  &quot;volumes&quot;: [
+    {
+      &quot;name&quot;: &quot;etc&quot;,
+      &quot;host&quot;: &quot;/etc&quot;
+    }
+  ],
+  &quot;networks&quot;: [
+    {
+     &quot;mode&quot;: &quot;container&quot;,
+     &quot;name&quot;: &quot;dcos&quot;
+    }
+  ],
+  &quot;scaling&quot;: {
+    &quot;kind&quot;: &quot;fixed&quot;,
+    &quot;instances&quot;: 1
+  },
+  &quot;scheduling&quot;: {
+    &quot;backoff&quot;: {
+      &quot;backoff&quot;: 1,
+      &quot;backoffFactor&quot;: 1.15,
+      &quot;maxLaunchDelaySeconds&quot;: 300
+    },
+    &quot;upgrade&quot;: {
+      &quot;minimumHealthCapacity&quot;: 1,
+      &quot;maximumOverCapacity&quot;: 1
+    },
+    &quot;placement&quot;: {
+      &quot;constraints&quot;: [],
+      &quot;acceptedResourceRoles&quot;: []
+    }
+  },
+  &quot;containers&quot;: [
+    {
+      &quot;name&quot;: &quot;container1&quot;,
+      &quot;resources&quot;: {
+        &quot;cpus&quot;: 1,
+        &quot;mem&quot;: 128,
+        &quot;disk&quot;: 0,
+        &quot;gpus&quot;: 0
+      },
+      &quot;endpoints&quot;: [
+        {
+          &quot;name&quot;: &quot;http-endpoint&quot;,
+          &quot;containerPort&quot;: 80,
+          &quot;hostPort&quot;: 0,
+          &quot;protocol&quot;: [ &quot;HTTP&quot; ],
+          &quot;labels&quot;: {}
+        }
+      ],
+      &quot;image&quot;: {
+        &quot;id&quot;: &quot;nginx:latest&quot;,
+        &quot;kind&quot;: &quot;DOCKER&quot;,
+        &quot;forcePull&quot;: false
+      },
+      &quot;environment&quot;: {
+        &quot;XPS1&quot;: &quot;Test&quot;
+      },
+      &quot;user&quot;: &quot;root&quot;,
+      &quot;healthCheck&quot;: {
+        &quot;gracePeriodSeconds&quot;: 30,
+        &quot;intervalSeconds&quot;: 5,
+        &quot;maxConsecutiveFailures&quot;: 3,
+        &quot;timeoutSeconds&quot;: 4,
+        &quot;delaySeconds&quot;: 2,
+        &quot;http&quot;: {
+          &quot;path&quot;: &quot;/&quot;,
+          &quot;scheme&quot;: &quot;HTTP&quot;,
+          &quot;endpoint&quot;: &quot;http-endpoint&quot;
+        }
+      },
+      &quot;volumeMounts&quot;: [
+        {
+          &quot;name&quot;: &quot;etc&quot;,
+          &quot;mountPath&quot;: &quot;/mnt/etc&quot;,
+          &quot;readOnly&quot;: true
+        }
+      ],
+      &quot;artifacts&quot;: [
+        {
+          &quot;uri&quot;: &quot;https://ftp.gnu.org/gnu/glibc/glibc-2.25.tar.gz&quot;,
+          &quot;executable&quot;: false,
+          &quot;extract&quot;: true,
+          &quot;cache&quot;: true,
+          &quot;destPath&quot;: &quot;glibc-2.25.tar.gz&quot;
+        }
+      ],
+      &quot;labels&quot;: {
+        &quot;owner&quot;: &quot;zeus&quot;,
+        &quot;note&quot;: &quot;Away from olympus&quot;
+      },
+      &quot;lifecycle&quot;: {
+        &quot;killGracePeriodSeconds&quot;: 60
+      }
+    }
+  ]
+}
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#pod">带注释的简单 Pod 定义</a></li><li class="content__sections-item content__sections-item--h2"><a href="#pod-2">基本 Pod 字段</a></li><li class="content__sections-item content__sections-item--h2"><a href="#pod-3">基本 Pod 容器字段</a></li><li class="content__sections-item content__sections-item--h1"><a href="#pod-4">带注释的多个 Pod 及所有参数</a></li><li class="content__sections-item content__sections-item--h2"><a href="#pod-5">其他 Pod 字段</a></li><li class="content__sections-item content__sections-item--h2"><a href="#pod-6">其他 Pod 容器字段</a></li><li class="content__sections-item content__sections-item--h1"><a href="#pod-7">带有多个容器的 Pod</a></li><li class="content__sections-item content__sections-item--h1"><a href="#pod-8">使用临时卷的 Pod</a></li><li class="content__sections-item content__sections-item--h1"><a href="#pod-9">使用持久卷的 Pod</a></li><li class="content__sections-item content__sections-item--h2"><a href="#pod-ip">各 Pod 的 IP 网络</a></li><li class="content__sections-item content__sections-item--h1"><a href="#pod-10">完成 Pod</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

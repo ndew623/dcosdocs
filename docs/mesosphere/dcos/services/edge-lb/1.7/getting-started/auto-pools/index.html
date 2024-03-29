@@ -1,0 +1,381 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Automatically exposing apps with Auto Pools and labels - D2iQ Docs</title><meta name="description" content="Describes how you can automatically expose applications with task labels"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Edge Lb Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li><li class="chooser-list-item"><a href="/dkp/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services/edge-lb">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__item"><a href="/dkp/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/auto-pools">Edge-LB 1.7</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.6/getting-started/auto-pools">Edge-LB 1.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.5/getting-started/auto-pools">Edge-LB 1.5</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.4/getting-started">Edge-LB 1.4</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.3">Edge-LB 1.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.2">Edge-LB 1.2</a></li></ul><div class="toggle"><p><span class="title">Edge Lb</span><span class="version"> 1.7</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/concepts/"><i data-feather="chevron-right"></i>Edge-LB concepts</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/"><i data-feather="chevron-right"></i>Getting started with Edge-LB</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/installing/">Install Edge-LB</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/comparing-load-balancers/">Comparing load balancing services</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/auto-pools/">Automatically exposing apps with Auto Pools and labels</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/single-lb/">Expose and load balance a sample service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/edge-lb-mlb-example/">Compare Edge-LB to Marathon-LB</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/mlb-to-edge-lb-migration/">Migrate from Marathon-LB to Edge-LB</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/how-to-tasks/"><i data-feather="chevron-right"></i>How-to guides for Edge-LB</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/reference/"><i data-feather="chevron-right"></i>Reference information</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/related-documentation/"><i data-feather="chevron-right"></i>Related documentation</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Automatically exposing apps with Auto Pools and labels</h1></div><h4 class="content__header-description">Describes how you can automatically expose applications with task labels</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/auto-pools/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+Automatically+exposing+apps+with+Auto+Pools+and+labels&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/auto-pools&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><p>Using the Auto Pools feature streamlines deployment by enabling <a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/concepts/how-edge-lb-works/#edge-lb-pool">pools</a> to be automatically configured, started, and stopped using Marathon™ app labels or SDK task labels (annotations).</p>
+<p>Edge-LB automatically provisions pools using pool templates. A default pool template is created at the time of Edge-LB installation. The template is rendered into a pool configuration based on the values of the app / task <a href="#supported-labels">labels</a> that follows.  Use the command <code>dcos edgelb pool-template show default</code> to show the default Auto Pool template, which is always available unless the default Auto Pool is disabled on install of the Edge-LB service. If you have already created a pool, you can get the template through Edge-LB when you install it using <code>dcos edgelb template show &lt;pool_name&gt;</code> for the pool haproxy template.</p>
+<h1 id="default-pool"><a class="content__anchor" href="#default-pool" aria-hidden="true"><i data-feather="bookmark"></i></a>Default Pool</h1>
+<p>The minimum label configuration to expose a service is:</p>
+<pre><code class="language-json">&quot;labels&quot;: {
+  &quot;edgelb.expose&quot;: &quot;true&quot;
+}
+</code></pre>
+<p>This sample shows all of the supported <a href="#supported-labels">labels</a> with a <code>&lt;group&gt;</code> of <code>secure</code> and <code>nonsecure</code>:</p>
+<pre><code class="language-json">&quot;labels&quot;: {
+  &quot;edgelb.expose&quot;: &quot;true&quot;,
+  &quot;edgelb.template&quot;: &quot;default&quot;,
+  &quot;edgelb.delimiter&quot;: &quot;,&quot;,
+  &quot;edgelb.item_delimiter&quot;: &quot;|&quot;,
+  &quot;edgelb.key_delimiter&quot;: &quot;:&quot;,
+  &quot;edgelb.nonsecure.frontend.redirectToHttps&quot;: &quot;&quot;,
+  &quot;edgelb.secure.frontend.certificates&quot;: &quot;$AUTOCERT&quot;,
+  &quot;edgelb.secure.frontend.port&quot;: &quot;443&quot;,
+  &quot;edgelb.secure.frontend.protocol&quot;: &quot;HTTPS&quot;,
+  &quot;edgelb.secure.frontend.rules&quot;: &quot;hostEq:www.test.com|pathBeg:/a&quot;,
+  &quot;edgelb.secure.backend.balance&quot;: &quot;roundrobin&quot;,
+  &quot;edgelb.secure.backend.portName&quot;: &quot;web&quot;,
+  &quot;edgelb.secure.backend.protocol&quot;: &quot;HTTP&quot;,
+  &quot;edgelb.secure.backend.rewriteHttp.path&quot;: &quot;/a:/&quot;,
+  &quot;edgelb.secure.backend.rewriteHttp.sticky&quot;: &quot;&quot;
+}
+</code></pre>
+<p>An example Marathon™ application can be found in the <a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/reference/pool-configuration-reference/v2-examples/#auto-pool-marathon-application">example apps</a>. For an in-depth tutorial exposing applications, see the <a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/tutorials/using-auto-pools">tutorial</a>.</p>
+<p>The default pool template selects tasks with the label <code>&quot;edgelb.expose&quot; : true</code>. You can then further customize the template using labels.</p>
+<p>Some labels use a <code>&lt;group&gt;</code> in their name. The <code>&lt;group&gt;</code> value can be any ASCII string value except <code>expose</code>, <code>template</code>, <code>delimiter</code>, <code>item_delimiter</code>, <code>key_delimiter</code>, and the string cannot contain a <code>.</code>.</p>
+<p>Groups are used for two tasks:</p>
+<ol>
+<li>Grouping <code>frontend</code> and <code>backend</code> options, allowing a single task to be exposed in multiple frontends.</li>
+<li>Grouping <code>backend</code> services, such as multiple instances on a Marathon app.
+All tasks with the same <code>&lt;group&gt;</code> will be listed as a separate service entry in a single <code>backend</code> named by the group. The default group if no options are provided is <code>__default__</code>.</li>
+</ol>
+<p>We recommend using the <code>&lt;group&gt;</code> field to describe the frontend app, such as <code>website</code>, or <code>broker</code>.</p>
+<h1 id="supported-labels"><a class="content__anchor" href="#supported-labels" aria-hidden="true"><i data-feather="bookmark"></i></a>Supported Labels</h1>
+<table>
+<thead>
+<tr>
+<th>label</th>
+<th>default value</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>edgelb.expose</code></td>
+<td><code>false</code></td>
+<td>Boolean to enable the task for Auto Pool processing.</td>
+</tr>
+<tr>
+<td><code>edgelb.template</code></td>
+<td><code>default</code></td>
+<td>The template name. Allows templates to filter tasks belonging to other templates.</td>
+</tr>
+<tr>
+<td><code>edgelb.delimiter</code></td>
+<td><code>,</code></td>
+<td>The delimiter to be used when parsing <code>list</code>s.</td>
+</tr>
+<tr>
+<td><code>edgelb.item_delimiter</code></td>
+<td><code>\|</code></td>
+<td>The delimiter between items (key, value pairs) to be used when parsing <code>dict</code>s.</td>
+</tr>
+<tr>
+<td><code>edgelb.key_delimiter</code></td>
+<td><code>:</code></td>
+<td>The delimiter between keys and values to be used when parsing <code>dict</code>s.</td>
+</tr>
+<tr>
+<td><code>edgelb.&lt;group&gt;.frontend.certificates</code></td>
+<td></td>
+<td>A <code>list</code> of secret names (or the value <code>$AUTOCERT</code>) to be used as certificates. If set will enable <code>HTTPS</code>.</td>
+</tr>
+<tr>
+<td><code>edgelb.&lt;group&gt;.frontend.port</code></td>
+<td><code>80</code> if protocol is HTTP, <code>443</code> if HTTPS, required if protocol is <code>TCP</code></td>
+<td>The frontend bind port.</td>
+</tr>
+<tr>
+<td><code>edgelb.&lt;group&gt;.frontend.protocol</code></td>
+<td><code>HTTP</code> if not specified, <code>HTTPS</code> if <code>certificates</code> specified</td>
+<td>The frontend protocol.</td>
+</tr>
+<tr>
+<td><code>edgelb.&lt;group&gt;.frontend.redirectToHttps</code></td>
+<td></td>
+<td>If this labels exists then <code>redirectToHttps</code> is enabled for the frontend. The value can be empty or a <code>list</code> of <code>dicts</code> that will be used as the <a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/reference/pool-configuration-reference/v2-reference/#poolhaproxyfrontendredirecttohttps"><code>except</code> variable</a>.</td>
+</tr>
+<tr>
+<td><code>edgelb.&lt;group&gt;.frontend.rules</code></td>
+<td><code>pathBeg:/</code></td>
+<td>A <code>list</code> of <code>dict</code>s corresponding to the Edge-LB <a href="https://docs.d2iq.com/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/reference/pool-configuration-reference/v2-reference/#poolhaproxyfrontendlinkbackend"><code>pool.haproxy.frontend.linkBackend.map</code></a>.</td>
+</tr>
+<tr>
+<td><code>edgelb.&lt;group&gt;.backend.balance</code></td>
+<td></td>
+<td>The balancing <a href="https://cbonte.github.io/haproxy-dconv/2.0/configuration.html#4.2-balance">algorithm</a>.</td>
+</tr>
+<tr>
+<td><code>edgelb.&lt;group&gt;.backend.portName</code></td>
+<td>The name of the first port exposed from the task</td>
+<td>The name of the port to send traffic to.</td>
+</tr>
+<tr>
+<td><code>edgelb.&lt;group&gt;.backend.protocol</code></td>
+<td><code>HTTP</code> unless frontend protocol is not <code>HTTP/HTTPS</code>, then matches frontend</td>
+<td>The backend protocol.</td>
+</tr>
+<tr>
+<td><code>edgelb.&lt;group&gt;.backend.rewriteHttp.path</code></td>
+<td></td>
+<td>A <code>dict</code> of 1 item mapping the key path on the frontend to the value path on the backend. For example to map <code>/a</code> on the frontend to <code>/</code> on the backend, set the value to <code>/a:/</code></td>
+</tr>
+<tr>
+<td><code>edgelb.&lt;group&gt;.backend.rewriteHttp.sticky</code></td>
+<td></td>
+<td>If the label exists, sticky is enabled with the default options. Any non-whitespace value for the label will be used as the <a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/reference/pool-configuration-reference/v2-reference/#poolhaproxybackendrewritehttp"><code>customStr</code></a></td>
+</tr>
+<tr>
+<td><code>edgelb.&lt;group&gt;.backend.endpoint</code></td>
+<td></td>
+<td>If the label exists, the specified <code>dict</code> will be used in place as the endpoint. Useful for specifying an L4LB address and port as the endpoint instead of the container port. All keys from the <a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/reference/pool-configuration-reference/v2-reference/#poolhaproxybackendserviceendpoint">api</a> are support <strong>except</strong> the <code>check</code> key as it is impossible to specify a nested <code>dict</code> object.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="managing-pool-templates"><a class="content__anchor" href="#managing-pool-templates" aria-hidden="true"><i data-feather="bookmark"></i></a>Managing Pool Templates</h1>
+<p>You can deploy multiple Auto Pools by creating additional <code>poolTemplate</code>s using the API or command line. When created, the new <code>poolTemplate</code> is a copy of the default template which you can then modify, if needed. In addition, you can get the status of template rendering.</p>
+<table>
+<thead>
+<tr>
+<th>action</th>
+<th>api method</th>
+<th>api path</th>
+<th>cli command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>list</td>
+<td>GET</td>
+<td><code>/v2/poolTemplates</code></td>
+<td><code>dcos edgelb pool-template list</code></td>
+</tr>
+<tr>
+<td>create</td>
+<td>POST</td>
+<td><code>/v2/poolTemplates</code></td>
+<td><code>dcos edgelb pool-template create &lt;name&gt;</code></td>
+</tr>
+<tr>
+<td>delete</td>
+<td>DELETE</td>
+<td><code>/v2/poolTemplates/{name}</code></td>
+<td><code>dcos edgelb pool-template delete &lt;name&gt;</code></td>
+</tr>
+<tr>
+<td>status</td>
+<td>GET</td>
+<td><code>/v2/poolTemplates/{name}/status</code></td>
+<td><code>dcos edgelb pool-template status &lt;name&gt;</code></td>
+</tr>
+<tr>
+<td>update</td>
+<td>PUT</td>
+<td><code>/v2/poolTemplates/{name}/template</code></td>
+<td><code>dcos edgelb pool-template update &lt;name&gt; &lt;file&gt;</code></td>
+</tr>
+<tr>
+<td>reset</td>
+<td>DELETE</td>
+<td><code>/v2/poolTemplates/{name}/template</code></td>
+<td><code>dcos edgelb pool-template reset &lt;name&gt;</code></td>
+</tr>
+<tr>
+<td>show</td>
+<td>GET</td>
+<td><code>/v2/poolTemplates/{name}/template</code></td>
+<td><code>dcos edgelb pool-template show &lt;name&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p>For more information about the api, such as parameters and payload, refer to the <a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/reference/edgelb-api">Edge-LB API reference</a>.</p>
+<h2 id="cli-example-usage"><a class="content__anchor" href="#cli-example-usage" aria-hidden="true"><i data-feather="bookmark"></i></a>CLI example usage</h2>
+<p>To list the templates created (including the default template):</p>
+<pre><code class="language-bash">dcos edgelb pool-template list
+  NAME
+  default
+</code></pre>
+<p>To create a new pool template:</p>
+<pre><code class="language-bash">dcos edgelb pool-template create dobby
+Successfully created dobby. Check &quot;dcos edgelb pool-template show dobby&quot; or &quot;dcos edgelb pool-template status dobby&quot; for deployment status
+
+dcos edgelb pool-template list
+  NAME
+  default
+  dobby
+</code></pre>
+<p>Each new pool template is a copy of the default template with the magic string <code>__ELB_POOL_TEMPLATE_NAME__</code> replaced with the <code>poolTemplate</code>'s name.</p>
+<p>To see rendering information and status:</p>
+<pre><code class="language-bash">dcos edgelb pool-template status default
+  NAME     STATUS  MESSAGE
+  default  OK      pool has been successfully
+                   deployed
+
+dcos edgelb pool-template status dobby
+  NAME   STATUS    MESSAGE
+  dobby  NO_TASKS  no matching mesos tasks for
+                   the given pool template were
+                   found
+</code></pre>
+<p>To fetch the current template:</p>
+<pre><code class="language-bash">dcos edgelb pool-template show dobby &gt; dobby.tmpl
+</code></pre>
+<p>To update the current template:</p>
+<pre><code class="language-bash">dcos edgelb pool-template update dobby dobby.tmpl
+</code></pre>
+<p>To reset the current template back to the default:</p>
+<pre><code class="language-bash">dcos edgelb pool-template reset dobby
+Successfully reset Pool Template dobby. Check &quot;dcos edgelb pool-template show dobby&quot; or &quot;dcos edgelb pool-template status dobby&quot; for deployment status
+</code></pre>
+<p>To delete the pool template and the pools deployed by it:</p>
+<pre><code class="language-bash">dcos edgelb pool-template delete dobby
+Successfully deleted dobby. Check the DC/OS web UI for pool uninstall status.
+</code></pre>
+<h1 id="template-functions"><a class="content__anchor" href="#template-functions" aria-hidden="true"><i data-feather="bookmark"></i></a>Template Functions</h1>
+<p>Templates have access to all <a href="http://masterminds.github.io/sprig/">sprig</a> functions with the exception of <code>env</code> and <code>expandenv</code> which have been removed for security reasons. This is the same set of functions used by <a href="https://helm.sh/">Helm</a>.</p>
+<p>In addition a function <code>mesosTasks</code> returns a list of structs for the template to use:</p>
+<pre><code class="language-go">// TmplMesosTask is a simplified view of the Task for use in the templates
+// it is not a sprig `dict` (map[string]interface{}) to allow access to the
+// `MesosTask` field in the template without type asserting.
+type TmplMesosTask struct {
+	TaskID      string                 `json:&quot;-&quot;`
+	FrameworkID string                 `json:&quot;-&quot;`
+	Labels      map[string]interface{} `json:&quot;-&quot;`
+	Ports       []interface{}          `json:&quot;-&quot;`
+
+	// Access to the raw task is given for advanced use
+	MesosTask *mesos_v1.Task `json:&quot;-&quot;`
+
+	// Only these fields will be rendered to json
+	Message string              `json:&quot;message&quot;`
+	Status  models.RenderStatus `json:&quot;status&quot;`
+	URIs    []string            `json:&quot;uris&quot;`
+}
+</code></pre>
+<p>Another function <code>parseTaskLabels</code> will parse the labels into a nested <code>dict</code> structure (discussed below).</p>
+<p>Templates must use the <code>renderPoolTemplate</code> function to render a defined template. The defined template should either render a pool configuration, or call the <code>noTasks</code> function, to signal that no tasks were selected for the pool and therefore should not be started. (See the default pool <a href="https://github.com/mesosphere/dcos-edge-lb/blob/master/container/apiserver/templates/pool.json.ctmpl">template</a> for an example).</p>
+<h1 id="default-template-implementation"><a class="content__anchor" href="#default-template-implementation" aria-hidden="true"><i data-feather="bookmark"></i></a>Default Template Implementation</h1>
+<p>The default template transforms the task list into an intermediary representation, and then uses that representation to render the final pool configuration or determine that no tasks met its selection.</p>
+<p>For example, suppose the <code>mesosTasks</code> function returned the following (shown in JSON for convenience):</p>
+<pre><code class="language-json">[
+  {
+    &quot;TaskID&quot;: &quot;task1&quot;,
+    &quot;FrameworkID&quot;: &quot;framework1_id&quot;,
+    &quot;Labels&quot;: {
+      &quot;edgelb.expose&quot; : true
+    }
+  },
+  {
+    &quot;TaskID&quot;: &quot;task2&quot;,
+    &quot;FrameworkID&quot;: &quot;framework2_id&quot;,
+    &quot;Labels&quot;: {
+      &quot;edgelb.expose&quot; : true,
+      &quot;edgelb.template&quot;: &quot;default&quot;,
+      &quot;edgelb.web.frontend.certificates&quot;: &quot;mycertsecret&quot;,
+      &quot;edgelb.web.frontend.port&quot;: &quot;443&quot;,
+      &quot;edgelb.web.frontend.protocol&quot;: &quot;HTTPS&quot;,
+      &quot;edgelb.web.frontend.rules&quot;: &quot;pathBeg:/web|hostEq:www.test.com&quot;,
+      &quot;edgelb.web.backend.portName&quot;: &quot;web&quot;,
+      &quot;edgelb.web.backend.protocol&quot;: &quot;HTTP&quot;,
+      &quot;edgelb.web.backend.rewriteHttp.path&quot;: &quot;/web:/&quot;
+    }
+  }
+]
+</code></pre>
+<p>The default template pool then uses <code>parseTaskLabels</code> to transform the labels into a nested dict structure. For example the <code>Labels</code> from <code>task2</code> will produce:</p>
+<pre><code class="language-json">{
+  &quot;expose&quot;: &quot;true&quot;,
+  &quot;template&quot;: &quot;default&quot;,
+  &quot;web&quot;: {
+    &quot;frontend&quot;: {
+      &quot;certificates&quot;: [
+        &quot;mycertsecret&quot;
+      ],
+      &quot;port&quot;: &quot;443&quot;,
+      &quot;protocol&quot;: &quot;HTTPS&quot;,
+      &quot;rules&quot;: [
+        {
+          &quot;hostEq&quot;: &quot;www.test.com&quot;,
+          &quot;pathBeg&quot;: &quot;/web&quot;
+        }
+      ]
+    },
+    &quot;backend&quot;: {
+      &quot;portName&quot;: &quot;web&quot;,
+      &quot;protocol&quot;: &quot;HTTP&quot;,
+      &quot;rewriteHttp&quot;: {
+        &quot;path&quot;: {
+          &quot;/web&quot;: &quot;/&quot;
+        }
+      }
+    }
+  }
+}
+</code></pre>
+<p>This format is then further transformed within the template into the global intermediary variables <code>$BACKENDS</code>, <code>$FRONTENDS</code> and <code>$SECRETS</code>:</p>
+<h3 id="backends"><a class="content__anchor" href="#backends" aria-hidden="true"><i data-feather="bookmark"></i></a><code>$BACKENDS</code></h3>
+<pre><code class="language-json">{
+  &quot;__default__&quot;: {
+    &quot;service&quot;: [
+      {
+        &quot;task_id&quot;: &quot;task1&quot;,
+        &quot;framework_id&quot;: &quot;framework1_id&quot;,
+        &quot;endpoint&quot;: {
+          &quot;portName&quot;: &quot;name_of_first_port&quot;,
+        }
+      }
+    ]
+  },
+  &quot;web&quot;: {
+    &quot;service&quot;: [
+      {
+        &quot;task_id&quot;: &quot;task2&quot;,
+        &quot;framework_id&quot;: &quot;framework2_id&quot;,
+        &quot;endpoint&quot;: {
+          &quot;portName&quot;: &quot;web&quot;,
+        }
+      }
+    ],
+    &quot;rewriteHttp&quot;: {
+      &quot;path&quot;: {
+        &quot;fromPath&quot;: &quot;/web&quot;,
+        &quot;toPath&quot;: &quot;/&quot;
+      }
+    }
+  }
+}
+</code></pre>
+<h3 id="frontends"><a class="content__anchor" href="#frontends" aria-hidden="true"><i data-feather="bookmark"></i></a><code>$FRONTENDS</code></h3>
+<pre><code class="language-json">{
+  &quot;80&quot;: {
+    &quot;protocol&quot;: &quot;HTTP&quot;,
+    &quot;maps&quot;: [
+      {
+        &quot;pathBeg&quot;: &quot;/&quot;,
+        &quot;backend&quot;: &quot;__default__&quot;
+      }
+    ]
+  },
+  &quot;443&quot;: {
+    &quot;protocol&quot;: &quot;HTTPS&quot;,
+    &quot;certificates&quot;: [&quot;$SECRETS/mycertsecret&quot;],
+    &quot;maps&quot;: [
+      {
+        &quot;hostEq&quot;: &quot;www.test.com&quot;,
+        &quot;pathBeg&quot;: &quot;/web&quot;,
+        &quot;backend&quot;: &quot;web&quot;
+      }
+    ]
+  }
+}
+</code></pre>
+<h3 id="secrets"><a class="content__anchor" href="#secrets" aria-hidden="true"><i data-feather="bookmark"></i></a><code>$SECRETS</code></h3>
+<pre><code class="language-json">[
+  {
+    &quot;secret&quot;: &quot;mycertsecret&quot;,
+    &quot;file&quot;: &quot;mycertsecret&quot;
+  }
+]
+</code></pre>
+<p>These intermediary variables are then used to render the final pool configuration. If there are no <code>$BACKENDS</code>, <code>noTasks</code> will be called.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#default-pool">Default Pool</a></li><li class="content__sections-item content__sections-item--h1"><a href="#supported-labels">Supported Labels</a></li><li class="content__sections-item content__sections-item--h1"><a href="#managing-pool-templates">Managing Pool Templates</a></li><li class="content__sections-item content__sections-item--h2"><a href="#cli-example-usage">CLI example usage</a></li><li class="content__sections-item content__sections-item--h1"><a href="#template-functions">Template Functions</a></li><li class="content__sections-item content__sections-item--h1"><a href="#default-template-implementation">Default Template Implementation</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

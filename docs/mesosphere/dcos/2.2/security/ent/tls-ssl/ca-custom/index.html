@@ -1,0 +1,290 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Configuring a Certificate Authority - D2iQ Docs</title><meta name="description" content="Configuring DC/OS Enterprise to use a custom Certificate Authority"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.2"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/security/ent/tls-ssl/ca-custom">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/security/ent/tls-ssl/ca-custom">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/security/ent/tls-ssl/ca-custom">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/security/ent/tls-ssl/ca-custom">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/security/"><i data-feather="chevron-right"></i>Security</a></li><ul><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/"><i data-feather="chevron-right"></i>DC/OS Enterprise Security</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/users-groups/"><i data-feather="chevron-right"></i>Managing users and groups</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/gui-permissions/"><i data-feather="chevron-right"></i>Granting Access to the UI</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/perms-management/">Permissions Management</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/perms-reference/">Permissions Reference</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/ldap/"><i data-feather="chevron-right"></i>LDAP authentication</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/secrets/"><i data-feather="chevron-right"></i>Secrets</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/sso/"><i data-feather="chevron-right"></i>Identity provider-based authentication</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/service-auth/"><i data-feather="chevron-right"></i>Service Authentication</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/restrict-service-access/">Restricting Access to DC/OS Service Groups</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/hardening/">Hardening</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/iam-api/">Identity and Access Management API</a></li><li class="active"><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/tls-ssl/"><i data-feather="chevron-right"></i>Securing Communication with TLS</a></li><ul><li class="active active-on"><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/tls-ssl/ca-custom/">Configuring a Certificate Authority</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/tls-ssl/ar-custom/">Configuring a Custom External Certificate</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/tls-ssl/get-cert/">Obtaining the DC/OS CA bundle</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/tls-ssl/ca-trust-browser/">Establishing trust in your DC/OS CA</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/tls-ssl/ca-trust-cli/">Establishing trust in your CLI</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/tls-ssl/ca-trust-curl/">Establishing trust in your curl commands</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/tls-ssl/haproxy-adminrouter/">Configuring HAProxy in Front of Admin Router</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/tls-ssl/exhibitor/">Securing Exhibitor with mutual TLS</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/tls-ssl/ca-api/">Using the Certificate Authority API</a></li></ul></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/security/oss/"><i data-feather="chevron-right"></i>DC/OS Open Source Security</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/archives/">Access Documentation Archives</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Configuring a Certificate Authority</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">Configuring DC/OS Enterprise to use a custom Certificate Authority</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.2/security/ent/tls-ssl/ca-custom/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- The source repository for this topic is https://github.com/dcos/dcos-docs-site -->
+<p>Each DC/OS Enterprise cluster has a DC/OS certificate authority (CA). By default the DC/OS CA uses a globally unique root CA certificate generated during the installation of DC/OS. This CA certificate is used to sign certificates for the components of DC/OS such as Admin Router. Instead of using the default root CA certificate, you can configure DC/OS Enterprise to use a specific CA certificate, either a root CA certificate or an intermediate signing certificate. (See examples <a href="#example-use-cases">below</a>)</p>
+<p>Using a custom CA certificate for your DC/OS Enterprise cluster provides several benefits over using the default CA certificate:</p>
+<ul>
+<li>Ensures that all X.509 certificates used within the DC/OS cluster, for both signing and encrypting, derive from your organization’s X.509 certification hierarchy.</li>
+<li>Controls security properties of the key pair, such as type and strength, used for signing DC/OS component certificates.</li>
+<li>Ensures that all DC/OS components, including Admin Router, present browser-trusted certificates.</li>
+<li>Allows replacement of expiring or compromised certificates without reinstalling the cluster.</li>
+</ul>
+<h1 id="contents"><a class="content__anchor" href="#contents" aria-hidden="true"><i data-feather="bookmark"></i></a>Contents</h1>
+<ul>
+<li><a href="#custom-ca-certificate-support">Custom CA certificate support</a></li>
+<li><a href="#definitions">Definitions</a></li>
+<li><a href="#create-signing-ca-files">Create signing CA files</a></li>
+<li><a href="#dcos-configuration">DC/OS Configuration</a></li>
+<li><a href="#installing-a-cluster-with-a-custom-ca-certificate">Installing a cluster with a custom CA Certificate</a></li>
+<li><a href="#changing-the-ca-certificate-in-an-existing-cluster">Changing the CA Certificate in an existing cluster</a></li>
+<li><a href="#verify-the-new-certificates">Verify the new certificates</a></li>
+<li><a href="#example-use-cases">Example use cases</a></li>
+</ul>
+<h1 id="custom-ca-certificate-support"><a class="content__anchor" href="#custom-ca-certificate-support" aria-hidden="true"><i data-feather="bookmark"></i></a>Custom CA certificate support</h1>
+<ul>
+<li>Only RSA and Elliptic Curve (EC) certificates are supported.</li>
+<li>DC/OS Enterprise 1.9 and earlier do <strong>not</strong> support custom signing certificates.</li>
+<li>DC/OS Enterprise 2.1 and earlier do <strong>not</strong> support modification (addition, removal, or replacement) of signing certificates in an existing cluster.</li>
+<li>If Calico is enabled, modifying a CA certificate will restart Docker on agent nodes, stopping any workloads running on the agent.</li>
+</ul>
+<h1 id="definitions"><a class="content__anchor" href="#definitions" aria-hidden="true"><i data-feather="bookmark"></i></a>Definitions</h1>
+<ul>
+<li>
+<p><strong>Signing certificate:</strong> A CA certificate that will be used to issue certificates for DC/OS components such as Admin Router. The custom signing certificate is either an intermediate signing certificate (issued by another CA) or a root CA certificate (self-signed by the custom CA). Provide the signing certificate in PEM format (starting with <code>-----BEGIN CERTIFICATE-----</code>).</p>
+</li>
+<li>
+<p><strong>Signing key:</strong> The signing key associated with the signing certificate. Provide the signing key in unencrypted PKCS8 format (starting with <code>-----BEGIN PRIVATE KEY-----</code>).</p>
+</li>
+<li>
+<p><strong>Signing certificate chain:</strong> The complete CA certification chain required for end-entity certificate verification. It must include the certificates of all parent CAs of the signing certificate up to and including the root CA certificate. If the signing certificate is a root certificate, the chain must be empty. Provide the certificates in PEM format (starting with <code>-----BEGIN CERTIFICATE-----</code>).</p>
+</li>
+<li>
+<p><strong>Installation directory:</strong> The directory on the bootstrap node where the DC/OS installer resides. It is denoted by <code>$DCOS_INSTALL_DIR</code> in this document.</p>
+</li>
+<li>
+<p><strong>DC/OS configuration file:</strong> The file which contains the DC/OS configuration parameters. The DC/OS configuration file is typically called <code>config.yaml</code> and must be present in the <code>$DCOS_INSTALL_DIR/genconf/</code> directory on the bootstrap node during the installation.</p>
+</li>
+</ul>
+<h1 id="create-signing-ca-files"><a class="content__anchor" href="#create-signing-ca-files" aria-hidden="true"><i data-feather="bookmark"></i></a>Create signing CA files</h1>
+<p>Prepare files containing the signing certificate, the signing key, and, if required, the signing certificate chain.</p>
+<p>One way to generate a signing certificate and key is to use the OpenSSL command line. First create a configuration file:</p>
+<pre><code class="language-bash">cat &gt; openssl-ca.cnf &lt;&lt;EOF
+HOME                = .
+RANDFILE            = \$ENV::HOME/.rnd
+
+[ ca ]
+default_ca          = CA_default
+
+[ CA_default ]
+default_md          = sha256
+
+[ req ]
+distinguished_name  = ca_distinguished_name
+x509_extensions     = ca_extensions
+string_mask         = utf8only
+prompt              = no
+
+# Set for your organization
+[ ca_distinguished_name ]
+countryName         = US
+stateOrProvinceName = Nebraska
+localityName        = Lincoln
+organizationName    = Example
+commonName          = DC/OS CA
+
+[ ca_extensions ]
+subjectKeyIdentifier   = hash
+authorityKeyIdentifier = keyid:always, issuer
+basicConstraints       = critical, CA:true
+keyUsage               = keyCertSign, cRLSign
+EOF
+</code></pre>
+<p>then run the command:</p>
+<pre><code class="language-bash">openssl req -config openssl-ca.cnf -newkey rsa:4096 -nodes -keyout dcos-ca.key -x509 -days 1850 -out dcos-ca.crt
+</code></pre>
+<p>You should review the security requirements for your organization to determine a suitable way to create or obtain CA certificates.</p>
+<h1 id="dcos-configuration"><a class="content__anchor" href="#dcos-configuration" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS Configuration</h1>
+<p>Add the paths for the signing CA files to the DC/OS configuration file.
+The paths must be relative to <code>$DCOS_INSTALL_DIR</code> and hence will always start with <code>genconf/</code>.</p>
+<p class="message--note"><strong>NOTE: </strong>If Calico is enabled then changing these configuration values for an existing cluster will restart Docker on agent nodes. This will terminate running workloads.</p>
+<h3 id="ca-certificate-path"><a class="content__anchor" href="#ca-certificate-path" aria-hidden="true"><i data-feather="bookmark"></i></a>ca_certificate_path</h3>
+<p>Path (relative to the <code>$DCOS_INSTALL_DIR</code>) to a file containing the signing certificate. For example: <code>genconf/dcos-ca.crt</code>. It can be either a self-signed root certificate or an intermediate certificate signed by another certificate authority.</p>
+<p>The DC/OS CA will use this certificate for signing end-entity certificates. The subject of this certificate will be the issuer for certificates signed by the DC/OS CA. If not provided the DC/OS cluster generates a unique root certificate during the initial bootstrap phase and uses that as the signing certificate.</p>
+<h3 id="ca-certificate-key-path"><a class="content__anchor" href="#ca-certificate-key-path" aria-hidden="true"><i data-feather="bookmark"></i></a>ca_certificate_key_path</h3>
+<p>Path (relative to the <code>$DCOS_INSTALL_DIR</code>) to a file containing the signing key. For example: <code>genconf/dcos-ca.key</code>.</p>
+<p>This is highly sensitive data. The configuration processor accesses this file only for configuration validation, and does not copy the data.</p>
+<p>This path is required if <code>ca_certificate_path</code> is specified.</p>
+<h3 id="ca-certificate-chain-path"><a class="content__anchor" href="#ca-certificate-chain-path" aria-hidden="true"><i data-feather="bookmark"></i></a>ca_certificate_chain_path</h3>
+<p>Path (relative to the <code>$DCOS_INSTALL_DIR</code>) to a file containing the complete CA certification chain required for end-entity certificate verification. For example: <code>genconf/dcos-ca-chain.pem</code>.</p>
+<p>If <code>ca_certificate_path</code> points to a self-signed root certificate then omit this parameter.</p>
+<p>Otherwise <code>ca_certificate_chain_path</code> points to a file containing the complete chain of certificates up to a self-signed root certificate, but excluding the signing certificate contained in <code>ca_certificate_path</code>. The order is significant: the first certificate must verify the signing certificate in <code>ca_certificate_path</code> and each subsequent certificate must verify the preceding certificate.</p>
+<h3 id="ca-truststore-path"><a class="content__anchor" href="#ca-truststore-path" aria-hidden="true"><i data-feather="bookmark"></i></a>ca_truststore_path</h3>
+<p>Path (relative to the <code>$DCOS_INSTALL_DIR</code>) to a file containing additional trusted CA certificates. This should be a file containing one or more PEM certificates. For example: <code>genconf/dcos-truststore.pem</code>.</p>
+<p>The signing certificate root CA is automatically trusted and does not need to be added here.</p>
+<h1 id="installing-a-cluster-with-a-custom-ca-certificate"><a class="content__anchor" href="#installing-a-cluster-with-a-custom-ca-certificate" aria-hidden="true"><i data-feather="bookmark"></i></a>Installing a cluster with a custom CA Certificate</h1>
+<p>Create the signing files <a href="#create-signing-ca-files">as described above</a> and copy them to the <code>$DCOS_INSTALL_DIR/genconf/</code> directory on the bootstrap node.</p>
+<p>Modify the DC/OS Configuration file <a href="#dcos-configuration">as described above</a> to point to the signing files.</p>
+<p>Proceed with the installation by running the appropriate <code>dcos_generate_config.ee.sh</code> command as described in the <a href="/dcosdocs/mesosphere/dcos/2.2/installing/production/deploying-dcos/installation">documentation of the Advanced Installer</a>. Note that the current working directory when executing <code>dcos_generate_config.ee.sh</code> must be the <code>$DCOS_INSTALL_DIR</code> directory.</p>
+<p>For security reasons, the installer will not copy the signing key file from the bootstrap node to the master nodes.
+Manually distribute the signing key to every DC/OS master node before running the <code>dcos-install.sh</code> script.
+If you copy the signing key file over the network onto the master nodes, the network channel must be adequately protected.</p>
+<p>On each master node:</p>
+<ol>
+<li>Copy the <code>dcos-install.sh</code> script to the node.</li>
+<li>Create the directory <code>/var/lib/dcos/pki/tls/CA/private/</code> owned by the <code>root</code> user and with permission mode 0700.</li>
+<li>Copy the signing key file to <code>/var/lib/dcos/pki/tls/CA/private/custom_ca.key</code>. Ensure that the signing key file is owned by the <code>root</code> user and is only accessible to the owner (permission mode 0600).</li>
+<li>Run the <code>dcos-install.sh</code> script as described in the installation instructions.</li>
+</ol>
+<h1 id="changing-the-ca-certificate-in-an-existing-cluster"><a class="content__anchor" href="#changing-the-ca-certificate-in-an-existing-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>Changing the CA Certificate in an existing cluster</h1>
+<p>To replace the CA certificate (for example, if it is expiring or compromised), perform the following procedure consisting of three patch upgrades.  Three patch upgrades are required to ensure that the cluster stays healthy during the certificate replacement.  If Calico is enabled (the default setting), then workloads may be stopped.</p>
+<h2 id="add-new-ca-certificate-to-truststore"><a class="content__anchor" href="#add-new-ca-certificate-to-truststore" aria-hidden="true"><i data-feather="bookmark"></i></a>Add new CA certificate to truststore</h2>
+<p>In the first patch upgrade, add the new CA certificate to the truststore.</p>
+<pre><code class="language-yaml">ca_truststore_path: genconf/new-ca.crt
+</code></pre>
+<p>Proceed with the patch upgrade by running the appropriate <code>dcos_generate_config.ee.sh</code> command as described in the <a href="/dcosdocs/mesosphere/dcos/2.2/installing/production/patching">documentation of the Advanced Installer</a>. Note that the current working directory when executing <code>dcos_generate_config.ee.sh</code> must be the <code>$DCOS_INSTALL_DIR</code> directory.</p>
+<p>Run the <code>dcos_node_upgrade.sh</code> script on each cluster node as described in the patch instructions.</p>
+<h2 id="replace-the-ca-signing-certificate"><a class="content__anchor" href="#replace-the-ca-signing-certificate" aria-hidden="true"><i data-feather="bookmark"></i></a>Replace the CA signing certificate</h2>
+<p>In the second patch upgrade, replace the signing certificate. Modify the truststore to refer to the old CA certificate.</p>
+<pre><code class="language-yaml">ca_certificate_path: genconf/new-ca.crt
+ca_certificate_key_path: genconf/new-ca.key
+ca_certificate_chain_path: genconf/new-ca-chain.crt
+ca_truststore_path: genconf/old-ca.crt
+</code></pre>
+<p>Note that this example assumes the signing certificate is an intermediate certificate. If it is self-signed root certificate, remove the <code>ca_certificate_chain_path</code> attribute.</p>
+<p>Proceed with the patch upgrade by running the appropriate <code>dcos_generate_config.ee.sh</code> command as described in the <a href="/dcosdocs/mesosphere/dcos/2.2/installing/production/patching">documentation of the Advanced Installer</a>. Note that the current working directory when executing <code>dcos_generate_config.ee.sh</code> must be the <code>$DCOS_INSTALL_DIR</code> directory.</p>
+<p>For security reasons, the installer will not copy the signing key file from the bootstrap node to the master nodes.
+Manually distribute the signing key to every DC/OS master node <strong>before starting the upgrade</strong>.
+If you copy the signing key file over the network onto the master nodes, the network channel must be adequately protected.</p>
+<p>On each master node in turn:</p>
+<ol>
+<li>Copy the <code>dcos_node_upgrade.sh</code> script to the node.</li>
+<li>Ensure the directory <code>/var/lib/dcos/pki/tls/CA/private/</code> exists and is owned by the <code>root</code> user with permission mode 0700.</li>
+<li>Copy the signing key file to <code>/var/lib/dcos/pki/tls/CA/private/custom_ca.key</code>. Ensure that the signing key file is owned by the <code>root</code> user and is only accessible to the owner (permission mode 0600).</li>
+<li>Run the <code>dcos_node_upgrade.sh</code> script as described in the patch instructions.</li>
+<li>Before proceeding, validate the patch as described in the patch instructions.</li>
+</ol>
+<p>Run the <code>dcos_node_upgrade.sh</code> script on each agent node as described in the patch instructions.</p>
+<h2 id="remove-old-ca-certificate-from-truststore"><a class="content__anchor" href="#remove-old-ca-certificate-from-truststore" aria-hidden="true"><i data-feather="bookmark"></i></a>Remove old CA certificate from truststore</h2>
+<p>This step is optional, but recommended. If this step is not done, then certificates signed by the old CA certificate will continue to be trusted. If the old CA certificate may have been compromised or may be compromised within its remaining lifetime, performing this step is required.</p>
+<p>In the third patch upgrade, remove the old CA from the truststore by removing the <code>ca_truststore_path</code> attribute from the DC/OS configuration file.</p>
+<p>Proceed with the patch upgrade by running the appropriate <code>dcos_generate_config.ee.sh</code> command as described in the <a href="/dcosdocs/mesosphere/dcos/2.2/installing/production/patching">documentation of the Advanced Installer</a>. Note that the current working directory when executing <code>dcos_generate_config.ee.sh</code> must be the <code>$DCOS_INSTALL_DIR</code> directory.</p>
+<p>Run the <code>dcos_node_upgrade.sh</code> script on each cluster node as described in the patch instructions.</p>
+<h1 id="verify-the-new-certificates"><a class="content__anchor" href="#verify-the-new-certificates" aria-hidden="true"><i data-feather="bookmark"></i></a>Verify the new certificates</h1>
+<p>To verify that the DC/OS Enterprise cluster was installed with the custom signing certificate, use your browser to access the DC/OS web UI and inspect the certificate and check that the CA has the expected DN.</p>
+<p>Alternatively, you can follow these steps:</p>
+<p>Select a master node to test:</p>
+<pre><code class="language-bash">MASTER=172.28.128.21
+</code></pre>
+<p>You will need the CA certificate. If necessary, retrieve it from the master node using:</p>
+<pre><code class="language-bash">curl -k -v https://${MASTER}/ca/dcos-ca.crt -o dcos-ca.crt
+</code></pre>
+<p>Retrieve the certificate chain from the web UI and verify it with the CA certificate:</p>
+<pre><code class="language-bash">openssl s_client -verify_ip ${MASTER} -CAfile dcos-ca.crt -connect ${MASTER}:443 | grep -e &quot;s:&quot; -e &quot;i:&quot; -e &quot;return code:&quot;
+</code></pre>
+<p>The output should look like the following:</p>
+<pre><code>depth=1 C = US, ST = Nebraska, L = Lincoln, O = Example, CN = DC/OS CA
+verify return:1
+depth=0 C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = AdminRouter on 172.28.128.21
+verify return:1
+ 0 s:C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = AdminRouter on 172.28.128.21
+   i:C = US, ST = Nebraska, L = Lincoln, O = Example, CN = DC/OS CA
+    Verify return code: 0 (ok)
+</code></pre>
+<h1 id="example-use-cases"><a class="content__anchor" href="#example-use-cases" aria-hidden="true"><i data-feather="bookmark"></i></a>Example use cases</h1>
+<p>This section describes how the three configuration parameters <code>ca_certificate_path</code>, <code>ca_certificate_key_path</code> and <code>ca_certificate_chain_path</code> must be specified in the <code>$DCOS_INSTALL_DIR/genconf/config.yaml</code> DC/OS configuration file for the most common use cases of a custom CA certificate hierarchy.</p>
+<h2 id="use-case-1"><a class="content__anchor" href="#use-case-1" aria-hidden="true"><i data-feather="bookmark"></i></a>Use case 1:</h2>
+<p>The signing certificate is a self-signed root certificate. The CA does not have a “parent” CA, hence the signing certificate chain is empty.</p>
+<p>Provide the following files:</p>
+<ul>
+<li>
+<p>on the bootstrap node:</p>
+<ul>
+<li><code>$DCOS_INSTALL_DIR/genconf/dcos-ca.crt</code> file containing the signing certificate</li>
+<li><code>$DCOS_INSTALL_DIR/genconf/dcos-ca.key</code> file containing the signing key</li>
+</ul>
+</li>
+<li>
+<p>on the master nodes:</p>
+<ul>
+<li><code>/var/lib/dcos/pki/tls/CA/private/custom_ca.key</code> file containing the signing key</li>
+</ul>
+</li>
+</ul>
+<p>Here is an example of the <code>issuer</code> and <code>subject</code> fields of a custom root Signing certificate:</p>
+<pre><code class="language-bash">cd $DCOS_INSTALL_DIR
+openssl x509 -in genconf/dcos-ca.crt -issuer -subject -noout
+</code></pre>
+<pre><code>issuer= /C=US/L=Nebraska/O=Example/CN=Integration Test Root CA
+subject= /C=US/L=Nebraska/O=Example/CN=Integration Test Root CA
+</code></pre>
+<p>Since the signing certificate is a root certificate and the corresponding signing certificate chain is empty, we must omit the <code>ca_certificate_chain_path</code> parameter in the DC/OS configuration file. Specify the configuration parameters as follows in the DC/OS configuration file on the bootstrap node:</p>
+<pre><code class="language-yaml">ca_certificate_path: genconf/dcos-ca.crt
+ca_certificate_key_path: genconf/dcos-ca.key
+</code></pre>
+<h2 id="use-case-2"><a class="content__anchor" href="#use-case-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Use case 2:</h2>
+<p>In this case the signing certificate is an intermediate one, issued directly by a root CA. The signing certificate chain consists of just the root CA certificate. Provide the following files:</p>
+<ul>
+<li>
+<p>on the bootstrap node:</p>
+<ul>
+<li><code>$DCOS_INSTALL_DIR/genconf/dcos-ca.crt</code> file containing the signing certificate in PEM format</li>
+<li><code>$DCOS_INSTALL_DIR/genconf/dcos-ca.key</code> file containing the signing key</li>
+<li><code>$DCOS_INSTALL_DIR/genconf/dcos-ca-chain.crt</code> file containing the root signing certificate in PEM format</li>
+</ul>
+</li>
+<li>
+<p>on the master nodes</p>
+<ul>
+<li><code>/var/lib/dcos/pki/tls/CA/private/custom_ca.key</code> file containing the signing key</li>
+</ul>
+</li>
+</ul>
+<p>Here is an example of an appropriate intermediate signing certificate:</p>
+<pre><code class="language-bash">cd $DCOS_INSTALL_DIR
+openssl x509 -in genconf/dcos-ca.crt -issuer -subject -noout
+</code></pre>
+<pre><code>issuer= /C=US/L=Nebraska/O=Example/CN=Integration Test Root CA
+subject= /C=US/L=Nebraska/O=Example/CN=Integration Test Intermediate CA 01
+</code></pre>
+<p>Here is an example of a corresponding signing certificate chain:</p>
+<pre><code class="language-bash">cd $DCOS_INSTALL_DIR
+cat genconf/dcos-ca-chain.crt | awk -v cmd=&quot;openssl x509 -issuer -subject -noout &amp;&amp; echo&quot; '/-----BEGIN/ { c = $0; next } c { c = c &quot;\n&quot; $0 } /-----END/ { print c|cmd; close(cmd); c = 0 }'
+</code></pre>
+<pre><code>issuer= /C=US/L=Nebraska/O=Example/CN=Integration Test Root CA
+subject= /C=US/L=Nebraska/O=Example/CN=Integration Test Root CA
+</code></pre>
+<p>Specify the configuration parameters as follows in the DC/OS configuration file on the bootstrap node:</p>
+<pre><code class="language-yaml">ca_certificate_path: genconf/dcos-ca.crt
+ca_certificate_key_path: genconf/dcos-ca.key
+ca_certificate_chain_path: genconf/dcos-ca-chain.crt
+</code></pre>
+<h2 id="use-case-3"><a class="content__anchor" href="#use-case-3" aria-hidden="true"><i data-feather="bookmark"></i></a>Use case 3:</h2>
+<p>In this case the signing certificate is an intermediate one, issued directly by another intermediate CA that, in turn, has its certificate issued by a root CA.</p>
+<p>The signing certificate chain comprises the</p>
+<ol>
+<li>signing certificate of the issuing intermediate CA, and</li>
+<li>the root CA</li>
+</ol>
+<p>in that order.</p>
+<p>Provide the following files:</p>
+<ul>
+<li>
+<p>on the bootstrap node:</p>
+<ul>
+<li><code>$DCOS_INSTALL_DIR/genconf/dcos-ca.crt</code> file containing the signing certificate</li>
+<li><code>$DCOS_INSTALL_DIR/genconf/dcos-ca.key</code> file containing the signing key</li>
+<li><code>$DCOS_INSTALL_DIR/genconf/dcos-ca-chain.crt</code> file containing the signing certificate chain</li>
+</ul>
+</li>
+<li>
+<p>on the master nodes</p>
+<ul>
+<li><code>/var/lib/dcos/pki/tls/CA/private/custom_ca.key</code> file containing the signing key</li>
+</ul>
+</li>
+</ul>
+<p>Here is an example of an appropriate custom intermediate signing certificate:</p>
+<pre><code class="language-bash">cd $DCOS_INSTALL_DIR
+openssl x509 -in genconf/dcos-ca.crt -issuer -subject -noout
+</code></pre>
+<pre><code>issuer= /C=US/L=Nebraska/O=Example/CN=Integration Test Intermediate CA 01
+subject= /C=US/L=Nebraska/O=Example/CN=Integration Test Intermediate CA 02
+</code></pre>
+<p>Here is an example of a corresponding signing certificate chain:</p>
+<pre><code class="language-bash">cd $DCOS_INSTALL_DIR
+cat genconf/dcos-ca-chain.crt | awk -v cmd=&quot;openssl x509 -issuer -subject -noout &amp;&amp; echo&quot; '/-----BEGIN/ { c = $0; next } c { c = c &quot;\n&quot; $0 } /-----END/ { print c|cmd; close(cmd); c = 0 }'
+</code></pre>
+<pre><code>issuer= /C=US/L=Nebraska/O=Example/CN=Integration Test Root CA
+subject= /C=US/L=Nebraska/O=Example/CN=Integration Test Intermediate CA 01
+issuer= /C=US/L=Nebraska/O=Example/CN=Integration Test Root CA
+subject= /C=US/L=Nebraska/O=Example/CN=Integration Test Root CA
+</code></pre>
+<p>Specify the configuration parameters as follows in the DC/OS configuration file on the bootstrap node:</p>
+<pre><code class="language-yaml">ca_certificate_path: genconf/dcos-ca.crt
+ca_certificate_key_path: genconf/dcos-ca.key
+ca_certificate_chain_path: genconf/dcos-ca-chain.crt
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#contents">Contents</a></li><li class="content__sections-item content__sections-item--h1"><a href="#custom-ca-certificate-support">Custom CA certificate support</a></li><li class="content__sections-item content__sections-item--h1"><a href="#definitions">Definitions</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-signing-ca-files">Create signing CA files</a></li><li class="content__sections-item content__sections-item--h1"><a href="#dcos-configuration">DC/OS Configuration</a></li><li class="content__sections-item content__sections-item--h1"><a href="#installing-a-cluster-with-a-custom-ca-certificate">Installing a cluster with a custom CA Certificate</a></li><li class="content__sections-item content__sections-item--h1"><a href="#changing-the-ca-certificate-in-an-existing-cluster">Changing the CA Certificate in an existing cluster</a></li><li class="content__sections-item content__sections-item--h2"><a href="#add-new-ca-certificate-to-truststore">Add new CA certificate to truststore</a></li><li class="content__sections-item content__sections-item--h2"><a href="#replace-the-ca-signing-certificate">Replace the CA signing certificate</a></li><li class="content__sections-item content__sections-item--h2"><a href="#remove-old-ca-certificate-from-truststore">Remove old CA certificate from truststore</a></li><li class="content__sections-item content__sections-item--h1"><a href="#verify-the-new-certificates">Verify the new certificates</a></li><li class="content__sections-item content__sections-item--h1"><a href="#example-use-cases">Example use cases</a></li><li class="content__sections-item content__sections-item--h2"><a href="#use-case-1">Use case 1:</a></li><li class="content__sections-item content__sections-item--h2"><a href="#use-case-2">Use case 2:</a></li><li class="content__sections-item content__sections-item--h2"><a href="#use-case-3">Use case 3:</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

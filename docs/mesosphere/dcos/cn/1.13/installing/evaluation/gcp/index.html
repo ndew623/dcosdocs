@@ -1,0 +1,299 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>GCP 上使用通用安装工具的 DC/OS - D2iQ Docs</title><meta name="description" content="使用 Universal 安装工具在 GCP 上的 DC/OS 指南"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li><li class="chooser-list-item"><a href="/dkp/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/1.13/installing/evaluation/gcp">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__item"><a href="/dkp/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/evaluation/gcp">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/evaluation/gcp">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/gcp">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/"><i data-feather="chevron-right"></i>概述</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/"><i data-feather="chevron-right"></i>安装</a></li><ul><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/"><i data-feather="chevron-right"></i>云安装</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/aws/"><i data-feather="chevron-right"></i>AWS</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/azure/"><i data-feather="chevron-right"></i>Azure</a></li><li class="active active-on"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/gcp/"><i data-feather="chevron-right"></i>GCP</a></li><ul><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/gcp/gcp-remote-region/">GCP 多分域支持</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/gcp/advanced-gcp/">配置参考</a></li></ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/community-supported-methods/"><i data-feather="chevron-right"></i>其他安装方法</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/"><i data-feather="chevron-right"></i>本地安装</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/installation-faq/">常见问题</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/troubleshooting/">故障排除</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">GCP 上使用通用安装工具的 DC/OS</h1></div><h4 class="content__header-description">使用 Universal 安装工具在 GCP 上的 DC/OS 指南</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/gcp/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+GCP+上使用通用安装工具的+DC/OS&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/gcp&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><p>This guide is meant to take an operator through all steps necessary for a successful installation of DC/OS using Terraform. If you are already familiar with the prerequisites, you can jump to <a href="#creating">Creating a DC/OS Cluster</a>.</p>
+<h2 id="prerequisites"><a class="content__anchor" href="#prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h2>
+<ul>
+<li>Linux, macOS, or Windows</li>
+<li>command-line shell terminal such as Bash or PowerShell</li>
+<li>verified Azure Resource Manager account with the necessary permissions</li>
+</ul>
+<h1 id="install-terraform"><a class="content__anchor" href="#install-terraform" aria-hidden="true"><i data-feather="bookmark"></i></a>Install Terraform</h1>
+<p class="message--important"><strong>IMPORTANT:</strong> Terraform was updated to 0.12.x. The DC/OS Universal Installer currently only supports <b>Terraform 0.11.x</b></p>
+<ol>
+<li>
+<p>Visit the <a href="https://releases.hashicorp.com/terraform/">Terraform releases page</a> for bundled installations and support for Linux, macOS and Windows. Choose the latest 0.11 version.</p>
+<p>If you’re on a Mac environment with <a href="https://brew.sh/">Homebrew</a> installed, simply run the following command:</p>
+<pre><code class="language-bash">brew unlink terraform || true
+brew install tfenv
+tfenv install 0.11.14
+</code></pre>
+<p>Windows users that have <a href="https://chocolatey.org/docs/installation">Chocolatey</a> installed, run:</p>
+<pre><code class="language-bash">choco install terraform --version 0.11.14 -y
+</code></pre>
+</li>
+</ol>
+<h2 id="get-application-default-credentials-for-authentication"><a class="content__anchor" href="#get-application-default-credentials-for-authentication" aria-hidden="true"><i data-feather="bookmark"></i></a>Get Application Default Credentials for authentication</h2>
+<p>You will need the <a href="https://cloud.google.com/sdk/gcloud/reference/auth/application-default/login">Application Default Credentials</a> for Terraform to authenticate against GCP. To understand more about how Terraform authenticates with Google, see the <a href="https://www.terraform.io/docs/providers/google/provider_reference.html">Terraform Google provider reference</a>.</p>
+<p>To receive Application Default Credentials:</p>
+<ol>
+<li>Run the following command:</li>
+</ol>
+<pre><code class="language-bash">$ gcloud auth application-default login
+</code></pre>
+<ol start="2">
+<li>Verify that you have Application Default Credentials by running the following command:</li>
+</ol>
+<pre><code class="language-bash">$ gcloud auth application-default print-access-token
+EXMAPLE.EXAMPLE-1llO--ZEvh6gQ-qhpL0I3gHcCeDKG_EXAMPLE7WtAepmpp47c0RCv9e0Oq6QnpQ79RZlHKzOw69XMxI87M2Q
+</code></pre>
+<h2 id="set-the-gcp-default-region-and-project"><a class="content__anchor" href="#set-the-gcp-default-region-and-project" aria-hidden="true"><i data-feather="bookmark"></i></a>Set the GCP default region and project</h2>
+<p>The GCP provider requires you to export the Region (<code>desired-gcp-region</code>) and Project (<code>desired-gcp-project</code>) identifiers into environment variables even if those values are set in the <code>gcloud-cli</code>. You can set them easily in your terminal.</p>
+<pre><code class="language-bash">export GOOGLE_REGION=&quot;us-west1&quot;
+export GOOGLE_PROJECT=&quot;my-project-id&quot;
+</code></pre>
+<p>Alternatively, they can be inserted into the configuration file you will create. Please keep in mind storing your credentials outside of your version control for security.</p>
+<pre><code class="language-hcl">provider &quot;google&quot; {
+  version     = &quot;~&gt; 2.0&quot;
+  credentials = &quot;${file(&quot;account.json&quot;)}&quot;
+  project     = &quot;my-project-id&quot;
+  region      = &quot;us-west1&quot;
+  zone        = &quot;us-west1-b&quot;
+}
+</code></pre>
+<h2 id="verify-you-have-a-license-key-for-enterprise-edition"><a class="content__anchor" href="#verify-you-have-a-license-key-for-enterprise-edition" aria-hidden="true"><i data-feather="bookmark"></i></a>Verify you have a license key for Enterprise Edition</h2>
+<p>DC/OS Enterprise requires a valid license key provided by Mesosphere that will be passed into the <code>main.tf</code> configuration file as <code>dcos_license_key_contents</code>. If you do not set a password, the default superuser and password will be available for log in:</p>
+<p>Username: <code>bootstrapuser</code> <br>
+Password: <code>deleteme</code></p>
+<p class="message--important"><strong>IMPORTANT: </strong>You should NOT use the default credentials in a production environment. When you create or identify an administrative account for the production environment, you also need to generate a password hash for the account.</p>
+<p>To set superuser credentials for the first log in, add the following values into your <code>main.tf</code> along with your license key. The password will need to be hashed to SHA-512.</p>
+<pre><code class="language-hcl">dcos_superuser_username      = &quot;superuser-name&quot;
+dcos_superuser_password_hash = &quot;${file(&quot;./dcos_superuser_password_hash&quot;)}
+</code></pre>
+<h1 id="creating-a-dcos-cluster"><a class="content__anchor" href="#creating-a-dcos-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>Creating a DC/OS Cluster</h1>
+<ol>
+<li>
+<p>Let’s start by creating a local folder and cd’ing into it. This folder will be used as the staging ground for downloading all required Terraform modules and holding the configuration for the cluster you are about to create.</p>
+<pre><code class="language-bash">mkdir dcos-demo &amp;&amp; cd dcos-demo
+</code></pre>
+</li>
+<li>
+<p>Create a file in that folder called <code>main.tf</code>, which is the configuration file that will be called on each time when terraform runs. The name of this file should always be <code>main.tf</code>. Open the file in the code editor of your choice and paste in the following. Notice the copy icon in the upper right hand corner of the code block to copy the code to your clipboard:</p>
+<pre><code class="language-hcl">provider &quot;google&quot; {
+  version = &quot;~&gt; 2.0&quot;
+  region  = &quot;us-west1&quot;
+}
+
+module &quot;dcos&quot; {
+  source = &quot;dcos-terraform/dcos/gcp&quot;
+  version = &quot;~&gt; 0.2.0&quot;
+
+  providers = {
+    google = &quot;google&quot;
+  }
+
+  cluster_name        = &quot;my-dcos-demo&quot;
+  ssh_public_key_file = &quot;&lt;path-to-public-key-file&gt;&quot;
+  admin_ips           = [&quot;${data.http.whatismyip.body}/32&quot;]
+
+  num_masters        = 3
+  num_private_agents = 2
+  num_public_agents  = 1
+
+  dcos_version = &quot;1.13.3&quot;
+
+  # Enterprise users uncomment this section and comment out below
+  # dcos_variant              = &quot;ee&quot;
+  # dcos_license_key_contents = &quot;${file(&quot;./license.txt&quot;)}&quot;
+  # Make sure to set your credentials if you do not want the default EE
+  # dcos_superuser_password_hash = &quot;${file(&quot;./dcos_superuser_password_hash.sha512&quot;)}
+  # dcos_superuser_username = &quot;admin&quot;
+
+  dcos_variant = &quot;open&quot;
+}
+
+output &quot;masters-ips&quot; {
+  value = &quot;${module.dcos.masters-ips}&quot;
+}
+
+output &quot;cluster-address&quot; {
+  value = &quot;${module.dcos.masters-loadbalancer}&quot;
+}
+
+output &quot;public-agents-loadbalancer&quot; {
+  value = &quot;${module.dcos.public-agents-loadbalancer}&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>There is a main variable that must be set to complete the <code>main.tf</code>:</p>
+<ul>
+<li><code>ssh_public_key_file = &quot;&lt;path-to-public-key-file&gt;&quot;</code>: the path to the public key for your cluster, following our example it would be:<pre><code class="language-bash">&quot;~/.ssh/gcp-key.pub&quot;
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><code>region</code> is a setting that sets the GCP region that this DC/OS cluster will spin up on.  While this setting is currently set to “us-west1”, it can be changed to any other region (e.g “us-east1”, “us-central1”, etc).</p>
+</li>
+<li>
+<p>Enterprise users, uncomment/comment the section for the <code>dcos_variant</code> to look like this, inserting the location to your license key, and adding superuser credentials if needed. <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></p>
+<pre><code class="language-hcl">dcos_variant              = &quot;ee&quot;
+dcos_license_key_contents = &quot;${file(&quot;./license.txt&quot;)}&quot;
+# dcos_variant = &quot;open&quot;
+</code></pre>
+</li>
+</ol>
+<p>You can find additional input variables and their descriptions <a href="/dcosdocs/mesosphere/dcos/1.13/installing/evaluation/gcp/advanced-gcp/">here</a>.</p>
+<ol start="6">
+<li>
+<p>This sample configuration file will get you started on the installation of an open source DC/OS 1.13.3 cluster with the following nodes:</p>
+<ul>
+<li>3 Master</li>
+<li>2 Private Agents</li>
+<li>1 Public Agent</li>
+</ul>
+<p>If you want to change the cluster name or vary the number of masters/agents, feel free to adjust those values now as well. Cluster names must be unique, consist of alphanumeric characters, ‘-’, ‘_’ or ‘.’, start and end with an alphanumeric character, and be no longer than 24 characters. You can find additional <a href="/dcosdocs/mesosphere/dcos/1.13/installing/evaluation/gcp/advanced-gcp/">input variables and their descriptions here</a>.</p>
+<p>There are also simple helpers listed underneath the module which find your public ip and specify that the following output should be printed once cluster creation is complete:</p>
+<ul>
+<li><code>master-ips</code> A list of Your DC/OS master nodes</li>
+<li><code>cluster-address</code> The URL you use to access DC/OS UI after the cluster is setup.</li>
+<li><code>public-agent-loadbalancer</code> The URL of your Public routable services.</li>
+</ul>
+</li>
+<li>
+<p>Check that you have inserted your cloud provider and public key paths to <code>main.tf</code>, changed or added any other additional variables as wanted, then save and close your file.</p>
+</li>
+</ol>
+<h2 id="initialize-terraform-and-create-a-cluster"><a class="content__anchor" href="#initialize-terraform-and-create-a-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>Initialize Terraform and create a cluster</h2>
+<ol>
+<li>
+<p>Now the action of actually creating your cluster and installing DC/OS begins. First, initialize the project’s local settings and data.  Make sure you are still working in the same folder where you created your <code>main.tf</code> file, and run the initialization.</p>
+<pre><code class="language-bash">terraform init -upgrade
+</code></pre>
+<pre><code class="language-text">Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running &quot;terraform plan&quot; to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your environment. If you forget, other
+commands will detect it and remind you to do so if necessary.
+</code></pre>
+ <p class="message--note"><strong>Note: </strong>If terraform is not able to connect to your provider, ensure that you are logged in and are exporting your credentials and necessary region information for your cloud provider.</p>
+</li>
+<li>
+<p>After Terraform has been initialized, the next step is to run the execution planner and save the plan to a static file - in this case, <code>plan.out</code>.</p>
+<pre><code class="language-bash">terraform plan -out=plan.out
+</code></pre>
+<p>Writing the execution plan to a file allows us to pass the execution plan to the <code>apply</code> command below as well help us guarantee the accuracy of the plan. Note that this file is ONLY readable by Terraform.</p>
+<p>Afterwards, we should see a message like the one below, confirming that we have successfully saved to the <code>plan.out</code> file.  This file should appear in your <code>dcos-demo</code> folder alongside <code>main.tf</code>.</p>
+<pre><code class="language-bash">Plan: 74 to add, 3 to change, 0 to destroy.
+
+------------------------------------------------------------------------
+
+This plan was saved to: plan.out
+
+To perform exactly these actions, run the following command to apply:
+  terraform apply &quot;plan.out&quot;
+</code></pre>
+<p>Every time you run <code>terraform plan</code>, the output will always detail the resources your plan will be adding, changing or destroying.  Since we are creating our DC/OS cluster for the very first time, our output tells us that our plan will result in adding 38 pieces of infrastructure/resources.</p>
+</li>
+<li>
+<p>The next step is to get Terraform to build/deploy our plan.  Run the command below.</p>
+<pre><code class="language-bash">terraform apply plan.out
+</code></pre>
+<p>Sit back and enjoy! The infrastructure of your DC/OS cluster is being created while you watch. This may take a few minutes.</p>
+<p>Once Terraform has completed applying the plan, you should see output similar to the following:</p>
+<pre><code class="language-text">Apply complete! Resources: 74 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+cluster-address = testing-123-958581895.us-east-1.elb.amazonaws.com
+masters-ips = [
+    3.93.239.91
+]
+public-agents-loadbalancer = ext-testing-123-40f11d1227e88057.elb.us-east-1.amazonaws.com
+</code></pre>
+<p>And congratulations - you’re up and running!</p>
+</li>
+</ol>
+<h1 id="logging-in-to-dcos"><a class="content__anchor" href="#logging-in-to-dcos" aria-hidden="true"><i data-feather="bookmark"></i></a>Logging in to DC/OS</h1>
+<ol>
+<li>To log in and start exploring your cluster, navigate to the <code>cluster-address</code> listed in the output of the CLI. From here you can choose your provider to create the superuser account <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--oss">Open Source</span></span>, or log in with your specified Enterprise credentials <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span>.</li>
+</ol>
+<p align=center>
+<img src="./images/install/dcos-login.png">
+</p>
+<p align=center>
+<img src="./images/install/dcos-ui.png">
+</p>
+<h1 id="scaling-your-cluster"><a class="content__anchor" href="#scaling-your-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>Scaling Your Cluster</h1>
+<p>Terraform makes it easy to scale your cluster to add additional agents (public or private) once the initial cluster has been created. Simply follow the instructions below.</p>
+<ol>
+<li>
+<p>Increase the value for the <code>num_private_agents</code> and/or <code>num_public_agents</code> in your <code>main.tf</code> file. In this example we are going to scale our cluster from 2 private agents to 3, changing just that line, and saving the file.</p>
+<pre><code class="language-bash">num_masters        = &quot;1&quot;
+num_private_agents = &quot;3&quot;
+num_public_agents  = &quot;1&quot;
+</code></pre>
+</li>
+<li>
+<p>Now that we’ve made changes to our <code>main.tf</code>, we need to re-run our new execution plan.</p>
+<pre><code class="language-bash">terraform plan -out=plan.out
+</code></pre>
+<p>Doing this helps us to ensure that our state is stable and to confirm that we will only be creating the resources necessary to scale our Private Agents to the desired number.</p>
+ <p align=center>
+ <img src="./images/scale/terraform-plan.png" />
+ </p>
+<p>You should see a message similar to above.  There will be 3 resources added as a result of scaling up our cluster’s Private Agents (1 instance resource &amp; 2 null resources which handle the DC/OS installation &amp; prerequisites behind the scenes).</p>
+</li>
+<li>
+<p>Now that our plan is set, just like before, let’s get Terraform to build/deploy it.</p>
+<pre><code class="language-bash">terraform apply plan.out
+</code></pre>
+ <p align=center>
+ <img src="./images/scale/terraform-apply.png" />
+ </p>
+<p>Once you see an output like the message above, check your DC/OS cluster to ensure the additional agents have been added.</p>
+<p>You should see now 4 total nodes connected like below via the DC/OS UI.</p>
+ <p align=center>
+ <img src="./images/scale/node-count-4.png" />
+ </p>
+</li>
+</ol>
+<h1 id="upgrading-your-cluster"><a class="content__anchor" href="#upgrading-your-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>Upgrading Your Cluster</h1>
+<p>Terraform also makes it easy to upgrade our cluster to a newer version of DC/OS. If you are interested in learning more about the upgrade procedure that Terraform performs, please see the official <a href="/dcosdocs/mesosphere/dcos/1.13/installing/production/upgrading/">DC/OS Upgrade documentation</a>.</p>
+<ol>
+<li>
+<p>In order to perform an upgrade, we need to go back to our <code>main.tf</code> and modify the current DC/OS Version (<code>dcos_version</code>) to a newer version, such as <code>1.13.3</code> for this example.</p>
+<pre><code class="language-bash">dcos_version = &quot;1.13.3&quot;
+</code></pre>
+</li>
+<li>
+<p>We also should make sure having the latest version of the Terraform modules. So we tell Terraform to request those from the registry.</p>
+<pre><code class="language-bash">terraform get -update
+</code></pre>
+</li>
+<li>
+<p>Re-run the execution plan, terraform will notice the change in version and run accordingly.</p>
+<pre><code class="language-bash">terraform plan -out=plan.out
+</code></pre>
+<p>You should see an output like below, with your <code>main.tf</code> now set for normal operations on a new version of DC/OS.</p>
+ <p align=center>
+ <img src="./images/upgrade/terraform-plan.png" />
+ </p>
+</li>
+<li>
+<p>Apply the plan.</p>
+<pre><code class="language-bash">terraform apply plan.out
+</code></pre>
+<p>Once the apply completes, you can verify that the cluster was upgraded via the DC/OS UI.</p>
+ <p align=center>
+ <img src="./images/upgrade/cluster-details-open.png" />
+ </p>
+</li>
+</ol>
+<h1 id="deleting-your-cluster"><a class="content__anchor" href="#deleting-your-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>Deleting Your Cluster</h1>
+<p>If you want to destroy your cluster, then use the following command and wait for it to complete.</p>
+<pre><code class="language-bash">terraform destroy
+</code></pre>
+<p class="message--important"><strong>Important: </strong>Running this command will cause your entire cluster and all of its associated resources to be destroyed. Only run this command if you are absolutely sure you no longer need access to your cluster.</p>
+<p>You will be required to enter <code>yes</code> to verify.</p>
+<p align=center>
+<img src="./images/destroy/terraform-destory.png" />
+</p>
+<div class="grid"><a class="grid__item" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/gcp/gcp-remote-region"><div class="grid__header__wrapper"><h3 class="grid__header">GCP 上使用 Universal 安装工具的多分域 DC/OS</h3><div class="grid__label__wrapper"><h6 class="grid__label grid__label--enterprise">ENTERPRISE</h6></div></div><div class="grid__desc__wrapper"><p class="grid__desc">GCP 上 DC/OS 使用 Universal 安装工具添加远程分域的指南。<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/gcp/advanced-gcp"><div class="grid__header__wrapper"><h3 class="grid__header">配置参考 - GCP</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">使用 Mesosphere Universal 安装工具在 GCP 上配置您的 DC/OS 安装<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a></div></article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#prerequisites">Prerequisites</a></li><li class="content__sections-item content__sections-item--h1"><a href="#install-terraform">Install Terraform</a></li><li class="content__sections-item content__sections-item--h2"><a href="#get-application-default-credentials-for-authentication">Get Application Default Credentials for authentication</a></li><li class="content__sections-item content__sections-item--h2"><a href="#set-the-gcp-default-region-and-project">Set the GCP default region and project</a></li><li class="content__sections-item content__sections-item--h2"><a href="#verify-you-have-a-license-key-for-enterprise-edition">Verify you have a license key for Enterprise Edition</a></li><li class="content__sections-item content__sections-item--h1"><a href="#creating-a-dcos-cluster">Creating a DC/OS Cluster</a></li><li class="content__sections-item content__sections-item--h2"><a href="#initialize-terraform-and-create-a-cluster">Initialize Terraform and create a cluster</a></li><li class="content__sections-item content__sections-item--h1"><a href="#logging-in-to-dcos">Logging in to DC/OS</a></li><li class="content__sections-item content__sections-item--h1"><a href="#scaling-your-cluster">Scaling Your Cluster</a></li><li class="content__sections-item content__sections-item--h1"><a href="#upgrading-your-cluster">Upgrading Your Cluster</a></li><li class="content__sections-item content__sections-item--h1"><a href="#deleting-your-cluster">Deleting Your Cluster</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

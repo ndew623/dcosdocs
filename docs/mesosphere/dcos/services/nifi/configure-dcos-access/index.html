@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Configuring DC/OS access for NiFi - D2iQ Docs</title><meta name="description" content="Configuring DC/OS access for NiFi"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Nifi Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/1.0.1-1.9.2">NiFi 1.0.1-1.9.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/1.0.0-1.9.2">NiFi 1.0.0-1.9.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.5.0-1.9.2">NiFi 0.5.0-1.9.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.4.1-1.8.0">NiFi 0.4.1-1.8.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.4.0-1.8.0">NiFi 0.4.0-1.8.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.3.0-1.7.1">NiFi 0.3.0-1.7.1</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.2.0-1.5.0">NiFi 0.2.0-1.5.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/nifi/0.1.0-1.5.0">NiFi 0.1.0-1.5.0</a></li></ul><div class="toggle"><p><span class="title">Nifi</span><span class="version"> configure-dcos-access</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Configuring DC/OS access for NiFi</h1><p class="badge badge--content-header badge--community">COMMUNITY</p></div><h4 class="content__header-description">Configuring DC/OS access for NiFi</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/nifi/configure-dcos-access/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>This topic describes how to configure DC/OS access for NiFi. Depending on your <a href="/dcosdocs/mesosphere/dcos/1.12/security/ent/#security-modes/">security mode</a>, NiFi requires <a href="/dcosdocs/mesosphere/dcos/1.12/security/ent/service-auth/">service authentication</a> for access to DC/OS.</p>
+<table>
+<thead>
+<tr>
+<th>Security mode</th>
+<th>Service Account</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Disabled</td>
+<td>Not available</td>
+</tr>
+<tr>
+<td>Permissive</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Strict</td>
+<td>Required</td>
+</tr>
+</tbody>
+</table>
+<p>If you install a service in permissive mode and do not specify a service account, Metronome and Marathon will act as if requests made by this service are made by an account with the <a href="/dcosdocs/mesosphere/dcos/1.12/security/ent/perms-reference/#superuser">superuser permission</a>.</p>
+<p><strong>Prerequisites:</strong></p>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/1.12/cli/install/">DC/OS CLI installed</a> and be logged in as a superuser.</li>
+<li><a href="/dcosdocs/mesosphere/dcos/1.12/cli/enterprise-cli/#ent-cli-install">DC/OS Enterprise CLI 0.4.14 or later installed</a>.</li>
+<li>If your <a href="/dcosdocs/mesosphere/dcos/1.12/security/ent/#security-modes/">security mode</a> is <code>permissive</code> or <code>strict</code>, you must <a href="/dcosdocs/mesosphere/dcos/1.12/security/ent/tls-ssl/get-cert/">get the root cert</a> before issuing the curl commands in this section.</li>
+</ul>
+<h1 id="create-a-key-pair"><a class="content__anchor" href="#create-a-key-pair" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="create-a-keypair"></a>Create a Key Pair</h1>
+<p>In this step, a 2048-bit RSA public-private key pair is created uses the DC/OS Enterprise CLI.</p>
+<p>Create a public-private key pair and save each value into a separate file within the current directory.</p>
+<pre><code class="language-bash">dcos security org service-accounts keypair &lt;private-key&gt;.pem &lt;public-key&gt;.pem
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>You can use the <a href="/dcosdocs/mesosphere/dcos/1.12/security/ent/secrets/">DC/OS Secret Store</a> to secure the key pair.</p>
+<h1 id="create-a-service-account"><a class="content__anchor" href="#create-a-service-account" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="create-a-service-account"></a>Create a Service Account</h1>
+<p>From a terminal prompt, create a new service account (<code>&lt;service-account-id&gt;</code>) containing the public key (<code>&lt;your-public-key&gt;.pem</code>).</p>
+<pre><code class="language-bash">dcos security org service-accounts create -p &lt;your-public-key&gt;.pem -d &quot;dcos_nifi&quot; &lt;service-name&gt;
+</code></pre>
+<p>You can verify your new service account using the following command.</p>
+<pre><code class="language-bash">dcos security org service-accounts show &lt;service-account-id&gt;
+</code></pre>
+<h1 id="create-a-secret"><a class="content__anchor" href="#create-a-secret" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="create-a-secret"></a>Create a Secret</h1>
+<p>Create a secret (<code>nifi/&lt;secret-name&gt;</code>) with your service account (<code>&lt;service-account-id&gt;</code>) and private key specified (<code>&lt;private-key&gt;.pem</code>).</p>
+<p>If you store your secret in a path that matches the service name (e.g. service name and secret path are <code>nifi</code>), then only the service named <code>nifi</code> can access it.</p>
+<h2 id="permissive"><a class="content__anchor" href="#permissive" aria-hidden="true"><i data-feather="bookmark"></i></a>Permissive</h2>
+<pre><code class="language-bash">dcos security secrets create-sa-secret &lt;private-key&gt;.pem &lt;service-name&gt; &lt;service name secret&gt;
+</code></pre>
+<h2 id="strict"><a class="content__anchor" href="#strict" aria-hidden="true"><i data-feather="bookmark"></i></a>Strict</h2>
+<pre><code class="language-bash">dcos security secrets create-sa-secret --strict &lt;private-key&gt;.pem &lt;service-name&gt; &lt;service name secret&gt;
+</code></pre>
+<p>You can list the secrets with the following command:</p>
+<pre><code class="language-bash">dcos security secrets list /
+</code></pre>
+<h1 id="assign-permissions"><a class="content__anchor" href="#assign-permissions" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="assign-permissions"></a> Assign Permissions</h1>
+<pre><code class="language-bash">dcos security org users grant &lt;service name&gt; dcos:superuser full --description &quot;grant permission to superuser&quot;
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#create-a-key-pair">Create a Key Pair</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-a-service-account">Create a Service Account</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-a-secret">Create a Secret</a></li><li class="content__sections-item content__sections-item--h2"><a href="#permissive">Permissive</a></li><li class="content__sections-item content__sections-item--h2"><a href="#strict">Strict</a></li><li class="content__sections-item content__sections-item--h1"><a href="#assign-permissions">Assign Permissions</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

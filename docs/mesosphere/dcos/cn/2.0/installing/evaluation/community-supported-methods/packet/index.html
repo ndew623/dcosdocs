@@ -1,0 +1,137 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>在 Packet 上运行 DC/OS - D2iQ Docs</title><meta name="description" content="使用 Terraform 在 Packet 裸机上安装 DC/OS 群集"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.0/installing/evaluation/community-supported-methods/packet">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.0"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/evaluation/community-supported-methods/packet">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/evaluation/community-supported-methods/packet">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/community-supported-methods/packet">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.0</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/"><i data-feather="chevron-right"></i>概述</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/"><i data-feather="chevron-right"></i>安装</a></li><ul><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/evaluation/"><i data-feather="chevron-right"></i>云安装</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/evaluation/aws/"><i data-feather="chevron-right"></i>AWS</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/evaluation/azure/"><i data-feather="chevron-right"></i>Azure</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/evaluation/gcp/"><i data-feather="chevron-right"></i>GCP</a></li><li class="active"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/evaluation/community-supported-methods/"><i data-feather="chevron-right"></i>其他安装方法</a></li><ul><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/evaluation/community-supported-methods/aws/"><i data-feather="chevron-right"></i>AWS</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/evaluation/community-supported-methods/azure/">Azure</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/evaluation/community-supported-methods/digitalocean/">DigitalOcean</a></li><li class="active active-on"><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/evaluation/community-supported-methods/packet/">Packet</a></li></ul></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/production/"><i data-feather="chevron-right"></i>本地安装</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/installation-faq/">常见问题</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/troubleshooting/">故障排除</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">在 Packet 上运行 DC/OS</h1><p class="badge badge--content-header badge--oss">OPEN SOURCE</p></div><h4 class="content__header-description">使用 Terraform 在 Packet 裸机上安装 DC/OS 群集</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.0/installing/evaluation/community-supported-methods/packet/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p class="message--warning"><strong>免责声明：</strong>这是<a href="https://github.com/dcos/terraform-dcos/tree/master/gcp">社区推动的项目</a>，未正式获得 Mesosphere 支持。这种安装方法用于快速演示和验证概念。本页说明如何使用 Terraform 模板在 Packet 裸机上安装 DC/OS 群集。Terraform 仅供参考，不建议用于生产目的。下列安装方法不支持升级。</p>
+<p class="message--note"><strong>注意：</strong>联系<a href="https://groups.google.com/a/dcos.io/forum/#!forum/users">邮寄列表</a>或 <a href="http://chat.dcos.io/?_ga=2.226911897.58407594.1533244861-1110201164.1520633201">Slack 渠道</a>，获取社区支持。</p>
+<p>可以使用 Terraform 在 Packet 裸机上创建 DC/OS 群集。随附的 Terraform 模板配置为在 Packet 上运行 Mesosphere DC/OS。根据安装的 DC/OS 服务或工作负载所需的计算量，可能须要修改模板才能满足需求。可以修改 Terraform 模板，但 Mesosphere 不能协助完成故障排除。如需支持，您可以发送电子邮件至 help@packet.net，访问 Packet IRC 渠道 (#packethost on freenode) 或考虑 <a href="https://mesosphere.com/">DC/OS Enterprise</a>.</p>
+<h2 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>硬件</h2>
+<ul>
+<li>
+<p>管理分区中的一个、三个或五个 Mesos 管理节点</p>
+</li>
+<li>
+<p>四个 Mesos 专用代理节点</p>
+</li>
+<li>
+<p>一个 Mesos 公共代理节点</p>
+</li>
+<li>
+<p>Packet “类型 0”服务器实例</p>
+</li>
+</ul>
+<h1 id="dcos"><a class="content__anchor" href="#dcos" aria-hidden="true"><i data-feather="bookmark"></i></a>创建 DC/OS 群集</h1>
+<h2 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>前提条件</h2>
+<ul>
+<li>
+<p><a href="https://help.packet.net/quick-start/api-integrations">Packet API 密钥</a></p>
+</li>
+<li>
+<p><a href="https://help.packet.net/quick-start/api-integrations">Packet 项目 ID</a></p>
+</li>
+<li>
+<p><a href="https://www.terraform.io/intro/getting-started/install.html">Terraform by Hashicorp</a></p>
+</li>
+</ul>
+<h2 id="dcos-2"><a class="content__anchor" href="#dcos-2" aria-hidden="true"><i data-feather="bookmark"></i></a>安装 DC/OS</h2>
+<p class="message--important"><strong>重要信息：</strong>使用此方法就会默认打开网络。因此<a href="/dcosdocs/mesosphere/dcos/2.0/administering-clusters/securing-your-cluster/#network-security">网络安全</a>令人担忧，管理员应尽快解决。</p>
+<ol>
+<li>
+<p>使用“先决条件”部分提供的链接上的说明下载和安装 Terraform。</p>
+</li>
+<li>
+<p><a href="https://github.com/dcos/packet-terraform">在 GiThub 中下载 DC/OS Terraform 表单</a> 到本地目录。</p>
+<pre><code class="language-bash">git clone https://github.com/dcos/packet-terraform
+</code></pre>
+</li>
+<li>
+<p>在该目录生成一个 ssh 密钥对：</p>
+<pre><code class="language-bash">ssh-keygen -t rsa -f ./packet-key
+</code></pre>
+</li>
+<li>
+<p>复制 <code>sample.terraform.tfvars</code> 到名为 <code>terraform.tfvars</code> 的新文件，并编辑新文件，填写合适的值。以下内容为空；如果未填写，必要时 Terraform 会提示您：</p>
+<ul>
+<li>
+<p><code>packet_api_key</code> - 您的 Packet API 密钥</p>
+</li>
+<li>
+<p><code>packet_project_id</code> - Packet 项目 ID</p>
+</li>
+<li>
+<p><code>dcos_installer_url</code> - 在哪获取 <a href="https://downloads.dcos.io/dcos/stable/dcos_generate_config.sh">DC/OS 配置文件</a></p>
+</li>
+</ul>
+<p>以下字段具有默认值，可根据您的要求进行更改：</p>
+<ul>
+<li>
+<p><code>packet_facility</code> - Packet 设施：[ewr1|sjc1|ams1]
+<code>ewr1</code> is New Jersey, <code>ams1</code> is Amsterdam, <code>sjc1</code> is San Jose - default <code>sjc1</code></p>
+</li>
+<li>
+<p><code>packet_agent_type</code> - 用于 DC/OS 代理的 Packet 服务器类型：[<code>baremetal_0</code>|baremetal_1|baremetal_3]
+选择用于 DC/OS 专用代理的 Packet 服务器类型——默认为 <code>baremetal_0</code></p>
+</li>
+<li>
+<p><code>packet_master_type</code> - 用于 DC/OS 管理节点的 Packet 服务器类型：[<code>baremetal_0</code>|baremetal_1|baremetal_3]
+选择用于 DC/OS 管理节点的 Packet 服务器类型——默认为 <code>baremetal_0</code></p>
+</li>
+<li>
+<p><code>packet_boot_type</code> - 用于 DC/OS Boot 节点的 Packet 服务器类型：[<code>baremetal_0</code>|baremetal_1|baremetal_3]
+选择用于 DC/OS Boot 服务器的 Packet 服务器类型——默认为 <code>baremetal_0</code></p>
+</li>
+<li>
+<p><code>dcos_cluster_name</code> - DC/OS 群集的名称——默认为 <code>packet-dcos</code></p>
+</li>
+<li>
+<p><code>dcos_agent_count</code> - 要部署的专用代理数——默认为四个</p>
+</li>
+<li>
+<p><code>dcos_public_agent_count</code> - 要部署的公共代理数——默认为一个</p>
+</li>
+<li>
+<p><code>dcos_init_pubkey</code> - 在第 4 步中创建的 ssh 公钥路径——默认为 ./packet-key.pub</p>
+</li>
+<li>
+<p><code>key_file_path</code> - 在第 4 步中创建的 ssh 私钥路径——默认为 ./packet-key</p>
+</li>
+</ul>
+</li>
+<li>
+<p>还是在这一目录中运行 <code>terraform apply</code>，将服务器部署到您在 Packet 的项目中，并运行 DC/OS 安装程序。完成后，您将看到和以下内容相似，但带有分配给您服务器的 IP 地址的输出：</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.0/img/packet_terraform_output.png" alt="terraform apply output"></p>
+<p>图 1. Terraform apply&quot; 输出</p>
+</li>
+</ol>
+<p>这时，可能需要等待几分钟时间才能使所有 DC/OS 服务变为活跃状态，并使控制面板在管理节点上可用。15 到 20 分钟后，请查看 <a href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/troubleshooting/">故障排除</a> 文档。</p>
+<h1 id="dcos-3"><a class="content__anchor" href="#dcos-3" aria-hidden="true"><i data-feather="bookmark"></i></a>启动 DC/OS</h1>
+<p>输入 Mesos 管理节点 IP 地址启动 DC/OS Web 界面：</p>
+<ol>
+<li>
+<p>将运行 <code>terraform apply</code> 或运行相同目录中 terraform 输出得到的链接，剪切并粘贴到浏览器，从而打开 DC/OS Web 界面。该界面在标准 HTTP 端口 80 上运行，因此无需在主机名后指定端口号。</p>
+</li>
+<li>
+<p>安装 DC/OS 命令行界面 (CLI)。可以安装 CLI，用于管理 DC/OS 群集。可以通过单击左上方的群集名称随时访问文档。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.0/img/install-cli-terminal.png" alt="install CLI"></p>
+<p>图 2. 安装 DC/OS CLI 画面</p>
+</li>
+</ol>
+<h2 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>后续步骤</h2>
+<ul>
+<li>
+<p>添加和删除节点：</p>
+<ul>
+<li>
+<p>运行 <code>terraform apply -var ‘dcos_agent_count=N’</code>，将专用代理计数更改为指定数字。（<code>‘dcos_public_agent_count’</code> 也可用）。</p>
+</li>
+<li>
+<p>快速安全地增加节点数。</p>
+</li>
+<li>
+<p>我们不建议减少生产中的节点数。如果节点未进入维护模式，而且通过各自的调度程序重新安排其任务，则有状态 DC/OS 应用程序和服务可能遭受停机和故障。</p>
+</li>
+</ul>
+</li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#硬件">硬件</a></li><li class="content__sections-item content__sections-item--h1"><a href="#dcos">创建 DC/OS 群集</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-2">前提条件</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-2">安装 DC/OS</a></li><li class="content__sections-item content__sections-item--h1"><a href="#dcos-3">启动 DC/OS</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-3">后续步骤</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

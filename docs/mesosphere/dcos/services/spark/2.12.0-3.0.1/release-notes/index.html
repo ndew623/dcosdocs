@@ -1,0 +1,367 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Release Notes - D2iQ Docs</title><meta name="description" content="Release notes for DC/OS Apache Spark 2.12.0-3.0.1"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Spark Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services/spark">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/release-notes">Spark 2.12.0-3.0.1</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/spark/2.11.0-2.4.6/release-notes">Spark 2.11.0-2.4.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/spark/2.6.0-2.3.2/release-notes">Spark 2.6.0-2.3.2</a></li></ul><div class="toggle"><p><span class="title">Spark</span><span class="version"> 2.12.0-3.0.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/quickstart/">Quick Start</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/install/">Install and Customize</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/usage-examples/">Usage Examples</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/hdfs/">HDFS</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/history-server/">History Server</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/security/">Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/upgrade/">Upgrade</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/uninstall/">Uninstall</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/runtime-config-change/">Runtime Configuration Changes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/run-job/">Run a Spark Job</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/spark-shell/">Spark Shell</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/custom-docker/">Custom Docker Images</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/fault-tolerance/">Fault Tolerance</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/job-scheduling/">Job Scheduling</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/kerberos/">Kerberos</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/troubleshooting/">Troubleshooting</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/version-policy/">Version Policy</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/limits/">Tested Limits</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/spark-auth/">Spark Auth</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Release Notes</h1></div><h4 class="content__header-description">Release notes for DC/OS Apache Spark 2.12.0-3.0.1</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/spark/2.12.0-3.0.1/release-notes/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><h2 id="spark-and-spark-history-2120-301-was-released-on-12-november-2020"><a class="content__anchor" href="#spark-and-spark-history-2120-301-was-released-on-12-november-2020" aria-hidden="true"><i data-feather="bookmark"></i></a>Spark and Spark history 2.12.0-3.0.1 was released on 12, November 2020</h2>
+<h3 id="new-features"><a class="content__anchor" href="#new-features" aria-hidden="true"><i data-feather="bookmark"></i></a>New features</h3>
+<ul>
+<li>Base tech upgrades to <code>3.0.1</code></li>
+<li>Adds support of <code>_SPARK_AUTH_SECRET_FILE</code> environment to accept file-based authentication, similar to <code>_SPARK_AUTH_SECRET</code>, which accepts secret directly.</li>
+<li>Adds the flag <code>--executor-auth-secret-path</code> in a Spark CLI to enable File-Based RPC Authentication.</li>
+<li>Adds configurations to support log rotate options for both <code>stdout</code> and <code>stderr</code>.</li>
+</ul>
+<h3 id="updates"><a class="content__anchor" href="#updates" aria-hidden="true"><i data-feather="bookmark"></i></a>Updates</h3>
+<ul>
+<li>Supports Scala version <code>2.12</code> only. No longer supports Scala version <code>2.11</code>.</li>
+<li>Compiles Spark with Hadoop versions <code>3.2</code> and <code>2.7</code>.</li>
+</ul>
+<h3 id="breaking-changes"><a class="content__anchor" href="#breaking-changes" aria-hidden="true"><i data-feather="bookmark"></i></a>Breaking changes</h3>
+<ul>
+<li>Spark CLI flag <code>--executor-auth-secret</code>, no longer accepts filename or secret path.</li>
+<li>No longer publish Spark docker image compiled with Hadoop <code>2.9</code>.</li>
+</ul>
+<h2 id="spark-and-spark-history-2110-246-was-released-on-30-july-2020"><a class="content__anchor" href="#spark-and-spark-history-2110-246-was-released-on-30-july-2020" aria-hidden="true"><i data-feather="bookmark"></i></a>Spark and Spark history 2.11.0-2.4.6 was released on 30, July 2020</h2>
+<h3 id="new-features-2"><a class="content__anchor" href="#new-features-2" aria-hidden="true"><i data-feather="bookmark"></i></a>New features</h3>
+<ul>
+<li>Base tech upgrades to <code>2.4.6</code></li>
+</ul>
+<h3 id="updates-2"><a class="content__anchor" href="#updates-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Updates</h3>
+<ul>
+<li>Removes hardcoded <code>--completed</code> flag from <code>dcos spark log</code> CLI and allows all options supported</li>
+</ul>
+<h2 id="spark-and-spark-history-2100-245-was-released-on-17-june-2020"><a class="content__anchor" href="#spark-and-spark-history-2100-245-was-released-on-17-june-2020" aria-hidden="true"><i data-feather="bookmark"></i></a>Spark and Spark history 2.10.0-2.4.5 was released on 17, June 2020</h2>
+<h3 id="new-features-3"><a class="content__anchor" href="#new-features-3" aria-hidden="true"><i data-feather="bookmark"></i></a>New features</h3>
+<ul>
+<li>Suppress and Revive support</li>
+<li>Placement Constraints support by Dispatcher</li>
+</ul>
+<h3 id="updates-3"><a class="content__anchor" href="#updates-3" aria-hidden="true"><i data-feather="bookmark"></i></a>Updates</h3>
+<ul>
+<li>Updated libmesos-bundle from 1.14-alpha to 1.14-beta</li>
+</ul>
+<h2 id="version-spark-and-spark-history-290-243"><a class="content__anchor" href="#version-spark-and-spark-history-290-243" aria-hidden="true"><i data-feather="bookmark"></i></a>Version Spark and Spark history 2.9.0-2.4.3</h2>
+<h3 id="new-features-4"><a class="content__anchor" href="#new-features-4" aria-hidden="true"><i data-feather="bookmark"></i></a>New features</h3>
+<ul>
+<li>Marathon group role enforcement support for DCOS 1.14</li>
+<li>Role propagation from Dispatcher to all submitted Spark applications</li>
+<li>Dispatcher role enforcement for submitted Spark applications. See details <a href="/dcosdocs/mesosphere/dcos/services/spark/2.9.0-2.4.3/install#configure-spark-role-enforcement">here</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/services/spark/2.9.0-2.4.3/fault-tolerance/#driver">Node draining support</a></li>
+<li>Executor memory overhead config property support</li>
+<li>Mesos secrets support by Dispatcher</li>
+<li>Standardized metric names and metric tags for monitoring</li>
+</ul>
+<h3 id="updates-4"><a class="content__anchor" href="#updates-4" aria-hidden="true"><i data-feather="bookmark"></i></a>Updates</h3>
+<ul>
+<li>Switched from Oracle JDK to OpenJDK</li>
+<li>Switched to UCR containerizer as the default</li>
+<li>Scala 2.12 support</li>
+<li>Updated libmesos to 1.14</li>
+</ul>
+<h3 id="bug-fixes"><a class="content__anchor" href="#bug-fixes" aria-hidden="true"><i data-feather="bookmark"></i></a>Bug fixes</h3>
+<ul>
+<li>Fixed a bug causing crashes when labels are malformed</li>
+</ul>
+<h3 id="breaking-changes-2"><a class="content__anchor" href="#breaking-changes-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Breaking changes</h3>
+<ul>
+<li>Standardized metrics rename existing metrics by moving variable parts of metric names to tags</li>
+</ul>
+<h2 id="version-spark-and-spark-history-280-240"><a class="content__anchor" href="#version-spark-and-spark-history-280-240" aria-hidden="true"><i data-feather="bookmark"></i></a>Version Spark and Spark history 2.8.0-2.4.0</h2>
+<h3 id="new-features-5"><a class="content__anchor" href="#new-features-5" aria-hidden="true"><i data-feather="bookmark"></i></a>New features</h3>
+<ul>
+<li>Mesos checkpointing support for Spark Drivers submitted to Dispatcher. For more information check <a href="/dcosdocs/mesosphere/dcos/services/spark/2.8.0-2.4.0/fault-tolerance/#mesos-checkpointing">fault tolerance</a> documentation.</li>
+</ul>
+<h3 id="updates-5"><a class="content__anchor" href="#updates-5" aria-hidden="true"><i data-feather="bookmark"></i></a>Updates</h3>
+<ul>
+<li>Upgraded Hadoop dependency to 2.9.2</li>
+</ul>
+<h3 id="bug-fixes-2"><a class="content__anchor" href="#bug-fixes-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Bug fixes</h3>
+<ul>
+<li>Fixed bug for Spark Executor ID being different from Mesos Task ID</li>
+<li>Fixed a bug in Spark CLI causing incorrect parsing of <code>jars</code> argument when word “jars” is present in path</li>
+</ul>
+<h3 id="breaking-changes-3"><a class="content__anchor" href="#breaking-changes-3" aria-hidden="true"><i data-feather="bookmark"></i></a>Breaking changes</h3>
+<ul>
+<li>The default Hadoop dependency is now 2.9 and not 2.7</li>
+</ul>
+<h2 id="version-spark-and-spark-history-270-240"><a class="content__anchor" href="#version-spark-and-spark-history-270-240" aria-hidden="true"><i data-feather="bookmark"></i></a>Version Spark and Spark history 2.7.0-2.4.0</h2>
+<h3 id="new-features-6"><a class="content__anchor" href="#new-features-6" aria-hidden="true"><i data-feather="bookmark"></i></a>New features</h3>
+<ul>
+<li>Upgraded Spark and Spark History Server to 2.4.0</li>
+</ul>
+<h3 id="updates-6"><a class="content__anchor" href="#updates-6" aria-hidden="true"><i data-feather="bookmark"></i></a>Updates</h3>
+<ul>
+<li>Spark Mesos Dispatcher uses the same user for running Spark jobs as itself and defaults to <code>nobody</code></li>
+<li>Switched to <a href="https://github.com/mesosphere/dcos-commons/">dcos-commons</a> bootstrap script for IP address detection</li>
+</ul>
+<h3 id="breaking-changes-4"><a class="content__anchor" href="#breaking-changes-4" aria-hidden="true"><i data-feather="bookmark"></i></a>Breaking changes</h3>
+<ul>
+<li>Removed configuration option <code>use_bootstrap_for_IP_detect</code> since we now use <code>bootstrap</code> by default for Spark container IP detection which works across all containerizers: <code>DOCKER</code> &amp; <code>MESOS</code> (UCR) and networking modes: <code>HOST</code> &amp; CNI Virtual Networks.</li>
+</ul>
+<h2 id="version-spark-and-spark-history-260-232"><a class="content__anchor" href="#version-spark-and-spark-history-260-232" aria-hidden="true"><i data-feather="bookmark"></i></a>Version Spark and Spark history 2.6.0-2.3.2</h2>
+<h3 id="new-features-7"><a class="content__anchor" href="#new-features-7" aria-hidden="true"><i data-feather="bookmark"></i></a>New features</h3>
+<ul>
+<li>Upgraded Spark and Spark History Server to 2.3.2</li>
+<li>Added DC/OS Spark CLI support for <code>--jars</code></li>
+<li>Added CNI Support for Dispatcher, Driver, and Executors for Docker and Mesos containerizers</li>
+<li>Added CNI labels support for Mesos containerizer</li>
+<li>Added package configuration for CNI:
+<ul>
+<li><code>virtual_network_enabled</code></li>
+<li><code>virtual_network_name</code></li>
+<li><code>virtual_network_plugin_labels</code></li>
+</ul>
+</li>
+<li>Spark Dispatcher by default launches Spark Drivers and Executors in the same virtual network it was launched in itself</li>
+</ul>
+<p class="message--note"><strong>NOTE: </strong>Limitations of current Spark CNI support:
+<ul>
+  <li>Configuration of network plugin labels from DC/OS UI supported only in JSON editing mode</li>
+  <li>Network plugin labels are not supported by Docker containerizer</li>
+  <li>Currently, DC/OS AdminRouter doesn't support virtual networks so DC/OS Spark endpoints will not be accessible from CLI, and jobs need to be submitted from a routable network</li>
+</ul>
+</p>
+<h3 id="updates-7"><a class="content__anchor" href="#updates-7" aria-hidden="true"><i data-feather="bookmark"></i></a>Updates</h3>
+<ul>
+<li><code>SPARK_HOME</code> environment variable defaults to <code>/opt/spark</code> in Dockerfile and executable scripts</li>
+<li>Switched to Spark’s own StatsD Sink instead of 3rd-party dependency</li>
+<li>Updated <a href="https://github.com/mesosphere/dcos-commons/">dcos-commons</a> bootstrap version to 0.55.2</li>
+</ul>
+<h3 id="bug-fixes-3"><a class="content__anchor" href="#bug-fixes-3" aria-hidden="true"><i data-feather="bookmark"></i></a>Bug fixes</h3>
+<ul>
+<li>Fixed bug for Dispatcher restarting duplicate Spark drivers after agent restart in <code>--supervised</code> mode</li>
+<li>Fixed bug for CLI incorrect <code>--jars</code> parsing resulting in submit failure</li>
+</ul>
+<h2 id="version-spark-and-spark-history-250-221"><a class="content__anchor" href="#version-spark-and-spark-history-250-221" aria-hidden="true"><i data-feather="bookmark"></i></a>Version Spark and Spark history 2.5.0-2.2.1</h2>
+<h3 id="new-features-8"><a class="content__anchor" href="#new-features-8" aria-hidden="true"><i data-feather="bookmark"></i></a>New features</h3>
+<ul>
+<li>Added unique Mesos Task IDs for Spark executors.</li>
+<li>Added trusted Ubuntu 18.04 base Docker image.</li>
+<li>Added <code>nobody</code> user support on RHEL/CentOS (through configuration).</li>
+</ul>
+<h3 id="updates-8"><a class="content__anchor" href="#updates-8" aria-hidden="true"><i data-feather="bookmark"></i></a>Updates</h3>
+<ul>
+<li>Changed the default user for the Docker container from <code>root</code> to <code>nobody</code>.</li>
+<li>Upgraded JRE to 1.8.192.</li>
+<li>Upgraded to Ubuntu 18.04`</li>
+<li>Updated Hadoop dependencies from 2.7.3 to 2.7.7 (fixes CVE-2016-6811, CVE-2017-3162, CVE-2017-3166, CVE-2018-8009).</li>
+<li>Updated Jetty dependencies from 9.3.11.v20160721 to 9.3.24.v20180605 (fixes CVE-2017-7658).</li>
+<li>Updated Jackson dependencies from 2.6.5 to 2.9.6 (fixes CVE-2017-15095, CVE-2017-17485, CVE-2017-7525, CVE-2018-7489, CVE-2016-3720).</li>
+<li>Updated ZooKeeper dependencies from 3.4.6 to 3.4.13.</li>
+</ul>
+<h3 id="bug-fixes-4"><a class="content__anchor" href="#bug-fixes-4" aria-hidden="true"><i data-feather="bookmark"></i></a>Bug fixes</h3>
+<ul>
+<li><code>dcos task log</code> now works because of unique Mesos Tasks IDs of Spark executors.</li>
+<li>Fixed unstable health checks for Spark dispatcher and history server.</li>
+<li>Spark dispatcher task output now redirects to stdout and is available in logs.</li>
+</ul>
+<h3 id="breaking-changes-5"><a class="content__anchor" href="#breaking-changes-5" aria-hidden="true"><i data-feather="bookmark"></i></a>Breaking changes</h3>
+<ul>
+<li>Added a new configuration option <code>docker_user</code> to override the user when running Spark using Docker containerizer.</li>
+<li>The default Hadoop dependency is now 2.7 and not 2.6.</li>
+</ul>
+<h2 id="version-spark-and-spark-history-240-221-3"><a class="content__anchor" href="#version-spark-and-spark-history-240-221-3" aria-hidden="true"><i data-feather="bookmark"></i></a>Version Spark and Spark history 2.4.0-2.2.1-3</h2>
+<h3 id="new-features-9"><a class="content__anchor" href="#new-features-9" aria-hidden="true"><i data-feather="bookmark"></i></a>New features</h3>
+<ul>
+<li>Added service name to dispatcher’s VIP endpoints.</li>
+<li>Added shell-escape fix to spark-cli (SPARK-21014).</li>
+<li>Added spark.mesos.executor.gpus (SPARK-21033).</li>
+<li>Added dispatcher and driver metrics.</li>
+<li>Added <code>statsd</code> sink for spark metrics.<p class="message--note"><strong>NOTE: </strong>Metrics is a beta feature and requires enabling UCR. Production use is not advised.</p>
+</li>
+</ul>
+<h3 id="updates-9"><a class="content__anchor" href="#updates-9" aria-hidden="true"><i data-feather="bookmark"></i></a>Updates</h3>
+<ul>
+<li>Updated tests, build tools, CLI, and vendor packages.</li>
+<li>Updated bootstrap version to 0.50.0.</li>
+<li>Updated JRE version to 8u172.</li>
+</ul>
+<h3 id="bug-fixes-5"><a class="content__anchor" href="#bug-fixes-5" aria-hidden="true"><i data-feather="bookmark"></i></a>Bug fixes</h3>
+<ul>
+<li>Fixed duplicate docker image URLs, with use <code>resource.json</code> as the default.</li>
+</ul>
+<h3 id="breaking-changes-6"><a class="content__anchor" href="#breaking-changes-6" aria-hidden="true"><i data-feather="bookmark"></i></a>Breaking changes</h3>
+<ul>
+<li>VIP endpoints for the dispatcher are no longer <code>spark-dispatcher:&lt;port&gt;</code> and are now <code>dispatcher.:&lt;port&gt;</code>.</li>
+</ul>
+<h2 id="version-spark-and-spark-history-240-221-3-2"><a class="content__anchor" href="#version-spark-and-spark-history-240-221-3-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Version Spark and Spark history 2.4.0-2.2.1-3</h2>
+<h3 id="new-features-10"><a class="content__anchor" href="#new-features-10" aria-hidden="true"><i data-feather="bookmark"></i></a>New features</h3>
+<ul>
+<li>Added service name to dispatcher’s VIP endpoints.</li>
+<li>Added shell-escape fix to spark-cli (SPARK-21014).</li>
+<li>Added spark.mesos.executor.gpus (SPARK-21033).</li>
+<li>Added dispatcher and driver metrics.</li>
+<li>Added <code>statsd</code> sink for spark metrics.<p class="message--note"><strong>NOTE: </strong>Metrics is a beta feature and requires enabling UCR. Production use is not advised.</p>
+</li>
+</ul>
+<h3 id="updates-10"><a class="content__anchor" href="#updates-10" aria-hidden="true"><i data-feather="bookmark"></i></a>Updates</h3>
+<ul>
+<li>Updated tests, build tools, CLI, and vendor packages.</li>
+<li>Updated bootstrap version to 0.50.0.</li>
+<li>Updated JRE version to 8u172.</li>
+</ul>
+<h3 id="bug-fixes-6"><a class="content__anchor" href="#bug-fixes-6" aria-hidden="true"><i data-feather="bookmark"></i></a>Bug fixes</h3>
+<ul>
+<li>Fixed duplicate docker image URLs, with use <code>resource.json</code> as the default.</li>
+</ul>
+<h3 id="breaking-changes-7"><a class="content__anchor" href="#breaking-changes-7" aria-hidden="true"><i data-feather="bookmark"></i></a>Breaking changes</h3>
+<ul>
+<li>VIP endpoints for the dispatcher are no longer <code>spark-dispatcher:&lt;port&gt;</code> and are now <code>dispatcher.:&lt;port&gt;</code>.</li>
+</ul>
+<h2 id="version-spark-and-spark-history-231-221-2"><a class="content__anchor" href="#version-spark-and-spark-history-231-221-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Version Spark and Spark history 2.3.1-2.2.1-2</h2>
+<h3 id="updates-11"><a class="content__anchor" href="#updates-11" aria-hidden="true"><i data-feather="bookmark"></i></a>Updates</h3>
+<ul>
+<li>Updated <code>libmesos</code>  version with a critical bug fix.</li>
+</ul>
+<h3 id="documentation"><a class="content__anchor" href="#documentation" aria-hidden="true"><i data-feather="bookmark"></i></a>Documentation</h3>
+<ul>
+<li>Added a <a href="/dcosdocs/mesosphere/dcos/services/spark/2.3.1-2.2.1-2/limits/">page</a> documenting results from scale testing of Spark on DC/OS.</li>
+</ul>
+<h2 id="version-230-221-2"><a class="content__anchor" href="#version-230-221-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Version 2.3.0-2.2.1-2</h2>
+<h3 id="new-features-11"><a class="content__anchor" href="#new-features-11" aria-hidden="true"><i data-feather="bookmark"></i></a>New features</h3>
+<ul>
+<li>Added secrets support for drivers, so that a secret can be disseminated to the executors. (SPARK-22131).</li>
+<li>Added Kerberos ticket renewal (SPARK-21842).</li>
+<li>Added Mesos sandbox URI to the Dispatcher UI (SPARK-13041).</li>
+<li>Added support for Driver &lt;-&gt; Executor TLS with file-based secrets.</li>
+<li>Added support for Driver &lt;-&gt; Executor SASL (RPC endpoint authentication and encryption) using file-based secrets.</li>
+<li>Added <code>--executor-auth-secret</code> as a shortcut for Driver &lt;-&gt; Executor Spark SASL (RPC endpoint authentication and encryption) configuration.</li>
+<li>Added CLI command to generate a random secret.</li>
+<li>Enabled native BLAS for MLLib.</li>
+<li>Added configuration to deploy Dispatcher on UCR (default is Docker).</li>
+<li>Instead of setting the <code>krb5.conf</code> as a base64-encoded blob, the user can now specify <code>service.security.kerberos.kdc.[port|hostname]</code> and <code>service.security.kerberos.realm</code> directly in the <code>options.json</code> file. The behavior with the base64-encoded blob remains the same, and will overwrite the new configuration.</li>
+</ul>
+<h3 id="history-server"><a class="content__anchor" href="#history-server" aria-hidden="true"><i data-feather="bookmark"></i></a>History server</h3>
+<ul>
+<li>Added Kerberos support for integration with a Kerberized HDFS. See documentation for configuration instructions.</li>
+<li>Made the user configurable, defaults to root.</li>
+</ul>
+<h3 id="updates-12"><a class="content__anchor" href="#updates-12" aria-hidden="true"><i data-feather="bookmark"></i></a>Updates</h3>
+<ul>
+<li>Updated JRE version to 8u152 JCE.</li>
+<li>Changed the default user to root (Breaking change).</li>
+</ul>
+<h3 id="bug-fixes-7"><a class="content__anchor" href="#bug-fixes-7" aria-hidden="true"><i data-feather="bookmark"></i></a>Bug fixes</h3>
+<ul>
+<li>First delegation token renewal time is not 75% of renewal time (SPARK-22583).</li>
+<li>Fixed supervise mode with checkpointing(SPARK-22145).</li>
+<li>Added support for older SPARK_MESOS_KRB5_CONF_BASE64 environment variable.</li>
+<li>The spark CLI has “shortcut” command-line arguments that are translated into <code>spark.config=setting</code> configurations downstream (such as <code>spark.executor.memory</code>) no longer overwrite the configuration a user sets directly with the default value for the shortcut argument.</li>
+</ul>
+<h3 id="breaking-changes-8"><a class="content__anchor" href="#breaking-changes-8" aria-hidden="true"><i data-feather="bookmark"></i></a>Breaking changes</h3>
+<ul>
+<li>Changed the default user to root, in both the Dispatcher and history server.</li>
+<li>To configure Kerberos in the <code>options.json</code> file, a new property <code>service.security.kerberos.enabled</code> must be set to <code>true</code>. This option applies to both the Dispatcher and history server.</li>
+<li>Removed the <code>security.ssl</code> properties from the <code>options.json</code> file. These properties are no longer needed for the Go-based CLI.</li>
+<li>Removed <code>--dcos-space</code> option from the CLI. Access to secrets is determined by the Spark Dispatcher service name. See <a href="../security/#where-to-place-secrets">security</a> for more information about where to place secrets.</li>
+</ul>
+<h2 id="version-210-220-1"><a class="content__anchor" href="#version-210-220-1" aria-hidden="true"><i data-feather="bookmark"></i></a>Version 2.1.0-2.2.0-1</h2>
+<h3 id="improvements"><a class="content__anchor" href="#improvements" aria-hidden="true"><i data-feather="bookmark"></i></a>Improvements</h3>
+<ul>
+<li>Changed the image to run as user <code>nobody</code> instead of <code>root</code> by default. (https://github.com/mesosphere/spark-build/pull/189)</li>
+</ul>
+<h3 id="bug-fixes-8"><a class="content__anchor" href="#bug-fixes-8" aria-hidden="true"><i data-feather="bookmark"></i></a>Bug fixes</h3>
+<ul>
+<li>Configuration to allow custom Dispatcher docker image. (https://github.com/mesosphere/spark-build/pull/179)</li>
+<li>CLI breaks with multiple spaces in submit args. (https://github.com/mesosphere/spark-build/pull/193)</li>
+</ul>
+<h3 id="documentation-2"><a class="content__anchor" href="#documentation-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Documentation</h3>
+<ul>
+<li>Updated the HDFS endpoint information in <a href="/dcosdocs/mesosphere/dcos/services/hdfs/">hdfs</a>.</li>
+<li>Added checkpointing instructions. (https://github.com/mesosphere/spark-build/pull/181)</li>
+<li>Updated custom docker image support policy. (https://github.com/mesosphere/spark-build/pull/200)</li>
+</ul>
+<h2 id="version-220-220-2-beta"><a class="content__anchor" href="#version-220-220-2-beta" aria-hidden="true"><i data-feather="bookmark"></i></a>Version 2.2.0-2.2.0-2-beta</h2>
+<h3 id="improvements-2"><a class="content__anchor" href="#improvements-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Improvements</h3>
+<ul>
+<li>Added secrets support in driver (SPARK-22131).</li>
+<li>Added Kerberos ticket renewal (SPARK-21842).</li>
+<li>Added Mesos sandbox URI to dispatcher UI(SPARK-13041).</li>
+<li>Updated JRE version to 8u152 JCE.</li>
+<li>Added support for Driver &lt;-&gt; Executor TLS with file-based secrets.</li>
+<li>Added support for Driver &lt;-&gt; Executor SASL (RPC endpoint authentication and encryption) with file-based secrets.</li>
+<li>Added CLI command to generate a random secret.</li>
+<li>Enabled native BLAS for MLLib.</li>
+<li>Added configuration to deploy Dispatcher on UCR (default is Docker).</li>
+</ul>
+<h3 id="bug-fixes-9"><a class="content__anchor" href="#bug-fixes-9" aria-hidden="true"><i data-feather="bookmark"></i></a>Bug fixes</h3>
+<ul>
+<li>First delegation token renewal time is not 75% of renewal time (SPARK-22583).</li>
+<li>Fixed <code>supervise</code> mode with checkpointing(SPARK-22145).</li>
+<li>Added support for older <code>SPARK_MESOS_KRB5_CONF_BASE64</code> environment variable.</li>
+</ul>
+<h3 id="tests"><a class="content__anchor" href="#tests" aria-hidden="true"><i data-feather="bookmark"></i></a>Tests</h3>
+<ul>
+<li>Added integration test that reads / writes to a Kerberized HDFS.</li>
+<li>Added integration test that reads / writes to a Kerberized Kafka.</li>
+<li>Added integration test of checkpointing and supervise.</li>
+</ul>
+<h3 id="documentation-3"><a class="content__anchor" href="#documentation-3" aria-hidden="true"><i data-feather="bookmark"></i></a>Documentation</h3>
+<ul>
+<li>Updated naming of DC/OS.</li>
+<li>Updated docs links in package post-install notes.</li>
+<li>Updated Kerberos docs.</li>
+<li>Documented running Spark Streaming jobs with Kerberized Kafka.</li>
+<li>Documented <code>nobody</code> limitation on certain OSes.</li>
+</ul>
+<h2 id="version-210-220-1-2"><a class="content__anchor" href="#version-210-220-1-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Version 2.1.0-2.2.0-1</h2>
+<h3 id="improvements-3"><a class="content__anchor" href="#improvements-3" aria-hidden="true"><i data-feather="bookmark"></i></a>Improvements</h3>
+<ul>
+<li>Changed the image to run as user <code>nobody</code> instead of <code>root</code> by default. (https://github.com/mesosphere/spark-build/pull/189)</li>
+</ul>
+<h3 id="bug-fixes-10"><a class="content__anchor" href="#bug-fixes-10" aria-hidden="true"><i data-feather="bookmark"></i></a>Bug fixes</h3>
+<ul>
+<li>Configuration to allow a custom dispatcher Docker image. (https://github.com/mesosphere/spark-build/pull/179)</li>
+<li>CLI breaks with multiple spaces in submit arguments. (https://github.com/mesosphere/spark-build/pull/193)</li>
+</ul>
+<h3 id="documentation-4"><a class="content__anchor" href="#documentation-4" aria-hidden="true"><i data-feather="bookmark"></i></a>Documentation</h3>
+<ul>
+<li>Updated HDFS endpoint information in <a href="/dcosdocs/mesosphere/dcos/services/hdfs/">hdfs</a>.</li>
+<li>Added checkpointing instructions. (https://github.com/mesosphere/spark-build/pull/181)</li>
+<li>Updated custom docker image support policy. (https://github.com/mesosphere/spark-build/pull/200)</li>
+</ul>
+<h2 id="version-201-220-1"><a class="content__anchor" href="#version-201-220-1" aria-hidden="true"><i data-feather="bookmark"></i></a>Version 2.0.1-2.2.0-1</h2>
+<h3 id="improvements-4"><a class="content__anchor" href="#improvements-4" aria-hidden="true"><i data-feather="bookmark"></i></a>Improvements</h3>
+<ul>
+<li>Exposed isR and isPython spark run arguments.</li>
+</ul>
+<h3 id="bug-fixes-11"><a class="content__anchor" href="#bug-fixes-11" aria-hidden="true"><i data-feather="bookmark"></i></a>Bug fixes</h3>
+<ul>
+<li>Allowed for application args to have arguments without equals sign.</li>
+<li>Fixed docs link in Universe package description.</li>
+</ul>
+<h2 id="version-200-220-1"><a class="content__anchor" href="#version-200-220-1" aria-hidden="true"><i data-feather="bookmark"></i></a>Version 2.0.0-2.2.0-1</h2>
+<h3 id="improvements-5"><a class="content__anchor" href="#improvements-5" aria-hidden="true"><i data-feather="bookmark"></i></a>Improvements</h3>
+<ul>
+<li>Kerberos support has changed to use common code from <code>spark-core</code> instead of custom implementation.</li>
+<li>Added file and environment variable-based secret support.</li>
+<li>Kerberos keytab/TGT login from the DC/OS Spark CLI in cluster mode (uses file-based secrets).</li>
+<li>Added CNI network label support.</li>
+<li>CLI doesn’t require spark-submit to be present on client machine.</li>
+</ul>
+<h3 id="bug-fixes-12"><a class="content__anchor" href="#bug-fixes-12" aria-hidden="true"><i data-feather="bookmark"></i></a>Bug fixes</h3>
+<ul>
+<li>Drivers are successfully re-launched when <code>--supervise</code> flag is set.</li>
+<li>CLI works on 1.9 and 1.10 DC/OS clusters.</li>
+</ul>
+<h3 id="breaking-changes-9"><a class="content__anchor" href="#breaking-changes-9" aria-hidden="true"><i data-feather="bookmark"></i></a>Breaking changes</h3>
+<ul>
+<li>Setting <code>spark.app_id</code> has been removed (for example, <code>dcos config set spark.app_id &lt;dispatcher_app_id&gt;</code>). To submit jobs with a given
+dispatcher, use <code>dcos spark --name &lt;dispatcher_app_id&gt;</code>.</li>
+<li><code>principal</code> is now <code>service_account</code> and <code>secret</code> is now <code>service_account_secret</code>.</li>
+</ul>
+<h2 id="version-111-220"><a class="content__anchor" href="#version-111-220" aria-hidden="true"><i data-feather="bookmark"></i></a>Version 1.1.1-2.2.0</h2>
+<h3 id="improvements-6"><a class="content__anchor" href="#improvements-6" aria-hidden="true"><i data-feather="bookmark"></i></a>Improvements</h3>
+<ul>
+<li>Upgrade to Spark 2.2.0.</li>
+<li>Spark driver now supports configurable failover_timeout. The default value is 0 when the configuration is not set <a href="https://issues.apache.org/jira/browse/SPARK-21456">SPARK-21456</a>.</li>
+</ul>
+<h3 id="breaking-change"><a class="content__anchor" href="#breaking-change" aria-hidden="true"><i data-feather="bookmark"></i></a>Breaking change</h3>
+<ul>
+<li>Spark CLI no longer supports <code>-Dspark</code> arguments.</li>
+</ul>
+<h2 id="version-109-210-1"><a class="content__anchor" href="#version-109-210-1" aria-hidden="true"><i data-feather="bookmark"></i></a>Version 1.0.9-2.1.0-1</h2>
+<ul>
+<li>The history server has been removed from the “spark” package, and put into a dedicated “spark-history” package.</li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#spark-and-spark-history-2120-301-was-released-on-12-november-2020">Spark and Spark history 2.12.0-3.0.1 was released on 12, November 2020</a></li><li class="content__sections-item content__sections-item--h2"><a href="#spark-and-spark-history-2110-246-was-released-on-30-july-2020">Spark and Spark history 2.11.0-2.4.6 was released on 30, July 2020</a></li><li class="content__sections-item content__sections-item--h2"><a href="#spark-and-spark-history-2100-245-was-released-on-17-june-2020">Spark and Spark history 2.10.0-2.4.5 was released on 17, June 2020</a></li><li class="content__sections-item content__sections-item--h2"><a href="#version-spark-and-spark-history-290-243">Version Spark and Spark history 2.9.0-2.4.3</a></li><li class="content__sections-item content__sections-item--h2"><a href="#version-spark-and-spark-history-280-240">Version Spark and Spark history 2.8.0-2.4.0</a></li><li class="content__sections-item content__sections-item--h2"><a href="#version-spark-and-spark-history-270-240">Version Spark and Spark history 2.7.0-2.4.0</a></li><li class="content__sections-item content__sections-item--h2"><a href="#version-spark-and-spark-history-260-232">Version Spark and Spark history 2.6.0-2.3.2</a></li><li class="content__sections-item content__sections-item--h2"><a href="#version-spark-and-spark-history-250-221">Version Spark and Spark history 2.5.0-2.2.1</a></li><li class="content__sections-item content__sections-item--h2"><a href="#version-spark-and-spark-history-240-221-3">Version Spark and Spark history 2.4.0-2.2.1-3</a></li><li class="content__sections-item content__sections-item--h2"><a href="#version-spark-and-spark-history-240-221-3-2">Version Spark and Spark history 2.4.0-2.2.1-3</a></li><li class="content__sections-item content__sections-item--h2"><a href="#version-spark-and-spark-history-231-221-2">Version Spark and Spark history 2.3.1-2.2.1-2</a></li><li class="content__sections-item content__sections-item--h2"><a href="#version-230-221-2">Version 2.3.0-2.2.1-2</a></li><li class="content__sections-item content__sections-item--h2"><a href="#version-210-220-1">Version 2.1.0-2.2.0-1</a></li><li class="content__sections-item content__sections-item--h2"><a href="#version-220-220-2-beta">Version 2.2.0-2.2.0-2-beta</a></li><li class="content__sections-item content__sections-item--h2"><a href="#version-210-220-1-2">Version 2.1.0-2.2.0-1</a></li><li class="content__sections-item content__sections-item--h2"><a href="#version-201-220-1">Version 2.0.1-2.2.0-1</a></li><li class="content__sections-item content__sections-item--h2"><a href="#version-200-220-1">Version 2.0.0-2.2.0-1</a></li><li class="content__sections-item content__sections-item--h2"><a href="#version-111-220">Version 1.1.1-2.2.0</a></li><li class="content__sections-item content__sections-item--h2"><a href="#version-109-210-1">Version 1.0.9-2.1.0-1</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

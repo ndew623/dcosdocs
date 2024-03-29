@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>负载均衡工作负载 - D2iQ Docs</title><meta name="description" content="演示如何为请求访问已部署应用程序的客户端分配工作负载（第 10 部分）"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/1.13/tutorials/dcos-101/loadbalancing">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/dcos-101/loadbalancing">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/tutorials/dcos-101/loadbalancing">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/dcos-101/loadbalancing">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><ul><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/dcos-101/"><i data-feather="chevron-right"></i>DC/OS 简介</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/dcos-101/start-here/">创建群集</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/dcos-101/cli/">安装命令行界面</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/dcos-101/first-package/">安装第一个包</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/dcos-101/first-app/">部署第一个应用程序</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/dcos-101/create-service/">创建和运行自定义应用程序</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/dcos-101/schedule-jobs/">创建和调度作业</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/dcos-101/service-discovery/">发现部署的服务</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/dcos-101/native-app/">部署和公开本地应用程序</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/dcos-101/resources/">分配和扩展资源</a></li><li class="active active-on"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/dcos-101/loadbalancing/">负载均衡工作负载</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/stateful-services/">在 DC/OS 上运行有状态服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/autoscaling/"><i data-feather="chevron-right"></i>使用 Marathon 自动扩展</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/iot_pipeline/">部署负载均衡数据管道</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/deploy-on-marathon/">使用 Jenkins 部署 Marathon 应用程序</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/task-labels/">标记任务和作业</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/dcos-debug/"><i data-feather="chevron-right"></i>调试 DC/OS 上的应用程序</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">负载均衡工作负载</h1></div><h4 class="content__header-description">演示如何为请求访问已部署应用程序的客户端分配工作负载（第 10 部分）</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/dcos-101/loadbalancing/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>概念上，负载均衡器提供用于将客户端请求分配到应用程序的网络通信层。负载均衡器在群集网络环境中尤为重要，因为它们决定了应用程序的哪个实例应该响应内部或外部服务请求。通过 DC/OS 群集，您会有几种通过负载均衡器分配服务请求的选项：</p>
+<ul>
+<li>
+<p>您可以使用已命名 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/networking/load-balancing-vips/">虚拟 IP 地址</a> 以及本地分布式第 4 层负载均衡服务 <code>dcos-l4lb</code>（之前称为 Minuteman）。</p>
+</li>
+<li>
+<p>如果所有已部署的应用程序都使用 Marathon 应用程序定义，那么您可以使用 [HAProxy]开源负载均衡服务的 <a href="/dcosdocs/mesosphere/dcos/cn/services/marathon-lb/">Marathon-LB</a> 执行。</p>
+</li>
+<li>
+<p>您可以使用 <a href="/dcosdocs/mesosphere/dcos/cn/services/edge-lb/">Edge-LB</a> 第 7 层代理和负载均衡服务来分配 DC/OS Enterprise 群集的入站访问请求。</p>
+</li>
+<li>
+<p>您可以将外部硬件或云提供商负载均衡服务（例如，<a href="https://aws.amazon.com/elasticloadbalancing/">AWS 弹性负载均衡器 (ELB)</a> 与 Marathon-LB 或 Edge-LB 结合使用）用于入站请求的多层路由。</p>
+</li>
+</ul>
+<p>您已经在之前的教程中了解了其中两个负载均衡选项，了解了 [服务发现](…/ service-discovery /) 和使用 Marathon-LB [在公共代理节点上公开应用程序](…/ native- app /)。因为这是管理集群操作的关键任务，所以本教程提供了一个更详细的示例，说明如何为您已部署的简单应用程序配置负载均衡。</p>
+<h1 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>开始之前</h1>
+<p>在开始本教程前，您应验证以下内容：</p>
+<ul>
+<li>您可以通过至少一个管理节点和三个代理节点来访问运行中的 <a href="../start-here/">DC/OS 群集</a>。</li>
+<li>您可以访问安装了 <a href="../cli/">DC/OS CLI</a> 的计算机。</li>
+<li>您拥有在群集中部署和运行的 <a href="../native-app/">app2</a> 示例应用程序。</li>
+<li>您拥有在群集中部署和运行的 <a href="../native-app/">Marathon-LB</a>。</li>
+</ul>
+<h1 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>学习目的</h1>
+<p>完成本教程，您将学习到：</p>
+<ul>
+<li>
+<p>如何将您的应用程序扩展到多个实例。</p>
+</li>
+<li>
+<p>应用程序被扩展后，内部和外部服务如何选择使用哪个实例。</p>
+</li>
+</ul>
+<h1 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>添加应用程序实例</h1>
+<ol>
+<li>通过运行以下命令，将 app2 示例应用程序扩展到两个实例：</li>
+</ol>
+<pre><code class="language-bash">dcos marathon app update /dcos-101/app2 instances=2
+</code></pre>
+<h1 id="marathon-lb"><a class="content__anchor" href="#marathon-lb" aria-hidden="true"><i data-feather="bookmark"></i></a>通过 Marathon-LB 的负载均衡</h1>
+<ol>
+<li>
+<p>打开 Web 浏览器并导航到 URL，以检查是否可以使用公共代理节点 IP 地址和端口 10000 来访问该应用程序。</p>
+<p>例如，导航至类似于以下内容的 URL：<code>http://&lt;public-node&gt;:10000</code>.</p>
+</li>
+<li>
+<p>反复导航至应用程序，以查看由 app2 的不同实例所服务的请求。</p>
+</li>
+<li>
+<p>通过类似于以下内容的 URL 访问 HAProxy <code>stats</code> 端点以检查 Marathon-LB 统计信息：<code>http://&lt;public-node&gt;:9090/haproxy?stats</code>.</p>
+<p><img src="../../../img/tutorial-haproxy-stats.png" alt="查看 dcos-101_app2 的负载均衡统计信息"></p>
+</li>
+</ol>
+<h1 id="ip"><a class="content__anchor" href="#ip" aria-hidden="true"><i data-feather="bookmark"></i></a>通过虚拟 IP 地址的负载均衡</h1>
+<ol>
+<li>
+<p>通过运行以下命令，打开终端，使用 shell (SSH) 连接到领导管理节点：</p>
+<pre><code class="language-bash">dcos node ssh --master-proxy --leader
+</code></pre>
+</li>
+<li>
+<p>通过运行以下命令，使用 cURL 从应用程序获取原始 HTML 输出：</p>
+<pre><code class="language-bash">curl dcos-101app2.marathon.l4lb.thisdcos.directory:10000
+</code></pre>
+</li>
+<li>
+<p>重复上一步以查看不同实例所服务的请求。</p>
+</li>
+</ol>
+<h1 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>删除额外的应用程序实例</h1>
+<ol>
+<li>通过运行以下命令，将 app2 示例应用程序减少到一个实例：</li>
+</ol>
+<pre><code class="language-bash">dcos marathon app update /dcos-101/app2 instances=1
+</code></pre>
+<h1 id="-5"><a class="content__anchor" href="#-5" aria-hidden="true"><i data-feather="bookmark"></i></a>后续步骤</h1>
+<p>您已使用 Marathon-LB 和虚拟 IP 地址对应用程序的两个不同实例进行负载均衡请求。</p>
+<h1 id="-6"><a class="content__anchor" href="#-6" aria-hidden="true"><i data-feather="bookmark"></i></a>相关主题</h1>
+<p>选择负载均衡机制时，请考虑这些功能和优点。</p>
+<ul>
+<li>
+<p><a href="/dcosdocs/mesosphere/dcos/cn/services/marathon-lb/">Marathon-LB</a> 是一个第 7 层负载均衡器，主要用于从防火墙外部或通过单独的硬件或公共云负载均衡器进入群集的“外部”或“北-南”请求。</p>
+<p>其核心功能基于 HAProxy 负载均衡器，让您能够在 Marathon 应用程序定义中定义配置覆盖。Marathon-LB 也使用 Marathon 事件总线来实时更新其配置。作为第 7 层负载均衡器，它支持基于会话的功能，如 HTTP 粘滞会话和零停机部署。</p>
+</li>
+<li>
+<p><a href="/dcosdocs/mesosphere/dcos/cn/1.13/networking/load-balancing-vips/">已命名虚拟 IP 地址</a> 为 <strong>内部</strong> 或 <strong>东-西</strong> TCP 流量提供第 4 层负载均衡。由于虚拟 IP 地址与内核紧密集成，它们提供负载均衡的 IP 地址，可以在群集中的任何位置使用。</p>
+</li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#开始之前">开始之前</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-2">学习目的</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-3">添加应用程序实例</a></li><li class="content__sections-item content__sections-item--h1"><a href="#marathon-lb">通过 Marathon-LB 的负载均衡</a></li><li class="content__sections-item content__sections-item--h1"><a href="#ip">通过虚拟 IP 地址的负载均衡</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-4">删除额外的应用程序实例</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-5">后续步骤</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-6">相关主题</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

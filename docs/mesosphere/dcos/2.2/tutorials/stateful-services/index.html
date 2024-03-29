@@ -1,0 +1,112 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Running Stateful Services on DC/OS - D2iQ Docs</title><meta name="description" content="Tutorial - Running stateful services on DC/OS"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.2"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/tutorials/stateful-services">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/tutorials/stateful-services">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/tutorials/stateful-services">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/tutorials/stateful-services">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/dcos-101/"><i data-feather="chevron-right"></i>DC/OS 101</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/create-service/">Creating and Running a Service</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/stateful-services/">Running Stateful Services on DC/OS</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/autoscaling/"><i data-feather="chevron-right"></i>Autoscaling with Marathon</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/iot_pipeline/">Deploying a Load-Balanced Data Pipeline</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/deploy-on-marathon/">Deploying Marathon Apps with Jenkins</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/task-labels/">Labeling Tasks and Jobs</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/dcos-debug/"><i data-feather="chevron-right"></i>Debugging Applications on DC/OS</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/archives/">Access Documentation Archives</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Running Stateful Services on DC/OS</h1></div><h4 class="content__header-description">Tutorial - Running stateful services on DC/OS</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.2/tutorials/stateful-services/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- This disclaimer should be included at the beginning of each page of a tutorial. -->
+<p class="message--important"><strong>IMPORTANT: </strong>Tutorials are intended to give you hands-on experience working with a limited set of DC/OS features with no implied or explicit warranty of any kind. None of the information provided--including sample scripts, commands, or applications--is officially supported by Mesosphere. You should not use this information in a production environment without independent testing and validation.</p>
+<p>This tutorial shows you how to install and run stateful services on DC/OS. A stateful service acts on persistent data. Simple, state<strong>less</strong> services run in an empty sandbox each time they are launched. In contrast, state<strong>ful</strong> services make use of persistent volumes that reside on agents in a cluster until explicitly destroyed.</p>
+<p>These persistent volumes are mounted into a task’s Mesos sandbox and are therefore continuously accessible to a service. DC/OS creates persistent volumes for each task and all resources required to run the task are dynamically reserved. That way, DC/OS ensures that a service can be relaunched and can reuse its data when needed. This is useful for databases, caches, and other data-aware services.</p>
+<p>If the service you intend to run does not replicate data on its own, you need to take care of backups or have a suitable replication strategy.</p>
+<p>Stateful services leverage two underlying Mesos features:</p>
+<ul>
+<li><a href="http://mesos.apache.org/documentation/latest/reservation/">Dynamic reservations</a> with reservation labels</li>
+<li><a href="http://mesos.apache.org/documentation/latest/persistent-volume/">Persistent volumes</a></li>
+</ul>
+<p><strong>Time Estimate</strong>:</p>
+<p>Approximately 20 minutes.</p>
+<p><strong>Target Audience</strong>:</p>
+<p>This tutorial is for developers who want to run stateful services on DC/OS.</p>
+<p class="message--note"><strong>NOTE: </strong>The DC/OS persistent volume feature is still in beta and is not ready for production use without a data replication strategy to guard against data loss.</p>
+<h2 id="prerequisites"><a class="content__anchor" href="#prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h2>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/2.2/installing/">DC/OS installed</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.2/cli/install/">DC/OS CLI installed</a></li>
+<li>Cluster Size: at least one agent node with 1 CPU, 1 GB of RAM and 1000 MB of disk space available.</li>
+</ul>
+<h2 id="install-a-stateful-service-postgresql"><a class="content__anchor" href="#install-a-stateful-service-postgresql" aria-hidden="true"><i data-feather="bookmark"></i></a>Install a Stateful Service (PostgreSQL)</h2>
+<p>This is the DC/OS service definition JSON to start the official PostgreSQL Docker image:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/postgres&quot;,
+  &quot;cpus&quot;: 1,
+  &quot;mem&quot;: 1024,
+  &quot;instances&quot;: 1,
+  &quot;networks&quot;: [
+    { &quot;mode&quot;: &quot;container/bridge&quot; }
+  ],
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;DOCKER&quot;,
+    &quot;volumes&quot;: [
+      {
+        &quot;containerPath&quot;: &quot;pgdata&quot;,
+        &quot;mode&quot;: &quot;RW&quot;,
+        &quot;persistent&quot;: {
+          &quot;size&quot;: 100
+        }
+      }
+    ],
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;postgres:9.5&quot;
+    },
+    &quot;portMappings&quot;: [
+      {
+        &quot;containerPort&quot;: 5432,
+        &quot;hostPort&quot;: 0,
+        &quot;protocol&quot;: &quot;tcp&quot;,
+        &quot;labels&quot;: {
+          &quot;VIP_0&quot;: &quot;5.4.3.2:5432&quot;
+        }
+      }
+    ]
+  },
+  &quot;env&quot;: {
+    &quot;POSTGRES_PASSWORD&quot;: &quot;DC/OS_ROCKS&quot;,
+    &quot;PGDATA&quot;: &quot;/mnt/mesos/sandbox/pgdata&quot;
+  },
+  &quot;healthChecks&quot;: [
+    {
+      &quot;protocol&quot;: &quot;TCP&quot;,
+      &quot;portIndex&quot;: 0,
+      &quot;gracePeriodSeconds&quot;: 300,
+      &quot;intervalSeconds&quot;: 60,
+      &quot;timeoutSeconds&quot;: 20,
+      &quot;maxConsecutiveFailures&quot;: 3,
+      &quot;ignoreHttp1xx&quot;: false
+    }
+  ],
+  &quot;upgradeStrategy&quot;: {
+    &quot;maximumOverCapacity&quot;: 0,
+    &quot;minimumHealthCapacity&quot;: 0
+  }
+}
+</code></pre>
+<p>Notice the <code>volumes</code> field, which declares the persistent volume for <code>postgres</code> to use for its data. Even if the task dies and restarts, it will get that volume back and data will not be lost.</p>
+<p>Next, add this <a href="postgres.marathon.json">service</a> to your cluster:</p>
+<pre><code>dcos marathon app add //tutorials/stateful-services/postgres.marathon.json
+</code></pre>
+<p>Once the service has been scheduled and the Docker container has downloaded, postgres will become healthy and be ready to use. You can verify this from the DC/OS CLI:</p>
+<pre><code>dcos marathon task list
+APP        HEALTHY          STARTED              HOST     ID
+/postgres    True   2016-04-13T17:25:08.301Z  10.0.1.223  postgres.f2419e31-018a-11e6-b721-0261677b407a
+</code></pre>
+<h2 id="stop-the-service"><a class="content__anchor" href="#stop-the-service" aria-hidden="true"><i data-feather="bookmark"></i></a>Stop the service</h2>
+<p>To stop the service:</p>
+<pre><code>dcos marathon app stop postgres
+</code></pre>
+<p>This command scales the <code>instances</code> count down to 0 and kills all running tasks. If you inspect the tasks list again, you will notice that the task is still there. The list provides information about which agent it was placed on and which persistent volume it had attached, but without a <code>startedAt</code> value. This allows you to restart the service with the same metadata.</p>
+<pre><code>dcos marathon task list
+APP        HEALTHY  STARTED     HOST     ID
+/postgres    True     N/A    10.0.1.223  postgres.f2419e31-018a-11e6-b721-0261677b407a
+</code></pre>
+<h2 id="restart"><a class="content__anchor" href="#restart" aria-hidden="true"><i data-feather="bookmark"></i></a>Restart</h2>
+<p>Start the stateful service again:</p>
+<pre><code>dcos marathon app start postgres
+</code></pre>
+<p>The metadata of the previous <code>postgres</code> task is used to launch a new task that takes over the reservations and volumes of the previously stopped service. Inspect the running task again by repeating the command from the previous step. You will see that the running service task is using the same data as the previous one.</p>
+<h2 id="cleanup"><a class="content__anchor" href="#cleanup" aria-hidden="true"><i data-feather="bookmark"></i></a>Cleanup</h2>
+<p>To restore the state of your cluster as it was before installing the stateful service, delete the service:</p>
+<pre><code>dcos marathon app remove postgres
+</code></pre>
+<h2 id="appendix"><a class="content__anchor" href="#appendix" aria-hidden="true"><i data-feather="bookmark"></i></a>Appendix</h2>
+<p>For further information on stateful services in DC/OS, visit the <a href="/dcosdocs/mesosphere/dcos/2.2/storage/">Storage section of the documentation</a>.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#prerequisites">Prerequisites</a></li><li class="content__sections-item content__sections-item--h2"><a href="#install-a-stateful-service-postgresql">Install a Stateful Service (PostgreSQL)</a></li><li class="content__sections-item content__sections-item--h2"><a href="#stop-the-service">Stop the service</a></li><li class="content__sections-item content__sections-item--h2"><a href="#restart">Restart</a></li><li class="content__sections-item content__sections-item--h2"><a href="#cleanup">Cleanup</a></li><li class="content__sections-item content__sections-item--h2"><a href="#appendix">Appendix</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

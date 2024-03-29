@@ -1,0 +1,282 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Troubleshooting - D2iQ Docs</title><meta name="description" content="Troubleshooting DC/OS installation issues"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/troubleshooting">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/installing/troubleshooting">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/installing/troubleshooting">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/installing/troubleshooting">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/installing/troubleshooting">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/installing/"><i data-feather="chevron-right"></i>Installing</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/installing/evaluation/"><i data-feather="chevron-right"></i>Cloud Installation</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/installing/production/"><i data-feather="chevron-right"></i>On-Prem Installation</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/installing/installation-faq/">Frequently Asked Questions</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/installing/troubleshooting/">Troubleshooting</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Troubleshooting</h1></div><h4 class="content__header-description">Troubleshooting DC/OS installation issues</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.1/installing/troubleshooting/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><h1 id="general-troubleshooting-approach"><a class="content__anchor" href="#general-troubleshooting-approach" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="general"></a>General troubleshooting approach</h1>
+<ul>
+<li>Verify that you have a valid IP detect script, functioning DNS resolvers to bind the DC/OS services to, and that all nodes are synchronized with NTP.</li>
+</ul>
+<h2 id="ip-detect-script"><a class="content__anchor" href="#ip-detect-script" aria-hidden="true"><i data-feather="bookmark"></i></a>IP detect script</h2>
+<p>You must have a valid <a href="/dcosdocs/mesosphere/dcos/2.1/installing/production/deploying-dcos/installation/#create-an-ip-detection-script">ip-detect</a> script. You can manually run <code>ip-detect</code> on all the nodes in your cluster or check <code>/opt/mesosphere/bin/detect_ip</code> on an existing installation to ensure that it returns a valid IP address. A valid IP address does not have:</p>
+<ul>
+<li>extra lines</li>
+<li>white space</li>
+<li>special or hidden characters</li>
+</ul>
+<p>We recommended that you use the <code>ip-detect</code> <a href="/dcosdocs/mesosphere/dcos/2.1/installing/production/deploying-dcos/installation/">examples</a>.</p>
+<h2 id="dns-resolvers"><a class="content__anchor" href="#dns-resolvers" aria-hidden="true"><i data-feather="bookmark"></i></a>DNS resolvers</h2>
+<p>You must have working DNS resolvers, specified in your <a href="/dcosdocs/mesosphere/dcos/2.1/installing/production/advanced-configuration/configuration-reference/#resolvers">config.yaml</a> file. We recommended that you have forward and reverse lookups for FQDNs, short hostnames, and IP addresses. It is possible for DC/OS to function in environments without valid DNS support, but the following <em>must</em> work to support DC/OS services, including Spark:</p>
+<ul>
+<li>
+<p><code>hostname -f</code> returns the FQDN</p>
+</li>
+<li>
+<p><code>hostname -s</code> returns the short hostname</p>
+<p>You should sanity check the output of <code>hostnamectl</code> on all of your nodes as well.</p>
+</li>
+</ul>
+<p>When troubleshooting problems with a DC/OS installation, you should explore the components in this sequence:</p>
+<ol>
+<li>Time synchronization</li>
+<li>Exhibitor</li>
+<li>Mesos master</li>
+<li>Mesos DNS</li>
+<li>DNS Forwarder</li>
+<li>DC/OS Marathon</li>
+<li>Jobs</li>
+<li>Admin Router</li>
+</ol>
+<p>Be sure to verify that all services are up and healthy on the masters before verifying the agents.</p>
+<ul>
+<li>
+<p>Network Time Protocol (NTP) must be enabled on all nodes for clock synchronization. By default, during DC/OS startup you will receive an error if this is not enabled. You can verify that NTP is enabled by running one of these commands, depending on your OS and configuration:</p>
+<pre><code class="language-bash">ntptime
+</code></pre>
+<pre><code class="language-bash">adjtimex -p
+</code></pre>
+<pre><code class="language-bash">timedatectl
+</code></pre>
+</li>
+<li>
+<p>Ensure that firewalls and any other connection-filtering mechanisms are not interfering with cluster component communications. TCP, UDP, and ICMP must be permitted.</p>
+</li>
+</ul>
+<ul>
+<li>Ensure that services that bind to port <code>53</code>, which is required by DNS Forwarder (<code>dcos-net.service</code>), are disabled and stopped. For example:</li>
+</ul>
+<pre><code class="language-bash">sudo systemctl disable dnsmasq &amp;&amp; sudo systemctl stop dnsmasq
+</code></pre>
+<ul>
+<li>
+<p>Verify that Exhibitor is listening on port 8181.</p>
+<p>On DC/OS Enterprise clusters with a static master list run the following command on a master:</p>
+<pre><code class="language-bash">sudo curl --cacert /var/lib/dcos/exhibitor-tls-artifacts/root-cert.pem --cert /var/lib/dcos/exhibitor-tls-artifacts/client-cert.pem --key /var/lib/dcos/exhibitor-tls-artifacts/client-key.pem https://localhost:8181/exhibitor/v1/cluster/status
+</code></pre>
+<p>On other clusters run the following command on a master:</p>
+<pre><code class="language-bash">curl http://localhost:8181/exhibitor/v1/cluster/status
+</code></pre>
+<p>If Exhibitor responds, verify that the output of the above command shows the correct number of masters and that all of them have <code>&quot;description&quot;: &quot;serving&quot;</code> but only one of them has <code>&quot;isLeader&quot;: true</code></p>
+<pre><code>[
+   {
+      &quot;code&quot;: 3,
+      &quot;description&quot;: &quot;serving&quot;,
+      &quot;hostname&quot;: &quot;10.0.6.70&quot;,
+      &quot;isLeader&quot;: false
+   },
+   {
+      &quot;code&quot;: 3,
+      &quot;description&quot;: &quot;serving&quot;,
+      &quot;hostname&quot;: &quot;10.0.6.69&quot;,
+      &quot;isLeader&quot;: false
+   },
+   {
+      &quot;code&quot;: 3,
+      &quot;description&quot;: &quot;serving&quot;,
+      &quot;hostname&quot;: &quot;10.0.6.68&quot;,
+      &quot;isLeader&quot;: true
+   }
+]
+</code></pre>
+</li>
+</ul>
+   <p class="message--note"><strong>NOTE: </strong>Running this command in multi-master configurations can take up to 15 minutes to complete.</p>
+<p>For any problems, check the Exhibitor logs:</p>
+<pre><code class="language-bash">journalctl -flu dcos-exhibitor
+</code></pre>
+<ul>
+<li>Verify whether you can ping the DNS Forwarder (<code>ready.spartan</code>). If not, review the DNS Dispatcher service logs: ﻿⁠⁠⁠⁠</li>
+</ul>
+<pre><code>journalctl -flu dcos-net﻿⁠⁠⁠⁠
+</code></pre>
+<ul>
+<li>
+<p>Verify that you can ping <code>⁠⁠⁠⁠leader.mesos</code> and ﻿⁠⁠⁠⁠<code>master.mesos</code>. If not:</p>
+<ul>
+<li>Review the Mesos-DNS service logs with this command:</li>
+</ul>
+<pre><code class="language-bash">journalctl -flu dcos-mesos-dns﻿⁠⁠⁠⁠
+</code></pre>
+<ul>
+<li>
+<p>If you are able to ping <code>ready.spartan</code>, but not <code>leader.mesos</code> then review the Mesos master service logs by using this command:</p>
+<pre><code class="language-bash">⁠⁠⁠⁠journalctl -flu dcos-mesos-master
+</code></pre>
+<p>The Mesos masters must be up and running with a leader elected before Mesos-DNS can generate its DNS records from ﻿<code>⁠⁠⁠⁠/state</code>.﻿⁠⁠⁠⁠</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="component-logs"><a class="content__anchor" href="#component-logs" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="component-logs"></a>Component logs</h1>
+<p>During DC/OS installation, each of the components will converge from a failing state to a running state in the logs.</p>
+<ul>
+<li><a href="#admin-router">Admin Router</a></li>
+<li><a href="#dcos-agent-nodes">DC/OS agent nodes</a></li>
+<li><a href="#dcos-marathon">DC/OS Marathon</a></li>
+<li><a href="#gen-resolvconf">gen_resolvconf</a></li>
+<li><a href="#mesos-dns">Mesos DNS</a></li>
+<li><a href="#mesos-master-process">Mesos master process</a></li>
+<li><a href="#zookeeper-and-exhibitor">ZooKeeper and Exhibitor</a></li>
+</ul>
+<h2 id="admin-router"><a class="content__anchor" href="#admin-router" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="admin-router"></a>Admin Router</h2>
+<p>Admin Router is started on the master nodes.  Admin Router provides central authentication and proxy to DC/OS services within the cluster. This allows you to administer your cluster from outside the network without VPN or a SSH tunnel. For HA, an optional load balancer can be configured in front of each master node, load balancing port 80, to provide failover and load balancing.</p>
+<h3 id="troubleshooting"><a class="content__anchor" href="#troubleshooting" aria-hidden="true"><i data-feather="bookmark"></i></a>Troubleshooting</h3>
+<p>SSH to your master node and enter this command to view the logs from boot time:</p>
+<pre><code>journalctl -u dcos-adminrouter -b
+</code></pre>
+<p>For example, here is a snippet of the Admin Router log as it converges to a successful state:</p>
+<pre><code>systemd[1]: Starting A high performance web server and a reverse proxy server...
+systemd[1]: Started A high performance web server and a reverse proxy server.
+nginx[1652]: ip-10-0-7-166.us-west-2.compute.internal nginx: 10.0.7.166 - - [18/Nov/2015:14:01:10 +0000] &quot;GET /mesos/master/state-summary HTTP/1.1&quot; 200 575 &quot;-&quot; &quot;python-requests/2.6.0 CPython/3.4.2 Linux/4.1.7-coreos&quot;
+nginx[1652]: ip-10-0-7-166.us-west-2.compute.internal nginx: 10.0.7.166 - - [18/Nov/2015:14:01:10 +0000] &quot;GET /metadata HTTP/1.1&quot; 200 175 &quot;-&quot; &quot;python-requests/2.6.0 CPython/3.4.2 Linux/4.1.7-coreos&quot;
+</code></pre>
+<h2 id="dcos-agent-nodes"><a class="content__anchor" href="#dcos-agent-nodes" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="dcos-agent-nodes"></a>DC/OS agent nodes</h2>
+<p>DC/OS private and public agent nodes are started. Deployed apps and services are run on the private agent nodes. You must have at least one private agent node.</p>
+<p>Publicly accessible applications are run in the public agent node. Public agent nodes can be configured to allow outside traffic to access your cluster. Public agents are optional and there is no minimum. This is where you would run a load balancer, providing a service from inside the cluster to the external public.</p>
+<h3 id="troubleshooting-2"><a class="content__anchor" href="#troubleshooting-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Troubleshooting</h3>
+<ul>
+<li>
+<p>You might not be able to SSH to agent nodes, depending on your cluster network configuration. We have made this a little bit easier with the DC/OS CLI. For more information, see <a href="/dcosdocs/mesosphere/dcos/2.1/administering-clusters/sshcluster/">SSHing to a DC/OS cluster</a>.</p>
+</li>
+<li>
+<p>You can get the IP address of registered agent nodes from the <strong>Nodes</strong> tab in the DC/OS Dashboard. Nodes that have not registered are not shown.</p>
+</li>
+<li>
+<p>SSH to your agent node and enter this command to view the logs from boot time:</p>
+<pre><code class="language-bash">journalctl -u dcos-marathon -b
+</code></pre>
+</li>
+</ul>
+<p>For example, here is a snippet of the Mesos agent log as it converges to a successful state:</p>
+<pre><code>mesos-slave[1080]: I1118 14:00:43.687366  1080 main.cpp:272] Starting Mesos slave
+mesos-slave[1080]: I1118 14:00:43.688474  1080 slave.cpp:190] Slave started on 1)@10.0.1.108:5051
+mesos-slave[1080]: I1118 14:00:43.688503  1080 slave.cpp:191] Flags at startup: --appc_store_dir=&quot;/tmp/mesos/store/appc&quot; --authenticatee=&quot;crammd5&quot; --cgroups_cpu_enable_pids_and_tids_count=&quot;false&quot; --cgroups_enable_cfs=&quot;false&quot; --cgroups_hierarchy=&quot;/sys/fs/cgroup&quot; --cgroups_limit_swap=&quot;false&quot; --cgroups_root=&quot;mesos&quot; --container_disk_watch_interval=&quot;15secs&quot; --containerizers=&quot;docker,mesos&quot; --default_role=&quot;*&quot; --disk_watch_interval=&quot;1mins&quot; --docker=&quot;docker&quot; --docker_kill_orphans=&quot;true&quot; --docker_remove_delay=&quot;1hrs&quot; --docker_socket=&quot;/var/run/docker.sock&quot; --docker_stop_timeout=&quot;0ns&quot; --enforce_container_disk_quota=&quot;false&quot; --executor_environment_variables=&quot;{&quot;LD_LIBRARY_PATH&quot;:&quot;\/opt\/mesosphere\/lib&quot;,&quot;PATH&quot;:&quot;\/usr\/bin&quot;,&quot;SASL_PATH&quot;:&quot;\/opt\/mesosphere\/lib\/sasl2&quot;,&quot;SHELL&quot;:&quot;\/usr\/bin\/bash&quot;}&quot; --executor_registration_timeout=&quot;5mins&quot; --executor_shutdown_grace_period=&quot;5secs&quot; --fetcher_cache_dir=&quot;/tmp/mesos/fetch&quot; --fetcher_cache_size=&quot;2GB&quot; --frameworks_home=&quot;&quot; --gc_delay=&quot;2days&quot; --gc_disk_headroom=&quot;0.1&quot; --hadoop_home=&quot;&quot; --help=&quot;false&quot; --hostname_lookup=&quot;false&quot; --image_provisioner_backend=&quot;copy&quot; --initialize_driver_logging=&quot;true&quot; --ip_discovery_command=&quot;/opt/mesosphere/bin/detect_ip&quot; --isolation=&quot;cgroups/cpu,cgroups/mem&quot; --launcher_dir=&quot;/opt/mesosphere/packages/mesos--30d3fbeb6747bb086d71385e3e2e0eb74ccdcb8b/libexec/mesos&quot; --log_dir=&quot;/var/log/mesos&quot; --logbufsecs=&quot;0&quot; --logging_level=&quot;INFO&quot; --master=&quot;zk://leader.mesos:2181/mesos&quot; --oversubscribed_resources_interval=&quot;15secs&quot; --perf_duration=&quot;10secs&quot; --perf_interval=&quot;1mins&quot; --port=&quot;5051&quot; --qos_correction_interval_min=&quot;0ns&quot; --quiet=&quot;false&quot; --recover=&quot;reconnect&quot; --recovery_timeout=&quot;15mins&quot; --registration_backoff_factor=&quot;1secs&quot; --resource_monitoring_interval=&quot;1secs&quot; --resources=&quot;ports:[1025-2180,2182-3887,3889-5049,5052-8079,8082-8180,8182-32000]&quot; --revocable_cpu_low_priority=&quot;true&quot; --sandbox_directory=&quot;/mnt/mesos/sandbox&quot; --slave_subsystems=&quot;cpu,memory&quot; --strict=&quot;true&quot; --switch_user=&quot;true&quot; --systemd_runtime_directory=&quot;/run/systemd/system&quot; --version=&quot;false&quot; --work_dir=&quot;/var/lib/mesos/slave&quot;
+mesos-slave[1080]: I1118 14:00:43.688711  1080 slave.cpp:211] Moving slave process into its own cgroup for subsystem: cpu
+mesos-slave[1080]: 2015-11-18 14:00:43,689:1080(0x7f9b526c4700):ZOO_INFO@check_events@1703: initiated connection to server [10.0.7.166:2181]
+mesos-slave[1080]: I1118 14:00:43.692811  1080 slave.cpp:211] Moving slave process into its own cgroup for subsystem: memory
+mesos-slave[1080]: I1118 14:00:43.697872  1080 slave.cpp:354] Slave resources: ports(*):[1025-2180, 2182-3887, 3889-5049, 5052-8079, 8082-8180, 8182-32000]; cpus(*):4; mem(*):14019; disk(*):32541
+mesos-slave[1080]: I1118 14:00:43.697916  1080 slave.cpp:390] Slave hostname: 10.0.1.108
+mesos-slave[1080]: I1118 14:00:43.697928  1080 slave.cpp:395] Slave checkpoint: true
+</code></pre>
+<h2 id="dcos-marathon"><a class="content__anchor" href="#dcos-marathon" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="dcos-marathon"></a>DC/OS Marathon</h2>
+<p>DC/OS Marathon is started on the master nodes. The native Marathon instance is the “init system” for DC/OS. It starts and monitors applications and services.</p>
+<h3 id="troubleshooting-3"><a class="content__anchor" href="#troubleshooting-3" aria-hidden="true"><i data-feather="bookmark"></i></a>Troubleshooting</h3>
+<ul>
+<li>
+<p>Go to the <strong>Services &gt; Services</strong> tab on the DC/OS Dashboard and view status.</p>
+</li>
+<li>
+<p>SSH to your master node and enter this command to view the logs from boot time:</p>
+<pre><code class="language-bash">journalctl -u dcos-marathon -b
+</code></pre>
+</li>
+</ul>
+<p>For example, here is a snippet of the DC/OS Marathon log as it converges to a successful state:</p>
+<pre><code>java[1288]: I1118 13:59:39.125041  1363 group.cpp:331] Group process (group(1)@10.0.7.166:48531) connected to ZooKeeper
+java[1288]: I1118 13:59:39.125100  1363 group.cpp:805] Syncing group operations: queue size (joins, cancels, datas) = (0, 0, 0)
+java[1288]: I1118 13:59:39.125121  1363 group.cpp:403] Trying to create path '/mesos' in ZooKeeper
+java[1288]: [2015-11-18 13:59:39,130] INFO Scheduler actor ready (mesosphere.marathon.MarathonSchedulerActor:marathon-akka.actor.default-dispatcher-5)
+java[1288]: I1118 13:59:39.147804  1363 detector.cpp:156] Detected a new leader: (id='1')
+java[1288]: I1118 13:59:39.147924  1363 group.cpp:674] Trying to get '/mesos/json.info_0000000001' in ZooKeeper
+java[1288]: I1118 13:59:39.148727  1363 detector.cpp:481] A new leading master (UPID=master@10.0.7.166:5050) is detected
+java[1288]: I1118 13:59:39.148787  1363 sched.cpp:262] New master detected at master@10.0.7.166:5050
+java[1288]: I1118 13:59:39.148952  1363 sched.cpp:272] No credentials provided. Attempting to register without authentication
+java[1288]: I1118 13:59:39.150403  1363 sched.cpp:641] Framework registered with cdcb6222-65a1-4d60-83af-33dadec41e92-0000
+</code></pre>
+<h2 id="gen-resolvconf"><a class="content__anchor" href="#gen-resolvconf" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="gen-resolvconf"></a>gen_resolvconf</h2>
+<p>gen_resolvconf is started. This is a service that helps the agent nodes locate the master nodes. It updates <code>/etc/resolv.conf</code> so that agents can use the Mesos-DNS service for service discovery. gen_resolvconf uses either an internal load balancer, vrrp, or a static list of masters to locate the master nodes. For more information, see the <code>master_discovery</code> <a href="/dcosdocs/mesosphere/dcos/2.1/installing/production/advanced-configuration/configuration-reference/">configuration parameter</a>.</p>
+<h3 id="troubleshooting-4"><a class="content__anchor" href="#troubleshooting-4" aria-hidden="true"><i data-feather="bookmark"></i></a>Troubleshooting</h3>
+<ul>
+<li>
+<p>When gen_resolvconf is up and running, you can view <code>/etc/resolv.conf</code> contents. It should contain one or more IP addresses for the master nodes, and the optional external DNS server.</p>
+</li>
+<li>
+<p>SSH to your master node and enter this command to view the logs from boot time:</p>
+<pre><code class="language-bash">journalctl -u dcos-gen-resolvconf -b
+</code></pre>
+</li>
+</ul>
+<p>For example, here is a snippet of the gen_resolvconf log as it converges to a successful state:</p>
+<pre><code>systemd[1]: Started Update systemd-resolved for mesos-dns.
+systemd[1]: Starting Update systemd-resolved for mesos-dns...
+gen_resolvconf.py[1073]: options timeout:1
+gen_resolvconf.py[1073]: options attempts:3
+gen_resolvconf.py[1073]: nameserver 10.0.7.166
+gen_resolvconf.py[1073]: nameserver 10.0.0.2
+gen_resolvconf.py[1073]: Updating /etc/resolv.conf
+</code></pre>
+<h2 id="mesos-master-process"><a class="content__anchor" href="#mesos-master-process" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="mesos-master-process"></a>Mesos master process</h2>
+<p>The Mesos master process starts on the master nodes. The <code>mesos-master</code> process runs on a node in the cluster and orchestrates the running of tasks on agents by receiving resource offers from agents and offering those resources to registered services, such as Marathon or Chronos. For more information, see the <a href="https://open.mesosphere.com/reference/mesos-master/">Mesos Master Configuration</a> documentation.</p>
+<h3 id="troubleshooting-5"><a class="content__anchor" href="#troubleshooting-5" aria-hidden="true"><i data-feather="bookmark"></i></a>Troubleshooting</h3>
+<ul>
+<li>
+<p>Go directly to the Mesos web interface and view its status at <code>&lt;master-hostname&gt;/mesos</code>.</p>
+</li>
+<li>
+<p>SSH to your master node and enter this command to view the logs from boot time:</p>
+<pre><code class="language-bash">journalctl -u dcos-mesos-master -b
+</code></pre>
+</li>
+</ul>
+<p>For example, here is a snippet of the Mesos master log as it converges to a successful state:</p>
+<pre><code>mesos-master[1250]: I1118 13:59:33.890916  1250 master.cpp:376] Master cdcb6222-65a1-4d60-83af-33dadec41e92 (10.0.7.166) started on 10.0.7.166:5050
+mesos-master[1250]: I1118 13:59:33.890945  1250 master.cpp:378] Flags at startup: --allocation_interval=&quot;1secs&quot; --allocator=&quot;HierarchicalDRF&quot; --authenticate=&quot;false&quot; --authenticate_slaves=&quot;false&quot; --authenticators=&quot;crammd5&quot; --authorizers=&quot;local&quot; --cluster=&quot;pool-880dfdbf0f2845bf8191&quot; --framework_sorter=&quot;drf&quot; --help=&quot;false&quot; --hostname_lookup=&quot;false&quot; --initialize *driver_logging=&quot;true&quot; --ip_discovery_command=&quot;/opt/mesosphere/bin/detect_ip&quot; --log_auto_initialize=&quot;true&quot; --log_dir=&quot;/var/log/mesos&quot; --logbufsecs=&quot;0&quot; --logging_level=&quot;INFO&quot; --max* slave_ping_timeouts=&quot;5&quot; --port=&quot;5050&quot; --quiet=&quot;false&quot; --quorum=&quot;1&quot; --recovery_slave_removal_limit=&quot;100%&quot; --registry=&quot;replicated_log&quot; --registry_fetch_timeout=&quot;1mins&quot; --registry_sto re_timeout=&quot;5secs&quot; --registry_strict=&quot;false&quot; --roles=&quot;slave_public&quot; --root_submissions=&quot;true&quot; --slave_ping_timeout=&quot;15secs&quot; --slave_reregister_timeout=&quot;10mins&quot; --user_sorter=&quot;drf&quot; --version=&quot;false&quot; --webui_dir=&quot;/opt/mesosphere/packages/mesos--30d3fbeb6747bb086d71385e3e2e0eb74ccdcb8b/share/mesos/webui&quot; --weights=&quot;slave_public=1&quot; --work_dir=&quot;/var/lib/mesos/mas ter&quot; --zk=&quot;zk://127.0.0.1:2181/mesos&quot; --zk_session_timeout=&quot;10secs&quot; mesos-master[1250]: 2015-11-18 13:59:33,891:1250(0x7f14427fc700):ZOO_INFO@check_events@1750: session establishment complete on server [127.0.0.1:2181], sessionId=0x1511ae440bc0001, negotiated timeout=10000
+</code></pre>
+<h2 id="mesos-dns"><a class="content__anchor" href="#mesos-dns" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="mesos-dns"></a>Mesos-DNS</h2>
+<p>Mesos-DNS is started on the DC/OS master nodes. Mesos-DNS provides service discovery within the cluster. Optionally, Mesos-DNS can forward unhandled requests to an external DNS server, depending on how the cluster is configured. For example, anything that does not end in <code>.mesos</code> will be forwarded to the external resolver.</p>
+<h3 id="troubleshooting-6"><a class="content__anchor" href="#troubleshooting-6" aria-hidden="true"><i data-feather="bookmark"></i></a>Troubleshooting</h3>
+<ul>
+<li>
+<p>SSH to your master node and enter this command to view the logs from boot time:</p>
+<pre><code class="language-bash">journalctl -u dcos-mesos-dns -b
+</code></pre>
+</li>
+</ul>
+<p>For example, here is a snippet of the Mesos-DNS log as it converges to a successful state:</p>
+<pre><code>mesos-dns[1197]: I1118 13:59:34.763885 1197 detect.go:135] changing leader node from &quot;&quot; -&gt; &quot;json.info_0000000001&quot;
+mesos-dns[1197]: I1118 13:59:34.764537 1197 detect.go:145] detected master info: &amp;MasterInfo{Id:*cdcb6222-65a1-4d60-83af-33dadec41e92,Ip:*2785476618,Port:*5050,Pid:*master@10.0.7.166:5050,Hostname:*10\.0.7.166,Version:*0\.25.0,Address:&amp;Address{Hostname:*10\.0.7.166,Ip:*10\.0.7.166,Port:*5050,XXX_unrecognized:[],},XXX_unrecognized:[],}
+mesos-dns[1197]: VERY VERBOSE: 2015/11/18 13:59:34 masters.go:47: Updated leader: &amp;MasterInfo{Id:*cdcb6222-65a1-4d60-83af-33dadec41e92,Ip:*2785476618,Port:*5050,Pid:*master@10.0.7.166:5050,Hostname:*10\.0.7.166,Version:*0\.25.0,Address:&amp;Address{Hostname:*10\.0.7.166,Ip:*10\.0.7.166,Port:*5050,XXX_unrecognized:[],},XXX_unrecognized:[],}
+mesos-dns[1197]: VERY VERBOSE: 2015/11/18 13:59:34 main.go:76: new masters detected: [10.0.7.166:5050]
+mesos-dns[1197]: VERY VERBOSE: 2015/11/18 13:59:34 generator.go:70: Zookeeper says the leader is: 10.0.7.166:5050
+mesos-dns[1197]: VERY VERBOSE: 2015/11/18 13:59:34 generator.go:162: reloading from master 10.0.7.166
+mesos-dns[1197]: I1118 13:59:34.766005 1197 detect.go:219] notifying of master membership change: [&amp;MasterInfo{Id:*cdcb6222-65a1-4d60-83af-33dadec41e92,Ip:*2785476618,Port:*5050,Pid:*master@10.0.7.166:5050,Hostname:*10\.0.7.166,Version:*0\.25.0,Address:&amp;Address{Hostname:*10\.0.7.166,Ip:*10\.0.7.166,Port:*5050,XXX_unrecognized:[],},XXX_unrecognized:[],}]
+mesos-dns[1197]: VERY VERBOSE: 2015/11/18 13:59:34 masters.go:56: Updated masters: [&amp;MasterInfo{Id:*cdcb6222-65a1-4d60-83af-33dadec41e92,Ip:*2785476618,Port:*5050,Pid:*master@10.0.7.166:5050,Hostname:*10\.0.7.166,Version:*0\.25.0,Address:&amp;Address{Hostname:*10\.0.7.166,Ip:*10\.0.7.166,Port:*5050,XXX_unrecognized:[],},XXX_unrecognized:[],}]
+mesos-dns[1197]: I1118 13:59:34.766124 1197 detect.go:313] resting before next detection cycle
+</code></pre>
+<h2 id="zookeeper-and-exhibitor"><a class="content__anchor" href="#zookeeper-and-exhibitor" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="zookeeper-and-exhibitor"></a>ZooKeeper and Exhibitor</h2>
+<p>ZooKeeper and Exhibitor start on the master nodes. The Exhibitor storage location must be configured properly for this to work. For more information, see the <a href="/dcosdocs/mesosphere/dcos/2.1/installing/production/advanced-configuration/configuration-reference/#exhibitor-storage-backend">exhibitor_storage_backend</a> parameter.</p>
+<p>DC/OS uses ZooKeeper, a high-performance coordination service to manage the installed DC/OS services. Exhibitor automatically configures ZooKeeper on the master nodes during your DC/OS installation. For more information, see <a href="/dcosdocs/mesosphere/dcos/2.1/installing/production/advanced-configuration/configuration-reference/">Configuration Parameters</a>.</p>
+<ul>
+<li>
+<p>Go to the Exhibitor web interface and view status at <code>&lt;master-hostname&gt;/exhibitor</code>.</p>
+</li>
+<li>
+<p>SSH to your master node and enter this command to view the logs from boot time:</p>
+<pre><code class="language-bash">journalctl -u dcos-exhibitor -b
+</code></pre>
+</li>
+</ul>
+<p>For example, here is a snippet of the Exhibitor log as it converges to a successful state:</p>
+<pre><code>INFO  com.netflix.exhibitor.core.activity.ActivityLog  Automatic Instance Management will change the server list:  ==&gt; 1:10.0.7.166 [ActivityQueue-0]
+INFO  com.netflix.exhibitor.core.activity.ActivityLog  State: serving [ActivityQueue-0]
+INFO  com.netflix.exhibitor.core.activity.ActivityLog  Server list has changed [ActivityQueue-0]
+INFO  com.netflix.exhibitor.core.activity.ActivityLog  Attempting to stop instance [ActivityQueue-0]
+INFO  com.netflix.exhibitor.core.activity.ActivityLog  Attempting to start/restart ZooKeeper [ActivityQueue-0]
+INFO  com.netflix.exhibitor.core.activity.ActivityLog  Kill attempted result: 0 [ActivityQueue-0]
+INFO  com.netflix.exhibitor.core.activity.ActivityLog  Process started via: /opt/mesosphere/active/exhibitor/usr/zookeeper/bin/zkServer.sh [ActivityQueue-0]
+ERROR com.netflix.exhibitor.core.activity.ActivityLog  ZooKeeper Server: JMX enabled by default [pool-3-thread-1]         ERROR com.netflix.exhibitor.core.activity.ActivityLog  ZooKeeper Server: Using config: /opt/mesosphere/active/exhibitor/usr/zookeeper/bin/../conf/zoo.cfg [pool-3-thread-1]
+INFO  com.netflix.exhibitor.core.activity.ActivityLog  ZooKeeper Server: Starting zookeeper ... STARTED [pool-3-thread-3]
+INFO  com.netflix.exhibitor.core.activity.ActivityLog  Cleanup task completed [pool-3-thread-6]
+INFO  com.netflix.exhibitor.core.activity.ActivityLog  Cleanup task completed [pool-3-thread-9]
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#general-troubleshooting-approach">General troubleshooting approach</a></li><li class="content__sections-item content__sections-item--h2"><a href="#ip-detect-script">IP detect script</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dns-resolvers">DNS resolvers</a></li><li class="content__sections-item content__sections-item--h1"><a href="#component-logs">Component logs</a></li><li class="content__sections-item content__sections-item--h2"><a href="#admin-router">Admin Router</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-agent-nodes">DC/OS agent nodes</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-marathon">DC/OS Marathon</a></li><li class="content__sections-item content__sections-item--h2"><a href="#gen-resolvconf">gen_resolvconf</a></li><li class="content__sections-item content__sections-item--h2"><a href="#mesos-master-process">Mesos master process</a></li><li class="content__sections-item content__sections-item--h2"><a href="#mesos-dns">Mesos-DNS</a></li><li class="content__sections-item content__sections-item--h2"><a href="#zookeeper-and-exhibitor">ZooKeeper and Exhibitor</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Scripting and templating your jobs - D2iQ Docs</title><meta name="description" content="&lt;h1&gt;About scripting and templating your jobs&lt;/h1&gt;"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Jenkins Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/jenkins/3.6.1-2.190.1/script-template-job-dsl">Jenkins 3.6.1-2.190.1</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/jenkins/3.6.0-2.190.1/script-template-job-dsl">Jenkins 3.6.0-2.190.1</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/jenkins/3.5.4-2.150.1/script-template-job-dsl">Jenkins 3.5.4-2.150.1</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/jenkins/3.5.3-2.150.1/script-template-job-dsl">Jenkins 3.5.3-2.150.1</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/jenkins/3.5.2-2.107.2/script-template-job-dsl">Jenkins 3.5.2-2.107.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/jenkins/4.0.0-2.204.6">Jenkins for DC/OS</a></li></ul><div class="toggle"><p><span class="title">Jenkins</span><span class="version"> 3.5.4-2.150.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/jenkins/3.5.4-2.150.1/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/jenkins/3.5.4-2.150.1/quickstart/">Quickstart</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/jenkins/3.5.4-2.150.1/jenkins-auth/">Provisioning Jenkins</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/jenkins/3.5.4-2.150.1/custom-install/">Customizing your install</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/jenkins/3.5.4-2.150.1/script-template-job-dsl/">Scripting and templating your jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/jenkins/3.5.4-2.150.1/custom-docker/">Customizing your Docker container</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/jenkins/3.5.4-2.150.1/advanced-configuration/">Advanced Configuration</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/jenkins/3.5.4-2.150.1/upgrade/">Upgrading</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/jenkins/3.5.4-2.150.1/uninstall/">Uninstalling</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Scripting and templating your jobs</h1></div><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/jenkins/3.5.4-2.150.1/script-template-job-dsl/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><h1>About scripting and templating your jobs</h1>
+<p>Over a period of time, the creation and maintenance of hundreds of Jenkins jobs can become a burden. The Job DSL plugin allows for jobs to be scripted and templated, allowing entire pipelines to be defined within code rather than manually. In addition, once pipelines are defined in code, you can backup and version control your job configurations.</p>
+<p>This is a tutorial for building Jenkins job pipelines using the Jenkins Job DSL plugin. This tutorial will offer a brief overview of the Job DSL plugin and walks you through creating a new Jenkins seed job, templating the creation of additional pipeline jobs, and storing job configurations in a version control system.</p>
+<p>The tutorial assumes that you have a working Jenkins for DC/OS installation that includes Job DSL.</p>
+<h1>The seed job</h1>
+<p>A “seed job” is an initial Jenkins job template that is used to build additional jobs. The seed job is a standard “free-style” job, meaning it includes all the standard benefits of any Jenkins job: history, logs, emails, etc.</p>
+<p>The first step is to manually create a seed job via the Jenkins UI. Click <strong>New Item</strong>, give your seed job a name (you’re using <strong>Job DSL Tutorial</strong>), select <strong>Freestyle project</strong>, and click <strong>OK</strong>.</p>
+<img src="/dcosdocs/mesosphere/dcos/services/jenkins/img/velocity-jobdsl-seed-job.png" alt="velocity-jobdsl-seed-job.png" />
+<p>Next, define which project repository to monitor, how often, and the steps associated with testing the project.</p>
+<p>For this tutorial, we’ll be checking the <code>mesosphere/jenkins-mesos</code> repository every 15 minutes and running a simple directory listing (<code>ls -l</code>) of the repository.</p>
+<p>Scroll down to the “Build” section, click “Add build step”, and select “Process Job DSLs” from the dropdown list. For this build step, select “Use the provided DSL script” and paste the following code into the provided text box.</p>
+<pre><code>def owner = 'mesosphere'
+def project = 'jenkins-mesos'
+def jobName = "${owner}-${project}".replaceAll('/','-')
+job(jobName) {
+  scm {
+      git {
+          remote {
+            github("${owner}/${project}")
+          }
+          createTag(false)
+      }
+  }
+  triggers {
+      scm('*/15 * * * *')
+  }
+  steps {
+      shell('ls -l')
+  }
+}
+</code></pre>
+<img src="/dcosdocs/mesosphere/dcos/services/jenkins/img/velocity-jobdsl-add-build-step.png" alt="velocity-jobdsl-add-build-step.png" />
+<p><strong>Note:</strong> Rather than pasting inline, you can also version control your Job DSL scripts in a Git repository. To do so, have the seed job clone the Git repository and use the <strong>Look on Filesystem</strong> option to process one or more of the Job DSL scripts within the build’s workspace.</p>
+<p>Click <strong>Save</strong> and you’ll be presented with an overview of the seed job you’ve just created.</p>
+<img src="/dcosdocs/mesosphere/dcos/services/jenkins/img/velocity-jobdsl-seed-overview.png" alt="velocity-jobdsl-seed-overview.png" />
+<p>Click <strong>Build Now</strong> on the seed job. A new <strong>Generated Jobs</strong> folder will appear in the overview containing the job you’ve justed templated, <code>mesosphere-jenkins-mesos</code>.</p>
+<img src="/dcosdocs/mesosphere/dcos/services/jenkins/img/velocity-jobdsl-seed-overview-generated.png" alt="velocity-jobdsl-seed-overview-generated.png" />
+<p>You can follow the link to the new job and see its relation to the seed job in the overview.</p>
+<img src="/dcosdocs/mesosphere/dcos/services/jenkins/img/velocity-jobdsl-generated-overview.png" alt="velocity-jobdsl-generated-overview.png" />
+<p>In the seed job, you configured the <code>mesosphere-jenkins-mesos</code> job to trigger every 15 minutes. Rather than wait for this trigger, let’s click <strong>Build Now</strong> to see the resulting console build log, which is a directory listing (<code>ls -l</code>) of the specified repository.</p>
+<img src="/dcosdocs/mesosphere/dcos/services/jenkins/img/velocity-jobdsl-generated-console.png" alt="velocity-jobdsl-generated-console.png" />
+<h1>Extending the seed job</h1>
+<p>To show the power of the Job DSL let’s extend the functionality of the seed job to monitor all branches of our target repository (<code>mesosphere/jenkins-mesos</code>).</p>
+<p>Go back to the <strong>Job DSL Tutorial</strong> seed job and click <strong>Configure</strong>. Modify the code in the <strong>Process Job DSLs</strong> text box to find all repository branches and iterate over each one:</p>
+<pre><code>def owner = 'mesosphere'
+def project = 'jenkins-mesos'
+def branchApi = new URL("https://api.github.com/repos/${owner}/${project}/branches")
+def branches = new groovy.json.JsonSlurper().parse(branchApi.newReader())
+branches.each {
+  def branchName = it.name
+  def jobName = "${owner}-${project}-${branchName}".replaceAll('/','-')
+  job(jobName) {
+    scm {
+        git {
+            remote {
+              github("${owner}/${project}")
+            }
+            branch("${branchName}")
+            createTag(false)
+        }
+    }
+    triggers {
+        scm('*/15 * * * *')
+    }
+    steps {
+        shell('ls -l')
+    }
+  }
+}
+</code></pre>
+<p>Click <strong>Save</strong> button, then <strong>Build Now</strong>. You should see three new <strong>Generated Items</strong>, one for each existing branch of the <code>mesosphere/jenkins-mesos</code> repository.</p>
+<img src="/dcosdocs/mesosphere/dcos/services/jenkins/img/velocity-jobdsl-generated-per-branch.png" alt="velocity-jobdsl-generated-per-branch.png" />
+<h1>Further reading</h1>
+<p>That’s it! While this tutorial is meant to show the simplest workflow possible using seed jobs, the Job DSL provides the full power of the Groovy scripting language. See the following links for more information:</p>
+<ul>
+<li><a href="https://jenkinsci.github.io/job-dsl-plugin/">https://jenkinsci.github.io/job-dsl-plugin/</a></li>
+<li><a href="https://github.com/jenkinsci/job-dsl-plugin/wiki/Real-World-Examples">https://github.com/jenkinsci/job-dsl-plugin/wiki/Real-World-Examples</a></li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#about-scripting-and-templating-your-jobs">About scripting and templating your jobs</a></li><li class="content__sections-item content__sections-item--h1"><a href="#the-seed-job">The seed job</a></li><li class="content__sections-item content__sections-item--h1"><a href="#extending-the-seed-job">Extending the seed job</a></li><li class="content__sections-item content__sections-item--h1"><a href="#further-reading">Further reading</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

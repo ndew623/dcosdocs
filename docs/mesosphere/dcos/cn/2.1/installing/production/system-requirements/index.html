@@ -1,0 +1,379 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>系统要求 - D2iQ Docs</title><meta name="description" content="DC/OS 部署的软硬件要求"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.1/installing/production/system-requirements">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/system-requirements">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/production/system-requirements">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/system-requirements">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/"><i data-feather="chevron-right"></i>概述</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/"><i data-feather="chevron-right"></i>安装</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/evaluation/"><i data-feather="chevron-right"></i>云安装</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/"><i data-feather="chevron-right"></i>本地安装</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/virt-infra/">虚拟基础架构</a></li><li class="active active-on"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/system-requirements/"><i data-feather="chevron-right"></i>系统要求</a></li><ul><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/system-requirements/docker-centos/">CenTos/RHEL 的 Docker</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/system-requirements/zookeeper-requirements/">ZooKeeper 资源</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/system-requirements/ports/">端口</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/system-requirements/partitions/">磁盘分区</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/system-requirements/custom-ami/">自定义 AMI</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/system-requirements/azure-recommendations/">Azure</a></li></ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/deploying-dcos/"><i data-feather="chevron-right"></i>部署 DC/OS</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/advanced-configuration/"><i data-feather="chevron-right"></i>高级配置</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/dcos-ansible/"><i data-feather="chevron-right"></i>带 Ansible 的 DC/OS</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/patching/">打补丁</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/upgrading/">升级</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/uninstalling/">卸载</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/installation-faq/">常见问题</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/troubleshooting/">故障排除</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">系统要求</h1></div><h4 class="content__header-description">DC/OS 部署的软硬件要求</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/system-requirements/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>DC/OS 群集由 <strong>管理节点</strong> 和 <strong>代理节点</strong> 这两种节点组成。代理节点可以是 <strong>公共代理节点</strong> 或 <strong>专用代理节点</strong>。公共代理节点通过负载均衡器为群集中的服务提供北南（外部向内部）的访问。专用代理主机托管集群上部署的容器和服务。除管理和代理群集节点以外，每个 DC/OS 安装还包括一个用于 DC/OS 安装和升级文件的独立 ** bootstrap 节点**。一些硬件和软件要求适用于所有节点。其他要求特定于要部署的节点类型。</p>
+<h1 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>硬件前提条件</h1>
+<p>硬件前提条件是单个 bootstrap 节点、Mesos 管理节点和 Mesos 代理节点。</p>
+<h2 id="bootstrap"><a class="content__anchor" href="#bootstrap" aria-hidden="true"><i data-feather="bookmark"></i></a>bootstrap 节点</h2>
+<ul>
+<li>DC/OS 装置在一个 <strong>bootstrap 节点</strong> 上运行，该节点带有两个核心、16 GB RAM 和 60 GB HDD。</li>
+<li>bootstrap 节点仅在安装和升级过程中使用，因此没有针对高性能存储或分离挂载点的具体建议。</li>
+</ul>
+<p class="message--note"><strong>注意：</strong>bootstrap 节点必须与群集节点分开。</p>
+<a name="CommonReqs">
+<h2 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>群集中的所有管理节点和代理节点</h2>
+<p>在安装期间，DC/OS 群集节点是指定的 Mesos 管理节点和代理节点。支持的操作系统和环境列于 <a href="/dcosdocs/mesosphere/dcos/cn/version-policy/">版本政策页面</a>.</p>
+<p>在群集节点上安装 DC/OS 时，所需文件安装在 <code>/opt/mesosphere</code> 目录中。您可以安装 DC/OS 之前创建 <code>/opt/mesosphere</code> 目录，但它必须是空目录或指向空目录的链接。DC/OS 可以通过在挂载卷上创建空目录，在 <code>/opt/mesosphere</code> 处创建指向空目录的链接来安装在单独的卷挂载上。</p>
+<p>应当验证对群集中所有管理节点和代理节点的以下要求：</p>
+<ul>
+<li>每个节点都必须拥有对公共 Docker 存储库或内部 Docker 注册表的网络访问权限。</li>
+<li>如果节点操作系统为 RHEL 7 或 CentOS 7，则必须停止并禁用<code>firewalld</code>守护程序。如需更多信息，请参见 <a href="#FirewallDaemon">禁用 RedHat 或 CentOS 上的防火墙守护程序</a>。</li>
+<li>必须停止并禁用 DNSmasq 进程，DC/OS 才能访问端口 53。如需更多信息，请参见 <a href="#StopDNSmasq">停止 DNSmasq 进程</a>。</li>
+<li>您未使用 <code>noexec</code> 将 <code>/tmp</code> 目录安装在您打算使用 DC/OS CLI 的任何系统上。</li>
+<li>您有足够的磁盘将群集的信息存储在 <code>var/lib/mesos</code> 目录中。</li>
+<li>您不应远程挂载 <code>/var/lib/mesos</code> 或 Docker 存储 <code>/var/lib/docker</code> 目录。</li>
+</ul>
+<a name="FirewallDaemon">
+<h3 id="red-hat-centos"><a class="content__anchor" href="#red-hat-centos" aria-hidden="true"><i data-feather="bookmark"></i></a>禁用 Red Hat 或 CentOS 上的防火墙守护程序</h3>
+<p>这是一个已知的 <a href="https://github.com/docker/docker/issues/16137" target="_blank">Docker 问题</a>，<code>firewalld</code> 进程与 Docker 的交互不佳。有关此问题的更多信息，请参阅 <a href="https://docs.docker.com/v1.6/installation/centos/#firewalld" target="_blank">Docker CentOS firewalld</a> 文档。</p>
+<p>要停止并禁用 <code>firewalld</code>，请运行以下命令：</p>
+<pre><code class="language-bash">sudo systemctl stop firewalld &amp;&amp; sudo systemctl disable firewalld
+</code></pre>
+<a name="StopDNSmasq">
+<h3 id="dnsmasq"><a class="content__anchor" href="#dnsmasq" aria-hidden="true"><i data-feather="bookmark"></i></a>停止 DNSmasq 进程</h3>
+<p>DC/OS 群集需要访问端口 53。为防止端口冲突，应运行以下命令来停止并禁用 <code>dnsmasq</code> 进程：</p>
+<pre><code class="language-bash">sudo systemctl stop dnsmasq &amp;&amp; sudo systemctl disable dnsmasq.service
+</code></pre>
+<h2 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>管理节点要求</h2>
+<p>下表列出了管理节点的硬件要求：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>最低</th>
+<th>推荐</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>节点数</td>
+<td>1*</td>
+<td>3 或 5</td>
+</tr>
+<tr>
+<td>处理器</td>
+<td>4 核</td>
+<td>4 核</td>
+</tr>
+<tr>
+<td>内存</td>
+<td>32 GB RAM</td>
+<td>32 GB RAM</td>
+</tr>
+<tr>
+<td>硬盘</td>
+<td>120 GB</td>
+<td>120 GB</td>
+</tr>
+</tbody>
+</table>
+<p>* 对于业务关键部署，需要三个管理节点，而不是一个管理节点。</p>
+<p>管理节点上有许多混合工作负载。预计持续可用或被视为业务关键的工作负载只能在具有至少三个管理节点的 DC/OS 群集上运行。有关高可用性要求的更多信息，请参阅 <a href="/dcosdocs/mesosphere/dcos/2.1/overview/high-availability/">高可用性文档</a>。</p>
+<p>管理节点上混合工作负载的示例是 Mesos 复制日志和 ZooKeeper。某些情况下，混合工作负载定期需要与 <code>fsync</code> 同步，这可以生成许多昂贵的随机 I/O。我们建议如下：</p>
+<ul>
+<li>
+<p>使用固态硬盘 (SSD) 或非易失性快速存储器 (NVMe) 设备进行快速、本地连接的存储。为降低 I/O 延迟问题的可能性，固态硬盘应当尽可能本地连接到物理机。您还应确保将固态硬盘 (SSD) 或非易失性快速存储器 (NVMe) 设备用于托管管理节点重复日志的文件系统。</p>
+<p>在规划存储要求时，请记住，应避免使用单个存储区域网络 (SAN) 设备和 NFS 来连接群集中的节点。这种类型的架构引入延迟的可能性比使用本地存储的可能性要高，还会在原本应该是分布式系统的系统中引入单一故障点。网络延迟和带宽问题可能导致客户端会话超时，并且不利地影响 [DC/OS] 群集性能和可靠性。</p>
+</li>
+<li>
+<p>带备用电池备用单元 (BBU) 的 RAID 控制器。</p>
+</li>
+<li>
+<p>在回写模式下配置的 RAID 控制器缓存。</p>
+</li>
+<li>
+<p>如果可以分离存储挂载点，则建议在管理节点上使用以下存储挂载点。这些建议将通过隔离各种服务的 I/O 来优化繁忙 DC/OS 群集的性能。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">目录路径</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><em>/var/lib/dcos</em></td>
+<td style="text-align:left">管理节点上的大部分 I/O 将出现在此目录结构中。如果计划一个拥有数百个节点的群集或打算以较高速度部署和删除工作负载，则建议将此目录隔离到单独设备上的专用固态硬盘存储。</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>对于会发展到数千个节点的群集，建议将此目录结构进一步分解为具体服务的单个挂载点。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">目录路径</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><em>/var/lib/dcos/mesos/master</em></td>
+<td style="text-align:left">日志记录目录</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>/var/lib/dcos/cockroach</em></td>
+<td style="text-align:left">CockroachDB <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+<tr>
+<td style="text-align:left"><em>/var/lib/dcos/navstar</em></td>
+<td style="text-align:left">对于 Mnesia 数据库</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>/var/lib/dcos/secrets</em></td>
+<td style="text-align:left">密钥保管库 <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></td>
+</tr>
+<tr>
+<td style="text-align:left"><em>/var/lib/dcos/exec</em></td>
+<td style="text-align:left">各种 DC/OS 服务所需的临时文件。<em>/var/lib/dcos/exec</em> 目录不得在装载有 <code>noexec</code> 选项的卷上。</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>/var/lib/dcos/exhibitor</em></td>
+<td style="text-align:left">Zookeeper 数据库</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>/var/lib/dcos/exhibitor/zookeeper/transactions</em></td>
+<td style="text-align:left">ZooKeeper 事务日志对磁盘写入延迟非常敏感。如果只能提供有限的固态硬盘空间，则这是要放置的目录。这些日志至少必须要有 2 GB 空间。</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>代理节点要求</h2>
+<p>下表显示了代理节点的硬件要求。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>最低</th>
+<th>推荐</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>节点数</td>
+<td>1</td>
+<td>6 或更多</td>
+</tr>
+<tr>
+<td>处理器</td>
+<td>2 核</td>
+<td>2 核</td>
+</tr>
+<tr>
+<td>内存</td>
+<td>16 GB RAM</td>
+<td>16 GB RAM</td>
+</tr>
+<tr>
+<td>硬盘</td>
+<td>60 GB</td>
+<td>60 GB</td>
+</tr>
+</tbody>
+</table>
+<p>在规划代理节点的内存要求时，应确保代理已配置成可最式程序减少交换空间的使用。建议的最佳实践是优化群集性能并减少潜在资源消耗问题，以尽可能禁用群集中所有代理的内存交换。</p>
+<p>除 [群集中所有管理节点和代理节点] 中所述的要求以外(#CommonReqs)，代理节点必须：</p>
+<ul>
+<li>
+<p>带 20 GB 或更多可用空间的 <code>/var</code> 目录。此目录由沙盒用于 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/containerizers/">Docker 和 DC/OS 通用容器运行时</a>.</p>
+</li>
+<li>
+<p>请勿在您打算使用 DC/OS CLI 的系统上使用 <code>noexec</code> 来挂载 <code>/tmp</code> 目录，除非 TMPDIR 环境变量设置为 <code>/tmp/</code>. 以外的其他值。使用 <code>/tmp</code> 选项来挂载 <code>noexec</code> 可能会破坏 CLI 功能。</p>
+</li>
+<li>
+<p>如果计划一个拥有数百个代理节点的群集或打算以较高速度部署和删除服务，则建议将此目录隔离到专用固态硬盘存储。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">目录路径</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"><em>/var/lib/mesos/</em></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>对于会发展到数千个节点的群集，建议将此目录结构进一步分解为具体服务的单个挂载点。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">目录路径</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"><em>/var/lib/mesos/slave/slaves</em></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"><em>/var/lib/mesos/slave/volumes</em></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"><em>/var/lib/mesos/docker/store</em></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"><em>/var/lib/docker</em></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="-5"><a class="content__anchor" href="#-5" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="port-and-protocol"></a>端口和协议配置</h2>
+<ul>
+<li>必须在所有节点上启用安全外壳 (SSH)。</li>
+<li>必须在所有节点上启用互联网控制消息协议 (ICMP)。</li>
+<li>所有主机名（FQDN 和简短主机名）在 DNS 中必须可解析；正向和反向查找必须成功。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></li>
+<li>所有 DC/OS 节点主机名均应解析为<strong>本地可绑定</strong> IP 地址。大多数应用程序都必需通过绑定到本地 IP 地址来解析主机名才能正常运行。无法通过绑定到本地 IP 地址来解析节点主机名的应用程序可能无法以非常规方式运行或行事。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></li>
+<li>每个节点均可从 bootstrap 节点访问网络。</li>
+<li>每个节点均具有从本身到 DC/OS 群集中所有节点的不受限制 IP 至 IP 连接。</li>
+<li>所有端口都应打开，以进行从管理节点到代理节点的通信，反之亦然。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></li>
+<li>UDP 必须打开才能进入管理节点上的端口 53。为连接到群集，Mesos 代理节点服务 (<code>dcos-mesos-slave</code>) 使用此端口查找 <code>leader.mesos</code>.</li>
+</ul>
+<p>DC/OS 用户与管理节点之间的中介（例如，执行 SSL 终止的反向代理）要求：</p>
+<ul>
+<li>在向客户端发送任何数据之前，中介不必缓冲整个回复。</li>
+<li>检测到客户端消失时，中介还应该关闭相应的上游 TCP 连接（即，中介
+不应重复使用上游 HTTP 连接）。</li>
+</ul>
+<h2 id="-6"><a class="content__anchor" href="#-6" aria-hidden="true"><i data-feather="bookmark"></i></a>高速互联网访问</h2>
+<p>建议为 DC/OS 安装使用高速互联网连接。DC/OS 服务需要每秒至少 10 MBit。如果工件下载时间超过文件  中 MESOS_EXECUTOR_REGISTRATION_TIMEOUT 的值，某些 DC/OS 服务的安装将失败。<code>/opt/mesosphere/etc/mesos-slave-common</code>. MESOS_EXECUTOR_REGISTRATION_TIMEOUT 的默认值为 10 分钟。</p>
+<h1 id="-7"><a class="content__anchor" href="#-7" aria-hidden="true"><i data-feather="bookmark"></i></a>软件前提条件</h1>
+<ul>
+<li>
+<p>请参阅 <a href="https://raw.githubusercontent.com/dcos/dcos/1.10/cloud_images/centos7/install_prereqs.sh">install_preeqs.sh</a> 脚本，了解如何在 CentOS 7 主机上安装 DC/OS 管理节点和代理节点的软件要求的示例。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></p>
+</li>
+<li>
+<p>在 XFS 使用 OverlayFS 时，应使用 -n ftype=1 标记创建 XFS 卷。请参阅 <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/7.2_release_notes/technology-preview-file_systems">Red Hat</a> 以及 <a href="http://mesos.apache.org/documentation/latest/container-image/#provisioner-backends">mesos</a> 文档，以了解更多详情。</p>
+</li>
+</ul>
+<h2 id="docker"><a class="content__anchor" href="#docker" aria-hidden="true"><i data-feather="bookmark"></i></a>Docker 要求</h2>
+<p>Docker 必须安装在所有 bootstrap 和群集节点上。支持的 Docker 版本列于 <a href="/dcosdocs/mesosphere/dcos/cn/version-policy/">版本策略页面</a>.</p>
+<h3 id="-8"><a class="content__anchor" href="#-8" aria-hidden="true"><i data-feather="bookmark"></i></a>建议</h3>
+<ul>
+<li>
+<p>不要在 <code>devicemapper</code> 模式下使用 Docker <code>loop-lvm</code> 存储驱动。如需更多信息，请参阅 <a href="https://docs.docker.com/engine/userguide/storagedriver/device-mapper-driver/">Docker 和 Device Mapper 存储驱动</a>.</p>
+</li>
+<li>
+<p>在选择生产存储驱动时，最好是 <code>OverlayFS</code> 模式下的 <code>devicemapper</code> 或 <code>direct-lvm</code> 如需更多信息，请参阅 Docker 的 <a href="https://docs.docker.com/engine/userguide/storagedriver/selectadriver/" target="_blank">选择存储驱动</a>.</p>
+</li>
+<li>
+<p>使用  管理 CentOS 上的 Docker。<code>systemd</code>. <code>systemd</code> 将启动 Docker 并在它崩溃时帮助重启 Dcoker。</p>
+</li>
+<li>
+<p>以根用户（带 <code>sudo</code>）或 <a href="https://docs.docker.com/engine/installation/linux/centos/#create-a-docker-group" target="_blank">docker 用户组</a>.中用户的身份，运行 Docker 命令。</p>
+</li>
+</ul>
+<h3 id="-9"><a class="content__anchor" href="#-9" aria-hidden="true"><i data-feather="bookmark"></i></a>分配特定的安装</h3>
+<p>每个 Linux 系统分发都需要以特定方式安装 Docker：</p>
+<ul>
+<li><strong>CentOS/RHEL</strong> - <a href="/dcosdocs/mesosphere/dcos/2.1/installing/production/system-requirements/docker-centos/">从 Docker 的 Yum 存储库安装 Docker</a>。</li>
+<li><strong>CoreOS</strong> - 提供时 Docker 已预先安装和配置。</li>
+</ul>
+<p>如需更多信息，请参阅 Docker 的<a href="https://docs.docker.com/install/" target="_blank">分发特定的安装说明</a>.</p>
+<h2 id="sudo"><a class="content__anchor" href="#sudo" aria-hidden="true"><i data-feather="bookmark"></i></a>禁用 sudo 密码提示</h2>
+<p>要禁用 <code>sudo</code> 密码提示，必须将以下行添加到 <code>/etc/sudoers</code> 文件。</p>
+<pre><code class="language-bash">%wheel ALL=(ALL) NOPASSWD: ALL
+</code></pre>
+<p>或者，您也可以作为 <code>root</code> 用户执行 SSH。</p>
+<h2 id="-10"><a class="content__anchor" href="#-10" aria-hidden="true"><i data-feather="bookmark"></i></a>同步群集中所有节点的时间</h2>
+<p>网络时间协议 (NTP) 必须在群集中的所有节点上启用，以便时钟同步。默认情况下，在 DC/OS 启动期间，如果未启用，将会出现错误。您可以通过运行以下一个命令来检查 NTP 是否启用，具体取决于操作系统和配置：</p>
+<pre><code class="language-bash">ntptime
+adjtimex -p
+timedatectl
+</code></pre>
+<h2 id="bootstrap-2"><a class="content__anchor" href="#bootstrap-2" aria-hidden="true"><i data-feather="bookmark"></i></a>bootstrap 节点</h2>
+<p>在安装 DC/OS 之前，您<strong>必须</strong>确保 bootstrap 节点具备以下前提条件。</p>
+<p class="message--important"><strong>重要信息：</strong>如果您指定 `exhibitor_storage_backend: zookeeper`，bootstrap 节点将是群集的永久部分。有了 `exhibitor_storage_backend: zookeeper`，Mesos 管理节点的领导者状态和领导者选举将在 bootstrap 节点上的 Exhibitor ZooKeeper 中维持。如需更多信息，请参阅<a href="/dcosdocs/mesosphere/dcos/2.1/installing/production/advanced-configuration/configuration-reference/">配置参数文档</a>.</p>
+<ul>
+<li>bootstrap 节点必须与群集节点分开。</li>
+</ul>
+<h3 id="dcos"><a class="content__anchor" href="#dcos" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="setup-file"></a>DC/OS 配置文件</h3>
+<ul>
+<li>
+<p>下载 <a href="https://support.mesosphere.com/hc/en-us/articles/213198586-Mesosphere-Enterprise-DC-OS-Downloads">dcos_generate_config 文件</a> 并将其保存到 bootstrap 节点。此文件用于创建自定义的 DC/OS 构建文件。请联系销售代表或 <a href="mailto:sales@mesosphere.com">sales@mesosphere.com</a> 以访问此文件。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></p>
+</li>
+<li>
+<p>下载 <a href="https://downloads.dcos.io/dcos/stable/dcos_generate_config.sh">dcos_generate_config 文件</a> 并将其保存到 bootstrap 节点。此文件用于创建自定义的 DC/OS 构建文件。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--oss">Open Source</span></span></p>
+</li>
+</ul>
+<h3 id="docker-nginx"><a class="content__anchor" href="#docker-nginx" aria-hidden="true"><i data-feather="bookmark"></i></a>Docker NGINX（生产安装）</h3>
+<p>仅用于生产安装，使用此命令安装 Docker NGINX 镜像：</p>
+<pre><code class="language-bash">sudo docker pull nginx
+</code></pre>
+<h2 id="-11"><a class="content__anchor" href="#-11" aria-hidden="true"><i data-feather="bookmark"></i></a>群集节点</h2>
+<p>仅对于生产安装，群集节点必须具备以下前提条件。在安装期间，群集节点被指定为 Mesos 管理节点和代理节点。</p>
+<h3 id="-12"><a class="content__anchor" href="#-12" aria-hidden="true"><i data-feather="bookmark"></i></a>数据压缩（生产安装）</h3>
+<p>您必须在群集节点上安装 <a href="http://www.info-zip.org/UnZip.html" target="_blank">UnZip</a>、<a href="https://www.gnu.org/software/tar/" target="_blank">GNU tar</a> 和 <a href="http://tukaani.org/xz/" target="_blank">XZ Utils</a> 数据压缩实用程序。</p>
+<p>在 CentOS7 和 RHEL7 上安装此类实用程序：</p>
+<pre><code class="language-bash">sudo yum install -y tar xz unzip curl ipset
+</code></pre>
+<h3 id="-13"><a class="content__anchor" href="#-13" aria-hidden="true"><i data-feather="bookmark"></i></a>群集权限（生产安装）</h3>
+<p>在每个群集节点上，遵循以下说明：</p>
+<ul>
+<li>
+<p>确保 SELinux 属于受支持的模式之一。</p>
+<p>要检查当前 SELinux 状态和配置，请运行以下命令：</p>
+<pre><code class="language-bash">sudo sestatus
+</code></pre>
+<p>DC/OS 支持以下 SELinux 配置：</p>
+<ul>
+<li>当前模式： <code>disabled</code></li>
+<li>当前模式： <code>permissive</code></li>
+<li>当前模式： <code>enforcing</code>，鉴于 <code>Loaded policy name</code> 是 <code>targeted</code>
+此模式在 CoreOS 上不受支持。</li>
+</ul>
+<p>要将模式从 <code>enforcing</code> 更改为 <code>permissive</code>，请运行以下命令：</p>
+<pre><code class="language-bash">sudo sed -i 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config
+</code></pre>
+<p>或者，如果 <code>sestatus</code> 显示“当前模式”为 <code>enforcing</code>，但 <code>Loaded policy name</code> 不是 <code>targeted</code>，请运行以下命令，将 <code>Loaded policy name</code> 更改为 <code>targeted</code>:</p>
+<pre><code class="language-bash">sudo sed -i 's/SELINUXTYPE=.*/SELINUXTYPE=targeted/g' /etc/selinux/config
+</code></pre>
+  <p class="message--note"><strong>注意：</strong>确保每个节点上运行的所有服务都能在所选的 SELinux 配置中运行。</p>
+</li>
+<li>
+<p>添加 <code>nogroup</code> 和 <code>docker</code> 组：</p>
+<pre><code class="language-bash">sudo groupadd nogroup &amp;&amp;
+sudo groupadd docker
+</code></pre>
+</li>
+<li>
+<p>重新启动群集，以使更改生效。</p>
+<pre><code class="language-bash">sudo reboot
+</code></pre>
+  <p class="message--note"><strong>注意：</strong>重启后，节点可能需要几分钟时间才能恢复联机。</p>
+</li>
+</ul>
+<h3 id="-14"><a class="content__anchor" href="#-14" aria-hidden="true"><i data-feather="bookmark"></i></a>区域设置要求</h3>
+<p>您必须将 <code>LC_ALL</code> 和 <code>LANG</code> 环境变量设置为 <code>en_US.utf-8</code>.</p>
+<ul>
+<li>
+<p>有关如何在 Red Hat 中设置这些变量的信息，请参阅 <a href="https://access.redhat.com/solutions/974273">如何在 RHEL 上更改系统区域设置</a></p>
+</li>
+<li>
+<p>在 Linux 系统上：</p>
+</li>
+</ul>
+<pre><code>localectl set-locale LANG=en_US.utf8
+</code></pre>
+<ul>
+<li>有关如何在 CentOS7 中设置这些变量的信息，请参阅 <a href="https://www.rosehosting.com/blog/how-to-set-up-system-locale-on-centos-7/">如何在 CentOS7 上设定系统区域设置</a>.</li>
+</ul>
+<h1 id="-15"><a class="content__anchor" href="#-15" aria-hidden="true"><i data-feather="bookmark"></i></a>后续步骤</h1>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/installing/production/system-requirements/docker-centos/">从 Docker 的 Yum 存储库安装 Docker</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.1/installing/production/deploying-dcos/installation/">DC/OS 安装指南</a></li>
+</ul>
+<div class="grid"><a class="grid__item" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/system-requirements/docker-centos"><div class="grid__header__wrapper"><h3 class="grid__header">在 CenTos/RHEL 上安装 Docker</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">在 CenTos/RHEL 上安装 Docker CE 的要求、建议和程序<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/system-requirements/zookeeper-requirements"><div class="grid__header__wrapper"><h3 class="grid__header">ZooKeeper 资源</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">对 DC/OS 群集中 ZooKeeper 的要求和建议<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/system-requirements/ports"><div class="grid__header__wrapper"><h3 class="grid__header">DC/OS 端口</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">了解为 DC/OS 部署配置的端口<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/system-requirements/partitions"><div class="grid__header__wrapper"><h3 class="grid__header">磁盘分区</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">计划 DC/OS 群集的磁盘分区<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/system-requirements/custom-ami"><div class="grid__header__wrapper"><h3 class="grid__header">使用自定义 AMI 进行安装</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">使用 AWS 机器镜像启动 DC/OS<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/system-requirements/azure-recommendations"><div class="grid__header__wrapper"><h3 class="grid__header">Azure 建议</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">针对 Azure 的建议<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a></div></article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#硬件前提条件">硬件前提条件</a></li><li class="content__sections-item content__sections-item--h2"><a href="#bootstrap">bootstrap 节点</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-2">群集中的所有管理节点和代理节点</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-3">管理节点要求</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-4">代理节点要求</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-5">端口和协议配置</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-6">高速互联网访问</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-7">软件前提条件</a></li><li class="content__sections-item content__sections-item--h2"><a href="#docker">Docker 要求</a></li><li class="content__sections-item content__sections-item--h2"><a href="#sudo">禁用 sudo 密码提示</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-10">同步群集中所有节点的时间</a></li><li class="content__sections-item content__sections-item--h2"><a href="#bootstrap-2">bootstrap 节点</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-11">群集节点</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-15">后续步骤</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>备份和恢复 CLI - D2iQ Docs</title><meta name="description" content="使用 CLI 备份和恢复群集"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.1/administering-clusters/backup-and-restore/backup-restore-cli">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/backup-and-restore/backup-restore-cli">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/backup-and-restore/backup-restore-cli">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/administering-clusters/backup-and-restore/backup-restore-cli">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/sshcluster/">SSH 至节点</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/multiple-clusters/"><i data-feather="chevron-right"></i>多群集</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/locate-public-agent/">查找公共代理 IP</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/component-management/">组件管理</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/securing-your-cluster/">保护群集</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/backup-and-restore/"><i data-feather="chevron-right"></i>备份和恢复</a></li><ul><li class="active active-on"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/backup-and-restore/backup-restore-cli/">备份和恢复 CLI</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/backup-and-restore/backup-restore-api/">备份和恢复 API</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/managing-aws/">管理 AWS</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/package-registry/">包注册表</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/convert-agent-type/">转换代理节点类型</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/replacing-a-master-node/">替换管理节点</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/add-a-node/">添加代理节点</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/draining-a-node/">排空节点</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/delete-node/">关闭和停用节点</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/recovering-agent-disk-space/">恢复代理磁盘空间</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/licenses/"><i data-feather="chevron-right"></i>许可证</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">备份和恢复 CLI</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">使用 CLI 备份和恢复群集</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/backup-and-restore/backup-restore-cli/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>您可以使用 CLI 来创建和恢复群集的备份。您还可以选择备份和恢复 DC/OS 群集内运行的 <a href="#zookeeper">ZooKeeper</a> 状态。</p>
+<h1 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>先决条件</h1>
+<ul>
+<li>DC/OS Enterprise 群集</li>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/install/">DC/OS CLI</a> 已安装</li>
+<li>安装的 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/enterprise-cli/">DC/OS Enterprise CLI</a></li>
+</ul>
+<p class="message--important"><strong>重要信息：</strong>查看备份和恢复的<a href="/dcosdocs/mesosphere/dcos/latest/administering-clusters/backup-and-restore/#limitations">限制</a>部分。</p>
+<h1 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>备份群集</h1>
+<p>备份存储在管理节点的本地文件系统上。备份状态由在群集中运行的服务维护，并通过直接使用此服务来初始化备份/恢复操作。</p>
+<ol>
+<li>
+<p>创建备份并对其分配一个有意义的标签。标签有以下限制：</p>
+<ul>
+<li>长度必须介于 3 到 25 个字符之间。</li>
+<li>不能以 开始。<code>..</code>.</li>
+<li>必须由以下字符组成：[A-Za-z0-9_.-]。</li>
+</ul>
+<pre><code class="language-bash">dcos backup create --label=&lt;backup-label&gt;
+</code></pre>
+</li>
+<li>
+<p>验证您的备份是否已创建。</p>
+<pre><code class="language-bash">dcos backup list
+</code></pre>
+<p>或使用以下命令将搜索结果限制为您创建备份时使用的标签。</p>
+<pre><code class="language-bash">dcos backup list [label]
+</code></pre>
+<p>备份最初将过渡到 <code>STATUS_BACKING_UP</code> 状态，并且最终应进入 <code>STATUS_READY</code>.状态。如果出现错误，它将显示一个 状态。<code>STATUS_ERROR</code>. 使用 <code>dcos backup show &lt;backup-id&gt;</code> 找出在备份过程中 Marathon 出错的原因。</p>
+</li>
+<li>
+<p>在后续命令中使用由 <code>dcos backup list</code> 产生的 ID 引用您的备份。备份 ID 类似于 <code>&lt;backup-label&gt;-ea6b49f5-79a8-4767-ae78-3f874c90e3da</code>.</p>
+</li>
+</ol>
+<h2 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>删除备份</h2>
+<p>删除不需要的备份。</p>
+<pre><code class="language-bash">dcos backup delete &lt;backup-id&gt;
+</code></pre>
+<h1 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>恢复群集</h1>
+<ol>
+<li>
+<p>列出可用备份，选择要恢复的备份并记录备份 ID。</p>
+<pre><code class="language-bash">dcos backup list
+</code></pre>
+</li>
+<li>
+<p>从所选备份中恢复。</p>
+<pre><code class="language-bash">dcos backup restore &lt;backup-id&gt;
+</code></pre>
+</li>
+<li>
+<p>监控恢复操作的状态。</p>
+<pre><code class="language-bash">dcos backup show &lt;backup-id&gt;
+</code></pre>
+<p>JSON 输出的<code>restores.component_status.marathon</code>参数将显示 <code>STATUS_RESTORING</code>，然后显示 <code>STATUS_READY</code>.</p>
+</li>
+</ol>
+<p><a name="zookeeper"></a></p>
+<h1 id="zookeeper"><a class="content__anchor" href="#zookeeper" aria-hidden="true"><i data-feather="bookmark"></i></a>ZooKeeper 备份和恢复</h1>
+<p>该部分介绍备份和恢复 DC/OS 群集内运行的 ZooKeeper 状态的过程。</p>
+<p>备份 Zookeeper 将允许您将群集返回到已知的良好状态。因此，我们强烈建议您定期备份 Zookeeper 状态，为最坏情况做准备。执行维护操作时，例如升级或降级，在开始维护之前，您可能希望备份 Zookeeper 状态。</p>
+<p class="message--important"><strong>重要信息：</strong>
+从备份恢复 Zookeeper 应该是恢复 DC/OS 群集的最后方法。仅在确认群集遭受永久数据丢失（包括 Zookeeper 状态）后才适用。
+</p>
+<h2 id="zookeeper-2"><a class="content__anchor" href="#zookeeper-2" aria-hidden="true"><i data-feather="bookmark"></i></a>备份 ZooKeeper 群集</h2>
+<p>DC/OS 内的 Zookeeper 群集是在成员节点之间提供分布式一致性的系统。Zookeeper 的实例在每个管理节点上运行，这些实例服务于整个群集。只有当群集中的所有节点看到并同意某个值时，Zookeeper 状态才能继续进行。这意味着，任何一个 Zookeeper 节点的状态将包含到某个时间点之前的整个状态信息。因此，备份一个 ZOOKEEPER 节点足以合理地接近 Zookeeper 群集备份的最新状态。创建备份需要时间，因此，备份结束时的实时系统最有可能不再反映当前状态。但是，将捕获程序开始时可用的数据。</p>
+<h2 id="-5"><a class="content__anchor" href="#-5" aria-hidden="true"><i data-feather="bookmark"></i></a>先决条件</h2>
+<ul>
+<li>确保有足够的磁盘空间以在特定管理节点上临时存储 Zookeeper 备份。</li>
+<li>任何 shell 命令都必须以有特权的 Linux 用户身份发出。</li>
+</ul>
+<ol>
+<li>
+<p>通过 Exhibitor <code>systemd</code> 单元仅停止一个特定管理节点上的 Zookeeper 实例。</p>
+<pre><code class="language-bash">systemctl stop dcos-exhibitor
+</code></pre>
+</li>
+<li>
+<p>通过提供的 DC/OS Zookeeper 备份脚本在同一管理节点上创建 ZooKeeper 备份。</p>
+<pre><code class="language-bash">/opt/mesosphere/bin/dcos-shell dcos-zk backup &lt;backup-tar-archive-path&gt; -v
+</code></pre>
+</li>
+<li>
+<p>在同一管理节点上重新启动先前停止的 Zookeeper 实例。</p>
+<pre><code class="language-bash">systemctl start dcos-exhibitor
+</code></pre>
+</li>
+<li>
+<p>将已创建的 Zookeeper 备份 tar 存档从该管理节点下载到 DC/OS 群集之外的安全位置。</p>
+</li>
+<li>
+<p>从管理节点上删除 Zookeeper 备份 tar 存档。</p>
+</li>
+</ol>
+<h2 id="zookeeper-3"><a class="content__anchor" href="#zookeeper-3" aria-hidden="true"><i data-feather="bookmark"></i></a>从 Zookeeper 备份中恢复</h2>
+<p>您可以从单个 ZooKeeper 节点备份中恢复，该备份已物理地复制到群集中的所有 ZooKeeper 节点上。
+这样可以确保所有节点都从记录的相同状态返回操作，直到备份过程完成为止。恢复要求停止所有 Zookeeper 节点，这意味着仅当中断可容忍或正在进行时，这才是一个选择。</p>
+<ol>
+<li>
+<p>将之前创建的单个 Zookeeper 备份 tar 存档复制到每个管理节点的文件系统里。</p>
+</li>
+<li>
+<p>通过 Exhibitor <code>systemd</code> 单元停止每个管理节点上的 Zookeeper 实例。</p>
+<pre><code class="language-bash">systemctl stop dcos-exhibitor
+</code></pre>
+</li>
+<li>
+<p>通过提供的 DC/OS Zookeeper 恢复脚本在每个管理节点上启动恢复程序。</p>
+<pre><code class="language-bash">/opt/mesosphere/bin/dcos-shell dcos-zk restore &lt;backup-tar-archive-path&gt; -v
+</code></pre>
+</li>
+<li>
+<p>在每个管理节点上重新启动先前停止的 Zookeeper 实例。</p>
+<pre><code class="language-bash">systemctl start dcos-exhibitor
+</code></pre>
+</li>
+<li>
+<p>通过 Exhibitor 群集状态 API 端点监控 DC/OS 群集的 Exhibitor 状态（无需身份认证）。</p>
+<pre><code class="language-bash">curl https://&lt;master-host-ip&gt;/exhibitor/exhibitor/v1/cluster/status
+[
+  {
+    &quot;code&quot;: 3,
+    &quot;description&quot;: &quot;serving&quot;,
+    &quot;hostname&quot;: &quot;172.31.12.169&quot;,
+    &quot;isLeader&quot;: true
+  },
+  {
+    &quot;code&quot;: 3,
+    &quot;description&quot;: &quot;serving&quot;,
+    &quot;hostname&quot;: &quot;172.31.13.255&quot;,
+    &quot;isLeader&quot;: false
+  },
+  {
+    &quot;code&quot;: 3,
+    &quot;description&quot;: &quot;serving&quot;,
+    &quot;hostname&quot;: &quot;172.31.17.144&quot;,
+    &quot;isLeader&quot;: false
+  }
+]
+</code></pre>
+</li>
+</ol>
+<p>当所有实例都处于 <code>serving</code> 状态且领导者已选举时，则恢复程序成功。</p>
+<h2 id="zookeeper-4"><a class="content__anchor" href="#zookeeper-4" aria-hidden="true"><i data-feather="bookmark"></i></a>Zookeeper 备份的限制</h2>
+<ul>
+<li>在当前表单中备份 Zookeeper 状态需要停止一个 ZooKeeper 节点。在您使用 3 个管理节点的情况下，这显著降低了进行备份时 DC/OS 群集管理节点中断的容忍度，而在使用 5 个管理节点时对恢复力的影响较小。</li>
+<li>从 Zookeeper 备份中恢复需要停止 DC/OS 内所有 Zookeeper 实例。因此，仅建议将此作为恢复用其他方式无法恢复的群集的最后方法。</li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#先决条件">先决条件</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-2">备份群集</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-3">删除备份</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-4">恢复群集</a></li><li class="content__sections-item content__sections-item--h1"><a href="#zookeeper">ZooKeeper 备份和恢复</a></li><li class="content__sections-item content__sections-item--h2"><a href="#zookeeper-2">备份 ZooKeeper 群集</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-5">先决条件</a></li><li class="content__sections-item content__sections-item--h2"><a href="#zookeeper-3">从 Zookeeper 备份中恢复</a></li><li class="content__sections-item content__sections-item--h2"><a href="#zookeeper-4">Zookeeper 备份的限制</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

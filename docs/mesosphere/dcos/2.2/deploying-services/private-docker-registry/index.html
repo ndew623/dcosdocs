@@ -1,0 +1,274 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Using a Private Docker Registry - D2iQ Docs</title><meta name="description" content="Creating an archive for a private Docker registry"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.2"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/private-docker-registry">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/private-docker-registry">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/private-docker-registry">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/deploying-services/private-docker-registry">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/install/">Installing Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/marathon-parameters/">Marathon Configuration Reference</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/creating-services/"><i data-feather="chevron-right"></i>Creating Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/task-handling/"><i data-feather="chevron-right"></i>Task Handling</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/config-universe-service/">Configuring Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/fault-domain-awareness/">Fault Domain Awareness and Capacity Extension</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/service-groups/">Granting Access to Services and Groups</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/marathon-constraints/">Marathon Placement Constraints</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/monitor-services/">Monitoring Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/scale-service/">Scaling a Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/service-endpoints/">Service Endpoints</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/service-ports/">Service Ports</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/update-user-service/">Updating a User-Created Service</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/private-docker-registry/">Using a Private Docker Registry</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/deployments/">Deployments</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/expose-service/">Exposing a Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/uninstall/">Uninstalling Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/package-api/">Package Management API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/marathon-on-marathon/"><i data-feather="chevron-right"></i>Using Custom Marathon</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/marathon-api/">Marathon API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/containerizers/"><i data-feather="chevron-right"></i>Using Containerizers</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/pods/"><i data-feather="chevron-right"></i>Pods</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/multi-tenancy-primitives/">Multi-Tenancy Primitives</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/gpu/">Using GPUs</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/faq/">Frequently Asked Questions</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/archives/">Access Documentation Archives</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Using a Private Docker Registry</h1></div><h4 class="content__header-description">Creating an archive for a private Docker registry</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.2/deploying-services/private-docker-registry/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+Using+a+Private+Docker+Registry&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/2.2/deploying-services/private-docker-registry&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><p>Private Docker registries enable sharing of pre-configured images, which can enable better availability, lower latency, and higher speeds. Or you may decide to use a private registry to take advantage of a Docker Hub account that is not subject to image pull rate limiting.</p>
+<p>To supply credentials to pull from a private Docker registry, create an archive of your Docker credentials, then add it as a URI in your service or pod definition. In DC/OS Enterprise, you can also <a href="#secret-store-instructions">upload your private Docker registry credentials to the DC/OS Secret store</a> and reference it in your service or pod definition.</p>
+<p><a name="uri-instructions"></a></p>
+<h1 id="referencing-private-docker-registry-credentials-as-a-uri"><a class="content__anchor" href="#referencing-private-docker-registry-credentials-as-a-uri" aria-hidden="true"><i data-feather="bookmark"></i></a>Referencing private Docker registry credentials as a URI</h1>
+<h2 id="step-1-compress-docker-credentials"><a class="content__anchor" href="#step-1-compress-docker-credentials" aria-hidden="true"><i data-feather="bookmark"></i></a>Step 1: Compress Docker credentials</h2>
+<ol>
+<li>
+<p>Log in to the private registry manually. Login creates a <code>.docker</code> folder and a <code>.docker/config.json</code> file in your home directory.</p>
+<pre><code class="language-bash">docker login some.docker.host.com
+Username: foo
+Password:
+Email: foo@bar.com
+</code></pre>
+</li>
+<li>
+<p>Compress the <code>.docker</code> folder and its contents.</p>
+<pre><code class="language-bash">cd ~
+tar -czf docker.tar.gz .docker
+</code></pre>
+</li>
+<li>
+<p>Verify that both files are in the archive.</p>
+<pre><code class="language-bash">  tar -tvf ~/docker.tar.gz
+
+  drwx------ root/root         0 2015-07-28 02:54 .docker/
+  -rw------- root/root       114 2015-07-28 01:31 .docker/config.json
+</code></pre>
+</li>
+<li>
+<p>Put the archive file in a location that is accessible to your application definition.</p>
+<pre><code class="language-bash">cp docker.tar.gz /etc/
+</code></pre>
+</li>
+</ol>
+<p class="message--important"><strong>IMPORTANT: </strong> The URI must be accessible by all nodes that will start your application. You can distribute the file to the local filesystem of all nodes, for example via RSYNC/SCP, or store it on a shared network drive like <a href="http://aws.amazon.com/s3/">Amazon S3</a>. Consider the security implications of your chosen approach carefully.</p>
+<h2 id="step-2-add-uri-path-to-service-definition"><a class="content__anchor" href="#step-2-add-uri-path-to-service-definition" aria-hidden="true"><i data-feather="bookmark"></i></a>Step 2: Add URI path to service definition</h2>
+<ol>
+<li>
+<p>Add the path to the archive file login credentials to your service definition.</p>
+<pre><code class="language-bash">&quot;fetch&quot;: [
+  {
+    &quot;uri&quot;: &quot;file:///etc/docker.tar.gz&quot;
+  }
+]
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/some/name/or/id&quot;,
+  &quot;cpus&quot;: 1,
+  &quot;mem&quot;: 1024,
+  &quot;instances&quot;: 1,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;DOCKER&quot;,
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;some.docker.host.com/namespace/repo&quot;
+    }
+  },
+  &quot;fetch&quot;: [
+    {
+      &quot;uri&quot;: &quot;file:///etc/docker.tar.gz&quot;
+    }
+  ]
+}
+</code></pre>
+<p>The Docker image will now pull using the provided security credentials.</p>
+</li>
+</ol>
+<p><a name="secret-store-instructions"></a></p>
+<h1 id="referencing-private-docker-registry-credentials-in-the-secrets-store-enterprise"><a class="content__anchor" href="#referencing-private-docker-registry-credentials-in-the-secrets-store-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>Referencing private Docker registry credentials in the secrets store <span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></h1>
+<p>Follow these steps to add your Docker registry credentials to the <a href="/dcosdocs/mesosphere/dcos/2.2/security/ent/secrets/">DC/OS Enterprise secrets store</a>, and then reference that secret in your service definition.</p>
+<p class="message--important"><strong>IMPORTANT: </strong>This functionality is available only with the <a href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/containerizers/ucr/">Universal Container Runtime</a>. If you need to use the Docker Engine, follow the URI instructions above.</p>
+<h2 id="step-1-create-a-credentials-file"><a class="content__anchor" href="#step-1-create-a-credentials-file" aria-hidden="true"><i data-feather="bookmark"></i></a>Step 1: Create a credentials file</h2>
+<ol>
+<li>
+<p>Manually log in to your private registry. This creates a <code>~/.docker</code> directory and a <code>~/.docker/config.json</code> file.</p>
+<pre><code class="language-bash">docker login some.docker.host.com
+Username: foo
+Password:
+Email: foo@bar.com
+</code></pre>
+</li>
+<li>
+<p>Check that you have the <code>~/.docker/config.json</code> file.</p>
+<pre><code class="language-bash">ls ~/.docker
+config.json
+</code></pre>
+<p>Your <code>config.json</code> file should look like this, where value of <code>auth</code> is a base64-encoded <code>username:password</code> string.</p>
+<pre><code class="language-json">{
+  &quot;auths&quot;: {
+      &quot;https://index.docker.io/v1/&quot;: {
+          &quot;auth&quot;: &quot;XXXXX&quot;,
+          &quot;email&quot;: &quot;&lt;your-email&gt;&quot;
+      }
+  }
+}
+</code></pre>
+<p>If you are using Mac OS, you will need to manually encode your <code>username:password</code> string and modify your <code>config.json</code> to match the snippet above. Be sure to omit a trailing new-line when base64 encoding the pair:</p>
+<pre><code class="language-bash">echo -n myuser@domain.com:hard-to-guess-password | base64
+</code></pre>
+</li>
+<li>
+<p>Add the <code>config.json</code> file to the DC/OS secret store. <a href="/dcosdocs/mesosphere/dcos/2.2/security/ent/secrets/create-secrets/">Learn more about creating secrets</a>.</p>
+<p class="message--note"><strong>NOTE: </strong>As of DC/OS version 1.10.0, you can add a file to the secret store only using the DC/OS CLI.</p>
+<pre><code class="language-bash">dcos security secrets create --file=config.json &lt;path/to/secret&gt;
+</code></pre>
+<p>If you plan to follow the example below, enter the following command to add the secret:</p>
+<pre><code class="language-bash">dcos security secrets create --file=config.json mesos-docker/pullConfig
+</code></pre>
+</li>
+</ol>
+<h2 id="step-2-add-the-secret-to-your-service-or-pod-definition"><a class="content__anchor" href="#step-2-add-the-secret-to-your-service-or-pod-definition" aria-hidden="true"><i data-feather="bookmark"></i></a>Step 2: Add the secret to your service or pod definition</h2>
+<h3 id="for-a-service"><a class="content__anchor" href="#for-a-service" aria-hidden="true"><i data-feather="bookmark"></i></a>For a service</h3>
+<ol>
+<li>
+<p>Add a location for the secret in the <code>secrets</code> parameter and a reference to the secret in the <code>docker.pullConfig</code> parameter.</p>
+<p class="message--important"><strong>IMPORTANT: </strong>This functionality is <strong>only</strong> supported with the Universal Container Runtime: <code>container.type</code> must be <code>MESOS</code>.</p>
+<pre><code class="language-json">{
+   &quot;id&quot;: &quot;/mesos-docker&quot;,
+   &quot;container&quot;: {
+     &quot;docker&quot;: {
+       &quot;image&quot;: &quot;&lt;your/private/image&gt;&quot;,
+       &quot;pullConfig&quot;: {
+         &quot;secret&quot;: &quot;pullConfigSecret&quot;
+       }
+     },
+     &quot;type&quot;: &quot;MESOS&quot;
+   },
+   &quot;secrets&quot;: {
+     &quot;pullConfigSecret&quot;: {
+       &quot;source&quot;: &quot;/mesos-docker/pullConfig&quot;
+     }
+   },
+   &quot;args&quot;: [&quot;hello&quot;],
+   &quot;cpus&quot;: 0.2,
+   &quot;mem&quot;: 16.0,
+   &quot;instances&quot;: 1
+}
+</code></pre>
+</li>
+<li>
+<p>Add the service to DC/OS. If you are using the example above, <code>&lt;svc-name&gt;</code> is <code>mesos-docker</code>.</p>
+<pre><code>dcos marathon app add &lt;svc-name&gt;.json
+</code></pre>
+<p>The Docker image will now pull using the provided security credentials.</p>
+</li>
+</ol>
+<h3 id="for-a-pod"><a class="content__anchor" href="#for-a-pod" aria-hidden="true"><i data-feather="bookmark"></i></a>For a pod</h3>
+<ol>
+<li>
+<p>Add a location for the secret in the <code>secrets</code> parameter and a reference to the secret in the <code>containers.image.pullConfig</code> parameter.</p>
+<p class="message--important"><strong>IMPORTANT: </strong>This functionality is only supported if <code>image.kind</code> is set to <code>DOCKER</code>.</p>
+<pre><code class="language-json">{
+     &quot;id&quot;:&quot;/simple-pod&quot;,
+     &quot;containers&quot;:[
+        {
+          &quot;name&quot;:&quot;simpletask1&quot;,
+          &quot;exec&quot;:{
+              &quot;command&quot;:{
+                &quot;shell&quot;:&quot;env &amp;&amp; sleep 1000&quot;
+              }
+            },
+          &quot;resources&quot;:{
+            &quot;cpus&quot;:0.1,
+            &quot;mem&quot;:32
+        },
+        &quot;image&quot;:{
+            &quot;kind&quot;:&quot;DOCKER&quot;,
+            &quot;id&quot;:&quot;&lt;your/private/image&gt;&quot;,
+            &quot;pullConfig&quot;:{
+              &quot;secret&quot;:&quot;pullConfigSecret&quot;
+           }
+        }
+     }
+  ],
+  &quot;networks&quot;:[
+      {
+        &quot;mode&quot;:&quot;host&quot;
+      }
+  ],
+  &quot;secrets&quot;:{
+      &quot;pullConfigSecret&quot;:{
+        &quot;source&quot;:&quot;/pod/pullConfig&quot;
+     }
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>Add the pod to DC/OS. If you are using the example above, <code>&lt;pod-name&gt;</code> is <code>simple-pod</code>.</p>
+<pre><code>dcos marathon pod add &lt;pod-name&gt;.json
+</code></pre>
+<p>The Docker image will now pull using the provided security credentials.</p>
+</li>
+</ol>
+<p><a name="docker-repo-certs"></a></p>
+<h1 id="configuring-agents-to-use-a-custom-certificate-for-the-docker-registry"><a class="content__anchor" href="#configuring-agents-to-use-a-custom-certificate-for-the-docker-registry" aria-hidden="true"><i data-feather="bookmark"></i></a>Configuring agents to use a custom certificate for the Docker registry</h1>
+<p>Some organizations require both user credentials and valid secure socket layer (SSL) certificates to authorize access to the Docker registry. For example, some registry configurations require a certificate to encrypt the communications between the client and the registry, while user credentials determine who gets to access to the registry after the connection to the registry is successful.</p>
+<p>If your private registry uses a certificate to secure communications, you can configure the agent nodes to trust the certificate you use to access the private Docker registry.</p>
+<p>To configure a custom certificate for accessing the private Docker registry and DC/OS UCR, complete the following steps:</p>
+<ol>
+<li>
+<p>Create or identify a custom certificate that you want to use as a trusted certificate for accessing the Docker registry.</p>
+<p>You can use OpenSSL, DC/OS Enterprise CLI, or another program for generating public and private keys, certificate requests, and encrypted client and server certificates.</p>
+<p>After you create or identify a certificate, you can configure the registry to use this certificate by following the instructions provided by the registry provider.</p>
+</li>
+<li>
+<p>Download or copy the certificate to the following two locations on each agent.</p>
+<pre><code class="language-bash">/etc/docker/certs.d/&lt;registry_name&gt;:&lt;registry_port&gt;/ca.crt
+/var/lib/dcos/pki/tls/certs/&lt;something&gt;.crt
+</code></pre>
+<p>For the path to the trusted CA certificate on each agent, replace the <code>&lt;registry_name&gt;</code> and <code>&lt;registry_port&gt;</code> with the specific registry name and port number appropriate for your installation.</p>
+<p>For example, if you are configuring the DC/OS <code>ca.crt</code> certificate as a trusted certificate and the local Docker registry is referenced as <code>registry.mycompany.com:5000</code>, you can download a copy of the <code>ca.crt</code> file and set it as trusted using a command similar to the following:</p>
+<pre><code class="language-bash">sudo mkdir -p /etc/docker/certs.d/registry.mycompany.com:5000
+sudo cp /path/to/ca.crt etc/docker/certs.d/registry.mycompany.com:5000/ca.crt
+sudo cp /etc/docker/certs.d/registry.mycompany.com:5000/ca.crt /var/lib/dcos/pki/tls/certs/docker-registry-ca.crt
+</code></pre>
+</li>
+<li>
+<p>Generate a hash for the file by running a command similar to the following:</p>
+<pre><code class="language-bash">cd /var/lib/dcos/pki/tls/certs/
+openssl x509 -hash -noout -in docker-registry-ca.crt
+</code></pre>
+</li>
+<li>
+<p>Create a symbolic link from the trusted certificate to the <code>/var/lib/dcos/pki/tls/certs</code> directory on the public agent.</p>
+<pre><code class="language-bash">sudo ln -s /var/lib/dcos/pki/tls/certs/docker-registry-ca.crt /var/lib/dcos/pki/tls/certs/&lt;hash_number&gt;.0
+</code></pre>
+</li>
+</ol>
+<p><a name="tarball-instructions"></a></p>
+<h1 id="pushing-a-custom-image-to-a-private-registry-from-a-tarball"><a class="content__anchor" href="#pushing-a-custom-image-to-a-private-registry-from-a-tarball" aria-hidden="true"><i data-feather="bookmark"></i></a>Pushing a custom image to a private registry from a tarball</h1>
+<p>If you asked your sales representative for an enterprise version of Marathon, you may have been given a Docker image in a <code>.tar</code> archive. Follow these steps to deploy it to your registry:</p>
+<h2 id="step-1-import-in-the-local-machine"><a class="content__anchor" href="#step-1-import-in-the-local-machine" aria-hidden="true"><i data-feather="bookmark"></i></a>Step 1: Import in the local machine</h2>
+<ol>
+<li>
+<p>Load the tarball into your local Docker client, passing the path to your custom tarball. For example, <code>marathon-dcos-ee.&lt;version&gt;.tar</code>:</p>
+<pre><code class="language-bash">docker load -i marathon-dcos-ee.&lt;version&gt;.tar
+</code></pre>
+<p><strong>Tip:</strong> You can view the Marathon image with this command.</p>
+<pre><code>docker images
+</code></pre>
+<p>You should see output similar to this:</p>
+<pre><code class="language-bash">REPOSITORY                    TAG                 IMAGE ID            CREATED             SIZE
+mesosphere/marathon-dcos-ee   1.4.0-RC4_1.9.4     d1ffa68a50c0        3 months ago        926.4 MB
+</code></pre>
+</li>
+</ol>
+<h2 id="step-2-push-the-image-to-the-repository"><a class="content__anchor" href="#step-2-push-the-image-to-the-repository" aria-hidden="true"><i data-feather="bookmark"></i></a>Step 2: Push the image to the repository</h2>
+<ol>
+<li>
+<p>Re-tag the file to match the repository that you are using in your private Docker registry:</p>
+<pre><code class="language-bash">docker tag \
+ mesosphere/marathon-dcos-ee:&lt;mesosphere-tag&gt; \
+ &lt;your-repo&gt;/marathon-dcos-ee:&lt;your-tag&gt;
+</code></pre>
+<p>Where:</p>
+<ul>
+<li><code>&lt;mesosphere-tag&gt;</code> is the tag of the image from Mesosphere. Typically, this will match the version number in the filename.</li>
+<li><code>&lt;your-repo&gt;</code> is the name of the private repository that you want to store the image in.</li>
+<li><code>&lt;your-tag&gt;</code> is the tag for the image. It is recommended that you use the same tag as the Mesosphere image.</li>
+</ul>
+</li>
+<li>
+<p>Push the new image to your private Docker registry:</p>
+<pre><code class="language-bash">docker push &lt;your-repo&gt;/marathon-dcos-ee:&lt;your-tag&gt;
+</code></pre>
+</li>
+</ol>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#referencing-private-docker-registry-credentials-as-a-uri">Referencing private Docker registry credentials as a URI</a></li><li class="content__sections-item content__sections-item--h2"><a href="#step-1-compress-docker-credentials">Step 1: Compress Docker credentials</a></li><li class="content__sections-item content__sections-item--h2"><a href="#step-2-add-uri-path-to-service-definition">Step 2: Add URI path to service definition</a></li><li class="content__sections-item content__sections-item--h1"><a href="#referencing-private-docker-registry-credentials-in-the-secrets-store-enterprise">Referencing private Docker registry credentials in the secrets store Enterprise</a></li><li class="content__sections-item content__sections-item--h2"><a href="#step-1-create-a-credentials-file">Step 1: Create a credentials file</a></li><li class="content__sections-item content__sections-item--h2"><a href="#step-2-add-the-secret-to-your-service-or-pod-definition">Step 2: Add the secret to your service or pod definition</a></li><li class="content__sections-item content__sections-item--h1"><a href="#configuring-agents-to-use-a-custom-certificate-for-the-docker-registry">Configuring agents to use a custom certificate for the Docker registry</a></li><li class="content__sections-item content__sections-item--h1"><a href="#pushing-a-custom-image-to-a-private-registry-from-a-tarball">Pushing a custom image to a private registry from a tarball</a></li><li class="content__sections-item content__sections-item--h2"><a href="#step-1-import-in-the-local-machine">Step 1: Import in the local machine</a></li><li class="content__sections-item content__sections-item--h2"><a href="#step-2-push-the-image-to-the-repository">Step 2: Push the image to the repository</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

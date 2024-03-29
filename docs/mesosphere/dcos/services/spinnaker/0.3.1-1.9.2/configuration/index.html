@@ -1,0 +1,290 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Configuration - D2iQ Docs</title><meta name="description" content="Configuring Spinnaker for production and development"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Spinnaker Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.2-1.9.2/configuration">Spinnaker 0.3.2-1.9.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.1-1.9.2/configuration">Spinnaker 0.3.1-1.9.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.0-1.9.2/configuration">Spinnaker 0.3.0-1.9.2</a></li></ul><div class="toggle"><p><span class="title">Spinnaker</span><span class="version"> 0.3.1-1.9.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.1-1.9.2/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.1-1.9.2/getting-started/">DC/OS Setup</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.1-1.9.2/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.1-1.9.2/configuration/">Configuration</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.1-1.9.2/operations/">Operations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.1-1.9.2/security/">Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.1-1.9.2/uninstall/">Uninstall</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.1-1.9.2/troubleshooting/">Troubleshooting</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.1-1.9.2/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.1-1.9.2/supported-versions/">Supported Versions</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Configuration</h1></div><h4 class="content__header-description">Configuring Spinnaker for production and development</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.1-1.9.2/configuration/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- This file is usually found in the Configuration section. -->
+<p>The default DC/OS Spinnaker installation provides reasonable defaults for trying out the service, but may not be sufficient for production use. You may require a different configuration depending on the context of the deployment.</p>
+<h2 id="installing-with-custom-configuration"><a class="content__anchor" href="#installing-with-custom-configuration" aria-hidden="true"><i data-feather="bookmark"></i></a>Installing with Custom Configuration</h2>
+<p>The following are some examples of how to customize the installation of your Spinnaker instance.</p>
+<p>In each case, you would create a new Spinnaker instance using the custom configuration as follows:</p>
+<pre><code class="language-bash">dcos package install spinnaker --options=sample-spinnaker.json
+</code></pre>
+<p>We recommend that you store your custom configuration in source control.</p>
+<h3 id="installing-multiple-instances"><a class="content__anchor" href="#installing-multiple-instances" aria-hidden="true"><i data-feather="bookmark"></i></a>Installing multiple instances</h3>
+<p>By default, the Spinnaker service is installed with a service name of <code>spinnaker</code>. You may specify a different name using a custom service configuration as follows:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;name&quot;: &quot;spinnaker-other&quot;
+  }
+}
+</code></pre>
+<p>When the above JSON configuration is passed to the <code>package install spinnaker</code> command via the <code>--options</code> argument, the new service will use the name specified in that JSON configuration:</p>
+<pre><code class="language-bash">dcos package install spinnaker --options=spinnaker-other.json
+</code></pre>
+<p>Multiple instances of Spinnaker may be installed into your DC/OS cluster by customizing the name of each instance. For example, you might have one instance of Spinnaker named <code>spinnaker-staging</code> and another named <code>spinnaker-prod</code>, each with its own custom configuration.</p>
+<p>After specifying a custom name for your instance, it can be reached using <code>dcos spinnaker</code> CLI commands or directly over HTTP as described <a href="#addressing-named-instances">below</a>.</p>
+<p class="message--warning"><strong>WARNING: </strong>The service name <strong>cannot</strong> be changed after initial install. Changing the service name would require installing a new instance of the service against the new name, then copying over any data as necessary to the new instance.</p>
+<h3 id="installing-into-folders"><a class="content__anchor" href="#installing-into-folders" aria-hidden="true"><i data-feather="bookmark"></i></a>Installing into folders</h3>
+<p>In DC/OS 1.10 and later, services may be installed into folders by specifying a slash-delimited service name. For example:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;name&quot;: &quot;/foldered/path/to/spinnaker&quot;
+  }
+}
+</code></pre>
+<p>The above example will install the service under a path of <code>foldered</code> =&gt; <code>path</code> =&gt; <code>to</code> =&gt; <code>spinnaker</code>. It can then be reached using <code>dcos spinnaker</code> CLI commands or directly over HTTP as described <a href="#addressing-named-instances">below</a>.</p>
+<p class="message--warning"><strong>WARNING: </strong>The service folder location <strong>cannot</strong> be changed after initial install. Changing the folder location would require installing a new instance of the service against the new name, then copying over any data as necessary to the new instance.</p>
+<h3 id="addressing-named-instances"><a class="content__anchor" href="#addressing-named-instances" aria-hidden="true"><i data-feather="bookmark"></i></a>Addressing named instances</h3>
+<p>After you’ve installed the service under a custom name or under a folder, it may be accessed from all <code>dcos spinnaker</code> CLI commands using the <code>--name</code> argument. By default, the <code>--name</code> value defaults to the name of the package, or <code>spinnaker</code>.</p>
+<p>For example, if you had an instance named <code>spinnaker-dev</code>, the following command would invoke a <code>pod list</code> command against it:</p>
+<pre><code class="language-bash">dcos spinnaker --name=spinnaker-dev pod list
+</code></pre>
+<p>The same query would be over HTTP as follows:</p>
+<pre><code class="language-bash">curl -H &quot;Authorization:token=$auth_token&quot; &lt;dcos_url&gt;/service/spinnaker-dev/v1/pod
+</code></pre>
+<p>Likewise, if you had an instance in a folder like <code>/foldered/path/to/spinnaker</code>, the following command would invoke a <code>pod list</code> command against it:</p>
+<pre><code class="language-bash">dcos spinnaker --name=/foldered/path/to/spinnaker pod list
+</code></pre>
+<p>Similarly, it could be queried directly over HTTP as follows:</p>
+<pre><code class="language-bash">curl -H &quot;Authorization:token=$auth_token&quot; &lt;dcos_url&gt;/service/foldered/path/to/spinnaker-dev/v1/pod
+</code></pre>
+<p>You may add a <code>-v</code> (verbose) argument to any <code>dcos spinnaker</code> command to see the underlying HTTP queries that are being made. This can be a useful tool to see where the CLI is getting its information. In practice, <code>dcos spinnaker</code> commands are a thin wrapper around an HTTP interface provided by the DC/OS Spinnaker Service itself.</p>
+<h3 id="integration-with-dcos-access-controls"><a class="content__anchor" href="#integration-with-dcos-access-controls" aria-hidden="true"><i data-feather="bookmark"></i></a>Integration with DC/OS access controls</h3>
+<p>In Enterprise DC/OS, DC/OS access controls can be used to restrict access to your service. To give a non-superuser complete access to a service, grant them the following list of permissions:</p>
+<pre><code>dcos:adminrouter:service:marathon full
+dcos:service:marathon:marathon:&lt;service-name&gt; full
+dcos:service:adminrouter:&lt;service-name&gt; full
+dcos:adminrouter:ops:mesos full
+dcos:adminrouter:ops:slave full
+</code></pre>
+<p>Where <code>&lt;service-name&gt;</code> is your full service name, including the folder if it is installed in one.</p>
+<h2 id="service-settings"><a class="content__anchor" href="#service-settings" aria-hidden="true"><i data-feather="bookmark"></i></a>Service Settings</h2>
+<h3 id="placement-constraints"><a class="content__anchor" href="#placement-constraints" aria-hidden="true"><i data-feather="bookmark"></i></a>Placement Constraints</h3>
+<p>Placement constraints allow you to customize where a service is deployed in the DC/OS cluster. Placement constraints  use the <a href="http://mesosphere.github.io/marathon/docs/constraints.html">Marathon operators</a> syntax. For example, <code>[[&quot;hostname&quot;, &quot;UNIQUE&quot;]]</code> ensures that at most one pod instance is deployed per agent.</p>
+<p>A common task is to specify a list of whitelisted systems to deploy to. To achieve this, use the following syntax for the placement constraint:</p>
+<pre><code>[[&quot;hostname&quot;, &quot;LIKE&quot;, &quot;10.0.0.159|10.0.1.202|10.0.3.3&quot;]]
+</code></pre>
+<p class="message--important"><strong>IMPORTANT: </strong>Be sure to include excess capacity in such a scenario so that if one of the whitelisted systems goes down, there is still enough capacity to repair your service.</p>
+<h4 id="updating-placement-constraints"><a class="content__anchor" href="#updating-placement-constraints" aria-hidden="true"><i data-feather="bookmark"></i></a>Updating Placement Constraints</h4>
+<p>Clusters change, and as such so will your placement constraints. However, already running service pods will <strong>not</strong> be affected by changes in placement constraints. This is because altering a placement constraint might invalidate the current placement of a running pod, and the pod will not be relocated automatically as doing so is a destructive action. We recommend using the following procedure to update the placement constraints of a pod:</p>
+<ul>
+<li>Update the placement constraint definition in the service.</li>
+<li>For each affected pod, one at a time, perform a <code>pod replace</code>. This will (destructively) move the pod to be in accordance with the new placement constraints.</li>
+</ul>
+<h3 id="zones-enterprise"><a class="content__anchor" href="#zones-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>Zones <span class="badge badge--shortcode badge--large badge--block badge--enterprise">Enterprise</span></h3>
+<p><strong>Requires:</strong> DC/OS 1.11 Enterprise or later.</p>
+<p>Placement constraints can be applied to DC/OS zones by referring to the <code>@zone</code> key. For example, one could spread pods across a minimum of three different zones by including this constraint:</p>
+<pre><code>[[&quot;@zone&quot;, &quot;GROUP_BY&quot;, &quot;3&quot;]]
+</code></pre>
+<p>For the @zone constraint to be applied correctly, DC/OS must have <a href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/fault-domain-awareness/">Fault Domain Awareness</a> enabled and configured.</p>
+<p class="message--warning"><strong>WARNING: </strong>A service installed without a zone constraint cannot be updated to have one, and a service installed with a zone constraint may not have it removed.</p>
+<h3 id="virtual-networks"><a class="content__anchor" href="#virtual-networks" aria-hidden="true"><i data-feather="bookmark"></i></a>Virtual networks</h3>
+<p>DC/OS Spinnaker supports deployment on <a href="/dcosdocs/mesosphere/dcos/latest/networking/SDN/dcos-overlay/">virtual networks</a> on DC/OS (including the <code>dcos</code> overlay network), allowing each container (task) to have its own IP address and not use port resources on the agent machines. This can be specified by passing the following configuration during installation:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;virtual_network_enabled&quot;: true
+  }
+}
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>Once the service is deployed on a virtual network, it cannot be updated to use the host network.</p>
+<h3 id="user"><a class="content__anchor" href="#user" aria-hidden="true"><i data-feather="bookmark"></i></a>User</h3>
+<p>By default, all pods’ containers will be started as system user “nobody”. If your system configured for using over system user (for instance, you may have externally mounted persistent volumes with root’s permissions), you can define the user by defining a custom value for the service’s property “user”, for example:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;properties&quot;: {
+      &quot;user&quot;: &quot;root&quot;
+    }
+  }
+}
+</code></pre>
+<h1 id="custom-install"><a class="content__anchor" href="#custom-install" aria-hidden="true"><i data-feather="bookmark"></i></a>Custom Install</h1>
+<h2 id="spinnaker-configuration"><a class="content__anchor" href="#spinnaker-configuration" aria-hidden="true"><i data-feather="bookmark"></i></a>Spinnaker configuration</h2>
+<ol>
+<li>Use the following command to download Spinnaker configuration templates to get started.</li>
+</ol>
+<pre><code class="language-bash">curl -O https://ecosystem-repo.s3.amazonaws.com/spinnaker/artifacts/0.3.1-1.9.2/config.tgz &amp;&amp; tar -xzf config.tgz &amp;&amp; cd config &amp;&amp; chmod +x gen-optionsjson
+</code></pre>
+<p>The created <strong>config</strong> folder has the following <code>yaml</code> templates.</p>
+<pre><code>front50-local.yaml
+clouddriver-local.yaml
+echo-local.yaml
+igor-local.yaml
+</code></pre>
+<ol start="2">
+<li>Tailor these Spinnaker yaml configuration files for your specific needs. The <code>yaml</code> can be entered via the Spinnaker configuration dialogs in the <code>DC/OS console</code> or passed in an <code>options.json</code> file on <code>dcos package install</code>.</li>
+</ol>
+  <p class="message--note"><strong>NOTE: </strong>If you follow the links to the detailed Spinnaker configuration options you will also see the configuration of Spinnaker service dependencies. Do not worry about those configurations, they are all taken care of by the DC/OS Spinnaker service.</p>
+<h3 id="front50-localyaml"><a class="content__anchor" href="#front50-localyaml" aria-hidden="true"><i data-feather="bookmark"></i></a>front50-local.yaml</h3>
+<p>Front50 is the Spinnaker <strong>persistence service</strong>. The following section shows how to configure the AWS S3 (enabled=true) and GCS (enabled=false) persistence plugin in <code>front50-local.yaml</code>.</p>
+<pre><code class="language-yaml">cassandra:
+  enabled: false
+
+spinnaker:
+  cassandra:
+    enabled: false
+    embedded: true
+  s3:
+    enabled: true
+    bucket: my-spinnaker-bucket
+    rootFolder: front50
+    endpoint: http://minio.marathon.l4lb.thisdcos.directory:9000
+  gcs:
+    enabled: false
+    bucket: my-spinnaker-bucket
+    bucketLocation: us
+    rootFolder: front50
+    project: my-project
+    jsonPath: /mnt/mesos/sandbox/data/keys/gcp_key.json
+</code></pre>
+<p>The DC/OS Spinnaker front50 service can be configured to use secrets for AWS S3 and GCS credentials. You have to create all of them using the following commands. <strong>Configure the ones you are not using with empty content.</strong></p>
+<pre><code class="language-bash">dcos security secrets create -v &lt;your-aws-access-key-id&gt; spinnaker/aws_access_key_id
+
+dcos security secrets create -v &lt;your-aws-secret-access-key&gt; spinnaker/aws_secret_access_key
+
+dcos security secrets create -v &lt;your-gcp-key&gt; spinnaker/gcp_key
+</code></pre>
+<p>For more configuration options see <a href="https://github.com/spinnaker/front50/blob/master/front50-web/config/front50.yaml">spinnaker/front50</a>.</p>
+<h3 id="clouddriver-localyaml"><a class="content__anchor" href="#clouddriver-localyaml" aria-hidden="true"><i data-feather="bookmark"></i></a>clouddriver-local.yaml</h3>
+<p>Clouddriver is the Spinnaker <strong>cloud provider service</strong>. The following section shows how to configure the DC/OS and Kubernetes provider plugin in <code>clouddriver-local.yaml</code>.</p>
+<pre><code class="language-yaml">dockerRegistry:
+  enabled: true
+  accounts:
+  - name: my-docker-registry-account
+    address: https://index.docker.io/
+    repositories:
+      - library/nginx
+      - library/postgres
+    username: mesosphere
+#    password: ...    
+
+dcos:
+  enabled: true
+  clusters:
+    - name: my-dcos
+      dcosUrl: https://leader.mesos
+      insecureSkipTlsVerify: true
+  accounts:
+    - name: my-dcos-account
+      dockerRegistries:
+        - accountName: my-docker-registry-account
+      clusters:
+        - name: my-dcos
+          uid: bootstrapuser
+          password: deleteme
+
+#kubernetes:
+#  enabled: true
+#  accounts:
+#    - name: my-kubernetes-account
+#      providerVersion: v2
+#      namespace:
+#        - default
+#      kubeconfigFile: ${MESOS_SANDBOX}/kubeconfig
+#      dockerRegistries:
+#        - accountName: my-docker-registry-account
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>Configure the DC/OS user to have superuser privileges.</p>
+<p>For more configuration options see <a href="https://github.com/spinnaker/clouddriver/blob/master/clouddriver-web/config/clouddriver.yaml">spinnaker/clouddriver</a></p>
+<h3 id="gate-localyaml-optional"><a class="content__anchor" href="#gate-localyaml-optional" aria-hidden="true"><i data-feather="bookmark"></i></a>gate-local.yaml (optional)</h3>
+<p>Gate is the Spinnaker <strong>api service</strong>. The following section shows how to configure OAuth2 in <code>gate-local.yaml</code>.</p>
+<pre><code class="language-yaml">#security:
+#  oauth2:
+#    client:
+#      clientId: ...
+#      clientSecret: ...
+#      userAuthorizationUri: https://github.com/login/oauth/authorize
+#      accessTokenUri: https://github.com/login/oauth/access_token
+#      scope: user:email
+#    resource:
+#      userInfoUri: https://api.github.com/user
+#    userInfoMapping:
+#      email: email
+#      firstName:
+#      lastName: name
+#      username: login
+</code></pre>
+<h3 id="echo-localyaml-optional"><a class="content__anchor" href="#echo-localyaml-optional" aria-hidden="true"><i data-feather="bookmark"></i></a>echo-local.yaml (optional)</h3>
+<p>Echo is the Spinnaker <strong>notification service</strong>. The following section shows how to configure the email notification plugin in <code>echo-local.yaml</code>.</p>
+<pre><code class="language-yaml">mail:
+  enabled: false
+#  from: &lt;from-gmail-address&gt;
+#spring:
+#  mail:
+#    host: smtp.gmail.com
+#    username: &lt;from-gmail-address&gt;
+#    password: &lt;app-password, see https://support.google.com/accounts/answer/185833?hl=en &gt;
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#          ssl:
+#            enable: true
+#          socketFactory:
+#            port: 465
+#            class: javax.net.ssl.SSLSocketFactory
+#            fallback: false
+</code></pre>
+<p>For more configuration options see <a href="https://github.com/spinnaker/echo/blob/master/echo-web/config/echo.yaml">spinnaker/echo</a>, and <a href="https://github.com/spinnaker/spinnaker/tree/master/install">spinnaker/spinnaker</a>.</p>
+<h3 id="igor-localyaml-optional"><a class="content__anchor" href="#igor-localyaml-optional" aria-hidden="true"><i data-feather="bookmark"></i></a>igor-local.yaml (optional)</h3>
+<p>Igor is the Spinnaker <strong>trigger service</strong>. The following section shows how to configure the dockerRegistry trigger plugin in <code>igor-local.yaml</code>.</p>
+<pre><code class="language-yaml">dockerRegistry:
+  enabled: true
+</code></pre>
+<p>For more configuration options see <a href="https://github.com/spinnaker/igor/blob/master/igor-web/config/igor.yaml">spinnaker/igor</a>.</p>
+<p>When installing the Spinnaker service via the DC/OS console you have sections for each of the Spinnaker services where you can enter the respective yaml configuration.</p>
+<p>Here the sample for the Clouddriver service.
+<a href="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.1-1.9.2/img/inst05.png"><img src="/dcosdocs/mesosphere/dcos/services/spinnaker/0.3.1-1.9.2/img/inst05.png" alt="Spinnaker Quick Start"/></a></p>
+<h2 id="dcos-cli-install"><a class="content__anchor" href="#dcos-cli-install" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS CLI install</h2>
+<p>The config folder that  was created when we downloaded the zip file earlier also provides a tool to generate an <code>options.json</code> file. Once you have edited the yaml templates to your needs, run the tool in the config folder. The proxy hostname is typically the public agent hostname.</p>
+<pre><code class="language-bash">./gen-optionsjson &lt;proxy-hostname&gt;
+</code></pre>
+<p>Once you have the options json file, you can install the Spinnaker service using the DC/OS cli.</p>
+<pre><code class="language-bash">dcos package install --yes spinnaker --options=options.json
+</code></pre>
+<h2 id="edge-lb"><a class="content__anchor" href="#edge-lb" aria-hidden="true"><i data-feather="bookmark"></i></a>Edge-LB</h2>
+<p>Instead of the simple proxy we used in the quick start, you can also use Edge-LB. After installing Edge-LB, you can create the Edge-LB pool configuration file named <code>spinnaker-edgelb.yaml</code>, using the following yaml (<code>minio</code> is also included).</p>
+<pre><code class="language-yaml">apiVersion: V2
+name: spinnaker
+count: 1
+haproxy:
+  frontends:
+  - bindPort: 9001
+    protocol: HTTP
+    linkBackend:
+      defaultBackend: deck
+  - bindPort: 8084
+    protocol: HTTP
+    linkBackend:
+      defaultBackend: gate
+  - bindPort: 9000
+    protocol: HTTP
+    linkBackend:
+      defaultBackend: minio
+  backends:
+  - name: deck
+    protocol: HTTP
+    services:
+    - endpoint:
+        type: ADDRESS
+        address: deck.spinnaker.l4lb.thisdcos.directory
+        port: 9001
+  - name: gate
+    protocol: HTTP
+    services:
+    - endpoint:
+        type: ADDRESS
+        address: gate.spinnaker.l4lb.thisdcos.directory
+        port: 8084
+  - name: minio
+    protocol: HTTP
+    services:
+    - endpoint:
+        type: ADDRESS
+        address: minio.marathon.l4lb.thisdcos.directory
+        port: 9000
+</code></pre>
+<p>Use the following command to launch the pool.</p>
+<pre><code class="language-bash">dcos edgelb create spinnaker-edgelb.yaml
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#installing-with-custom-configuration">Installing with Custom Configuration</a></li><li class="content__sections-item content__sections-item--h2"><a href="#service-settings">Service Settings</a></li><li class="content__sections-item content__sections-item--h1"><a href="#custom-install">Custom Install</a></li><li class="content__sections-item content__sections-item--h2"><a href="#spinnaker-configuration">Spinnaker configuration</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-cli-install">DC/OS CLI install</a></li><li class="content__sections-item content__sections-item--h2"><a href="#edge-lb">Edge-LB</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

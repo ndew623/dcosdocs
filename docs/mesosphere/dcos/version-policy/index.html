@@ -1,0 +1,381 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Version Policy - D2iQ Docs</title><meta name="description" content="DC/OS version lifecycle and compatibility matrix"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li><li class="chooser-list-item"><a href="/dkp/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/version-policy">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__item"><a href="/dkp/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> version-policy</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Version Policy</h1></div><h4 class="content__header-description">DC/OS version lifecycle and compatibility matrix</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/version-policy/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+Version+Policy&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/version-policy&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><p>The Version Policy page was updated on 08 September, 2020.</p>
+<h1 id="mesosphere-dcos-version-lifecycle-and-compatibility-matrix"><a class="content__anchor" href="#mesosphere-dcos-version-lifecycle-and-compatibility-matrix" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesosphere DC/OS Version Lifecycle and Compatibility Matrix</h1>
+<p>This page explains to D2iQ customers, partners, users, and operators of Mesosphere DC/OS the modifications or enhancements to the same software product as designated by a change in the version release. A version release provides backward compatibility to all released APIs. The guidelines outlined in this document applies to the version of DC/OS and its catalog packages.</p>
+<h2 id="dcos-version-lifecycle"><a class="content__anchor" href="#dcos-version-lifecycle" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS Version Lifecycle</h2>
+<p>D2iQ tests DC/OS Enterprise with specific components and operating systems as covered in the <a href="#version-compatibility-matrix">DC/OS Version Compatibility Matrix</a>. This testing is provided in the <a href="#dcos-platform-version-compatibility-matrix">DC/OS Platform Interoperability Matrix</a>. Support services for customers under a license and support agreement is defined within the <a href="https://mesosphere.com/mesosphere-support-terms/">D2iQ Support and Maintenance Terms</a>.</p>
+<h3 id="versioning-definitions"><a class="content__anchor" href="#versioning-definitions" aria-hidden="true"><i data-feather="bookmark"></i></a>Versioning Definitions</h3>
+<ul>
+<li><strong>Major Versions</strong> (<strong>X</strong>.y.z) are releases for providing major and minor features and improvements or optimizations to existing features. They incorporate all applicable bug fixes made in earlier Major, Minor, and Maintenance versions.</li>
+<li><strong>Minor Version</strong> (x.<strong>Y</strong>.z) are versions for delivering minor features, improvements or optimizations to existing features, and bug fixes. They incorporate all applicable bug fixes made in earlier Minor versions, and Maintenance versions.</li>
+<li><strong>Maintenance Version</strong> (x.y.<strong>Z</strong>) are versions for providing bug fixes that are highly impactful to a number of customers and who cannot wait for the next Major or Minor version. They incorporate all applicable bug fixes made in prior Maintenance versions.</li>
+<li><strong>“End of Life (EOL)”</strong> versions are no longer supported by D2iQ, upgrading to a later version is highly recommended.</li>
+</ul>
+<h3 id="version-lifecycle"><a class="content__anchor" href="#version-lifecycle" aria-hidden="true"><i data-feather="bookmark"></i></a>Version Lifecycle</h3>
+<p>D2iQ shall provide support services for customers under a current agreement as outlined in the <a href="https://mesosphere.com/mesosphere-support-terms/">D2iQ Support and Maintenance Terms</a>, for specific versions of Mesosphere DC/OS. While these versions are outlined in the Mesosphere DC/OS Version Compatibility Matrix, they follow a specific model for determining which versions are supported. The model follows an N-2 (for Major and Minor Versions) and N-4 (for Maintenance Versions) specification. Thus, D2iQ shall provide support services for those versions of DC/OS that are either the current, N, or up to two Minor versions behind.<br></p>
+<p>Examples of Major and Minor versions are as follows:</p>
+<ul>
+<li><strong>Major Version</strong>: Upon the availability of a new DC/OS Major version, 2.0.0, Maintenance versions prior to (N-2) Minor versions of the previous (N-1) major release would not be supported. Major Versions also count towards advancing the Minor number version.<br></li>
+</ul>
+<p>Thus, upon the release of 2.0.0 where 1.13.4 and 1.12.5 are available:</p>
+<ul>
+<li>Minor Versions 1.13.2 (1.13.4 and - 2) would be supported, while older versions (1.13.1) would no longer be supported.</li>
+<li>Minor Versions 1.12.3 (1.12.5 and - 2) would be supported, while older versions (1.12.2) would no longer be supported.</li>
+</ul>
+<ul>
+<li><strong>Minor Version</strong>: Upon the availability of a new DC/OS Minor version 1.11.0, minor versions prior to and including 1.8.0 will no longer be supported as (N-2) includes 1.11 (N), 1.10 (N-1) and 1.9 (N-2).</li>
+<li><strong>Maintenance Version</strong>: Upon the availability of DC/OS Maintenance version 1.10.5, Maintenance versions prior to and including 1.10.0 will no longer be supported as (N-4) includes 1.10.5 (N), 1.10.4 (N-1), 1.10.3 (N-2), 1.10.2 (N-3) and 1.10.1 (N-4).<br></li>
+</ul>
+<h2 id="dcos-platform-version-compatibility-matrix"><a class="content__anchor" href="#dcos-platform-version-compatibility-matrix" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS Platform Version Compatibility Matrix</h2>
+<p>DC/OS will run on the tested platform components and operating environments. The list of support matrix for platform components and operating environments are as follows:</p>
+<h5 id="centos-support-matrix"><a class="content__anchor" href="#centos-support-matrix" aria-hidden="true"><i data-feather="bookmark"></i></a><a href="#CentOS-support-matrix">CentOS support matrix</a></h5>
+<h5 id="rhel-support-matrix"><a class="content__anchor" href="#rhel-support-matrix" aria-hidden="true"><i data-feather="bookmark"></i></a><a href="#RHEL-support-matrix">RHEL support matrix</a></h5>
+<h5 id="flatcar-linux-support-matrix"><a class="content__anchor" href="#flatcar-linux-support-matrix" aria-hidden="true"><i data-feather="bookmark"></i></a><a href="#flatcar-support-matrix">Flatcar Linux support matrix</a></h5>
+<p>Customers running DC/OS on non-supported platform components should upgrade to a supported component. For clarity, D2iQ only provides support services to paying customers under a written agreement. The term “supported” in D2iQ documentation refers to whether the indicated software component has been tested for compatibility.</p>
+<p>D2iQ does not retroactively test and support all versions of each of these operating systems against every single historical DC/OS release.  Not all of these operating systems are supported on every version of DC/OS or can be expected to be.  Rather, we test each new DC/OS version (minor or patch)  against the latest stable releases of these supported operating systems by installing DC/OS on the target OS and running the integration test suite against DC/OS installed on an OS/Docker combination.
+CentOS is the only Operating System that is extensively tested (nightly tests, long lived cluster tests, scale tests etc) by D2iQ. All the other mentioned OSes in this page are tested only once per minor or patch release.</p>
+<p>Note: The <a href="https://docs.d2iq.com/dcosdocs/mesosphere/dcos/2.1/installing/evaluation/">Universal Installer</a> only supports CentOS and RHEL. There are no plans to add support for other referenced OSes in this page. Customers are recommended to use the Advanced Installation method for installing DC/OS on these other OSes.</p>
+<h3 id="centos-support-matrix-2"><a class="content__anchor" href="#centos-support-matrix-2" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="CentOS-support-matrix"></a>CentOS support matrix</h3>
+<table class="table">
+    <tr>
+    <th><strong>Platform Component</strong></th>
+    <th><strong>DC/OS 2.2 Latest Stable</strong></th>
+    <th><strong>DC/OS 2.1 Latest Stable</strong></th>
+    <th><strong>DC/OS 2.0 Latest Stable</strong></th>
+    </tr>
+    <tr>
+        <td>CentOS 7.*</td>
+        <td><p style="text-align: center;">Docker CE 19.03.5<br>Docker CE 18.09.9</p></td>
+        <td><p style="text-align: center;">Docker CE 19.03.5<br>Docker CE 18.09.9</p></td>
+        <td><p style="text-align: center;">Docker CE 19.03.5<br>Docker CE 18.09.9</p></td>
+    </tr>
+</table>
+<h3 id="rhel-support-matrix-2"><a class="content__anchor" href="#rhel-support-matrix-2" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="RHEL-support-matrix"></a>RHEL support matrix</h3>
+<table class="table">
+    <tr>
+    <th><strong>Platform Component</strong></th>
+    <th><strong>DC/OS 2.2 Latest Stable</strong></th>
+    <th><strong>DC/OS 2.1 Latest Stable</strong></th>
+    <th><strong>DC/OS 2.0 Latest Stable</strong></th>
+    </tr>
+    <tr>
+        <td>RHEL 7.*</td>
+        <td><p style="text-align: center;">Docker CE 19.03.5<br>Docker CE 18.09.9</p></td>
+        <td><p style="text-align: center;">Docker CE 19.03.5<br>Docker CE 18.09.9</p></td>
+        <td><p style="text-align: center;">Docker CE 19.03.5<br>Docker CE 18.09.9</p></td>
+    </tr>
+</table>
+<h3 id="ubuntu-support-matrix"><a class="content__anchor" href="#ubuntu-support-matrix" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="Ubuntu-support-matrix"></a>Ubuntu support matrix</h3>
+<p><strong>NOTE: Starting with DC/OS 2.0, we have discontinued support for Ubuntu Linux.</strong></p>
+<h3 id="oracle-support-matrix"><a class="content__anchor" href="#oracle-support-matrix" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="Oracle-support-matrix"></a>Oracle support matrix</h3>
+<p><strong>NOTE: Starting with DC/OS 2.0, we have discontinued support for Oracle Linux.</strong></p>
+<h3 id="coreos-support-matrix"><a class="content__anchor" href="#coreos-support-matrix" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="CoreOS-support-matrix"></a>CoreOS support matrix</h3>
+<p>As of May 26th 2020 CoreOS Container Linux has reached its <a href="https://coreos.com/os/eol/">end of life</a> and will no longer receive updates. The recommended alternative is to use <a href="#flatcar-support-matrix">Flatcar Linux</a>.</p>
+<p><strong>NOTE: Starting with DC/OS 2.0, we have discontinued support for CoreOS.</strong></p>
+<table class="table">
+    <tr>
+    <th><strong>Platform Component</strong></th>
+    <th><strong>DC/OS 1.13 Latest Stable</strong></th>
+    </tr>
+    <tr>
+        <td>CoreOS 2079.3.0</td>
+        <td><p style="text-align: center;">Docker CE 18.06.3</p></td>
+    </tr>
+    <tr>
+        <td>CoreOS 2023.5.0</td>
+        <td><p style="text-align: center;">Docker CE 18.06.1</p></td>
+    </tr>
+    <tr>
+        <td>CoreOS 2023.4.0</td>
+        <td><p style="text-align: center;">Docker CE 18.06.1</p></td>
+    </tr>
+</table>
+<h3 id="flatcar-linux-support-matrix-2"><a class="content__anchor" href="#flatcar-linux-support-matrix-2" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="flatcar-support-matrix"></a>Flatcar Linux support matrix</h3>
+<table class="table">
+    <tr>
+    <th><strong>Platform Component</strong></th>
+    <th><strong>DC/OS 2.2 Latest Stable</strong></th>
+    <th><strong>DC/OS 2.1 Latest Stable</strong></th>
+    </tr>
+    <tr>
+        <td>Flatcar Linux 2345.3.1</td>
+        <td><p style="text-align: center;">Docker CE 18.06.3</p></td>
+        <td><p style="text-align: center;">Docker CE 18.06.3</p></td>
+    </tr>
+</table>
+<h2 id="internet-browser-and-cli-matrix"><a class="content__anchor" href="#internet-browser-and-cli-matrix" aria-hidden="true"><i data-feather="bookmark"></i></a>Internet Browser and CLI Matrix</h2>
+<p>Use the following legend table to see the supported/not supported service for the operating environments on which DC/OS has been tested.</p>
+<h3 id="legend-for-internet-browser-and-cli-support-matrix"><a class="content__anchor" href="#legend-for-internet-browser-and-cli-support-matrix" aria-hidden="true"><i data-feather="bookmark"></i></a>Legend for Internet Browser and CLI support matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Display Icon</th>
+<th>Service</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>⚫</td>
+<td>Supported</td>
+</tr>
+<tr>
+<td></td>
+<td>Not Supported</td>
+</tr>
+</tbody>
+</table>
+<h3 id="internet-browser-support-matrix"><a class="content__anchor" href="#internet-browser-support-matrix" aria-hidden="true"><i data-feather="bookmark"></i></a>Internet Browser support matrix</h3>
+<table class="table">
+    <tr>
+    <th><strong>Web Browser</strong></th>
+    <th><strong>DC/OS 2.2 Latest Stable</strong></th>
+    <th><strong>DC/OS 2.1 Latest Stable</strong></th>
+    <th><strong>DC/OS 2.0 Latest Stable</strong></th>
+    </tr>
+    <tr>
+        <td>Chrome</td>
+        <td><p style="text-align: center;">⚫</p></td>
+        <td><p style="text-align: center;">⚫</p></td>
+        <td><p style="text-align: center;">⚫</p></td>
+    </tr>
+    <tr>
+        <td>Firefox</td>
+        <td><p style="text-align: center;">⚫</p></td>
+        <td><p style="text-align: center;">⚫</p></td>
+        <td><p style="text-align: center;">⚫</p></td>
+    </tr>
+</table>
+<h3 id="cli-support-matrix"><a class="content__anchor" href="#cli-support-matrix" aria-hidden="true"><i data-feather="bookmark"></i></a>CLI support matrix</h3>
+<table class="table">
+    <tr>
+    <th><strong>CLI</strong></th>
+    <th><strong>DC/OS 2.2 Latest Stable</strong></th>
+    <th><strong>DC/OS 2.1 Latest Stable</strong></th>
+    <th><strong>DC/OS 2.0 Latest Stable</strong></th>
+    </tr>
+    <tr>
+        <td>DC/OS CLI 1.x</td>
+        <td><p style="text-align: center;">⚫</p></td>
+        <td><p style="text-align: center;">⚫</p></td>
+        <td><p style="text-align: center;">⚫</p></td>
+    </tr>
+</table>
+<h2 id="customer-advisory-for-centosrhel-7x"><a class="content__anchor" href="#customer-advisory-for-centosrhel-7x" aria-hidden="true"><i data-feather="bookmark"></i></a>Customer Advisory for CentOS/RHEL 7.X</h2>
+<p class="message--important"><strong>IMPORTANT: </strong>Docker recently enabled <code>kmem</code> accounting in version 17.06+. Customers may notice instability for the entire system when running under RHEL or CentOS 7.x. The symptoms include tasks getting stuck indefinitely and kernel-related error messages in the system logs. The <code>kmem</code> accounting feature in Redhat’s forked Linux Kernel is incomplete and can cause kernel deadlocks or kernel memory leaks. Details on the bug and mitigation instructions are located <a href="https://mesosphere-community.force.com/s/article/Critical-Issue-KMEM-MSPH-2018-0006">here</a>.</p>
+<h2 id="version-compatibility-matrix"><a class="content__anchor" href="#version-compatibility-matrix" aria-hidden="true"><i data-feather="bookmark"></i></a>Version Compatibility Matrix</h2>
+<p>D2iQ maintains and certifies several packages for DC/OS.</p>
+<h3 id="base-technology"><a class="content__anchor" href="#base-technology" aria-hidden="true"><i data-feather="bookmark"></i></a>Base Technology</h3>
+<p>D2iQ does not offer support services for the base technology (for example, Jenkins). The base technology version is denoted as the second version in the package number (for example, 1.2.3-<strong>4.5.6</strong>).</p>
+<h3 id="certified-package-designations"><a class="content__anchor" href="#certified-package-designations" aria-hidden="true"><i data-feather="bookmark"></i></a>Certified Package Designations</h3>
+<p>Services that are labeled as “Certified” have been tested by D2iQ for interoperability with DC/OS, but D2iQ disclaims all warranties, and makes no promises, including with respect to the services’ operation or production readiness. Support for the integration may be available from D2iQ or the creator of the service. The matrix below lists certified packages and the current state of which packages are tested on what version of DC/OS, and what is within the best effort scope of our technical support organization.</p>
+<p>The designations are as follows:</p>
+<p>⚫ This combination is tested and compatible with the specified version of DC/OS.</p>
+<ul>
+<li>This package is within the scope of our technical support organization.</li>
+<li>This is package is eligible for bug fixes.</li>
+</ul>
+<p>◒ This combination has been tested previously and should be compatible with the specified version of DC/OS.</p>
+<ul>
+<li>This combination is not within the scope of our technical support organization.</li>
+<li>This combination is not eligible for bug fixes.</li>
+</ul>
+<p>◯ This package combination has not been tested.</p>
+<ul>
+<li>This combination is not within the scope of our technical support organization.</li>
+<li>This combination is not eligible for bug fixes.</li>
+</ul>
+<h2 id="certified-packages-and-dcos-versions"><a class="content__anchor" href="#certified-packages-and-dcos-versions" aria-hidden="true"><i data-feather="bookmark"></i></a>Certified Packages and DC/OS Versions</h2>
+<table class="table">
+    <tr>
+        <th><strong>DC/OS Package for</strong></th>
+        <th><p style="text-align: center;"><strong>DC/OS 2.2</strong></p></th>
+            </tr>
+    <tr>
+        <td>Cassandra 2.4.x-3.0.16</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+    <tr>
+        <td>Cassandra 2.9.x-3.11.6 (Recommended)</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+    <tr>
+        <td>Confluent-Kafka 2.5.x-4.1.2</td>
+        <td><p style="text-align: center;">⚫</p></td>
+           </tr>
+    <tr>
+        <td>Confluent-Kafka 2.10.x-5.5.1 (Recommended)</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+    <tr>
+        <td>Confluent-ZooKeeper 2.5.x-4.1.3e</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+    <tr>
+        <td>Confluent-ZooKeeper 2.8.x-5.5.1 (Recommended)</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+        <tr>
+        <td>²DataStax-DSE 2.4.x-5.1.10</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+    <tr>
+        <td>²DataStax-DSE 3.2.x-6.7.7 (Recommended)</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+        <td>²DataStax-Ops 2.4.x-6.1.9</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+    <tr>
+        <td>²DataStax-Ops 3.2.x-6.7.7 (Recommended)</td>
+        <td><p style="text-align: center;">⚫</p></td>
+             <tr>
+        <td>Edge-LB 1.2</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+    <tr>
+        <td>Edge-LB 1.3 (Recommended)</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+    <tr>
+        <td>Elastic 2.7.x-6.8.1</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+    <tr>
+        <td>Elastic 3.1.2-7.6.0 (Recommended)</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+    <tr>
+        <td>HDFS 2.5.x-2.6.0-cdh5.11.0 </td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+    <tr>
+        <td>HDFS 2.8.x-3.2.1 (Recommended)</td>
+        <td><p style="text-align: center;">⚫</p></td>
+           </tr>
+    <tr>
+        <td>Jenkins 3.5.x-2.107.2</td>
+        <td><p style="text-align: center;">⚫</p></td>
+           </tr>
+    <tr>
+        <td>Jenkins 3.5.x-2.150.1 (Recommended)</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+    <tr>
+        <td>Kafka 2.4.x-1.1.1</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+    <tr>
+        <td>Kafka 2.9.x-2.4.0 (Recommended)</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+    <tr>
+        <td>Kafka-Zookeeper 2.6.x-3.4.14</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+    <!-- Where is Kafka-ZooKeeper 2.4.x? -->
+    <tr>
+        <td>Kafka-Zookeeper 2.7.x-3.4.14 (Recommended)</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+    <tr>
+        <td>Kibana 2.7.x-6.8.1 (Recommended)</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+    <tr>
+        <td>Kubernetes 2.1.x-1.12.y</td>
+        <td><p style="text-align: center;">◯</p></td>
+            </tr>
+    <tr>
+        <td>Kubernetes 2.2.x-1.13.y </td>
+        <td><p style="text-align: center;">◯</p></td>
+            </tr>
+    <tr>
+        <td>Kubernetes 2.2.x-1.14.y (Recommended)</td>
+        <td><p style="text-align: center;">⚫</p></td>
+           </tr>
+    <tr>
+        <td>Kubernetes Cluster 2.2.x-1.13.y </td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+    <tr>
+        <td>Kubernetes Cluster 2.3.x-1.14.y (Recommended)</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+    <tr>
+        <td>Marathon-LB 1.12.x</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+    <tr>
+        <td>Marathon-LB 1.13.x (Recommended)</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+    <tr>
+        <td>MoM (Marathon on Marathon) 1.6.x</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+    <tr>
+        <td>MoM (Marathon on Marathon) 1.7.x</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+    <tr>
+        <td>MoM (Marathon on Marathon) 1.8.x (Recommended)</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+    <tr>
+        <td>Spark 2.11.x-2.4.6</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+    <tr>
+        <td>Spark 2.12.x-3.0.1 (Recommended)</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+    <tr>
+        <td>Spark History 2.11.x-2.4.6</td>
+        <td><p style="text-align: center;">⚫</p></td>
+           </tr>
+    <tr>
+        <td>Spark History 2.12.x-3.0.1 (Recommended)</td>
+        <td><p style="text-align: center;">⚫</p></td>
+            </tr>
+</table>
+<h3 id="beta-package-designations"><a class="content__anchor" href="#beta-package-designations" aria-hidden="true"><i data-feather="bookmark"></i></a>Beta Package Designations</h3>
+<p>Services that are labeled as “Beta” are not ready for production.</p>
+<p>The designations are as follows:</p>
+<p>◯ - This package combination has not been tested.</p>
+<ul>
+<li>This combination is not within the scope of our technical support organization.</li>
+<li>This combination is not eligible for bug fixes.</li>
+</ul>
+<p>B - This package combination is <em>beta</em>.</p>
+<ul>
+<li>Beta packages are not within the scope of our technical support organization.</li>
+<li>Beta packages iterate quickly and are not eligible for bug fixes.</li>
+</ul>
+<h2 id="beta-packages-and-dcos-versions"><a class="content__anchor" href="#beta-packages-and-dcos-versions" aria-hidden="true"><i data-feather="bookmark"></i></a>Beta Packages and DC/OS Versions</h2>
+<table class="table">
+    <tr>
+        <th><strong>DC/OS Package for</strong></th>
+        <th><p style="text-align: center;"><strong>DC/OS 2.2</strong></p></th>
+            </tr>
+    <tr>
+        <td>Beta DC/OS Storage Services 0.4.0</td>
+        <td><p style="text-align: center;">◯</p></td>
+            </tr>
+    <tr>
+        <td>¹Beta DC/OS Storage Services 0.5.3 </td>
+        <td><p style="text-align: center;">◯</p></td>
+            </tr>
+    <tr>
+        <td>Beta DC/OS Storage Services 0.6.0 (Recommended)</td>
+        <td><p style="text-align: center;">B</p></td>
+            </tr>
+    <tr>
+        <td>Beta Mesosphere Jupyter Service 1.3.x - 0.35.4 (Recommended)</td>
+        <td><p style="text-align: center;">B</p></td>
+            </tr>
+</table>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#mesosphere-dcos-version-lifecycle-and-compatibility-matrix">Mesosphere DC/OS Version Lifecycle and Compatibility Matrix</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-version-lifecycle">DC/OS Version Lifecycle</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-platform-version-compatibility-matrix">DC/OS Platform Version Compatibility Matrix</a></li><li class="content__sections-item content__sections-item--h2"><a href="#internet-browser-and-cli-matrix">Internet Browser and CLI Matrix</a></li><li class="content__sections-item content__sections-item--h2"><a href="#customer-advisory-for-centosrhel-7x">Customer Advisory for CentOS/RHEL 7.X</a></li><li class="content__sections-item content__sections-item--h2"><a href="#version-compatibility-matrix">Version Compatibility Matrix</a></li><li class="content__sections-item content__sections-item--h2"><a href="#certified-packages-and-dcos-versions">Certified Packages and DC/OS Versions</a></li><li class="content__sections-item content__sections-item--h2"><a href="#beta-packages-and-dcos-versions">Beta Packages and DC/OS Versions</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

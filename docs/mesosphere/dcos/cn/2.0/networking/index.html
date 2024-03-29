@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>网络 - D2iQ Docs</title><meta name="description" content="了解 DC/OS 网络堆栈"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.0/networking">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.0"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/networking">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/networking">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/networking">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.0</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/networking/"><i data-feather="chevron-right"></i>网络</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/networking/load-balancing-vips/"><i data-feather="chevron-right"></i>负载均衡和虚拟 IP (VIP)</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/networking/SDN/"><i data-feather="chevron-right"></i>软件定义网络</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/networking/DNS/"><i data-feather="chevron-right"></i>DNS</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">网络</h1></div><h4 class="content__header-description">了解 DC/OS 网络堆栈</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.0/networking/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>Mesosphere® DC/OS™ 网络堆栈提供</p>
+<ul>
+<li><a href="#IP-connectivity">与容器的 IP 连通</a></li>
+<li>内置 <a href="#DNS-discovery">基于 DNS 的服务发现</a></li>
+<li>第 4 层和第 7 层 <a href="#load-balancing">负载均衡</a></li>
+<li>唯一的 <a href="#Cluster-ID">群集标识</a> 选项</li>
+</ul>
+<h1 id="ip"><a class="content__anchor" href="#ip" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="IP-connectivity"></a>IP 连通</h1>
+<p>在 DC/OS 上运行的容器可使用以下三种网络模式之一获取 IP 地址：</p>
+<ul>
+<li><a href="#host-mode">主机模式网络</a></li>
+<li><a href="#bridge-mode">桥接模式网络</a></li>
+<li><a href="#container-mode">容器模式网络</a></li>
+</ul>
+<p>这三种网络模式都可用于所有容器，无论用于启动它们的容器运行时（UCR 或 Docker®）如何。</p>
+<h2 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="host-mode"></a>主机模式网络</h2>
+<p>在主机模式下，容器与其他 DC/OS 系统服务（如  Apache® Mesos® 和 Marathon™）在同一网络上运行。它们共享相同的 Linux 网络命名空间，看到的 IP 地址和端口与通过 DC/OS 系统服务看到的相同。主机模式网络最具限制性。它不允许容器使用整个 TCP/UDP 端口范围，且应用程序必须能够使用代理节点上可用的任何端口。</p>
+<h2 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="bridge-mode"></a>桥接模式网络</h2>
+<p>在桥接模式下，容器在 Linux 网桥上启动，在 DC/OS 代理程序中创建。在该模式下运行的容器获得各自的 Linux® 网络命名空间和 IP 地址 - 它们可以使用整个 TCP/UDP 端口范围。在确定应用程序端口时，此模式非常有用。使用此模式的主要问题是容器只能由另一代理节点上运行的容器通过端口映射规则访问。UCR 和 Docker 都为在桥接模式网络上启动的任何容器安装端口映射规则。</p>
+<h2 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="container-mode"></a>容器模式网络</h2>
+<p>在该模式下，允许容器在各种软件定义网络 (SDN) 上运行。DC/OS 支持 UCR 容器的 <a href="https://github.com/containernetworking/cni">CNI™（容器网络接口）</a> 标准和 Docker 容器的 <a href="https://github.com/docker/libnetwork">CNM（容器网络模型）</a> 标准。使用 CNI 和 CNM，DC/OS 能够将容器连接到支持 CNI 或 CNM 标准的 SDN 提供商定义的任何虚拟网络上。在这三种模式中，这是最灵活且功能最丰富的模式，因为容器获得了自己的 Linux 网络命名空间，并且底层 SDN 网络保证了容器之间的连接性，无需依赖代理节点上的端口映射规则。此外，由于 SDN 可通过防火墙提供网络隔离，并且非常灵活，因此可让操作员轻松运行多租户群集。该网络模式还允许容器的网络与主机网络完全隔离，通过保护其免受来自在 DC/OS 上运行的恶意容器的 DDOS 攻击，为主机网络提供额外的安全级别。</p>
+<h1 id="dns"><a class="content__anchor" href="#dns" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="DNS-discovery"></a>基于 DNS 的服务发现</h1>
+<p>DC/OS 包括基于 DNS 的高可用性的分布式服务发现。所有在 DC/OS 上运行的容器均有此功能，无论它们使用的网络模式如何。DC/OS 中基于 DNS 的服务发现机制由以下两个组件支持：</p>
+<ul>
+<li>名为 Mesos DNS 的集中式组件，在每个管理节点上运行。</li>
+<li>名为 <code>dcos-dns</code> 的分布式组件，作为被称为 <code>dcos-net</code>. 的 Erlang 虚拟机中的应用程序运行。Erlang 虚拟机 <code>dcos-net</code> 在群集中的每个节点（代理和管理）上运行。</li>
+</ul>
+<h2 id="mesos-dns"><a class="content__anchor" href="#mesos-dns" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesos DNS</h2>
+<p>Mesos DNS 是一个集中式的复制 DNS 服务器，在每个管理节点上运行。Mesos DNS 的每个实例都会轮询领导 Mesos 管理节点，并为由 DC/OS 启动的每个应用程序生成完全限定的域名 (FQDN)。所有这些 FQDN 的顶级域 (TLD) 为 <code>.mesos</code>. 如需更多信息，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/2.0/networking/DNS/mesos-dns/">Mesos DNS 文档</a>。</p>
+<h2 id="dcos-dns"><a class="content__anchor" href="#dcos-dns" aria-hidden="true"><i data-feather="bookmark"></i></a>DCOS DNS</h2>
+<p><code>dcos-dns</code> 是在每个代理节点和管理节点上运行的分布式 DNS 服务器，作为被称为 <code>dcos-net</code> 的 Erlang 虚拟机的一部分。这使其高度可用。在领导管理节点上运行的实例定期轮询领导管理节点的状态，并为由 DC/OS 启动的每个应用程序生成 FQDN。然后，它将此信息发送给群集中的同行。所有这些 FQDN 的 TLD 都为 <code>.directory</code>.</p>
+<p><code>dcos-dns</code> 拦截发源于代理节点的所有 DNS 查询。如果查询以 <code>.directory</code> TLD 结束，则它会在本地解析；如果以 <code>.mesos</code> 结束，则 <code>dcos-dns</code> 会把查询转发给在管理节点上运行的 <code>mesos-dns</code> 之一。否则，它会根据 TLD，将查询转发给已配置的上游 DNS 服务器。</p>
+<p><code>dcos-dns</code> 也充当 DNS 服务器，适合利用名为 <a href="/dcosdocs/mesosphere/dcos/cn/2.0/networking/load-balancing-vips/">dcos-l4lb</a> 的 DC/OS 内部负载均衡器进行负载均衡的任何服务。通过 dcos-l4lb 进行负载均衡的任何服务均获得 <a href="/dcosdocs/mesosphere/dcos/cn/2.0/networking/load-balancing-vips/virtual-ip-addresses/">virtual-ip-address (VIP)</a> 以及 <code>&quot;*.l4lb.thisdcos.directory&quot;</code> 域中的 FQDN。然后，FQDN 将存储在 dcos-dns 中，并发送给群集中的其他同行。这为任何由 Minuteman 进行负载均衡的任务提供了高度可用的分布式 DNS 服务。如需更多信息，请参阅 <a href="https://github.com/dcos/dcos-net/blob/master/docs/dcos_dns.md">dcos-net 存储库</a>.</p>
+<h1 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="load-balancing"></a>负载均衡</h1>
+<p>DC/OS 为第 4 层和第 7 层负载均衡提供了不同的选项。以下章节介绍在这两个层上提供的各种特性。</p>
+<h2 id="4"><a class="content__anchor" href="#4" aria-hidden="true"><i data-feather="bookmark"></i></a>第 4 层</h2>
+<p><a href="/dcosdocs/mesosphere/dcos/cn/2.0/networking/load-balancing-vips/">dcos-l4lb</a> 是默认安装的分布式第 4 层东西向负载均衡器。它具有高度可扩展性和高可用性，提供零跃负载均衡，没有单个阻塞点，并容忍主机故障。 <code>dcos-l4lb</code> 作为 Erlang 虚拟机中的应用程序运行 <code>dcos-net</code>，其在群集中的所有代理节点和管理节点上运行。</p>
+<h2 id="7"><a class="content__anchor" href="#7" aria-hidden="true"><i data-feather="bookmark"></i></a>第 7 层</h2>
+<p>DC/OS 中有两个软件包，即 <a href="/dcosdocs/mesosphere/dcos/cn/services/edge-lb/latest/">Edge-LB</a> 和 <a href="/dcosdocs/mesosphere/dcos/cn/services/marathon-lb/latest/">Marathon-LB</a>.，为 DC/OS 服务提供第 7 层负载均衡。这两个软件包均使用 HAProxy 作为其数据平面，对进入群集的北南向流量进行负载均衡。虽然这些软件包主要用于提供第 7 层负载均衡（支持 HTTP 和 HTTPS），但它们也可为 TCP 和 SSL 流量提供第 4 层负载均衡。尽管这两个软件包使用的数据平面基本相同，但其提供的控制平面却截然不同。</p>
+<h3 id="edge-lb-enterprise"><a class="content__anchor" href="#edge-lb-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>Edge-LB <span class="badge__container badge__container--small"><span class="badge badge--shortcode badge--large badge--small badge--enterprise">Enterprise</span></span></h3>
+<p>Edge-LB 可支持 HAProxy 负载均衡实例池，可实现多租户支持。它配有自己的 CLI，可配置和启动实体池；它不仅支持 Marathon 应用程序，还支持由其他希望将其应用程序公开到群集之外 Mesos 框架管理的应用程序。Edge-LB 仅适用于 DC/OS Enterprise。</p>
+<h3 id="marathon-lb"><a class="content__anchor" href="#marathon-lb" aria-hidden="true"><i data-feather="bookmark"></i></a>Marathon-LB</h3>
+<p>Marathon-LB 要简单得多，只管理 HAProxy 的单个实例。它只能对 Marathon 启动的应用执行负载均衡。Marathon-LB 适用于 DC/OS 的开源版和企业版。</p>
+<h2 id="-5"><a class="content__anchor" href="#-5" aria-hidden="true"><i data-feather="bookmark"></i></a>比较分析</h2>
+<p>尽管 Marathon-LB 和 Edge-LB 均设计用于处理北南向入口流量，但它们可用于内部东西向第 7 层负载均衡，必要时甚至是第 4 层东西向负载均衡。下表显示了对 DC/OS 中不同负载均衡解决方案的比较分析。</p>
+<table>
+<thead>
+<tr>
+<th>解决方案</th>
+<th><code>dcos-l4lb</code></th>
+<th>Edge-LB</th>
+<th>Marathon-LB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>开源</td>
+<td>X</td>
+<td></td>
+<td>X</td>
+</tr>
+<tr>
+<td>企业</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td>北南向（外部到内部）</td>
+<td></td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td>东西向（内部到内部）</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td>第 4 层（传输层）</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td>第 7 层（应用层）</td>
+<td></td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td>Marathon 服务</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td>非 Marathon 服务</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>零跃负载均衡</td>
+<td>X</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>无单一故障点</td>
+<td>X</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="-6"><a class="content__anchor" href="#-6" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="cluster-id"></a>指定网络连接的群集标识</h1>
+<p>DC/OS 网络组件（<code>dcos-net</code>）支持在 DC/OS 群集的节点上设置<strong>群集标识</strong>选项。通过启用此功能，可以在节点从一个群集移动到另一个群集时阻止节点跨群集进行通信。此功能可确保群集中的节点具有唯一标识符，并防止群集之间发生未经授权的“交互”。</p>
+<p>要使用群集标识功能：</p>
+<ol>
+<li>
+<p>编辑 <code>config.yaml</code> 群集中每个节点的文件，以添加 <code>dcos_net_cluster_identity</code> 配置参数。</p>
+</li>
+<li>
+<p>将参数值设置为 <code>true</code> 用于使用群集标识。</p>
+<p>例如：</p>
+<pre><code class="language-bash">&quot;dcos_net_cluster_identity&quot;: &quot;true&quot;
+</code></pre>
+</li>
+</ol>
+<p>如果要升级群集中的节点以使用群集标识功能，则启用了标志的已升级节点（代理或管理服务器）将无法与尚未升级的任何节点上的 <code>dcos-net</code> 服务进行通信。由于此行为更改，您可能会在升级期间遇到网络操作的轻微中断，直到群集中的所有节点都已启用此标志进行升级为止。</p>
+<p>在分阶段升级过程中，您可能会发现 DNS 或 L4LB 在群集中的所有节点上都无法正常运行。如果进行更改（例如，添加新应用程序、任务或服务或删除现有应用程序、任务或服务），则在升级完成之后，这些更改可能不会反映在可用信息中。</p>
+<h1 id="-7"><a class="content__anchor" href="#-7" aria-hidden="true"><i data-feather="bookmark"></i></a>关于软件重构的说明</h1>
+<p>在 DC/OS 1.11 及更新版本中，大多数网络组件（如 <code>dcos-dns</code>、<code>dcos-l4lb</code>、<code>dcos-overlay</code>）是作为在群集中所有节点上运行的名为 <code>systemd</code> 的单个 <code>dcos-net</code> 单元的一部分运行的应用程序。以 DC/OS 1.11 之前，每个应用程序 <code>dcos-dns</code>、<code>dcos-l4lb</code> 和 <code>dcos-overlay</code> 作为单独 <code>systemd</code> 单元运行。在 DC/OS 1.11 之前，<code>dcos-dns</code> 的职责由 <code>spartan</code> 履行，<code>dcos-l4lb</code> 由 <code>minuteman</code> 履行，<code>dcos-overlay</code> 由 <code>navstar</code>. 履行。在 DC/OS 1.11 中，不同的 <code>systemd</code> 单元被聚合为单个服务。遵循这种操作模式的主要优点是，它可以更高效地利用资源（更低的 CPU 消耗和更低的内存），并且还使网络服务更加可靠。这种方法也使得代码的维护更容易。</p>
+<p>与先前版本的 DC/OS 相比，这些更新提供了相同或更好的功能，但能更高效地使用资源。因此，即使该软件重构已经改变了用于在 DC/OS 内提供网络服务的内部机制，但从功能角度来看，应该看不到任何差异。</p>
+<div class="grid"><a class="grid__item" href="/dcosdocs/mesosphere/dcos/cn/2.0/networking/load-balancing-vips"><div class="grid__header__wrapper"><h3 class="grid__header">负载均衡和虚拟 IP (VIP)</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">了解负载均衡和虚拟 IP<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/dcosdocs/mesosphere/dcos/cn/2.0/networking/SDN"><div class="grid__header__wrapper"><h3 class="grid__header">软件定义网络</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">了解 SDN 的 DC/OS 支持<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/dcosdocs/mesosphere/dcos/cn/2.0/networking/DNS"><div class="grid__header__wrapper"><h3 class="grid__header">DC/OS 域名服务</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">了解 DC/OS 域名服务发现<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a></div></article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#ip">IP 连通</a></li><li class="content__sections-item content__sections-item--h2"><a href="#主机模式网络">主机模式网络</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-2">桥接模式网络</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-3">容器模式网络</a></li><li class="content__sections-item content__sections-item--h1"><a href="#dns">基于 DNS 的服务发现</a></li><li class="content__sections-item content__sections-item--h2"><a href="#mesos-dns">Mesos DNS</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-dns">DCOS DNS</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-4">负载均衡</a></li><li class="content__sections-item content__sections-item--h2"><a href="#4">第 4 层</a></li><li class="content__sections-item content__sections-item--h2"><a href="#7">第 7 层</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-5">比较分析</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-6">指定网络连接的群集标识</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-7">关于软件重构的说明</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

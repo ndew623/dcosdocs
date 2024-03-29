@@ -1,0 +1,421 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>授权访问服务和组 - D2iQ Docs</title><meta name="description" content="使用 Web 界面或 CLI 对服务实施细粒度用户访问"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/1.13/deploying-services/service-groups">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/service-groups">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/service-groups">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/service-groups">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/marathon-parameters/">Marathon 配置参考</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/install/">安装服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/task-handling/"><i data-feather="chevron-right"></i>任务处理</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/creating-services/"><i data-feather="chevron-right"></i>创建服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/config-universe-service/">配置服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/marathon-constraints/">Marathon 布局约束</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/scale-service/">扩展服务</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/service-groups/">授权访问服务和组</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/fault-domain-awareness/">故障域感知和容量扩展</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/update-user-service/">更新用户创建的服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/service-ports/">服务端口</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/service-endpoints/">服务端点</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/monitor-services/">监控服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/private-docker-registry/">使用专用 Docker 注册表</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/expose-service/">公开服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/deployments/">部署</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/uninstall/">卸载服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/package-api/">包管理 API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/marathon-on-marathon/"><i data-feather="chevron-right"></i>使用自定义 Marathon</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/marathon-api/">Marathon  API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/containerizers/"><i data-feather="chevron-right"></i>使用容器化工具</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/pods/"><i data-feather="chevron-right"></i>Pod</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/multi-tenancy-primitives/">多租户原始文件</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/gpu/">使用 GPU</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/faq/">常见问题</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">授权访问服务和组</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">使用 Web 界面或 CLI 对服务实施细粒度用户访问</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/service-groups/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>可以使用 DC/OS Web 界面、<a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/iam-api/">API</a> 或 CLI，对服务实施细粒度用户访问 。</p>
+<p><a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/perms-reference/#marathon-metronome">Marathon 权限</a> 帮助您按照服务或服务组，限制用户对服务的访问。该部分为您介绍实现这一切的步骤。</p>
+<p><a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/perms-reference/#marathon-metronome">Marathon 权限</a> 和 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/perms-reference/#mesos">Mesos 权限</a> 的服务名称、工作名称、服务组或作业组没有区别。因此，您的命名必须是唯一的。</p>
+<p><strong>前提条件：</strong></p>
+<ul>
+<li>必须 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/install/">安装 DC/OS CLI</a> 并以超级用户登户身份登录。</li>
+<li>用于分配权限的<a href="/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/users-groups/">用户帐户</a></li>
+</ul>
+<h1 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="root-service"></a>授权访问服务</h1>
+<h2 id="dcos-web"><a class="content__anchor" href="#dcos-web" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="root-service-ui"></a>使用 DC/OS Web 界面</h2>
+<ol>
+<li>
+<p>以具有 <code>superuser</code> 权限的用户身份登录数据中心操作系统 Web 界面。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/1.13/img/LOGIN-EE-Modal_View-1_12.png" alt="登录"></p>
+<p>图 1. DC/OS Web 界面登录画面。</p>
+</li>
+<li>
+<p>选择<strong>组织</strong>，然后选择<strong>用户</strong>或<strong>组</strong>。</p>
+</li>
+<li>
+<p>选择要授予权限的用户名或组名。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/1.13/img/GUI-Organization-Users-Users_List_View_w_Users-1_12.png" alt="添加 cory 权限"></p>
+<p>图 2. 选择要授予权限的用户</p>
+</li>
+<li>
+<p>在<strong>权限</strong>选项卡上，单击<strong>添加权限</strong>。</p>
+</li>
+<li>
+<p>单击<strong>插入权限字符串</strong>以切换对话框。</p>
+</li>
+<li>
+<p>在<strong>权限字符串</strong>字段中复制并粘贴权限。根据您的[安全模式]选择权限字符串。(/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/#security-modes).</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/1.13/img/GUI-Organization-Users-User_Alice_Add_Gen_Perms-1_12.png" alt="添加权限"></p>
+<p>图 3. 复制和粘贴权限字符串。</p>
+<h3 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>宽容</h3>
+<ul>
+<li>
+<p><strong>DC/OS 服务访问：</strong></p>
+<p>指定您的服务（<code>&lt;service-name&gt;</code>）和操作（<code>&lt;action&gt;</code>). 操作可以是 <code>create</code>、 <code>read</code>、 <code>update</code>、<code>delete</code> 或 <code>full</code>. 若要允许多个操作，请使用逗号分隔它们，例如: <code>dcos:service:marathon:marathon:services:/&lt;service-name&gt; read,update</code>.</p>
+<pre><code class="language-bash">dcos:adminrouter:service:marathon full
+dcos:service:marathon:marathon:services:/&lt;service-name&gt; &lt;action&gt;
+</code></pre>
+</li>
+<li>
+<p><strong>DC/OS 服务任务和日志：</strong></p>
+<pre><code class="language-bash">dcos:adminrouter:ops:slave full
+</code></pre>
+</li>
+</ul>
+<h3 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>严格</h3>
+<ul>
+<li>
+<p><strong>DC/OS 服务访问：</strong></p>
+<p>指定您的服务（<code>&lt;service-name&gt;</code>）和操作（<code>&lt;action&gt;</code>). 操作可以是 <code>create</code>、 <code>read</code>、 <code>update</code>、<code>delete</code> 或 <code>full</code>. 若要允许多个操作，请使用逗号分隔它们，例如: <code>dcos:service:marathon:marathon:services:/&lt;service-name&gt; read,update</code>.</p>
+<pre><code class="language-bash">dcos:adminrouter:service:marathon full
+dcos:service:marathon:marathon:services:/&lt;service-name&gt; &lt;action&gt;
+</code></pre>
+</li>
+<li>
+<p><strong>DC/OS 服务任务和日志：</strong></p>
+<pre><code class="language-bash">dcos:adminrouter:ops:slave full
+dcos:mesos:agent:executor:app_id:/&lt;service-name&gt; read
+dcos:mesos:agent:framework:role:slave_public read
+dcos:mesos:agent:sandbox:app_id:/&lt;service-name&gt; read
+dcos:mesos:agent:task:app_id:/&lt;service-name&gt; read
+dcos:mesos:master:executor:app_id:/&lt;service-name&gt; read
+dcos:mesos:master:framework:role:slave_public read
+dcos:mesos:master:task:app_id:/&lt;service-name&gt; read       
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>单击 <strong>ADD PERMISSIONS</strong>，然后单击 <strong>Close</strong>。</p>
+</li>
+</ol>
+<h2 id="cli"><a class="content__anchor" href="#cli" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="root-service-cli"></a>通过 CLI</h2>
+<p><strong>前提条件：</strong></p>
+<ul>
+<li>
+<p>必须 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/install/">安装 DC/OS CLI</a> 并以超级用户登户身份登录。</p>
+</li>
+<li>
+<p>向组而不是用户授予权限，将 <code>users grant &lt;uid&gt;</code> 替换为 <code>groups grant &lt;gid&gt;</code>.</p>
+</li>
+</ul>
+<h3 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>宽容</h3>
+<ul>
+<li>
+<p><strong>DC/OS 服务访问：</strong></p>
+<ol>
+<li>
+<p>针对特定服务 (<code>uid</code>) 向用户授予以下权限 <code>&lt;service-name&gt;</code>).</p>
+<pre><code class="language-bash">dcos security org users grant &lt;uid&gt; dcos:adminrouter:service:marathon full
+dcos security org users grant &lt;uid&gt; dcos:service:marathon:marathon:services:/&lt;service-name&gt; full --description &quot;Controls access to a service or service group &lt;service-name&gt;&quot;
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>DC/OS 服务任务和日志：</strong></p>
+<ol>
+<li>
+<p>向用户授予以下特权 <code>uid</code>.</p>
+<pre><code class="language-bash">dcos security org users grant &lt;uid&gt; dcos:adminrouter:ops:mesos full
+dcos security org users grant &lt;uid&gt; dcos:adminrouter:ops:slave full
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="-5"><a class="content__anchor" href="#-5" aria-hidden="true"><i data-feather="bookmark"></i></a>严格</h3>
+<ul>
+<li>
+<p><strong>DC/OS 服务访问：</strong></p>
+<ol>
+<li>
+<p>针对特定服务 (<code>uid</code>) 向用户授予以下权限 <code>&lt;service-name&gt;</code>).</p>
+<pre><code class="language-bash">dcos security org users grant &lt;uid&gt; dcos:adminrouter:service:marathon full
+dcos security org users grant &lt;uid&gt; dcos:service:marathon:marathon:services:/&lt;service-name&gt; full --description &quot;Controls access to a service or service group &lt;service-name&gt;&quot;
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>DC/OS 服务任务和日志：</strong></p>
+<ol>
+<li>
+<p>针对特定服务 (<code>uid</code>) 向用户授予以下权限 <code>&lt;service-name&gt;</code>).</p>
+<pre><code class="language-bash">dcos security org users grant &lt;uid&gt; dcos:adminrouter:ops:mesos full
+dcos security org users grant &lt;uid&gt; dcos:adminrouter:ops:slave full
+dcos security org users grant &lt;uid&gt; dcos:mesos:agent:executor:app_id:/&lt;service-name&gt; read --description &quot;Controls access to executors of a service, job, service group, or job group named &lt;service-name&gt;&quot;
+dcos security org users grant &lt;uid&gt; dcos:mesos:agent:framework:role:slave_public read --description &quot;Controls access to information about frameworks registered under the slave_public role&quot;
+dcos security org users grant &lt;uid&gt; dcos:mesos:agent:sandbox:app_id:/&lt;service-name&gt; read --description &quot;Controls access to the sandbox data of a service, job, service group, or job group named &lt;service-name&gt;&quot;
+dcos security org users grant &lt;uid&gt; dcos:mesos:agent:task:app_id:/&lt;service-name&gt; read --description &quot;Controls access to tasks of a service, job, service group, or job group named &lt;service-name&gt;&quot;
+dcos security org users grant &lt;uid&gt; dcos:mesos:master:executor:app_id:/&lt;service-name&gt; read --description &quot;Controls access to executors running inside a service, job, service group, or job group named &lt;service-name&gt;&quot;
+dcos security org users grant &lt;uid&gt; dcos:mesos:master:framework:role:slave_public read --description &quot;Controls access to frameworks registered with the slave_public role&quot;
+dcos security org users grant &lt;uid&gt; dcos:mesos:master:task:app_id:/&lt;service-name&gt; read --description &quot;Controls access to tasks of a service, job, service group, or job group named &lt;service-name&gt;&quot;
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="-6"><a class="content__anchor" href="#-6" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="service-in-group"></a>授权访问服务组中的服务</h1>
+<h2 id="dcos-web-2"><a class="content__anchor" href="#dcos-web-2" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="service-in-group-ui"></a>通过 DC/OS Web 界面</h2>
+<ol>
+<li>
+<p>以具有 <code>superuser</code> 权限的用户身份登录数据中心操作系统 Web 界面。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/1.13/img/LOGIN-EE-Modal_View-1_12.png" alt="登录"></p>
+<p>图 3. DC/OS Web 界面登录画面。</p>
+</li>
+<li>
+<p>选择<strong>组织</strong>，然后选择<strong>用户</strong>或<strong>组</strong>。</p>
+</li>
+<li>
+<p>选择要授予权限的用户名或组名。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/1.13/img/GUI-Organization-Users-Users_List_View_w_Users-1_12.png" alt="添加 cory 权限"></p>
+<p>图 4. 选择要授予权限的用户</p>
+</li>
+<li>
+<p>在<strong>权限</strong>选项卡上，单击<strong>添加权限</strong>。</p>
+</li>
+<li>
+<p>单击<strong>插入权限字符串</strong>以切换对话框。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/1.13/img/GUI-Organization-Users-User_Alice_Add_Gen_Perms-1_12.png" alt="添加权限"></p>
+<p>图 5. 添加权限</p>
+</li>
+<li>
+<p>在<strong>权限字符串</strong>字段中复制并粘贴权限。根据您的[安全模式]选择权限字符串。(/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/#security-modes).</p>
+<h3 id="-7"><a class="content__anchor" href="#-7" aria-hidden="true"><i data-feather="bookmark"></i></a>宽容</h3>
+<ul>
+<li>
+<p><strong>DC/OS 服务访问：</strong></p>
+<p>指定您的服务（<code>&lt;service-name&gt;</code>）、组（<code>&lt;gid&gt;</code>）和操作（<code>&lt;action&gt;</code>). 操作可以是 <code>create</code>、 <code>read</code>、 <code>update</code>、<code>delete</code> 或 <code>full</code>. 若要允许多个操作，请使用逗号分隔它们，例如: <code>dcos:service:marathon:marathon:services:/&lt;service-name&gt; read,update</code>.</p>
+<pre><code class="language-bash">dcos:adminrouter:service:marathon full
+dcos:service:marathon:marathon:services:/&lt;gid&gt;/&lt;service-name&gt; &lt;action&gt;
+</code></pre>
+</li>
+<li>
+<p><strong>DC/OS 服务任务和日志：</strong></p>
+<pre><code class="language-bash">dcos:adminrouter:ops:mesos full
+dcos:adminrouter:ops:slave full
+</code></pre>
+</li>
+</ul>
+<h3 id="-8"><a class="content__anchor" href="#-8" aria-hidden="true"><i data-feather="bookmark"></i></a>严格</h3>
+<ul>
+<li>
+<p><strong>DC/OS 服务访问：</strong></p>
+<p>指定您的服务（<code>&lt;service-name&gt;</code>）、组（<code>&lt;gid&gt;</code>）和操作（<code>&lt;action&gt;</code>). 操作可以是 <code>create</code>、 <code>read</code>、 <code>update</code>、<code>delete</code> 或 <code>full</code>. 若要允许多个操作，请使用逗号分隔它们，例如: <code>dcos:service:marathon:marathon:services:/&lt;service-name&gt; read,update</code>.</p>
+<pre><code class="language-bash">dcos:adminrouter:service:marathon full
+dcos:service:marathon:marathon:services:/&lt;gid&gt;/&lt;service-name&gt; &lt;action&gt;
+</code></pre>
+</li>
+<li>
+<p><strong>DC/OS 服务任务和日志：</strong></p>
+<pre><code class="language-bash">dcos:adminrouter:ops:mesos full
+dcos:adminrouter:ops:slave full
+dcos:mesos:agent:executor:app_id:/&lt;gid&gt;/&lt;service-name&gt; read
+dcos:mesos:agent:framework:role:slave_public read
+dcos:mesos:agent:sandbox:app_id:/&lt;gid&gt;/&lt;service-name&gt; read
+dcos:mesos:agent:task:app_id:/&lt;gid&gt;/&lt;service-name&gt; read
+dcos:mesos:master:executor:app_id:/&lt;gid&gt;/&lt;service-name&gt; read
+dcos:mesos:master:framework:role:slave_public read
+dcos:mesos:master:task:app_id:/&lt;gid&gt;/&lt;service-name&gt; read
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>单击 <strong>ADD PERMISSIONS</strong>，然后单击 <strong>Close</strong>。</p>
+</li>
+</ol>
+<h2 id="cli-2"><a class="content__anchor" href="#cli-2" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="service-in-group-cli"></a>通过 CLI</h2>
+<p><strong>前提条件：</strong></p>
+<ul>
+<li>必须 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/install/">安装 DC/OS CLI</a> 并以超级用户登户身份登录。</li>
+</ul>
+<p><strong>提示：</strong></p>
+<ul>
+<li>向组而不是用户授予权限，将 <code>users grant &lt;uid&gt;</code> 替换为 <code>groups grant &lt;gid&gt;</code>.</li>
+</ul>
+<h3 id="-9"><a class="content__anchor" href="#-9" aria-hidden="true"><i data-feather="bookmark"></i></a>宽容</h3>
+<ul>
+<li>
+<p><strong>DC/OS 服务访问：</strong></p>
+<ol>
+<li>
+<p>针对特定服务 (<code>uid</code>) 向用户授予以下权限 <code>&lt;service-name&gt;</code>).</p>
+<pre><code class="language-bash">dcos security org users grant &lt;uid&gt; dcos:adminrouter:service:marathon full
+dcos security org users grant &lt;uid&gt; dcos:service:marathon:marathon:services:/group/&lt;service-name&gt; full --description &quot;Controls access to a service or service group &lt;service-name&gt; inside a group called group&quot;
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>DC/OS 服务任务和日志：</strong></p>
+<ol>
+<li>
+<p>向用户授予以下特权 <code>uid</code>.</p>
+<pre><code class="language-bash">dcos security org users grant &lt;uid&gt; dcos:adminrouter:ops:mesos full
+dcos security org users grant &lt;uid&gt; dcos:adminrouter:ops:slave full
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="-10"><a class="content__anchor" href="#-10" aria-hidden="true"><i data-feather="bookmark"></i></a>严格</h3>
+<ul>
+<li>
+<p><strong>DC/OS 服务访问：</strong></p>
+<ol>
+<li>
+<p>向用户授予以下特权 <code>uid</code>.</p>
+<pre><code class="language-bash">dcos security org users grant &lt;uid&gt; dcos:adminrouter:service:marathon full
+dcos security org users grant &lt;uid&gt; dcos:service:marathon:marathon:services:/group/&lt;service-name&gt; full --description &quot;Controls access to a service or service group &lt;service-name&gt; inside a group called group&quot;
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>DC/OS 服务任务和日志：</strong></p>
+<ol>
+<li>
+<p>针对特定服务 (<code>uid</code>) 向用户授予以下权限 <code>&lt;service-name&gt;</code>).</p>
+<pre><code class="language-bash">dcos security org users grant &lt;uid&gt; dcos:adminrouter:ops:mesos full
+dcos security org users grant &lt;uid&gt; dcos:adminrouter:ops:slave full
+dcos security org users grant &lt;uid&gt; dcos:mesos:agent:executor:app_id:/group/&lt;service-name&gt; read --description &quot;Controls access to executors of a service, job, service group, or job group named &lt;service-name&gt; inside the group group&quot;
+dcos security org users grant &lt;uid&gt; dcos:mesos:agent:framework:role:slave_public read --description &quot;Controls access to information about frameworks registered under the slave_public role&quot;
+dcos security org users grant &lt;uid&gt; dcos:mesos:agent:sandbox:app_id:/group/&lt;service-name&gt; read --description &quot;Controls access to the sandbox data of a service, job, service group, or job group named &lt;service-name&gt; inside the group group&quot;
+dcos security org users grant &lt;uid&gt; dcos:mesos:agent:task:app_id:/group/&lt;service-name&gt; read --description &quot;Controls access to tasks of a service, job, service group, or job group named &lt;service-name&gt; inside the group group&quot;
+dcos security org users grant &lt;uid&gt; dcos:mesos:master:executor:app_id:/group/&lt;service-name&gt; read --description &quot;Controls access to executors running inside a service, job, service group, or job group named &lt;service-name&gt;&quot;
+dcos security org users grant &lt;uid&gt; dcos:mesos:master:framework:role:slave_public read --description &quot;Controls access to frameworks registered with the slave_public role&quot;
+dcos security org users grant &lt;uid&gt; dcos:mesos:master:task:app_id:/group/&lt;service-name&gt; read --description &quot;Controls access to tasks of a service, job, service group, or job group named &lt;service-name&gt;&quot;
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="-11"><a class="content__anchor" href="#-11" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="service-group"></a>授予用户对服务组的访问权限</h1>
+<h2 id="dcos-web-3"><a class="content__anchor" href="#dcos-web-3" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="service-group-ui"></a>通过 DC/OS Web 界面</h2>
+<ol>
+<li>
+<p>以具有 <code>superuser</code> 权限的用户身份登录数据中心操作系统 Web 界面。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/1.13/img/LOGIN-EE-Modal_View-1_12.png" alt="登录"></p>
+<p>图 5. DC/OS Web 界面登录画面。</p>
+</li>
+<li>
+<p>选择<strong>组织</strong>，然后选择<strong>用户</strong>或<strong>组</strong>。</p>
+</li>
+<li>
+<p>选择要授予权限的用户名或组名。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/1.13/img/GUI-Organization-Users-Users_List_View_w_Users-1_12.png" alt="添加 cory 权限"></p>
+<p>图 6. 选择要授予权限的用户</p>
+</li>
+<li>
+<p>在<strong>权限</strong>选项卡上，单击<strong>添加权限</strong>。</p>
+</li>
+<li>
+<p>单击<strong>插入权限字符串</strong>以切换对话框。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/1.13/img/GUI-Organization-Users-User_Alice_Add_Gen_Perms-1_12.png" alt="添加权限"></p>
+<p>图 7. 添加权限</p>
+</li>
+<li>
+<p>在<strong>权限字符串</strong>字段中复制并粘贴权限。根据您的[安全模式]选择权限字符串。(/dcosdocs/mesosphere/dcos/cn/1.13/security/ent/#security-modes).</p>
+<h3 id="-12"><a class="content__anchor" href="#-12" aria-hidden="true"><i data-feather="bookmark"></i></a>宽容</h3>
+<ul>
+<li>
+<p><strong>DC/OS 组访问：</strong></p>
+<p>指定您的组（<code>&lt;gid&gt;</code>）和操作（<code>&lt;action&gt;</code>). 操作可以是 <code>create</code>、 <code>read</code>、 <code>update</code>、<code>delete</code> 或 <code>full</code>. 若要允许多个操作，请使用逗号分隔它们，例如: <code>dcos:service:marathon:marathon:services:/&lt;service-name&gt; read,update</code>.</p>
+<pre><code class="language-bash">dcos:adminrouter:service:marathon full
+dcos:service:marathon:marathon:services:/&lt;gid&gt; &lt;action&gt;
+</code></pre>
+</li>
+<li>
+<p><strong>组任务和日志：</strong></p>
+<pre><code class="language-bash">dcos:adminrouter:ops:mesos full
+dcos:adminrouter:ops:slave full
+</code></pre>
+</li>
+</ul>
+<h3 id="-13"><a class="content__anchor" href="#-13" aria-hidden="true"><i data-feather="bookmark"></i></a>严格</h3>
+<ul>
+<li>
+<p><strong>DC/OS 组访问：</strong></p>
+<p>指定您的组（<code>&lt;gid&gt;</code>）和操作（<code>&lt;action&gt;</code>). 操作可以是 <code>create</code>、 <code>read</code>、 <code>update</code>、<code>delete</code> 或 <code>full</code>. 若要允许多个操作，请使用逗号分隔它们，例如: <code>dcos:service:marathon:marathon:services:/&lt;service-name&gt; read,update</code>.</p>
+<pre><code class="language-bash">dcos:adminrouter:service:marathon full
+dcos:service:marathon:marathon:services:/&lt;gid&gt; &lt;action&gt;
+</code></pre>
+</li>
+<li>
+<p><strong>组任务和日志：</strong></p>
+<pre><code class="language-bash">dcos:adminrouter:ops:mesos full
+dcos:adminrouter:ops:slave full
+dcos:mesos:agent:executor:app_id:/&lt;gid&gt; read
+dcos:mesos:agent:framework:role:slave_public read
+dcos:mesos:agent:sandbox:app_id:/&lt;gid&gt; read
+dcos:mesos:agent:task:app_id:/&lt;gid&gt; read
+dcos:mesos:master:executor:app_id:/&lt;gid&gt; read
+dcos:mesos:master:framework:role:slave_public read
+dcos:mesos:master:task:app_id:/&lt;gid&gt; read
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>单击 <strong>ADD PERMISSIONS</strong>，然后单击 <strong>Close</strong>。</p>
+</li>
+</ol>
+<h2 id="cli-3"><a class="content__anchor" href="#cli-3" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="service-group-cli"></a>通过 CLI</h2>
+<p><strong>前提条件：</strong></p>
+<ul>
+<li>必须 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/install/">安装 DC/OS CLI</a> 并以超级用户登户身份登录。</li>
+</ul>
+<p><strong>提示：</strong></p>
+<ul>
+<li>向组而不是用户授予权限，将 <code>users grant &lt;uid&gt;</code> 替换为 <code>groups grant &lt;gid&gt;</code>.</li>
+</ul>
+<h3 id="-14"><a class="content__anchor" href="#-14" aria-hidden="true"><i data-feather="bookmark"></i></a>宽容</h3>
+<ul>
+<li>
+<p><strong>DC/OS 组访问：</strong></p>
+<ol>
+<li>
+<p>向用户授予以下特权 <code>uid</code>.</p>
+<pre><code class="language-bash">dcos security org users grant &lt;uid&gt; dcos:adminrouter:service:marathon full
+dcos security org users grant &lt;uid&gt; dcos:service:marathon:marathon:services:/group full --description &quot;Controls access to a service, job, service group, or job group named group&quot;
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>组任务和日志：</strong></p>
+<ol>
+<li>
+<p>向用户授予以下特权 <code>uid</code>.</p>
+<pre><code class="language-bash">dcos security org users grant &lt;uid&gt; dcos:adminrouter:ops:mesos full
+dcos security org users grant &lt;uid&gt; dcos:adminrouter:ops:slave full
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="-15"><a class="content__anchor" href="#-15" aria-hidden="true"><i data-feather="bookmark"></i></a>严格</h3>
+<ul>
+<li>
+<p><strong>DC/OS 组访问：</strong></p>
+<ol>
+<li>
+<p>向用户授予以下特权 <code>uid</code>.</p>
+<pre><code class="language-bash">dcos security org users grant &lt;uid&gt; dcos:adminrouter:service:marathon full
+dcos security org users grant &lt;uid&gt; dcos:service:marathon:marathon:services:/group full --description &quot;Controls access to a service, job, service group, or job group named group&quot;
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>组任务和日志：</strong></p>
+<ol>
+<li>
+<p>向用户授予以下特权 <code>uid</code>.</p>
+<pre><code class="language-bash">dcos security org users grant &lt;uid&gt; dcos:adminrouter:ops:mesos full
+dcos security org users grant &lt;uid&gt; dcos:adminrouter:ops:slave full
+dcos security org users grant &lt;uid&gt; dcos:mesos:agent:executor:app_id:/group read --description &quot;Controls access to executors of a service, job, service group, or job group named group&quot;
+dcos security org users grant &lt;uid&gt; dcos:mesos:agent:framework:role:slave_public read --description &quot;Controls access to information about frameworks registered under the slave_public role&quot;
+dcos security org users grant &lt;uid&gt; dcos:mesos:agent:sandbox:app_id:/group read --description &quot;Controls access to the sandbox data of a service, job, service group, or job group named group&quot;
+dcos security org users grant &lt;uid&gt; dcos:mesos:agent:task:app_id:/group read --description &quot;Controls access to tasks of a service, job, service group, or job group named group&quot;
+dcos security org users grant &lt;uid&gt; dcos:mesos:master:executor:app_id:/group read --description &quot;Controls access to executors running inside a service, job, service group, or job group named group&quot;
+dcos security org users grant &lt;uid&gt; dcos:mesos:master:framework:role:slave_public read --description &quot;Controls access to frameworks registered with the slave_public role&quot;
+dcos security org users grant &lt;uid&gt; dcos:mesos:master:task:app_id:/group read --description &quot;Controls access to tasks of a service, job, service group, or job group named group&quot;
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#授权访问服务">授权访问服务</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-web">使用 DC/OS Web 界面</a></li><li class="content__sections-item content__sections-item--h2"><a href="#cli">通过 CLI</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-6">授权访问服务组中的服务</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-web-2">通过 DC/OS Web 界面</a></li><li class="content__sections-item content__sections-item--h2"><a href="#cli-2">通过 CLI</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-11">授予用户对服务组的访问权限</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-web-3">通过 DC/OS Web 界面</a></li><li class="content__sections-item content__sections-item--h2"><a href="#cli-3">通过 CLI</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

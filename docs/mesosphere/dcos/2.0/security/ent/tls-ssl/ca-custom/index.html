@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Configuring a Custom CA Certificate - D2iQ Docs</title><meta name="description" content="Configuring DC/OS Enterprise to use a custom CA certificate"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/tls-ssl/ca-custom">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.0"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/security/ent/tls-ssl/ca-custom">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/security/ent/tls-ssl/ca-custom">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/security/ent/tls-ssl/ca-custom">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/security/ent/tls-ssl/ca-custom">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.0</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/security/"><i data-feather="chevron-right"></i>Security</a></li><ul><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/security/ent/"><i data-feather="chevron-right"></i>DC/OS Enterprise Security</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/security/ent/users-groups/"><i data-feather="chevron-right"></i>Managing users and groups</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/security/ent/gui-permissions/"><i data-feather="chevron-right"></i>Granting Access to the UI</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/security/ent/perms-management/">Permissions Management</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/security/ent/perms-reference/">Permissions Reference</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/security/ent/ldap/"><i data-feather="chevron-right"></i>LDAP authentication</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/security/ent/secrets/"><i data-feather="chevron-right"></i>Secrets</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/security/ent/sso/"><i data-feather="chevron-right"></i>Identity provider-based authentication</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/security/ent/service-auth/"><i data-feather="chevron-right"></i>Service Authentication</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/security/ent/restrict-service-access/">Restricting Access to DC/OS Service Groups</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/security/ent/hardening/">Hardening</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/security/ent/iam-api/">Identity and Access Management API</a></li><li class="active"><a class="d2" href="/dcosdocs/mesosphere/dcos/2.0/security/ent/tls-ssl/"><i data-feather="chevron-right"></i>Securing Communication with TLS</a></li><ul><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.0/security/ent/tls-ssl/haproxy-adminrouter/">Configuring HAProxy in Front of Admin Router</a></li><li class="active active-on"><a class="d3" href="/dcosdocs/mesosphere/dcos/2.0/security/ent/tls-ssl/ca-custom/">Configuring a Custom CA Certificate</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.0/security/ent/tls-ssl/get-cert/">Obtaining the DC/OS CA bundle</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.0/security/ent/tls-ssl/ca-trust-browser/">Establishing trust in your DC/OS CA</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.0/security/ent/tls-ssl/ca-trust-cli/">Establishing trust in your CLI</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.0/security/ent/tls-ssl/ca-trust-curl/">Establishing trust in your curl commands</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.0/security/ent/tls-ssl/exhibitor/">Securing Exhibitor with mutual TLS</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.0/security/ent/tls-ssl/ca-api/">Using the Certificate Authority API</a></li></ul></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/security/oss/"><i data-feather="chevron-right"></i>DC/OS Open Source Security</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Configuring a Custom CA Certificate</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">Configuring DC/OS Enterprise to use a custom CA certificate</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.0/security/ent/tls-ssl/ca-custom/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- The source repository for this topic is https://github.com/dcos/dcos-docs-site -->
+<p>Each DC/OS Enterprise cluster has its own DC/OS certificate authority (CA). By default, that CA uses a globally unique root CA certificate generated during the installation of DC/OS. That root CA certificate is used for signing certificates for the components of DC/OS, such as Admin Router. Instead of using the auto-generated root CA certificate, you can configure DC/OS Enterprise to use a custom CA certificate, which is either a root CA certificate or an intermediate CA certificate. (See examples <a href="#example-use-cases">below</a>)</p>
+<p>The benefits of using a custom CA certificate for your DC/OS Enterprise cluster include:</p>
+<ul>
+<li>Ensuring that all X.509 certificates used within the DC/OS cluster, for both signing and encrypting, derive from your organization’s X.509 certification hierarchy.</li>
+<li>Controlling security properties of the key pair, such as type and strength, used for signing DC/OS component certificates.</li>
+<li>Ensuring that all DC/OS components, including Admin Router, present browser-trusted certificates.</li>
+</ul>
+<h1 id="contents"><a class="content__anchor" href="#contents" aria-hidden="true"><i data-feather="bookmark"></i></a>Contents</h1>
+<ul>
+<li><a href="#supported-ca-certificates">Supported certificates</a></li>
+<li><a href="#glossary">Glossary</a> for general definition of terms</li>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#config-ref">Configuration parameter reference</a></li>
+<li><a href="#installing-dcos-enterprise-with-a-custom-ca-certificate">Installation walkthrough</a>.</li>
+<li><a href="#example-use-cases">Example use cases</a> then provide example file contents for the custom CA certificate configuration files for three popular use cases.</li>
+</ul>
+<h1 id="supported-ca-certificates"><a class="content__anchor" href="#supported-ca-certificates" aria-hidden="true"><i data-feather="bookmark"></i></a>Supported CA certificates</h1>
+<ul>
+<li>Only custom CA certificates that have an associated RSA-type key pair are supported. Other types of certificates, such as those using ECC-type key pair, are not supported.</li>
+<li>Custom CA certificates are only supported for a fresh installation of DC/OS Enterprise 1.10 or later. Older versions of DC/OS are not supported, and it is not possible to add a custom CA certificate during an upgrade.</li>
+</ul>
+<h1 id="glossary"><a class="content__anchor" href="#glossary" aria-hidden="true"><i data-feather="bookmark"></i></a>Glossary</h1>
+<ul>
+<li>
+<p><strong>Custom CA certificate:</strong> Your custom CA certificate in PEM format, which will be used to issue certificates for DC/OS components such as Admin Router. The custom CA certificate is either an intermediate CA certificate (issued by another CA) or a root CA certificate (self-signed by the custom CA).</p>
+</li>
+<li>
+<p><strong>Private key associated with the custom CA certificate:</strong> The private key in the PKCS#8 format associated with the custom CA certificate.</p>
+</li>
+<li>
+<p><strong>Certificate chain associated with the custom CA certificate:</strong> The complete CA certification chain required for end-entity certificate verification. It must include the certificates of all parent CAs of the intermediate custom CA up to and including the root CA certificate. If the custom CA certificate is a root CA certificate, the chain must be empty.</p>
+</li>
+<li>
+<p><strong>Installation directory:</strong> The directory on the bootstrap node where the DC/OS installer resides. It is denoted with <code>$DCOS_INSTALL_DIR</code> in this document.</p>
+</li>
+<li>
+<p><strong>Configuration:</strong> The set of the configuration parameters that governs the specific aspects of the installation procedure. The configuration is stored in the DC/OS configuration file.</p>
+</li>
+<li>
+<p><strong>DC/OS configuration file:</strong> The file which contains the DC/OS configuration parameters. The DC/OS configuration file is normally called <code>config.yaml</code> and must be present in the <code>$DCOS_INSTALL_DIR/genconf/</code> directory on the bootstrap node during the installation. It is used by the DC/OS installer.</p>
+</li>
+</ul>
+<h1 id="requirements"><a class="content__anchor" href="#requirements" aria-hidden="true"><i data-feather="bookmark"></i></a>Requirements</h1>
+<p>In order to install DC/OS Enterprise with a custom CA certificate you will need:</p>
+<ul>
+<li>to use the <a href="/dcosdocs/mesosphere/dcos/2.0/installing/ent/custom/advanced/">advanced DC/OS installation method</a>. Other installation methods are not supported.</li>
+<li>A file containing the custom CA certificate.</li>
+<li>A file containing the private key associated with the custom CA certificate.</li>
+<li>If the CA is <strong>not</strong> a self-signed root CA, a file containing the certificate chain associated with the custom CA certificate.</li>
+</ul>
+<h2 id="manually-placing-custom-ca-certificate"><a class="content__anchor" href="#manually-placing-custom-ca-certificate" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="manually-placing-custom"></a>Manually placing custom CA certificate</h2>
+<p>The custom CA certificate, the associated private key and the certificate chain files must be put in the <code>$DCOS_INSTALL_DIR/genconf/</code> directory on the bootstrap node:</p>
+<pre><code class="language-bash">cd $DCOS_INSTALL_DIR
+ls genconf/
+</code></pre>
+<pre><code class="language-bash">dcos-ca-certificate.crt
+dcos-ca-certificate-key.key
+dcos-ca-certificate-chain.crt
+</code></pre>
+<h2 id="manually-placing-the-private-key"><a class="content__anchor" href="#manually-placing-the-private-key" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="manually-placing-master"></a>Manually placing the private key</h2>
+<p>For security reasons, the installer will not copy the private key from the bootstrap node to the master nodes.
+The private key associated with the custom CA certificate must be distributed manually to every DC/OS master node <strong>before starting the installation</strong>.</p>
+<p>The filesystem path for the private key file must be <code>/var/lib/dcos/pki/tls/CA/private/custom_ca.key</code>.
+The directory <code>/var/lib/dcos/pki/tls/CA/private/</code> can be created manually with the following command before putting the file <code>custom_ca.key</code> in the directory on every DC/OS master node:</p>
+<pre><code class="language-bash"> mkdir -p /var/lib/dcos/pki/tls/CA/private
+</code></pre>
+<p>Furthermore, the file containing the private key <code>custom_ca.key</code> corresponding to the custom CA certificate must be owned by the root Unix user and have 0600 permissions set.</p>
+<p>If you copy the private key file over the network onto the master nodes, the network channel must be adequately protected. An example of copying the CA private key is given below. The commands are executed on the bootstrap node. The <code>W.X.Y.Z</code> below indicates the IP address of a master node:</p>
+<pre><code class="language-bash">cd $DCOS_INSTALL_DIR/genconf
+scp dcos-ca-certificate-key.key centos@W.X.Y.Z:/var/lib/dcos/pki/tls/CA/private/custom_ca.key
+</code></pre>
+<h2 id="specifying-locations"><a class="content__anchor" href="#specifying-locations" aria-hidden="true"><i data-feather="bookmark"></i></a>Specifying locations</h2>
+<p>The filesystem paths to the custom CA certificate, associated private key and certificate chain files in the <code>$DCOS_INSTALL_DIR/genconf/</code> directory on the bootstrap node must be specified in the DC/OS configuration file using, respectively, the <code>ca_certificate_path</code>, <code>ca_certificate_key_path</code> and  <code>ca_certificate_chain_path</code> parameters. The paths must be relative to <code>$DCOS_INSTALL_DIR</code>.</p>
+<p>The <a href="#example-use-cases">Example use cases</a> section below shows how to set these configuration parameters.</p>
+<h1 id="configuration-parameter-reference"><a class="content__anchor" href="#configuration-parameter-reference" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="config-ref"></a>Configuration parameter reference</h1>
+<h2 id="ca-certificate-path"><a class="content__anchor" href="#ca-certificate-path" aria-hidden="true"><i data-feather="bookmark"></i></a>ca_certificate_path</h2>
+<p>Path (relative to the <code>$DCOS_INSTALL_DIR</code>) to a file containing a single X.509 CA certificate in the OpenSSL PEM format. For example: <code>genconf/dcos-ca-certificate.crt</code>. It is either a <strong>root CA certificate</strong> (“self-signed”) or an <strong>intermediate CA certificate</strong> (“cross-certificate”) signed by some other certificate authority.</p>
+<p>If provided, this is the custom CA certificate. It is used as the signing CA certificate, that is, the DC/OS CA will use this certificate for signing end-entity certificates; the subject of this certificate will be the issuer for certificates signed by the DC/OS CA. If not provided, the DC/OS cluster generates a unique root CA certificate during the initial bootstrap phase and uses that as the signing CA certificate.</p>
+<p>The public key associated with the custom CA certificate must be of type RSA.</p>
+<h2 id="ca-certificate-key-path"><a class="content__anchor" href="#ca-certificate-key-path" aria-hidden="true"><i data-feather="bookmark"></i></a>ca_certificate_key_path</h2>
+<p>Path (relative to the <code>$DCOS_INSTALL_DIR</code>) to a file containing the private key corresponding to the custom CA certificate, encoded in the OpenSSL (PKCS#8) PEM format. For example: <code>genconf/CA_cert.key</code>.</p>
+<p>This is highly sensitive data. The configuration processor accesses this file only for configuration validation purposes, and does not copy the data. After successful configuration validation this file needs to be placed out-of-band into the file system of all DC/OS master nodes to the path <code>/var/lib/dcos/pki/tls/CA/private/custom_ca.key</code> before most DC/OS <code>systemd</code> units start up. The file must be readable by the root user, and should have have 0600 permissions set.</p>
+<p>This path is required if <code>ca_certificate_path</code> is specified.</p>
+<h2 id="ca-certificate-chain-path"><a class="content__anchor" href="#ca-certificate-chain-path" aria-hidden="true"><i data-feather="bookmark"></i></a>ca_certificate_chain_path</h2>
+<p>Path (relative to the <code>$DCOS_INSTALL_DIR</code>) to a file containing the complete CA certification chain required for end-entity certificate verification, in the OpenSSL PEM format. For example: <code>genconf/CA_cert_chain.pem</code>.</p>
+<p>If <code>ca_certificate_path</code> points to a self-signed root CA certificate, then this parameter must be left undefined.</p>
+<p>Otherwise, <code>ca_certificate_chain_path</code> points to a file containing the complete chain of CA certificates up to a self-signed root CA certificate, but excluding the signing certificate contained in <code>ca_certificate_path</code>. The order is significant: the first certificate must verify the signing certificate in <code>ca_certificate_path</code> and each subsequent certificate must verify the preceding certificate.</p>
+<h1 id="installing-dcos-enterprise-with-a-custom-ca-certificate"><a class="content__anchor" href="#installing-dcos-enterprise-with-a-custom-ca-certificate" aria-hidden="true"><i data-feather="bookmark"></i></a>Installing DC/OS Enterprise with a custom CA certificate</h1>
+<p><strong>Prerequisites</strong>:</p>
+<ul>
+<li>
+<p>The installation of DC/OS Enterprise via the Advanced Installer has been prepared according to the corresponding <a href="/dcosdocs/mesosphere/dcos/2.0/installing/production/deploying-dcos/installation/">documentation</a>, up to the section <a href="/dcosdocs/mesosphere/dcos/2.0/installing/production/deploying-dcos/installation/#install-dcos"><strong>Install DC/OS</strong></a> of that documentation.</p>
+</li>
+<li>
+<p>On the bootstrap node, the files carrying the custom CA certificate, the associated private key and, optionally, the CA certificate chain have been placed into the <code>$DCOS_INSTALL_DIR/genconf/</code> directory. (See the <a href="#manually-placing-custom">section</a> above for more detailed description)</p>
+</li>
+<li>
+<p>The private key associated with the custom CA certificate has been securely placed on all DC/OS master nodes (See this <a href="#manually-placing-master">section</a> for more details). Example of a command issued on one of the DC/OS master nodes:</p>
+</li>
+</ul>
+<pre><code class="language-bash">stat /var/lib/dcos/pki/tls/CA/private/custom_ca.key
+</code></pre>
+<pre><code class="language-bash">File: ‘/var/lib/dcos/pki/tls/CA/private/custom_ca.key’
+Size: 9             Blocks: 8          IO Block: 4096   regular file
+Device: ca01h/51713d    Inode: 100671105   Links: 1
+Access: (0600/-rw-------)  Uid: (    0/    root)   Gid: (    0/    root)
+Context: unconfined_u:object_r:var_lib_t:s0
+Access: 2017-12-27 12:35:58.643278377 +0000
+Modify: 2017-12-27 12:35:58.643278377 +0000
+Change: 2017-12-27 12:36:13.019162417 +0000
+Birth: -
+</code></pre>
+<ul>
+<li>The configuration parameters <code>ca_certificate_path</code>, <code>ca_certificate_key_path</code> and <code>ca_certificate_chain_path</code> are specified in the DC/OS configuration file <code>$DCOS_INSTALL_DIR/genconf/config.yaml</code> and point to the relevant locations in the file system. Example of commands issued on the bootstrap node:</li>
+</ul>
+<pre><code class="language-bash">cd $DCOS_INSTALL_DIR
+cat genconf/config.yaml
+</code></pre>
+<pre><code class="language-bash">[...]
+ca_certificate_path: genconf/dcos-ca-certificate.crt
+ca_certificate_key_path: genconf/dcos-ca-certificate-key.key
+ca_certificate_chain_path: genconf/dcos-ca-certificate-chain.crt
+[...]
+</code></pre>
+<p>Note that <code>ca_certificate_chain_path</code> must not be present when setting up DC/OS Enterprise with a root certificate as the custom CA certificate.</p>
+<h2 id="installation"><a class="content__anchor" href="#installation" aria-hidden="true"><i data-feather="bookmark"></i></a>Installation</h2>
+<p>Proceed with the installation as described in the <a href="/dcosdocs/mesosphere/dcos/2.0/installing/production/deploying-dcos/installation/#install-dcos">documentation of the Advanced Installer</a>. Note that the current working directory when executing <code>dcos_generate_config.ee.sh</code> must be the <code>$DCOS_INSTALL_DIR</code> directory.</p>
+<h2 id="verify-installation"><a class="content__anchor" href="#verify-installation" aria-hidden="true"><i data-feather="bookmark"></i></a>Verify installation</h2>
+<p>One method of verifying that the DC/OS Enterprise cluster was installed properly with the custom CA certificate is to initiate a TLS connection to Admin Router which, after installation, will present a certificate signed by the custom CA. In order to do this, you first need to obtain the DC/OS CA bundle of the deployed cluster. <a href="/dcosdocs/mesosphere/dcos/2.0/security/ent/tls-ssl/get-cert/">This page</a> shows how you can do that.</p>
+<p>Provided you have obtained the DC/OS CA bundle and stored it in a file named <code>dcos-ca.crt</code>, issue the following command in the directory containing the <code>dcos-ca.crt</code> file in order to check that Admin Router on a master node uses a certificate signed by the custom CA:</p>
+<pre><code class="language-bash">openssl s_client -verify_ip &lt;private_ip_master_node_X&gt; -CAfile dcos-ca.crt -connect &lt;public_ip_master_node_X&gt;:443 | grep -e &quot;s:&quot; -e &quot;i:&quot; -e &quot;return code:&quot;
+</code></pre>
+<p>The output should look like the following:</p>
+<pre><code class="language-bash">depth=3 DC = io, DC = integration-test, C = DE, ST = Utopia, O = DC/OS, OU = Programmer Unit, CN = Integration Test Root CA
+verify return:1
+depth=2 DC = io, DC = integration-test, C = DE, ST = Utopia, O = DC/OS, OU = Programmer Unit, CN = Integration Test Intermediate CA 01
+verify return:1
+depth=1 DC = io, DC = integration-test, C = DE, ST = Utopia, O = DC/OS, OU = Programmer Unit, CN = Integration Test Intermediate CA 02
+verify return:1
+depth=0 C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = AdminRouter on 172.31.12.45
+verify return:1
+ 0 s:/C=US/ST=CA/L=San Francisco/O=Mesosphere, Inc./CN=AdminRouter on 172.31.12.45
+   i:/DC=io/DC=integration-test/C=DE/ST=Utopia/O=DC/OS/OU=Programmer Unit/CN=Integration Test Intermediate CA 02
+ 1 s:/DC=io/DC=integration-test/C=DE/ST=Utopia/O=DC/OS/OU=Programmer Unit/CN=Integration Test Intermediate CA 02
+   i:/DC=io/DC=integration-test/C=DE/ST=Utopia/O=DC/OS/OU=Programmer Unit/CN=Integration Test Intermediate CA 01
+ 2 s:/DC=io/DC=integration-test/C=DE/ST=Utopia/O=DC/OS/OU=Programmer Unit/CN=Integration Test Intermediate CA 01
+   i:/DC=io/DC=integration-test/C=DE/ST=Utopia/O=DC/OS/OU=Programmer Unit/CN=Integration Test Root CA
+    Verify return code: 0 (ok)
+</code></pre>
+<h2 id="example-use-cases"><a class="content__anchor" href="#example-use-cases" aria-hidden="true"><i data-feather="bookmark"></i></a>Example use cases</h2>
+<p>This section describes how the three configuration parameters <code>ca_certificate_path</code>, <code>ca_certificate_key_path</code> and <code>ca_certificate_chain_path</code> must be specified in the <code>$DCOS_INSTALL_DIR/genconf/config.yaml</code> DC/OS configuration file for the most common use cases of a custom CA certificate hierarchy.</p>
+<h3 id="use-case-1"><a class="content__anchor" href="#use-case-1" aria-hidden="true"><i data-feather="bookmark"></i></a>Use case 1:</h3>
+<p>The custom CA certificate is a self-signed root CA certificate. The CA does not have a “parent” CA, hence the CA certificate chain is empty.</p>
+<p>The following files are present:</p>
+<ul>
+<li>
+<p>on the bootstrap node:</p>
+<ul>
+<li><code>$DCOS_INSTALL_DIR/genconf/dcos-ca-certificate.crt</code> file containing the custom CA certificate</li>
+<li><code>$DCOS_INSTALL_DIR/genconf/dcos-ca-certificate-key.key</code> file containing the private key associated with the custom CA certificate</li>
+</ul>
+</li>
+<li>
+<p>on the master nodes:</p>
+<ul>
+<li><code>/var/lib/dcos/pki/tls/CA/private/custom_ca.key</code> file containing the private key associated with the custom CA certificate.</li>
+</ul>
+</li>
+</ul>
+<p>Here is an example of the <code>issuer</code> and <code>subject</code> fields of a custom root CA certificate:</p>
+<pre><code class="language-bash">cd $DCOS_INSTALL_DIR
+openssl x509 -in genconf/dcos-ca-certificate.crt -issuer -subject -noout
+</code></pre>
+<pre><code class="language-bash">issuer= /DC=io/DC=integration-test/C=DE/ST=Utopia/O=DC/OS/OU=Programmer Unit/CN=Integration Test Root CA
+subject= /DC=io/DC=integration-test/C=DE/ST=Utopia/O=DC/OS/OU=Programmer Unit/CN=Integration Test Root CA
+</code></pre>
+<p>Since the custom CA certificate is a root CA certificate and the corresponding CA certificate chain is empty, we must omit the <code>ca_certificate_chain_path</code> parameter in the DC/OS configuration file. The configuration parameters must be specified as follows in the <code>$DCOS_INSTALL_DIR/genconf/config.yaml</code> file on the bootstrap node:</p>
+<pre><code class="language-bash">ca_certificate_path: genconf/dcos-ca-certificate.crt
+ca_certificate_key_path: genconf/dcos-ca-certificate-key.key
+</code></pre>
+<h3 id="use-case-2"><a class="content__anchor" href="#use-case-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Use case 2:</h3>
+<p>In this case the custom CA certificate is an intermediate one, issued directly by a root CA. The CA certificate chain consists of just that root CA certificate. The following files are present:</p>
+<ul>
+<li>
+<p>on the bootstrap node:</p>
+<ul>
+<li><code>$DCOS_INSTALL_DIR/genconf/dcos-ca-certificate.crt</code> file containing the custom CA certificate in PEM format</li>
+<li><code>$DCOS_INSTALL_DIR/genconf/dcos-ca-certificate-key.key</code> file containing the private key associated with the custom CA certificate in the PKCS#8 format</li>
+<li><code>$DCOS_INSTALL_DIR/genconf/dcos-ca-certificate-chain.crt</code> file containing only the root CA certificate in PEM format</li>
+</ul>
+</li>
+<li>
+<p>on the master nodes</p>
+<ul>
+<li><code>/var/lib/dcos/pki/tls/CA/private/custom_ca.key</code> file containing the private key associated with the custom CA certificate in the PKCS#8 format.</li>
+</ul>
+</li>
+</ul>
+<p>Here is an example of an appropriate intermediate custom CA certificate:</p>
+<pre><code class="language-bash">cd $DCOS_INSTALL_DIR
+openssl x509 -in genconf/dcos-ca-certificate.crt -issuer -subject -noout
+</code></pre>
+<pre><code class="language-bash">issuer= /DC=io/DC=integration-test/C=DE/ST=Utopia/O=DC/OS/OU=Programmer Unit/CN=Integration Test Root CA
+subject= /DC=io/DC=integration-test/C=DE/ST=Utopia/O=DC/OS/OU=Programmer Unit/CN=Integration Test Intermediate CA 01
+</code></pre>
+<p>Here is an example of a corresponding CA certificate chain:</p>
+<pre><code class="language-bash">cd $DCOS_INSTALL_DIR
+cat genconf/dcos-ca-certificate-chain.crt | awk -v cmd=&quot;openssl x509 -issuer -subject -noout &amp;&amp; echo&quot; '/-----BEGIN/ { c = $0; next } c { c = c &quot;\n&quot; $0 } /-----END/ { print c|cmd; close(cmd); c = 0 }'
+</code></pre>
+<pre><code class="language-bash">issuer= /DC=io/DC=integration-test/C=DE/ST=Utopia/O=DC/OS/OU=Programmer Unit/CN=Integration Test Root CA
+subject= /DC=io/DC=integration-test/C=DE/ST=Utopia/O=DC/OS/OU=Programmer Unit/CN=Integration Test Root CA
+</code></pre>
+<p>The configuration parameters must be specified similar to the following in the <code>$DCOS_INSTALL_DIR/genconf/config.yaml</code> DC/OS configuration file on the bootstrap node:</p>
+<pre><code class="language-bash">ca_certificate_path: genconf/dcos-ca-certificate.crt
+ca_certificate_key_path: genconf/dcos-ca-certificate-key.key
+ca_certificate_chain_path: genconf/dcos-ca-certificate-chain.crt
+</code></pre>
+<h3 id="use-case-3"><a class="content__anchor" href="#use-case-3" aria-hidden="true"><i data-feather="bookmark"></i></a>Use case 3:</h3>
+<p>In this case the custom CA certificate is an intermediate one, issued directly by another intermediate CA that, in turn, has its certificate issued by a root CA.</p>
+<p>The CA certificate chain comprises the</p>
+<ol>
+<li>CA certificate of the issuing intermediate CA, and</li>
+<li>the root CA</li>
+</ol>
+<p>in that order.</p>
+<p>The following files are present:</p>
+<ul>
+<li>
+<p>on the bootstrap node:</p>
+<ul>
+<li><code>$DCOS_INSTALL_DIR/genconf/dcos-ca-certificate.crt</code> file containing the custom CA certificate in PEM format</li>
+<li><code>$DCOS_INSTALL_DIR/genconf/dcos-ca-certificate-key.key</code> file containing the private key associated with the custom CA certificate in the PKCS#8 format</li>
+<li><code>$DCOS_INSTALL_DIR/genconf/dcos-ca-certificate-chain.crt</code> file containing the certificate chain in PEM format</li>
+</ul>
+</li>
+<li>
+<p>on the master nodes</p>
+<ul>
+<li><code>/var/lib/dcos/pki/tls/CA/private/custom_ca.key</code> file containing the private key associated with the custom CA certificate in the PKCS#8 format.</li>
+</ul>
+</li>
+</ul>
+<p>Here is an example of an appropriate custom intermediate CA certificate:</p>
+<pre><code class="language-bash">cd $DCOS_INSTALL_DIR
+openssl x509 -in genconf/dcos-ca-certificate.crt -issuer -subject -noout
+</code></pre>
+<pre><code class="language-bash">issuer= /DC=io/DC=integration-test/C=DE/ST=Utopia/O=DC/OS/OU=Programmer Unit/CN=Integration Test Intermediate CA 01
+subject= /DC=io/DC=integration-test/C=DE/ST=Utopia/O=DC/OS/OU=Programmer Unit/CN=Integration Test Intermediate CA 02
+</code></pre>
+<p>Here is an example of a corresponding CA certificate chain:</p>
+<pre><code class="language-bash">cd $DCOS_INSTALL_DIR
+cat genconf/dcos-ca-certificate-chain.crt | awk -v cmd=&quot;openssl x509 -issuer -subject -noout &amp;&amp; echo&quot; '/-----BEGIN/ { c = $0; next } c { c = c &quot;\n&quot; $0 } /-----END/ { print c|cmd; close(cmd); c = 0 }'
+</code></pre>
+<pre><code class="language-bash">issuer= /DC=io/DC=integration-test/C=DE/ST=Utopia/O=DC/OS/OU=Programmer Unit/CN=Integration Test Root CA
+subject= /DC=io/DC=integration-test/C=DE/ST=Utopia/O=DC/OS/OU=Programmer Unit/CN=Integration Test Intermediate CA 01
+issuer= /DC=io/DC=integration-test/C=DE/ST=Utopia/O=DC/OS/OU=Programmer Unit/CN=Integration Test Root CA
+subject= /DC=io/DC=integration-test/C=DE/ST=Utopia/O=DC/OS/OU=Programmer Unit/CN=Integration Test Root CA
+</code></pre>
+<p>The configuration parameters must be specified as follows in the <code>$DCOS_INSTALL_DIR/genconf/config.yaml</code> DC/OS configuration file on the bootstrap node:</p>
+<pre><code class="language-bash">ca_certificate_path: genconf/dcos-ca-certificate.crt
+ca_certificate_key_path: genconf/dcos-ca-certificate-key.key
+ca_certificate_chain_path: genconf/dcos-ca-certificate-chain.crt
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#contents">Contents</a></li><li class="content__sections-item content__sections-item--h1"><a href="#supported-ca-certificates">Supported CA certificates</a></li><li class="content__sections-item content__sections-item--h1"><a href="#glossary">Glossary</a></li><li class="content__sections-item content__sections-item--h1"><a href="#requirements">Requirements</a></li><li class="content__sections-item content__sections-item--h2"><a href="#manually-placing-custom-ca-certificate">Manually placing custom CA certificate</a></li><li class="content__sections-item content__sections-item--h2"><a href="#manually-placing-the-private-key">Manually placing the private key</a></li><li class="content__sections-item content__sections-item--h2"><a href="#specifying-locations">Specifying locations</a></li><li class="content__sections-item content__sections-item--h1"><a href="#configuration-parameter-reference">Configuration parameter reference</a></li><li class="content__sections-item content__sections-item--h2"><a href="#ca-certificate-path">ca_certificate_path</a></li><li class="content__sections-item content__sections-item--h2"><a href="#ca-certificate-key-path">ca_certificate_key_path</a></li><li class="content__sections-item content__sections-item--h2"><a href="#ca-certificate-chain-path">ca_certificate_chain_path</a></li><li class="content__sections-item content__sections-item--h1"><a href="#installing-dcos-enterprise-with-a-custom-ca-certificate">Installing DC/OS Enterprise with a custom CA certificate</a></li><li class="content__sections-item content__sections-item--h2"><a href="#installation">Installation</a></li><li class="content__sections-item content__sections-item--h2"><a href="#verify-installation">Verify installation</a></li><li class="content__sections-item content__sections-item--h2"><a href="#example-use-cases">Example use cases</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

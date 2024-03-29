@@ -1,0 +1,141 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Performance Monitoring - D2iQ Docs</title><meta name="description" content="Monitoring a DC/OS cluster"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/performance-monitoring">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/monitoring/performance-monitoring">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/monitoring/performance-monitoring">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/monitoring/performance-monitoring">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/monitoring/performance-monitoring">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><ul><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/monitoring/performance-monitoring/"><i data-feather="chevron-right"></i>Performance Monitoring</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.1/monitoring/performance-monitoring/nagios/">Monitoring with Nagios</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/monitoring/logging/"><i data-feather="chevron-right"></i>Logging</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.1/monitoring/debugging/"><i data-feather="chevron-right"></i>Debugging</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.1/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Performance Monitoring</h1></div><h4 class="content__header-description">Monitoring a DC/OS cluster</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.1/monitoring/performance-monitoring/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>Here are some recommendations for monitoring a DC/OS cluster. You can use any monitoring tools. The endpoints listed below will help you troubleshoot when issues occur.</p>
+<p>Your monitoring tools should leverage historic data points so that you can track changes and deviations. You should monitor your cluster when it is known to be in a healthy state as well as unhealthy. This will give you a baseline for what is “normal” in the DC/OS environment. With this historical data, you can fine tune your tools and set appropriate thresholds and conditions. When these thresholds are exceeded, you can send alerts to administrators.</p>
+<p>Mesos and Marathon expose the following types of metrics:</p>
+<ul>
+<li>Gauges are metrics that provide the current state at the moment it was queried.</li>
+<li>Counters have metrics that are additive and include past and present results. These metrics are not persisted across failover.</li>
+</ul>
+<p>Marathon has a timer metric that determines how long an event has taken place. Timer does not exist for Mesos observability metrics.</p>
+<h2 id="marathon-metrics"><a class="content__anchor" href="#marathon-metrics" aria-hidden="true"><i data-feather="bookmark"></i></a>Marathon metrics</h2>
+<p>Marathon provides a number of <a href="https://mesosphere.github.io/marathon/docs/metrics.html">metrics</a> for monitoring. You can query the metrics HTTP endpoint in your DC/OS cluster at <code>&lt;Master-Public-IP&gt;/marathon/metrics</code>. Here are the ones that are particularly useful to DC/OS.</p>
+<h3 id="important-metrics"><a class="content__anchor" href="#important-metrics" aria-hidden="true"><i data-feather="bookmark"></i></a>Important metrics</h3>
+<ul>
+<li><code>marathon.apps.active.gauge</code> — the number of active apps.</li>
+<li><code>marathon.deployments.active.gauge</code> — the number of active deployments.</li>
+<li><code>marathon.deployments.counter</code> — the count of deployments received since the current Marathon instance became a leader.</li>
+<li><code>marathon.deployments.dismissed.counter</code> — the count of deployments dismissed since the current Marathon instance became a leader; a deployment might be dismissed by Marathon, when there are too many concurrent deployments.</li>
+<li><code>marathon.groups.active.gauge</code> — the number of active groups.</li>
+<li><code>marathon.leadership.duration.gauge.seconds</code> — the duration of current leadership. This metric provides the amount of time. Use this metric to diagnose stability problems and determine the frequency of leader election.</li>
+<li><code>marathon.persistence.gc.runs.counter</code> — the count of Marathon GC runs since it became a leader.</li>
+<li><code>marathon.persistence.gc.compaction.duration.timer.seconds</code> — a histogram of Marathon GC compaction phase durations, and a meter for compaction durations.</li>
+<li><code>marathon.persistence.gc.scan.duration.timer.seconds</code> — a histogram of Marathon GC scan phase durations, and a meter for scan durations.</li>
+<li><code>marathon.instances.running.gauge</code> — the number of running instances at the moment.</li>
+<li><code>marathon.instances.staged.gauge</code> — the number of instances staged at the moment. Instances are staged immediately after they are launched. A consistently high number of staged instances might indicate a high number of instances cannot be started quickly or are being restarted.</li>
+<li><code>marathon.uptime.gauge.seconds</code> — uptime of the current Marathon instance. Use this metric to diagnose stability problems that can cause Marathon to restart.</li>
+</ul>
+<h4 id="mesos-specific-metrics"><a class="content__anchor" href="#mesos-specific-metrics" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesos-specific metrics</h4>
+<ul>
+<li><code>marathon.tasks.launched.counter</code> — the count of Mesos tasks launched by the current Marathon instance since it became a leader.</li>
+<li><code>marathon.mesos.calls.revive.counter</code> — the count of Mesos <code>revive</code> calls made since the current Marathon instance became a leader.</li>
+<li><code>marathon.mesos.calls.suppress.counter</code> — the count of Mesos <code>suppress</code> calls made since the current Marathon instance became a leader.</li>
+<li><code>marathon.mesos.offer-operations.launch-group.counter</code> — the count of <code>LaunchGroup</code> offer operations made since the current Marathon instance became a leader.</li>
+<li><code>marathon.mesos.offer-operations.launch.counter</code> — the count of <code>Launch</code> offer operations made since the current Marathon instance became a leader.</li>
+<li><code>marathon.mesos.offer-operations.reserve.counter</code> — the count of <code>Reserve</code> offer operations made since the current Marathon instance became a leader.</li>
+<li><code>marathon.mesos.offers.declined.counter</code> — the count of offers declined since the current Marathon instance became a leader.</li>
+<li><code>marathon.mesos.offers.incoming.counter</code> — the count of offers received since the current Marathon instance became a leader.</li>
+<li><code>marathon.mesos.offers.used.counter</code> — the count of offers used since the current Marathon instance became a leader.</li>
+</ul>
+<h4 id="http-specific-metrics"><a class="content__anchor" href="#http-specific-metrics" aria-hidden="true"><i data-feather="bookmark"></i></a>HTTP-specific metrics</h4>
+<ul>
+<li><code>marathon.http.event-streams.responses.size.counter.bytes</code> — the size of data sent to clients over event streams since the current Marathon instance became a leader.</li>
+<li><code>marathon.http.requests.size.counter.bytes</code> — the total size of all requests since the current Marathon instance became a leader.</li>
+<li><code>marathon.http.requests.size.gzipped.counter.bytes</code> — the total size of all gzipped requests since the current Marathon instance became
+a leader.</li>
+<li><code>marathon.http.responses.size.counter.bytes</code> — the total size of all responses since the current Marathon instance became a leader.</li>
+<li><code>marathon.http.responses.size.gzipped.counter.bytes</code> — the total size of all gzipped responses since the current Marathon instance became a leader.</li>
+<li><code>marathon.http.requests.active.gauge</code> — the number of active requests.</li>
+<li><code>marathon.http.responses.1xx.rate</code> — the rate of <code>1xx</code> responses.</li>
+<li><code>marathon.http.responses.2xx.rate</code> — the rate of <code>2xx</code> responses.</li>
+<li><code>marathon.http.responses.3xx.rate</code> — the rate of <code>3xx</code> responses.</li>
+<li><code>marathon.http.responses.4xx.rate</code> — the rate of <code>4xx</code> responses.</li>
+<li><code>marathon.http.responses.5xx.rate</code> — the rate of <code>5xx</code> responses.</li>
+<li><code>marathon.http.requests.duration.timer.seconds</code> — a histogram of request durations, and a meter for request durations.</li>
+<li><code>marathon.http.requests.get.duration.timer.seconds</code> — the same but for <code>GET</code> requests only.</li>
+<li><code>marathon.http.requests.post.duration.timer.seconds</code> — the same but for <code>POST</code> requests only.</li>
+<li><code>marathon.http.requests.put.duration.timer.seconds</code> — the same but for <code>PUT</code> requests only.</li>
+<li><code>marathon.http.requests.delete.duration.timer.seconds</code> — the same but for <code>DELETE</code> requests only.</li>
+</ul>
+<p>For further details on Marathon metrics please refer to its <a href="https://mesosphere.github.io/marathon/docs/metrics.html">documentation</a>.</p>
+<h2 id="mesos-metrics"><a class="content__anchor" href="#mesos-metrics" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesos metrics</h2>
+<p>Mesos provides a number of <a href="http://mesos.apache.org/documentation/latest/monitoring/">metrics</a> for monitoring. Here are the ones that are particularly useful to DC/OS.</p>
+<h3 id="master"><a class="content__anchor" href="#master" aria-hidden="true"><i data-feather="bookmark"></i></a>Master</h3>
+<p><strong>These metrics should not increase over time</strong> If these metrics increase, something is probably wrong.</p>
+<ul>
+<li><code>master/slave_reregistrations</code> (counter) This metric provides the number of agent re-registrations and restarts. Use this metric along with historical data to determine deviations and spikes of when a network partition occurs. If this number drastically increases, then the cluster has experienced an outage but has reconnected.</li>
+<li><code>master/slave_removals</code> (counter) This metric provides the number of agents removed for various reasons, including maintenance. Use this metric to determine network partitions after a large number of agents have disconnected. If this number greatly deviates from the previous number, your system administrator should be notified (PagerDuty etc).</li>
+<li><code>master/tasks_error</code> (counter) This metric provides the number of invalid tasks.</li>
+<li><code>master/tasks_failed</code> (counter) This metric provides the number of failed tasks.</li>
+<li><code>master/tasks_killed</code> (counter) This metric provides the number of killed tasks.</li>
+<li><code>master/tasks_lost</code> (counter) This metric provides the number of lost tasks. A lost task means a task was killed or disconnected by an external factor. Use this metric when a large number of task deviate from the previous historic number.</li>
+<li><code>master/slaves_disconnected</code> (gauge) This metric provides the number of disconnected agents. This metric is helpful along with <code>master/slave_removals</code>. If an agent disconnects this number will increase. If an agent reconnects, this number will decrease.</li>
+<li><code>master/messages_kill_task</code> (counter) This metric provides the number of kill task messages.</li>
+<li><code>master/slave_removals</code> (counter) This metric provides the number of agents that were not re-registered during master failover. This is a broad endpoint that combines <code>../reason_unhealthy</code>, <code>../reason_unregistered</code>, and <code>../reason_registered</code>. You can monitor this explicitly or leverage <code>master/slave_removals/reason_unhealthy</code>, <code>master/slave_removals/reason_unregistered</code>, and <code>master/slave_removals/reason_registered</code> for specifics.</li>
+<li><code>master/slave_removals/reason_unhealthy</code> (counter) This metric provides the number of agents failed because of failed health checks. This endpoint returns the total number of agents that were unhealthy.</li>
+<li><code>master/slave_removals/reason_unregistered</code> (counter) This metric provides the number of agents unregistered. If this number increases drastically, this indicates that the master or agent is unable to communicate properly. Use this endpoint to determine network partition.</li>
+<li><code>master/slave_removals/reason_registered</code> (counter) This metric provides the number of agents that were removed when new agents were registered at the same address. New agents replaces old agents. This should be a rare event. If this number increases, your system administrator should be notified (PagerDuty etc).</li>
+</ul>
+<p><strong>These metrics should not decrease over time</strong></p>
+<ul>
+<li><code>master/slaves_active</code> (counter) This metric provides the number of active agents. The number of active agents is calculated by adding <code>slaves_connected</code> and <code>slave_disconnected</code>.</li>
+<li><code>master/slaves_connected</code> (counter) This metric provides the number of connected agents. This number should equal the total number of Mesos agents (<code>slaves_active</code>). Use this metric to determine the general health of your cluster as a percentage of the total.</li>
+<li><code>master/elected</code> (gauge) This metric indicates whether this is the elected master. This metric should be fetched from all masters, and add up to 1. If this number is not 1 for a period of time, your system administrator should be notified (PagerDuty etc).</li>
+<li><code>master/uptime_secs</code> (gauge) This metric provides the master uptime, in seconds. This number should be at least 5 minutes (300 seconds) to indicate a stable master. You can use this metric to detect “flapping”. For example, if the master has an uptime of less than 1 minute (60 seconds) for more than 10 minutes, it has probably restarted 10 or more times.</li>
+<li><code>master/messages_decline_offers</code> (counter) This metric provides the number of declined offers. This number should equal the number of agents x the number of frameworks. If this number drops to a low value, something is probably getting starved.</li>
+</ul>
+<h3 id="agent"><a class="content__anchor" href="#agent" aria-hidden="true"><i data-feather="bookmark"></i></a>Agent</h3>
+<p><strong>These metrics should not decrease over time</strong></p>
+<ul>
+<li><code>slave/uptime_secs</code> (gauge) This metric provides the agent uptime, in seconds. This number should be always increasing. The moment this number resets to <code>0</code>, this indicates that the agent process has been rebooted. You can use this metric to detect “flapping”. For example, if the agent has an uptime of less than 1 minute (60 seconds) for more than 10 minutes, it has probably restarted 10 or more times.</li>
+<li><code>slave/registered</code> (gauge) This metric indicates whether this agent is registered with a master. This value should always be <code>1</code>. A <code>0</code> indicates that the agent is looking to join a new master.</li>
+</ul>
+<h2 id="general"><a class="content__anchor" href="#general" aria-hidden="true"><i data-feather="bookmark"></i></a>General</h2>
+<ul>
+<li>
+<p>Check the Marathon App Health API <a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/marathon-api/#/apps/">endpoint</a> for critical applications API endpoint.</p>
+</li>
+<li>
+<p>Check for agents being shut down:</p>
+<ul>
+<li>Tail <code>/var/log/mesos</code> warning logs and watch for <code>Shutting down</code></li>
+<li>Mesos endpoint that indicates how many agents have been shut down increases</li>
+</ul>
+</li>
+<li>
+<p>Check for mesos masters having short uptimes, which is exposed in Mesos metrics.</p>
+</li>
+<li>
+<p>Change mom-marathon-service logging level from <code>WARN</code> to <code>INFO</code>.</p>
+</li>
+<li>
+<p>Modify the <code>mesos-master</code> log rotation configuration to store the complete logs for at least one day.</p>
+<ul>
+<li>
+<p>Make sure the master nodes have plenty of disk space.</p>
+</li>
+<li>
+<p>Change the <code>logrotation</code> option from <code>rotate 7</code> to <code>maxage 14</code> or more. For example:</p>
+<pre><code>...
+/var/log/mesos/* {
+    olddir /var/log/mesos/archive
+    maxsize 2000k
+    daily
+    maxage 14
+    copytruncate
+    postrotate
+        find  /var/log/mesos /var/log/mesos/archive -mtime +14 -delete
+    endscript
+}
+EOF
+...
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<p>See the Apache Mesos <a href="http://mesos.apache.org/documentation/latest/monitoring/">documentation</a> for Mesos basic alerts.</p>
+<div class="grid"><a class="grid__item" href="/dcosdocs/mesosphere/dcos/2.1/monitoring/performance-monitoring/nagios"><div class="grid__header__wrapper"><h3 class="grid__header">Monitoring with Nagios</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">Monitoring a DC/OS cluster with Nagios<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a></div></article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#marathon-metrics">Marathon metrics</a></li><li class="content__sections-item content__sections-item--h2"><a href="#mesos-metrics">Mesos metrics</a></li><li class="content__sections-item content__sections-item--h2"><a href="#general">General</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

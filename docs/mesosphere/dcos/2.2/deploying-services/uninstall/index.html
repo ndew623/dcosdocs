@@ -1,0 +1,161 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Uninstalling Services - D2iQ Docs</title><meta name="description" content="Uninstalling DC/OS services from the CLI"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.2"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/uninstall">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/uninstall">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/uninstall">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/deploying-services/uninstall">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/install/">Installing Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/marathon-parameters/">Marathon Configuration Reference</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/creating-services/"><i data-feather="chevron-right"></i>Creating Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/task-handling/"><i data-feather="chevron-right"></i>Task Handling</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/config-universe-service/">Configuring Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/fault-domain-awareness/">Fault Domain Awareness and Capacity Extension</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/service-groups/">Granting Access to Services and Groups</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/marathon-constraints/">Marathon Placement Constraints</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/monitor-services/">Monitoring Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/scale-service/">Scaling a Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/service-endpoints/">Service Endpoints</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/service-ports/">Service Ports</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/update-user-service/">Updating a User-Created Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/private-docker-registry/">Using a Private Docker Registry</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/deployments/">Deployments</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/expose-service/">Exposing a Service</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/uninstall/">Uninstalling Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/package-api/">Package Management API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/marathon-on-marathon/"><i data-feather="chevron-right"></i>Using Custom Marathon</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/marathon-api/">Marathon API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/containerizers/"><i data-feather="chevron-right"></i>Using Containerizers</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/pods/"><i data-feather="chevron-right"></i>Pods</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/multi-tenancy-primitives/">Multi-Tenancy Primitives</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/gpu/">Using GPUs</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/faq/">Frequently Asked Questions</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/archives/">Access Documentation Archives</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Uninstalling Services</h1></div><h4 class="content__header-description">Uninstalling DC/OS services from the CLI</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.2/deploying-services/uninstall/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>Services can be uninstalled from the CLI. If a Catalog service has any reserved resources that could not be cleaned up by the normal uninstall process, you may also need to run the framework cleaner script. The <a href="#framework-cleaner">framework cleaner script</a> removes the service instance from ZooKeeper, along with any data associated with it.</p>
+<h1 id="uninstalling-catalog-services"><a class="content__anchor" href="#uninstalling-catalog-services" aria-hidden="true"><i data-feather="bookmark"></i></a>Uninstalling Catalog services</h1>
+<h2 id="cli"><a class="content__anchor" href="#cli" aria-hidden="true"><i data-feather="bookmark"></i></a>CLI</h2>
+<p>Uninstall a datacenter service with this command:</p>
+<pre><code class="language-bash">dcos package uninstall &lt;servicename&gt;
+</code></pre>
+<p>For example, to uninstall Chronos:</p>
+<pre><code class="language-bash">dcos package uninstall chronos
+</code></pre>
+<h2 id="web-interface"><a class="content__anchor" href="#web-interface" aria-hidden="true"><i data-feather="bookmark"></i></a>Web interface</h2>
+<p>From the DC/OS web interface you can uninstall services from the <strong>Services</strong> tab. The Services tab provides a full-featured interface to the native DC/OS Marathon instance.</p>
+<ol>
+<li>
+<p>Navigate to the <a href="/dcosdocs/mesosphere/dcos/2.2/gui/services/"><strong>Services</strong></a> tab in the DC/OS web interface.</p>
+</li>
+<li>
+<p>Select your service, click the vertical ellipsis at the far right, and select <strong>Delete</strong>.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/service-delete.png" alt="Destroy app"></p>
+<p>Figure 1. Delete Services</p>
+</li>
+<li>
+<p>Copy and run the displayed command.</p>
+</li>
+</ol>
+<h2 id="troubleshooting"><a class="content__anchor" href="#troubleshooting" aria-hidden="true"><i data-feather="bookmark"></i></a>Troubleshooting</h2>
+<p>It is possible for an uninstall to fail with the following error message:</p>
+<pre><code>Incomplete uninstall of package [chronos] due to Mesos unavailability
+</code></pre>
+<p>The service may be inactive and will not be shown in the DC/OS UI, but you can find it by using this CLI command:</p>
+<pre><code class="language-bash">dcos service --inactive
+NAME          HOST     ACTIVE  TASKS  CPU  MEM  DISK  ID
+chronos    10.0.6.138  False     0    0.0  0.0  0.0   7c0a7bd4-3649-4ec1-866c-5db8f2292bf2-0001
+</code></pre>
+<p>You can complete the uninstall by shutting down the service by using this CLI command with the service ID specified, and then run the <a href="#framework-cleaner">framework cleaner</a>:</p>
+<pre><code class="language-bash">dcos service shutdown 7c0a7bd4-3649-4ec1-866c-5db8f2292bf2-0001
+</code></pre>
+<h1 id="uninstalling-user-created-services"><a class="content__anchor" href="#uninstalling-user-created-services" aria-hidden="true"><i data-feather="bookmark"></i></a>Uninstalling user-created services</h1>
+<h3 id="cli-2"><a class="content__anchor" href="#cli-2" aria-hidden="true"><i data-feather="bookmark"></i></a>CLI</h3>
+<p>Uninstall a user-created service with this command:</p>
+<pre><code class="language-bash">dcos marathon app remove [--force] &lt;app-id&gt;
+</code></pre>
+<p>For more information, see the <a href="/dcosdocs/mesosphere/dcos/2.2/cli/command-reference/#dcos-marathon">command reference</a>.</p>
+<h3 id="web-interface-2"><a class="content__anchor" href="#web-interface-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Web interface</h3>
+<p>You can uninstall services from the DC/OS web interface, from the <strong>Services</strong> tab. The Services tab provides a full-featured interface to the native DC/OS Marathon instance.</p>
+<h3 id="services-tab"><a class="content__anchor" href="#services-tab" aria-hidden="true"><i data-feather="bookmark"></i></a>Services tab</h3>
+<ol>
+<li>Navigate to the <a href="/dcosdocs/mesosphere/dcos/2.2/gui/services/"><strong>Services</strong></a> tab in the DC/OS web interface.</li>
+<li>Click on the <strong>Installed</strong> tab to see your installed services.</li>
+<li>Hover your cursor over the name of the package you wish to uninstall and you will see a red “Uninstall” link to the right. Click this link to uninstall the package.</li>
+</ol>
+<h2 id="cleaning-up-resources-and-zookeeper"><a class="content__anchor" href="#cleaning-up-resources-and-zookeeper" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="framework-cleaner"></a>Cleaning up Resources and ZooKeeper</h2>
+<h3 id="about-the-cleanup"><a class="content__anchor" href="#about-the-cleanup" aria-hidden="true"><i data-feather="bookmark"></i></a>About the cleanup</h3>
+<p>If your service has reserved resources and it did not completely clean itself up automatically, you can use the framework cleaner docker image, <code>mesosphere/janitor</code>, to simplify the process of removing your service instance from ZooKeeper and destroying all the data associated with it. <strong>On DC/OS 1.10+ clusters, this should only be necessary in rare circumstances such as a failed uninstall.</strong> The package’s documentation may have its own additional information in an “Uninstall” section.</p>
+<p>There are two ways to run the framework cleaner script. The preferred method is via the DC/OS CLI. If the CLI is unavailable, you can also run the image as a self-deleting Marathon task.</p>
+<h3 id="configuring-the-cleanup"><a class="content__anchor" href="#configuring-the-cleanup" aria-hidden="true"><i data-feather="bookmark"></i></a>Configuring the cleanup</h3>
+<p>The script takes the following flags:</p>
+<ul>
+<li><code>-r &lt;role&gt;</code>: The role of the resources to be deleted</li>
+<li><code>-z &lt;zk-node&gt;</code>: The configuration zookeeper node to be deleted</li>
+</ul>
+<p>The command would be run as follows:</p>
+<pre><code class="language-bash">docker run mesosphere/janitor /janitor.py -r &lt;service_name&gt;-role -z dcos-service-&lt;service_name&gt;
+</code></pre>
+<p>If you are using a strict-mode cluster, you must provide additional arguments providing credentials to perform the cleanup:</p>
+<ul>
+<li><code>-a &lt;token&gt;</code>: Token to be used for authentication</li>
+<li><code>--username &lt;username&gt;</code> and <code>--password &lt;password&gt;</code>: Username and password to be used for authentication</li>
+</ul>
+<p>For example, the command could be run with an auth token included as follows:</p>
+<pre><code class="language-bash">docker run mesosphere/janitor /janitor.py -r &lt;service_name&gt;-role -z dcos-service-&lt;service_name&gt; -a &lt;content of &quot;dcos config show core.dcos_acs_token&quot;&gt;
+</code></pre>
+<h3 id="running-from-the-dcos-cli"><a class="content__anchor" href="#running-from-the-dcos-cli" aria-hidden="true"><i data-feather="bookmark"></i></a>Running from the DC/OS CLI</h3>
+<p>Connect to the leader and start the script:</p>
+<ol>
+<li>
+<p>Open an SSH session to the cluster leader.</p>
+<pre><code> your-machine$ dcos node ssh --master-proxy --leader
+</code></pre>
+</li>
+<li>
+<p>Run the <code>mesosphere/janitor</code> image with the role and zookeeper node that were configured for your service, along with an auth token if on a strict mode cluster:</p>
+<pre><code> docker run mesosphere/janitor /janitor.py -r sample-role -z sample-zk [-a auth-token]
+</code></pre>
+</li>
+</ol>
+<h3 id="running-from-marathon"><a class="content__anchor" href="#running-from-marathon" aria-hidden="true"><i data-feather="bookmark"></i></a>Running from Marathon</h3>
+<p>From the DC/OS <a href="/dcosdocs/mesosphere/dcos/2.2/gui/"><strong>Services</strong></a> tab, use the JSON editor to add the following as a Marathon task. Replace the values passed to <code>-r</code>/<code>-z</code> according to what needs to be cleaned up.</p>
+<pre><code>{
+  &quot;id&quot;: &quot;janitor&quot;,
+  &quot;cmd&quot;: &quot;/janitor.py -r sample-role -z dcos-service-sample&quot;,
+  &quot;cpus&quot;: 1,
+  &quot;mem&quot;: 128,
+  &quot;disk&quot;: 1,
+  &quot;instances&quot;: 1,
+  &quot;container&quot;: {
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;mesosphere/janitor:latest&quot;,
+      &quot;network&quot;: &quot;HOST&quot;
+    },
+    &quot;type&quot;: &quot;DOCKER&quot;
+  }
+}
+</code></pre>
+<p>When the framework cleaner has completed its work, it will automatically remove itself from Marathon to ensure that it’s only run once. This removal will often result in a <code>TASK_KILLED</code> or even a <code>TASK_FAILED</code> outcome for the janitor task, even if it finished successfully. The janitor task will also quickly disappear from both the Services and Dashboard tab.</p>
+<h3 id="verifying-the-outcome"><a class="content__anchor" href="#verifying-the-outcome" aria-hidden="true"><i data-feather="bookmark"></i></a>Verifying the outcome</h3>
+<p>To view the script’s outcome, go to Mesos (<code>http://your-cluster.com/mesos</code>) and look at the task’s <code>stdout</code> content. If <code>stdout</code> lacks content, run the following command manually:</p>
+<pre><code># Determine id of agent which ran the Docker task. This is an example:
+
+your-machine$ dcos node ssh --master-proxy --mesos-id=c62affd0-ce56-413b-85e7-32e510a7e131-S3
+
+agent-node$ docker ps -a
+CONTAINER ID        IMAGE                       COMMAND             ...
+828ee17b5fd3        mesosphere/janitor:latest   /bin/sh -c /janito  ...
+
+agent-node$ docker logs 828ee17b5fd3
+</code></pre>
+<h3 id="sample-result"><a class="content__anchor" href="#sample-result" aria-hidden="true"><i data-feather="bookmark"></i></a>Sample result</h3>
+<p>Here is an example of the output for a successful run for a sample installation:</p>
+<pre><code>your-machine$ dcos node ssh --master-proxy --leader
+
+leader-node$ docker run mesosphere/janitor /janitor.py -r sample_role -z dcos-service-sample
+[... docker download ...]
+Master: http://leader.mesos:5050/master/ Exhibitor: http://leader.mesos:8181/ Role: sample_role ZK Path: sample
+
+Destroying volumes...
+Mesos version: 0.28.1 =&gt; 28
+Found 1 volume(s) for role 'sample_role' on slave 3ce447e3-2894-4c61-bd0f-be97e4d99ee9-S5, deleting...
+200
+Found 1 volume(s) for role 'sample_role' on slave 3ce447e3-2894-4c61-bd0f-be97e4d99ee9-S4, deleting...
+200
+No reserved resources for any role on slave 3ce447e3-2894-4c61-bd0f-be97e4d99ee9-S3
+No reserved resources for any role on slave 3ce447e3-2894-4c61-bd0f-be97e4d99ee9-S2
+Found 1 volume(s) for role 'sample_role' on slave 3ce447e3-2894-4c61-bd0f-be97e4d99ee9-S1, deleting...
+200
+No reserved resources for role 'sample_role' on slave 3ce447e3-2894-4c61-bd0f-be97e4d99ee9-S0. Known roles are: [slave_public]
+
+Unreserving resources...
+Found 4 resource(s) for role 'sample_role' on slave 3ce447e3-2894-4c61-bd0f-be97e4d99ee9-S5, deleting...
+200
+Found 4 resource(s) for role 'sample_role' on slave 3ce447e3-2894-4c61-bd0f-be97e4d99ee9-S4, deleting...
+200
+No reserved resources for any role on slave 3ce447e3-2894-4c61-bd0f-be97e4d99ee9-S3
+No reserved resources for any role on slave 3ce447e3-2894-4c61-bd0f-be97e4d99ee9-S2
+Found 4 resource(s) for role 'sample_role' on slave 3ce447e3-2894-4c61-bd0f-be97e4d99ee9-S1, deleting...
+200
+No reserved resources for role 'sample_role' on slave 3ce447e3-2894-4c61-bd0f-be97e4d99ee9-S0. Known roles are: [slave_public]
+
+Deleting zk node...
+Successfully deleted znode 'dcos-service-sample' (code=200), if znode existed.
+Cleanup completed successfully.
+</code></pre>
+<p>If you run the script via Marathon, you will also see the following output:</p>
+<pre><code>Deleting self from Marathon to avoid run loop: /janitor
+Successfully deleted self from marathon (code=200): /janitor
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#uninstalling-catalog-services">Uninstalling Catalog services</a></li><li class="content__sections-item content__sections-item--h2"><a href="#cli">CLI</a></li><li class="content__sections-item content__sections-item--h2"><a href="#web-interface">Web interface</a></li><li class="content__sections-item content__sections-item--h2"><a href="#troubleshooting">Troubleshooting</a></li><li class="content__sections-item content__sections-item--h1"><a href="#uninstalling-user-created-services">Uninstalling user-created services</a></li><li class="content__sections-item content__sections-item--h2"><a href="#cleaning-up-resources-and-zookeeper">Cleaning up Resources and ZooKeeper</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

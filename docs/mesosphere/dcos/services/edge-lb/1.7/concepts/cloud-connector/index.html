@@ -1,0 +1,619 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Integrating with cloud providers - D2iQ Docs</title><meta name="description" content="Describes how you can integrate Edge-LB with cloud provider load balancers"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Edge Lb Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li><li class="chooser-list-item"><a href="/dkp/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services/edge-lb">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__item"><a href="/dkp/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/concepts/cloud-connector">Edge-LB 1.7</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.6/concepts/cloud-connector">Edge-LB 1.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.5/concepts/cloud-connector">Edge-LB 1.5</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.4/concepts/cloud-connector">Edge-LB 1.4</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.3">Edge-LB 1.3</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.2">Edge-LB 1.2</a></li></ul><div class="toggle"><p><span class="title">Edge Lb</span><span class="version"> 1.7</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/concepts/"><i data-feather="chevron-right"></i>Edge-LB concepts</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/concepts/what-is-edge-lb/">What is Edge-LB?</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/concepts/how-edge-lb-works/">How Edge-LB works</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/concepts/edge-lb-pool-high-availability/">Edge-LB pools for high-availability</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/concepts/cloud-connector/">Integrating with cloud providers</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/concepts/edge-lb-architecture-deep-dive/">Architectural deep-dive</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/getting-started/"><i data-feather="chevron-right"></i>Getting started with Edge-LB</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/how-to-tasks/"><i data-feather="chevron-right"></i>How-to guides for Edge-LB</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/reference/"><i data-feather="chevron-right"></i>Reference information</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/related-documentation/"><i data-feather="chevron-right"></i>Related documentation</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Integrating with cloud providers</h1></div><h4 class="content__header-description">Describes how you can integrate Edge-LB with cloud provider load balancers</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/concepts/cloud-connector/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+Integrating+with+cloud+providers&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/concepts/cloud-connector&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><p>When you define the configuration settings for an Edge-LB pool, you have the option to support automatic provisioning and lifecycle management of cloud provider load balancers.</p>
+<p>There are several benefits to having a public cloud load balancer - such as the AWS® Network Load Balancer® (NLB®) - deployed in front of an Edge-LB pool and managed by the Edge-LB server.</p>
+<p>For example, using the public cloud load balancer in combination with Edge-LB:</p>
+<ul>
+<li>
+<p>Ensures higher availability of the Edge-LB pool by providing a second tier of failover and fault-tolerance.</p>
+</li>
+<li>
+<p>Enables better load distribution across multiple instances of an Edge-LB pool.</p>
+</li>
+<li>
+<p>Provides automated scale-up and scale-down adjustments for the Edge-LB pool and its load balancer instances.</p>
+</li>
+<li>
+<p>Enables you to configure load balancing across multiple availability zones.</p>
+</li>
+</ul>
+<p>The following diagram provides a simplified view of the architecture with a cloud provider load balancer deployed between the Edge-LB API server and an Edge-LB pool.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/services/edge-lb/1.7/img/Edge-LB-cloud-arch.png" alt="Integrating a cloud provider load balancer"></p>
+<p>You should note that, currently, Edge-LB supports only AWS Network Load Balancers (NLB) for integrated cloud provider load balancing. For information about deploying and configuring AWS Network Load Balancers (NLB), see the AWS documentation for <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/network/introduction.html">Network Load Balancers</a>.</p>
+<h1 id="configuring-cloud-provider-settings"><a class="content__anchor" href="#configuring-cloud-provider-settings" aria-hidden="true"><i data-feather="bookmark"></i></a>Configuring cloud provider settings</h1>
+<p>Cloud provider load balancers such as the AWS Network Load Balancer are configured with a top-level <code>cloudProvider</code> field in the Edge-LB pool configuration file.</p>
+<p>The following code excerpt illustrates how you can define the properties required for the <code>cloudProvider</code> field in the Edge-LB pool configuration file:</p>
+<pre><code class="language-json">&quot;cloudProvider&quot;: {
+  &quot;aws&quot;: {
+    &quot;elbs&quot;: [
+      {
+        &quot;name&quot;: &quot;echo&quot;,
+        &quot;type&quot;: &quot;NLB&quot;,
+        &quot;internal&quot;: false,
+        &quot;listeners&quot;: [
+          {
+            &quot;port&quot;: 80,
+            &quot;linkFrontend&quot;: &quot;echo&quot;
+          }
+        ],
+        &quot;tags&quot;: [
+          {
+            &quot;key&quot;: &quot;Protocol&quot;,
+            &quot;value&quot;: &quot;HTTP&quot;
+          }
+        ]
+      }
+    ]
+  }
+}
+</code></pre>
+<p>As illustrated in this example, the <code>cloudProvider</code> field includes a subfield that identifies a specific cloud provider. In this case, the cloud provider subfield is <code>aws</code> to specify integration with an AWS Network Load Balancer.</p>
+<p>The <code>aws</code> cloud provider field also has a subfield of <code>elbs</code>. The <code>elbs</code> field contains the configuration settings for a particular load balancer. The settings in this example define an AWS NLB configuration using the following fields and values:</p>
+<ul>
+<li>
+<p><code>name</code> - Specifies the name that Edge-LB uses to generate names of the load balancers and their resources.</p>
+</li>
+<li>
+<p><code>type</code> - Specifies a load balancer type. Currently, only NLB is supported.</p>
+</li>
+<li>
+<p><code>internal</code> - Indicates whether the corresponding load balancer is for internal requests (<code>true</code>) or not (<code>false</code>).</p>
+<p>If the <code>internal</code> setting is <code>true</code>, the load balancer routes requests from internal clients running within the same cluster.</p>
+<p>If a load balancer is internet-facing with the <code>internal</code> field set to <code>false</code>, the load balancer can route external requests that are received from clients over the internet.</p>
+</li>
+<li>
+<p><code>listeners</code> - Defines the following configuration details for each listener that receives inbound requests for the Edge-LB pool:</p>
+<ul>
+<li>
+<p><code>port</code> specifies a port number on which the respective load balancer is to listen for incoming connections from clients.</p>
+</li>
+<li>
+<p><code>linkFrontend</code> specifies the name of the individual HAProxy frontend of the pool to which inbound requests are routed.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>tags</code> - Specifies an array of user-defined tag name and value pairs. The tags you specify using this field are applied to load balancers and target groups in addition to the <a href="#internal-tagging">internal tags</a> that are automatically defined by the Edge-LB API server.</p>
+</li>
+</ul>
+<h2 id="specifying-subnets"><a class="content__anchor" href="#specifying-subnets" aria-hidden="true"><i data-feather="bookmark"></i></a>Specifying subnets</h2>
+<p>You can define the subnets that are associated with an AWS Network Load Balancer either manually or automatically.</p>
+<p>To specify subnets manually, you can add a <code>subnets</code> field to the cloud provider configuration details in the Edge-LB pool configuration file. For example, the following code snippet illustrates how to specify <code>subnet-1234567890abcdefgi</code> manually for the cloud provider load balancer:</p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;echo&quot;,
+  &quot;type&quot;: &quot;NLB&quot;,
+  &quot;subnets&quot;: [
+    &quot;subnet-1234567890abcdefgi&quot;
+  ],
+  &quot;listeners&quot;: [
+    {
+      &quot;port&quot;: 80,
+      &quot;linkFrontend&quot;: &quot;echo&quot;
+    }
+  ]
+}
+</code></pre>
+<p>If you don’t specify the subnets you want attached to the AWS Network Load Balancer manually, then subnets are discovered automatically based on the <strong>metadata</strong> provided by Edge-LB pool instances. For more information about Edge-LB pool metadata, see <a href="">metadata</a>.</p>
+<h2 id="specifying-elastic-ip-addresses"><a class="content__anchor" href="#specifying-elastic-ip-addresses" aria-hidden="true"><i data-feather="bookmark"></i></a>Specifying Elastic IP addresses</h2>
+<p>You can associate Elastic IP addresses with any AWS Network Load Balancer that Edge-LB creates. For example, the following code snippet illustrates how to specify two Elastic IP addresses for the cloud provider load balancer:</p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;echo&quot;,
+  &quot;type&quot;: &quot;NLB&quot;,
+  &quot;elasticIPs&quot;: [
+    &quot;1.1.1.1&quot;,
+    &quot;eipalloc-12345678&quot;
+  ],
+  &quot;listeners&quot;: [
+    {
+      &quot;port&quot;: 80,
+      &quot;linkFrontend&quot;: &quot;echo&quot;
+    }
+  ]
+}
+</code></pre>
+<p>As this example illustrates, you can specify the Elastic network addresses using:</p>
+<ul>
+<li>an IPv4 address, like the value  <code>1.1.1.1</code> in the example.</li>
+<li>an allocation ID, like the value <code>eipalloc-12345678</code> in the example.</li>
+</ul>
+<p>If you use an IPv4 address, the address is resolved into the corresponding allocation ID before it is associated with the NLB.</p>
+<h2 id="enabling-transport-layer-security-tls"><a class="content__anchor" href="#enabling-transport-layer-security-tls" aria-hidden="true"><i data-feather="bookmark"></i></a>Enabling Transport Layer Security (TLS)</h2>
+<p>By default, AWS Network Load Balancer listeners use the TCP protocol. If you want to enable secure encrypted communication using Transport Layer Security and Secure Socket Layer (SSL) certificates, you should do the following in the Edge-LB pool configuration file:</p>
+<ul>
+<li>Set the <code>protocol</code> field to TLS.</li>
+<li>Set the <code>policy</code> field to specify a <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/network/create-tls-listener.html#describe-ssl-policies">secure socket layer (SSL) policy</a>.</li>
+<li>Set the <code>certificates</code> field to specify one or more <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/network/create-tls-listener.html#tls-listener-certificates">SSL certificates</a>.</li>
+</ul>
+<p>For example, the following code snippet illustrates how to specify configuration properties for secure communication:</p>
+<pre><code class="language-json">  &quot;listeners&quot;: [
+    {
+      &quot;port&quot;: 80,
+      &quot;protocol&quot;: &quot;TLS&quot;,
+      &quot;tls&quot;: {
+        &quot;policy&quot;: &quot;ELBSecurityPolicy-2016-08&quot;,
+        &quot;certificates&quot;: [
+          &quot;arn:aws:acm:us-west-2:123456789012:certificate/12345678-efgi-abcd-efgi-12345678abcd&quot;
+        ]
+      },
+      &quot;linkFrontend&quot;: &quot;echo&quot;
+    }
+  ]
+</code></pre>
+<p>As this example illustrates, you can specify multiple certificates using the certificate <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a>.</p>
+<h2 id="enabling-access-logging"><a class="content__anchor" href="#enabling-access-logging" aria-hidden="true"><i data-feather="bookmark"></i></a>Enabling access logging</h2>
+<p>You can log requests made to the TLS listeners by setting the <code>accessLogS3Location</code> field to <code>&lt;bucket-name&gt;/prefix</code> or just <code>&lt;bucket-name&gt;</code>.</p>
+<p>For example, the following code snippet illustrates how to enable logging for inbound requests that use the secure TLS protocol:</p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;echo&quot;,
+  &quot;type&quot;: &quot;NLB&quot;,
+  &quot;listeners&quot;: [
+    {
+      &quot;port&quot;: 80,
+      &quot;protocol&quot;: &quot;TLS&quot;,
+      &quot;tls&quot;: {
+        &quot;policy&quot;: &quot;ELBSecurityPolicy-2016-08&quot;,
+        &quot;certificates&quot;: [
+          &quot;arn:aws:acm:us-west-2:123456789012:certificate/12345678-efgi-abcd-efgi-12345678abcd&quot;
+        ]
+      },
+      &quot;linkFrontend&quot;: &quot;echo&quot;
+    }
+  ],
+  &quot;accessLogS3Location&quot;: &quot;access-logs/echo&quot;
+}
+</code></pre>
+<p>For more information about the format of access log files, see <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-access-logs.html#access-log-file-format">Access Logs for Your Network Load Balancer</a> in the AWS documentation.</p>
+<h2 id="preventing-accidental-deletion"><a class="content__anchor" href="#preventing-accidental-deletion" aria-hidden="true"><i data-feather="bookmark"></i></a>Preventing accidental deletion</h2>
+<p>You can prevent accidental deletion of AWS Network Load Balancers by enabling the deletion protection flag in the <code>cloudProvider</code> section of the Edge-LB pool configuration file.</p>
+<p>The following code excerpt illustrates how you can set the <code>deletionProtection</code> field to prevent AWS Network Load Balancers for an Edge-LB pool from being accidentally deleted:</p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;echo&quot;,
+  &quot;type&quot;: &quot;NLB&quot;,
+  &quot;deletionProtection&quot;: true,
+  &quot;listeners&quot;: [
+    {
+      &quot;port&quot;: 80,
+      &quot;linkFrontend&quot;: &quot;echo&quot;
+    }
+  ]
+}
+</code></pre>
+<p>Accidental deletion protection is disabled by default. If you enable deletion protection, you should keep in mind that deleting an Edge-LB pool associated with the AWS Network Load Balancer will not delete the AWS Network Load Balancer. If you want to delete all of the AWS Network Load Balancers associated with an Edge-LB pool when you delete the Edge-LB pool, you should set the <code>deletionProtection</code> field to <code>false</code> for all AWS Network Load Balancers <strong>before</strong> you delete the Edge-LB pool.</p>
+<h3 id="using-existing-amazon-resource-names"><a class="content__anchor" href="#using-existing-amazon-resource-names" aria-hidden="true"><i data-feather="bookmark"></i></a>Using existing Amazon Resource Names</h3>
+<p>Edge-LB can manage an existing AWS Network Load Balancer by specifying the AWS Network Load Balancer resource names in the <code>cloudProvider</code> section of the Edge-LB pool configuration file.</p>
+<p>The following code excerpt illustrates how you can use Amazon Resource Names (ARNs) to associate an existing AWS Network Load Balancer with an Edge-LB pool in the Edge-LB pool configuration file:</p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;echo&quot;,
+  &quot;type&quot;: &quot;NLB&quot;,
+  &quot;arn&quot;: &quot;arn:aws:elasticloadbalancing:us-west-2:123456789012:loadbalancer/net/dcos-lb-JOQ3wMJ7Z-Q8ayl-XzLP-PVv/1234567890abcfge&quot;,
+  &quot;listeners&quot;: [
+    {
+      &quot;port&quot;: 80,
+      &quot;linkFrontend&quot;: &quot;echo&quot;
+    }
+  ]
+}
+</code></pre>
+<p>If you specify a custom ARN identifier in the pool configuration file, Edge-LB assumes that there is an existing Network Load Balancer for the pool to use. In this scenario, the Edge-LB API server does not attempt to create or delete a Network Load Balancer for the pool. Instead, Edge-LB attempts to manage resources for the specified Network Load Balancer. Therefore, if you want to use an existing Network Load Balancer, you should be sure that the existing Network Load Balancer configuration aligns with the configuration settings specified in the Edge-LB pool configuration file. For example, if you enable access logging for the existing Network Load Balancer, you should also enable access logging in the corresponding pool configuration to ensure that setting is used.</p>
+<p>If there is a conflict between the configuration of the existing Network Load Balancer and the settings defined in the pool configuration file that use that Network Load Balancer, the pool configuration settings override the existing Network Load Balancer configuration.</p>
+<h2 id="internal-tagging"><a class="content__anchor" href="#internal-tagging" aria-hidden="true"><i data-feather="bookmark"></i></a>Internal tagging</h2>
+<p>Load balancers are automatically defined with the following information in addition to any user-defined tags:</p>
+<ul>
+<li>
+<p><code>DC/OS:EdgeLB:ClusterID</code> - specifies a cluster identifier for the DC/OS cluster on which Edge-LB is running. For example: 18f21a68-058f-4d14-8055-e61ed91e3794.</p>
+</li>
+<li>
+<p><code>DC/OS:EdgeLB:ApplicationID</code> - specifies the Marathon application identifier for the Edge-LB API server. For example, /dcos-edgelb/api.</p>
+</li>
+<li>
+<p><code>DC/OS:EdgeLB:PoolName</code> - specifies a name of pool the load balancer belongs to. For example: test-http-pool-with-aws-nlb.</p>
+</li>
+<li>
+<p><code>DC/OS:EdgeLB:LoadBalancerName</code> - specifies the original load balancer name. For example: echo.</p>
+</li>
+</ul>
+<p>Target groups have two additional tags:</p>
+<ul>
+<li>
+<p><code>DC/OS:EdgeLB:FrontendName</code> - specifies the name of a corresponding frontend. For example: echo.</p>
+</li>
+<li>
+<p><code>DC/OS:EdgeLB:ListenerPort</code> - specifies a port number. For example: 80.</p>
+</li>
+</ul>
+<h2 id="required-permissions"><a class="content__anchor" href="#required-permissions" aria-hidden="true"><i data-feather="bookmark"></i></a>Required permissions</h2>
+<p>To manage Network Load Balancers, the following AWS API permissions are needed by one of these two:</p>
+<ul>
+<li>the instance on which the Edge-LB API server is running, or…</li>
+<li>the IAM user that is specified using an AWS access key at the time of Edge-LB installation.</li>
+</ul>
+<pre><code>elasticloadbalancing:DescribeLoadBalancers
+elasticloadbalancing:CreateLoadBalancer
+elasticloadbalancing:DeleteLoadBalancer
+elasticloadbalancing:DescribeListeners
+elasticloadbalancing:CreateListener
+elasticloadbalancing:DeleteListener
+elasticloadbalancing:ModifyListener
+elasticloadbalancing:CreateTargetGroup
+elasticloadbalancing:DeleteTargetGroup
+elasticloadbalancing:DescribeTargetGroups
+elasticloadbalancing:ModifyTargetGroup
+elasticloadbalancing:RegisterTargets
+elasticloadbalancing:DeregisterTargets
+elasticloadbalancing:DescribeTargetHealth
+elasticloadbalancing:DescribeLoadBalancerAttributes
+elasticloadbalancing:ModifyLoadBalancerAttributes
+elasticloadbalancing:DescribeTags
+elasticloadbalancing:AddTags
+elasticloadbalancing:RemoveTags
+ec2:DescribeAddresses
+</code></pre>
+<p>For more information about required permissions, see <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/elb-api-permissions.html">Elastic Load Balancing API Permissions</a> in the AWS documentation. For more information about using Edge-LB configuration properties to provide AWS credentials, see the <a href="https://github.com/mesosphere/dcos-edge-lb/blob/master/framework/edgelb/universe/config.json">Edge-LB configuration reference</a>.</p>
+<h1 id="deploying-with-the-cloud-provider-load-balancer"><a class="content__anchor" href="#deploying-with-the-cloud-provider-load-balancer" aria-hidden="true"><i data-feather="bookmark"></i></a>Deploying with the cloud provider load balancer</h1>
+<p>To illustrate how you can deploy an Edge-LB pool that uses an Amazon Network Load Balancer, you can deploy a sample application that uses an Edge-LB pool to route incoming requests to the app.</p>
+<ol>
+<li>
+<p>Open a text editor, then copy and paste the following sample app definition to create the <code>host-echo.json</code> file:</p>
+<pre><code class="language-json">{
+    &quot;id&quot;: &quot;/host-echo&quot;,
+    &quot;cmd&quot;: &quot;/start $PORT0&quot;,
+    &quot;instances&quot;: 1,
+    &quot;cpus&quot;: 0.1,
+    &quot;mem&quot;: 32,
+    &quot;constraints&quot;: [[&quot;public_ip&quot;, &quot;UNLIKE&quot;, &quot;true&quot;]],
+    &quot;container&quot;: {
+        &quot;type&quot;: &quot;DOCKER&quot;,
+        &quot;docker&quot;: {
+            &quot;image&quot;: &quot;mesosphere/echo-http&quot;
+        }
+    },
+    &quot;portDefinitions&quot;: [
+        {
+            &quot;name&quot;: &quot;web&quot;,
+            &quot;protocol&quot;: &quot;tcp&quot;,
+            &quot;port&quot;: 0
+        }
+    ],
+    &quot;healthChecks&quot;: [
+        {
+            &quot;portIndex&quot;: 0,
+            &quot;path&quot;: &quot;/&quot;,
+            &quot;protocol&quot;: &quot;HTTP&quot;
+        }
+    ]
+}
+</code></pre>
+</li>
+<li>
+<p>Deploy the <code>host-echo</code> service using the <code>host-echo.json</code> app definition by running the following command:</p>
+<pre><code class="language-bash">dcos marathon app add examples/apps/host-echo.json
+</code></pre>
+</li>
+<li>
+<p>Open a text editor, then copy and paste the following Edge-LB pool configuration settings to define the <code>pool-http-with-aws-nlb</code> Edge-LB pool:</p>
+<pre><code class="language-json">{
+  &quot;apiVersion&quot;: &quot;V2&quot;,
+  &quot;name&quot;: &quot;pool-http-with-aws-nlb&quot;,
+  &quot;count&quot;: 1,
+  &quot;cloudProvider&quot;: {
+    &quot;aws&quot;: {
+      &quot;elbs&quot;: [
+        {
+          &quot;name&quot;: &quot;echo&quot;,
+          &quot;type&quot;: &quot;NLB&quot;,
+          &quot;internal&quot;: false,
+          &quot;listeners&quot;: [
+            {
+              &quot;port&quot;: 80,
+              &quot;linkFrontend&quot;: &quot;echo&quot;
+            }
+          ],
+          &quot;tags&quot;: [
+            {
+              &quot;key&quot;: &quot;Protocol&quot;,
+              &quot;value&quot;: &quot;HTTP&quot;
+            }
+          ]
+        }
+      ]
+    }
+  },
+  &quot;haproxy&quot;: {
+    &quot;frontends&quot;: [
+      {
+        &quot;name&quot;: &quot;echo&quot;,
+        &quot;bindPort&quot;: 80,
+        &quot;protocol&quot;: &quot;HTTP&quot;,
+        &quot;linkBackend&quot;: {
+          &quot;defaultBackend&quot;: &quot;echo&quot;
+        }
+      }
+    ],
+    &quot;backends&quot;: [
+      {
+        &quot;name&quot;: &quot;echo&quot;,
+        &quot;protocol&quot;: &quot;HTTP&quot;,
+        &quot;services&quot;: [
+          {
+            &quot;marathon&quot;: {
+              &quot;serviceID&quot;: &quot;/host-echo&quot;
+            },
+            &quot;endpoint&quot;: {
+              &quot;portName&quot;: &quot;web&quot;
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>Deploy the <code>pool-http-with-aws-nlb</code> pool configuration file to create the pool instance for load balancing access to the <code>host-echo</code> service by running the following command:</p>
+<pre><code class="language-bash">dcos edgelb create examples/config/pool-http-with-aws-nlb.json
+</code></pre>
+</li>
+<li>
+<p>List the cloud provider load balancers managed by Edge-LB running in the attached DC/OS cluster by running the following command:</p>
+<pre><code class="language-bash">dcos edgelb ingresslb pool-http-with-aws-nlb
+</code></pre>
+<p>The command returns output similar to the following:</p>
+<pre><code class="language-bash">NAME              DNS
+echo              dcos-lb-JOQ3wMJ7Z-Q8ayl-XzLP-PVv-f0f10cfccfa7d5a8.elb.us-west-2.amazonaws.com
+
+AVAILABILITY ZONE  ELASTIC IP
+
+LISTENER PROTOCOL  LISTENER PORT  FRONTEND
+TCP                80             echo
+</code></pre>
+<p>In this example, the generated AWS Network Load Balancer name returned is:
+<code>dcos-lb-JOQ3wMJ7Z-Q8ayl-XzLP-PVv-f0f10cfccfa7d5a8.elb.us-west-2.amazonaws.com</code></p>
+<p>You can use the generated AWS Network Load Balancer name to retrieve details about the Network Load Balancer and its associated resources.</p>
+</li>
+<li>
+<p>Use the generated AWS Network Load Balancer name to describe the Network Load Balancer by running the following command:</p>
+<pre><code class="language-bash">aws elbv2 describe-load-balancers --names dcos-lb-JOQ3wMJ7Z-Q8ayl-XzLP-PVv
+</code></pre>
+<p>The command returns information similar to the following:</p>
+<pre><code class="language-bash">{
+    &quot;LoadBalancers&quot;: [
+        {
+            &quot;LoadBalancerArn&quot;: &quot;arn:aws:elasticloadbalancing:us-west-2:273854932432:loadbalancer/net/dcos-lb-JOQ3wMJ7Z-Q8ayl-XzLP-PVv/f0f10cfccfa7d5a8&quot;,
+            &quot;DNSName&quot;: &quot;dcos-lb-JOQ3wMJ7Z-Q8ayl-XzLP-PVv-f0f10cfccfa7d5a8.elb.us-west-2.amazonaws.com&quot;,
+            &quot;CanonicalHostedZoneId&quot;: &quot;Z18D5FSROUN65G&quot;,
+            &quot;CreatedTime&quot;: &quot;2019-04-26T16:20:20.071Z&quot;,
+            &quot;LoadBalancerName&quot;: &quot;dcos-lb-JOQ3wMJ7Z-Q8ayl-XzLP-PVv&quot;,
+            &quot;Scheme&quot;: &quot;internet-facing&quot;,
+            &quot;VpcId&quot;: &quot;vpc-0d745ccca41eb2da1&quot;,
+            &quot;State&quot;: {
+                &quot;Code&quot;: &quot;active&quot;
+            },
+            &quot;Type&quot;: &quot;network&quot;,
+            &quot;AvailabilityZones&quot;: [
+                {
+                    &quot;ZoneName&quot;: &quot;us-west-2c&quot;,
+                    &quot;SubnetId&quot;: &quot;subnet-05e8d3ea6fbad165a&quot;
+                }
+            ],
+            &quot;IpAddressType&quot;: &quot;ipv4&quot;
+        }
+    ]
+}
+</code></pre>
+</li>
+<li>
+<p>List the load balancer’s listeners by running the following command:</p>
+<pre><code class="language-bash">aws elbv2 describe-listeners --load-balancer-arn arn:aws:elasticloadbalancing:us-west-2:273854932432:loadbalancer/net/dcos-lb-JOQ3wMJ7Z-Q8ayl-XzLP-PVv/f0f10cfccfa7d5a8
+</code></pre>
+<p>The command returns information similar to the following:</p>
+<pre><code class="language-bash">{
+    &quot;Listeners&quot;: [
+        {
+            &quot;ListenerArn&quot;: &quot;arn:aws:elasticloadbalancing:us-west-2:273854932432:listener/net/dcos-lb-JOQ3wMJ7Z-Q8ayl-XzLP-PVv/f0f10cfccfa7d5a8/df8377617abd7bf2&quot;,
+            &quot;LoadBalancerArn&quot;: &quot;arn:aws:elasticloadbalancing:us-west-2:273854932432:loadbalancer/net/dcos-lb-JOQ3wMJ7Z-Q8ayl-XzLP-PVv/f0f10cfccfa7d5a8&quot;,
+            &quot;Port&quot;: 80,
+            &quot;Protocol&quot;: &quot;TCP&quot;,
+            &quot;DefaultActions&quot;: [
+                {
+                    &quot;Type&quot;: &quot;forward&quot;,
+                    &quot;TargetGroupArn&quot;: &quot;arn:aws:elasticloadbalancing:us-west-2:273854932432:targetgroup/dcos-tg-Gt8X3J46KQWg-80-PVvAO/d5a676c635d7e437&quot;
+                }
+            ]
+        }
+    ]
+}
+</code></pre>
+</li>
+<li>
+<p>Get the load balancer’s tags by running the following command:</p>
+<pre><code class="language-bash">aws elbv2 describe-tags --resource-arns arn:aws:elasticloadbalancing:us-west-2:273854932432:loadbalancer/net/dcos-lb-JOQ3wMJ7Z-Q8ayl-XzLP-PVv/f0f10cfccfa7d5a8
+</code></pre>
+<p>The command returns information similar to the following:</p>
+<pre><code class="language-bash">{
+    &quot;TagDescriptions&quot;: [
+        {
+            &quot;ResourceArn&quot;: &quot;arn:aws:elasticloadbalancing:us-west-2:273854932432:loadbalancer/net/dcos-lb-JOQ3wMJ7Z-Q8ayl-XzLP-PVv/f0f10cfccfa7d5a8&quot;,
+            &quot;Tags&quot;: [
+                {
+                    &quot;Key&quot;: &quot;DC/OS:EdgeLB:ApplicationID&quot;,
+                    &quot;Value&quot;: &quot;/dcos-edgelb/api&quot;
+                },
+                {
+                    &quot;Key&quot;: &quot;DC/OS:EdgeLB:ClusterID&quot;,
+                    &quot;Value&quot;: &quot;18f21a68-058f-4d14-8055-e61ed91e3794&quot;
+                },
+                {
+                    &quot;Key&quot;: &quot;DC/OS:EdgeLB:PoolName&quot;,
+                    &quot;Value&quot;: &quot;test-http-pool-with-aws-nlb&quot;
+                },
+                {
+                    &quot;Key&quot;: &quot;Protocol&quot;,
+                    &quot;Value&quot;: &quot;HTTP&quot;
+                },
+                {
+                    &quot;Key&quot;: &quot;DC/OS:EdgeLB:LoadBalancerName&quot;,
+                    &quot;Value&quot;: &quot;echo&quot;
+                }
+            ]
+        }
+    ]
+}
+</code></pre>
+</li>
+<li>
+<p>Get a list of target groups associated with the load balancer by running the following command:</p>
+<pre><code class="language-bash">aws elbv2 describe-target-groups --load-balancer-arn arn:aws:elasticloadbalancing:us-west-2:273854932432:loadbalancer/net/dcos-lb-JOQ3wMJ7Z-Q8ayl-XzLP-PVv/f0f10cfccfa7d5a8
+</code></pre>
+<p>The command returns information similar to the following:</p>
+<pre><code class="language-bash">{
+    &quot;TargetGroups&quot;: [
+        {
+            &quot;TargetGroupArn&quot;: &quot;arn:aws:elasticloadbalancing:us-west-2:273854932432:targetgroup/dcos-tg-Gt8X3J46KQWg-80-PVvAO/d5a676c635d7e437&quot;,
+            &quot;TargetGroupName&quot;: &quot;dcos-tg-Gt8X3J46KQWg-80-PVvAO&quot;,
+            &quot;Protocol&quot;: &quot;TCP&quot;,
+            &quot;Port&quot;: 65535,
+            &quot;VpcId&quot;: &quot;vpc-0d745ccca41eb2da1&quot;,
+            &quot;HealthCheckProtocol&quot;: &quot;TCP&quot;,
+            &quot;HealthCheckPort&quot;: &quot;traffic-port&quot;,
+            &quot;HealthCheckEnabled&quot;: true,
+            &quot;HealthCheckIntervalSeconds&quot;: 30,
+            &quot;HealthCheckTimeoutSeconds&quot;: 10,
+            &quot;HealthyThresholdCount&quot;: 3,
+            &quot;UnhealthyThresholdCount&quot;: 3,
+            &quot;LoadBalancerArns&quot;: [
+                &quot;arn:aws:elasticloadbalancing:us-west-2:273854932432:loadbalancer/net/dcos-lb-JOQ3wMJ7Z-Q8ayl-XzLP-PVv/f0f10cfccfa7d5a8&quot;
+            ],
+            &quot;TargetType&quot;: &quot;instance&quot;
+        }
+    ]
+}
+</code></pre>
+</li>
+<li>
+<p>Get the target group’s tags by running the following command:</p>
+<pre><code class="language-bash">aws elbv2 describe-tags --resource-arns arn:aws:elasticloadbalancing:us-west-2:273854932432:targetgroup/dcos-tg-Gt8X3J46KQWg-80-PVvAO/d5a676c635d7e437
+</code></pre>
+<p>The command returns information similar to the following:</p>
+<pre><code class="language-bash">{
+    &quot;TagDescriptions&quot;: [
+        {
+            &quot;ResourceArn&quot;: &quot;arn:aws:elasticloadbalancing:us-west-2:273854932432:targetgroup/dcos-tg-Gt8X3J46KQWg-80-PVvAO/d5a676c635d7e437&quot;,
+            &quot;Tags&quot;: [
+                {
+                    &quot;Key&quot;: &quot;DC/OS:EdgeLB:ListenerPort&quot;,
+                    &quot;Value&quot;: &quot;80&quot;
+                },
+                {
+                    &quot;Key&quot;: &quot;DC/OS:EdgeLB:ApplicationID&quot;,
+                    &quot;Value&quot;: &quot;/dcos-edgelb/api&quot;
+                },
+                {
+                    &quot;Key&quot;: &quot;DC/OS:EdgeLB:ClusterID&quot;,
+                    &quot;Value&quot;: &quot;18f21a68-058f-4d14-8055-e61ed91e3794&quot;
+                },
+                {
+                    &quot;Key&quot;: &quot;DC/OS:EdgeLB:PoolName&quot;,
+                    &quot;Value&quot;: &quot;test-http-pool-with-aws-nlb&quot;
+                },
+                {
+                    &quot;Key&quot;: &quot;Protocol&quot;,
+                    &quot;Value&quot;: &quot;HTTP&quot;
+                },
+                {
+                    &quot;Key&quot;: &quot;DC/OS:EdgeLB:FrontendName&quot;,
+                    &quot;Value&quot;: &quot;echo&quot;
+                },
+                {
+                    &quot;Key&quot;: &quot;DC/OS:EdgeLB:LoadBalancerName&quot;,
+                    &quot;Value&quot;: &quot;echo&quot;
+                }
+            ]
+        }
+    ]
+}
+</code></pre>
+</li>
+</ol>
+<h1 id="viewing-pool-metadata"><a class="content__anchor" href="#viewing-pool-metadata" aria-hidden="true"><i data-feather="bookmark"></i></a>Viewing pool metadata</h1>
+<p>Pool metadata contains additional information about cloud provider load balancers, if any additional information has been defined.</p>
+<p>To get load balancer metadata for a pool, you can make a request to the <code>/service/edgelb/v2/pools/&lt;pool-name&gt;/metadata</code> endpoint.</p>
+<p>Here is an example of a response:</p>
+<pre><code class="language-json">{
+  &quot;aws&quot;: {
+    &quot;elbs&quot;: [
+      {
+        &quot;availabilityZones&quot;: [
+          {
+            &quot;elasticIP&quot;: &quot;34.212.99.119&quot;,
+            &quot;name&quot;: &quot;us-west-2a&quot;
+          }
+        ],
+        &quot;dns&quot;: &quot;dcos-lb-JOQ3wMJ7Z-Q8ayl-XzLP-PVv-f0f10cfccfa7d5a8.elb.us-west-2.amazonaws.com&quot;,
+        &quot;listeners&quot;: [
+          {
+            &quot;linkFrontend&quot;: &quot;echo&quot;,
+            &quot;port&quot;: 80
+          }
+        ],
+        &quot;name&quot;: &quot;echo&quot;,
+        &quot;state&quot;: {
+          &quot;status&quot;: &quot;active&quot;
+        }
+      }
+    ]
+  },
+  &quot;frontends&quot;: [
+    {
+      &quot;endpoints&quot;: [
+        {
+          &quot;port&quot;: 80,
+          &quot;private&quot;: [
+            &quot;10.0.4.103&quot;
+          ],
+          &quot;public&quot;: [
+            &quot;34.211.112.50&quot;
+          ]
+        }
+      ],
+      &quot;name&quot;: &quot;echo&quot;
+    }
+  ],
+  &quot;name&quot;: &quot;test-http-pool-with-aws-nlb&quot;,
+  &quot;stats&quot;: [
+    {
+      &quot;port&quot;: 9090,
+      &quot;private&quot;: [
+        &quot;10.0.4.103&quot;
+      ],
+      &quot;public&quot;: [
+        &quot;34.211.112.50&quot;
+      ]
+    }
+  ]
+}
+</code></pre>
+<p>In this example, <code>aws.elbs</code> is an array of entries where each entry corresponds to a respective AWS load balancer configuration in the pool definition.</p>
+<p>Each <code>aws.elbs</code> entry has the following fields:</p>
+<ul>
+<li>
+<p><code>name</code> is a user-defined load balancer name.</p>
+</li>
+<li>
+<p><code>dns</code> is a DNS name of load balancer.</p>
+</li>
+<li>
+<p><code>listeners</code> is listeners as defined in the respective pool configuration.</p>
+</li>
+<li>
+<p><code>state</code> specifies the status of the load balancer, together with a description for unexpected statuses.</p>
+</li>
+<li>
+<p><code>availabilityZones</code> specify the availability zones that identify where load balancer nodes are located.</p>
+</li>
+</ul>
+<p>For other details on metadata format, see the pool <a href="../../reference/pool-configuration-reference/metadata/">metadata reference</a> section.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#configuring-cloud-provider-settings">Configuring cloud provider settings</a></li><li class="content__sections-item content__sections-item--h2"><a href="#specifying-subnets">Specifying subnets</a></li><li class="content__sections-item content__sections-item--h2"><a href="#specifying-elastic-ip-addresses">Specifying Elastic IP addresses</a></li><li class="content__sections-item content__sections-item--h2"><a href="#enabling-transport-layer-security-tls">Enabling Transport Layer Security (TLS)</a></li><li class="content__sections-item content__sections-item--h2"><a href="#enabling-access-logging">Enabling access logging</a></li><li class="content__sections-item content__sections-item--h2"><a href="#preventing-accidental-deletion">Preventing accidental deletion</a></li><li class="content__sections-item content__sections-item--h2"><a href="#internal-tagging">Internal tagging</a></li><li class="content__sections-item content__sections-item--h2"><a href="#required-permissions">Required permissions</a></li><li class="content__sections-item content__sections-item--h1"><a href="#deploying-with-the-cloud-provider-load-balancer">Deploying with the cloud provider load balancer</a></li><li class="content__sections-item content__sections-item--h1"><a href="#viewing-pool-metadata">Viewing pool metadata</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

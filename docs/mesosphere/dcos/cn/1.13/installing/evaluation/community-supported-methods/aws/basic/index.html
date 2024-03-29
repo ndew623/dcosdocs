@@ -1,0 +1,160 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>基础 - D2iQ Docs</title><meta name="description" content="使用 DC/OS 模板创建 DC/OS 群集"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/1.13/installing/evaluation/community-supported-methods/aws/basic">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/evaluation/community-supported-methods/aws/basic">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/evaluation/community-supported-methods/aws/basic">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/community-supported-methods/aws/basic">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/"><i data-feather="chevron-right"></i>概述</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/"><i data-feather="chevron-right"></i>安装</a></li><ul><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/"><i data-feather="chevron-right"></i>云安装</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/aws/"><i data-feather="chevron-right"></i>AWS</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/azure/"><i data-feather="chevron-right"></i>Azure</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/gcp/"><i data-feather="chevron-right"></i>GCP</a></li><li class="active"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/community-supported-methods/"><i data-feather="chevron-right"></i>其他安装方法</a></li><ul><li class="active"><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/community-supported-methods/aws/"><i data-feather="chevron-right"></i>AWS</a></li><ul><li class="active active-on"><a class="d4" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/community-supported-methods/aws/basic/">基础</a></li><li><a class="d4" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/community-supported-methods/aws/advanced/"><i data-feather="chevron-right"></i>Advanced</a></li><li><a class="d4" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/community-supported-methods/aws/removeaws/">卸载</a></li></ul><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/community-supported-methods/azure/">Azure</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/community-supported-methods/digitalocean/">DigitalOcean</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/community-supported-methods/packet/">Packet</a></li></ul></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/"><i data-feather="chevron-right"></i>本地安装</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/installation-faq/">常见问题</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/troubleshooting/">故障排除</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/1.13/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">基础</h1></div><h4 class="content__header-description">使用 DC/OS 模板创建 DC/OS 群集</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/community-supported-methods/aws/basic/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>可以使用 AWS CloudFormation 上的 DC/OS 模板为 Amazon Web Services (AWS) 创建 DC/OS 群集。</p>
+<p>基础模板提供：</p>
+<ul>
+<li>有限的自定义选项</li>
+<li>最快的部署和必要的基础设置</li>
+<li>非常适合简单的生产部署、演示和测试</li>
+</ul>
+<p>这些说明提供了一个基础的 AWS CloudFormation 模板，可以创建适合演示和 POC 的 DC/OS 群集。这是开始使用 AWS CloudFormation 的 DC/OS 模板的最快方式。</p>
+<p>有关完整的 DC/OS 配置选项集，请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/evaluation/community-supported-methods/aws/advanced/">高级 AWS 安装指南</a>.</p>
+<table class=“table” bgcolor=#858585>
+<tr>
+  <td align=justify style=color:white><strong>重要信息：</strong>此安装方法不支持升级。</td>
+</tr>
+</table>
+<h1 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>系统要求</h1>
+<h2 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>硬件</h2>
+<p>AWS EC2 <a href="https://aws.amazon.com/ec2/pricing/" target="_blank">m3.xlarge</a> 实例。建议不要选择较小的 VM，而选择较少的 VM 可能会导致某些资源密集型服务（例如，分布式数据存储）无法正常工作。</p>
+<ul>
+<li>可选择一个或三个 Mesos 管理节点。</li>
+<li>默认值为五个 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/concepts/#private-agent-node">专用</a> Mesos 代理节点。</li>
+<li>默认值为一个 <a href="/dcosdocs/mesosphere/dcos/cn/1.13/overview/concepts/#public-agent-node">公共</a> Mesos 代理节点。默认情况为，端口已关闭，运行状况检查配置为 Marathon-LB。端口 80 和 443 配置为 AWS 弹性负载均衡器。</li>
+</ul>
+<h2 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>软件</h2>
+<ul>
+<li>
+<p>DC/OS AWS 模板：</p>
+<ul>
+<li>联系销售代表或 <a href="mailto:sales@mesosphere.com">sales@mesosphere.com</a>，获取这些文件。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></li>
+<li>最新的 DC/OS 开源 AWS 模板可从 <a href="https://downloads.dcos.io/dcos/stable/aws.html">downloads.dcos.io</a> 下载，旧版本可从 <a href="https://dcos.io/releases/">dcos.io/releases</a>. 下载。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--oss">Open Source</span></span></li>
+</ul>
+</li>
+<li>
+<p>AWS 帐户。</p>
+</li>
+<li>
+<p>与群集相同分域的 AWS EC2 密钥对。密钥对不能跨分域共享。AWS 密钥对使用公钥加密来提供对 AWS 群集的安全登录。有关创建 AWS EC2 密钥对的详细信息，请参阅 <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair" target="_blank">文档</a>.</p>
+</li>
+<li>
+<p>已安装和配置 SSH。需要访问 DC/OS 群集中的节点。</p>
+</li>
+</ul>
+<h1 id="dcos"><a class="content__anchor" href="#dcos" aria-hidden="true"><i data-feather="bookmark"></i></a>创建 DC/OS 群集堆栈</h1>
+<h2 id="enterprise-enterprise"><a class="content__anchor" href="#enterprise-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>Enterprise 用户 <span class="badge badge--shortcode badge--large badge--block badge--enterprise">Enterprise</span></h2>
+<ol>
+<li>
+<p>启动 <a href="https://console.aws.amazon.com/cloudformation/home" target="_blank">AWS CloudFormation</a>.</p>
+</li>
+<li>
+<p>单击 <strong>创建堆栈</strong>。</p>
+</li>
+<li>
+<p>在 <strong>选择模板</strong> 页面的<strong>选择模板</strong>字段，单击 <strong>指定 Amazon S3 模板 URL</strong> 单选按钮，然后将销售发送的模板 URL 粘贴进去。</p>
+</li>
+</ol>
+<table class=“table” bgcolor=#ffd000>
+<tr>
+  <td align=justify style=color:black><strong>警告：</strong>请勿单击 <strong>查看/编辑设计程序中的模板</strong> 链接并编辑模板。DC/OS 模板是为运行 DC/OS 配置的。如果修改模板，您可能无法在 DC/OS 群集上运行某些包。</td>
+</tr>
+</table>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/1.13/img/dcos-aws-step2b.png" alt="Launch stack"></p>
+<p>图 1. 启动堆栈</p>
+<ol start="4">
+<li>
+<p>单击 <strong>Next</strong>。</p>
+</li>
+<li>
+<p>在 <strong>指定详情</strong> 页面指定群集名称（<code>Stack name</code>）、密钥对（<code>KeyName</code>）、公共代理（<code>PublicSlaveInstanceCount</code>）和专用代理（<code>SlaveInstanceCount</code>). 单击 <strong>Next</strong>。创建群集后，根据您安装的 DC/OS 服务，可能需要更改代理节点数。如需更多信息，请参阅 <a href="/dcosdocs/mesosphere/dcos/1.13/administering-clusters/managing-aws/">在 AWS 中扩展 DC/OS 群集</a>。</p>
+</li>
+<li>
+<p>跳过开源用户部分，转到第 6 步。</p>
+</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/1.13/img/dcos-aws-step2c-ee.png" alt="Create stack"></p>
+<p>图 2. 创建堆栈</p>
+<h2 id="open-source"><a class="content__anchor" href="#open-source" aria-hidden="true"><i data-feather="bookmark"></i></a>开源用户 <span class="badge badge--shortcode badge--large badge--block badge--oss">Open Source</span></h2>
+<ol>
+<li>
+<p>在 CloudFormation 上启动 <a href="https://downloads.dcos.io/dcos/EarlyAccess/aws.html" target="_blank">DC/OS 模板</a>，选择分域和管理节点数量（一个或三个）。所选分域必须有一个密钥对。</p>
+</li>
+<li>
+<p>在 <strong>选择模板</strong> 页面接受默认值，然后单击 <strong>下一步</strong>。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/1.13/img/dcos-aws-step2b.png" alt="Launch stack"></p>
+<p>图 3. 启动堆栈</p>
+</li>
+<li>
+<p>在 <strong>指定详情</strong> 页面指定群集名称（<code>Stack name</code>）、密钥对（<code>KeyName</code>）、是否启用 OAuth 身份认证（<code>OAuthEnabled</code>）、公共代理节点数（<code>PublicSlaveInstanceCount</code>）、专用代理节点数（<code>SlaveInstanceCount</code>），然后单击 <strong>下一步</strong>。</p>
+</li>
+</ol>
+<table class=“table” bgcolor=#ffd000>
+<tr>
+  <td align=justify style=color:black><strong>警告：</strong>请勿单击 <strong>查看/编辑设计程序中的模板</strong> 链接并编辑模板。DC/OS 模板是为运行 DC/OS 配置的。如果修改模板，您可能无法在 DC/OS 群集上运行某些包。</td>
+</tr>
+</table>
+<ol start="4">
+<li>转到“所有用户”部分的第 6 步。</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/1.13/img/dcos-aws-step2c.png" alt="Create stack"></p>
+<p>图 4. 创建堆栈</p>
+<h2 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>所有用户</h2>
+<ol start="6">
+<li>
+<p>在 <strong>选项</strong> 页面，接受默认值，然后单击 <strong>下一步</strong>。在“高级”部分，您可以选择是否退回查看故障。默认情况下，此选项设置为 <strong>是</strong>。</p>
+</li>
+<li>
+<p>在 <strong>查看</strong> 页面，选中确认框，然后单击 <strong>创建</strong>。如果显示 <strong>创建新堆栈</strong> 页面，要么是 AWS 仍在处理您的请求，要么就是您查看的是其他分域。导航至正确的分域并刷新页面以查看您的堆栈。</p>
+</li>
+</ol>
+<h1 id="-5"><a class="content__anchor" href="#-5" aria-hidden="true"><i data-feather="bookmark"></i></a>监控群集堆栈启动</h1>
+<p>在 <a href="https://console.aws.amazon.com/cloudformation/home" target="_blank">AWS CloudFormation</a> 中，您会看到以下内容：</p>
+<ul>
+<li>群集堆栈启动需要 10 到 15 分钟时间。</li>
+<li>状态从 CREATE_IN_PROGRESS 更改为 CREATE_COMPLETE。</li>
+</ul>
+<p><strong>故障排除：</strong> ROLLBACK_COMPLETE 状态表示部署失败。如需实用故障信息，请参阅<strong>事件</strong>选项卡。</p>
+<table class=“table” bgcolor=#858585>
+<tr>
+  <td align=justify style=color:white><strong>重要信息：</strong>ROLLBACK_COMPLETE 状态表示部署失败。如需实用故障信息，请参阅<strong>事件</strong>选项卡。</td>
+</tr>
+</table>
+<h1 id="dcos-gui"><a class="content__anchor" href="#dcos-gui" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="launchdcos"></a>打开并登录 DC/OS GUI</h1>
+<ol>
+<li>
+<p>在 AWS CloudFormation 中，勾选堆栈旁边的复选框。</p>
+</li>
+<li>
+<p>单击 <strong>输出</strong>选项卡并复制 Mesos 管理节点主机名。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/1.13/img/dcos-stack.png" alt="Monitor stack creation"></p>
+<p>图 5. 监控堆栈创建</p>
+</li>
+<li>
+<p>将主机名粘贴到浏览器中，打开 DC/OS Web 界面。该界面在标准 HTTP 端口 80 上运行，因此无需在主机名后指定端口号。浏览器可能会显示您的连接不安全的警告。这是因为 DC/OS 使用自签名证书。可以忽略该错误，然后单击进入登录画面。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/1.13/img/dc-os-gui-login-ee.png" alt="DC/OS GUI auth"></p>
+<p>图 6. DC/OS Web 界面登录画面。</p>
+<p><strong>注意：</strong> 可能需要调整窗口大小以查看此选项卡。可以随时在 <a href="https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fcloudformation%2Fhome%3Fstate%3DhashArgs%2523%26isauthcode%3Dtrue&amp;client_id=arn%3Aaws%3Aiam%3A%3A015428540659%3Auser%2Fcloudformation&amp;forceMobileApp=0">AWS CloudFormation 管理</a> 页面找到 DC/OS 主机名。</p>
+</li>
+<li>
+<p>输入超级用户帐户的用户名和密码。默认用户名为 <code>bootstrapuser</code>，默认密码 <code>deleteme</code>. 单击 <strong>登录</strong>。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></p>
+</li>
+</ol>
+<h1 id="dcos-cli"><a class="content__anchor" href="#dcos-cli" aria-hidden="true"><i data-feather="bookmark"></i></a>安装 DC/OS CLI</h1>
+<p>必须安装 <a href="/dcosdocs/mesosphere/dcos/1.13/cli/install/">DC/OS 命令行界面 (CLI)</a> ，才能管理 DCOS 群集。</p>
+<ol>
+<li>
+<p>单击 DC/OS GUI 左上角的下拉菜单，然后选择 <strong>安装 CLI</strong>。</p>
+</li>
+<li>
+<p>复制代码片段并在终端中运行。输入 sudo 密码，接受群集证书的指纹并输入超级用户名和密码，完成 CLI 身份认证。</p>
+</li>
+</ol>
+<h1 id="-6"><a class="content__anchor" href="#-6" aria-hidden="true"><i data-feather="bookmark"></i></a>后续步骤</h1>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/1.13/security/ent/users-groups/">添加用户到群集</a></li>
+<li><a href="https://aws.amazon.com/autoscaling/">扩展注意事项</a></li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#系统要求">系统要求</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-2">硬件</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-3">软件</a></li><li class="content__sections-item content__sections-item--h1"><a href="#dcos">创建 DC/OS 群集堆栈</a></li><li class="content__sections-item content__sections-item--h2"><a href="#enterprise-enterprise">Enterprise 用户 Enterprise</a></li><li class="content__sections-item content__sections-item--h2"><a href="#open-source">开源用户 Open Source</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-4">所有用户</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-5">监控群集堆栈启动</a></li><li class="content__sections-item content__sections-item--h1"><a href="#dcos-gui">打开并登录 DC/OS GUI</a></li><li class="content__sections-item content__sections-item--h1"><a href="#dcos-cli">安装 DC/OS CLI</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-6">后续步骤</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

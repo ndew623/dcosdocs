@@ -1,0 +1,189 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>部署负载均衡数据管道 - D2iQ Docs</title><meta name="description" content="教程 - 在 DC/OS 上构建完整的负载均衡数据管道"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.0/tutorials/iot_pipeline">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.0"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/iot_pipeline">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/tutorials/iot_pipeline">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/tutorials/iot_pipeline">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.0</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/tutorials/dcos-101/"><i data-feather="chevron-right"></i>DC/OS 101</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/tutorials/create-service/">创建和运行服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/tutorials/stateful-services/">在 DC/OS 上运行有状态服务</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/tutorials/autoscaling/"><i data-feather="chevron-right"></i>使用 Marathon 自动扩展</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/tutorials/iot_pipeline/">部署负载均衡数据管道</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/tutorials/deploy-on-marathon/">使用 Jenkins 部署 Marathon 应用程序</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/tutorials/task-labels/">标记任务和作业</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.0/tutorials/dcos-debug/"><i data-feather="chevron-right"></i>调试 DC/OS 上的应用程序</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.0/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">部署负载均衡数据管道</h1></div><h4 class="content__header-description">教程 - 在 DC/OS 上构建完整的负载均衡数据管道</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.0/tutorials/iot_pipeline/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+部署负载均衡数据管道&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/cn/2.0/tutorials/iot_pipeline&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><!-- This disclaimer should be included at the beginning of each page of a tutorial. -->
+<p class="message--important"><strong>IMPORTANT: </strong>Tutorials are intended to give you hands-on experience working with a limited set of DC/OS features with no implied or explicit warranty of any kind. None of the information provided--including sample scripts, commands, or applications--is officially supported by Mesosphere. You should not use this information in a production environment without independent testing and validation.</p>
+<p>本教程演示如何在大约 15 分钟内在 DC/OS™ 上构建完整的负载均衡数据管道！</p>
+<h1 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>概述</h1>
+<p>在本教程中，您将安装和部署名为 Tweeter 的容器化 Ruby on Rails® 应用程序。Tweeter 是类似于 Twitter 的应用程序，您可以使用该应用程序将 140 个字符的消息发布到互联网。然后，使用 Zeppelin™ 对由 Tweeter 创建的数据执行实时分析。</p>
+<p>您将学习：</p>
+<ul>
+<li>如何安装 DC/OS 服务</li>
+<li>如何向 DC/OS Marathon 添加应用程序</li>
+<li>如何通过 Marathon-LB 将公共流量发送到私有应用程序</li>
+<li>如何发现您的应用程序</li>
+<li>如何扩展您的应用程序</li>
+</ul>
+<p>本教程使用 DC/OS 为群集启动和部署这些微服务：</p>
+<h3 id="cassandra"><a class="content__anchor" href="#cassandra" aria-hidden="true"><i data-feather="bookmark"></i></a>Cassandra</h3>
+<p><a href="/dcosdocs/mesosphere/dcos/services/cassandra/latest/">Cassandra®</a> 数据库用于后端以存储 Tweeter 应用程序数据。</p>
+<h3 id="kafka"><a class="content__anchor" href="#kafka" aria-hidden="true"><i data-feather="bookmark"></i></a>Kafka</h3>
+<p><a href="/dcosdocs/mesosphere/dcos/services/kafka/latest/">Kafka®</a> 发布订阅消息服务接收来自 Cassandra 的推文，并将它们发送到 Zeppelin 进行实时分析。</p>
+<h3 id="marathon-lb"><a class="content__anchor" href="#marathon-lb" aria-hidden="true"><i data-feather="bookmark"></i></a>Marathon-LB</h3>
+<p><a href="/dcosdocs/mesosphere/dcos/services/marathon-lb/latest/">Marathon-LB</a> 是一种基于 HAProxy® 的负载均衡器，仅适用于 Marathon™。当您需要外部路由或第 7 层负载均衡功能时，它非常有用。</p>
+<h3 id="zeppelin"><a class="content__anchor" href="#zeppelin" aria-hidden="true"><i data-feather="bookmark"></i></a>Zeppelin</h3>
+<p><a href="http://zeppelin.apache.org/">Zeppelin</a> 是一款交互式分析笔记本，可在后端与 DC/OS Spark 配合使用，以实现交互式分析和可视化。因为 Spark 和 Zeppelin 可能会占用所有群集资源，所以必须为 Zeppelin 服务指定最大内核数。</p>
+<h3 id="tweeter"><a class="content__anchor" href="#tweeter" aria-hidden="true"><i data-feather="bookmark"></i></a>Tweeter</h3>
+<p>Tweeter 将推文存储在 DC/OS Cassandra 服务中，实时将推文流式传输到 DC/OS Kafka 服务，并使用 DC/OS <a href="/dcosdocs/mesosphere/dcos/services/spark/latest/">Spark</a> 和 Zeppelin 服务执行实时分析。</p>
+<h1 id="dcos-tweeter"><a class="content__anchor" href="#dcos-tweeter" aria-hidden="true"><i data-feather="bookmark"></i></a>在 DC/OS 群集上准备和部署 Tweeter</h1>
+<h2 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>前提条件</h2>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/latest/installing/">DC/OS</a> 或 <a href="/dcosdocs/mesosphere/dcos/cn/latest/installing/">DC/OS Enterprise</a> 已安装，至少具有 5 个<a href="/dcosdocs/mesosphere/dcos/2.0/overview/concepts/">专用代理节点</a> 和 1 个<a href="/dcosdocs/mesosphere/dcos/2.0/overview/concepts/">公共代理节点</a>。</li>
+<li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/cli/install/">DC/OS CLI</a> 已安装。</li>
+<li>公共代理节点的公共 IP 地址。在声明了公共代理节点的 DC/OS 已安装后，可以<a href="/dcosdocs/mesosphere/dcos/2.0/administering-clusters/locate-public-agent/">导航到公共代理节点的公共 IP 地址</a>。</li>
+<li>Git：
+<ul>
+<li>** macOS®：**从 [Git 下载](http://git-scm.com/download/mac）获取安装程序。</li>
+<li>**UNIX®/Linux®：**请参阅这些 <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">安装说明</a>。</li>
+</ul>
+</li>
+</ul>
+<h2 id="dcos"><a class="content__anchor" href="#dcos" aria-hidden="true"><i data-feather="bookmark"></i></a>安装 DC/OS 服务</h2>
+<p>在此步骤中，您可以从 DC/OS Web 界面 <a href="/dcosdocs/mesosphere/dcos/cn/2.0/gui/catalog/"><strong>Catalog</strong></a> 选项卡安装 Cassandra、Kafka、Marathon-LB 和 Zeppelin。您还可以使用 <code>dcos package install</code>]<a href="/dcosdocs/mesosphere/dcos/2.0/cli/command-reference/">11</a> 命令，从 DC/OS CLI 安装 DC/OS 软件包。</p>
+<ol>
+<li>
+<p>查找并单击 <strong>cassandra</strong> 软件包，单击 <strong>REVIEW &amp; RUN</strong>，并通过再次单击 <strong>REVIEW &amp; RUN</strong>，然后单击 <strong>RUN SERVICE</strong>，接受默认安装。Cassandra 最多可旋转 3 个节点。当模态警报提示时，单击 <strong>OPEN SERVICE</strong>。</p>
+</li>
+<li>
+<p>单击 ** Catalog** 选项卡。查找并单击 <strong>kafka</strong> 软件包，单击 <strong>REVIEW &amp; RUN</strong>按钮，然后再次单击该按钮，然后单击 <strong>RUN SERVICE</strong>。Kafka 最多旋转 3 个代理。当模态警报提示时，单击 <strong>OPEN SERVICE</strong>。</p>
+</li>
+<li>
+<p>单击 ** Catalog** 选项卡。查找并单击 <em>marathon-lb</em>* 软件包，单击 <strong>REVIEW &amp; RUN</strong>按钮，然后再次单击该按钮，然后单击 <strong>RUN SERVICE</strong>。当模态警报提示时，单击 <strong>OPEN SERVICE</strong>。</p>
+</li>
+</ol>
+<p>如果您在 DC/OS Enterprise 群集上运行 Marathon-LB 时遇到问题，请尝试按照 <a href="/dcosdocs/mesosphere/dcos/cn/services/marathon-lb/latest/mlb-install/">这些说明</a> 进行安装。根据您的 <a href="/dcosdocs/mesosphere/dcos/cn/2.0/security/ent/#security-modes">安全模式</a>，Marathon-LB 可能需要服务身份认证才能访问 DC/OS。</p>
+<ol start="4">
+<li>
+<p>单击 ** Catalog** 选项卡。单击 <strong>zeppelin</strong> 软件包，然后单击 <strong>REVIEW &amp; RUN</strong> 按钮。</p>
+<ol>
+<li>单击左侧的 <strong>spark</strong> 选项卡，并将 <code>cores_max</code> 设置为 <code>8</code>.</li>
+<li>单击 <strong>REVIEW AND RUN</strong>，然后单击 <strong>RUN</strong>。单击 <strong>OPEN SERVICE</strong>。</li>
+</ol>
+</li>
+<li>
+<p>在 DC/OS 上部署您的微服务时，单击 <strong>Services</strong>（服务**）选项卡。当节点上线时，您将看到“运行状况”状态从“空闲”转为“不健康”，最后变为健康状态。这可能需要几分钟。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.0/img/tweeter-services6-ee.png" alt="显示所有服务的服务选项卡。"></p>
+<p>图 1. 显示 Tweeter 服务的服务选项卡</p>
+</li>
+</ol>
+<h2 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>部署容器化应用程序</h2>
+<p>在此步骤中，您将容器化 Tweeter 应用程序部署到公共节点。</p>
+<ol>
+<li>
+<p>导航至 <a href="https://github.com/mesosphere/tweeter/">Tweeter</a> GiThub 存储库并保存 <code>/tweeter/tweeter.json</code> Marathon 应用定义文件。</p>
+</li>
+<li>
+<p>将 <code>HAPROXY_0_VHOST</code> 定义添加到 <code>tweeter.json</code> 文件中，该定义具有<a href="/dcosdocs/mesosphere/dcos/2.0/administering-clusters/locate-public-agent/">公共代理</a> 节点的公共 IP 地址。</p>
+ <table class=“table” bgcolor=#858585>
+ <tr>
+ <td align=justify style=color:white><strong>重要信息：</strong>您必须删除前面的“http://”和后面的“/”。
+ </td>
+ </tr>
+ </table>
+<pre><code class="language-json">...
+  ],
+  &quot;labels&quot;: {
+    &quot;HAPROXY_GROUP&quot;: &quot;external&quot;,
+    &quot;HAPROXY_0_VHOST&quot;: &quot;&lt;public-agent-IP&gt;&quot;
+  }
+...
+</code></pre>
+<p>在本示例中，DC/OS 群集正在 AWS 上运行：</p>
+<pre><code class="language-bash">...
+  ],
+  &quot;labels&quot;: {
+    &quot;HAPROXY_GROUP&quot;: &quot;external&quot;,
+    &quot;HAPROXY_0_VHOST&quot;: &quot;52.34.136.22&quot;
+  }
+...
+</code></pre>
+</li>
+<li>
+<p>导航至包含已修改 <code>tweeter.json</code> 文件的目录。将 Tweeter 安装及部署到您的 DC/OS 群集中。</p>
+<pre><code class="language-bash">dcos marathon app add tweeter.json
+</code></pre>
+<p><code>instances</code> 中的 <code>tweeter.json</code> 参数指定应用程序实例的数量。使用以下命令为应用程序增容或减容：</p>
+<pre><code class="language-bash">dcos marathon app update tweeter instances=&lt;number_of_desired_instances&gt;
+</code></pre>
+<p>在本示例中，服务通过群集节点 <code>node-0.cassandra.mesos:9042</code> 与 Cassandra 进行通信，通过群集节点 <code>broker-0.kafka.mesos:9557</code> 与 Kafka 进行通信。由于 <code>HAPROXY_0_VHOST</code> 应用定义文件中的 <code>tweeter.json</code> 定义，流量通过 Marathon-LB 传输。</p>
+</li>
+<li>
+<p>转到 <strong>Services</strong> 选项卡，验证您的应用程序是否正常运行。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.0/img/tweeter-services7.png" alt="已部署的 Tweeter"></p>
+<p>图 2. 已部署的 Tweeter</p>
+</li>
+<li>
+<p>导航到<a href="/dcosdocs/mesosphere/dcos/2.0/administering-clusters/locate-public-agent/">公共代理</a> 节点端点以查看 Tweeter UI 并发布一篇推文。在本例中，您将浏览器指向 <code>52.34.136.22</code>.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/tweeter.png" alt="Tweeter"></p>
+<p>图 3. “Hello world”推文</p>
+</li>
+</ol>
+<h2 id="10"><a class="content__anchor" href="#10" aria-hidden="true"><i data-feather="bookmark"></i></a>发布 10 万条推文</h2>
+<p>在此步骤中，您部署的应用程序自动发布来自 Shakespeare 的大量推文。应用程序将逐个发布超过 10 万条推文，因此当您刷新页面时，您会看到它们稳定地进入。</p>
+<ol>
+<li>
+<p>导航至 <a href="https://github.com/mesosphere/tweeter/">Tweeter</a> GiThub 存储库并保存 <code>tweeter/post-tweets.json</code> Marathon 应用定义文件。</p>
+</li>
+<li>
+<p>部署 <code>post-tweets.json</code> Marathon 应用定义文件。</p>
+<pre><code class="language-bash">dcos marathon app add post-tweets.json
+</code></pre>
+</li>
+<li>
+<p>在 <code>post-tweets.json</code> 运行后，刷新您的浏览器，查看传入的 Shakespeare 推文。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.0/img/tweeter-shakespeare.png" alt="Shakespeare 推文"></p>
+<p>图 4. Shakespeare 推文</p>
+</li>
+</ol>
+<p><code>post-tweets</code> 应用程序通过流式传输 VIP<code>1.1.1.1:30000</code>. 进行工作。此地址在 <code>cmd</code> 应用定义的 <code>post-tweets.json</code> 参数中声明。</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/post-tweets&quot;,
+  &quot;cmd&quot;: &quot;bin/tweet shakespeare-tweets.json http://1.1.1.1:30000&quot;,
+...
+}
+</code></pre>
+<p>Tweeter 应用程序使用安装在每个 DC/OS 节点上的服务发现和负载均衡器服务。此地址在 <code>tweeter.json</code> 定义 <code>VIP_0</code>. 中定义。</p>
+<pre><code class="language-json">...
+{
+  &quot;containerPort&quot;: 3000,
+  &quot;hostPort&quot;: 0,
+  &quot;servicePort&quot;: 10000,
+  &quot;labels&quot;: {
+    &quot;VIP_0&quot;: &quot;1.1.1.1:30000&quot;
+    }
+}
+...
+</code></pre>
+<p>如果您正在使用 DC/OS Enterprise 群集，单击 DC/OS Web 界面中的 <strong>Networking</strong> -&gt; <strong>Service Addresses</strong> 选项卡，然后选择 <code>1.1.1.1:30000</code> 虚拟网络，以查看正在执行的负载均衡：</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.0/img/tweeter-services8-ee.png" alt="扩展的 Tweeter"></p>
+<p>图 5. 扩展的推文</p>
+<h2 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>添加流分析</h2>
+<p>在最后一步中，您将对来自 Kafka 的推文流进行实时分析。</p>
+<ol>
+<li>
+<p>导航至 <a href="https://github.com/mesosphere/tweeter/">Tweeter</a> GiThub 存储库并保存 <code>tweeter/post-tweets.json</code> Marathon 应用定义文件。</p>
+</li>
+<li>
+<p>导航至  中的 Zeppelin。<code>https://&lt;master_ip&gt;/service/zeppelin/</code>. 您的主节点 IP 地址是 DC/OS Web 界面的 URL。</p>
+</li>
+<li>
+<p>单击 <strong>Import Note</strong> 并导入 <code>tweeter-analytics.json</code>. Zeppelin 已预先配置，以在 DC/OS 群集上执行 Spark 作业，因此无需进一步配置或设置。请务必使用 <code>https://</code> 而不是 <code>http://</code>.</p>
+</li>
+<li>
+<p>导航至 <strong>Notebook</strong> -&gt; <strong>Tweeter Analytics</strong>。</p>
+</li>
+<li>
+<p>运行 <strong>Load Dependencies</strong> 步骤，将所需的库加载到 Zeppelin 中。</p>
+</li>
+<li>
+<p>运行 <strong>Spark Streaming</strong> 步骤，其从 ZooKeeper 中读取推文流并将其放入可使用 SparkSQL 查询的临时表中。</p>
+</li>
+<li>
+<p>运行 <strong>Top tweeter</strong> SQL 查询，其使用上一步中创建的表来计算每个用户的推文数。当新推文进入时，表会不断更新，因此重新运行查询会每次产生不同的结果。</p>
+</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/top-tweeters.png" alt="Top Tweeters"></p>
+<p>图 6. Top Tweeters</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#概述">概述</a></li><li class="content__sections-item content__sections-item--h1"><a href="#dcos-tweeter">在 DC/OS 群集上准备和部署 Tweeter</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-2">前提条件</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos">安装 DC/OS 服务</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-3">部署容器化应用程序</a></li><li class="content__sections-item content__sections-item--h2"><a href="#10">发布 10 万条推文</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-4">添加流分析</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>DC/OS Cassandra security - D2iQ Docs</title><meta name="description" content="Securing your service"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Cassandra Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services/cassandra">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/security">Cassandra 2.9.0-3.11.6</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/cassandra/2.4.0-3.0.16/security">Cassandra 2.4.0-3.0.16</a></li></ul><div class="toggle"><p><span class="title">Cassandra</span><span class="version"> 2.9.0-3.11.6</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/getting-started/">Getting Started</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/operations/">Operations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/configuration/">Configuring</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/advanced/">Advanced</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/updates/">Update</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/security/">Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/uninstall/">Uninstall</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/troubleshooting/">Troubleshooting</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/api-reference/">API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/support-policy/">Support Policy</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">DC/OS Cassandra security</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">Securing your service</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/cassandra/2.9.0-3.11.6/security/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><h1 id="dcos-apache-cassandra-security"><a class="content__anchor" href="#dcos-apache-cassandra-security" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS Apache Cassandra Security</h1>
+<ul>
+<li>
+<p>The DC/OS Apache Cassandra service allows you to create a service account to configure access for Apache Cassandra. The service allows you to create and assign permissions as required for access.</p>
+</li>
+<li>
+<p>The DC/OS Apache Cassandra service supports Apache Cassandra’s native transport encryption mechanisms. The service provides automation and orchestration to simplify the usage of the following features.</p>
+</li>
+</ul>
+<p class="message--note"><strong>NOTE: </strong>These security features are only available on DC/OS Enterprise 1.10 and later.</p>
+<h1 id="provisioning-a-service-account"><a class="content__anchor" href="#provisioning-a-service-account" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="provision-a-service-account"></a>Provisioning a service account</h1>
+<p>This section describes how to configure DC/OS access for Apache Cassandra. Depending on your <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/#security-modes/">security mode</a>, Apache Cassandra may require <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/service-auth/">service authentication</a> for access to DC/OS.</p>
+<p>A service like Apache Cassandra typically performs certain privileged actions on the cluster, which might require authenticating with the cluster. A service account associated with the service is used to authenticate with the DC/OS cluster. It is recommended to provisioning a separate service account for each service that would perform privileged operations. Service accounts authenticate using public-private keypair. The public key is used to create the service account in the cluster, while the corresponding private key is stored in the <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/secrets/">secret store</a>. The service account and the service account secret are passed to the service as install time options.</p>
+<table>
+<thead>
+<tr>
+<th>Security mode</th>
+<th>Service Account</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Disabled</td>
+<td>Not available</td>
+</tr>
+<tr>
+<td>Permissive</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Strict</td>
+<td>Required</td>
+</tr>
+</tbody>
+</table>
+<p>If you install a service in permissive mode and do not specify a service account, Metronome and Marathon will act as if requests made by this service are made by an account with the <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/perms-reference/#superuser">superuser permission</a>.</p>
+<h2 id="prerequisites"><a class="content__anchor" href="#prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites:</h2>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/latest/cli/install/">DC/OS CLI installed</a> and be logged in as a superuser.</li>
+<li><a href="/dcosdocs/mesosphere/dcos/latest/cli/enterprise-cli/#ent-cli-install">Enterprise DC/OS CLI 0.4.14 or later installed</a>.</li>
+</ul>
+<h1 id="create-a-key-pair"><a class="content__anchor" href="#create-a-key-pair" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="create-a-keypair"></a>Create a Key Pair</h1>
+<p>In this step, a 2048-bit RSA public-private key pair is created using the Enterprise DC/OS CLI.</p>
+<p>Create a public-private key pair and save each value into a separate file within the current directory.</p>
+<pre><code class="language-bash">dcos security org service-accounts keypair &lt;private-key&gt;.pem &lt;public-key&gt;.pem
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>You can use the <a href="https://docs.d2iq.com/dcosdocs/mesosphere/dcos/latest/security/ent/secrets/">DC/OS Secret Store</a> to secure the key pair.</p>
+<h1 id="create-a-service-account"><a class="content__anchor" href="#create-a-service-account" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="create-a-service-account"></a>Create a Service Account</h1>
+<p>From a terminal prompt, create a new service account (for example, <code>cassandra</code>) containing the public key (<code>&lt;your-public-key&gt;.pem</code>).</p>
+<pre><code class="language-bash">dcos security org service-accounts create -p &lt;your-public-key&gt;.pem -d &lt;description&gt; cassandra
+</code></pre>
+<p>You can verify your new service account using the following command.</p>
+<pre><code class="language-bash">dcos security org service-accounts show cassandra
+</code></pre>
+<h1 id="create-a-secret"><a class="content__anchor" href="#create-a-secret" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="create-an-sa-secret"></a>Create a Secret</h1>
+<p>Create a secret (<code>cassandra/&lt;secret-name&gt;</code>) with your service account and private key specified (<code>&lt;private-key&gt;.pem</code>).</p>
+<p class="message--note"><strong>NOTE: </strong>If you store your secret in a path that matches the service name, for example, service name and secret path are both cassandra, then only the service named cassandra can access it.</p>
+<pre><code class="language-bash">dcos security secrets create-sa-secret &lt;private-key&gt;.pem &lt;service-account-id&gt; cassandra/&lt;secret-name&gt;
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>If you are running, now EOL-ed, DC/OS 1.11 or older you would need to add <tt>--strict</tt> to the above command. For example, <tt>dcos security secrets --strict create-sa-secret <private-key>.pem <service-account-id> cassandra/sa-secret</tt> .</p>
+<p>You can list the secrets with this command:</p>
+<pre><code class="language-bash">dcos security secrets list /
+</code></pre>
+<h1 id="create-and-assign-permissions"><a class="content__anchor" href="#create-and-assign-permissions" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="give-perms"></a>Create and Assign Permissions</h1>
+<p>Use the following DC/OS CLI commands to rapidly provision the Apache Cassandra service account with the required permissions.</p>
+<ol>
+<li>Create the permission.</li>
+</ol>
+<p class="message--important"><strong>IMPORTANT: </strong>The value to be used for <tt>&lt;service-role&gt;</tt> will be based on the service name, package version and DC/OS version. The table below shows a few examples of service names and the corresponding Mesos roles they would use. This version of cassandra is quota support built in. To determine whether the service group, you are deploying a service to, has <tt>enforceRole</tt> set to <tt>true</tt> or <tt>false</tt> please check this <a href="https://support.d2iq.com/s/article/How-to-determine-if-a-top-level-group-is-quota-limited">KB article</a>. </p>
+<p>If you need help configuring the permissions for cassandra, please feel to reach out to D2iQ support by filing a support ticket. Replace the instances of <tt>&lt;service-role&gt;</tt> with the correct name (<tt>&lt;name&gt;-role</tt>).</p>
+<table>
+<thead>
+<tr>
+<th><strong>Service name</strong></th>
+<th><strong>&lt;service-role&gt;</strong><br>DC/OS 1.13 or older<br>DC/OS 2.0 or newer AND enforceRole=false</th>
+<th><strong>&lt;service-role&gt;</strong><br>DC/OS 2.0 or newer AND enforceRole=true</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/cassandra</code></td>
+<td><code>cassandra-role</code></td>
+<td><code>cassandra-role</code></td>
+</tr>
+<tr>
+<td><code>/cassandra-prod</code></td>
+<td><code>cassandra-prod-role</code></td>
+<td><code>cassandra-prod-role</code></td>
+</tr>
+<tr>
+<td><code>/team01/cassandra</code></td>
+<td><code>team01__cassandra-role</code></td>
+<td><code>team01</code></td>
+</tr>
+<tr>
+<td><code>/team01/prod/cassandra</code></td>
+<td><code>team01__prod__cassandra-role</code></td>
+<td><code>team01</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="permissive"><a class="content__anchor" href="#permissive" aria-hidden="true"><i data-feather="bookmark"></i></a>Permissive</h2>
+<p>Run these commands with the service account name you created for the service in the <em>Create a Service Account</em> step above. For example we are using cassandra</p>
+<pre><code class="language-bash">dcos security org users grant cassandra dcos:mesos:master:framework:role:&lt;service-role&gt; create --description &quot;Allow registering as a framework of role &lt;service-role&gt; with Mesos master&quot;
+dcos security org users grant cassandra dcos:mesos:master:reservation:role:&lt;service-role&gt; create --description &quot;Allow creating Mesos resource reservations of role &lt;service-role&gt;&quot;
+dcos security org users grant cassandra dcos:mesos:master:volume:role:&lt;service-role&gt; create --description &quot;Allow creating Mesos persistent volumes of role &lt;service-role&gt;&quot;
+dcos security org users grant cassandra dcos:mesos:master:reservation:principal:cassandra delete --description &quot;Allow unreserving Mesos resource reservations with principal cassandra&quot;
+dcos security org users grant cassandra dcos:mesos:master:volume:principal:cassandra delete --description &quot;Allow deleting Mesos persistent volumes with principal cassandra&quot;
+</code></pre>
+<h2 id="strict"><a class="content__anchor" href="#strict" aria-hidden="true"><i data-feather="bookmark"></i></a>Strict</h2>
+<p>Run these commands with the service account name you created for the service in the <em>Create a Service Account</em> step above. For example we are using cassandra</p>
+<pre><code class="language-bash">dcos security org users grant cassandra dcos:mesos:master:task:user:nobody create --description &quot;Allow running a task as linux user nobody&quot;
+dcos security org users grant cassandra dcos:mesos:master:framework:role:&lt;service-role&gt; create --description &quot;Allow registering as a framework of role &lt;service-role&gt; with Mesos master&quot;
+dcos security org users grant cassandra dcos:mesos:master:reservation:role:&lt;service-role&gt; create --description &quot;Allow creating Mesos resource reservations of role &lt;service-role&gt;&quot;
+dcos security org users grant cassandra dcos:mesos:master:volume:role:&lt;service-role&gt; create --description &quot;Allow creating Mesos persistent volumes of role &lt;service-role&gt;&quot;
+dcos security org users grant cassandra dcos:mesos:master:reservation:principal:cassandra delete --description &quot;Allow unreserving Mesos resource reservations with principal cassandra&quot;
+dcos security org users grant cassandra dcos:mesos:master:volume:principal:cassandra delete --description &quot;Allow deleting Mesos persistent volumes with principal cassandra&quot;
+</code></pre>
+<h1 id="transport-encryption"><a class="content__anchor" href="#transport-encryption" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="transport_encryption"></a> Transport Encryption</h1>
+<p>With transport encryption enabled, DC/OS Apache Cassandra will automatically deploy all nodes with the correct configuration to encrypt communication via SSL. The nodes will communicate securely between themselves using SSL.</p>
+<p>The service uses the <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/tls-ssl/">DC/OS CA</a> to generate the SSL artifacts that it uses to secure the service. Any client that trusts the DC/OS CA will consider the service’s certificates valid.</p>
+<h3 id="prerequisites-2"><a class="content__anchor" href="#prerequisites-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h3>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/latest/security/ent/service-auth/custom-service-auth/">A DC/OS Service Account with a secret stored in the DC/OS Secret Store</a>.</li>
+<li>DC/OS Superuser permissions for modifying the permissions of the Service Account.</li>
+</ul>
+<h3 id="configure-transport-encryption"><a class="content__anchor" href="#configure-transport-encryption" aria-hidden="true"><i data-feather="bookmark"></i></a>Configure Transport Encryption</h3>
+<h4 id="set-up-the-service-account"><a class="content__anchor" href="#set-up-the-service-account" aria-hidden="true"><i data-feather="bookmark"></i></a>Set up the service account</h4>
+<p><a href="/dcosdocs/mesosphere/dcos/latest/security/ent/perms-management/">Grant</a> the service account the correct permissions.</p>
+<ul>
+<li>In DC/OS 1.10, the required permission is <code>dcos:superuser full</code>.</li>
+<li>In DC/OS 1.11 and later, the required permissions are:</li>
+</ul>
+<pre><code>dcos:secrets:default:/&lt;service name&gt;/* full
+dcos:secrets:list:default:/&lt;service name&gt; read
+dcos:adminrouter:ops:ca:rw full
+dcos:adminrouter:ops:ca:ro full
+</code></pre>
+<p>where <code>&lt;service name&gt;</code> is the name of the service to be installed.</p>
+<!-- Not clear if this is the right location DCOS-39455 --> 
+<p>Run the following DC/OS Enterprise CLI commands to set permissions for the service account on a strict cluster:</p>
+<pre><code>dcos security org users grant ${SERVICE_ACCOUNT} dcos:mesos:master:task:app_id:&lt;service/name&gt; create
+dcos security org users grant ${SERVICE_ACCOUNT} dcos:mesos:master:reservation:principal:dev_hdfs create
+dcos security org users grant ${SERVICE_ACCOUNT} dcos:mesos:master:volume:principal:dev_hdfs create
+</code></pre>
+<h4 id="install-the-service"><a class="content__anchor" href="#install-the-service" aria-hidden="true"><i data-feather="bookmark"></i></a>Install the service</h4>
+<p>Install the DC/OS Apache Cassandra service including the following options in addition to your own:</p>
+<pre><code class="language-json">{
+    &quot;service&quot;: {
+        &quot;service_account&quot;: &quot;&lt;your service account name&gt;&quot;,
+        &quot;service_account_secret&quot;: &quot;&lt;full path of service secret&gt;&quot;,
+        &quot;security&quot;: {
+            &quot;transport_encryption&quot;: {
+                &quot;enabled&quot;: true, &quot;allow_plaintext&quot;: &lt;true|false default false&gt;
+
+            }
+        }
+    }
+}
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>It is possible to update a running DC/OS Apache Cassandra service to enable transport encryption after initial installation, but the service may be unavailable during the transition. Additionally, your clients will need to be reconfigured unless <tt>service.security.transport_encryption.allow_plaintext</tt> is set to <tt>true</tt>.</p>
+<h4 id="transport-encryption-for-clients"><a class="content__anchor" href="#transport-encryption-for-clients" aria-hidden="true"><i data-feather="bookmark"></i></a>Transport Encryption for Clients</h4>
+<p>With Transport Encryption enabled, service clients will need to be configured to use the <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/tls-ssl/get-cert/">DC/OS CA bundle</a> to verify the connections they make to the service. Consult your client’s documentation for trusting a CA and configure your client appropriately.</p>
+<h1 id="forwarding-dns-and-custom-domain"><a class="content__anchor" href="#forwarding-dns-and-custom-domain" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="Forwarding DNS and Custom Domain"></a> Forwarding DNS and Custom Domain</h1>
+<p>Every DC/OS cluster has a unique cryptographic ID which can be used to forward DNS queries to that cluster. To securely expose the service outside the cluster, external clients must have an upstream resolver configured to forward DNS queries to the DC/OS cluster of the service as described <a href="/dcosdocs/mesosphere/dcos/latest/networking/DNS/mesos-dns/expose-mesos-zone/">here</a>.</p>
+<p>With only forwarding configured, DNS entries within the DC/OS cluster will be resolvable at <code>&lt;task-domain&gt;.autoip.dcos.&lt;cryptographic-id&gt;.dcos.directory</code>. However, if you configure a DNS alias, you can use a custom domain. For example, <code>&lt;task-domain&gt;.cluster-1.acmeco.net</code>. In either case, the DC/OS Apache Cassandra service will need to be installed with an additional security option:</p>
+<pre><code class="language-json">{
+    &quot;service&quot;: {
+        &quot;security&quot;: {
+            &quot;custom_domain&quot;: &quot;&lt;custom-domain&gt;&quot;
+        }
+    }
+}
+</code></pre>
+<p>where <code>&lt;custom-domain&gt;</code> is one of <code>autoip.dcos.&lt;cryptographic-id&gt;.dcos.directory</code> or your organization’s specific domain (e.g., <code>cluster-1.acmeco.net</code>).</p>
+<p>As a concrete example, using the custom domain of <code>cluster-1.acmeco.net</code> the node 0 task would have a host of <code>node-0-server.&lt;service-name&gt;.cluster-1.acmeco.net</code>.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#dcos-apache-cassandra-security">DC/OS Apache Cassandra Security</a></li><li class="content__sections-item content__sections-item--h1"><a href="#provisioning-a-service-account">Provisioning a service account</a></li><li class="content__sections-item content__sections-item--h2"><a href="#prerequisites">Prerequisites:</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-a-key-pair">Create a Key Pair</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-a-service-account">Create a Service Account</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-a-secret">Create a Secret</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-and-assign-permissions">Create and Assign Permissions</a></li><li class="content__sections-item content__sections-item--h2"><a href="#permissive">Permissive</a></li><li class="content__sections-item content__sections-item--h2"><a href="#strict">Strict</a></li><li class="content__sections-item content__sections-item--h1"><a href="#transport-encryption">Transport Encryption</a></li><li class="content__sections-item content__sections-item--h1"><a href="#forwarding-dns-and-custom-domain">Forwarding DNS and Custom Domain</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

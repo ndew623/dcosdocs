@@ -1,0 +1,477 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Working with templates and app labels - D2iQ Docs</title><meta name="description" content="Working with templates and app labels for Marathon-LB"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Marathon Lb Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.14/mlb-configuration">Marathon-LB 1.14.x</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.15/mlb-configuration">Marathon-LB 1.15.x</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.13/mlb-configuration">Marathon-LB 1.13.x</a></li></ul><div class="toggle"><p><span class="title">Marathon Lb</span><span class="version"> 1.14</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.14/release-notes/">Release notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.14/mlb-install/">Installing Marathon-LB</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.14/mlb-overview/">Marathon-LB overview</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.14/mlb-configuration/">Working with templates and app labels</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.14/mlb-basic-tutorial/">Tutorial - Basic external load balancing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.14/mlb-advanced-tutorial/">Tutorial - Internal and external load balancing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.14/mlb-scaling-tutorial/">Tutorial - Scaling apps using Marathon-LB statistics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.14/mlb-troubleshooting/">Troubleshooting Marathon-LB</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/marathon-lb/1.14/mlb-reference/">Reference information</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Working with templates and app labels</h1></div><h4 class="content__header-description">Working with templates and app labels for Marathon-LB</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/marathon-lb/1.14/mlb-configuration/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>Marathon-LB provides load balancing tool for Marathon-orchestrated applications.  Marathon-LB leverages the core features of the <code>HAProxy</code> program. For DC/OS clusters, Marathon-LB reads the Marathon task information and dynamically generates the required <code>HAProxy</code> configuration details. To gather this task information, you must specify the location of one or more Marathon instances. Marathon-LB  can then use the service configuration details stored globally in <strong>templates</strong> or defined in app definition <strong>labels</strong> to route traffic to the appropriate nodes and service ports.</p>
+<h1 id="using-marathon-lb-templates-and-app-labels"><a class="content__anchor" href="#using-marathon-lb-templates-and-app-labels" aria-hidden="true"><i data-feather="bookmark"></i></a>Using Marathon-LB templates and app labels</h1>
+<p>Marathon-LB provides templates and application labels that enable you to use default or set custom <code>HAProxy</code> configuration parameters. Configuration parameters provide details such as the algorithm you want to use for how workload is distributed. For example, you can set a configuration parameter to distribute processing for app access requests by using a “round-robin” model or to the server with the fewest current connections. The configuration templates can be set either globally for all apps, or overridden on a service-port or per-app basis.</p>
+<h1 id="overriding-template-and-app-label-values"><a class="content__anchor" href="#overriding-template-and-app-label-values" aria-hidden="true"><i data-feather="bookmark"></i></a>Overriding template and app label values</h1>
+<p>You can override the values set in Marathon-LB global templates by:</p>
+<ul>
+<li>Creating an environment variable in the Marathon-LB container.</li>
+<li>Placing configuration files in the <code>templates</code> directory where the path is relative to the location from which the Marathon-LB script runs.</li>
+<li>Specifying labels in the app definition file.</li>
+</ul>
+<h2 id="overriding-settings-using-environment-variables"><a class="content__anchor" href="#overriding-settings-using-environment-variables" aria-hidden="true"><i data-feather="bookmark"></i></a>Overriding settings using environment variables</h2>
+<p>One way you can override global settings is by modifying the definition for a default template setting. For example, you might modify the <code>HAPROXY_HTTPS_FRONTEND_HEAD</code> template to specify the following content:</p>
+<code>
+frontend new_frontend_label
+  bind *:443 ssl crt /etc/ssl/cert.pem
+  mode http
+</code>
+<p>You could then add this setting as an environment variable for the Marathon-LB configuration by specifying the following:</p>
+<p><code> “HAPROXY_HTTPS_FRONTEND_HEAD”: “\nfrontend new_frontend_label\n  bind *:443 ssl {sslCerts}\n  mode http”</code></p>
+<h2 id="overriding-settings-using-files-in-the-templates-directory"><a class="content__anchor" href="#overriding-settings-using-files-in-the-templates-directory" aria-hidden="true"><i data-feather="bookmark"></i></a>Overriding settings using files in the templates directory</h2>
+<p>Alternatively, you could place a file called <code>HAPROXY_HTTPS_FRONTEND_HEAD</code> in the <code>templates</code> directory through the use of an artifact URI. At periodic intervals, Marathon-LB checks the <code>templates</code> directory for new or changed configuration settings.</p>
+<p>You can add your own custom templates to the Docker image directly, or provide them in the <code>templates</code> directory that Marathon-LB reads at startup.</p>
+<h2 id="overriding-settings-using-app-labels"><a class="content__anchor" href="#overriding-settings-using-app-labels" aria-hidden="true"><i data-feather="bookmark"></i></a>Overriding settings using app labels</h2>
+<p>Most of the Marathon-LB template settings can be overridden using app labels. By using app labels, you can override template settings per service port. App labels are specified in the Marathon app definition. For example, the following app definition excerpt uses app labels to specify the <code>external</code> load balancing group for an application with a virtual host named <code>service.mesosphere.com</code>:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;http-service&quot;,
+  &quot;labels&quot;: {
+    &quot;HAPROXY_GROUP&quot;:&quot;external&quot;,
+    &quot;HAPROXY_0_VHOST&quot;:&quot;service.mesosphere.com&quot;
+  }
+}
+</code></pre>
+<p>The following example illustrates settings for a service called <code>http-service</code> that requires <code>http-keep-alive</code> to be disabled:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;http-service&quot;,
+  &quot;labels&quot;:{
+    &quot;HAPROXY_GROUP&quot;:&quot;external&quot;,
+    &quot;HAPROXY_0_BACKEND_HTTP_OPTIONS&quot;:&quot;  option forwardfor\n  no option http-keep-alive\n  http-request set-header X-Forwarded-Port %[dst_port]\n  http-request add-header X-Forwarded-Proto https if { ssl_fc }\n&quot;
+  }
+}
+</code></pre>
+<h3 id="specifying-strings-in-app-labels"><a class="content__anchor" href="#specifying-strings-in-app-labels" aria-hidden="true"><i data-feather="bookmark"></i></a>Specifying strings in app labels</h3>
+<p>In specifying labels for load balancing, keep in mind that strings are interpreted as literal <code>HAProxy</code> configuration parameters, with substitutions respected. The <code>HAProxy</code> configuration file settings are validated before reloading the <code>HAProxy</code> program after you make changes. Because the configuration is checked before reloading, problems with <code>HAProxy</code> labels can prevent the <code>HAProxy</code> service from restarting with the updated configuration.</p>
+<h3 id="specifying-an-index-identifier-in-app-labels"><a class="content__anchor" href="#specifying-an-index-identifier-in-app-labels" aria-hidden="true"><i data-feather="bookmark"></i></a>Specifying an index identifier in app labels</h3>
+<p>Settings that you can specify per service port include the port index identifier {n} in the label name, where {n} corresponds to the service port index, beginning at zero (0).</p>
+<h1 id="setting-global-default-options"><a class="content__anchor" href="#setting-global-default-options" aria-hidden="true"><i data-feather="bookmark"></i></a>Setting global default options</h1>
+<p>As a shortcut for adding global default options without overriding the global template, you can specify a comma-separated list of options using the <code>HAPROXY_GLOBAL_DEFAULT_OPTIONS</code> environment variable. The default value for the <code>HAPROXY_GLOBAL_DEFAULT_OPTIONS</code> environment variable is:
+<code>Redispatch,http-server-close,dontlognull</code></p>
+<p>To add the <code>httplog</code> option and keep the existing defaults, you could specify:</p>
+<code>
+HAPROXY_GLOBAL_DEFAULT_OPTIONS=redispatch,http-server-close,dontlognull,httplog.
+</code>
+<p>The setting takes effect the next time Marathon-LB checks for configuration changes. The setting does not take effect if the <code>HAPROXY_HEAD</code> template has been overridden.</p>
+<h1 id="creating-a-sample-global-template"><a class="content__anchor" href="#creating-a-sample-global-template" aria-hidden="true"><i data-feather="bookmark"></i></a>Creating a sample global template</h1>
+<p>Templates and app definition labels enable you to set custom <code>HAProxy</code> configuration parameters. Templates can be set either globally for all apps, or defined on a per-app basis using labels. The following steps summarize how to create a sample global template, add it as an archive file to the <code>templates</code> directory, and restart load balancing to use the new global template.</p>
+<p>To create a custom global template:</p>
+<ol>
+<li>
+<p>On your local computer, create a file called <code>HAPROXY_HEAD</code> in a directory called <code>templates</code> using commands similar to the following:</p>
+<pre><code class="language-bash">mkdir -p templates
+cat &gt; templates/HAPROXY_HEAD
+</code></pre>
+</li>
+<li>
+<p>Open the <code>HAPROXY_HEAD</code> file and add content similar to the following:</p>
+<pre><code>global
+  log /dev/log local0
+  log /dev/log local1 notice
+  spread-checks 5
+  max-spread-checks 15000
+  maxconn 4096
+  tune.ssl.default-dh-param 2048
+  ssl-default-bind-ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:DHE-RSA-AES128-SHA256:DHE-RSA-AES256-SHA256:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:!aNULL:!MD5:!DSS
+  ssl-default-bind-options no-sslv3 no-tlsv10 no-tls-tickets
+  ssl-default-server-ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:DHE-RSA-AES128-SHA256:DHE-RSA-AES256-SHA256:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:!aNULL:!MD5:!DSS
+  ssl-default-server-options no-sslv3 no-tlsv10 no-tls-tickets
+  stats socket /var/run/haproxy/socket expose-fd listeners
+  server-state-file global
+  server-state-base /var/state/haproxy/
+  lua-load /marathon-lb/getpids.lua
+  lua-load /marathon-lb/getconfig.lua
+  lua-load /marathon-lb/getmaps.lua
+  lua-load /marathon-lb/signalmlb.lua
+defaults
+  load-server-state-from-file global
+  log               global
+  retries                   3
+  backlog               10000
+  maxconn                3000
+  timeout connect          5s
+  timeout client          20s
+  timeout server          40s
+  timeout tunnel        3600s
+  timeout http-keep-alive  1s
+  timeout http-request    15s
+  timeout queue           30s
+  timeout tarpit          60s
+  option            dontlognull
+  option            http-server-close
+  option            redispatch
+listen stats
+  bind 0.0.0.0:9090
+  balance
+  mode http
+  stats enable
+  monitor-uri /_haproxy_health_check
+  acl getpid path /_haproxy_getpids
+  http-request use-service lua.getpids if getpid
+  acl getvhostmap path /_haproxy_getvhostmap
+  http-request use-service lua.getvhostmap if getvhostmap
+  acl getappmap path /_haproxy_getappmap
+  http-request use-service lua.getappmap if getappmap
+  acl getconfig path /_haproxy_getconfig
+  http-request use-service lua.getconfig if getconfig
+
+  acl signalmlbhup path /_mlb_signal/hup
+  http-request use-service lua.signalmlbhup if signalmlbhup
+  acl signalmlbusr1 path /_mlb_signal/usr1
+  http-request use-service lua.signalmlbusr1 if signalmlbusr1
+</code></pre>
+<p>In this example, the <code>maxconn</code>, <code>timeout client</code>, and <code>timeout server</code> property values have changed from the default.</p>
+</li>
+<li>
+<p>Create a compressed archive of the <code>HAPROXY_HEAD</code> file using a <code>tar</code> or <code>zip</code> command.</p>
+<p>For example, type the following to add the <code>HAPROXY_HEAD</code> file.</p>
+<pre><code class="language-#!/bin/bash">mkdir -p templates
+cat &gt; templates/HAPROXY_HEAD &lt;&lt;EOL
+tar czf templates.tgz templates/
+</code></pre>
+</li>
+<li>
+<p>Make the <code>templates.tgz</code> file available by uploading the file to an HTTP server. For example, you can use FTP or another file transfer program to copy the file to a static web server URL such as Amazon S3.</p>
+<p>You can download the sample template file using this URI: https://downloads.mesosphere.com/marathon/marathon-lb/templates.tgz</p>
+</li>
+<li>
+<p>Add the Marathon-LB template configuration to the Marathon-LB service definition by including the path to the template file, <code>templates</code> directory, or URI in a custom JSON file.</p>
+<p>For example, you might create a new file called <code>marathon-lb-template-options.json</code> with the following lines:</p>
+<pre><code class="language-json">{
+  &quot;marathon-lb&quot;: {
+    &quot;template-url&quot;:&quot;https://downloads.mesosphere.com/marathon/marathon-lb/templates.tgz&quot;
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>Restart Marathon-LB with the new configuration settings:</p>
+<pre><code class="language-bash">dcos package install marathon-lb --options=marathon-lb-template-options.json --yes
+</code></pre>
+</li>
+</ol>
+<p>Your customized Marathon-LB instance now runs using the new template.</p>
+<h1 id="creating-a-sample-per-app-template"><a class="content__anchor" href="#creating-a-sample-per-app-template" aria-hidden="true"><i data-feather="bookmark"></i></a>Creating a sample per-app template</h1>
+<p>To create a template for an individual app, modify the application definition. In the example below, the default template for the external NGINX application definition (<code>nginx-external.json</code>) has been modified to disable the HTTP keep-alive setting. While this is not a common scenario, there may be cases where you need to override certain default values on a per-application basis.</p>
+<ol>
+<li>
+<p>Copy the following lines into the <code>nginx-external.json</code> app definition file:</p>
+<pre><code class="language-json">{
+    &quot;id&quot;: &quot;nginx-external&quot;,
+    &quot;container&quot;: {
+      &quot;type&quot;: &quot;DOCKER&quot;,
+      &quot;portMappings&quot;: [
+        { &quot;hostPort&quot;: 0, &quot;containerPort&quot;: 80, &quot;servicePort&quot;: 10000 }
+      ],
+      &quot;docker&quot;: {
+        &quot;image&quot;: &quot;nginx:1.7.7&quot;,
+        &quot;forcePullImage&quot;:true
+      }
+    },
+    &quot;instances&quot;: 1,
+    &quot;cpus&quot;: 0.1,
+    &quot;mem&quot;: 65,
+    &quot;network&quot;: &quot;BRIDGE&quot;,
+    &quot;healthChecks&quot;: [{
+        &quot;protocol&quot;: &quot;HTTP&quot;,
+        &quot;path&quot;: &quot;/&quot;,
+        &quot;portIndex&quot;: 0,
+        &quot;timeoutSeconds&quot;: 10,
+        &quot;gracePeriodSeconds&quot;: 10,
+        &quot;intervalSeconds&quot;: 2,
+        &quot;maxConsecutiveFailures&quot;: 10
+    }],
+    &quot;labels&quot;:{
+      &quot;HAPROXY_GROUP&quot;:&quot;external&quot;,
+      &quot;HAPROXY_0_BACKEND_HTTP_OPTIONS&quot;:&quot;  option forwardfor\n  no option http-keep-alive\n      http-request set-header X-Forwarded-Port %[dst_port]\n  http-request add-header X-Forwarded-Proto https if { ssl_fc }\n&quot;
+    }
+  }
+</code></pre>
+</li>
+<li>
+<p>Deploy the external NGINX app on DC/OS using the following command:</p>
+<pre><code class="language-bash">dcos marathon app add nginx-external.json
+</code></pre>
+</li>
+</ol>
+<p>Other options you might want to specify using customized app definition labels include:</p>
+<ul>
+<li>enabling the sticky session option</li>
+<li>redirecting to HTTPS</li>
+<li>specifying a virtual host</li>
+</ul>
+<p>For example:</p>
+<pre><code class="language-json">   &quot;labels&quot;:{
+      &quot;HAPROXY_0_STICKY&quot;:&quot;true&quot;,
+      &quot;HAPROXY_0_BACKEND_STICKY_OPTIONS&quot;: &quot; cookie JSESSIONID prefix nocache &quot;
+      &quot;HAPROXY_0_REDIRECT_TO_HTTPS&quot;:&quot;true&quot;,
+      &quot;HAPROXY_0_VHOST&quot;:&quot;nginx.mesosphere.com&quot;
+    }
+</code></pre>
+<p>For more information about specifying a virtual host, see <a href="#resolving-virtual-hosts">Resolving virtual hosts</a>. For information about other configuration templates and app labels, see <a href="/dcosdocs/mesosphere/dcos/services/marathon-lb/latest/mlb-reference/">Marathon-LB reference</a>.</p>
+<h1 id="working-with-ssl-certificates"><a class="content__anchor" href="#working-with-ssl-certificates" aria-hidden="true"><i data-feather="bookmark"></i></a>Working with SSL certificates</h1>
+<p>Marathon-LB supports secure socket layer (SSL) encryption and certificates. You can provide the path to your SSL certificate as a command line argument or in the frontend section of the load balancer configuration file using the <code>--ssl-certs</code> option. For example, if you are running the script directly, you might provide a command line similar to the following:</p>
+<pre><code>./marathon_lb.py --marathon http://localhost:8080 --group external --ssl-certs /etc/ssl/site1.co,/etc/ssl/site2.co --health-check --strict-mode
+</code></pre>
+<h2 id="options-for-specifying-the-ssl-certificate"><a class="content__anchor" href="#options-for-specifying-the-ssl-certificate" aria-hidden="true"><i data-feather="bookmark"></i></a>Options for specifying the SSL certificate</h2>
+<p>To use SSL certificates, you can:</p>
+<ul>
+<li>Use the default certificate path and file name specified in the <code>HAProxy</code> configuration file. In this case, you would either save the certificate as <code>/etc/ssl/cert.pem</code> using the default certificate path or edit the configuration file to specify the correct path.</li>
+<li>Provide the certificate path using the <code>--ssl-certs</code> command line option and have the <code>HAProxy</code> configuration file use that path.</li>
+<li>Provide the full SSL certificate text in the <code>HAPROXY_SSL_CERT</code> environment variable. The environment variable contents are then written to the  <code>/etc/ssl/cert.pem</code> file and used if you don’t specify any additional certificate paths.</li>
+</ul>
+<p>If you don’t specify the SSL certificate when you run Marathon-LB (<code>marathon_lb.py</code>) on the command line, by using the Docker run script, or from the Docker image, <code>HAProxy</code> automatically creates a self-signed certificate in the default <code>/etc/ssl/cert.pem</code> location and the configuration file then uses the self-signed certificate.</p>
+<h2 id="specifying-multiple-ssl-certificates"><a class="content__anchor" href="#specifying-multiple-ssl-certificates" aria-hidden="true"><i data-feather="bookmark"></i></a>Specifying multiple SSL certificates</h2>
+<p>You can specify multiple SSL certificates per frontend. You can include the additional SSL certificates by passing a list of paths with the <code>--ssl-certs</code> command line option. You can also add multiple SSL certificates by specifying the <code>HAPROXY_SSL_CERT</code> environment variable in your application definition.</p>
+<p>If you do not specify at least one SSL certificate, Marathon-LB generates a self-signed certificate at startup. If you are using multiple SSL certificates, you can select the SSL certificate per app service port by specifying the <code>HAPROXY_{n}_SSL_CERT</code> app label that corresponds to the file path for the SSL certificates you want to use. For example, you might have:</p>
+<pre><code class="language-json">   &quot;labels&quot;: {
+      &quot;HAPROXY_0_VHOST&quot;:&quot;nginx.mesosphere.com&quot;,
+      &quot;HAPROXY_0_SSL_CERT&quot;:&quot;/etc/ssl/certs/nginx.mesosphere.com&quot;
+    }
+</code></pre>
+<p>The SSL certificates must be pre-loaded into the container for Marathon-LB to load them. You can do this by building your own image of Marathon-LB, rather than using the Mesosphere-provided image.</p>
+<h1 id="applying-sample-configuration-settings"><a class="content__anchor" href="#applying-sample-configuration-settings" aria-hidden="true"><i data-feather="bookmark"></i></a>Applying sample configuration settings</h1>
+<p>The following examples illustrate some common load balancer operational behavior and corresponding configuration settings. For simplicity, the examples only provide relevant segments of JSON configuration settings rather than complete JSON application defintions.</p>
+<h2 id="adding-http-headers-to-the-health-check"><a class="content__anchor" href="#adding-http-headers-to-the-health-check" aria-hidden="true"><i data-feather="bookmark"></i></a>Adding HTTP headers to the health check</h2>
+<p>The following example adds the Host header to the health check executed by HAProxy:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;:&quot;app&quot;,
+  &quot;labels&quot;: {
+    &quot;HAPROXY_GROUP&quot;: &quot;external&quot;,
+    &quot;HAPROXY_0_BACKEND_HTTP_HEALTHCHECK_OPTIONS&quot;: &quot;  option  httpchk GET {healthCheckPath} HTTP/1.1\\r\\nHost:\\ www\n  timeout check {healthCheckTimeoutSeconds}s\n&quot;
+  }
+}
+</code></pre>
+<h2 id="setting-timeout-for-long-lived-socket-connections"><a class="content__anchor" href="#setting-timeout-for-long-lived-socket-connections" aria-hidden="true"><i data-feather="bookmark"></i></a>Setting timeout for long-lived socket connections</h2>
+<p>If you’re trying to run a TCP service that uses long-lived sockets through HAProxy, such as a MySQL instance, you should set longer timeouts for the backend. The following example sets the client and server timeout to 30 minutes for the specified backend.</p>
+<pre><code class="language-json">{
+  &quot;id&quot;:&quot;app&quot;,
+  &quot;labels&quot;:{
+    &quot;HAPROXY_GROUP&quot;:&quot;external&quot;,
+    &quot;HAPROXY_0_BACKEND_HEAD&quot;:&quot;backend {backend}\n  balance {balance}\n  mode {mode}\n  timeout server 30m\n  timeout client 30m\n&quot;
+  }
+}
+</code></pre>
+<h2 id="terminating-ssl-requests-at-an-elastic-load-balancer"><a class="content__anchor" href="#terminating-ssl-requests-at-an-elastic-load-balancer" aria-hidden="true"><i data-feather="bookmark"></i></a>Terminating SSL requests at an Elastic Load Balancer</h2>
+<p>In some cases, you might want to allow an Elastic Load Balancer (ELB) to terminate a secure socket connection for you, but want Marathon-LB to continue to redirect non-HTTPS requests. In this scenario, the Elastic Load Balancer uses HTTP headers to communicate that the request it received came over a secure channel and has been decrypted. Specifically, the <code>X-Forwarded-Proto</code> header is set to <code>https</code>, indicating that the request was decrypted by the Elastic Load Balancer. If HAProxy isn’t configured to look for the <code>X-Forwarded-Proto</code> header, the request is processed as if it is unencrypted and is redirected using the standard redirection rules.</p>
+<p>The following configuration setting illustrates how to have Marathon-LB generate a backend rule that looks for the X-Forwarded-Proto header or a regular TLS connection and redirects the request if neither are specified.</p>
+<pre><code class="language-json">&quot;labels&quot;: {
+  &quot;HAPROXY_0_BACKEND_HTTP_OPTIONS&quot;: &quot;  acl is_proxy_https hdr(X-Forwarded-Proto) https\n  redirect scheme https unless { ssl_fc } or is_proxy_https\n&quot;
+}
+</code></pre>
+<h2 id="disabling-service-port-binding"><a class="content__anchor" href="#disabling-service-port-binding" aria-hidden="true"><i data-feather="bookmark"></i></a>Disabling service port binding</h2>
+<p>If you do not want Marathon-LB to listen on service ports, the following example illustrates how you can disable the frontend definitions:</p>
+<pre><code class="language-json"> {
+    &quot;labels&quot;: {
+      &quot;HAPROXY_GROUP&quot;: &quot;external&quot;,
+      &quot;HAPROXY_0_FRONTEND_HEAD&quot;: &quot;&quot;,
+      &quot;HAPROXY_0_FRONTEND_BACKEND_GLUE&quot;: &quot;&quot;
+    }
+  }
+</code></pre>
+<a name="virtual-hosts">
+<h2 id="resolving-virtual-hosts"><a class="content__anchor" href="#resolving-virtual-hosts" aria-hidden="true"><i data-feather="bookmark"></i></a>Resolving virtual hosts</h2>
+<p>To create a virtual host or hosts the <code>HAPROXY_{n}_VHOST</code> label needs to be set on the given application. Applications that have a virtual host set are exposed on ports 80 and 443, in addition to their service port. You can specify multiple virtual hosts with the <code>HAPROXY_{n}_VHOST</code> template using a comma as a delimiter between host names.</p>
+<p>All applications are also exposed on port 9091, using the X-Marathon-App-Id HTTP header. For more information, see <code>HAPROXY_HTTP_FRONTEND_APPID_HEAD</code> in the templates section.</p>
+<p>You can access the HAProxy statistics using the <code>haproxy_sta ts</code> endpoint, and you can retrieve the current HAProxy configuration settings from the <code>haproxy_getconfig</code> endpoint.</p>
+<p>If you want all subdomains for a given domain to resolve to a particular backend (for example, HTTP and HTTPS), use the following labels. Note that there is a period (.) required before the {hostname} in the <code>HAPROXY_0_HTTPS_FRONTEND_ACL</code> label. Note that you should disable virtual host mapping by removing the <code>--haproxy-map</code> argument, if you have not previously removed it.</p>
+<pre><code class="language-json">{
+  &quot;labels&quot;: {
+    &quot;HAPROXY_0_BACKEND_WEIGHT&quot;: &quot;-1&quot;,
+    &quot;HAPROXY_GROUP&quot;: &quot;external&quot;,
+    &quot;HAPROXY_0_HTTP_FRONTEND_ACL&quot;: &quot;  acl host_{cleanedUpHostname} hdr_end(host) -i {hostname}\n  use_backend {backend} if host_{cleanedUpHostname}\n&quot;,
+    &quot;HAPROXY_0_HTTPS_FRONTEND_ACL&quot;: &quot;  use_backend {backend} if {{ ssl_fc_sni -m end .{hostname} }}\n&quot;,
+    &quot;HAPROXY_0_VHOST&quot;: &quot;example.com&quot;
+  }
+}
+</code></pre>
+<h2 id="enabling-haproxy-logging"><a class="content__anchor" href="#enabling-haproxy-logging" aria-hidden="true"><i data-feather="bookmark"></i></a>Enabling HAProxy logging</h2>
+<p>HAProxy uses socket-based logging. It is configured by default to log information to the <code>/dev/log</code> directory. To begin logging HAProxy messages, you must first mount the <code>/dev/log</code> volume in the container, then enable logging for any backends or frontends for which you want to log information.</p>
+<p>After you enable logging, you can examine the log file results with the <code>journalctl</code> facility.</p>
+<ol>
+<li>
+<p>Mount the volume into your <code>/marathon-lb</code> app:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/marathon-lb&quot;,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;DOCKER&quot;,
+    &quot;volumes&quot;: [
+      {
+        &quot;containerPath&quot;: &quot;/dev/log&quot;,
+        &quot;hostPath&quot;: &quot;/dev/log&quot;,
+        &quot;mode&quot;: &quot;RW&quot;
+      }
+    ],
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;mesosphere/marathon-lb:latest&quot;,
+      &quot;network&quot;: &quot;HOST&quot;,
+      &quot;privileged&quot;: true,
+      &quot;parameters&quot;: [],
+      &quot;forcePullImage&quot;: true
+    }
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>Set option <code>httplog</code> on one backend to enable logging. In this example, the backend is <code>my_crappy_website</code>:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/my-crappy-website&quot;,
+  &quot;cmd&quot;: null,
+  &quot;cpus&quot;: 0.5,
+  &quot;mem&quot;: 64,
+  &quot;disk&quot;: 0,
+  &quot;instances&quot;: 2,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;DOCKER&quot;,
+    &quot;volumes&quot;: [],
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;brndnmtthws/my-crappy-website&quot;,
+      &quot;network&quot;: &quot;BRIDGE&quot;,
+      &quot;portMappings&quot;: [
+        {
+          &quot;containerPort&quot;: 80,
+          &quot;hostPort&quot;: 0,
+          &quot;servicePort&quot;: 10012,
+          &quot;protocol&quot;: &quot;tcp&quot;,
+          &quot;labels&quot;: {}
+        }
+      ],
+      &quot;privileged&quot;: false,
+      &quot;parameters&quot;: [],
+      &quot;forcePullImage&quot;: true
+    }
+  },
+  &quot;healthChecks&quot;: [
+    {
+      &quot;path&quot;: &quot;/&quot;,
+      &quot;protocol&quot;: &quot;HTTP&quot;,
+      &quot;portIndex&quot;: 0,
+      &quot;gracePeriodSeconds&quot;: 10,
+      &quot;intervalSeconds&quot;: 15,
+      &quot;timeoutSeconds&quot;: 2,
+      &quot;maxConsecutiveFailures&quot;: 3,
+      &quot;ignoreHttp1xx&quot;: false
+    }
+  ],
+  &quot;labels&quot;: {
+    &quot;HAPROXY_0_USE_HSTS&quot;: &quot;true&quot;,
+    &quot;HAPROXY_0_REDIRECT_TO_HTTPS&quot;: &quot;true&quot;,
+    &quot;HAPROXY_GROUP&quot;: &quot;external&quot;,
+    &quot;HAPROXY_0_BACKEND_HTTP_OPTIONS&quot;: &quot;  option httplog\n  option forwardfor\n  http-request set-header X-Forwarded-Port %[dst_port]\n  http-request add-header X-Forwarded-Proto https if { ssl_fc }\n&quot;,
+    &quot;HAPROXY_0_VHOST&quot;: &quot;diddyinc.com,www.diddyinc.com&quot;
+  },
+  &quot;portDefinitions&quot;: [
+    {
+      &quot;port&quot;: 10012,
+      &quot;protocol&quot;: &quot;tcp&quot;,
+      &quot;labels&quot;: {}
+    }
+  ]
+}
+</code></pre>
+<p>Enabling the <code>httplog</code> option only affects the backend for the service port. To enable logging for ports 80 and 443, you must modify the global HAProxy template.</p>
+</li>
+<li>
+<p>Open a secure shell (SSH) on any public agent node.</p>
+</li>
+<li>
+<p>View the logs using <code>journalctl</code>:</p>
+</li>
+</ol>
+<pre><code class="language-bash">journalctl -f -l SYSLOG_IDENTIFIER=haproxy
+</code></pre>
+<h2 id="adding-a-custom-haproxy-error-response"><a class="content__anchor" href="#adding-a-custom-haproxy-error-response" aria-hidden="true"><i data-feather="bookmark"></i></a>Adding a custom HAProxy error response</h2>
+<p>You can specify a custom HAProxy error response by overriding the default <code>errorfile</code> directive in a template or an app definition label. For example, you could customize the template to return a redirect to a different backend if no backends are available.</p>
+<p>To illustrate using a custom error response:</p>
+<ol>
+<li>
+<p>Open the application definition file for the application.</p>
+</li>
+<li>
+<p>Add a template URI to your Marathon-LB app definition like this:</p>
+</li>
+</ol>
+<pre><code class="language-json">{
+    &quot;id&quot;:&quot;/marathon-lb&quot;,
+    &quot;fetch&quot;:[&quot;https://downloads.mesosphere.com/marathon/marathon-lb/templates-custom-500-response.tar.gz&quot;]
+  }
+</code></pre>
+<p>This example returns a custom 503 page by updating the <code>templates/500.http</code> file within the <code>templates-custom-500-response.tar.gz</code> archive file.  Alternatively, you could return a redirect to a URI by updating the <code>templates-custom-500-response.tar.gz</code> archive file like this:</p>
+<pre><code>HTTP/1.1 302 Found
+Location: http://my-redirect-handler.computers.com/
+</code></pre>
+<h2 id="using-haproxy-maps-for-backend-lookup"><a class="content__anchor" href="#using-haproxy-maps-for-backend-lookup" aria-hidden="true"><i data-feather="bookmark"></i></a>Using HAProxy maps for backend lookup</h2>
+<p>You can use HAProxy maps to speed up virtual hosts to backend lookup requests.</p>
+<p>This configuration setting is very useful for large installations where the traditional virtual-host-to-backend rules comparison takes considerable time because each rule is evaluated sequentially. HAProxy map creates a hash-based lookup table so that it is faster than the traditional rules-based approach.</p>
+<p>You can add HAProxy maps for Marathon-LB by using the <code>--haproxy-map</code> flag. For example:</p>
+<pre><code>./marathon_lb.py --marathon http://localhost:8080 --group external --haproxy-map
+</code></pre>
+<p>This command creates a lookup dictionary for the host header (both HTTP and HTTPS) and X-Marathon-App-Id header. For path-based routing and authentication, Marathon-LB continues to use the backend rules comparison.</p>
+<h2 id="using-internal-and-external-groups-for-load-balancing"><a class="content__anchor" href="#using-internal-and-external-groups-for-load-balancing" aria-hidden="true"><i data-feather="bookmark"></i></a>Using internal and external groups for load balancing</h2>
+<p>You should consider using a dedicated load balancer in front of Marathon-LB to simplify upgrades and changes. Common choices for a dedicated load balancer to work with Marathon-LB include an Elastic Load Balancer (on AWS) or a hardware load balancer for on-premise installations.</p>
+<p>Use separate Marathon-LB groups (specified with the <code>–group</code> option) for internal and external load balancing. On DC/OS, the default group is <code>external</code>. The basic configuration setting for an internal load balancer would be:</p>
+<pre><code class="language-json"> {
+    &quot;marathon-lb&quot;: {
+      &quot;name&quot;: &quot;marathon-lb-internal&quot;,
+      &quot;haproxy-group&quot;: &quot;internal&quot;,
+      &quot;bind-http-https&quot;: false,
+      &quot;role&quot;: &quot;&quot;
+    }
+  }
+</code></pre>
+<h2 id="specifying-reserved-ports-for-load-balanced-applications"><a class="content__anchor" href="#specifying-reserved-ports-for-load-balanced-applications" aria-hidden="true"><i data-feather="bookmark"></i></a>Specifying reserved ports for load-balanced applications</h2>
+<p>You should use service ports within the reserved range (which is 10000 to 10100 by default). Using the reserved port identifiers:</p>
+<ul>
+<li>prevents port conflicts</li>
+<li>ensures that reloads don’t result in connection errors</li>
+</ul>
+<p>In general, you should define service ports and avoid using the <code>HAPROXY_{n}_PORT</code> label.</p>
+<p>For HTTP services, you should consider setting the virtual host and, optionally, a path to access services on ports 80 and 443. Alternatively, you can access the service on port 9091 using the <code>X-Marathon-App-Id header</code>.</p>
+<p>For example, if you want to configure access to an app with the ID tweeter:</p>
+<ol>
+<li>
+<p>Open a terminal then run the following command to switch to a master node.</p>
+<pre><code class="language-bash">dcos node ssh --master-proxy --leader
+</code></pre>
+</li>
+<li>
+<p>From the master node, run the following command:</p>
+<pre><code class="language-bash">curl -vH “X-Marathon-App-Id: /tweeter” marathon-lb.marathon.mesos:9091/
+</code></pre>
+</li>
+<li>
+<p>Review the connection result.</p>
+<pre><code>$ curl -vH &quot;X-Marathon-App-Id: /tweeter&quot; marathon-lb.marathon.mesos:9091/
+*   Trying 10.0.5.190...
+* TCP_NODELAY set
+* Connected to marathon-lb.marathon.mesos (10.0.5.190) port 9091 (#0)
+&gt; GET / HTTP/1.1
+&gt; Host: marathon-lb.marathon.mesos:9091
+&gt; User-Agent: curl/7.50.3
+&gt; Accept: */*
+&gt; X-Marathon-App-Id: /tweeter
+&gt;    
+* HTTP 1.0, assume close after body
+&lt; HTTP/1.0 503 Service Unavailable
+&lt; Cache-Control: no-cache
+&lt; Connection: close
+&lt; Content-Type: text/html
+&lt;
+&lt;html&gt;&lt;body&gt;&lt;h1&gt;503 Service Unavailable&lt;/h1&gt;
+No server is available to handle this request.
+&lt;/body&gt;&lt;/html&gt;
+* Curl_http_done: called premature == 0
+* Closing connection 0
+
+</code></pre>
+</li>
+</ol>
+<h2 id="assigning-ports-for-ip-per-task-apps"><a class="content__anchor" href="#assigning-ports-for-ip-per-task-apps" aria-hidden="true"><i data-feather="bookmark"></i></a>Assigning ports for IP-per-task apps</h2>
+<p>Marathon-LB supports load balancing for applications that are assigned an IP address and port on a per-task basis. If each task is assigned its own unique IP address, access to the task is routed directly through the application’s service discovery port. If the service ports are not defined, Marathon-LB automatically assigns port values from a configurable range.</p>
+<p>You can configure the range for port assignment values using the <code>--min-serv-port-ip-per-task</code> and <code>--max-serv-port-ip-per-task</code> options.</p>
+<p>You should note that the port assignment is not guaranteed if you change the set of deployed apps. For example, if you deploy a new app with a per-task IP address, the port assignments might change.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#using-marathon-lb-templates-and-app-labels">Using Marathon-LB templates and app labels</a></li><li class="content__sections-item content__sections-item--h1"><a href="#overriding-template-and-app-label-values">Overriding template and app label values</a></li><li class="content__sections-item content__sections-item--h2"><a href="#overriding-settings-using-environment-variables">Overriding settings using environment variables</a></li><li class="content__sections-item content__sections-item--h2"><a href="#overriding-settings-using-files-in-the-templates-directory">Overriding settings using files in the templates directory</a></li><li class="content__sections-item content__sections-item--h2"><a href="#overriding-settings-using-app-labels">Overriding settings using app labels</a></li><li class="content__sections-item content__sections-item--h1"><a href="#setting-global-default-options">Setting global default options</a></li><li class="content__sections-item content__sections-item--h1"><a href="#creating-a-sample-global-template">Creating a sample global template</a></li><li class="content__sections-item content__sections-item--h1"><a href="#creating-a-sample-per-app-template">Creating a sample per-app template</a></li><li class="content__sections-item content__sections-item--h1"><a href="#working-with-ssl-certificates">Working with SSL certificates</a></li><li class="content__sections-item content__sections-item--h2"><a href="#options-for-specifying-the-ssl-certificate">Options for specifying the SSL certificate</a></li><li class="content__sections-item content__sections-item--h2"><a href="#specifying-multiple-ssl-certificates">Specifying multiple SSL certificates</a></li><li class="content__sections-item content__sections-item--h1"><a href="#applying-sample-configuration-settings">Applying sample configuration settings</a></li><li class="content__sections-item content__sections-item--h2"><a href="#adding-http-headers-to-the-health-check">Adding HTTP headers to the health check</a></li><li class="content__sections-item content__sections-item--h2"><a href="#setting-timeout-for-long-lived-socket-connections">Setting timeout for long-lived socket connections</a></li><li class="content__sections-item content__sections-item--h2"><a href="#terminating-ssl-requests-at-an-elastic-load-balancer">Terminating SSL requests at an Elastic Load Balancer</a></li><li class="content__sections-item content__sections-item--h2"><a href="#disabling-service-port-binding">Disabling service port binding</a></li><li class="content__sections-item content__sections-item--h2"><a href="#resolving-virtual-hosts">Resolving virtual hosts</a></li><li class="content__sections-item content__sections-item--h2"><a href="#enabling-haproxy-logging">Enabling HAProxy logging</a></li><li class="content__sections-item content__sections-item--h2"><a href="#adding-a-custom-haproxy-error-response">Adding a custom HAProxy error response</a></li><li class="content__sections-item content__sections-item--h2"><a href="#using-haproxy-maps-for-backend-lookup">Using HAProxy maps for backend lookup</a></li><li class="content__sections-item content__sections-item--h2"><a href="#using-internal-and-external-groups-for-load-balancing">Using internal and external groups for load balancing</a></li><li class="content__sections-item content__sections-item--h2"><a href="#specifying-reserved-ports-for-load-balanced-applications">Specifying reserved ports for load-balanced applications</a></li><li class="content__sections-item content__sections-item--h2"><a href="#assigning-ports-for-ip-per-task-apps">Assigning ports for IP-per-task apps</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

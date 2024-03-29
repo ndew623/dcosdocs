@@ -1,0 +1,272 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Provisioning Jenkins - D2iQ Docs</title><meta name="description" content="This topic describes when and how to provision Jenkins with a service account.
+"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Jenkins Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/services/jenkins/3.6.1-2.190.1/jenkins-auth">Jenkins 3.6.1-2.190.1</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/jenkins/3.6.0-2.190.1/jenkins-auth">Jenkins 3.6.0-2.190.1</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/jenkins/3.5.4-2.150.1/jenkins-auth">Jenkins 3.5.4-2.150.1</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/jenkins/3.5.3-2.150.1/jenkins-auth">Jenkins 3.5.3-2.150.1</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/jenkins/3.5.2-2.107.2/jenkins-auth">Jenkins 3.5.2-2.107.2</a></li><li><a href="/dcosdocs/mesosphere/dcos/services/jenkins/4.0.0-2.204.6/jenkins-auth">Jenkins for DC/OS</a></li></ul><div class="toggle"><p><span class="title">Jenkins</span><span class="version"> 3.5.2-2.107.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/jenkins/3.5.2-2.107.2/quickstart/">Quickstart</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/jenkins/3.5.2-2.107.2/jenkins-auth/">Provisioning Jenkins</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/jenkins/3.5.2-2.107.2/custom-install/">Customizing your install</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/jenkins/3.5.2-2.107.2/script-template-job-dsl/">Scripting and templating your jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/jenkins/3.5.2-2.107.2/custom-docker/">Customizing your Docker container</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/jenkins/3.5.2-2.107.2/advanced-configuration/">Advanced Configuration</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/jenkins/3.5.2-2.107.2/upgrade/">Upgrading</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/jenkins/3.5.2-2.107.2/uninstall/">Uninstalling</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Provisioning Jenkins</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">This topic describes when and how to provision Jenkins with a service account.
+</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/jenkins/3.5.2-2.107.2/jenkins-auth/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><h1 id="about-provisioning-jenkins-with-a-service-account"><a class="content__anchor" href="#about-provisioning-jenkins-with-a-service-account" aria-hidden="true"><i data-feather="bookmark"></i></a>About provisioning Jenkins with a service account</h1>
+<p>Whether you can or must provision Jenkins with a service account varies by <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/#security-modes">security mode</a>.</p>
+<ul>
+<li><code>disabled</code>: not possible</li>
+<li><code>permissive</code>: optional</li>
+<li><code>strict</code>: required</li>
+</ul>
+<p>To increase the security of your cluster and conform to the principle of least privilege, we recommend provisioning Jenkins with a service account in <code>permissive</code> mode. Otherwise, Marathon and Metronome will act as if Jenkins was provisioned with a service account which has the <code>superuser</code> permission.</p>
+<p>To set up a service account for Jenkins, complete the following steps.</p>
+<ol>
+<li><a href="#create-a-keypair">Create a key pair.</a></li>
+<li><a href="#create-a-service-account">Create a service account.</a></li>
+<li><a href="#create-an-sa-secret">Create a service account secret.</a></li>
+<li><a href="#give-perms">Provision the service account with the necessary permissions.</a></li>
+<li><a href="#create-json">Create a config.json file.</a></li>
+</ol>
+<p><strong>Requirement:</strong> In <code>strict</code> mode, the name of the service account must match the name that the service uses as its <code>principal</code>. By default, Jenkins uses <code>jenkins-principal</code> as the name of its <code>principal</code>. That’s the value that we use in the following procedures. Should you modify the default, you must change <code>jenkins-principal</code> throughout to match.</p>
+<p><strong>Note:</strong> We will use <code>jenkins-secret</code> as the name of the secret, <code>jenkins-private-key.pem</code> as the name of the file containing the private key, and <code>jenkins-public-key.pem</code> as the name of the file containing the public key. We recommend using these names, as it will make it easier to copy and paste the commands. If you change the names, make sure to modify the commands before issuing them.</p>
+<p><strong>Important:</strong> We store the secret in the <code>jenkins</code> path. This protects it from other services, so we do not recommend changing this.</p>
+<h1 id="create-a-key-pair"><a class="content__anchor" href="#create-a-key-pair" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="create-a-keypair"></a>Create a key pair</h1>
+<p>First, you’ll need to generate a 2048-bit RSA public-private key pair. While you can use any tool to accomplish this, the Enterprise DC/OS CLI is the most convenient because it returns the keys in the exact format required.</p>
+<p><strong>Prerequisite:</strong> You must have the <a href="/dcosdocs/mesosphere/dcos/latest/cli/install/">DC/OS CLI installed</a> and the <a href="/dcosdocs/mesosphere/dcos/latest/cli/enterprise-cli/#ent-cli-install">Enterprise DC/OS CLI 0.4.14 or later installed</a>.</p>
+<ol>
+<li>
+<p>Create a public-private key pair and save each value into a separate file within the current directory.</p>
+<pre><code class="language-bash">dcos security org service-accounts keypair jenkins-private-key.pem jenkins-public-key.pem
+</code></pre>
+</li>
+<li>
+<p>Type <code>ls</code> to view the two new files created by the command. You may also want to open the files themselves and verify their contents.</p>
+</li>
+<li>
+<p>Continue to the <a href="#create-a-service-account">next section</a>.</p>
+</li>
+</ol>
+<h1 id="create-a-service-account"><a class="content__anchor" href="#create-a-service-account" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="create-a-service-account"></a>Create a service account</h1>
+<h2 id="about-creating-a-service-account"><a class="content__anchor" href="#about-creating-a-service-account" aria-hidden="true"><i data-feather="bookmark"></i></a>About creating a service account</h2>
+<p>Next, you must create a service account. This section describes how to use either the Enterprise DC/OS CLI or the web interface to accomplish this.</p>
+<h2 id="using-the-enterprise-dcos-cli"><a class="content__anchor" href="#using-the-enterprise-dcos-cli" aria-hidden="true"><i data-feather="bookmark"></i></a>Using the Enterprise DC/OS CLI</h2>
+<p><strong>Prerequisite:</strong> You must have the <a href="/dcosdocs/mesosphere/dcos/latest/cli/install/">DC/OS CLI installed</a>, the <a href="/dcosdocs/mesosphere/dcos/latest/cli/enterprise-cli/#ent-cli-install">Enterprise DC/OS CLI 0.4.14 or later installed</a>, and be logged in as a superuser via <code>dcos auth login</code>.</p>
+<ol>
+<li>
+<p>Use the following command to create a new service account called <code>jenkins-principal</code> with the public key you just generated.</p>
+<pre><code class="language-bash">dcos security org service-accounts create -p jenkins-public-key.pem -d &quot;Jenkins service account&quot; jenkins-principal
+</code></pre>
+</li>
+<li>
+<p>Verify your new service account using the following command.</p>
+<pre><code class="language-bash">dcos security org service-accounts show jenkins-principal
+</code></pre>
+</li>
+<li>
+<p>Continue to <a href="#create-an-sa-secret">Create a service account secret</a>.</p>
+</li>
+</ol>
+<h2 id="using-the-web-interface"><a class="content__anchor" href="#using-the-web-interface" aria-hidden="true"><i data-feather="bookmark"></i></a>Using the web interface</h2>
+<ol>
+<li>
+<p>In the DC/OS web interface, navigate to the <strong>Organization</strong> -&gt; <strong>Service Accounts</strong> tab.</p>
+</li>
+<li>
+<p>Click the <strong>+</strong> icon in the top right.</p>
+</li>
+<li>
+<p>Enter a description and type <code>jenkins-principal</code> into the <strong>ID</strong> field.</p>
+</li>
+<li>
+<p>Paste the public key associated with the account into the large text field.</p>
+</li>
+<li>
+<p>Continue to the <a href="#create-an-sa-secret">next section</a>.</p>
+</li>
+</ol>
+<h1 id="create-a-service-account-secret"><a class="content__anchor" href="#create-a-service-account-secret" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="create-an-sa-secret"></a>Create a service account secret</h1>
+<h2 id="about-creating-a-service-account-secret"><a class="content__anchor" href="#about-creating-a-service-account-secret" aria-hidden="true"><i data-feather="bookmark"></i></a>About creating a service account secret</h2>
+<p>Next, you need to create a secret associated with the service account that contains the private key. This section describes how to use either the Enterprise DC/OS CLI or the web interface to accomplish this.</p>
+<h2 id="using-the-enterprise-dcos-cli-2"><a class="content__anchor" href="#using-the-enterprise-dcos-cli-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Using the Enterprise DC/OS CLI</h2>
+<p><strong>Prerequisite:</strong> You must have the <a href="/dcosdocs/mesosphere/dcos/latest/cli/install/">DC/OS CLI installed</a>, the <a href="/dcosdocs/mesosphere/dcos/latest/cli/enterprise-cli/#ent-cli-install">Enterprise DC/OS CLI 0.4.14 or later installed</a>, and be logged in as a superuser via <code>dcos auth login</code>.</p>
+<ol>
+<li>
+<p>Depending on your security mode, use one of the following commands to create a new secret called <code>jenkins-secret</code> in the <code>jenkins</code> path. Locating the secret inside the <code>jenkins</code> path will ensure that only the Jenkins service can access it. The secret will contain the private key, the name of the service account, and other data.</p>
+<p><strong>strict:</strong></p>
+<pre><code class="language-bash">dcos security secrets create-sa-secret --strict jenkins-private-key.pem jenkins-principal jenkins/jenkins-secret
+</code></pre>
+<p><strong>permissive:</strong></p>
+<pre><code class="language-bash">dcos security secrets create-sa-secret jenkins-private-key.pem jenkins-principal jenkins/jenkins-secret
+</code></pre>
+</li>
+<li>
+<p>Ensure the secret was created successfully:</p>
+<pre><code class="language-bash">dcos security secrets list /
+</code></pre>
+</li>
+<li>
+<p>If you have <a href="https://stedolan.github.io/jq/download">jq 1.5 or later</a> installed, you can also use the following command to retrieve the secret and ensure that it contains the correct service account ID and private key.</p>
+<pre><code class="language-bash">dcos security secrets get /jenkins/jenkins-secret --json | jq -r .value | jq
+</code></pre>
+<p><strong>Important:</strong> While reviewing the secret, ensure that the <code>login_endpoint</code> URL uses HTTPS if you are in <code>strict</code> mode and HTTP if you are in <code>permissive</code> mode. If the URL begins with <code>https</code> and you are in <code>permissive</code> mode, try <a href="/dcosdocs/mesosphere/dcos/latest/cli/enterprise-cli/#ent-cli-upgrade">upgrading the Enterprise DC/OS CLI</a>, deleting the secret, and recreating it.</p>
+</li>
+<li>
+<p>Now that you have stored the private key in the Secret Store, we recommend deleting the private key file from your file system. This will prevent bad actors from using the private key to authenticate to DC/OS.</p>
+<pre><code class="language-bash">rm -rf jenkins-private-key.pem
+</code></pre>
+</li>
+<li>
+<p>Continue to <a href="#give-perms">Provision the service account with permissions</a>.</p>
+</li>
+</ol>
+<h2 id="using-the-web-interface-2"><a class="content__anchor" href="#using-the-web-interface-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Using the web interface</h2>
+<ol>
+<li>
+<p>Log in to the DC/OS web interface as a user with the <code>dcos:superuser</code> permission.</p>
+</li>
+<li>
+<p>Open the <strong>Security</strong> -&gt; <strong>Secrets</strong> tab.</p>
+</li>
+<li>
+<p>Click the <strong>+</strong> icon in the top right.</p>
+</li>
+<li>
+<p>Type <code>jenkins/jenkins-secret</code> into the <strong>ID</strong> field to create a new secret called <code>jenkins-secret</code> in the <code>jenkins</code> path. Locating the secret inside the <code>jenkins</code> path will ensure that only the Jenkins service can access it.</p>
+</li>
+<li>
+<p>If you have a <code>strict</code> cluster, paste the following JSON into the <strong>Value</strong> field.</p>
+</li>
+</ol>
+<pre><code class="language-json">{
+    &quot;scheme&quot;: &quot;RS256&quot;,
+    &quot;uid&quot;: &quot;jenkins-principal&quot;,
+    &quot;private_key&quot;: &quot;&lt;private-key-value&gt;&quot;,
+    &quot;login_endpoint&quot;: &quot;https://master.mesos/acs/api/v1/auth/login&quot;
+}
+</code></pre>
+<p>If you have a <code>permissive</code> cluster, paste the following JSON into the <strong>Value</strong> field.</p>
+<pre><code class="language-json">{
+    &quot;scheme&quot;: &quot;RS256&quot;,
+    &quot;uid&quot;: &quot;jenkins-principal&quot;,
+    &quot;private_key&quot;: &quot;&lt;private-key-value&gt;&quot;,
+    &quot;login_endpoint&quot;: &quot;http://master.mesos/acs/api/v1/auth/login&quot;
+}
+</code></pre>
+<ol>
+<li>
+<p>Replace <code>&lt;private-key-value&gt;</code> with the value of the private key created in <a href="#create-a-keypair">Create a key pair</a>.</p>
+</li>
+<li>
+<p>Click <strong>Create</strong>. Your secret has been stored!</p>
+</li>
+<li>
+<p>Continue to the <a href="#give-perms">next section</a>.</p>
+</li>
+</ol>
+<h1 id="provision-the-service-account-with-permissions"><a class="content__anchor" href="#provision-the-service-account-with-permissions" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="give-perms"></a>Provision the service account with permissions</h1>
+<h2 id="about-the-permissions"><a class="content__anchor" href="#about-the-permissions" aria-hidden="true"><i data-feather="bookmark"></i></a>About the permissions</h2>
+<p>The permissions needed vary according to your <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/#security-modes/">security mode</a>. In <code>permissive</code> mode, the Jenkins service account does not need any permissions. If you plan to upgrade at some point to <code>strict</code> mode, we recommending assigning them the permissions needed in <code>strict</code> mode to make the upgrade easier. The permissions will not have any effect until the cluster is in <code>strict</code> mode. If you plan to remain in <code>permissive</code> mode indefinitely, skip to <a href="#create-json">Create a config.json file</a>.</p>
+<p>If you are in <code>strict</code> mode or want to be ready to upgrade to <code>strict</code> mode, continue to the next section.</p>
+<h2 id="creating-and-assigning-the-permissions"><a class="content__anchor" href="#creating-and-assigning-the-permissions" aria-hidden="true"><i data-feather="bookmark"></i></a>Creating and assigning the permissions</h2>
+<p>With the following curl commands you can rapidly provision the Jenkins service account with the permissions required in <code>strict</code> mode. These commands can be executed from outside of the cluster. All you will need is the DC/OS CLI installed. You must also log in via <code>dcos auth login</code> as a superuser.</p>
+<p><strong>Prerequisite:</strong> If your <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/#security-modes/">security mode</a> is <code>permissive</code> or <code>strict</code>, follow the steps in <a href="/dcosdocs/mesosphere/dcos/1.11/security/ent/tls-ssl/get-cert/">Obtaining and passing the DC/OS certificate in curl requests</a> before issuing the curl commands in this section. If your <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/#security-modes/">security mode</a> is <code>disabled</code>, you must delete <code>--cacert dcos-ca.crt</code> from the commands before issuing them.</p>
+<ol>
+<li>
+<p>Issue the following commands to create the necessary permissions.</p>
+<p><strong>Note:</strong> There is always a chance that the permission has already been added. If so, the API returns an informative message. Consider this a confirmation and continue to the next one.</p>
+<pre><code class="language-bash">curl -X PUT --cacert dcos-ca.crt -H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; $(dcos config show core.dcos_url)/acs/api/v1/acls/dcos:mesos:master:task:user:nobody -d '{&quot;description&quot;:&quot;Allows Linux user nobody to execute tasks&quot;}' -H 'Content-Type: application/json'
+curl -X PUT --cacert dcos-ca.crt -H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; $(dcos config show core.dcos_url)/acs/api/v1/acls/dcos:mesos:master:framework:role:* -d '{&quot;description&quot;:&quot;Controls the ability of jenkins-role to register as a framework with the Mesos master&quot;}' -H 'Content-Type: application/json'
+</code></pre>
+</li>
+<li>
+<p>Grant the permissions and the allowed actions to the service account using the following commands.</p>
+<pre><code class="language-bash">curl -X PUT --cacert dcos-ca.crt -H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; $(dcos config show core.dcos_url)/acs/api/v1/acls/dcos:mesos:master:framework:role:*/users/jenkins-principal/create
+curl -X PUT --cacert dcos-ca.crt -H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; $(dcos config show core.dcos_url)/acs/api/v1/acls/dcos:mesos:master:task:user:nobody/users/jenkins-principal/create
+</code></pre>
+</li>
+<li>
+<p>Continue to the <a href="#create-json">next section</a>.</p>
+</li>
+</ol>
+<h1 id="create-a-configjson-file"><a class="content__anchor" href="#create-a-configjson-file" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="create-json"></a>Create a config.json file</h1>
+<p>The contents of the <code>config.json</code> file will vary according to your security mode. We provide two examples below, one for each security mode. Locate the sample appropriate to your security mode, copy the JSON, paste it into a new file, and save it as <code>config.json</code>.</p>
+<p><code>strict</code> <strong>mode</strong></p>
+<pre><code class="language-json">{
+  &quot;security&quot;: {
+    &quot;secret-name&quot;: &quot;jenkins/jenkins-secret&quot;,
+    &quot;strict-mode&quot;: true
+  },
+  &quot;service&quot;: {
+    &quot;user&quot;: &quot;nobody&quot;
+  }
+}
+</code></pre>
+<p><code>permissive</code> <strong>mode</strong></p>
+<pre><code class="language-json">{
+  &quot;security&quot;: {
+    &quot;secret-name&quot;: &quot;jenkins/jenkins-secret&quot;
+  },
+  &quot;service&quot;: {
+    &quot;user&quot;: &quot;nobody&quot;
+  }
+}
+</code></pre>
+<p>If you have modified any of the values shown in the previous sections, change the values in the following JSON as appropriate.</p>
+<p>Continue to the <a href="#install-jenkins">next section</a>.</p>
+<h2 id="install-jenkins"><a class="content__anchor" href="#install-jenkins" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="install-jenkins"></a>Install Jenkins</h2>
+<p>To install the service, complete the following steps.</p>
+<ol>
+<li>
+<p>Use the following command.</p>
+<pre><code class="language-bash">dcos package install --options=config.json jenkins
+</code></pre>
+</li>
+<li>
+<p>Paste the following path into your browser, replacing <code>cluster-url</code> with your actual cluster URL: <code>https://&lt;cluster-url&gt;/service/jenkins/configure</code>.</p>
+</li>
+<li>
+<p>Scroll to the <strong>Mesos cloud</strong> area.</p>
+</li>
+<li>
+<p>Next to the <strong>Framework credentials</strong> field, click the <strong>Add</strong> button and select <strong>Jenkins</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Username</strong> field, type <code>jenkins-principal</code>.</p>
+</li>
+<li>
+<p>In the <strong>Password</strong> field, type any value.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/services/jenkins/img/add-jenkins-credential.png" alt="Adding Jenkins credentials"></p>
+</li>
+<li>
+<p>Once you have completed your entries, click <strong>Add</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Apply</strong> and then click <strong>Save</strong>.</p>
+</li>
+<li>
+<p>Select the new <strong>jenkins-principal</strong> account in the <strong>Framework credentials</strong> list box.</p>
+</li>
+<li>
+<p>Click <strong>New item</strong> in the side menu.</p>
+</li>
+<li>
+<p>Click the <strong>Freestyle project</strong> button, type <strong>Test service account</strong> in the <strong>Enter an item name</strong> field, and press ENTER.</p>
+</li>
+<li>
+<p>Scroll down to the <strong>Build</strong> area.</p>
+</li>
+<li>
+<p>Click <strong>Add build step</strong> and select <strong>Execute shell</strong>.</p>
+</li>
+<li>
+<p>Type <code>echo &quot;hello world&quot;</code> in the <strong>Command</strong> field.</p>
+</li>
+<li>
+<p>Click <strong>Save</strong>.</p>
+</li>
+<li>
+<p>The browser should display a <strong>Project test service account</strong> page.</p>
+</li>
+<li>
+<p>Click <strong>Build now</strong> from the side menu.</p>
+</li>
+<li>
+<p>After some time, the job should turn green in the <strong>Build history</strong> box. Congratulations! You have succeeded in setting Jenkins up with a service account.</p>
+</li>
+</ol>
+<p>You can also provide the <code>config.json</code> file to someone else to install Jenkins. Please see the <a href="../quickstart/">Jenkins documentation</a> for more information about how to use the JSON file to install the service.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#about-provisioning-jenkins-with-a-service-account">About provisioning Jenkins with a service account</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-a-key-pair">Create a key pair</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-a-service-account">Create a service account</a></li><li class="content__sections-item content__sections-item--h2"><a href="#about-creating-a-service-account">About creating a service account</a></li><li class="content__sections-item content__sections-item--h2"><a href="#using-the-enterprise-dcos-cli">Using the Enterprise DC/OS CLI</a></li><li class="content__sections-item content__sections-item--h2"><a href="#using-the-web-interface">Using the web interface</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-a-service-account-secret">Create a service account secret</a></li><li class="content__sections-item content__sections-item--h2"><a href="#about-creating-a-service-account-secret">About creating a service account secret</a></li><li class="content__sections-item content__sections-item--h2"><a href="#using-the-enterprise-dcos-cli-2">Using the Enterprise DC/OS CLI</a></li><li class="content__sections-item content__sections-item--h2"><a href="#using-the-web-interface-2">Using the web interface</a></li><li class="content__sections-item content__sections-item--h1"><a href="#provision-the-service-account-with-permissions">Provision the service account with permissions</a></li><li class="content__sections-item content__sections-item--h2"><a href="#about-the-permissions">About the permissions</a></li><li class="content__sections-item content__sections-item--h2"><a href="#creating-and-assigning-the-permissions">Creating and assigning the permissions</a></li><li class="content__sections-item content__sections-item--h1"><a href="#create-a-configjson-file">Create a config.json file</a></li><li class="content__sections-item content__sections-item--h2"><a href="#install-jenkins">Install Jenkins</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

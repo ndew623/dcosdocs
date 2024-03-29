@@ -1,0 +1,510 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Creating Jobs - D2iQ Docs</title><meta name="description" content="Creating and administering jobs using the UI, the CLI, or the API"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/2.0/deploying-jobs/quickstart">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.0"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/quickstart">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/deploying-jobs/quickstart">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/deploying-jobs/quickstart">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/deploying-jobs/quickstart">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.0</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-jobs/metronome-constraints/">Metronome Placement Constraints</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-jobs/running-jobs-in-remote-regions/">Running Jobs in Remote Regions</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-jobs/quickstart/">Creating Jobs</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-jobs/examples/">Examples</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.0/deploying-jobs/job-groups/">Granting Access to Jobs</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.0/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Creating Jobs</h1></div><h4 class="content__header-description">Creating and administering jobs using the UI, the CLI, or the API</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.0/deploying-jobs/quickstart/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>You can create and administer jobs for the DC/OS® cluster in any of the following ways:</p>
+<ul>
+<li>interactively with the <a href="#managing-jobs">DC/OS UI</a></li>
+<li>interactively or programmatically with the DC/OS <a href="#cli">CLI</a></li>
+<li>directly through calls to the DC/OS application programming interface (<a href="#jobs-api">API</a>) for job-related operations</li>
+</ul>
+<p>The DC/OS UI only provides access to a subset of the job-related functionality provided through the <code>dcos job</code> CLI and Jobs API. For more advanced job configurations and activity, use the CLI <a href="/dcosdocs/mesosphere/dcos/2.0/cli/command-reference/dcos-job/"><code>dcos job</code></a> commands or the <a href="/dcosdocs/mesosphere/dcos/2.0/deploying-jobs/quickstart/#jobs-api">Jobs API</a>.</p>
+<p>The DC/OS application programming interface (API) provides underlying functionality that you can access through the DC/OS UI and CLI. In most cases, you would only use the API directly if you are integrating the functionality with a custom program or automation script.</p>
+<p><a name="managing-jobs"></a></p>
+<h1 id="managing-jobs-with-the-dcos-ui"><a class="content__anchor" href="#managing-jobs-with-the-dcos-ui" aria-hidden="true"><i data-feather="bookmark"></i></a>Managing jobs with the DC/OS UI</h1>
+<p>You can manage the most common job-related activity interactively through the DC/OS UI. For example, you can add, modify, run, and remove jobs directly from the <strong>Jobs</strong> tab in the UI.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-Main.png" alt="Jobs"></p>
+<p>Figure 1 - Jobs tab and jobs list</p>
+<h3 id="split-screen"><a class="content__anchor" href="#split-screen" aria-hidden="true"><i data-feather="bookmark"></i></a>Split screen</h3>
+<p>Note that in all the <strong>Jobs</strong> UI configuration screens, you can choose to view the UI alone, or split the screen between the UI and a <strong>JSON Editor</strong> window. In the following discussion of the <strong>Jobs</strong> configuration options, we will show you the split screen so that you can see how they work together, but you may always choose to use the UI by itself. To invoke the <strong>JSON Editor</strong>, click on the <strong>JSON Editor</strong> toggle switch next to the <strong>Submit</strong> button.</p>
+<!-- Where are JSON files created here stored? Can that location be configured? -->
+<p>Edits made to either interface are immediately reflected in the other. For example, if you enter a value in any field in the left hand UI, it is added to the JSON file on the right hand window.</p>
+<p>To dismiss the <strong>JSON Editor</strong> screen, click the toggle again.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-Split-Screen.png" alt="Split Screen"></p>
+<p>Figure 2 - Split screen</p>
+<h2 id="add-a-job"><a class="content__anchor" href="#add-a-job" aria-hidden="true"><i data-feather="bookmark"></i></a>Add a job</h2>
+<p>There are two ways to create a job in the DC/OS UI.</p>
+<ul>
+<li>If you have no jobs configured, the Jobs screen will contain a notice that you have no active jobs, and will display a <strong>Create a Job</strong> button.</li>
+</ul>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-No-Active-Jobs.png" alt="No active jobs"></p>
+<p>Figure 3 - Create a Job button</p>
+<ul>
+<li>Regardless of whether you have active jobs or not, you can always click on the <strong>+</strong> sign in the upper right corner to create a new job.</li>
+</ul>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-Create-a-Job.png" alt="Plus sign"></p>
+<p>Figure 4 - Click on the plus sign</p>
+<p>A configuration screen for a new job will appear. Note that this screen is the same as the screen for editing jobs.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-New-Job.png" alt="Job configuration screen"></p>
+<p>Figure 5 - Job configuration screen</p>
+<h2 id="configuring-a-job"><a class="content__anchor" href="#configuring-a-job" aria-hidden="true"><i data-feather="bookmark"></i></a>Configuring a job</h2>
+<p>You will see eight tabs on the left hand side of the screen. These help you name, configure and manage your job:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#general">General</a></td>
+<td>Sets the most basic job settings, such as the job identifier, CPU, memory and disk requirements.</td>
+</tr>
+<tr>
+<td><a href="#container-runtime">Container Runtime</a></td>
+<td>Specifies whether the job runs using the Universal Container Runtime or the Docker® Engine.</td>
+</tr>
+<tr>
+<td><a href="#schedule">Schedule</a></td>
+<td>Sets up a schedule for your job. You can use the <code>cron</code> format.</td>
+</tr>
+<tr>
+<td><a href="#environment">Environment</a></td>
+<td>Specifies environment variables to be attached to each instance of your job.</td>
+</tr>
+<tr>
+<td><a href="#volumes">Volumes</a></td>
+<td>Configures a stateful job by setting up a persistent volume.</td>
+</tr>
+<tr>
+<td><a href="#placement">Placement</a></td>
+<td>Specifies the placement of agent nodes in regions and zones for high availability, or to expand capacity to new regions.</td>
+</tr>
+<tr>
+<td><a href="#run-configuration">Run Configuration</a></td>
+<td>Advanced settings for the job.</td>
+</tr>
+<tr>
+<td><a href="#secrets">Secrets</a></td>
+<td>Sets up a Secret Store to secure important values like private keys, API tokens, and so forth.</td>
+</tr>
+</tbody>
+</table>
+<p>Detailed information about the parameters and values for each of the configuration screens can be found in the <a href="/dcosdocs/mesosphere/dcos/2.0/gui/jobs/">Jobs</a> documentation.</p>
+<h3 id="general"><a class="content__anchor" href="#general" aria-hidden="true"><i data-feather="bookmark"></i></a>General</h3>
+<p>Select <strong>General</strong> to edit the most basic job settings, such as the job identifier, CPU, memory, and disk requirements.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-General.png" alt="Jobs"></p>
+<p>Figure 6 - General configuration tab</p>
+<p>The parameters for this tab and the values allowed are found in the <a href="/dcosdocs/mesosphere/dcos/2.0/gui/jobs/#general/">Jobs</a> documentation of the UI.</p>
+<!-- * **Job ID** - Defines a unique identifier for the new job. The Job ID is a required field. You also use this setting to manage job operations.
+* **Description** - Provides an optional description of the new job.
+* **CPUs** - Specifies the number of CPU cores your job requires. This field is required for all jobs.
+* **Mem** - Specifies the amount of memory, in MB, your job requires. This field is required for all jobs.
+* **Disk** - Specifies the amount of disk space, in MB, your job requires. This field is required for all jobs.
+* **GPUs** - Specifies the number of GPU (Graphics Processing Unit) cores to allocate for processing your job. This field is only applicable for jobs that run on nodes configured to use GPU (Graphics Processing Unit) cores and tasks that are launched using DC/OS [Universal Container Runtime](/dcosdocs/mesosphere/dcos/2.0/deploying-services/containerizers/ucr/) containers. Support for GPU resources is are not available for Docker containers or images.
+
+Select the appropriate Job Type to run one or more specific commands or a Docker container image.
+* Select **Command Only** to specify one or more commands you want the new job to execute. 
+
+    If you select **Command Only**, you must specify the command or command arguments to execute. When the command you specify is executed, it is automatically wrapped by the command `/bin/sh -c job.cmd`. You must include either `cmd` or `args` in the command to be executed. It is invalid to supply both `cmd` and `args` in the same job.
+
+    If you select the **Command Only** option, none of the **Container Runtime** settings are applicable for the job. You can continue creating the job by defining **Schedule** settings, adding advanced **Run Configuration** options, or clicking **Submit**.
+
+* Select **Container Image** to specify a container image for the new job. If you select this option, type the name of the container image you want to run. For example, you can type a container image name such as `ubuntu:14.04`. You can then use the **Command** field to specify the command and any additional runtime parameters available in the container for running the new job. 
+
+    If you select the **Container Image** option, you can continue creating the job by:
+    - Configuring **Container Runtime** settings for the job.
+    - Defining a job **Schedule**, if applicable.
+    - Adding advanced **Run Configuration** options, if applicable.
+    - Clicking **Submit**. -->
+<h3 id="container-runtime"><a class="content__anchor" href="#container-runtime" aria-hidden="true"><i data-feather="bookmark"></i></a>Container Runtime</h3>
+<p>Select <strong>Container Runtime</strong> to specify whether the container for the new job runs using the Universal Container Runtime or the Docker engine. We support the <strong>Universal Container Runtime (UCR)</strong> and the <strong>Docker Engine</strong>.</p>
+<h3 id="ucr"><a class="content__anchor" href="#ucr" aria-hidden="true"><i data-feather="bookmark"></i></a>UCR</h3>
+<p><strong>Universal Container Runtime</strong> uses the native Mesos engine and supports GPU resources. This is the recommended selection.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-Container-Runtime.png" alt="Jobs"></p>
+<p>Figure 7 - <strong>Jobs &gt; Container Runtime</strong> tab</p>
+<h3 id="docker-engine"><a class="content__anchor" href="#docker-engine" aria-hidden="true"><i data-feather="bookmark"></i></a>Docker Engine</h3>
+<p>The <strong>Docker Engine</strong> is Docker’s container runtime. It requires an image and does not support GPU resources.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-Container-Runtime-2.png" alt="Jobs"></p>
+<p>Figure 8 - <strong>Jobs &gt; Container Runtime &gt; Docker Engine</strong> tab</p>
+<!-- * If you select **Universal Container Runtime**, you can select Force Pull Image On Launch to automatically pull the latest image before launching each instance.
+
+* If you select **Docker Engine**, you can select the following additional options:
+    - Select **Force Pull Image On Launch** to automatically pull the latest image before launching each instance.
+    - Select **Grant Runtime Privileges** to run the specified Docker image in privileged mode.
+    - Click **Add Parameter** to specify additional Docker runtime parameter names and values for the new job, if applicable. You can add multiple parameter names and corresponding values by clicking **Add Parameter** for each parameter name and value you want to include.
+    - Click **Add Arg** to specify additional command-line arguments for the new job, if applicable. You can add multiple arguments by clicking **Add Arg** for each argument you want to include. -->
+<p>The parameters for this tab and the values allowed are found in the <a href="/dcosdocs/mesosphere/dcos/2.0/gui/jobs/#container-runtime/">Jobs</a> documentation of the UI.</p>
+<h3 id="schedule"><a class="content__anchor" href="#schedule" aria-hidden="true"><i data-feather="bookmark"></i></a>Schedule</h3>
+<p>You can set up jobs with a scheduler using the <code>cron</code> format. Select <strong>Schedule</strong> to specify a schedule for when the job runs.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-Schedule.png" alt="Schedule"></p>
+<p>Figure 9 - <strong>Jobs &gt; Schedule</strong> tab</p>
+<p>The parameters for this tab and the values allowed are found in the <a href="/dcosdocs/mesosphere/dcos/2.0/gui/jobs/#schedule/">Jobs</a> documentation of the UI.</p>
+<p>After you define the schedule, you can activate or deactivate it by selecting or deselecting the <strong>Enable Schedule</strong> option. You can also modify or remove the schedule when needed after you have submitted the new job definition.</p>
+<h3 id="environment"><a class="content__anchor" href="#environment" aria-hidden="true"><i data-feather="bookmark"></i></a>Environment</h3>
+<p>Select <strong>Environment</strong> to configure any environment values to be attached to each instance of your job that is launched.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-Environment.png" alt="Environment"></p>
+<p>Figure 10 - <strong>Jobs &gt; Environment</strong> tab</p>
+<p>The parameters for this tab and the values allowed are found in the <a href="/dcosdocs/mesosphere/dcos/2.0/gui/jobs/#environment/">Jobs</a> documentation of the UI.</p>
+<h3 id="volumes"><a class="content__anchor" href="#volumes" aria-hidden="true"><i data-feather="bookmark"></i></a>Volumes</h3>
+<p>Select the <strong>Volumes</strong> tab to create a stateful job by configuring a persistent volume. Persistent volumes enable instances to be restarted without data loss.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-Volumes.png" alt="Volumes"></p>
+<p>Figure 11 - <strong>Jobs &gt; Volumes</strong> tab</p>
+<p>The parameters for this tab and the values allowed are found in the <a href="/dcosdocs/mesosphere/dcos/2.0/gui/jobs/#volumes/">Jobs</a> documentation of the UI.</p>
+<h3 id="placement"><a class="content__anchor" href="#placement" aria-hidden="true"><i data-feather="bookmark"></i></a>Placement</h3>
+<p>You can configure the placement of agent nodes in regions and zones for high availability, or to expand capacity to new regions when necessary.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-Placement.png" alt="Placement"></p>
+<p>Figure 12 - <strong>Jobs &gt; Placement</strong> tab</p>
+<p>The parameters for this tab and the values allowed are found in the <a href="/dcosdocs/mesosphere/dcos/2.0/gui/jobs/#placement/">Jobs</a> documentation of the UI.</p>
+<h3 id="run-configuration"><a class="content__anchor" href="#run-configuration" aria-hidden="true"><i data-feather="bookmark"></i></a>Run Configuration</h3>
+<p>Select <strong>Run Configuration</strong> to specify advanced settings for the new job.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-Run-Configuration.png" alt="Run Config"></p>
+<p>Figure 13 - <strong>Jobs &gt; Run Configuration</strong> tab</p>
+<!-- 1. Click **Run Configuration** to specify advanced settings for the new job.
+
+    - Set **Max Launch Delay**  to specify the maximum number of seconds to wait for a job to start running after it is launched by a scheduled job run or manually by a user. If the job does not start running within the maximum number of seconds allowed, the job is aborted.
+
+    - Set **Kill Grace Period**  to configure the number of seconds between escalating from `SIGTERM` to `SIGKILL` when signalling tasks to terminate. During this grace period, tasks should perform an orderly shut down immediately upon receiving SIGTERM.
+
+    - Set **User name** to identify the user account that runs the tasks on the agent.
+
+    - Select **Add Artifact** to provide one or more artifact URIs you want passed to fetcher module and resolved at runtime and the action--Execute, Extract, or Cache--you want to perform for each URI.
+
+        ![Adding an artifact URI and action for a job](/dcosdocs/mesosphere/dcos/2.0/img/job-artifacts-uri.png)
+
+        Figure 2. Add an artifact URI and action
+
+    - Select a **Restart Policy** to determine the steps to take if a job fails. 
+    
+        - You can choose **Never** if you never want to attempt to restart a failed job. 
+        
+        - If you choose **On Failure**, you can set a time limit for attempting to restart the job using the **Keep Trying Time** field. For example, set the **Keep Trying Time** to 30 if you want to try restarting the job after waiting for 30 seconds. If no value is set for Keep Trying Time, DC/OS will continue attempting to restart the failed job indefinitely.
+
+    - Click **Add Label** to specify a **Key** and **Value** that you want to attach as metadata to the new job. You can then use the job label to filter or expose information for labeled jobs. You can add multiple label key name/value pairs by clicking **Add Label** for each name/value pair you want to include. For more information about using labels, see [Labeling tasks and jobs](/dcosdocs/mesosphere/dcos/2.0/tutorials/task-labels/). -->
+<p>The parameters for this tab and the values allowed are found in the <a href="/dcosdocs/mesosphere/dcos/2.0/gui/jobs/#run-configuration/">Jobs</a> documentation of the UI.</p>
+<h3 id="secrets"><a class="content__anchor" href="#secrets" aria-hidden="true"><i data-feather="bookmark"></i></a>Secrets</h3>
+<p>Select the DC/OS Secret Store to secure important values like private keys, API tokens, and database passwords.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.0/img/job-artifacts-uri.png" alt="Secrets"></p>
+<p>Figure 14 - Secrets tab</p>
+<p>The parameters for this tab and the values allowed are found in the <a href="/dcosdocs/mesosphere/dcos/2.0/gui/jobs/#secrets/">Jobs</a> documentation of the UI.</p>
+<h3 id="network"><a class="content__anchor" href="#network" aria-hidden="true"><i data-feather="bookmark"></i></a>Network</h3>
+<p><strong>Note:</strong> The following procedure requires DC/OS release version 2.0.4 or higher.</p>
+<p>Networking information can be specified using the JSON tab. See the following example for how networks are defined for jobs:</p>
+<pre><code>    ```json
+    {
+      &quot;id&quot;: &quot;networking-job&quot;,
+      &quot;description&quot;: &quot;A job that outputs network info and sleeps&quot;,
+      &quot;run&quot;: {
+        &quot;cmd&quot;: &quot;ip a; sleep 60&quot;,
+        &quot;docker&quot;: {
+          &quot;image&quot;: &quot;alpine&quot;
+        },
+        &quot;networks&quot;: [{&quot;mode&quot;: &quot;container&quot;, &quot;name&quot;: &quot;dcos&quot;}],
+        &quot;cpus&quot;: 0.01,
+        &quot;mem&quot;: 32,
+        &quot;disk&quot;: 0
+      }
+    }
+    ```
+
+The networks field functions identical to Marathon's, and supports the following parameters.
+
+* **mode** - The network mode. Valid values are `container`, `container/bridge` and `host`. The default value is `host`. There is little value in using `container/bridge` for jobs, but it is still supported.
+* **name** - The name of the container network to join. It is an error to specify this field with mode `host` or `container/bridge`.
+* **labels** - Key-value string arguments to pass to the networking plugin. It is an error to specify this with mode `host`.
+
+Jobs do not support port mapping.
+
+## Submit
+
+1. Click **Submit** to create the job.
+
+1. Verify that you have added the new job by clicking **Jobs**.
+
+    ![Jobs List](/dcosdocs/mesosphere/dcos/2.0/img/job-list-scheduled.png)
+
+    Figure 15. Jobs list
+
+## Add a job to a job group
+You can add a job to a an existing job group or create a new job group when you create the job. Use periods in your job ID to nest the job in a group. For example, if you add a job using the job ID `marketing.myjob`, the new `myjob` is created in the `marketing` job group. In DC/OS Enterprise, you can use job groups to implement fine-grained user access. 
+
+For more information about controlling access to jobs through job groups, see [Granting access to jobs](/dcosdocs/mesosphere/dcos/2.0/deploying-jobs/job-groups/).
+
+## View, modify, or remove a specific job
+You can view and modify job-related information, including details about the run history and configuration settings interactively through the DC/OS UI. From the **Jobs** tab, click the name of your job. You can then use the menu on the upper right to edit, run, disable, or delete a selected job. 
+
+![Viewing and modifying job details](/dcosdocs/mesosphere/dcos/2.0/img/job-menu-options.png)
+
+Figure 16. Viewing and modifying job details
+
+While the job is running, you can click the job instance to drill down to **Details**, **Files**, and **Logs** data.
+
+You can see that the **Edit Job** screen contains the same configuration tabs as the **New Job** screen:
+
+![Jobs](/dcosdocs/mesosphere/dcos/2.0/img/GUI-Jobs-General.png)
+
+Figure 17 - General configuration tab in **Edit Job** screen
+
+&lt;a name=&quot;cli&quot;&gt;&lt;/a&gt;
+
+# Managing jobs with the DC/OS CLI
+You can create and manage jobs from the DC/OS CLI using `dcos job` commands. To see a full list of available commands with usage information, run `dcos job --help` or consult the [CLI documentation](/dcosdocs/mesosphere/dcos/2.0/cli/command-reference/dcos-job/).
+
+&lt;a name=&quot;cli-add-job&quot;&gt;&lt;/a&gt;
+
+## Create a JSON file for a new job
+1. Open a new file in a text editor to create a job file in JSON format. 
+
+1. In the new file, specify the basic parameters required to define the job, including the following:
+    - the job `id` you use to manage the job
+    - the specific command to run
+    - the CPU, memory, and disk requirements
+    - the job schedule
+
+    For example, the JSON file for a new job might look similar to this:
+
+    ```json
+    {
+        &quot;id&quot;: &quot;myjob&quot;,
+        &quot;description&quot;: &quot;A job that sleeps regularly&quot;,
+        &quot;run&quot;: {
+            &quot;cmd&quot;: &quot;sleep 20000&quot;,
+            &quot;cpus&quot;: 0.01,
+            &quot;mem&quot;: 32,
+            &quot;disk&quot;: 0
+        },
+        &quot;schedules&quot;: [
+            {
+                &quot;id&quot;: &quot;sleep-schedule&quot;,
+                &quot;enabled&quot;: true,
+                &quot;cron&quot;: &quot;20 0 * * *&quot;,
+                &quot;concurrencyPolicy&quot;: &quot;ALLOW&quot;
+            }
+        ]
+    }
+    ```
+
+1. Save the JSON file for the new job using an easily-identifiable file name. For example, you might save the job information as `mysleepjob.json`.
+
+1. Add the job by running a command similar to the following:
+
+    ```bash
+    dcos job add &lt;myjob&gt;.json
+    ```
+    
+    For example:
+
+    ```bash
+    dcos job add mysleepjob.json
+    ```
+1. Verify that you have added the new job by running a command similar to the following:
+
+    ```bash
+    dcos job list
+    ```
+    
+    The command displays the list of jobs similar to the following:
+    
+    ```bash
+        ID       STATUS    LAST RUN  
+    mysleepjob  Scheduled  N/A       
+    mypingjob   Running    N/A       
+    ```
+
+## Concurrency policy for scheduled jobs
+If you use a schedule to start a job, you can define a concurrency policy for the job. A concurrency policy determines whether a new job run instance is triggered if there's already a job instance running. 
+
+For example, assume you have a job scheduled to start every day at 3:00AM, and you have set the concurrency policy for the job set to FORBID. If there is an instance of that job already running at 3:00AM - either because a previously-triggered job run is still active or has been triggered manually outside of the schedule - the scheduled start time will not trigger a new job to run. If there are no jobs running at the next scheduled start time, a new job instance starts and runs as scheduled.
+
+If you want to allow scheduled jobs to be triggered while  other instances of the same job are running, you can set the `concurrencyPolicy` to ALLOW. 
+
+Note: A `concurrencyPolicy` set to FORBID does *not* prevent you from starting a new job instance manually - for example through the API - even if one is already running. It only prevents a schedule to start a new job instance.
+
+## MaxLaunchDelay
+The `maxLaunchDelay` is a deprecated configuration option and is no longer used.
+
+## Restart policy
+Per default, metronome only tries to start a job instance once - the default restart policy is NEVER. The alternative is to set the restart policy to ON_FAILURE, which configures metronome to restart the task until it completes successfully or the `activeDeadlineSeconds` is reached.
+
+If no `activeDeadlineSeconds` is defined, metronome tries restarting the task indefinitely, which may lead to issues if the task will never complete successfully - it is advised to always set an `activeDeadlineSeconds`.
+
+```json
+{
+  ...
+  &quot;run&quot; : {
+    &quot;cpus&quot; : 0.01,
+    &quot;mem&quot; : 32,
+    &quot;disk&quot; : 0,
+    &quot;cmd&quot; : &quot;sleep 60&quot;,
+    &quot;restart&quot; : {
+      &quot;policy&quot; : &quot;ON_FAILURE&quot;,
+      &quot;activeDeadlineSeconds&quot; : 30
+    }
+  },
+  ...
+}
+</code></pre>
+<h2 id="taskkillgraceperiod"><a class="content__anchor" href="#taskkillgraceperiod" aria-hidden="true"><i data-feather="bookmark"></i></a>TaskKillGracePeriod</h2>
+<p>The <code>taskKillGracePeriodSeconds</code> can be used to define the time between the SIGTERM and SIGKILL that is send to a task on stop. See Marathons documentation on <code>taskKillGracePeriodSeconds</code> for more information</p>
+<pre><code class="language-json">{
+  ...
+  &quot;run&quot; : {
+    &quot;cpus&quot; : 0.01,
+    &quot;mem&quot; : 32,
+    &quot;disk&quot; : 0,
+    &quot;cmd&quot; : &quot;sleep 60&quot;,
+    &quot;taskKillGracePeriodSeconds&quot; : 30
+  },
+  ...
+}
+</code></pre>
+<h2 id="create-a-schedule-only-json-file"><a class="content__anchor" href="#create-a-schedule-only-json-file" aria-hidden="true"><i data-feather="bookmark"></i></a>Create a schedule-only JSON file</h2>
+<p>If you specify a schedule for a job in the JSON file for that job, you can assign only one schedule under which the job runs.</p>
+<p>If you want to use the same schedule for more than one job, however, you can create a separate JSON file specifically for the schedule. You can then use the <code>dcos job schedule add &lt;job-id&gt; &lt;schedule-file&gt;</code> command to associate a job with the schedule.</p>
+<ol>
+<li>
+<p>Open a file in a text editor to <a href="#cli-add-job">create a new job</a> file in JSON format, if necessary.</p>
+<p>You must use the job <code>id</code> you define for the job to associate a schedule JSON file with the job. To prevent schedule conflicts or unexpected job runs, you should not define schedule parameters for a job if you want to use the schedule-only JSON file to control <em>when</em> a job runs.</p>
+</li>
+<li>
+<p>Open a new file in a text editor to create the schedule you want to use in JSON format.</p>
+<p>For example, the JSON file for a new schedule might look similar to this:</p>
+<pre><code class="language-json">{
+    &quot;concurrencyPolicy&quot;: &quot;ALLOW&quot;,
+    &quot;cron&quot;: &quot;20 0 * * *&quot;,
+    &quot;enabled&quot;: true,
+    &quot;id&quot;: &quot;nightly&quot;,
+    &quot;nextRunAt&quot;: &quot;2016-07-26T00:20:00.000+0000&quot;,
+    &quot;startingDeadlineSeconds&quot;: 900,
+    &quot;timezone&quot;: &quot;UTC&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>Save the JSON file for the new schedule using an easily-identifiable file name. For example, you might save the schedule information as <code>my-cron-def.json</code>.</p>
+</li>
+<li>
+<p>Associate the job with the schedule by running a command similar to the following:</p>
+<pre><code class="language-bash">dcos job schedule add &lt;job-id&gt; &lt;schedule-file&gt;
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-bash">dcos job schedule add mytestjob my-cron-def.json
+</code></pre>
+<p>If you attempt to add a schedule definition to a job that already has a schedule defined, the command displays an error similar to the following:</p>
+<pre><code class="language-text">Error: 409 - requirement failed: A schedule with id nightly already exists
+</code></pre>
+</li>
+<li>
+<p>Verify that you have added the new job schedule by running a command similar to the following:</p>
+<pre><code class="language-bash">dcos job schedule show mytestjob
+</code></pre>
+<p>This command displays schedule information for the specified job similar to the following:</p>
+<pre><code class="language-bash">ID        CRON     ENABLED            NEXT RUN            CONCURRENCY POLICY  
+nightly  20 0 * * *  True     2019-04-11T00:20:00.000+0000  ALLOW
+</code></pre>
+</li>
+</ol>
+<h2 id="start-a-job-from-the-command-line"><a class="content__anchor" href="#start-a-job-from-the-command-line" aria-hidden="true"><i data-feather="bookmark"></i></a>Start a job from the command line</h2>
+<p>You can trigger a job to run:</p>
+<ul>
+<li>manually on-demand</li>
+<li>automatically based on a schedule you have defined</li>
+<li>programmatically through automation with or without a schedule</li>
+</ul>
+<p>You can use any of these approaches to start a job instance that is referred to as a job run. For example, you can use the DC/OS CLI to start jobs regardless of whether you have defined a schedule or not. Starting a job manually from the command-line is similar to starting a job by clicking <strong>Run now</strong> using the DC/OS UI.</p>
+<p>To start a job run on-demand outside of any scheduled job activity, run a command similar to the following:</p>
+<pre><code class="language-bash">dcos job run &lt;job-id&gt;
+</code></pre>
+<p>For example, if the job id is <code>mytestjob</code>, run:</p>
+<pre><code class="language-bash">dcos job run mytestjob
+</code></pre>
+<p>Starting a job manually from the command-line or through the DC/OS UI triggers a new job run each time the command is executed. Jobs that are triggered manually on-demand ignore concurrency policy settings.</p>
+<p>If a schedule is used to start a job, however, the job’s concurrency policy determines whether a new job run instance is triggered. Being able to control whether jobs run concurrently is one of the main differences between triggering a job to run manually or using a schedule.</p>
+<h2 id="remove-a-job-from-the-command-line"><a class="content__anchor" href="#remove-a-job-from-the-command-line" aria-hidden="true"><i data-feather="bookmark"></i></a>Remove a job from the command-line</h2>
+<p>You can remove a job using the command-line program <a href="/dcosdocs/mesosphere/dcos/2.0/cli/command-reference/dcos-job/dcos-job-remove/"><code>dcos job remove &lt;job-id&gt;</code></a> as long as the job does not have any active job instances running. If a job has any currently active running instances, you must stop all of the currently-active jobs. After you stop all running job instances, you can remove the job using the <code>dcos job remove &lt;job-id&gt;</code> command.</p>
+<p>To remove a job:</p>
+<ol>
+<li>
+<p>Check the status of active jobs by running a command similar to the following:</p>
+<pre><code class="language-bash">dcos job list
+</code></pre>
+</li>
+<li>
+<p>Stop all running job instances for the job you want to delete and remove the job by running the following command:</p>
+<pre><code class="language-bash">dcos job remove &lt;job-id&gt; --stop-current-job-runs
+</code></pre>
+</li>
+<li>
+<p>Verify that you have removed the specified job by running the following command:</p>
+<pre><code class="language-bash">dcos job list
+</code></pre>
+</li>
+</ol>
+<h2 id="modify-a-job-from-the-command-line"><a class="content__anchor" href="#modify-a-job-from-the-command-line" aria-hidden="true"><i data-feather="bookmark"></i></a>Modify a job from the command line</h2>
+<p>To modify your job, update your JSON job file, then run the command:</p>
+<pre><code class="language-bash">dcos job update &lt;job-file&gt;.json
+</code></pre>
+<h3 id="modify-a-jobs-schedule"><a class="content__anchor" href="#modify-a-jobs-schedule" aria-hidden="true"><i data-feather="bookmark"></i></a>Modify a job’s schedule</h3>
+<p>You can update the schedule of your job in two ways, depending if your job has a schedule specified in the <code>&lt;job-file&gt;.json</code> or if your job’s schedule is kept in a separate file.</p>
+<h4 id="modify-a-job-with-a-schedule"><a class="content__anchor" href="#modify-a-job-with-a-schedule" aria-hidden="true"><i data-feather="bookmark"></i></a>Modify a job with a schedule</h4>
+<p>Modify the <code>schedules</code> parameter of your <code>&lt;job-file&gt;.json</code>. Then run the command:</p>
+<pre><code class="language-bash">dcos job update &lt;job-file&gt;.json
+</code></pre>
+<h4 id="modify-a-job-with-a-separate-schedule-file"><a class="content__anchor" href="#modify-a-job-with-a-separate-schedule-file" aria-hidden="true"><i data-feather="bookmark"></i></a>Modify a job with a separate schedule file</h4>
+<p>Modify <code>&lt;schedule-file&gt;.json</code>. Then, run one of the following commands:</p>
+<pre><code class="language-bash">dcos job schedule add &lt;job-id&gt; &lt;schedule-file&gt;.json
+dcos job schedule remove &lt;job-id&gt; &lt;schedule-id&gt;
+dcos job schedule update &lt;job-id&gt; &lt;schedule-file&gt;.json
+</code></pre>
+<h2 id="view-job-details"><a class="content__anchor" href="#view-job-details" aria-hidden="true"><i data-feather="bookmark"></i></a>View job details</h2>
+<p>List all jobs:</p>
+<pre><code class="language-bash">dcos job list
+</code></pre>
+<p>List all previous runs of your job:</p>
+<pre><code class="language-bash">dcos job history &lt;job-id&gt;
+</code></pre>
+<p>To view details about your job, run the command:</p>
+<pre><code class="language-bash">dcos job show &lt;job-id&gt;
+</code></pre>
+<p>To view details about your job’s schedule, run the command:</p>
+<pre><code class="language-bash">dcos job schedule show &lt;job-id&gt;
+</code></pre>
+<h3 id="view-job-logs"><a class="content__anchor" href="#view-job-logs" aria-hidden="true"><i data-feather="bookmark"></i></a>View job logs</h3>
+<p>To view the log for your job, run the command:</p>
+<pre><code class="language-bash">dcos task log --completed &lt;job-id&gt;
+</code></pre>
+<p>To get the log for only a specific job run, use a job run ID from <code>dcos job history &lt;job-id&gt;</code></p>
+<pre><code class="language-bash">dcos task log --completed &lt;job-run-id&gt;
+</code></pre>
+<p><a name="jobs-api"></a></p>
+<h1 id="managing-jobs-with-the-dcos-api"><a class="content__anchor" href="#managing-jobs-with-the-dcos-api" aria-hidden="true"><i data-feather="bookmark"></i></a>Managing jobs with the DC/OS API</h1>
+<p>You can create and manage jobs through calls to the Jobs API endpoints. This section highlights the most common tasks you perform through job-related API calls. For more complete information about the Jobs API, see the  <a href="http://dcos.github.io/metronome/docs/generated/api.html">Jobs API reference</a> information.</p>
+<h2 id="preparing-to-use-api-cals"><a class="content__anchor" href="#preparing-to-use-api-cals" aria-hidden="true"><i data-feather="bookmark"></i></a>Preparing to use API cals</h2>
+<p>The code examples in this section illustrate how to include Jobs API calls to perform job-related tasks with the client URL (cURL) program. For detailed information about using <code>curl</code> command, see the <a href="https://curl.haxx.se/docs/manpage.html"><code>curl</code> man page</a>.</p>
+<p>In addition, one important difference between using the DC/OS CLI or UI and the API is how you configure the job schedule. The DC/OS CLI and UI support a combined JSON format that allows you to specify a schedule in the job descriptor. To schedule a job using the Jobs API, you must use two separate calls:</p>
+<ul>
+<li>Use one call to add an <strong>unscheduled</strong> job.</li>
+<li>Use a second call to associate a specific <a href="#add-sched">schedule file</a> (<code>schedule-file.json</code>) with the job.</li>
+</ul>
+<h2 id="add-a-job-using-an-api-call"><a class="content__anchor" href="#add-a-job-using-an-api-call" aria-hidden="true"><i data-feather="bookmark"></i></a>Add a job using an API call</h2>
+<p>The following command adds a job called <code>myjob.json</code>.</p>
+<pre><code class="language-bash">curl -X POST -H &quot;Content-Type: application/json&quot; -H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; $(dcos config show core.dcos_url)/service/metronome/v1/jobs -d@/Users/&lt;your-username&gt;/&lt;myjob&gt;.json
+</code></pre>
+<h2 id="remove-a-job-using-an-api-call"><a class="content__anchor" href="#remove-a-job-using-an-api-call" aria-hidden="true"><i data-feather="bookmark"></i></a>Remove a job using an API call</h2>
+<p>The following command removes a job regardless of whether the job is running:</p>
+<pre><code class="language-bash">curl -X DELETE -H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; $(dcos config show core.dcos_url)/service/metronome/v1/jobs/&lt;myjob&gt;?stopCurrentJobRuns=true
+</code></pre>
+<p>To remove a job only if it is not running, set <code>stopCurrentJobRuns</code> to <code>False</code>.</p>
+<h2 id="modify-or-view-a-job-using-an-api-call"><a class="content__anchor" href="#modify-or-view-a-job-using-an-api-call" aria-hidden="true"><i data-feather="bookmark"></i></a>Modify or view a job using an API call</h2>
+<p>The following command shows all jobs:</p>
+<pre><code class="language-bash">curl -H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; $(dcos config show core.dcos_url)/service/metronome/v1/jobs
+</code></pre>
+<p>The following command lists job runs:</p>
+<pre><code class="language-bash">curl -H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; &quot;$(dcos config show core.dcos_url)/service/metronome/v1/jobs/&lt;myjob&gt;/runs/&quot;
+</code></pre>
+<p>Stop a run with the following command:</p>
+<pre><code class="language-bash">curl -X POST -H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; &quot;$(dcos config show core.dcos_url)/service/metronome/v1/jobs/&lt;myjob&gt;/runs/20160725212507ghwfZ/actions/stop&quot;
+</code></pre>
+<p><a name="add-sched"></a></p>
+<h2 id="add-a-schedule-to-a-job"><a class="content__anchor" href="#add-a-schedule-to-a-job" aria-hidden="true"><i data-feather="bookmark"></i></a>Add a schedule to a job</h2>
+<p>The following command adds a schedule to a job:</p>
+<pre><code class="language-bash">curl -X POST -H &quot;Content-Type: application/json&quot; -H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; $(dcos config show core.dcos_url)/service/metronome/v1/jobs/&lt;job-id&gt;/schedules -d@&lt;schedule-file&gt;.json
+</code></pre>
+<h2 id="start-a-job-using-an-api-call"><a class="content__anchor" href="#start-a-job-using-an-api-call" aria-hidden="true"><i data-feather="bookmark"></i></a>Start a job using an API call</h2>
+<p>You can use the DC/OS API to start jobs programmatically. Similar to starting a job using the UI or CLI, you must specify the job identifer in the call.</p>
+<p>To trigger a job run to start you can use a REST API call similar to the following:</p>
+<pre><code class="language-bash">curl -X POST -H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; $(dcos config show core.dcos_url)/service/metronome/v1/jobs/{jobId}/runs
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#managing-jobs-with-the-dcos-ui">Managing jobs with the DC/OS UI</a></li><li class="content__sections-item content__sections-item--h2"><a href="#add-a-job">Add a job</a></li><li class="content__sections-item content__sections-item--h2"><a href="#configuring-a-job">Configuring a job</a></li><li class="content__sections-item content__sections-item--h2"><a href="#taskkillgraceperiod">TaskKillGracePeriod</a></li><li class="content__sections-item content__sections-item--h2"><a href="#create-a-schedule-only-json-file">Create a schedule-only JSON file</a></li><li class="content__sections-item content__sections-item--h2"><a href="#start-a-job-from-the-command-line">Start a job from the command line</a></li><li class="content__sections-item content__sections-item--h2"><a href="#remove-a-job-from-the-command-line">Remove a job from the command-line</a></li><li class="content__sections-item content__sections-item--h2"><a href="#modify-a-job-from-the-command-line">Modify a job from the command line</a></li><li class="content__sections-item content__sections-item--h2"><a href="#view-job-details">View job details</a></li><li class="content__sections-item content__sections-item--h1"><a href="#managing-jobs-with-the-dcos-api">Managing jobs with the DC/OS API</a></li><li class="content__sections-item content__sections-item--h2"><a href="#preparing-to-use-api-cals">Preparing to use API cals</a></li><li class="content__sections-item content__sections-item--h2"><a href="#add-a-job-using-an-api-call">Add a job using an API call</a></li><li class="content__sections-item content__sections-item--h2"><a href="#remove-a-job-using-an-api-call">Remove a job using an API call</a></li><li class="content__sections-item content__sections-item--h2"><a href="#modify-or-view-a-job-using-an-api-call">Modify or view a job using an API call</a></li><li class="content__sections-item content__sections-item--h2"><a href="#add-a-schedule-to-a-job">Add a schedule to a job</a></li><li class="content__sections-item content__sections-item--h2"><a href="#start-a-job-using-an-api-call">Start a job using an API call</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

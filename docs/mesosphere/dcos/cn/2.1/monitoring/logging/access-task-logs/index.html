@@ -1,0 +1,289 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>控制对任务日志的访问 - D2iQ Docs</title><meta name="description" content="使用 Marathon 群组管理用户对任务日志的访问"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.1/monitoring/logging/access-task-logs">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/access-task-logs">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/monitoring/logging/access-task-logs">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/monitoring/logging/access-task-logs">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/"><i data-feather="chevron-right"></i>概述</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/"><i data-feather="chevron-right"></i>安装</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/performance-monitoring/"><i data-feather="chevron-right"></i>性能监控</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/"><i data-feather="chevron-right"></i>日志记录</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/quickstart/">快速入门</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/access-component-logs/">访问系统和组件日志</a></li><li class="active active-on"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/access-task-logs/">控制对任务日志的访问</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/configure-task-logs/">配置任务日志输出和保留</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/aggregating/"><i data-feather="chevron-right"></i>日志聚合</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/logging-reference/">日志记录参考</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/logging-api-examples/">日志记录 API 示例</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/debugging/"><i data-feather="chevron-right"></i>调试</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">控制对任务日志的访问</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">使用 Marathon 群组管理用户对任务日志的访问</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/logging/access-task-logs/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>您可以通过使用 Marathon 群组进行作业和服务，控制用户对任务日志的访问。然后，您可以分配访问这些群组的权限，从而让您可以控制用户可以访问哪些日志。</p>
+<p class="message--important"><strong>重要信息：</strong>本文档所述的功能仅在严格安全模式下可用。</p>
+<p>在此过程中，您将在单独的 Marathon 群组中部署服务，并授予用户权限以查看这些 Marathon 群组的任务。</p>
+<p>以下是对所需 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/perms-reference/">权限</a> 的概述：</p>
+<table>
+<thead>
+<tr>
+<th>权限字符串</th>
+<th>Full</th>
+<th>C</th>
+<th>R</th>
+<th>U</th>
+<th>D</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dcos:adminrouter:ops:mesos</code><br>  控制对 Mesos 管理节点 UI 和 API 的访问。</td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:adminrouter:ops:slave</code><br> 控制对 Mesos 代理节点 UI 和 API 的访问。</td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:agent:executor:app_id[:&lt;service-or-job-group&gt;]</code><br>  控制对服务和作业的查看访问权限 <a href="https://mesos.apache.org/documentation/latest/app-framework-development-guide/">执行器信息</a>。</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:agent:framework:role[:&lt;role-name&gt;]</code><br>  控制对在特定角色注册的 DC/OS 服务的查看访问。</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:agent:sandbox:app_id[:&lt;service-or-job-group&gt;]</code><br>  控制对 Mesos 沙盒的访问。</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:agent:task:app_id[:&lt;service-or-job-group&gt;]</code><br>  控制对任务信息的访问。</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:master:executor:app_id[:&lt;service-or-job-group&gt;]</code><br>  控制对 <a href="https://mesos.apache.org/documentation/latest/app-framework-development-guide/">执行器</a> 服务和作业组的访问。</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:master:framework:role[:&lt;role-name&gt;]</code> <br>  控制按角色对在 <a href="https://mesos.apache.org/documentation/latest/roles/">Mesos</a> 注册为框架的访问。</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:master:task:app_id[:&lt;service-or-job-group&gt;]</code><br>  控制对运行任务的访问权限。</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>前提条件：</strong></p>
+<ul>
+<li>DC/OS 和 DC/OS CLI <a href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/">已安装</a>，您以超级用户身份登录。</li>
+</ul>
+<h1 id="dcos-web"><a class="content__anchor" href="#dcos-web" aria-hidden="true"><i data-feather="bookmark"></i></a>通过 DC/OS Web 界面</h1>
+<h3 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>创建群组和授予权限</h3>
+<ol>
+<li>
+<p>选择<strong>组织</strong>并选择<strong>组</strong>。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/GUI-Organization-Groups-Add_Group_w_Plus_Button_Tooltip-1_12.png" alt="新组"></p>
+<p>图 1. 新用户组</p>
+</li>
+<li>
+<p>新建一个组。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/GUI-Organization-Groups-Create_New_Group_Modal-1_12.png" alt="生产组"></p>
+<p>图 2. 创建新组屏幕</p>
+</li>
+<li>
+<p>选择组名，并从<strong>权限</strong>选项卡上单击<strong>添加权限</strong>。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/GUI-Organization-Groups-Group_Detail_Page-1_12.png" alt="为生产组添加权限"></p>
+<p>图 3. “添加权限”按钮</p>
+</li>
+<li>
+<p>单击<strong>插入权限字符串</strong>以切换对话框，然后粘贴到以下权限中，单击<strong>添加权限</strong>。</p>
+<pre><code class="language-bash">dcos:adminrouter:ops:mesos full
+dcos:adminrouter:ops:slave full
+dcos:mesos:agent:executor:app_id:/prod-group/ read
+dcos:mesos:agent:framework:role:slave_public/ read
+dcos:mesos:agent:sandbox:app_id:/prod-group/ read
+dcos:mesos:agent:task:app_id:/prod-group/ read
+dcos:mesos:master:executor:app_id:/prod-group/ read
+dcos:mesos:master:framework:role:slave_public/ read
+dcos:mesos:master:task:app_id:/prod-group/ read
+</code></pre>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/GUI-Organization-Groups-Add_Perms_Modal_Logging-1_12.png" alt="添加权限"></p>
+<p>图 4. 权限字符串已添加</p>
+</li>
+</ol>
+<h3 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>创建用户和授予权限</h3>
+<ol>
+<li>
+<p>选择<strong>组织</strong>并选择<strong>用户</strong>。选择现有用户或创建一个新用户。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/GUI-Organization-Users-View_w_AddUser_Tooltip-1_12.png" alt="新用户"></p>
+<p>图 5. 用户屏幕</p>
+</li>
+<li>
+<p>从<strong>组成员</strong>选项卡，在搜索框中输入并选择组名。这将向单个用户授予组权限。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/GUI-Organization-Users-User_Alice_Add_prod_group-1_12.png" alt="添加 Alice 到安全组"></p>
+<p>图 6. 将用户添加到安全组</p>
+</li>
+</ol>
+<h3 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>启动用户组中的应用程序</h3>
+<p>本节介绍如何在组中部署简单的应用程序。</p>
+<ol>
+<li>
+<p>选择<strong>服务</strong> &gt; <strong>运行服务</strong>。</p>
+</li>
+<li>
+<p>选择<strong>单个容器</strong>，并将您的服务定义为：</p>
+<ul>
+<li><strong>服务 ID</strong>指定 <code>/&lt;gid&gt;/&lt;service-name&gt;</code>。这会在服务组内创建一个服务。</li>
+<li><strong>命令</strong>指定 <code>sleep 1000000000</code>。</li>
+<li><strong>容器运行时</strong>选择<strong>通用容器运行时 (UCR)</strong>。</li>
+</ul>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/GUI-Services-Add_Service_Single_Container_Alice-1_12.png" alt="定义嵌套服务"></p>
+<p>图 7. 定义一个嵌套服务</p>
+</li>
+<li>
+<p>单击<strong>查看并运行</strong>和<strong>运行服务</strong>以完成安装。您现在应该能看到一个在组中运行的服务。</p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/GUI-Services-Main_View_prod_group_Alice-1_12.png" alt="在组中运行的服务"></p>
+<p>图 8. 在组中运行的服务</p>
+</li>
+</ol>
+<p>现在您可以 <a href="#verifying-access">验证访问权限</a>。</p>
+<h1 id="iam-api"><a class="content__anchor" href="#iam-api" aria-hidden="true"><i data-feather="bookmark"></i></a>通过 IAM API</h1>
+<p><strong>前提条件：</strong>
+您必须 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/security/ent/tls-ssl/get-cert/">获取根证书</a> 才能发布此部分的 curl 命令。</p>
+<h3 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>提示</h3>
+<ul>
+<li>服务资源通常包括 <code>/</code> 必须在 <code>%252F</code> 请求中以 <code>curl</code> 替换的字符，如下例所示。</li>
+<li>使用 API 管理权限时，您必须在授予之前先创建权限。如果权限已存在，API 将返回提示信息，您可以继续分配权限。</li>
+</ul>
+<h3 id="-5"><a class="content__anchor" href="#-5" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="create-services"></a>创建用户组和启动应用程序</h3>
+<ol>
+<li>
+<p>使用以下命令创建一个 Marathon 组 (<code>&lt;gid&gt;</code>).</p>
+<pre><code class="language-bash">curl -X POST --cacert dcos-ca.crt \
+$(dcos config show core.dcos_url)/service/marathon/v2/groups \
+-d '{&quot;id&quot;:&quot;&lt;gid&gt;&quot;}' \
+-H &quot;Content-type: application/json&quot; \
+-H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot;
+</code></pre>
+</li>
+<li>
+<p>使用以下命令在<code>&lt;service-name&gt;</code> 内部部署一个简单的应用程序 (<code>&lt;gid&gt;</code>.</p>
+<pre><code class="language-bash">curl -X POST --cacert dcos-ca.crt \
+$(dcos config show core.dcos_url)/service/marathon/v2/apps \
+-d '{&quot;id&quot;:&quot;/&lt;gid&gt;/&lt;service-name&gt;&quot;,&quot;cmd&quot;:&quot;sleep 1000000000&quot;}' \
+-H &quot;Content-type: application/json&quot; \
+-H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot;
+</code></pre>
+</li>
+</ol>
+<h3 id="-6"><a class="content__anchor" href="#-6" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="grant-perms"></a>创建和授予权限</h3>
+<ol>
+<li>
+<p>使用以下命令为您的组创建权限 (<code>&lt;gid&gt;</code>).</p>
+<pre><code class="language-bash">curl -X PUT --cacert dcos-ca.crt \
+-H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; \
+-H 'Content-Type: application/json' $(dcos config show core.dcos_url)/acs/api/v1/acls/dcos:adminrouter:ops:mesos \
+-d '{&quot;description&quot;:&quot;Grants access to the Mesos master API/UI and task details&quot;}'
+curl -X PUT --cacert dcos-ca.crt \
+-H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; \
+-H 'Content-Type: application/json' $(dcos config show core.dcos_url)/acs/api/v1/acls/dcos:adminrouter:ops:slave \
+-d '{&quot;description&quot;:&quot;Grants access to the Mesos agent API/UI and task details such as logs&quot;}'
+curl -X PUT --cacert dcos-ca.crt \
+-H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; \
+-H 'Content-Type: application/json' $(dcos config show core.dcos_url)/acs/api/v1/acls/dcos:mesos:master:framework:role:slave_public \
+-d '{&quot;description&quot;:&quot;Grants access to register as or view Mesos master information about frameworks registered with the slave_public role&quot;}'
+curl -X PUT --cacert dcos-ca.crt \
+-H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; \
+-H 'Content-Type: application/json' $(dcos config show core.dcos_url)/acs/api/v1/acls/dcos:mesos:master:executor:app_id:%252F&lt;gid&gt; \
+-d '{&quot;description&quot;:&quot;Controls access to executors running inside &lt;gid&gt;&quot;}'
+curl -X PUT --cacert dcos-ca.crt \
+-H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; \
+-H 'Content-Type: application/json' $(dcos config show core.dcos_url)/acs/api/v1/acls/dcos:mesos:master:task:app_id:%252F&lt;gid&gt; \
+-d '{&quot;description&quot;:&quot;Grants access to the tasks on the Mesos master that are running inside of &lt;gid&gt;&quot;}'
+curl -X PUT --cacert dcos-ca.crt \
+-H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; \
+-H 'Content-Type: application/json' $(dcos config show core.dcos_url)/acs/api/v1/acls/dcos:mesos:agent:framework:role:slave_public \
+-d '{&quot;description&quot;:&quot;Grants access to view Mesos agent information about frameworks registered with the slave_public role&quot;}'
+curl -X PUT --cacert dcos-ca.crt \
+-H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; \
+-H 'Content-Type: application/json' $(dcos config show core.dcos_url)/acs/api/v1/acls/dcos:mesos:agent:executor:app_id:%252F&lt;gid&gt; \
+-d '{&quot;description&quot;:&quot;Grants access to executors running on the Mesos agent inside &lt;gid&gt;&quot;}'
+curl -X PUT --cacert dcos-ca.crt \
+-H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; \
+-H 'Content-Type: application/json' $(dcos config show core.dcos_url)/acs/api/v1/acls/dcos:mesos:agent:task:app_id:%252F&lt;gid&gt; \
+-d '{&quot;description&quot;:&quot;Grants access to tasks running on the Mesos agent inside &lt;gid&gt;&quot;}'
+curl -X PUT --cacert dcos-ca.crt \
+-H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; \
+-H 'Content-Type: application/json' $(dcos config show core.dcos_url)/acs/api/v1/acls/dcos:mesos:agent:sandbox:app_id:%252F&lt;gid&gt; \
+-d '{&quot;description&quot;:&quot;Grants access to the sandboxes on the Mesos agent inside &lt;gid&gt;&quot;}'
+</code></pre>
+</li>
+<li>
+<p>使用以下命令向用户授予权限 (<code>&lt;username&gt;</code>). 这些将允许她在  中查看任务日志。<code>&lt;gid&gt;</code>.</p>
+<pre><code class="language-bash">curl -X PUT --cacert dcos-ca.crt \
+-H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; $(dcos config show core.dcos_url)/acs/api/v1/acls/dcos:adminrouter:ops:mesos/users/&lt;username&gt;/full
+curl -X PUT --cacert dcos-ca.crt \
+-H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; $(dcos config show core.dcos_url)/acs/api/v1/acls/dcos:adminrouter:ops:slave/users/&lt;username&gt;/full
+curl -X PUT --cacert dcos-ca.crt \
+-H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; $(dcos config show core.dcos_url)/acs/api/v1/acls/dcos:mesos:master:framework:role:slave_public/users/&lt;username&gt;/read
+curl -X PUT --cacert dcos-ca.crt \
+-H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; $(dcos config show core.dcos_url)/acs/api/v1/acls/dcos:mesos:master:executor:app_id:%252F&lt;gid&gt;/users/&lt;username&gt;/read
+curl -X PUT --cacert dcos-ca.crt \
+-H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; $(dcos config show core.dcos_url)/acs/api/v1/acls/dcos:mesos:master:task:app_id:%252F&lt;gid&gt;/users/&lt;username&gt;/read
+curl -X PUT --cacert dcos-ca.crt \
+-H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; $(dcos config show core.dcos_url)/acs/api/v1/acls/dcos:mesos:agent:framework:role:slave_public/users/&lt;username&gt;/read
+curl -X PUT --cacert dcos-ca.crt \
+-H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; $(dcos config show core.dcos_url)/acs/api/v1/acls/dcos:mesos:agent:executor:app_id:%252F&lt;gid&gt;/users/&lt;username&gt;/read
+curl -X PUT --cacert dcos-ca.crt \
+-H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; $(dcos config show core.dcos_url)/acs/api/v1/acls/dcos:mesos:agent:task:app_id:%252F&lt;gid&gt;/users/&lt;username&gt;/read
+curl -X PUT --cacert dcos-ca.crt \
+-H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; $(dcos config show core.dcos_url)/acs/api/v1/acls/dcos:mesos:agent:sandbox:app_id:%252F&lt;gid&gt;/users/&lt;username&gt;/read
+</code></pre>
+</li>
+</ol>
+<p>现在您可以 <a href="#verifying-access">验证访问权限</a>。</p>
+<h1 id="-7"><a class="content__anchor" href="#-7" aria-hidden="true"><i data-feather="bookmark"></i></a>验证访问权限</h1>
+<ol>
+<li>
+<p>以用户身份登录到 DC/OS CLI。</p>
+<pre><code class="language-bash">dcos auth login
+</code></pre>
+</li>
+<li>
+<p>运行此命令以访问用户有权访问的服务的日志。</p>
+<pre><code class="language-bash">dcos task log --follow &lt;service-name&gt;
+</code></pre>
+<p>例如，如果您的服务名是 <code>alice-service</code>:</p>
+<pre><code class="language-bash">dcos task log --follow alice-service
+</code></pre>
+<p>输出应类似于：</p>
+<pre><code class="language-bash">Executing pre-exec command '{&quot;arguments&quot;:[&quot;mesos-containerizer&quot;,&quot;mount&quot;,&quot;--help=false&quot;,&quot;--operation=make-rslave&quot;,&quot;--path=\/&quot;],&quot;shell&quot;:false,&quot;value&quot;:&quot;\/opt\/mesosphere\/active\/mesos\/libexec\/mesos\/mesos-containerizer&quot;}'
+Executing pre-exec command '{&quot;shell&quot;:true,&quot;value&quot;:&quot;mount -n -t proc proc \/proc -o nosuid,noexec,nodev&quot;}'
+Executing pre-exec command '{&quot;arguments&quot;:[&quot;mount&quot;,&quot;-n&quot;,&quot;-t&quot;,&quot;ramfs&quot;,&quot;ramfs&quot;,&quot;\/var\/lib\/mesos\/slave\/slaves\/151ee739-d2b9-4024-8dbd-1345148774df-S1\/frameworks\/151ee739-d2b9-4024-8dbd-1345148774df-0001\/executors\/dev-group_alice-service.363072a5-65b5-11e7-a133-1a6ac27c9efe\/runs\/b46bea37-f3bb-4d9b-b0b9-00b1215c8404\/.secret-48e7541e-6634-4c25-9185-986255249439&quot;],&quot;shell&quot;:false,&quot;value&quot;:&quot;mount&quot;}'
+</code></pre>
+<p>如果您没有正确的权限，您将看到以下输出：</p>
+<pre><code class="language-bash">You are not authorized to perform this operation
+</code></pre>
+</li>
+</ol>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#dcos-web">通过 DC/OS Web 界面</a></li><li class="content__sections-item content__sections-item--h1"><a href="#iam-api">通过 IAM API</a></li><li class="content__sections-item content__sections-item--h1"><a href="#-7">验证访问权限</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

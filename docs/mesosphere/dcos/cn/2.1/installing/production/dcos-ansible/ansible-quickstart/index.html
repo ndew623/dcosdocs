@@ -1,0 +1,205 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>DC/OS Ansible 快速入门指南 - D2iQ Docs</title><meta name="description" content="指导完成通过 Ansible 安装 DC/OS。"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS文档</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">中文 (简体)</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/2.1/installing/production/dcos-ansible/ansible-quickstart">English</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.1"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/dcos-ansible/ansible-quickstart">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/2.0/installing/production/dcos-ansible/ansible-quickstart">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/cn/1.13/installing/production/dcos-ansible/ansible-quickstart">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.1</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/release-notes/"><i data-feather="chevron-right"></i>版本注释</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/overview/"><i data-feather="chevron-right"></i>概述</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/"><i data-feather="chevron-right"></i>安装</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/evaluation/"><i data-feather="chevron-right"></i>云安装</a></li><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/"><i data-feather="chevron-right"></i>本地安装</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/virt-infra/">虚拟基础架构</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/system-requirements/"><i data-feather="chevron-right"></i>系统要求</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/deploying-dcos/"><i data-feather="chevron-right"></i>部署 DC/OS</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/advanced-configuration/"><i data-feather="chevron-right"></i>高级配置</a></li><li class="active"><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/dcos-ansible/"><i data-feather="chevron-right"></i>带 Ansible 的 DC/OS</a></li><ul><li class="active active-on"><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/dcos-ansible/ansible-quickstart/">Ansible 快速入门</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/dcos-ansible/ansible-faq/">DC/OS Ansible 常见问题</a></li></ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/patching/">打补丁</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/upgrading/">升级</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/uninstalling/">卸载</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/installation-faq/">常见问题</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/troubleshooting/">故障排除</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/administering-clusters/"><i data-feather="chevron-right"></i>管理群集</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/networking/"><i data-feather="chevron-right"></i>网络</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/security/"><i data-feather="chevron-right"></i>安全</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/storage/"><i data-feather="chevron-right"></i>存储</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/metrics/"><i data-feather="chevron-right"></i>度量标准</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/monitoring/"><i data-feather="chevron-right"></i>监控、日志记录和调试</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/multi-tenancy/"><i data-feather="chevron-right"></i>DC/OS 群集的多租户</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/hybrid-cloud/"><i data-feather="chevron-right"></i>混合云</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-jobs/"><i data-feather="chevron-right"></i>部署作业</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/deploying-services/"><i data-feather="chevron-right"></i>部署服务和 Pod</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/tutorials/"><i data-feather="chevron-right"></i>教程</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/api/"><i data-feather="chevron-right"></i>API 参考</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/cn/2.1/developing-services/"><i data-feather="chevron-right"></i>开发 DC/OS 服务</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">DC/OS Ansible 快速入门指南</h1></div><h4 class="content__header-description">指导完成通过 Ansible 安装 DC/OS。</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/dcos-ansible/ansible-quickstart/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>如果您是 Ansible 新手和/或希望使用 Ansible 快速轻松地部署 DC/OS，请遵循本指南。我们将逐步指导您如何：</p>
+<ul>
+<li>下载 DC/OS Ansible 内容</li>
+<li>为 DC/OS 配置 Ansible</li>
+<li>通过 Ansible 创建 DC/OS 群集</li>
+<li>将群集升级到更新版本的 DC/OS</li>
+</ul>
+<h2 id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a>前提条件和设置</h2>
+<ol>
+<li>
+<p>您需要安装了 <a href="https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html">Ansible</a> 和 <a href="https://galaxy.ansible.com/docs/mazer/install.html">Mazer 0.4</a>。有关更多安装信息，请参考链接。
+使用 Mac，您可以通过 brew 安装，然后使用您的 pip 版本安装 Mazer：</p>
+<pre><code class="language-bash">brew install ansible &amp;&amp; pip install mazer==0.4.0
+</code></pre>
+<p>或者，您也可以使用 pip 安装 Anzer 和 Mazer：</p>
+<pre><code class="language-bash">pip install ansible mazer==0.4.0
+</code></pre>
+<p>关于 Windows 安装，请参阅 <a href="https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#control-machine-requirements">Ansible 文档</a> 获取有关如何在 Windows 上安装的更多信息，或者，也您可以 SSH 到 bootstrap 主机（见下文），然后从那里部署和运行 Ansible。</p>
+</li>
+<li>
+<p>配置具有 SSH 访问权限的群集节点列表。您最少需要 4 个节点（CentOS 或 RedHat），通过具有根级别特权的用户提供 SSH 连接：</p>
+<ul>
+<li>1 个 bootstrap</li>
+<li>1 个管理节点</li>
+<li>1 个专用代理</li>
+<li>1 个公共代理</li>
+</ul>
+</li>
+</ol>
+<p>请参阅 <a href="/dcosdocs/mesosphere/dcos/cn/2.1/installing/production/system-requirements/">最低系统要求</a> 以及支持的 CentOS 和 Redhat Enterprise Linux (RHEL) <a href="/dcosdocs/mesosphere/dcos/cn/version-policy/#dcos-platform-version-compatibility-matrix/">您的节点的版本</a>，尤其是在针对生产环境进行计划时。
+有关为 Ansible 设置 SSH 连接的更多信息，请参阅 <a href="https://docs.ansible.com/ansible/latest/user_guide/intro_getting_started.html#remote-connection-information">远程连接文档</a>.
+如果您要安装 DC/OS Enterprise Edition，则还需要一个适当的许可密钥。</p>
+<p class="message--note"><strong>注意：</strong>注册 Enterprise 客户可以从<a href="https://support.mesosphere.com/s/downloads">支持网站</a>.访问 DC/OS Enterprise 配置文件。对于新客户，请联系您的销售代表或 <a href="mailto:sales@mesosphere.io">sales@mesosphere.io</a> 获取更多信息。</p>
+<h2 id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a>下载内容</h2>
+<p>我们维护并托管 <a href="https://galaxy.ansible.com/dcos/dcos_ansible">Ansible Galaxy 上的 DC/OS Ansible 项目</a> 以便消耗。目前，我们以及 RedHat 都建议使用 Mazer 工具将所有必要内容本地下载到您的机器上。有关 Mazer 工具和如何配置的更多信息，请参阅 <a href="https://galaxy.ansible.com/docs/mazer/index.html">此处的项目文档</a>。</p>
+<ol>
+<li>
+<p>发出以下命令以下载内容：</p>
+<pre><code class="language-bash">mazer install dcos.dcos_ansible
+</code></pre>
+<p>这会默认将内容安装在 <code>~/.ansible/collections/ansible_collections</code> 但是，如果您有较早版本的 <code>mazer</code> 或者在您的 <code>mazer.yml</code> 有不同的内容路径，那么将安装在那里。您可以发出 <code>mazer version</code> 来查找 Mazer 配置文件的位置。</p>
+</li>
+<li>
+<p>在您的内容路径中，切换到 dcos_ansible 角色。</p>
+<pre><code class="language-bash">cd ~/.ansible/collections/ansible_collections/dcos/dcos_ansible
+</code></pre>
+</li>
+<li>
+<p>Mazer 将在此目录中按版本下载您的角色，例如 <code>dcos-ansible-0.51.0</code>. 找到该版本并将目录切换到所需版本以执行后续步骤：</p>
+<pre><code class="language-bash">cd dcos-ansible-0.51.0
+</code></pre>
+</li>
+</ol>
+<h2 id="dcos-ansible"><a class="content__anchor" href="#dcos-ansible" aria-hidden="true"><i data-feather="bookmark"></i></a>为您的 DC/OS 群集配置 Ansible</h2>
+<p>当您在本地下载内容后，您可以开始对其修改以满足您的特定需求。您需要配置以下文件才能开始：</p>
+<ul>
+<li>清单文件 (<code>inventory</code>) - 您将指定您的哪些节点将被用作 bootstrap、管理节点、专用代理或公共代理。</li>
+<li>组变量文件 (<code>/group_vars/all/dcos.yml</code>) - 此文件用于管理 OS 前提条件以及如何安装和配置 DC/OS。</li>
+<li>Ansible 配置 (<code>ansible.cfg</code>) - 您想让 Ansible 在您的环境中运行的方式。此外，大多数默认值是可接受的，除了 <code>remote_user</code>.</li>
+</ul>
+<p>您可以使用 DC/OS Ansible 来安装 DC/OS 和 DC/OS Enterprise。请按照以下说明进行操作，并注明时根据您的变量进行调整。这里，我们将安装版本 <code>1.13.0</code>.</p>
+<ol>
+<li>
+<p>在 <code>~/.ansible/collections/ansible_collections/dcos/dcos_ansible/dcos-ansible-X.X.X</code> 目录中，将清单和组变量示例文件重命名为新文件：</p>
+<pre><code class="language-bash">mv inventory.example inventory &amp;&amp; \
+mv group_vars/all/dcos.yaml.example group_vars/all/dcos.yml
+</code></pre>
+</li>
+<li>
+<p>打开 <code>inventory</code> 文件。在 <code>[bootstrap]</code>、<code>[masters]</code>、<code>[agents_private]</code> 和 <code>[agents_public]</code>. 所需组的下方，列出每个相应的节点 IP，如前提条件中所述。如果您是在公共云上部署，则这些是节点的外部 IP。</p>
+</li>
+<li>
+<p>在变量文件 (<code>group_vars/all/dcos.yml</code>) 中，根据您的变量在 <code>dcos</code> 下设置下列值：</p>
+<p><span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></p>
+<pre><code class="language-yaml"># ...
+download: &quot;https://downloads.mesosphere.com/dcos-enterprise/stable/1.13.0/dcos_generate_config.ee.sh&quot;
+# ...
+</code></pre>
+<p><span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--oss">Open Source</span></span></p>
+<pre><code class="language-yaml"># ...
+download: &quot;https://downloads.dcos.io/dcos/stable/1.13.0/dcos_generate_config.sh&quot;
+version: &quot;1.13.0&quot;
+enterprise_dcos: false
+# ...
+</code></pre>
+</li>
+<li>
+<p>同样在变量文件中，在  下设置以下值。<code>config</code>. Enterprise 用户在此添加您的许可证密钥。（可选：在 <code>ip_detect_contents</code> 或 <code>ip_detect_public_contents</code> 中为您的环境指定特殊脚本，您可以在此处找到默认值 <a href="https://github.com/dcos/dcos-ansible/blob/master/roles/dcos_bootstrap/templates/onprem/ip-detect.j2">ip-detect</a> <a href="https://github.com/dcos/dcos-ansible/blob/master/roles/dcos_bootstrap/templates/onprem/ip-detect-public.j2">ip-detect-public</a>):</p>
+<pre><code class="language-yaml"># ...
+cluster_name: &lt;your-cluster-name&gt;
+
+# The Hostname or IP of you bootstrap node at port 8080 (If you are deploying on a public cloud, this is the private IPs of the node)
+bootstrap_url: &lt;bootstrap-IP-or-hostname&gt;:8080
+
+# Change the value(s) list to the IP(s) of your master node(s) used in the [master] inventory group. (If you are deploying on a public cloud, those are the private IPs of the node)
+master_list:
+  - IP1
+  - IP2
+
+# Add and uncomment this line for enterprise; paste or pass in your license key here
+# license_key_contents: “YOUR_ENT_LICENSE_CONTENTS”
+#
+# This is an ip-detect script example which also stands for ip_detect_public_contents
+# more info about ip-detect can be found here: /dcosdocs/mesosphere/dcos/2.1/installing/production/deploying-dcos/installation/#create-an-ip-detection-script
+# ip_detect_contents: |
+#   #!/bin/sh
+#   set -o nounset -o errexit
+#   ip addr show dev eth1 primary | awk '/(inet .*\/)/ { print $2 }' | cut -d'/' -f1
+</code></pre>
+</li>
+<li>
+<p>（可选）在 <code>ansible.cfg</code> 中，将适当的 <code>remote_user</code> 设置为您将要在节点上连接的用户。默认设置为 <code>centos</code>.</p>
+</li>
+</ol>
+<h2 id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a>确认您的设置</h2>
+<p>要测试所有设置是否正确，请使用 ping 模块并确保与所有节点的连接性：</p>
+<pre><code class="language-bash">ansible -m ping all
+</code></pre>
+<p>哪种应返回：</p>
+<pre><code class="language-bash">bootstrap | SUCCESS =&gt; {
+    &quot;changed&quot;: false,
+    &quot;ping&quot;: &quot;pong&quot;
+}
+master | SUCCESS =&gt; {
+    &quot;changed&quot;: false,
+    &quot;ping&quot;: &quot;pong&quot;
+}
+private-agent | SUCCESS =&gt; {
+    &quot;changed&quot;: false,
+    &quot;ping&quot;: &quot;pong&quot;
+}
+public-agent | SUCCESS =&gt; {
+    &quot;changed&quot;: false,
+    &quot;ping&quot;: &quot;pong&quot;
+}
+</code></pre>
+<h2 id="dcos"><a class="content__anchor" href="#dcos" aria-hidden="true"><i data-feather="bookmark"></i></a>创建 DC/OS 群集</h2>
+<p>我们提供了一个简单的 playbook，以便运行整个安装和管理 DC/OS 的过程，包括基于 OS 的所有先决条件。将安装的 DC/OS 版本基于您在变量文件中为 <code>download</code> 和 <code>version</code>. 配置的值。这些值对安装和升级群集至关重要。</p>
+<p>要安装 DC/OS，请运行以下命令来执行 playbook。</p>
+<pre><code class="language-bash">ansible-playbook dcos.yml
+</code></pre>
+<p><strong>注意：在 DC/OS 安装之前，您需要按 Enter 继续安装或 Ctrl-C 以取消安装。</strong></p>
+<pre><code class="language-bash">TASK [DCOS.bootstrap : Double check the prefix/cluster name and version]
+****************************************************************************************************************
+[DCOS.bootstrap : Double check the prefix/cluster name and version]
+Please double check the prefix/cluster name and version of this cluster:
+
+  Cluster: dcosansible
+  Version: 1.13.0 -&gt; 1.13.0
+  Commit:  None
+  via:     http://downloads.mesosphere.com/dcos-enterprise/stable/1.13.0/dcos_generate_config.ee.sh
+
+PRESS *ENTER* OR CANCEL NOW IF IT ISN'T CORRECT
+</code></pre>
+<p>当 ansible 完成时，您应该看到没有错误的输出，如下所示：</p>
+<pre><code class="language-bash">PLAY RECAP ****************************************************************************************************************
+bootstrap                  : ok=24   changed=5    unreachable=0    failed=0
+master                     : ok=24   changed=5    unreachable=0    failed=0
+private_agent              : ok=24   changed=5    unreachable=0    failed=0
+public_agent               : ok=24   changed=5    unreachable=0    failed=0
+</code></pre>
+<p>我们非常轻松地创建了运行版本 1.13.0 的 DC/OS 版本。现在，您可以通过您的管理节点访问 DC/OS：<code>http://master-node-ip</code></p>
+<h2 id="-4"><a class="content__anchor" href="#-4" aria-hidden="true"><i data-feather="bookmark"></i></a>正在登录</h2>
+<p>要访问用户界面，将要求您登录。</p>
+<p>如果安装了 DC/OS Enterprise，您可以使用默认演示凭据登录。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></p>
+<ul>
+<li><code>username: bootstrapuser</code></li>
+<li><code>password: deleteme</code></li>
+</ul>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/dcos-ee-login.png" alt="enterprise-Login-Page"></p>
+<p>如果您安装了 DC/OS 开源，请选择所需的 OAuth 提供程序。<span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--oss">Open Source</span></span></p>
+<p><img src="/dcosdocs/mesosphere/dcos/cn/2.1/img/dcos-oe-login.png" alt="oss-login-page"></p>
+<h2 id="-5"><a class="content__anchor" href="#-5" aria-hidden="true"><i data-feather="bookmark"></i></a>升级和管理群集</h2>
+<p>使用 Ansible，将群集升级到更新版本的 DC/OS 并使配置更改变得非常简单。这些模块设计用于自动检测群集和节点的状态，并自动将其设置为较新的声明状态。甚至可以同时更改代理节点配置和升级 DC/OS。</p>
+<ol>
+<li>
+<p>例如，要升级：在变量文件 (<code>group_vars/all/dcos.yml</code>) 中，根据您的变量在 <code>dcos</code> 下设置下列值：</p>
+<p><span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--enterprise">Enterprise</span></span></p>
+<pre><code class="language-bash"># ...
+download: “http://downloads.mesosphere.com/dcos-enterprise/stable/1.13.0/dcos_generate_config.ee.sh”`
+# ...
+</code></pre>
+<p><span class="badge__container badge__container--inline"><span class="badge badge--shortcode badge--small badge--inline badge--oss">Open Source</span></span></p>
+<pre><code class="language-bash"># ...
+download: “https://downloads.dcos.io/dcos/stable/1.13.0/dcos_generate_config.sh”
+version: “1.13.0&quot;
+enterprise_dcos: false
+# ...
+</code></pre>
+</li>
+<li>
+<p>要添加额外代理节点：首先让它们转换并可用。然后，打开 <code>inventory</code> 文件。在 <code>[agents_private]</code> 和 <code>[agents_public]</code>. 所需组的下方，列出每个相应的节点 IP，如前提条件中所述。</p>
+</li>
+<li>
+<p>保存所有更改并再次运行 playbook 以更新群集。Ansible 模块将自动计算更改并按顺序执行。</p>
+<pre><code class="language-bash">ansible-playbook dcos.yml
+</code></pre>
+</li>
+</ol>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#前提条件和设置">前提条件和设置</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-2">下载内容</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-ansible">为您的 DC/OS 群集配置 Ansible</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-3">确认您的设置</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos">创建 DC/OS 群集</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-4">正在登录</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-5">升级和管理群集</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

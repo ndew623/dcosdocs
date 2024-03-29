@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Configuration - D2iQ Docs</title><meta name="description" content="Configuring Kafka and ZooKeeper"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>Beta Kafka Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn/services">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS Services"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><div class="toggle"><p><span class="title">Beta Kafka</span><span class="version"> 2.10.0-2.4.0-beta</span></p></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-kafka/2.10.0-2.4.0-beta/release-notes/">Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-kafka/2.10.0-2.4.0-beta/started/">Get Started</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-kafka/2.10.0-2.4.0-beta/operations/">Operations</a></li><li class="active active-on"><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-kafka/2.10.0-2.4.0-beta/configuration/">Configuration</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-kafka/2.10.0-2.4.0-beta/updates/">Update</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-kafka/2.10.0-2.4.0-beta/security/">Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-kafka/2.10.0-2.4.0-beta/uninstall/">Uninstall Kafka</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-kafka/2.10.0-2.4.0-beta/troubleshooting/">Diagnose Kafka</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-kafka/2.10.0-2.4.0-beta/advanced/">Advanced</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-kafka/2.10.0-2.4.0-beta/reference/">API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-kafka/2.10.0-2.4.0-beta/limitations/">Limitations</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/services/beta-kafka/2.10.0-2.4.0-beta/policy/">Support Policy</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Configuration</h1><p class="badge badge--content-header badge--beta">BETA</p></div><h4 class="content__header-description">Configuring Kafka and ZooKeeper</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/services/beta-kafka/2.10.0-2.4.0-beta/configuration/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- This file is usually found in the Configuration section. -->
+<p>The default DC/OS Apache Kafka installation provides reasonable defaults for trying out the service, but may not be sufficient for production use. You may require a different configuration depending on the context of the deployment.</p>
+<h2 id="installing-with-custom-configuration"><a class="content__anchor" href="#installing-with-custom-configuration" aria-hidden="true"><i data-feather="bookmark"></i></a>Installing with Custom Configuration</h2>
+<p>The following are some examples of how to customize the installation of your Apache Kafka instance.</p>
+<p>In each case, you would create a new Apache Kafka instance using the custom configuration as follows:</p>
+<pre><code class="language-bash">dcos package install beta-kafka --options=sample-kafka.json
+</code></pre>
+<p>We recommend that you store your custom configuration in source control.</p>
+<h3 id="installing-multiple-instances"><a class="content__anchor" href="#installing-multiple-instances" aria-hidden="true"><i data-feather="bookmark"></i></a>Installing multiple instances</h3>
+<p>By default, the Apache Kafka service is installed with a service name of <code>kafka</code>. You may specify a different name using a custom service configuration as follows:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;name&quot;: &quot;kafka-other&quot;
+  }
+}
+</code></pre>
+<p>When the above JSON configuration is passed to the <code>package install beta-kafka</code> command via the <code>--options</code> argument, the new service will use the name specified in that JSON configuration:</p>
+<pre><code class="language-bash">dcos package install beta-kafka --options=kafka-other.json
+</code></pre>
+<p>Multiple instances of Apache Kafka may be installed into your DC/OS cluster by customizing the name of each instance. For example, you might have one instance of Apache Kafka named <code>kafka-staging</code> and another named <code>kafka-prod</code>, each with its own custom configuration.</p>
+<p>After specifying a custom name for your instance, it can be reached using <code>dcos beta-kafka</code> CLI commands or directly over HTTP as described <a href="#addressing-named-instances">below</a>.</p>
+<p class="message--warning"><strong>WARNING: </strong>The service name <strong>cannot</strong> be changed after initial install. Changing the service name would require installing a new instance of the service against the new name, then copying over any data as necessary to the new instance.</p>
+<h3 id="installing-into-folders"><a class="content__anchor" href="#installing-into-folders" aria-hidden="true"><i data-feather="bookmark"></i></a>Installing into folders</h3>
+<p>In DC/OS 1.10 and later, services may be installed into folders by specifying a slash-delimited service name. For example:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;name&quot;: &quot;/foldered/path/to/kafka&quot;
+  }
+}
+</code></pre>
+<p>The above example will install the service under a path of <code>foldered</code> =&gt; <code>path</code> =&gt; <code>to</code> =&gt; <code>kafka</code>. It can then be reached using <code>dcos beta-kafka</code> CLI commands or directly over HTTP as described <a href="#addressing-named-instances">below</a>.</p>
+<p class="message--warning"><strong>WARNING: </strong>The service folder location <strong>cannot</strong> be changed after initial install. Changing the folder location would require installing a new instance of the service against the new name, then copying over any data as necessary to the new instance.</p>
+<h3 id="addressing-named-instances"><a class="content__anchor" href="#addressing-named-instances" aria-hidden="true"><i data-feather="bookmark"></i></a>Addressing named instances</h3>
+<p>After you’ve installed the service under a custom name or under a folder, it may be accessed from all <code>dcos beta-kafka</code> CLI commands using the <code>--name</code> argument. By default, the <code>--name</code> value defaults to the name of the package, or <code>beta-kafka</code>.</p>
+<p>For example, if you had an instance named <code>kafka-dev</code>, the following command would invoke a <code>pod list</code> command against it:</p>
+<pre><code class="language-bash">dcos beta-kafka --name=kafka-dev pod list
+</code></pre>
+<p>The same query would be over HTTP as follows:</p>
+<pre><code class="language-bash">curl -H &quot;Authorization:token=$auth_token&quot; &lt;dcos_url&gt;/service/kafka-dev/v1/pod
+</code></pre>
+<p>Likewise, if you had an instance in a folder like <code>/foldered/path/to/kafka</code>, the following command would invoke a <code>pod list</code> command against it:</p>
+<pre><code class="language-bash">dcos beta-kafka --name=/foldered/path/to/kafka pod list
+</code></pre>
+<p>Similarly, it could be queried directly over HTTP as follows:</p>
+<pre><code class="language-bash">curl -H &quot;Authorization:token=$auth_token&quot; &lt;dcos_url&gt;/service/foldered/path/to/kafka-dev/v1/pod
+</code></pre>
+<p>You may add a <code>-v</code> (verbose) argument to any <code>dcos beta-kafka</code> command to see the underlying HTTP queries that are being made. This can be a useful tool to see where the CLI is getting its information. In practice, <code>dcos beta-kafka</code> commands are a thin wrapper around an HTTP interface provided by the DC/OS Apache Kafka Service itself.</p>
+<h3 id="integration-with-dcos-access-controls"><a class="content__anchor" href="#integration-with-dcos-access-controls" aria-hidden="true"><i data-feather="bookmark"></i></a>Integration with DC/OS access controls</h3>
+<p>In Enterprise DC/OS, DC/OS access controls can be used to restrict access to your service. To give a non-superuser complete access to a service, grant them the following list of permissions:</p>
+<pre><code>dcos:adminrouter:service:marathon full
+dcos:service:marathon:marathon:&lt;service-name&gt; full
+dcos:service:adminrouter:&lt;service-name&gt; full
+dcos:adminrouter:ops:mesos full
+dcos:adminrouter:ops:slave full
+</code></pre>
+<p>Where <code>&lt;service-name&gt;</code> is your full service name, including the folder if it is installed in one.</p>
+<h2 id="service-settings"><a class="content__anchor" href="#service-settings" aria-hidden="true"><i data-feather="bookmark"></i></a>Service Settings</h2>
+<h3 id="placement-constraints"><a class="content__anchor" href="#placement-constraints" aria-hidden="true"><i data-feather="bookmark"></i></a>Placement Constraints</h3>
+<p>Placement constraints allow you to customize where a service is deployed in the DC/OS cluster. Placement constraints  use the <a href="http://mesosphere.github.io/marathon/docs/constraints.html">Marathon operators</a> syntax. For example, <code>[[&quot;hostname&quot;, &quot;UNIQUE&quot;]]</code> ensures that at most one pod instance is deployed per agent.</p>
+<p>A common task is to specify a list of whitelisted systems to deploy to. To achieve this, use the following syntax for the placement constraint:</p>
+<pre><code>[[&quot;hostname&quot;, &quot;LIKE&quot;, &quot;10.0.0.159|10.0.1.202|10.0.3.3&quot;]]
+</code></pre>
+<p class="message--important"><strong>IMPORTANT: </strong>Be sure to include excess capacity in such a scenario so that if one of the whitelisted systems goes down, there is still enough capacity to repair your service.</p>
+<h4 id="updating-placement-constraints"><a class="content__anchor" href="#updating-placement-constraints" aria-hidden="true"><i data-feather="bookmark"></i></a>Updating Placement Constraints</h4>
+<p>Clusters change, and as such so will your placement constraints. However, already running service pods will <strong>not</strong> be affected by changes in placement constraints. This is because altering a placement constraint might invalidate the current placement of a running pod, and the pod will not be relocated automatically as doing so is a destructive action. We recommend using the following procedure to update the placement constraints of a pod:</p>
+<ul>
+<li>Update the placement constraint definition in the service.</li>
+<li>For each affected pod, one at a time, perform a <code>pod replace</code>. This will (destructively) move the pod to be in accordance with the new placement constraints.</li>
+</ul>
+<h3 id="zones-enterprise"><a class="content__anchor" href="#zones-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>Zones <span class="badge badge--shortcode badge--large badge--block badge--enterprise">Enterprise</span></h3>
+<p><strong>Requires:</strong> DC/OS 1.11 Enterprise or later.</p>
+<p>Placement constraints can be applied to DC/OS zones by referring to the <code>@zone</code> key. For example, one could spread pods across a minimum of three different zones by including this constraint:</p>
+<pre><code>[[&quot;@zone&quot;, &quot;GROUP_BY&quot;, &quot;3&quot;]]
+</code></pre>
+<p>For the @zone constraint to be applied correctly, DC/OS must have <a href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/fault-domain-awareness/">Fault Domain Awareness</a> enabled and configured.</p>
+<p class="message--warning"><strong>WARNING: </strong>A service installed without a zone constraint cannot be updated to have one, and a service installed with a zone constraint may not have it removed.</p>
+<h3 id="virtual-networks"><a class="content__anchor" href="#virtual-networks" aria-hidden="true"><i data-feather="bookmark"></i></a>Virtual networks</h3>
+<p>DC/OS Apache Kafka supports deployment on <a href="/dcosdocs/mesosphere/dcos/latest/networking/SDN/dcos-overlay/">virtual networks</a> on DC/OS (including the <code>dcos</code> overlay network), allowing each container (task) to have its own IP address and not use port resources on the agent machines. This can be specified by passing the following configuration during installation:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;virtual_network_enabled&quot;: true
+  }
+}
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>Once the service is deployed on a virtual network, it cannot be updated to use the host network.</p>
+<h3 id="user"><a class="content__anchor" href="#user" aria-hidden="true"><i data-feather="bookmark"></i></a>User</h3>
+<p>By default, all pods’ containers will be started as system user “nobody”. If your system configured for using over system user (for instance, you may have externally mounted persistent volumes with root’s permissions), you can define the user by defining a custom value for the service’s property “user”, for example:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;properties&quot;: {
+      &quot;user&quot;: &quot;root&quot;
+    }
+  }
+}
+</code></pre>
+<h3 id="regions"><a class="content__anchor" href="#regions" aria-hidden="true"><i data-feather="bookmark"></i></a>Regions</h3>
+<p>The service parameter <code>region</code> can be used to deploy the service in an alternate region. By default the service is deployed in the “local” region, which is the region the DC/OS masters are running in. To install a service in a specific reason, include in its options:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;region&quot;: &quot;&lt;region&gt;&quot;
+  }
+}
+</code></pre>
+<p class="message--warning"><strong>WARNING: </strong>A service may not be moved between regions.</p>
+<h2 id="configuring-the-zookeeper-connection"><a class="content__anchor" href="#configuring-the-zookeeper-connection" aria-hidden="true"><i data-feather="bookmark"></i></a>Configuring the ZooKeeper Connection</h2>
+<p>Apache Kafka requires a running ZooKeeper ensemble to perform its own internal accounting. By default, the DC/OS Apache Kafka Service uses the ZooKeeper ensemble made available on the Mesos masters of a DC/OS cluster at <code>master.mesos:2181/dcos-service-&lt;servicename&gt;</code>. At install time, you can configure an alternate ZooKeeper for Beta Kafka to use. This enables you to increase Beta Kafka’s capacity and removes the DC/OS System ZooKeeper ensemble’s involvement in running it.</p>
+<p>To configure an alternate Zookeeper instance:</p>
+<ol>
+<li>
+<p>Create a file named <code>options.json</code> with the following contents. If you are using the <a href="/dcosdocs/mesosphere/dcos/services/kafka-zookeeper">DC/OS Apache ZooKeeper service</a>, use the DNS addresses provided by the <code>dcos kafka-zookeeper endpoints clientport</code> command as the value of <code>kafka_zookeeper_uri</code>.</p>
+<p>Here is an example <code>options.json</code> which points to a <code>kafka-zookeeper</code> instance named <code>kafka-zookeeper</code>:</p>
+<pre><code class="language-json">{
+  &quot;kafka&quot;: {
+    &quot;kafka_zookeeper_uri&quot;: &quot;zookeeper-0-server.kafka-zookeeper.autoip.dcos.thisdcos.directory:1140,zookeeper-1-server.kafka-zookeeper.autoip.dcos.thisdcos.directory:1140,zookeeper-2-server.kafka-zookeeper.autoip.dcos.thisdcos.directory:1140&quot;
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>Install Beta Kafka with the options file you created.</p>
+<pre><code class="language-bash">dcos package install beta-kafka --options=&quot;options.json&quot;
+</code></pre>
+</li>
+</ol>
+<p>You can also update an already-running Beta Kafka instance from the DC/OS CLI, in case you need to migrate your ZooKeeper data elsewhere.</p>
+<p class="message--note"><strong>NOTE: </strong> Before performing this configuration change, you must first copy the data from your current ZooKeeper ensemble to the new ZooKeeper ensemble. The new location must have the same data as the previous location during the migration.</p>
+<pre><code class="language-bash">dcos beta-kafka --name=kafka update start --options=options.json
+</code></pre>
+<h2 id="zonerack-aware-placement-and-replication"><a class="content__anchor" href="#zonerack-aware-placement-and-replication" aria-hidden="true"><i data-feather="bookmark"></i></a>Zone/Rack-Aware Placement and Replication</h2>
+<p>Beta Kafka’s “rack”-based fault domain support is automatically enabled when specifying a placement constraint that uses the <code>@zone</code> key. For example, you could spread Beta Kafka nodes across a minimum of three different zones/racks by       specifying the constraint <code>[[&quot;@zone&quot;, &quot;GROUP_BY&quot;, &quot;3&quot;]]</code>. When a placement constraint specifying <code>@zone</code> is used, Beta Kafka nodes will be automatically configured with <code>rack</code>s that match the names of the zones. If no placement constraint referencing <code>@ zone</code> is configured, all nodes will be configured with a default rack of <code>rack1</code>.</p>
+<p>In addition to placing the tasks on different zones/racks, the zone/rack information will be added to each Kafka broker’s broker.rack setting. This enables Kafka to ensure data is replicated between zones/racks and not to two nodes in the same zone/rack.</p>
+<h2 id="extend-the-kill-grace-period"><a class="content__anchor" href="#extend-the-kill-grace-period" aria-hidden="true"><i data-feather="bookmark"></i></a>Extend the Kill Grace Period</h2>
+<p>When performing a requested restart or replace of a running broker, the Beta Kafka service will wait a default of <code>30</code> seconds for a broker to exit, before killing the process. This grace period may be customized via the <code>brokers.kill_grace_period</code> setting. In this example, the DC/OS CLI is used to increase the grace period delay to 60 seconds. This example assumes that the Beta Kafka service instance is named <code>kafka</code>.</p>
+<p>During the configuration update, each of the Beta Kafka broker tasks are restarted. During the shutdown portion of the task restart, the previous configuration value for <code>brokers.kill_grace_period</code> is in effect. Following the shutdown, each broker task is launched with the new effective configuration value. Make sure to monitor the amount of time Beta Kafka brokers take to cleanly shut down by observing their logs.</p>
+<h3 id="replacing-a-broker-with-grace"><a class="content__anchor" href="#replacing-a-broker-with-grace" aria-hidden="true"><i data-feather="bookmark"></i></a>Replacing a Broker with Grace</h3>
+<p>The grace period must also be respected when a broker is shut down before replacement. While it is not ideal that a broker must respect the grace period even if it is going to lose persistent state, this behavior will be improved in future versions of the SDK. Broker replacement generally requires complex and time-consuming reconciliation activities at startup if there was not a graceful shutdown, so the respect of the grace kill period still provides value in most situations. It is recommended to set the kill grace period only sufficiently long enough to allow graceful shutdown. Monitor the Beta Kafka broker clean shutdown times in the broker logs to keep this value tuned to the scale of data flowing through the Beta Kafka service.</p>
+<h2 id="configuring-secure-jmx-enterprise"><a class="content__anchor" href="#configuring-secure-jmx-enterprise" aria-hidden="true"><i data-feather="bookmark"></i></a>Configuring Secure JMX <span class="badge badge--shortcode badge--large badge--block badge--enterprise">Enterprise</span></h2>
+<p>Apache Kafka supports Secure JMX allowing you to remotely manage and monitor the Kafka JRE. This can be specified by passing the following configuration during installation:</p>
+<pre><code class="language-json">{
+  &quot;service&quot;: {
+    &quot;jmx&quot;: {
+      &quot;enabled&quot;: true,
+      &quot;port&quot;: 31299,
+      &quot;rmi_port&quot;: 31298,
+      &quot;access_file&quot;: &quot;&lt;path_to_secret&gt;&quot;,
+      &quot;password_file&quot;: &quot;&lt;path_to_secret&gt;&quot;,
+      &quot;key_store&quot;: &quot;&lt;path_to_secret&gt;&quot;,
+      &quot;key_store_password_file&quot;: &quot;&lt;path_to_secret&gt;&quot;,
+      &quot;add_trust_store&quot;: true,
+      &quot;trust_store&quot;: &quot;&lt;path_to_secret&gt;&quot;,
+      &quot;trust_store_password_file&quot;: &quot;&lt;path_to_secret&gt;&quot;
+    }
+  }
+}
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong> Before performing this configuration change, you must create the necessary <a href="/dcosdocs/mesosphere/dcos/latest/security/ent/secrets/">DC/OS Secrets</a> for the options: <tt>access_file</tt>, <tt>password_file</tt>, <tt>key_store</tt>, <tt>key_store_password_file</tt>, <tt>trust_store</tt>, and <tt>trust_store_password_file</tt>.</p>
+<p>Refer to <a href="/dcosdocs/mesosphere/dcos/services/kafka/latest/advanced/#secure-jmx-enterprise">Secure JMX</a> for a more detailed configuration process.</p>
+<h2 id="configuring-volume-profiles"><a class="content__anchor" href="#configuring-volume-profiles" aria-hidden="true"><i data-feather="bookmark"></i></a>Configuring Volume Profiles</h2>
+<p><a href="https://docs.d2iq.com/dcosdocs/mesosphere/dcos/services/storage/1.0.0/">DC/OS Storage Service (DSS)</a> is a service that manages volumes, volume profiles, volume providers, and storage devices in a DC/OS cluster.</p>
+<p>Volume profiles are used to classify volumes. For example, users can group SSDs into a “fast” profile and group HDDs into a “slow” profile.</p>
+<p class="message--note"><strong>NOTE: </strong>Volume profiles are immutable and therefore cannot contain references to specific devices, nodes or other ephemeral identifiers.</p> 
+<p>Once the DC/OS cluster is running and volume profiles are created, you can deploy Beta Kafka with the following configs:</p>
+<pre><code class="language-bash">cat &gt; kafka-options.json &lt;&lt;EOF
+{
+    &quot;brokers&quot;: {
+        &quot;volume_profile&quot;: &quot;kafka&quot;,
+        &quot;disk_type&quot;: &quot;MOUNT&quot;
+    }
+}
+EOF
+</code></pre>
+<pre><code>dcos package install beta-kafka --options=kafka-options.json
+</code></pre>
+<p class="message--note"><strong>NOTE: </strong>Kafka will be configured to look for <tt>MOUNT</tt> volumes with the <tt>kafka</tt> profile.</p> 
+<p>Once the Beta Kafka service finishes deploying, its tasks will be running with the specified volume profiles.</p>
+<pre><code class="language-bash">dcos kafka update status
+deploy (serial strategy) (COMPLETE)
+└─ broker (serial strategy) (COMPLETE)
+   ├─ kafka-0:[broker] (COMPLETE)
+   ├─ kafka-1:[broker] (COMPLETE)
+   └─ kafka-2:[broker] (COMPLETE)
+</code></pre>
+<h2 id="configuring-service-health-checks"><a class="content__anchor" href="#configuring-service-health-checks" aria-hidden="true"><i data-feather="bookmark"></i></a>Configuring Service Health Checks</h2>
+<p>DC/OS Apache Kafka supports service oriented health checks, allowing you to monitor your service health in detail. This can be specified by passing the following configuration during installation:</p>
+<pre><code class="language-json">{
+  &quot;service”: {
+    &quot;name&quot;: &quot;kafka&quot;,
+    &quot;health_check&quot;: {
+      &quot;enabled&quot;: true,
+      &quot;method&quot;: &quot;PORT&quot; &lt;OR&gt; &quot;FUNCTIONAL&quot;,
+      &quot;interval&quot;: 60,
+      &quot;delay&quot;: 20,
+      &quot;timeout&quot;: 60,
+      &quot;grace-period&quot;: 30,
+      &quot;max-consecutive-failures&quot;: 3,
+      &quot;health-check-topic-prefix&quot;: &quot;KafkaHealthCheckTopic&quot;
+    }
+  }
+}
+</code></pre>
+<p>Refer to <a href="/dcosdocs/mesosphere/dcos/services/kafka/latest/advanced/#service-health-check">Service Health Checks</a> for a more detailed configuration process.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#installing-with-custom-configuration">Installing with Custom Configuration</a></li><li class="content__sections-item content__sections-item--h2"><a href="#service-settings">Service Settings</a></li><li class="content__sections-item content__sections-item--h2"><a href="#configuring-the-zookeeper-connection">Configuring the ZooKeeper Connection</a></li><li class="content__sections-item content__sections-item--h2"><a href="#zonerack-aware-placement-and-replication">Zone/Rack-Aware Placement and Replication</a></li><li class="content__sections-item content__sections-item--h2"><a href="#extend-the-kill-grace-period">Extend the Kill Grace Period</a></li><li class="content__sections-item content__sections-item--h2"><a href="#configuring-secure-jmx-enterprise">Configuring Secure JMX Enterprise</a></li><li class="content__sections-item content__sections-item--h2"><a href="#configuring-volume-profiles">Configuring Volume Profiles</a></li><li class="content__sections-item content__sections-item--h2"><a href="#configuring-service-health-checks">Configuring Service Health Checks</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

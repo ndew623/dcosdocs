@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Running DC/OS on Azure - D2iQ Docs</title><meta name="description" content="Install DC/OS cluster using Azure Resource Manager templates"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.2"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.2/community-supported-methods/azure">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/installing/evaluation/universal-installer-0.2/community-supported-methods/azure">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/installing/evaluation">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/installing/evaluation">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/installing/"><i data-feather="chevron-right"></i>Installing</a></li><ul><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/"><i data-feather="chevron-right"></i>Cloud Installation</a></li><ul><li class="active"><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.2/"><i data-feather="chevron-right"></i>Deprecated Universal Installer 0.2</a></li><ul><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.2/aws/"><i data-feather="chevron-right"></i>AWS</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.2/azure/"><i data-feather="chevron-right"></i>Azure</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.2/gcp/"><i data-feather="chevron-right"></i>GCP</a></li><li class="active"><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.2/community-supported-methods/"><i data-feather="chevron-right"></i>Other Installation methods</a></li><ul><li><a class="d4" href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.2/community-supported-methods/aws/"><i data-feather="chevron-right"></i>AWS</a></li><li class="active active-on"><a class="d4" href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.2/community-supported-methods/azure/">Azure</a></li><li><a class="d4" href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.2/community-supported-methods/packet/">Packet</a></li></ul></ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.3/"><i data-feather="chevron-right"></i>Universal Installer 0.3</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/installing/production/"><i data-feather="chevron-right"></i>On-Prem Installation</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/installing/installation-faq/">Frequently Asked Questions</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/installing/troubleshooting/">Troubleshooting</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/archives/">Access Documentation Archives</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Running DC/OS on Azure</h1><p class="badge badge--content-header badge--oss">OPEN SOURCE</p></div><h4 class="content__header-description">Install DC/OS cluster using Azure Resource Manager templates</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.2/installing/evaluation/universal-installer-0.2/community-supported-methods/azure/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p class="message--warning"><strong>DISCLAIMER: </strong>This is a community driven project and not officially supported by Mesosphere. This installation method is used for fast demos and proofs of concept. This page explains how to install DC/OS cluster on Azure using Azure Resource Manager templates. This method is intended for reference only and are not recommended for production use. Upgrades are not supported with the following installation methods.</p>
+<p class="message--note"><strong>NOTE: </strong>Contact the <a href="https://groups.google.com/a/dcos.io/forum/#!forum/users">mailing list</a> or <a href="http://chat.dcos.io/?_ga=2.226911897.58407594.1533244861-1110201164.1520633201">Slack channel</a> for community support. To get support on Azure Marketplace-related questions, review <a href="https://docs.microsoft.com/en-us/azure/marketplace/support-azure-marketplace">Azure Marketplace's support options</a>.</p>
+<h1 id="system-requirements"><a class="content__anchor" href="#system-requirements" aria-hidden="true"><i data-feather="bookmark"></i></a>System requirements</h1>
+<h2 id="hardware"><a class="content__anchor" href="#hardware" aria-hidden="true"><i data-feather="bookmark"></i></a>Hardware</h2>
+<p>To use all of the services offered in DC/OS, you should choose at least five Mesos Agents using <code>Standard_D2</code> <a href="https://azure.microsoft.com/en-us/pricing/details/virtual-machines/">Virtual Machines</a>, which is the default size in the DC/OS Azure Marketplace offering. Selecting smaller-sized VMs is not recommended, and selecting fewer VMs will likely cause certain resource-intensive services such as distributed datastores to work improperly (from installation issues to operational limitations).</p>
+<h3 id="production-ready-cluster-configurations"><a class="content__anchor" href="#production-ready-cluster-configurations" aria-hidden="true"><i data-feather="bookmark"></i></a>Production-Ready Cluster Configurations</h3>
+<p>These recommendations are based on operation of multiple DC/OS clusters over many years, scaling a mix of stateful and stateless services under a live production load. Your service mix may perform differently, but the principles and lessons discussed herein still apply.</p>
+<h4 id="general-machine-configurations"><a class="content__anchor" href="#general-machine-configurations" aria-hidden="true"><i data-feather="bookmark"></i></a>General Machine Configurations</h4>
+<p>We recommend disabling swap on your VMs, which is typically enabled by default for Azure Linux images. We have found that using the ephemeral SSDs for swap (via WAAgent configuration)
+can conflict with the disk caching configuration of the <code>D</code> series of VMs. For other VM series, such as the <code>L</code> series, it may be possible to use the SSDs for swap and other purposes. See the following section for particulars on disk configuration.</p>
+<p>Monitoring (such as Node Exporter with Prometheus) should be used to
+identify and alert as to when workloads are nearing Azure defined limits.</p>
+<h4 id="networking"><a class="content__anchor" href="#networking" aria-hidden="true"><i data-feather="bookmark"></i></a>Networking</h4>
+<p>On Azure, raw network performance is roughly determined by VM size.
+VMs with 8 or more cores such as <code>Standard_D8_v3</code>, are eligible for
+<a href="https://docs.microsoft.com/en-us/azure/virtual-network/create-vm-accelerated-networking-cli">Azure Accelerated Networking (SR-IOV)</a>.
+We have seen much lower latency and more available and stable bandwidth using SR-IOV
+as opposed to relying on the Azure hypervisor vswitches.
+For example, in our testing, a <code>Standard_D16s_v3</code> without SR-IOV
+can push approximately 450MB/s of data between two VMs, while the same size
+machines can push closer to 1000MB/s of data using SR-IOV.
+Thus, SR-IOV should be employed when possible and you should benchmark your
+instance sizes ((for example, using <a href="https://github.com/esnet/iperf">iperf3</a>) to make sure your network requirements
+are met.</p>
+<p>Additionally, while multiple NICs per virtual machine are supported, the
+amount of bandwidth is per-VM, not per NIC. Thus, while segmenting
+your network into control and data planes (or other networks) may be
+useful for organizational or security purposes, Linux level traffic shaping
+is required in order to achieve bandwidth control.</p>
+<h4 id="disk-configurations"><a class="content__anchor" href="#disk-configurations" aria-hidden="true"><i data-feather="bookmark"></i></a>Disk Configurations</h4>
+<p>In order to achieve performant, reliable cluster operation on Azure,
+Premium SSDs are recommended in particular disk configurations.
+Managed Disks (MDs) are preferred over Unmanaged Disks (UMDs)
+to avoid Storage Account limitations.
+The Azure fabric will place the managed disks appropriately to meet the
+guaranteed SLAs.
+Storage account limitations for UMDs are documented
+<a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-performance-checklist">here</a>.</p>
+<p>On Azure, Premium SSDs have a limited number of possible synchronous IOPs,
+limited by the latency of the underlying disk fabric.
+Services such as etcd, Zookeeper and databases which use a
+write-ahead-log (WAL) are particularly sensitive to this I/O configuration.
+Thus, much of the system engineering described herein is focused on
+minimizing and/or eliminating I/O contention on the Azure Disks.</p>
+<p>Additionally, exceeding the I/O allocation on a machine will result in
+throttling. Users are advised to study <a href="https://blogs.technet.microsoft.com/xiangwu/2017/05/14/azure-vm-storage-performance-and-throttling-demystify/">this article</a>
+in detail to
+understand the theoretical background of the recommendations herein.</p>
+<p>Given the need to separate synchronous from asynchronous I/O loads in order
+to maintain performance, the following disk mounting configurations are
+recommended:</p>
+<ul>
+<li>Masters:
+<ul>
+<li>/ - P10</li>
+<li>/var/lib/etcd - (for those running etcd) - P10</li>
+<li>/var/log - P10</li>
+<li>/var/lib/dcos/exhibitor - P10</li>
+</ul>
+</li>
+<li>Public Agents:
+<ul>
+<li>/ - P10</li>
+<li>/var/log - P10</li>
+<li>/var/lib/docker - P10</li>
+<li>/var/lib/mesos/slave - P10</li>
+</ul>
+</li>
+<li>Private Agents:
+<ul>
+<li>/ - P10</li>
+<li>/var/log - P10</li>
+<li>/var/lib/docker - P10</li>
+<li>/var/lib/mesos/slave - P20</li>
+</ul>
+</li>
+</ul>
+<p>It is certainly possible to run clusters with smaller and/or fewer disks,
+but for production use, the configurations above have proven to have substantial advantages
+for any non-trivial cluster sizes. Additionally, we recommend attaching appropriate
+Premium SSDs to <code>/dcos/volume0 ... /dcos/volumeN</code>
+using Mesos MOUNT disk resources, which can then be dedicated to data
+intensive services without I/O contention.</p>
+<p>For data intensive services such as Postgres or  mysql, you should consider
+attaching LVM RAID stripes to those MOUNT resources to increase the
+possible transactions per second of the databases.</p>
+<p>With respect to configuring the disk caches, the following general rules apply:</p>
+<ul>
+<li>OS disks should be set to <code>ReadWrite</code>.</li>
+<li>Data disks with a mixed or read heavy load (database bulk storage, etc) should
+be set to <code>ReadOnly</code>.</li>
+<li>Data disks with high sequential write loads (WAL disks) should be set to <code>None</code>.</li>
+</ul>
+<h2 id="software"><a class="content__anchor" href="#software" aria-hidden="true"><i data-feather="bookmark"></i></a>Software</h2>
+<p>You will need an active <a href="https://azure.microsoft.com/en-us/pricing/purchase-options/">Azure subscription</a> to install DC/OS via the Azure Marketplace.</p>
+<p>Also, to access nodes in the DC/OS cluster you will need <code>ssh</code> installed and configured.</p>
+<h1 id="install-dcos"><a class="content__anchor" href="#install-dcos" aria-hidden="true"><i data-feather="bookmark"></i></a>Install DC/OS</h1>
+<h2 id="deploying-the-template"><a class="content__anchor" href="#deploying-the-template" aria-hidden="true"><i data-feather="bookmark"></i></a>Deploying the template</h2>
+<p>To install DC/OS 1.12 on Azure, use the <a href="https://downloads.dcos.io/dcos/stable/azure.html">Azure Resource Manager templates</a> provided.</p>
+<p>Some notes on the template configuration:</p>
+<ul>
+<li>Choose <code>East US</code> as the Location, because some resources of the template may not be available in other locations.</li>
+<li>Set <code>Oauth Enabled</code> to true if you want to sign in the DC/OS Dashboard through OAuth.</li>
+<li>Fill up the <code>Agent Endpoint DNS Name Prefix</code> and <code>Master Endpoint DNS Name Prefix</code>.</li>
+<li>Enter your <code>SSH RSA Public Key</code>.</li>
+</ul>
+<h2 id="accessing-dcos"><a class="content__anchor" href="#accessing-dcos" aria-hidden="true"><i data-feather="bookmark"></i></a>Accessing DC/OS</h2>
+<ol>
+<li>Look up <code>MASTERFQDN</code> in the outputs of the deployment. To find that, click on the link under <code>Last deployment</code> (which is <code>4/15/2016 (Succeeded)</code> here) and you should see this:</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/dcos-azure-marketplace-step2a.png" alt="Deployment history"></p>
+<p>Figure 1. Deployment history</p>
+<ol start="2">
+<li>Click on the latest deployment and copy the value of <code>MASTERFQDN</code> in the <code>Outputs</code> section.</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/dcos-azure-marketplace-step2b.png" alt="Deployment output"></p>
+<p>Figure 2. Outputs section</p>
+<ol start="3">
+<li>
+<p>Note the value of <code>MASTERFQDN</code> you found in the <code>Outputs</code> section in Figure 2, and use it in the following step. Because of security considerations, you cannot visit the DC/OS Dashboard in Azure directly by default.</p>
+</li>
+<li>
+<p>Choose one of the following workaround solutions to visit the DC/OS Dashboard in Azure:</p>
+</li>
+</ol>
+<h3 id="case-1"><a class="content__anchor" href="#case-1" aria-hidden="true"><i data-feather="bookmark"></i></a>Case 1:</h3>
+<p>In order to visit the DC/OS Dashboard, you will need to access TCP port 80 or 443 of the master node. You can add an inbound security rule and an inbound NAT rule.</p>
+<ol>
+<li>Find the network security group resource of the master node,</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/dcos-azure-step2case1a.png" alt="Resource - Master Node Network Security Group"></p>
+<p>Figure 3. Master node network security group</p>
+<ol start="2">
+<li>Click on the <strong>Inbound security rules</strong> tab on the left side.</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/dcos-azure-step2case1b.png" alt="Inbound Security Rules"></p>
+<p>Figure 4. Inbound security rules</p>
+<ol start="3">
+<li>Add an inbound security rule.</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/dcos-azure-step2case1c.png" alt="Add Inbound Security Rules"></p>
+<p>Figure 5. Adding an inbound security rule</p>
+<ol start="4">
+<li>Find the load balancer resource of the master node.</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/dcos-azure-step2case1d.png" alt="Resource - Master Node Load balancer"></p>
+<p>Figure 6. Master node load balancer</p>
+<ol start="5">
+<li>Click on the <strong>Inbound NAT rules</strong> tab on the left side,</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/dcos-azure-step2case1e.png" alt="Inbound NAT Rules"></p>
+<p>Figure 7. Inbound NAT rules</p>
+<ol start="6">
+<li>Add an inbound NAT rule.</li>
+</ol>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/dcos-azure-step2case1f.png" alt="Add Inbound NAT Rules"></p>
+<p>Figure 8. Adding an inbound NAT rule</p>
+<p>Now you can visit <code>http://$MASTERFQDN</code> and view the DC/OS Dashboard.</p>
+<h3 id="case-2-using-ssh-tunnel"><a class="content__anchor" href="#case-2-using-ssh-tunnel" aria-hidden="true"><i data-feather="bookmark"></i></a>Case 2: Using ssh tunnel</h3>
+<p>In this case, we need to setup an SSH tunnel, to forward TCP port 80 of the master node on the Azure cluster to the 8000 port of your local machine.</p>
+<p>Copy the value of <code>MASTERFQDN</code> you found in the previous step and paste it in the following command:</p>
+<pre><code class="language-bash">ssh azureuser@$MASTERFQDN -L 8000:localhost:80
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-bash">ssh azureuser@dcosmaster.westus.cloudapp.azure.com -L 8000:localhost:80
+</code></pre>
+<p>Now you can visit <code>http://localhost:8000</code> on your local machine and view the DC/OS Dashboard.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/dcos-gui.png" alt="DC/OS dashboard"></p>
+<p>Figure 9. DC/OS dashboard</p>
+<h3 id="caveats"><a class="content__anchor" href="#caveats" aria-hidden="true"><i data-feather="bookmark"></i></a>Caveats</h3>
+<p>Some caveats about SSH access:</p>
+<ul>
+<li>For connections to <code>http://localhost:8000</code> to work, the SSH command must be run on your local machine, and not inside a Virtual Machine.</li>
+<li>In the example above, port <code>8000</code> is assumed to be available on your local machine.</li>
+<li>The SSH commands shown only work on Mac or Linux. For Windows, use <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY</a> with a similar port-forwarding configuration, see also <a href="https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-ssh-from-windows/">How to Use SSH with Windows on Azure</a>.</li>
+<li>If you want to learn more about SSH key generation, see this <a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/">GitHub tutorial</a>.</li>
+</ul>
+<p>The DC/OS UI will not show the correct IP address or CLI install commands when connected by an SSH tunnel.</p>
+<h2 id="run-dcos-cli"><a class="content__anchor" href="#run-dcos-cli" aria-hidden="true"><i data-feather="bookmark"></i></a>Run DC/OS CLI</h2>
+<p>The following commands can be used to run the DC/OS CLI directly on the master node.</p>
+<pre><code class="language-bash"># Connect to master node with ssh
+ssh azureuser@$MASTERFQDN
+
+# Install CLI on the master node and configure with http://localhost
+curl https://downloads.dcos.io/binaries/cli/linux/x86-64/dcos-/dcos -o dcos &amp;&amp;
+sudo mv dcos /usr/local/bin &amp;&amp;
+sudo chmod +x /usr/local/bin/dcos &amp;&amp;
+dcos cluster setup http://localhost &amp;&amp;
+dcos
+
+# Now you can use the DC/OS CLI:
+dcos package search
+</code></pre>
+<h2 id="tear-down-the-dcos-cluster"><a class="content__anchor" href="#tear-down-the-dcos-cluster" aria-hidden="true"><i data-feather="bookmark"></i></a>Tear down the DC/OS cluster</h2>
+<p>If you have created a new resource group in the deployment step, it is easy to tear down the cluster and release all of the resources: just delete the resource group. If you have deployed the cluster into an existing resource group, you will need to identify all resources that belong to the DC/OS cluster and manually delete them.</p>
+<h2 id="next-steps"><a class="content__anchor" href="#next-steps" aria-hidden="true"><i data-feather="bookmark"></i></a>Next steps</h2>
+<ul>
+<li><a href="/dcosdocs/mesosphere/dcos/2.2/security/ent/users-groups/">Add users to your cluster</a></li>
+<li><a href="/dcosdocs/mesosphere/dcos/2.2/cli/install/">Install the DC/OS Command-Line Interface (CLI)</a></li>
+<li><a href="https://azure.microsoft.com/en-us/documentation/articles/best-practices-auto-scaling/">Scaling considerations</a></li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#system-requirements">System requirements</a></li><li class="content__sections-item content__sections-item--h2"><a href="#hardware">Hardware</a></li><li class="content__sections-item content__sections-item--h2"><a href="#software">Software</a></li><li class="content__sections-item content__sections-item--h1"><a href="#install-dcos">Install DC/OS</a></li><li class="content__sections-item content__sections-item--h2"><a href="#deploying-the-template">Deploying the template</a></li><li class="content__sections-item content__sections-item--h2"><a href="#accessing-dcos">Accessing DC/OS</a></li><li class="content__sections-item content__sections-item--h2"><a href="#run-dcos-cli">Run DC/OS CLI</a></li><li class="content__sections-item content__sections-item--h2"><a href="#tear-down-the-dcos-cluster">Tear down the DC/OS cluster</a></li><li class="content__sections-item content__sections-item--h2"><a href="#next-steps">Next steps</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

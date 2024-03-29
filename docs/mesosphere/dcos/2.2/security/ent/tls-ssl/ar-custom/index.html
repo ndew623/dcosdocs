@@ -1,0 +1,191 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Configuring a Custom External Certificate - D2iQ Docs</title><meta name="description" content="Configuring DC/OS Enterprise to use a custom external certificate"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.2"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/security/ent/tls-ssl/ar-custom">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/security/ent/tls-ssl/ar-custom">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/security/ent/tls-ssl">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/security/ent/tls-ssl">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/security/"><i data-feather="chevron-right"></i>Security</a></li><ul><li class="active"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/"><i data-feather="chevron-right"></i>DC/OS Enterprise Security</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/users-groups/"><i data-feather="chevron-right"></i>Managing users and groups</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/gui-permissions/"><i data-feather="chevron-right"></i>Granting Access to the UI</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/perms-management/">Permissions Management</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/perms-reference/">Permissions Reference</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/ldap/"><i data-feather="chevron-right"></i>LDAP authentication</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/secrets/"><i data-feather="chevron-right"></i>Secrets</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/sso/"><i data-feather="chevron-right"></i>Identity provider-based authentication</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/service-auth/"><i data-feather="chevron-right"></i>Service Authentication</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/restrict-service-access/">Restricting Access to DC/OS Service Groups</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/hardening/">Hardening</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/iam-api/">Identity and Access Management API</a></li><li class="active"><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/tls-ssl/"><i data-feather="chevron-right"></i>Securing Communication with TLS</a></li><ul><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/tls-ssl/ca-custom/">Configuring a Certificate Authority</a></li><li class="active active-on"><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/tls-ssl/ar-custom/">Configuring a Custom External Certificate</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/tls-ssl/get-cert/">Obtaining the DC/OS CA bundle</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/tls-ssl/ca-trust-browser/">Establishing trust in your DC/OS CA</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/tls-ssl/ca-trust-cli/">Establishing trust in your CLI</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/tls-ssl/ca-trust-curl/">Establishing trust in your curl commands</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/tls-ssl/haproxy-adminrouter/">Configuring HAProxy in Front of Admin Router</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/tls-ssl/exhibitor/">Securing Exhibitor with mutual TLS</a></li><li><a class="d3" href="/dcosdocs/mesosphere/dcos/2.2/security/ent/tls-ssl/ca-api/">Using the Certificate Authority API</a></li></ul></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/security/oss/"><i data-feather="chevron-right"></i>DC/OS Open Source Security</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/archives/">Access Documentation Archives</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Configuring a Custom External Certificate</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">Configuring DC/OS Enterprise to use a custom external certificate</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.2/security/ent/tls-ssl/ar-custom/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- The source repository for this topic is https://github.com/dcos/dcos-docs-site -->
+<p>External access to a DC/OS Enterprise cluster goes through Admin Router. By default, the certificate presented by Admin Router is signed by the DC/OS Certificate Authority. The default DC/OS CA certificate is not trusted by default, and requires clients to manually configure trust in the CA (e.g. by accepting a pop-up browser dialog). A trusted CA certificate can be provided using <a href="/dcosdocs/mesosphere/dcos/2.2/security/ent/tls-ssl/ca-custom/">custom CA certificates</a>. However, obtaining a suitable CA certificate can be difficult. Custom external certificates allow the cluster administrator to provide an easily obtained non-CA certificate and key that Admin Router will present to external connections.</p>
+<p>The benefits of using a custom external certificate for your DC/OS Enterprise cluster include:</p>
+<ul>
+<li>only needing to obtain a standard certificate instead of an intermediate CA signing certificate, in order to make connections to the cluster trusted by the clients by default (i.e. browser-trusted certificates);</li>
+<li>using a certificate with different properties for clients connecting to the cluster using different server names.</li>
+</ul>
+<h1 id="contents"><a class="content__anchor" href="#contents" aria-hidden="true"><i data-feather="bookmark"></i></a>Contents</h1>
+<ul>
+<li><a href="#support">Support</a></li>
+<li><a href="#glossary">Glossary</a> for general definition of terms</li>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#config-ref">Configuration parameter reference</a></li>
+<li><a href="#installing-dcos-enterprise-with-a-custom-external-certificate">Installation</a></li>
+</ul>
+<h1 id="support"><a class="content__anchor" href="#support" aria-hidden="true"><i data-feather="bookmark"></i></a>Support</h1>
+<ul>
+<li>Custom external certificates are supported in DC/OS Enterprise 2.1 and later.</li>
+<li>Custom external certificates can be added during initial installation or during an upgrade.</li>
+<li>Custom external certificates support both RSA and ECC keys.</li>
+</ul>
+<h1 id="glossary"><a class="content__anchor" href="#glossary" aria-hidden="true"><i data-feather="bookmark"></i></a>Glossary</h1>
+<ul>
+<li>
+<p><strong>Custom external certificate:</strong> A certificate in PEM format, that will be used to access the cluster through Admin Router for a provided set of server names. If necessary, it should include all the intermediate CA certificates up to the root CA certificate trusted by the clients. The root CA certificate does not need to be included in the PEM file.</p>
+</li>
+<li>
+<p><strong>Server names:</strong> A set of names that Admin Router will match to the custom external certificate’s Canonical Name and Subject Alternative Names.</p>
+</li>
+<li>
+<p><strong>Custom private key:</strong> A private key in the PKCS#8 format associated with the custom external certificate.</p>
+</li>
+<li>
+<p><strong>Installation directory:</strong> The directory on the bootstrap node where the DC/OS installer resides. It is denoted with <code>$DCOS_INSTALL_DIR</code> in this document.</p>
+</li>
+<li>
+<p><strong>Configuration:</strong> The set of the configuration parameters that governs the specific aspects of the installation procedure. The configuration is stored in the DC/OS configuration file.</p>
+</li>
+<li>
+<p><strong>DC/OS configuration file:</strong> The file which contains the DC/OS configuration parameters. The DC/OS configuration file is normally called <code>config.yaml</code> and must be present in the <code>$DCOS_INSTALL_DIR/genconf/</code> directory on the bootstrap node during the installation. It is used by the DC/OS installer.</p>
+</li>
+</ul>
+<h1 id="requirements"><a class="content__anchor" href="#requirements" aria-hidden="true"><i data-feather="bookmark"></i></a>Requirements</h1>
+<p>In order to install DC/OS Enterprise with a custom external certificate you will need:</p>
+<ul>
+<li>A file containing the custom external certificate.</li>
+<li>A file containing the custom private key.</li>
+</ul>
+<h2 id="specifying-locations"><a class="content__anchor" href="#specifying-locations" aria-hidden="true"><i data-feather="bookmark"></i></a>Specifying locations</h2>
+<p>The filesystem paths to the custom external certificate and custom private key in the <code>$DCOS_INSTALL_DIR/genconf/</code> directory on the bootstrap node must be specified in the DC/OS configuration file using, respectively, the <code>external_certificate_path</code> and <code>external_certificate_key_path</code> parameters. The paths must be relative to <code>$DCOS_INSTALL_DIR</code>.</p>
+<h1 id="configuration-parameter-reference"><a class="content__anchor" href="#configuration-parameter-reference" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="config-ref"></a>Configuration parameter reference</h1>
+<h2 id="external-certificate-path"><a class="content__anchor" href="#external-certificate-path" aria-hidden="true"><i data-feather="bookmark"></i></a>external_certificate_path</h2>
+<p>Path to a file (relative to <code>$DCOS_INSTALL_DIR</code>) containing a single X.509 leaf certificate in the OpenSSL PEM format. For example: <code>genconf/external-certificate.crt</code>. If necessary, it should include all the intermediate CA certificates up to the root CA certificate trusted by the clients. It is advised to not to include the final root CA certificate in the PEM file, but is not strictly necessary.</p>
+<p>If provided, this is the custom external certificate.  If not provided, the DC/OS cluster uses a unique leaf certificate generated during the initial bootstrap phase signed by DC/OS CA and presents it to the clients.</p>
+<p>See the <code>external_certificate_validation_disable</code> parameter on the validation that the external certificate undergoes and how it can be overridden.</p>
+<h2 id="external-certificate-key-path"><a class="content__anchor" href="#external-certificate-key-path" aria-hidden="true"><i data-feather="bookmark"></i></a>external_certificate_key_path</h2>
+<p>Path to a file (relative to <code>$DCOS_INSTALL_DIR</code>) containing the private key corresponding to the custom external certificate, encoded in the OpenSSL (PKCS#8) PEM format. For example: <code>genconf/external-certificate-key.key</code>.</p>
+<p>This is highly sensitive data. The configuration processor accesses this file only for configuration validation purposes, and does not copy the data. After successful configuration validation this file needs to be placed out-of-band into the file system of all DC/OS master nodes to the path <code>/var/lib/dcos/pki/tls/private/adminrouter-external.key</code> before most DC/OS <code>systemd</code> units start up. The file must be readable by the root user, and should have 0600 permissions set.</p>
+<p>This path is required if <code>external_certificate_path</code> is specified.</p>
+<h2 id="external-certificate-servernames"><a class="content__anchor" href="#external-certificate-servernames" aria-hidden="true"><i data-feather="bookmark"></i></a>external_certificate_servernames</h2>
+<p>The list of server names that clients can use while accessing the cluster in
+order to make Admin Router present the custom external certificate to the
+client. The server names can include:</p>
+<ul>
+<li>a plain hostname, e.g. <code>host.example.com</code>.</li>
+<li>an IP address, e.g. <code>192.0.2.5</code>.</li>
+<li>a <code>*</code> wildcard, e.g. <code>*.example.com</code>, will match all the subdomains of
+<code>example.com</code> (e.g. <code>foo.example.com</code>, <code>bar.example.com</code>), but not the domain
+itself - <code>example.com</code> or deeper subdomains: <code>foo.bar.example.com</code>.</li>
+<li>a <code>.</code> wildcard, e.g. <code>.example.com</code>, will match the same as <code>*</code> wildcard plus the domain
+itself (e.g. <code>foo.example.com</code>, <code>bar.example.com</code>, <code>example.com</code>).</li>
+</ul>
+<p>The server names cannot include:</p>
+<ul>
+<li><code>master.mesos</code></li>
+<li><code>leader.mesos</code></li>
+<li><code>registry.component.thisdcos.directory</code></li>
+<li>any IP address returned by the <code>/opt/mesosphere/bin/detect_ip</code> script (created from the <code>ip_detect_contents</code> or <code>ip_detect_filename</code> configuration parameter).</li>
+</ul>
+<p>Every server name provided in this option must be present in the custom external
+certificate’s Canonical Name or Subject Alternative Names.</p>
+<p>This option is required if <code>external_certificate_path</code> is specified.</p>
+<h2 id="external-certificate-validation-disable"><a class="content__anchor" href="#external-certificate-validation-disable" aria-hidden="true"><i data-feather="bookmark"></i></a>external_certificate_validation_disable</h2>
+<p>The custom external certificate undergoes validation before being taken into
+consideration. Namely:</p>
+<ul>
+<li>the restrictions for server names mentioned for
+<code>external_certificate_servernames</code> parameter</li>
+<li>certificate key must be of type RSA or ECC</li>
+<li>minimum size of an RSA key is 2048</li>
+<li>minimum size of the ECC key is 256</li>
+<li>the ECC’s key curve must be one of SECP256R1 or SECP384R1,</li>
+<li>key usage extension must be defined</li>
+<li>the validity period of the certificate must not start in the future</li>
+<li>the validity period of the certificate must not end sooner than in 365
+days</li>
+<li>the basic constraints are not required, but if they are defined, they
+should not have the CA flag set</li>
+<li>key usage extension must have the digital signature and key encipherment
+extensions set</li>
+<li>extended key usage extension must be present and tls server
+authentication flag must be set</li>
+</ul>
+<p>Additionally, if the certificate chain is present in the external
+certificate’s PEM, the chain itself must:</p>
+<ul>
+<li>start with the leaf certificate and be followed by intermediate CA’s, each one
+signing its predecessor and being signed by its successor</li>
+<li>each intermediate CA cert must be a valid CA cert (expiration, etc…)</li>
+</ul>
+<p>If these restrictions are too strict, they can be overridden by
+setting the <code>external_certificate_validation_disable</code> parameter to <code>true</code>.</p>
+<h1 id="installing-dcos-enterprise-with-a-custom-external-certificate"><a class="content__anchor" href="#installing-dcos-enterprise-with-a-custom-external-certificate" aria-hidden="true"><i data-feather="bookmark"></i></a>Installing DC/OS Enterprise with a custom external certificate</h1>
+<h2 id="prerequisites"><a class="content__anchor" href="#prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h2>
+<ul>
+<li>
+<p>The installation of DC/OS Enterprise via the Installer has been prepared according to the corresponding <a href="/dcosdocs/mesosphere/dcos/2.2/installing/production/deploying-dcos/installation/">documentation</a>, up to the section <a href="/dcosdocs/mesosphere/dcos/2.2/installing/production/deploying-dcos/installation/#install-dcos"><strong>Install DC/OS</strong></a> of that documentation.</p>
+</li>
+<li>
+<p>The configuration parameters <code>external_certificate_path</code>, <code>external_certificate_key_path</code> and <code>external_certificate_servernames</code> are specified in the DC/OS configuration file <code>$DCOS_INSTALL_DIR/genconf/config.yaml</code> and point to the relevant locations in the file system. Example of commands issued on the bootstrap node:</p>
+</li>
+</ul>
+<pre><code class="language-bash">cd $DCOS_INSTALL_DIR
+cat genconf/config.yaml
+</code></pre>
+<pre><code>[...]
+external_certificate_path: genconf/external-certificate.crt
+external_certificate_key_path: genconf/external-certificate-key.key
+external_certificate_servernames:
+  - foo.example.com
+  - bar.example.com
+  - .example.org
+  - *.example.net
+[...]
+</code></pre>
+<h2 id="copy-custom-external-certificate-and-private-key-to-the-bootstrap-node"><a class="content__anchor" href="#copy-custom-external-certificate-and-private-key-to-the-bootstrap-node" aria-hidden="true"><i data-feather="bookmark"></i></a>Copy custom external certificate and private key to the bootstrap node</h2>
+<p>The custom external certificate and the custom private key must be put in the <code>$DCOS_INSTALL_DIR/genconf/</code> directory on the bootstrap node:</p>
+<pre><code class="language-bash">cd $DCOS_INSTALL_DIR
+ls genconf/
+</code></pre>
+<pre><code>external-certificate.crt
+external-certificate-key.key
+</code></pre>
+<h2 id="manually-copy-the-custom-private-key-to-all-master-nodes"><a class="content__anchor" href="#manually-copy-the-custom-private-key-to-all-master-nodes" aria-hidden="true"><i data-feather="bookmark"></i></a>Manually copy the custom private key to all master nodes</h2>
+<p>For security reasons, the installer will not copy the private key from the bootstrap node to the master nodes.
+The custom private key must be distributed securely to every DC/OS master node <strong>before starting the installation</strong>.</p>
+<p>The filesystem path for the custom private key file must be <code>/var/lib/dcos/pki/tls/private/adminrouter-external.key</code>. The file containing the private key <code>adminrouter-external.key</code> corresponding to the custom external certificate must be owned by the root Unix user and have 0600 permissions set.  It is also recommended to ensure that the directory <code>/var/lib/dcos/pki/tls/private</code> is owned by root and has 0700 permissions.</p>
+<p>If you copy the private key file over the network onto the master nodes, the network channel must be adequately protected.</p>
+<p>For example, this could be achieved by running the following commands as <code>root</code> on each master node (<code>W.X.Y.Z</code> indicates the IP address of the bootstrap node):</p>
+<pre><code class="language-bash">mkdir -p /var/lib/dcos/pki/tls/private/
+chown root /var/lib/dcos/pki/tls/private/
+chmod 700 /var/lib/dcos/pki/tls/private/
+scp centos@W.X.Y.Z:$DCOS_INSTALL_DIR/genconf/external-certificate-key.key /var/lib/dcos/pki/tls/private/
+chown root /var/lib/dcos/pki/tls/private/adminrouter-external.key
+chmod 600 /var/lib/dcos/pki/tls/private/adminrouter-external.key
+</code></pre>
+<h2 id="installation"><a class="content__anchor" href="#installation" aria-hidden="true"><i data-feather="bookmark"></i></a>Installation</h2>
+<p>Proceed with the installation as described in the <a href="/dcosdocs/mesosphere/dcos/2.2/installing/production/deploying-dcos/installation/#install-dcos">documentation of the Installer</a>. Note that the current working directory when executing <code>dcos_generate_config.ee.sh</code> must be the <code>$DCOS_INSTALL_DIR</code> directory.</p>
+<p>If you are changing from a DC/OS CA issued certificate to a custom external certificate or vice versa, note that your clients may need to trust both CA’s during the upgrade.</p>
+<h2 id="verify-installation"><a class="content__anchor" href="#verify-installation" aria-hidden="true"><i data-feather="bookmark"></i></a>Verify installation</h2>
+<p>To verify that the DC/OS Enterprise cluster was installed correctly with the custom external certificate, initiate a TLS connection to Admin Router which will present the custom external certificate for the configured server names. In order to do this, specify a server name in the request that will match one of the entries in <code>external_certificate_servernames</code>.</p>
+<p>Provided that you have the CA root certificate for the signed external certificate, the following command can be executed:</p>
+<pre><code class="language-bash">openssl s_client -connect &lt;public_ip_master_node_X&gt;:443 -showcerts -servername &lt;one of configured server names&gt; -verifyCAfile &lt;path to the CA file that signed external certificate/external certificate intermediate chain&gt;  | grep -e &quot;s:&quot; -e &quot;i:&quot; -e &quot;return code:&quot; | grep -e &quot;s:&quot; -e &quot;i:&quot; -e &quot;return code:&quot;
+</code></pre>
+<p>The output should look like the following:</p>
+<pre><code>depth=4 C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = Root CA
+verify return:1
+depth=3 C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = Intermediate CA 0
+verify return:1
+depth=2 C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = Intermediate CA 1
+verify return:1
+depth=1 C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = Intermediate CA 2
+verify return:1
+depth=0 C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = Leaf Certificate
+verify return:1
+ 0 s:C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = Leaf Certificate
+   i:C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = Intermediate CA 2
+ 1 s:C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = Intermediate CA 2
+   i:C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = Intermediate CA 1
+ 2 s:C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = Intermediate CA 1
+   i:C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = Intermediate CA 0
+ 3 s:C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = Intermediate CA 0
+   i:C = US, ST = CA, L = San Francisco, O = &quot;Mesosphere, Inc.&quot;, CN = Root CA
+    Verify return code: 0 (ok)
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#contents">Contents</a></li><li class="content__sections-item content__sections-item--h1"><a href="#support">Support</a></li><li class="content__sections-item content__sections-item--h1"><a href="#glossary">Glossary</a></li><li class="content__sections-item content__sections-item--h1"><a href="#requirements">Requirements</a></li><li class="content__sections-item content__sections-item--h2"><a href="#specifying-locations">Specifying locations</a></li><li class="content__sections-item content__sections-item--h1"><a href="#configuration-parameter-reference">Configuration parameter reference</a></li><li class="content__sections-item content__sections-item--h2"><a href="#external-certificate-path">external_certificate_path</a></li><li class="content__sections-item content__sections-item--h2"><a href="#external-certificate-key-path">external_certificate_key_path</a></li><li class="content__sections-item content__sections-item--h2"><a href="#external-certificate-servernames">external_certificate_servernames</a></li><li class="content__sections-item content__sections-item--h2"><a href="#external-certificate-validation-disable">external_certificate_validation_disable</a></li><li class="content__sections-item content__sections-item--h1"><a href="#installing-dcos-enterprise-with-a-custom-external-certificate">Installing DC/OS Enterprise with a custom external certificate</a></li><li class="content__sections-item content__sections-item--h2"><a href="#prerequisites">Prerequisites</a></li><li class="content__sections-item content__sections-item--h2"><a href="#copy-custom-external-certificate-and-private-key-to-the-bootstrap-node">Copy custom external certificate and private key to the bootstrap node</a></li><li class="content__sections-item content__sections-item--h2"><a href="#manually-copy-the-custom-private-key-to-all-master-nodes">Manually copy the custom private key to all master nodes</a></li><li class="content__sections-item content__sections-item--h2"><a href="#installation">Installation</a></li><li class="content__sections-item content__sections-item--h2"><a href="#verify-installation">Verify installation</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

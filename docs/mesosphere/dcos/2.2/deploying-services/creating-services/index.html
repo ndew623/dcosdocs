@@ -1,0 +1,183 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Creating Services - D2iQ Docs</title><meta name="description" content="Defining a DC/OS service using Marathon"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/dcosdocs/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/dcosdocs/mesosphere/dcos/cn">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 2.2"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/dcosdocs/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/creating-services">Mesosphere DC/OS 2.2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.1/deploying-services/creating-services">Mesosphere DC/OS 2.1.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/2.0/deploying-services/creating-services">Mesosphere DC/OS 2.0</a></li><li><a href="/dcosdocs/mesosphere/dcos/1.13/deploying-services/creating-services">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 2.2</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/multi-tenancy/"><i data-feather="chevron-right"></i>Multi-Tenancy for DC/OS Clusters</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li class="active"><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/install/">Installing Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/marathon-parameters/">Marathon Configuration Reference</a></li><li class="active active-on"><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/creating-services/"><i data-feather="chevron-right"></i>Creating Services</a></li><ul><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/creating-services/deploy-docker-app/">Tutorial - Deploying a Docker-based Service</a></li><li><a class="d2" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/creating-services/health-checks/">Health Checks</a></li></ul><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/task-handling/"><i data-feather="chevron-right"></i>Task Handling</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/config-universe-service/">Configuring Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/fault-domain-awareness/">Fault Domain Awareness and Capacity Extension</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/service-groups/">Granting Access to Services and Groups</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/marathon-constraints/">Marathon Placement Constraints</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/monitor-services/">Monitoring Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/scale-service/">Scaling a Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/service-endpoints/">Service Endpoints</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/service-ports/">Service Ports</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/update-user-service/">Updating a User-Created Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/private-docker-registry/">Using a Private Docker Registry</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/deployments/">Deployments</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/expose-service/">Exposing a Service</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/uninstall/">Uninstalling Services</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/package-api/">Package Management API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/marathon-on-marathon/"><i data-feather="chevron-right"></i>Using Custom Marathon</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/marathon-api/">Marathon API</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/containerizers/"><i data-feather="chevron-right"></i>Using Containerizers</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/pods/"><i data-feather="chevron-right"></i>Pods</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/multi-tenancy-primitives/">Multi-Tenancy Primitives</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/gpu/">Using GPUs</a></li><li><a class="d1" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/faq/">Frequently Asked Questions</a></li></ul><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li><li><a class="d0" href="/dcosdocs/mesosphere/dcos/2.2/archives/">Access Documentation Archives</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Creating Services</h1></div><h4 class="content__header-description">Defining a DC/OS service using Marathon</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/dcosdocs/mesosphere/dcos/2.2/deploying-services/creating-services/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+Creating+Services&amp;description=Source:%20https://docs.d2iq.com/dcosdocs/mesosphere/dcos/2.2/deploying-services/creating-services&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><p>A Marathon application typically represents a long-running service that has many instances running on multiple hosts. An application instance is called a <strong>task</strong>. The <strong>application definition</strong> describes everything needed to start and maintain the tasks. A Marathon application definition creates a DC/OS <strong>service</strong>.</p>
+<h1 id="inline-shell-script"><a class="content__anchor" href="#inline-shell-script" aria-hidden="true"><i data-feather="bookmark"></i></a>Inline shell script</h1>
+<p>You can deploy a simple program in an inline shell script. Let’s start with a simple example: a service that prints <code>Hello Marathon</code> to <code>stdout</code> and then sleeps for five seconds, in an endless loop.</p>
+<ol>
+<li>
+<p>Use the following JSON application definition to describe the application. Create a file with the name of your choice.</p>
+<pre><code class="language-json">{
+    &quot;id&quot;: &quot;basic-0&quot;,
+    &quot;cmd&quot;: &quot;while [ true ] ; do echo 'Hello Marathon' ; sleep 5 ; done&quot;,
+    &quot;cpus&quot;: 0.1,
+    &quot;mem&quot;: 10.0,
+    &quot;instances&quot;: 1
+}
+</code></pre>
+<p>In the above example, <code>cmd</code> is the command that gets executed. Its value is wrapped by the underlying Mesos executor via <code>/bin/sh -c ${cmd}</code>.</p>
+</li>
+<li>
+<p>Use the <a href="/dcosdocs/mesosphere/dcos/2.2/cli/">DC/OS CLI</a> to add the service to DC/OS.</p>
+<pre><code class="language-bash">dcos marathon app add &lt;your-service-name&gt;.json
+</code></pre>
+</li>
+</ol>
+<p>When you define and launch a service, Marathon hands over execution to Mesos. Mesos creates a sandbox directory for each task. The sandbox directory is a directory on each agent node that acts as an execution environment and contains relevant log files. The <code>stderr</code> and <code>stdout</code> streams are also written to the sandbox directory.</p>
+<h2 id="cpumemory-requests-and-limits"><a class="content__anchor" href="#cpumemory-requests-and-limits" aria-hidden="true"><i data-feather="bookmark"></i></a>CPU/Memory Requests and Limits</h2>
+<p>Any application will require CPU and memory to execute. As you can see above, the <code>cpus</code> and <code>mem</code> fields can be used to specify the amount of these resources required by the application. These quantities are known as the CPU and memory “requests”, and the app is guaranteed to have access to at least these amounts. In addition, DC/OS has the concept of CPU and memory “limits” which allow you to specify the maximum amount of the resource that the app may consume. The resource limit must be equal to or greater than the request; in addition, the limit may be given the value of “unlimited”, meaning the app’s use of that resource is not constrained at all. The app below has a CPU limit of 2.0 CPUs and an infinite memory limit:</p>
+<pre><code>```json
+{
+    &quot;id&quot;: &quot;basic-0&quot;,
+    &quot;cmd&quot;: &quot;while [ true ] ; do echo 'Hello Marathon' ; sleep 5 ; done&quot;,
+    &quot;cpus&quot;: 1.0,
+    &quot;mem&quot;: 256.0,
+    &quot;resourceLimits&quot;: { &quot;cpus&quot;: 2.0, &quot;mem&quot;: &quot;unlimited&quot; },
+    &quot;instances&quot;: 1
+}
+```
+</code></pre>
+<p>If no special configuration has been applied to the DC/OS cluster during installation, then tasks which do not set explicit CPU limits will have their limit implicitly set to the value of the CPU request. Changing the value of the <a href="/dcosdocs/mesosphere/dcos/2.2/installing/production/advanced-configuration/configuration-reference/#mesos_cgroups_enable_cfs">mesos_cgroups_enable_cfs</a> DC/OS installation parameter to <code>false</code> means that these implicit limits will not be set.</p>
+<p>A task with a CPU limit higher than its request will automatically be scheduled on the CPU when there are free cycles available, with its CPU usage being throttled back to its CPU request when other processes have work to schedule as well. Tasks will never be scheduled on the CPU more than allowed by the value of their CPU limit. A task with a memory limit higher than its request will be able to consume memory greater than the request, but this does come with some danger of premature task termination. If memory on the agent becomes exhausted and memory must be reclaimed so that all tasks can have access to their entire memory requests, task processes which are consuming more memory than their request will be first in line to be OOM-killed in order to free up memory. When a task attempts to allocate more memory than its memory limit and nothing can be paged out in order to prevent this violation, the task will be OOM-killed immediately.</p>
+<h2 id="declaring-artifacts-in-applications"><a class="content__anchor" href="#declaring-artifacts-in-applications" aria-hidden="true"><i data-feather="bookmark"></i></a>Declaring Artifacts in Applications</h2>
+<p>To run any non-trivial application, you typically depend on a collection of artifacts: files or archives of files. To configure these artifacts, Marathon allows you to specify one or more URIs (uniform resource identifiers). URIs use the <a href="http://mesos.apache.org/documentation/latest/fetcher/">Mesos fetcher</a> to do the legwork in terms of downloading (and potentially) extracting resources.</p>
+<p>Example:</p>
+<pre><code class="language-json">{
+    &quot;id&quot;: &quot;basic-1&quot;,
+    &quot;cmd&quot;: &quot;`chmod u+x cool-script.sh &amp;&amp; ./cool-script.sh`&quot;,
+    &quot;cpus&quot;: 0.1,
+    &quot;mem&quot;: 10.0,
+    &quot;instances&quot;: 1,
+    &quot;fetch&quot;: [ { &quot;uri&quot;: &quot;https://example.com/app/cool-script.sh&quot; } ]
+}
+</code></pre>
+<p>The example above downloads the resource <code>https://example.com/app/cool-script.sh</code> (via Mesos), makes it available in the service instance’s Mesos sandbox, and then executes the contents of <code>cmd</code>. You can verify that it has been downloaded by visiting the DC/OS web interface and clicking on an instance of <code>basic-1</code>, then on the <strong>Files</strong> tab. You should find <code>cool-script.sh</code> there.</p>
+<p class="message--note"><strong>NOTE: </strong>The fetcher does not make dowloaded files executable by default. In the example above, <code>cmd</code> first makes the file executable.</p>
+<p>As already mentioned, Marathon also knows how to handle application resources that reside in archives. Currently, Marathon (via Mesos and before executing the <code>cmd</code>) first attempts to unpack/extract resources with the following file extensions:</p>
+<ul>
+<li><code>.tgz</code></li>
+<li><code>.tar.gz</code></li>
+<li><code>.tbz2</code></li>
+<li><code>.tar.bz2</code></li>
+<li><code>.txz</code></li>
+<li><code>.tar.xz</code></li>
+<li><code>.zip</code></li>
+</ul>
+<p>The following example shows you how this looks in practice. Assume you have an application executable in a zip file at <code>https://example.com/app.zip</code>. This zip file contains the script <code>cool-script.sh</code> that you want to execute. Here’s how:</p>
+<pre><code class="language-json">{
+    &quot;id&quot;: &quot;basic-2&quot;,
+    &quot;cmd&quot;: &quot;app/cool-script.sh&quot;,
+    &quot;cpus&quot;: 0.1,
+    &quot;mem&quot;: 10.0,
+    &quot;instances&quot;: 1,
+    &quot;fetch&quot;: [ { &quot;uri&quot;: &quot;https://example.com/app.zip&quot; } ]
+}
+</code></pre>
+<p>In contrast to the example <code>basic-1</code>, we now have a <code>cmd</code> with the value <code>app/cool-script.sh</code>. When the zip file gets downloaded and extracted, a directory <code>app</code> according to the file name <code>app.zip</code> is created and the content of the zip file is extracted into it.</p>
+<p>You can specify more than one resource. For example, you could provide a Git repository and some resources from a CDN as follows:</p>
+<pre><code class="language-json">{
+    &quot;fetch&quot;: [
+        { &quot;uri&quot;: &quot;https://git.example.com/repo-app.zip&quot;, &quot;https://cdn.example.net/my-file.jpg&quot;},
+        { &quot;uri&quot;: &quot;https://cdn.example.net/my-other-file.css&quot; }
+    ]
+}
+</code></pre>
+<p>A typical pattern in the development and deployment cycle is to have your automated build system place the app binary in a location that’s downloadable via a URI. Marathon can download resources from a number of sources. Marathon supports the following <a href="http://tools.ietf.org/html/rfc3986#section-3.1">URI schemes</a>:</p>
+<ul>
+<li><code>file:</code></li>
+<li><code>http:</code></li>
+<li><code>https:</code></li>
+<li><code>ftp:</code></li>
+<li><code>ftps:</code></li>
+<li><code>hdfs:</code></li>
+<li><code>s3:</code></li>
+<li><code>s3a:</code></li>
+<li><code>s3n:</code></li>
+</ul>
+<h1 id="rest-api"><a class="content__anchor" href="#rest-api" aria-hidden="true"><i data-feather="bookmark"></i></a>REST API</h1>
+<p>You can deploy a simple Docker-based application with the REST API. With Marathon it is straightforward to run applications that use Docker images.</p>
+<p>In the following example, you deploy a Docker app to DC/OS using the Marathon API. The Docker app is a Python-based web server that uses the <a href="https://registry.hub.docker.com/_/python/">python:3</a> image. Inside the container, the web server runs on port <code>80</code> (the value of <code>containerPort</code>). <code>hostPort</code> is set to <code>0</code> so that Marathon assigns a random port on the Mesos agent, which is mapped to port 80 inside the container.</p>
+<ol>
+<li>
+<p>Choose whether to use the Universal Container Runtime (UCR) or Docker Engine runtime. See <a href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/containerizers/">Using Containerizers</a>.</p>
+<ul>
+<li>
+<p>To use the Universal Container Runtime (UCR), paste the following JSON into a file named <code>basic-3-mesos.json</code>:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;basic-3-mesos&quot;,
+  &quot;cmd&quot;: &quot;cd /;python3 -m http.server 80&quot;,
+  &quot;acceptedResourceRoles&quot;: [&quot;slave_public&quot;],
+  &quot;container&quot;: {
+    &quot;portMappings&quot;: [
+      {
+        &quot;containerPort&quot;: 80,
+        &quot;hostPort&quot;: 0
+      }
+    ],
+    &quot;type&quot;: &quot;MESOS&quot;,
+    &quot;docker&quot;: { &quot;image&quot;: &quot;python:3&quot; }
+  },
+  &quot;cpus&quot;: 0.5,
+  &quot;mem&quot;: 32,
+  &quot;networks&quot;: [ { &quot;mode&quot;: &quot;container/bridge&quot; } ]
+}
+</code></pre>
+</li>
+<li>
+<p>To use the Docker Engine runtime, paste the following JSON into a file named <code>basic-3-docker.json</code>:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;basic-3-docker&quot;,
+  &quot;cmd&quot;: &quot;cd /;python3 -m http.server 80&quot;,
+  &quot;acceptedResourceRoles&quot;: [ &quot;slave_public&quot; ],
+  &quot;container&quot;: {
+    &quot;portMappings&quot;: [
+      {
+        &quot;containerPort&quot;: 80,
+        &quot;hostPort&quot;: 0
+      }
+    ],
+    &quot;type&quot;: &quot;DOCKER&quot;,
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;python:3&quot; },
+      &quot;parameters&quot;: [
+        {
+          &quot;key&quot;: &quot;log-driver&quot;,
+          &quot;value&quot;: &quot;none&quot;
+        }
+      ]
+  },
+  &quot;cpus&quot;: 0.5,
+  &quot;instances&quot;: 1,
+  &quot;mem&quot;: 32,
+  &quot;networks&quot;: [ { &quot;mode&quot;: &quot;container/bridge&quot; } ]
+}
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Use the <a href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/marathon-api/">Marathon API</a> to deploy the app <code>basic-3-docker</code>. Refer to <a href="/dcosdocs/mesosphere/dcos/2.2/security/ent/iam-api/">Authentication HTTP API Endpoint</a> to learn more about the API token required in the command below.</p>
+<pre><code class="language-sh"> curl -H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; -X POST &lt;master-IP&gt;/service/marathon/v2/apps -d @basic-3-docker.json -H &quot;Content-type: application/json&quot;
+</code></pre>
+</li>
+<li>
+<p>Go to the <strong>Services</strong> tab of the DC/OS GUI to view the running service.</p>
+</li>
+<li>
+<p>Click <code>basic-3-docker</code> and then the task ID.</p>
+</li>
+<li>
+<p>Scroll down to the <strong>Marathon Task Configuration</strong> section and note the PORTS property.</p>
+<p><img src="/dcosdocs/mesosphere/dcos/2.2/img/container-port.png" alt="container port"></p>
+<p>Figure 1. Container port</p>
+</li>
+<li>
+<p>Determine the <a href="/dcosdocs/mesosphere/dcos/2.2/administering-clusters/locate-public-agent/">IP address of the public node</a>.</p>
+</li>
+<li>
+<p>Navigate to <code>&lt;public-node-IP&gt;:&lt;port&gt;</code> to see the contents of the Docker container’s root directory.</p>
+</li>
+</ol>
+<div class="grid"><a class="grid__item" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/creating-services/deploy-docker-app"><div class="grid__header__wrapper"><h3 class="grid__header">Tutorial - Deploying a Docker-based Service</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">Deploying a Docker-based service<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/dcosdocs/mesosphere/dcos/2.2/deploying-services/creating-services/health-checks"><div class="grid__header__wrapper"><h3 class="grid__header">Health Checks</h3></div><div class="grid__desc__wrapper"><p class="grid__desc">Defining health checks for your DC/OS services<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a></div></article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#inline-shell-script">Inline shell script</a></li><li class="content__sections-item content__sections-item--h2"><a href="#cpumemory-requests-and-limits">CPU/Memory Requests and Limits</a></li><li class="content__sections-item content__sections-item--h2"><a href="#declaring-artifacts-in-applications">Declaring Artifacts in Applications</a></li><li class="content__sections-item content__sections-item--h1"><a href="#rest-api">REST API</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

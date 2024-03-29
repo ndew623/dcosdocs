@@ -1,0 +1,259 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>DC/OS Enterprise Security - D2iQ Docs</title><meta name="description" content="Understanding DC/OS Enterprise security features"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos/cn/1.13/security/ent">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/mesosphere/dcos/2.2/security/ent">Mesosphere DC/OS 2.2.0</a></li><li><a href="/mesosphere/dcos/2.1/security/ent">Mesosphere DC/OS 2.1.0</a></li><li><a href="/mesosphere/dcos/2.0/security/ent">Mesosphere DC/OS 2.0</a></li><li><a href="/mesosphere/dcos/1.13/security/ent">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/mesosphere/dcos/1.13/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li class="active"><a class="d0" href="/mesosphere/dcos/1.13/security/"><i data-feather="chevron-right"></i>Security</a></li><ul><li class="active active-on"><a class="d1" href="/mesosphere/dcos/1.13/security/ent/"><i data-feather="chevron-right"></i>DC/OS Enterprise Security</a></li><ul><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/users-groups/"><i data-feather="chevron-right"></i>Managing users and groups</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/gui-permissions/"><i data-feather="chevron-right"></i>Granting Access to the UI</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/perms-management/">Permissions Management</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/perms-reference/">Permissions Reference</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/ldap/"><i data-feather="chevron-right"></i>LDAP authentication</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/secrets/"><i data-feather="chevron-right"></i>Secrets</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/sso/"><i data-feather="chevron-right"></i>Identity provider-based authentication</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/service-auth/"><i data-feather="chevron-right"></i>Service Authentication</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/restrict-service-access/">Restricting Access to DC/OS Service Groups</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/hardening/">Hardening</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/iam-api/">Identity and Access Management API</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/tls-ssl/"><i data-feather="chevron-right"></i>Securing Communication with TLS</a></li></ul><li><a class="d1" href="/mesosphere/dcos/1.13/security/oss/"><i data-feather="chevron-right"></i>DC/OS Open Source Security</a></li></ul><li><a class="d0" href="/mesosphere/dcos/1.13/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">DC/OS Enterprise Security</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">Understanding DC/OS Enterprise security features</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/mesosphere/dcos/1.13/security/ent/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- The source repository for this topic is https://github.com/dcos/dcos-docs-site -->
+<p>DC/OS Enterprise offers a range of features that allow you to secure your cluster and prevent breaches and other attacks. This section provides an overview of the security features and recommendations for hardening your cluster.</p>
+<p>The goals of DC/OS security are:</p>
+<ul>
+<li>Isolate the cluster perimeter with strong authentication and authorization across all interfaces.</li>
+<li>Secure and protect the internal cluster communication, containers, and sandboxes.</li>
+<li>Enhance cluster security with support for 3rd party security integrations.</li>
+</ul>
+<p>DC/OS is based on a Linux kernel and userspace. The same best practices for securing any Linux system apply to securing DC/OS, including setting correct file permissions, restricting root and normal user accounts, protecting network interfaces with <code>iptables</code> or other firewalls, and regularly applying updates from the Linux distribution used with DC/OS to ensure that system libraries, utilities, and core services like <code>systemd</code> and OpenSSH are secure.</p>
+<h1 id="security-zones"><a class="content__anchor" href="#security-zones" aria-hidden="true"><i data-feather="bookmark"></i></a>Security Zones</h1>
+<p>At the highest level we can distinguish three security zones in a DC/OS deployment, namely the admin, private, and public security zones.</p>
+<h2 id="admin-zone"><a class="content__anchor" href="#admin-zone" aria-hidden="true"><i data-feather="bookmark"></i></a>Admin zone</h2>
+<p>The <strong>admin</strong> zone is accessible via HTTP/HTTPS and SSH connections, and provides access to the master nodes. It also provides reverse proxy access to the other nodes in the cluster via URL routing. For security, the DC/OS cloud template allows configuring a whitelist so that only specific IP address ranges are permitted to access the admin zone.</p>
+<h3 id="admin-router"><a class="content__anchor" href="#admin-router" aria-hidden="true"><i data-feather="bookmark"></i></a>Admin Router</h3>
+<p>Access to the admin zone is controlled by the <a href="/mesosphere/dcos/1.13/overview/architecture/components/#admin-router">Admin Router</a>.</p>
+<p>HTTP requests incoming to your DC/OS cluster are proxied through the Admin Router (using <a href="http://nginx.org">Nginx</a> with <a href="https://openresty.org">OpenResty</a> at its core). The Admin Router denies access to most HTTP endpoints for unauthenticated requests. In order for a request to be authenticated, it needs to present a valid authentication token in its <code>Authorization</code> header. A token can be obtained by going through the authentication flow.</p>
+<h2 id="private-zone"><a class="content__anchor" href="#private-zone" aria-hidden="true"><i data-feather="bookmark"></i></a>Private zone</h2>
+<p>The <strong>private</strong> zone is a non-routable network that is only accessible from the admin zone or through the edge router from the public zone. Deployed services are run in the private zone. This zone is where the majority of agent nodes are run.</p>
+<h2 id="public-zone"><a class="content__anchor" href="#public-zone" aria-hidden="true"><i data-feather="bookmark"></i></a>Public zone</h2>
+<p>The optional <strong>public</strong> zone is where publicly accessible applications are run. Usually, only a small number of agent nodes are run in this zone. The edge router forwards traffic to applications running in the private zone. The agent nodes in the public zone are labeled with a special role so that only specific tasks can be scheduled here. These agent nodes have both public and private IP addresses and only specific ports should be open in their <code>iptables</code> firewall.</p>
+<p>A typical deployment, including load balancers, is shown below:</p>
+<p><img src="/mesosphere/dcos/1.13/img/security-zones.png" alt="Security Zones"></p>
+<p>Figure 1. Security zone typical deployment</p>
+<h1 id="security-modes"><a class="content__anchor" href="#security-modes" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="security-modes"></a>Security Modes</h1>
+<p>You can control DC/OS Enterprise access by resource and operation (create, read, update, delete). The available security modes are permissive and strict. Strict mode provides the finest-grained controls. The DC/OS permissions are enforced based on your security mode. The security mode is set during <a href="/mesosphere/dcos/1.13/installing/production/deploying-dcos/installation/">DC/OS installation</a> and can only be changed by performing an upgrade.</p>
+<table>
+<thead>
+<tr>
+<th>Permission Category</th>
+<th style="text-align:center">Permissive</th>
+<th style="text-align:center">Strict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Admin Router permissions (<code>dcos:adminrouter</code>)</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">x</td>
+</tr>
+<tr>
+<td>Mesos permissions (<code>dcos:mesos</code>)</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">x</td>
+</tr>
+<tr>
+<td>Marathon and Metronome permissions (<code>dcos:service</code>)</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">x</td>
+</tr>
+<tr>
+<td>Secret store permissions (<code>dcos:secrets</code>)</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">x</td>
+</tr>
+</tbody>
+</table>
+<p>See the <a href="/mesosphere/dcos/1.13/security/ent/perms-reference/">permissions reference</a> for a complete description.</p>
+<h3 id="permissive"><a class="content__anchor" href="#permissive" aria-hidden="true"><i data-feather="bookmark"></i></a>Permissive</h3>
+<p>This mode provides some of the security features, but does not include the Mesos permissions.</p>
+<h3 id="strict"><a class="content__anchor" href="#strict" aria-hidden="true"><i data-feather="bookmark"></i></a>Strict</h3>
+<p>This mode provides the most robust security posture and requires a significant amount of configuration.</p>
+<h2 id="setting-your-security-mode"><a class="content__anchor" href="#setting-your-security-mode" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="set"></a>Setting your security mode</h2>
+<p>The security mode is set during <a href="/mesosphere/dcos/1.13/installing/production/advanced-configuration/">DC/OS installation</a> and can only be changed by performing an <a href="/mesosphere/dcos/1.13/installing/production/upgrading/">upgrade</a>. The security mode is set in the installation configuration file with the <a href="/mesosphere/dcos/1.13/installing/production/advanced-configuration/configuration-reference/#security-and-authentication"><code>security</code> parameter</a>.</p>
+<p class="message--important"><strong>IMPORTANT: </strong> You can only move from "permissive" to "strict" during an upgrade.</p>
+<h2 id="discovering-your-security-mode"><a class="content__anchor" href="#discovering-your-security-mode" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="discover"></a>Discovering your security mode</h2>
+<p>You can use either of the following methods to determine the security mode of an existing cluster.</p>
+<ul>
+<li>
+<p>Make a <code>GET</code> request to the following endpoint: <code>http[s]: /mesosphere/dcos//&lt;cluster-url&gt;/dcos-metadata/bootstrap-config.json</code>.
+<strong>Requirements:</strong> Your user account must have either the <code>dcos:adminrouter:ops:metadata full</code> permission or the <code>dcos:superuser</code> permission. In <code>permissive</code> or <code>strict</code>, you must use HTTPS. Review <a href="/mesosphere/dcos/1.13/security/ent/tls-ssl/">Securing your TLS communications</a> to discover how to obtain the root certificate of your DC/OS CA and provision it to your preferred client.</p>
+</li>
+<li>
+<p><a href="/mesosphere/dcos/1.13/administering-clusters/sshcluster/">SSH</a> into your master and view the contents of <code>/opt/mesosphere/etc/bootstrap-config.json</code>.</p>
+</li>
+</ul>
+<h1 id="authentication"><a class="content__anchor" href="#authentication" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="authentication"></a>Authentication</h1>
+<p>All requests from outside of the DC/OS cluster require an authentication token. Depending on your security mode, in-cluster authentication tokens may be required. For more information, see the <a href="/mesosphere/dcos/1.13/security/ent/service-auth/">Service Accounts documentation</a>.</p>
+<p>The DC/OS authentication token is a <a href="https://jwt.io/introduction/">JSON web token (JWT)</a> that expires five days after issuance by default. The default expiration can be modified during a <a href="/mesosphere/dcos/1.13/installing/production/advanced-configuration/configuration-reference/#bouncer-expiration-auth-token-days-enterprise">custom install or upgrade</a>.</p>
+<p>DC/OS provisions masters with ZooKeeper credentials during the bootstrap sequence. This allows the masters to nominate themselves as potential Mesos leaders.</p>
+<p class="message--important"><strong>IMPORTANT: </strong>Each cluster will use the same default ZooKeeper credentials unless you change them during an install or upgrade (strongly recommended). See <a href="/mesosphere/dcos/1.13/security/ent/hardening/#zk">Hardening</a> for more information.</p>
+<h2 id="user-login"><a class="content__anchor" href="#user-login" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="user"></a>User Login</h2>
+<p>You can log in by using the DC/OS GUI, the DC/OS CLI, or a programmatic client.</p>
+<ul>
+<li>If you have configured an LDAP directory server, DC/OS will pass your credentials to the LDAP directory server for verification.</li>
+<li>If you have configured a SAML or an OpenID Connect identity provider (IdP), you will pass your credentials directly to the IdP.</li>
+</ul>
+<p class="message--note"><strong>NOTE: </strong>If you are logging in with the DC/OS GUI, SAML and OpenID Connect providers, they may discover the necessary login details in a browser cookie. In this case, you will not need to pass your credentials.</p>
+<p>The following diagram details the sequence.</p>
+<p><img src="/mesosphere/dcos/1.13/img/authn-user.png" alt="User authentication"></p>
+<p>Figure 2. User authentication sequence</p>
+<p>When the authentication token expires, you can re-authenticate to receive another.</p>
+<p>When you log in with the DC/OS GUI, the Identity and Access Manager plants a cookie that contains the authentication token. While it is protected with an <a href="https://owasp.org/www-community/HttpOnly"><code>HttpOnly</code></a> flag, you should <strong>Sign Out</strong> at the end of your browser session to clear this cookie.</p>
+<p>Note that clearing the cookie does not invalidate the authentication token. If sniffed over an unencrypted connection or extracted from the cookie, someone could use the authentication token to log into DC/OS. To mitigate this risk,  we recommend setting  the <a href="https://www.owasp.org/index.php/SecureFlag">secure flag</a> on the cookie in <code>permissive</code> and <code>strict</code> modes, as discussed in <a href="/mesosphere/dcos/1.13/security/ent/hardening/#secure-flag">Hardening</a>.</p>
+<h2 id="passwords"><a class="content__anchor" href="#passwords" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="passwords"></a>Passwords</h2>
+<p>Credentials for cluster-local user accounts (those not using LDAP, SAML, or OpenID Connect) consist of a user name and password that can be used to validate, but not reproduce, user passwords. Passwords are individually salted and cryptographically hashed using <a href="http://man7.org/linux/man-pages/man3/crypt.3.html">crypt(3)</a> SHA-512. This results in one-way hashes that can be used to validate but not reproduce user passwords. To further impede brute force attacks and meet or exceed NIST FIPS security requirements, the hash function performs many iterations using a 128 bit salt length.</p>
+<p>Once DC/OS IAM has validated your credentials, an authentication token is returned to you. The authentication token is then used for further request authentication during your session. This way the password does not need to be stored in the client and is only sent over the wire immediately after you enter it. Over the wire, the authentication request is encrypted using TLS. TLS is required and enforced in strict mode, but optional in permissive mode. For more information, see <a href="/mesosphere/dcos/1.13/security/ent/#security-modes">Security Modes</a>.</p>
+<h2 id="service-authentication"><a class="content__anchor" href="#service-authentication" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="service"></a>Service Authentication</h2>
+<p>Service accounts provide an identity for <a href="/mesosphere/dcos/1.13/overview/concepts/#dcos-service">services</a> to authenticate with DC/OS. Service accounts control communication between services and DC/OS components. DC/OS services may require <a href="/mesosphere/dcos/1.13/security/ent/service-auth/">service accounts</a> depending on your security mode.</p>
+<h2 id="component-authentication"><a class="content__anchor" href="#component-authentication" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="sysd"></a>Component Authentication</h2>
+<p>DC/OS automatically provisions DC/OS components (<a href="/mesosphere/dcos/1.13/overview/concepts/#systemd-service">systemd services on the DC/OS nodes</a>) with service accounts during the bootstrap sequence.</p>
+<p>For example, the Mesos agents are provisioned with service accounts that they use to authenticate to the Mesos master. This ensures that only authorized agents can join the Mesos cluster, advertise resources, and get asked to launch tasks.</p>
+<p>You can view the <code>systemd</code> service accounts from the <strong>Organization -&gt; Service Accounts</strong> tab of the DC/OS GUI. These service accounts are prefixed with <code>dcos_</code>.</p>
+<p class="message--warning"><strong>WARNING: </strong> Modifying the permissions of any of the automatically provisioned service accounts may cause the service to fail.</p>
+<h1 id="authorization"><a class="content__anchor" href="#authorization" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="authorization"></a>Authorization</h1>
+<p>In addition to authenticating requests, DC/OS also checks the permissions associated with the account to determine whether the requestor is authorized to access the requested resource.</p>
+<p>The following diagram illustrates the authorization sequence.</p>
+<p><img src="/mesosphere/dcos/1.13/img/authz.png" alt="Authorization sequence"></p>
+<p>Figure 3. Authorization sequence</p>
+<p>The <code>OPT</code> sequence in the diagram illustrates how permission enforcement varies by security mode.</p>
+<ul>
+<li>
+<p>Admin Router and the Secret Store enforce their permissions in all security modes.</p>
+</li>
+<li>
+<p>Metronome and Marathon enforce their permissions in <code>permissive</code> and <code>strict</code> modes. However, the enforcement in <code>permissive</code> mode only occurs if the requestor presents an authentication token, which is optional in <code>permissive</code> mode. If an in-cluster requestor does not present an authentication token, Metronome and Marathon will act as if the request was made by a user with the <code>dcos:superuser</code> permission.</p>
+</li>
+<li>
+<p>The Mesos masters and agents enforce their permissions only in <code>strict</code> security mode.</p>
+</li>
+</ul>
+<p>The diagram does not show the Secret Store sequence. The Admin Router does not check the permissions on requests to the Secret Store. It routes these requests to the Secret Store, which enforces its own permissions on each request.</p>
+<p>For more information about permissions, refer to <a href="/mesosphere/dcos/1.13/security/ent/perms-reference/">Managing permissions</a>.</p>
+<h1 id="transport-layer-security-tls-encryption"><a class="content__anchor" href="#transport-layer-security-tls-encryption" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="encryption"></a>Transport Layer Security (TLS) Encryption</h1>
+<p>The encryption of DC/OS communications varies according to your <a href="/mesosphere/dcos/1.13/security/ent/#security-modes">security mode</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Security mode</th>
+<th>External communications*</th>
+<th>Internode communications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Permissive</td>
+<td>HTTP and HTTPS are supported. HTTP requests to the root path (for example, <code>http://example.com/</code>) are redirected to HTTPS. HTTP requests with a target different than the root path (for example,  <code>http://example.com/foo</code>) are not redirected to HTTPS. If you log in to DC/OS with a password, you can choose whether the password is transmitted insecurely or securely (requires proper certificate verification, including hostname verification on the client side).</td>
+<td>Encryption enabled</td>
+</tr>
+<tr>
+<td>Strict</td>
+<td>Only HTTPS is supported. All HTTP connections are redirected to HTTPS. If you log in to DC/OS with a password, the password is transmitted securely (requires proper certificate verification, including hostname verification on the client side). If one or more HTTP proxies or load balancers are between the user agent and Admin Router, then the secure password transmission applies to the final communication between Admin Router and the previous proxy or load balancer.</td>
+<td>Encryption enforced**</td>
+</tr>
+</tbody>
+</table>
+<p>* Communications with clients outside of the cluster. For example, browsers and the DC/OS CLI.</p>
+<p>** Except internode communications between instances of ZooKeeper, which are not encrypted in any security mode. Each master node has a ZooKeeper instance. These ZooKeeper instances communicate periodically to keep their in-memory databases in sync. You can use <a href="https://datatracker.ietf.org/wg/ipsec/documents/">IPsec</a> to manually encrypt these communications.</p>
+<p>Not all existing user services support encryption at this time. If the service supports encryption, you can enable it in <code>permissive</code> mode. In <code>strict</code> mode, encryption of user service communications is enforced. As a result, only user services that support encryption can be deployed in <code>strict</code> mode.</p>
+<p>Internode communications occur over TLS 1.2. To ensure browser support, external communications currently accept TLS 1.0, 1.1, and 1.2. These settings are configurable.</p>
+<p>For more information, see <a href="/mesosphere/dcos/1.13/security/ent/tls-ssl/">Securing communication with TLS</a>.</p>
+<h1 id="spaces"><a class="content__anchor" href="#spaces" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="spaces"></a>Spaces</h1>
+<p>Spaces allow you to:</p>
+<ul>
+<li>
+<p><a href="#serv-job">Restrict user access to services and jobs</a>.</p>
+</li>
+<li>
+<p><a href="#secrets">Restrict service access to secrets</a>.</p>
+</li>
+</ul>
+<p>At a minimum, we recommend using spaces to restrict service access to secrets.</p>
+<h2 id="spaces-for-services-and-jobs"><a class="content__anchor" href="#spaces-for-services-and-jobs" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="serv-job"></a>Spaces for Services and Jobs</h2>
+<p>One aspect of spaces involves service and job groups. You can put services and jobs into groups in any security mode. This can help users find the jobs or services that pertain to them.</p>
+<p>You can use <a href="/mesosphere/dcos/1.13/security/ent/perms-reference/#marathon-metronome">permissions</a> to restrict user’s access on a per service/job or service/job group basis.</p>
+<p>To learn how to do this, see <a href="/mesosphere/dcos/1.13/deploying-services/service-groups/">Controlling user access to services</a> and <a href="/mesosphere/dcos/1.13/deploying-jobs/job-groups/">Controlling user access to jobs</a>.</p>
+<h2 id="spaces-for-secrets"><a class="content__anchor" href="#spaces-for-secrets" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="secrets"></a>Spaces for secrets</h2>
+<p>The secret path controls which services can access it. If you do not specify a path when storing a secret, any service can access it.</p>
+<p>Secret paths work in conjunction with service groups to control access. However, you do not need to have service groups to control access to secrets, you can also use the name of the service. The following table provides a few examples to show how it works.</p>
+<table>
+<thead>
+<tr>
+<th>Secret</th>
+<th>Service</th>
+<th>Can service access secret?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>group/secret</code></td>
+<td><code>/marathon-user/service</code></td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>group/secret</code></td>
+<td><code>/group/hdfs/service</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>group/hdfs/secret</code></td>
+<td><code>/group/spark/service</code></td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>hdfs/secret</code></td>
+<td><code>/hdfs</code></td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes"><a class="content__anchor" href="#notes" aria-hidden="true"><i data-feather="bookmark"></i></a>Notes</h3>
+<ul>
+<li>If only a single service requires access to a secret, store the secret in a path that matches the name of the service (for example, <code>hdfs/secret</code>). This prevents it from being accessed by other services.</li>
+<li>Service groups begin with <code>/</code>, while secret paths do not.</li>
+</ul>
+<h1 id="secrets"><a class="content__anchor" href="#secrets" aria-hidden="true"><i data-feather="bookmark"></i></a>Secrets</h1>
+<p>To secure sensitive values like private keys, API tokens, and database passwords, DC/OS provides:</p>
+<ul>
+<li><a href="#storage-transport">Secure storage and transport</a></li>
+<li><a href="#access">Fine-grained access controls</a></li>
+</ul>
+<h2 id="secure-storage-and-transport-of-secrets"><a class="content__anchor" href="#secure-storage-and-transport-of-secrets" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="storage-transport"></a>Secure Storage and Transport of Secrets</h2>
+<p>DC/OS stores Secret Store data in ZooKeeper encrypted under an unseal key using the Advanced Encryption Standard (AES) algorithm in Galois Counter Mode (GCM). The Secret Store uses the unseal key to encrypt secrets before sending them to ZooKeeper and to decrypt secrets after receiving them from ZooKeeper. This ensures that secrets are encrypted both at rest and in transit. TLS provides an additional layer of encryption on the secrets in transit from ZooKeeper to the Secret Store.</p>
+<p>The unseal key is encrypted under a public GPG key. Requests to the <a href="/mesosphere/dcos/1.13/security/ent/secrets/secrets-api/">Secrets API</a> return only the encrypted unseal key. When the Secret Store becomes sealed, either manually or due to a failure, the private GPG key must be used to decrypt the unseal key and unseal the Secret Store. As a convenience, DC/OS automatically generates a new 4096-bit GPG keypair during the bootstrap sequence. It uses this keypair to initialize the Secret Store and stores the keypair in ZooKeeper.</p>
+<p>The Secret Store is available in all security modes. By default, you cannot store a secret larger than one megabyte. If you need to exceed this limit, contact Mesosphere support. We do not support alternate or additional Secret Stores at this time. You should use only the <code>default</code> Secret Store provided by Mesosphere.</p>
+<h2 id="fine-grained-access-control-of-secrets"><a class="content__anchor" href="#fine-grained-access-control-of-secrets" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="access"></a>Fine-grained Access Control of Secrets</h2>
+<p>DC/OS allows you to restrict:</p>
+<ul>
+<li>
+<p><strong>User access to secrets:</strong> use <a href="/mesosphere/dcos/1.13/security/ent/perms-reference/#secrets">permissions</a> to control which users can access what secrets and what operations they can perform.</p>
+</li>
+<li>
+<p><strong>Application access to secrets:</strong> use <a href="/mesosphere/dcos/1.13/security/ent/#spaces">spaces</a> to control which applications can retrieve what secrets.</p>
+</li>
+</ul>
+<h1 id="linux-user-accounts"><a class="content__anchor" href="#linux-user-accounts" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="linux-users"></a>Linux User Accounts</h1>
+<p>The default Linux user for tasks and sandbox files varies according to your <a href="/mesosphere/dcos/1.13/security/ent/#security-modes">security mode</a> and the <a href="/mesosphere/dcos/1.13/deploying-services/containerizers/">type of container</a> the task runs inside of.</p>
+<p>By default, all tasks will run inside of Docker containers. Please see <a href="/mesosphere/dcos/1.13/deploying-services/creating-services/deploy-docker-app/">Deploying a Docker-based Service to Marathon</a> for an example.</p>
+<p>The following table identifies the default Linux user in each situation.</p>
+<table>
+<thead>
+<tr>
+<th>Container type</th>
+<th>Permissive</th>
+<th>Strict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mesos (UCR)</td>
+<td>Task runs under <code>root</code>. Fetched and created files are owned by <code>root</code>.</td>
+<td>Task runs under <code>nobody</code>. Fetched and created files are owned by <code>nobody</code>.</td>
+</tr>
+<tr>
+<td>Docker</td>
+<td>Task runs under <code>root</code>. Fetched and created files are owned by <code>root</code>.</td>
+<td>Task runs under <code>root</code>. Fetched and created files are owned by <code>nobody</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Docker tasks run under <code>root</code> by default, but Docker user privileges are confined to the Docker container. Should you wish to change the default task user, modify the Docker container. Please reference the <a href="https://docs.docker.com/engine/tutorials/dockerimages/">Docker documentation</a> for more information, as well as the user service <a href="/mesosphere/dcos/services/">documentation</a>.</p>
+<p class="message--note"><strong>NOTE: </strong>If the fetched file is compressed, the individual files inside will retain the permissions and ownership assigned when the file was compressed and are unaffected by any other configurations or settings.
+</p>
+<p>See <a href="/mesosphere/dcos/1.13/security/ent/users-groups/config-linux-user/">Overriding the default Linux user</a>.</p>
+<div class="grid"><a class="grid__item" href="/mesosphere/dcos/1.13/security/ent/users-groups"><div class="grid__header__wrapper"><h3 class="grid__header">Managing Users and Groups</h3><div class="grid__label__wrapper"><h6 class="grid__label grid__label--enterprise">ENTERPRISE</h6></div></div><div class="grid__desc__wrapper"><p class="grid__desc">Managing users and groups<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/mesosphere/dcos/1.13/security/ent/gui-permissions"><div class="grid__header__wrapper"><h3 class="grid__header">Granting Access to the UI</h3><div class="grid__label__wrapper"><h6 class="grid__label grid__label--enterprise">ENTERPRISE</h6></div></div><div class="grid__desc__wrapper"><p class="grid__desc">Granting access to the DC/OS UI<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/mesosphere/dcos/1.13/security/ent/perms-management"><div class="grid__header__wrapper"><h3 class="grid__header">Permissions Management</h3><div class="grid__label__wrapper"><h6 class="grid__label grid__label--enterprise">ENTERPRISE</h6></div></div><div class="grid__desc__wrapper"><p class="grid__desc">Managing permissions<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/mesosphere/dcos/1.13/security/ent/perms-reference"><div class="grid__header__wrapper"><h3 class="grid__header">Permissions Reference</h3><div class="grid__label__wrapper"><h6 class="grid__label grid__label--enterprise">ENTERPRISE</h6></div></div><div class="grid__desc__wrapper"><p class="grid__desc">Understanding DC/OS access and permissions references<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/mesosphere/dcos/1.13/security/ent/ldap"><div class="grid__header__wrapper"><h3 class="grid__header">LDAP authentication</h3><div class="grid__label__wrapper"><h6 class="grid__label grid__label--enterprise">ENTERPRISE</h6></div></div><div class="grid__desc__wrapper"><p class="grid__desc">Setting up a directory-based authentication server via LDAP<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/mesosphere/dcos/1.13/security/ent/secrets"><div class="grid__header__wrapper"><h3 class="grid__header">Secrets</h3><div class="grid__label__wrapper"><h6 class="grid__label grid__label--enterprise">ENTERPRISE</h6></div></div><div class="grid__desc__wrapper"><p class="grid__desc">Understanding the Secret Store<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/mesosphere/dcos/1.13/security/ent/sso"><div class="grid__header__wrapper"><h3 class="grid__header">Identity provider-based authentication</h3><div class="grid__label__wrapper"><h6 class="grid__label grid__label--enterprise">ENTERPRISE</h6></div></div><div class="grid__desc__wrapper"><p class="grid__desc">Configuring identity provider-based authentication<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/mesosphere/dcos/1.13/security/ent/service-auth"><div class="grid__header__wrapper"><h3 class="grid__header">Service Authentication</h3><div class="grid__label__wrapper"><h6 class="grid__label grid__label--enterprise">ENTERPRISE</h6></div></div><div class="grid__desc__wrapper"><p class="grid__desc">Authenticating service accounts<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/mesosphere/dcos/1.13/security/ent/restrict-service-access"><div class="grid__header__wrapper"><h3 class="grid__header">Restricting Access to DC/OS Service Groups</h3><div class="grid__label__wrapper"><h6 class="grid__label grid__label--enterprise">ENTERPRISE</h6></div></div><div class="grid__desc__wrapper"><p class="grid__desc">Using the DC/OS UI to achieve multi-tenancy in permissive mode<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/mesosphere/dcos/1.13/security/ent/hardening"><div class="grid__header__wrapper"><h3 class="grid__header">Hardening</h3><div class="grid__label__wrapper"><h6 class="grid__label grid__label--enterprise">ENTERPRISE</h6></div></div><div class="grid__desc__wrapper"><p class="grid__desc">Increasing the security of your cluster<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/mesosphere/dcos/1.13/security/ent/iam-api"><div class="grid__header__wrapper"><h3 class="grid__header">Identity and Access Management API</h3><div class="grid__label__wrapper"><h6 class="grid__label grid__label--enterprise">ENTERPRISE</h6></div></div><div class="grid__desc__wrapper"><p class="grid__desc">Managing users and permissions with the IAM API<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a><a class="grid__item" href="/mesosphere/dcos/1.13/security/ent/tls-ssl"><div class="grid__header__wrapper"><h3 class="grid__header">Securing Communication with TLS</h3><div class="grid__label__wrapper"><h6 class="grid__label grid__label--enterprise">ENTERPRISE</h6></div></div><div class="grid__desc__wrapper"><p class="grid__desc">Securing encrypted communications using TLS certificates<span class="grid__desc__ellipsis">&#8230;Read More</span></p></div><div class="grid__link"><i data-feather="arrow-right"></i></div></a></div></article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#security-zones">Security Zones</a></li><li class="content__sections-item content__sections-item--h2"><a href="#admin-zone">Admin zone</a></li><li class="content__sections-item content__sections-item--h2"><a href="#private-zone">Private zone</a></li><li class="content__sections-item content__sections-item--h2"><a href="#public-zone">Public zone</a></li><li class="content__sections-item content__sections-item--h1"><a href="#security-modes">Security Modes</a></li><li class="content__sections-item content__sections-item--h2"><a href="#setting-your-security-mode">Setting your security mode</a></li><li class="content__sections-item content__sections-item--h2"><a href="#discovering-your-security-mode">Discovering your security mode</a></li><li class="content__sections-item content__sections-item--h1"><a href="#authentication">Authentication</a></li><li class="content__sections-item content__sections-item--h2"><a href="#user-login">User Login</a></li><li class="content__sections-item content__sections-item--h2"><a href="#passwords">Passwords</a></li><li class="content__sections-item content__sections-item--h2"><a href="#service-authentication">Service Authentication</a></li><li class="content__sections-item content__sections-item--h2"><a href="#component-authentication">Component Authentication</a></li><li class="content__sections-item content__sections-item--h1"><a href="#authorization">Authorization</a></li><li class="content__sections-item content__sections-item--h1"><a href="#transport-layer-security-tls-encryption">Transport Layer Security (TLS) Encryption</a></li><li class="content__sections-item content__sections-item--h1"><a href="#spaces">Spaces</a></li><li class="content__sections-item content__sections-item--h2"><a href="#spaces-for-services-and-jobs">Spaces for Services and Jobs</a></li><li class="content__sections-item content__sections-item--h2"><a href="#spaces-for-secrets">Spaces for secrets</a></li><li class="content__sections-item content__sections-item--h1"><a href="#secrets">Secrets</a></li><li class="content__sections-item content__sections-item--h2"><a href="#secure-storage-and-transport-of-secrets">Secure Storage and Transport of Secrets</a></li><li class="content__sections-item content__sections-item--h2"><a href="#fine-grained-access-control-of-secrets">Fine-grained Access Control of Secrets</a></li><li class="content__sections-item content__sections-item--h1"><a href="#linux-user-accounts">Linux User Accounts</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

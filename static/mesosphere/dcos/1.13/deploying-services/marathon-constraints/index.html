@@ -1,0 +1,152 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Marathon Placement Constraints - D2iQ Docs</title><meta name="description" content="Understanding Marathon placement constraints"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos/cn/1.13/deploying-services/marathon-constraints">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/mesosphere/dcos/2.2/deploying-services/marathon-constraints">Mesosphere DC/OS 2.2.0</a></li><li><a href="/mesosphere/dcos/2.1/deploying-services/marathon-constraints">Mesosphere DC/OS 2.1.0</a></li><li><a href="/mesosphere/dcos/2.0/deploying-services/marathon-constraints">Mesosphere DC/OS 2.0</a></li><li><a href="/mesosphere/dcos/1.13/deploying-services/marathon-constraints">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/mesosphere/dcos/1.13/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li class="active"><a class="d0" href="/mesosphere/dcos/1.13/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><ul><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/install/">Installing Services</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/marathon-parameters/">Marathon Configuration Reference</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/creating-services/"><i data-feather="chevron-right"></i>Creating Services</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/task-handling/"><i data-feather="chevron-right"></i>Task Handling</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/config-universe-service/">Configuring Services</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/fault-domain-awareness/">Fault Domain Awareness and Capacity Extension</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/service-groups/">Granting Access to Services and Groups</a></li><li class="active active-on"><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/marathon-constraints/">Marathon Placement Constraints</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/monitor-services/">Monitoring Services</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/scale-service/">Scaling a Service</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/service-endpoints/">Service Endpoints</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/service-ports/">Service Ports</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/update-user-service/">Updating a User-Created Service</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/private-docker-registry/">Using a Private Docker Registry</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/deployments/">Deployments</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/expose-service/">Exposing a Service</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/uninstall/">Uninstalling Services</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/package-api/">Package Management API</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/marathon-on-marathon/"><i data-feather="chevron-right"></i>Using Custom Marathon</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/marathon-api/">Marathon API</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/containerizers/"><i data-feather="chevron-right"></i>Using Containerizers</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/pods/"><i data-feather="chevron-right"></i>Pods</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/multi-tenancy-primitives/">Multi-Tenancy Primitives</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/gpu/">Using GPUs</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/faq/">Frequently Asked Questions</a></li></ul><li><a class="d0" href="/mesosphere/dcos/1.13/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Marathon Placement Constraints</h1></div><h4 class="content__header-description">Understanding Marathon placement constraints</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/mesosphere/dcos/1.13/deploying-services/marathon-constraints/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>Marathon placement constraints control where services run, to allow optimizing for either fault tolerance (by spreading a task out on multiple nodes) or locality (by running all of a service’s tasks on the same node). Constraints have three parts: a field name, an operator, and an optional parameter. The field name can be the hostname of the agent node or any attribute of the agent node.</p>
+<h1 id="field-names"><a class="content__anchor" href="#field-names" aria-hidden="true"><i data-feather="bookmark"></i></a>Field Names</h1>
+<h2 id="agent-properties-as-a-field-name"><a class="content__anchor" href="#agent-properties-as-a-field-name" aria-hidden="true"><i data-feather="bookmark"></i></a>Agent properties as a field name</h2>
+<p>Constraints with a field name beginning with <code>@</code> refer to agent properties.</p>
+<h3 id="host-name"><a class="content__anchor" href="#host-name" aria-hidden="true"><i data-feather="bookmark"></i></a>Host name</h3>
+<p>Entering <code>@hostname</code> as the field name matches the agent node hostnames. See <code>UNIQUE operator</code>, below, for a usage example.</p>
+<h3 id="region-and-zone-as-field-names"><a class="content__anchor" href="#region-and-zone-as-field-names" aria-hidden="true"><i data-feather="bookmark"></i></a>Region and zone as field names</h3>
+<p>Use the <code>@region</code> and <code>@zone</code> field names to configure <a href="/mesosphere/dcos/1.13/deploying-services/fault-domain-awareness/">fault domain awareness and capacity extension</a>.</p>
+<h2 id="attribute-as-field-name"><a class="content__anchor" href="#attribute-as-field-name" aria-hidden="true"><i data-feather="bookmark"></i></a>Attribute as field name</h2>
+<p>If <code>@hostname</code>, <code>@region</code>, or <code>@zone</code> are not specified as field names, then the field name is interpreted as a Mesos agent node attribute. A Mesos agent node attribute allows you to tag an agent node. See <code>mesos-slave --help</code> to learn how to set the attributes. If the specified attribute is not defined on the agent node, most operators will refuse to run tasks on it. In fact, only the <code>UNLIKE</code> operator will (and always will) accept this offer for now, while other operators will always refuse it.</p>
+<p>Marathon supports text, scalar, range, and set attribute values. For scalars, ranges, and sets, Marathon will perform a string comparison on the formatted values. The format matches that of the Mesos attribute formatting. For ranges and sets, the format is <code>[begin-end,...]</code> and <code>{item,...}</code> respectively. For example, you might have a range formatted as <code>[100-200]</code> and a set formatted as <code>{a,b,c}</code>. Regex is allowed for LIKE and UNLIKE operators; to match ANY value, use the string <code>.*</code>.</p>
+<h1 id="operators"><a class="content__anchor" href="#operators" aria-hidden="true"><i data-feather="bookmark"></i></a>Operators</h1>
+<h2 id="cluster-operator"><a class="content__anchor" href="#cluster-operator" aria-hidden="true"><i data-feather="bookmark"></i></a>CLUSTER operator</h2>
+<p><strong>Value</strong> (optional): A string value.
+When a value is specified, tasks are launched on agent nodes with an attribute whose value matches exactly.</p>
+<p><code>CLUSTER</code> allows you to run all of your service’s tasks on agent nodes that share a certain attribute. This is useful, for example, if you have services with special hardware needs, or if you want to run them on the same rack for low latency.</p>
+<p>Naming the field name <code>hostname</code> tells Marathon that the launched tasks of the app or pod should be launched together on the same agent:</p>
+<ul>
+<li>When a value for <code>hostname</code> is specified, tasks are launched on the agent whose hostname matches the value.</li>
+<li>When the <code>hostname</code> value is empty or unspecified, the first instance is launched on <strong>any</strong> agent node and the remaining tasks are launched alongside it on the same agent.</li>
+</ul>
+<p>When the field name is an attribute, Marathon handles tasks differently:</p>
+<ul>
+<li>When a value is specified, tasks are launched on any agent with an attribute named according the field <strong>and</strong> with a value matching that of the constraint.</li>
+<li>When the value is empty or unspecified, the first instance is launched on any agent with an attribute named according to the field; the value of the attribute on that agent is used for future constraint matches.</li>
+</ul>
+<h2 id="examples"><a class="content__anchor" href="#examples" aria-hidden="true"><i data-feather="bookmark"></i></a>Examples</h2>
+<p>The example below specifies the exact rack on which to run app tasks:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;sleep-cluster&quot;,
+  &quot;cmd&quot;: &quot;sleep 60&quot;,
+  &quot;instances&quot;: 3,
+  &quot;constraints&quot;: [[&quot;rack_id&quot;, &quot;CLUSTER&quot;, &quot;rack-1&quot;]]
+}
+</code></pre>
+<p>This example leaves the value field empty. This tells Marathon that all of the app tasks should run on the same rack, but does not specify which.</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;sleep-cluster&quot;,
+  &quot;cmd&quot;: &quot;sleep 60&quot;,
+  &quot;instances&quot;: 3,
+  &quot;constraints&quot;: [[&quot;rack_id&quot;, &quot;CLUSTER&quot;]]
+}
+</code></pre>
+<p>This example uses the specified <code>hostname</code>, which means a service must run on a specific node.</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;sleep-cluster&quot;,
+  &quot;cmd&quot;: &quot;sleep 60&quot;,
+  &quot;instances&quot;: 3,
+  &quot;constraints&quot;: [[&quot;hostname&quot;, &quot;CLUSTER&quot;, &quot;a.specific.node.com&quot;]]
+}
+</code></pre>
+<p>Below, the field is named <code>hostname</code>, but the value is empty. This tells Marathon that all app tasks must run on the same node, but does not specify which.</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;sleep-cluster&quot;,
+  &quot;cmd&quot;: &quot;sleep 60&quot;,
+  &quot;instances&quot;: 3,
+  &quot;constraints&quot;: [[&quot;hostname&quot;, &quot;CLUSTER&quot;]]
+}
+</code></pre>
+<h2 id="like-operator"><a class="content__anchor" href="#like-operator" aria-hidden="true"><i data-feather="bookmark"></i></a>LIKE operator</h2>
+<p><strong>Value</strong> (required): A regular expression for the value of the attribute.</p>
+<p><code>LIKE</code> accepts a regular expression as parameter and allows you to run your tasks only on the agent nodes whose field values match the regular expression. Note that the entire value must be matched (imagine there is an implicit <code>^</code> and <code>$</code> surrounding the regular expression)</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;sleep-group-by&quot;,
+  &quot;cmd&quot;: &quot;sleep 60&quot;,
+  &quot;instances&quot;: 3,
+  &quot;constraints&quot;: [[&quot;rack_id&quot;, &quot;LIKE&quot;, &quot;rack-[1-3]&quot;]]
+}
+</code></pre>
+<p>If the attribute in question is a scalar, it is rounded to the nearest thousandth using the half-even rounding strategy; zeroes after the decimal are dropped.</p>
+<h2 id="unlike-operator"><a class="content__anchor" href="#unlike-operator" aria-hidden="true"><i data-feather="bookmark"></i></a>UNLIKE operator</h2>
+<p><strong>Value</strong> (required): A regular expression for the value of the attribute.</p>
+<p><code>UNLIKE</code> is similar to the <code>LIKE</code> operator, but instructs Marathon to only run tasks on agent nodes whose field values <strong>do not</strong> match the regular expression. Note that the entire value must be matched (imagine there is an implicit <code>^</code> and <code>$</code> surrounding the regular expression)</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;sleep-group-by&quot;,
+  &quot;cmd&quot;: &quot;sleep 60&quot;,
+  &quot;instances&quot;: 3,
+  &quot;constraints&quot;: [[&quot;rack_id&quot;, &quot;UNLIKE&quot;, &quot;rack-[7-9]&quot;]]
+}
+</code></pre>
+<h2 id="max-per-operator"><a class="content__anchor" href="#max-per-operator" aria-hidden="true"><i data-feather="bookmark"></i></a>MAX_PER operator</h2>
+<p><strong>Value</strong> (required): An integer, for example <code>&quot;2&quot;</code>.</p>
+<p><code>MAX_PER</code> accepts a number as parameter that specifies the maximum size of each group. It can be used to limit tasks across racks or datacenters.</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;sleep-group-by&quot;,
+  &quot;cmd&quot;: &quot;sleep 60&quot;,
+  &quot;instances&quot;: 3,
+  &quot;constraints&quot;: [[&quot;rack_id&quot;, &quot;MAX_PER&quot;, &quot;2&quot;]]
+}
+</code></pre>
+<h2 id="unique-operator"><a class="content__anchor" href="#unique-operator" aria-hidden="true"><i data-feather="bookmark"></i></a>UNIQUE operator</h2>
+<p><code>UNIQUE</code> does not accept a value.</p>
+<p><code>UNIQUE</code> tells Marathon to enforce uniqueness of the attribute across all of a service’s tasks. For example, the following constraint ensures that there is only one service task running on each host.</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;sleep-unique&quot;,
+  &quot;cmd&quot;: &quot;sleep 60&quot;,
+  &quot;instances&quot;: 3,
+  &quot;constraints&quot;: [[&quot;hostname&quot;, &quot;UNIQUE&quot;]]
+}
+</code></pre>
+<h2 id="group-by-operator"><a class="content__anchor" href="#group-by-operator" aria-hidden="true"><i data-feather="bookmark"></i></a>GROUP_BY operator</h2>
+<p><strong>Value</strong> (optional): An integer, for example <code>&quot;3&quot;</code>.</p>
+<p><code>GROUP_BY</code> can be used to distribute tasks evenly across racks or datacenters for high availability.</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;sleep-group-by&quot;,
+  &quot;cmd&quot;: &quot;sleep 60&quot;,
+  &quot;instances&quot;: 3,
+  &quot;constraints&quot;: [[&quot;rack_id&quot;, &quot;GROUP_BY&quot;]]
+}
+</code></pre>
+<p>Marathon only knows about different values of the attribute (e.g. “<code>rack_id</code>”) by analyzing incoming offers from Mesos. If tasks are not already spread across all possible values, specify the number of values in constraints. If you do not specify the number of values, you might find that the tasks are only distributed in one value, even though you are using the <code>GROUP_BY</code> constraint. For example, if you are spreading across 3 racks, use:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;sleep-group-by&quot;,
+  &quot;cmd&quot;: &quot;sleep 60&quot;,
+  &quot;instances&quot;: 3,
+  &quot;constraints&quot;: [[&quot;rack_id&quot;, &quot;GROUP_BY&quot;, &quot;3&quot;]]
+}
+</code></pre>
+<h2 id="is-operator"><a class="content__anchor" href="#is-operator" aria-hidden="true"><i data-feather="bookmark"></i></a>IS operator</h2>
+<p><strong>Value</strong> (required): A Mesos Scalar or Text value, as specified by the <a href="http://mesos.apache.org/documentation/latest/attributes-resources/#types">Mesos Attributes and Resources Type Specification</a>:</p>
+<pre><code>scalar : floatValue
+
+floatValue : ( intValue ( &quot;.&quot; intValue )? ) | ...
+
+intValue : [0-9]+
+
+text : [a-zA-Z0-9_/.-]
+</code></pre>
+<h3 id="comparing-text-values"><a class="content__anchor" href="#comparing-text-values" aria-hidden="true"><i data-feather="bookmark"></i></a>Comparing text values</h3>
+<p>When an <code>IS</code> constraint is specified, a task is only launched on nodes that have the specified value.</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;sleep-cluster&quot;,
+  &quot;cmd&quot;: &quot;sleep 60&quot;,
+  &quot;instances&quot;: 3,
+  &quot;constraints&quot;: [[&quot;rack&quot;, &quot;IS&quot;, &quot;rack-1&quot;]]
+}
+</code></pre>
+<h3 id="comparing-scalar-values"><a class="content__anchor" href="#comparing-scalar-values" aria-hidden="true"><i data-feather="bookmark"></i></a>Comparing scalar values</h3>
+<p>When comparing scalars, the value is compared to the nearest thousandth (using half-even rounding strategy).</p>
+<p>Given a node with attribute “level:0.8”, the following constraints would match:</p>
+<pre><code class="language-json">[[&quot;level&quot;, &quot;IS&quot;, &quot;0.8&quot;]]
+
+[[&quot;level&quot;, &quot;IS&quot;, &quot;0.80&quot;]]
+
+[[&quot;level&quot;, &quot;IS&quot;, &quot;0.8001&quot;]]
+</code></pre>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#field-names">Field Names</a></li><li class="content__sections-item content__sections-item--h2"><a href="#agent-properties-as-a-field-name">Agent properties as a field name</a></li><li class="content__sections-item content__sections-item--h2"><a href="#attribute-as-field-name">Attribute as field name</a></li><li class="content__sections-item content__sections-item--h1"><a href="#operators">Operators</a></li><li class="content__sections-item content__sections-item--h2"><a href="#cluster-operator">CLUSTER operator</a></li><li class="content__sections-item content__sections-item--h2"><a href="#examples">Examples</a></li><li class="content__sections-item content__sections-item--h2"><a href="#like-operator">LIKE operator</a></li><li class="content__sections-item content__sections-item--h2"><a href="#unlike-operator">UNLIKE operator</a></li><li class="content__sections-item content__sections-item--h2"><a href="#max-per-operator">MAX_PER operator</a></li><li class="content__sections-item content__sections-item--h2"><a href="#unique-operator">UNIQUE operator</a></li><li class="content__sections-item content__sections-item--h2"><a href="#group-by-operator">GROUP_BY operator</a></li><li class="content__sections-item content__sections-item--h2"><a href="#is-operator">IS operator</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Installing the CLI - D2iQ Docs</title><meta name="description" content="Installing the DC/OS command line interface"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li><li class="chooser-list-item"><a href="/dkp/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos/cn/1.13/cli/install">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__item"><a href="/dkp/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/mesosphere/dcos/2.2/cli/install">Mesosphere DC/OS 2.2.0</a></li><li><a href="/mesosphere/dcos/2.1/cli/install">Mesosphere DC/OS 2.1.0</a></li><li><a href="/mesosphere/dcos/2.0/cli/install">Mesosphere DC/OS 2.0</a></li><li><a href="/mesosphere/dcos/1.13/cli/install">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/mesosphere/dcos/1.13/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li class="active"><a class="d0" href="/mesosphere/dcos/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><ul><li class="active active-on"><a class="d1" href="/mesosphere/dcos/1.13/cli/install/">Installing the CLI</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/cli/configure/">Configuring the CLI</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/cli/update/">Updating the CLI</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/cli/uninstall/">Uninstalling the CLI</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/cli/plugins/">CLI Plugins</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/cli/enterprise-cli/">DC/OS Enterprise CLI</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/cli/autocompletion/">CLI Autocompletion</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/cli/command-reference/"><i data-feather="chevron-right"></i>Command Reference</a></li></ul><li><a class="d0" href="/mesosphere/dcos/1.13/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Installing the CLI</h1></div><h4 class="content__header-description">Installing the DC/OS command line interface</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/mesosphere/dcos/1.13/cli/install/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+Installing+the+CLI&amp;description=Source:%20https://docs.d2iq.com/mesosphere/dcos/1.13/cli/install&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><p>The recommended method to install the DC/OS CLI is by getting the preformatted set of commands from the DC/OS UI and running them in the terminal. See the prerequisites and instructions for your operating system for more information:</p>
+<ul>
+<li><a href="#linux">Installing on Linux</a></li>
+<li><a href="#macos">Installing on macOS</a></li>
+<li><a href="#windows">Installing on Windows</a></li>
+</ul>
+<h1 id="prerequisites"><a class="content__anchor" href="#prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h1>
+<h2 id="common-prerequisites"><a class="content__anchor" href="#common-prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a>Common prerequisites</h2>
+<ul>
+<li>You must have a <strong>separate computer</strong> that is not part of the DC/OS cluster on which you can install the CLI.</li>
+<li>You must have network access from the external system hosting the CLI to the DC/OS cluster.</li>
+<li>You must be able to open a command-line shell terminal on the external system hosting the CLI.</li>
+<li>You must not be using the <code>noexec</code> to mount the <code>/tmp</code> directory unless you have set a <code>TMPDIR</code> environment variable to something other than the <code>/tmp</code> directory. Mounting the <code>/tmp</code> directory with the <code>noexec</code> option can prevent CLI operations.</li>
+</ul>
+<h1 id="prerequisites-for-linux"><a class="content__anchor" href="#prerequisites-for-linux" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites for Linux</h1>
+<ul>
+<li>You must be able to run <code>cURL</code> program on the system hosting the CLI. The <code>curl</code> command is installed by default on most Linux distributions.</li>
+<li>If you are using Fedora 30 or above, you must install the <code>libcrypt</code> library. You can install the library by running <code>sudo dnf install libxcrypt-compat</code>.</li>
+</ul>
+<h1 id="prerequisites-for-macos"><a class="content__anchor" href="#prerequisites-for-macos" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites for macOS</h1>
+<ul>
+<li>You must be running MacOS 10.10 Yosemite (deprecated), or later. The next version of the DC/OS CLI will require macOS 10.11 El Capitan or later.</li>
+<li>A model running on a Haswell CPU (2014), or later.</li>
+<li>You must be able to run <code>cURL</code> program on the system hosting the CLI. If you don’t have <code>cURL</code>, follow the instructions in <a href="http://macappstore.org/curl/">Install curl on macOS</a> to install it.</li>
+</ul>
+<h1 id="prerequisites-for-windows"><a class="content__anchor" href="#prerequisites-for-windows" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites for Windows</h1>
+<ul>
+<li>Windows 10 64-bit or later.</li>
+<li>You must disable any security or antivirus software before you start the installation.</li>
+</ul>
+<h1 id="installing-the-cli-using-the-ui"><a class="content__anchor" href="#installing-the-cli-using-the-ui" aria-hidden="true"><i data-feather="bookmark"></i></a>Installing the CLI using the UI</h1>
+<ol>
+<li>
+<p>At the top-right corner of the DC/OS UI, click the down arrow to the right of your cluster name.</p>
+<p><img src="/mesosphere/dcos/1.13/img/open-cluster-popup.png" alt="open cluster popup"></p>
+<p>Figure 1. Open cluster popup menu</p>
+</li>
+<li>
+<p>Select <strong>Install CLI</strong>.</p>
+<p><img src="/mesosphere/dcos/1.13/img/install-cli.png" alt="CLI install UI"></p>
+<p>Figure 2. Select Install CLI</p>
+</li>
+<li>
+<p>Copy and paste the code snippets appropriate to your OS into your terminal, and press the return key.</p>
+</li>
+<li>
+<p>Once the dcos information screen has been displayed, run the command <code>dcos cluster list</code> to verify the connection to the cluster has been established.</p>
+</li>
+</ol>
+<p><a name="linux"></a></p>
+<h1 id="installing-the-dcos-cli-manually-on-linux"><a class="content__anchor" href="#installing-the-dcos-cli-manually-on-linux" aria-hidden="true"><i data-feather="bookmark"></i></a>Installing the DC/OS CLI manually on Linux</h1>
+<p>It is strongly recommended that you copy and paste the installation commands from the UI of the cluster to which you want to connect. Following below are the instructions for step by step installation of the CLI.</p>
+<ol>
+<li>
+<p>If you do not already have a working directory for the CLI, create one. The preferred location is <code>/usr/local/bin</code> and all the instructions will reference this path.</p>
+<pre><code class="language-bash">[ -d usr/local/bin ] || sudo mkdir -p /usr/local/bin
+</code></pre>
+</li>
+<li>
+<p>Download the DC/OS CLI binary to your local directory by running the following command and replacing <code>&lt;target-os-type&gt;</code> with the OS type (<code>darwin</code>, <code>linux</code>, <code>windows</code>), and <code>&lt;dcos-version&gt;</code> with the version (such as 1.13), that you want to use.</p>
+<pre><code class="language-bash">curl https://downloads.dcos.io/binaries/cli/&lt;target-os-type&gt;/x86-64/dcos-&lt;dcos-version&gt;/dcos -o dcos
+</code></pre>
+<p>For example, the CLI download for a Linux user on DC/OS 1.13 would look like this:</p>
+<pre><code class="language-bash">curl https://downloads.dcos.io/binaries/cli/linux/x86-64/dcos-1.13/dcos -o dcos
+</code></pre>
+</li>
+<li>
+<p>Move the CLI binary to your local bin directory.</p>
+<pre><code class="language-bash">sudo mv dcos /usr/local/bin
+</code></pre>
+</li>
+<li>
+<p>Make the CLI binary executable.</p>
+<pre><code class="language-bash">chmod +x /usr/local/bin/dcos
+</code></pre>
+</li>
+<li>
+<p>Set up the connection from the CLI to your DC/OS cluster. In this example, <code>http://example.com</code> is the master node URL.</p>
+<pre><code class="language-bash">dcos cluster setup http://example.com
+</code></pre>
+<p>Follow the instructions in the DC/OS CLI. For more information about security, see <a href="/mesosphere/dcos/1.13/security/">Security</a>.</p>
+<p>Your CLI should now be authenticated with your cluster! Enter <code>dcos</code> to get started. You can learn more about managing your cluster connections <a href="/mesosphere/dcos/1.13/cli/command-reference/dcos-cluster/">here</a>.</p>
+</li>
+</ol>
+<p><a name="macos"></a></p>
+<h1 id="installing-the-dcos-cli-manually-on-macos"><a class="content__anchor" href="#installing-the-dcos-cli-manually-on-macos" aria-hidden="true"><i data-feather="bookmark"></i></a>Installing the DC/OS CLI manually on macOS</h1>
+<p><strong>The first two steps of this tutorial can be replaced by a simple <code>brew install dcos-cli</code> if you have <a href="https://brew.sh">Homebrew</a> installed.</strong></p>
+<ol>
+<li>
+<p>Download the DC/OS CLI binary <code>dcos</code> to your working directory by running the following command and replacing <code>&lt;target-os-type&gt;</code> with the OS type (<code>darwin</code>, <code>linux</code>, <code>windows</code>), and <code>&lt;dcos-version&gt;</code> with the version (such as 1.13), that you want to use:</p>
+<pre><code class="language-bash">curl https://downloads.dcos.io/binaries/cli/&lt;target-os-type&gt;/x86-64/dcos-&lt;dcos-version&gt;/dcos -o dcos
+</code></pre>
+<p>For example, the CLI download for a Mac user on DC/OS 1.13 would look like this:</p>
+<pre><code class="language-bash">curl https://downloads.dcos.io/binaries/cli/darwin/x86-64/dcos-1.13/dcos -o dcos
+</code></pre>
+</li>
+<li>
+<p>Make the CLI binary executable.</p>
+<pre><code class="language-bash">chmod +x dcos
+</code></pre>
+</li>
+<li>
+<p>Set up the connection from the CLI to your DC/OS cluster. In this example, <code>http://example.com</code> is the master node URL.</p>
+<pre><code class="language-bash">dcos cluster setup http://example.com
+</code></pre>
+<p>If your system is unable to find the executable, you may need to re-open the command prompt or add the installation directory to your PATH environment variable manually.</p></p>
+<p>Follow the instructions in the DC/OS CLI. For more information about security, see the <a href="/mesosphere/dcos/1.13/security/">documentation</a>.</p>
+<p>Your CLI should now be authenticated with your cluster!</p>
+</li>
+<li>
+<p>Type <code>dcos</code> to view usage information and get started.</p>
+</li>
+</ol>
+<p><a name="windows"></a></p>
+<h1 id="installing-the-dcos-cli-manually-on-windows"><a class="content__anchor" href="#installing-the-dcos-cli-manually-on-windows" aria-hidden="true"><i data-feather="bookmark"></i></a>Installing the DC/OS CLI manually on Windows</h1>
+<ol>
+<li>
+<p>Open the command line environment using the Administrator credentials.</p>
+</li>
+<li>
+<p>Download the DC/OS CLI binary <code>dcos</code> to your working directory by running the following command and replacing <code>&lt;target-os-type&gt;</code> with the OS type (<code>darwin</code>, <code>linux</code>, <code>windows</code>), and <code>&lt;dcos-version&gt;</code> with the version (such as 1.13), that you want to use:</p>
+<pre><code class="language-bash">curl https://downloads.dcos.io/binaries/cli/&lt;target-os-type&gt;/x86-64/dcos-&lt;dcos-version&gt;/dcos -o dcos
+</code></pre>
+<p>For example, the CLI download for a Windows user on DC/OS 1.13 would look like this:</p>
+<pre><code class="language-bash">curl https://downloads.dcos.io/binaries/cli/windows/x86-64/dcos-1.13/dcos.exe -o dcos
+</code></pre>
+</li>
+<li>
+<p>Change into the directory of the downloaded file if you are not already there.</p>
+<pre><code class="language-bash">cd path/to/download/directory
+</code></pre>
+</li>
+<li>
+<p>Set up the connection from the CLI to your DC/OS cluster. In this example, <code>http://example.com</code> is the master node URL.</p>
+<pre><code class="language-bash">dcos cluster setup http://example.com
+</code></pre>
+ <p class="message--note"><strong>NOTE: </strong>If your system is unable to find the executable, you may need to re-open the command prompt or add the installation directory to your PATH environment variable manually.</p>
+<p>Follow the instructions in the DC/OS CLI. For more information about security, see the <a href="/mesosphere/dcos/1.13/security/">documentation</a>.</p>
+<p>Your CLI should now be authenticated with your cluster! Enter <code>dcos</code> to get started.</p>
+</li>
+</ol>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#prerequisites">Prerequisites</a></li><li class="content__sections-item content__sections-item--h2"><a href="#common-prerequisites">Common prerequisites</a></li><li class="content__sections-item content__sections-item--h1"><a href="#prerequisites-for-linux">Prerequisites for Linux</a></li><li class="content__sections-item content__sections-item--h1"><a href="#prerequisites-for-macos">Prerequisites for macOS</a></li><li class="content__sections-item content__sections-item--h1"><a href="#prerequisites-for-windows">Prerequisites for Windows</a></li><li class="content__sections-item content__sections-item--h1"><a href="#installing-the-cli-using-the-ui">Installing the CLI using the UI</a></li><li class="content__sections-item content__sections-item--h1"><a href="#installing-the-dcos-cli-manually-on-linux">Installing the DC/OS CLI manually on Linux</a></li><li class="content__sections-item content__sections-item--h1"><a href="#installing-the-dcos-cli-manually-on-macos">Installing the DC/OS CLI manually on macOS</a></li><li class="content__sections-item content__sections-item--h1"><a href="#installing-the-dcos-cli-manually-on-windows">Installing the DC/OS CLI manually on Windows</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

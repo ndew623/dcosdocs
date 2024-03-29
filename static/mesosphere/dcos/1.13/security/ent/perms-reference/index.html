@@ -1,0 +1,559 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Permissions Reference - D2iQ Docs</title><meta name="description" content="Understanding DC/OS access and permissions references"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li><li class="chooser-list-item"><a href="/dkp/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos/cn/1.13/security/ent/perms-reference">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__item"><a href="/dkp/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/mesosphere/dcos/2.2/security/ent/perms-reference">Mesosphere DC/OS 2.2.0</a></li><li><a href="/mesosphere/dcos/2.1/security/ent/perms-reference">Mesosphere DC/OS 2.1.0</a></li><li><a href="/mesosphere/dcos/2.0/security/ent/perms-reference">Mesosphere DC/OS 2.0</a></li><li><a href="/mesosphere/dcos/1.13/security/ent/perms-reference">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/mesosphere/dcos/1.13/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li class="active"><a class="d0" href="/mesosphere/dcos/1.13/security/"><i data-feather="chevron-right"></i>Security</a></li><ul><li class="active"><a class="d1" href="/mesosphere/dcos/1.13/security/ent/"><i data-feather="chevron-right"></i>DC/OS Enterprise Security</a></li><ul><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/users-groups/"><i data-feather="chevron-right"></i>Managing users and groups</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/gui-permissions/"><i data-feather="chevron-right"></i>Granting Access to the UI</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/perms-management/">Permissions Management</a></li><li class="active active-on"><a class="d2" href="/mesosphere/dcos/1.13/security/ent/perms-reference/">Permissions Reference</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/ldap/"><i data-feather="chevron-right"></i>LDAP authentication</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/secrets/"><i data-feather="chevron-right"></i>Secrets</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/sso/"><i data-feather="chevron-right"></i>Identity provider-based authentication</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/service-auth/"><i data-feather="chevron-right"></i>Service Authentication</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/restrict-service-access/">Restricting Access to DC/OS Service Groups</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/hardening/">Hardening</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/iam-api/">Identity and Access Management API</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/tls-ssl/"><i data-feather="chevron-right"></i>Securing Communication with TLS</a></li></ul><li><a class="d1" href="/mesosphere/dcos/1.13/security/oss/"><i data-feather="chevron-right"></i>DC/OS Open Source Security</a></li></ul><li><a class="d0" href="/mesosphere/dcos/1.13/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Permissions Reference</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">Understanding DC/OS access and permissions references</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/mesosphere/dcos/1.13/security/ent/perms-reference/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+Permissions+Reference&amp;description=Source:%20https://docs.d2iq.com/mesosphere/dcos/1.13/security/ent/perms-reference&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><!-- The source repository for this topic is https://github.com/dcos/dcos-docs-site -->
+<p>You can control DC/OS access by resource and operation. See <a href="/mesosphere/dcos/1.13/security/ent/perms-management/">Permissions Management</a> for details on how to control permissions. This page provides a reference for each of the available DC/OS permissions.</p>
+<h1 id="enforcement"><a class="content__anchor" href="#enforcement" aria-hidden="true"><i data-feather="bookmark"></i></a>Enforcement</h1>
+<p>DC/OS permissions are enforced based on your security mode.</p>
+<table>
+<thead>
+<tr>
+<th>Permission Category</th>
+<th style="text-align:center">Permissive</th>
+<th style="text-align:center">Strict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#admin-router">Admin Router permissions</a> (<code>dcos:adminrouter</code>)</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">x</td>
+</tr>
+<tr>
+<td><a href="#mesos">Mesos permissions</a> (<code>dcos:mesos</code>)</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">x</td>
+</tr>
+<tr>
+<td><a href="#marathon-metronome">Marathon and Metronome permissions</a> (<code>dcos:service</code>)</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">x</td>
+</tr>
+<tr>
+<td><a href="#secrets">Secret store permissions</a> (<code>dcos:secrets</code>)</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">x</td>
+</tr>
+<tr>
+<td><a href="#cluster-linker">Cluster linker permissions</a> (<code>dcos:cluster:linker</code>)</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">x</td>
+</tr>
+<tr>
+<td><a href="#superuser">Superuser permissions</a> (<code>dcos:superuser</code>)</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">x</td>
+</tr>
+</tbody>
+</table>
+<h1 id="permissions"><a class="content__anchor" href="#permissions" aria-hidden="true"><i data-feather="bookmark"></i></a>Permissions</h1>
+<p>The available actions are <code>create</code>, <code>read</code>, <code>update</code>, <code>delete</code>, and <code>full</code>. By convention, <code>full</code> indicates that the permission supports all other action identifiers. The action <code>full</code> may include actions not supported by any other action identifier.</p>
+<p>Many resource identifiers include optional sections in square brackets that may be filled in to further narrow the granted permission. If optional sections are omitted the resource identifier refers to all possible values. For example, the resource identifier <code>dcos:mesos:agent:framework:role</code> controls view access to DC/OS services registered with any <a href="/mesosphere/dcos/1.13/overview/concepts/#mesos-role">Mesos role</a>, whereas the resource identifier <code>dcos:mesos:agent:framework:role:slave_public</code> controls view access to DC/OS services registered with the role <code>slave_public</code>.</p>
+<p>Most HTTP requests sent to DC/OS components require authentication proof. These
+include operations launched by the DC/OS CLI, the DC/OS UI, the DC/OS API and
+internally between DC/OS components. HTTP requests to some endpoints require
+additional authorization. Many DC/OS components are issued with DC/OS service
+account users and are individually granted necessary permissions when the
+cluster is first installed.</p>
+<p>There are several components of DC/OS that perform authorization of requests,
+for example, Admin Router, Mesos, Marathon, and so forth. They are called <strong>authorizers</strong> in this
+context. All the authorizers follow the DC/OS authorization procedure. A
+high-level description of the DC/OS authorization procedure follows.</p>
+<p>When a HTTP request to a protected resource is received by an authorizer, the
+authorizer inspects the <code>Authorization</code> HTTP request header to obtain the DC/OS
+authentication token. The DC/OS authentication token is validated and evaluated
+by the authorizer. After the <code>uid</code> is extracted from the DC/OS authentication
+token, the authorizer checks that the corresponding DC/OS user has been granted
+the necessary privilege to perform the requested operation. For example, the
+DC/OS user identified by <code>uid</code> must have <code>full</code> access to the protected
+resource <code>dcos:adminrouter:package</code> in order to be able to access the DC/OS
+package API through Admin Router.</p>
+<h2 id="admin-router-permissions"><a class="content__anchor" href="#admin-router-permissions" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="admin-router"></a>Admin Router permissions</h2>
+<!-- This disclaimer should be included in the permissions reference section of the security docs. -->
+<p class="message--note"><strong>NOTE: </strong>Mesosphere does not currently support permissions inheritance for nested services in AdminRouter.</p>
+<p>Most HTTP requests made to a DC/OS cluster pass through Admin Router.
+Admin Router performs authorization for some services.
+For example, the DC/OS user identified by <code>uid</code> must have <code>full</code> access to the protected resource
+<code>dcos:adminrouter:package</code> in order to be able to access the DC/OS package API through Admin Router.</p>
+<p>Admin Router does not provide fine-grained actions.  All permissions must use the <code>full</code> action.</p>
+<table>
+<thead>
+<tr>
+<th>Resource identifier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dcos:adminrouter:acs</code><br>Controls access to the <a href="/mesosphere/dcos/1.13/security/ent/iam-api/">Identity and Access Management API</a>.</td>
+</tr>
+<tr>
+<td><code>dcos:adminrouter:ops:ca:ro</code><br>Controls access to the read-only endpoints of the <a href="/mesosphere/dcos/1.13/security/ent/tls-ssl/ca-api/">Certificate Authority API</a> and the <code>dcos security cluster ca</code> commands of the <a href="/mesosphere/dcos/1.13/cli/enterprise-cli/">Enterprise DC/OS CLI</a>.</td>
+</tr>
+<tr>
+<td><code>dcos:adminrouter:ops:ca:rw</code><br>Controls access to signing endpoints of the <a href="/mesosphere/dcos/1.13/security/ent/tls-ssl/ca-api/">Certificate Authority API</a> and the <code>dcos security cluster ca</code> commands of the <a href="/mesosphere/dcos/1.13/cli/enterprise-cli/">Enterprise DC/OS CLI</a>.</td>
+</tr>
+<tr>
+<td><code>dcos:adminrouter:ops:cockroachdb</code><br> Controls access to the CockroachDB UI at <code>https://&lt;master&gt;/cockroachdb/</code>.</td>
+</tr>
+<tr>
+<td><code>dcos:adminrouter:ops:exhibitor</code><br> Controls access to the Exhibitor UI at <code>https://&lt;master&gt;/exhibitor/</code> and API. This permission allows users to <a href="/mesosphere/dcos/1.13/deploying-services/uninstall/#framework-cleaner">remove the ZooKeeper state</a> after uninstalling a service.</td>
+</tr>
+<tr>
+<td><code>dcos:adminrouter:ops:mesos-dns</code><br> Controls access to the <a href="/mesosphere/dcos/1.13/networking/DNS/mesos-dns/mesos-dns-api/">Mesos DNS API</a>.</td>
+</tr>
+<tr>
+<td><code>dcos:adminrouter:ops:mesos</code><br> Controls access to the Mesos master UI at <code>https://&lt;master&gt;/mesos/</code> and API.</td>
+</tr>
+<tr>
+<td><code>dcos:adminrouter:ops:metadata</code> <br>Controls access to the <a href="/mesosphere/dcos/1.13/api/master-routes/#metadata">Metadata endpoint</a>.</td>
+</tr>
+<tr>
+<td><code>dcos:adminrouter:ops:networking</code><br> Controls access to the <a href="/mesosphere/dcos/1.13/api/master-routes/#networking">Networking</a> and <a href="/mesosphere/dcos/1.13/api/master-routes/#network-metrics">Network Metrics</a> endpoints.</td>
+</tr>
+<tr>
+<td><code>dcos:adminrouter:ops:slave</code><br>Controls access to the Mesos agent UI and API.</td>
+</tr>
+<tr>
+<td><code>dcos:adminrouter:ops:system-health</code> <br>Controls access to the <a href="/mesosphere/dcos/1.13/api/master-routes/#system">System health API</a>.</td>
+</tr>
+<tr>
+<td><code>dcos:adminrouter:ops:system-logs</code> <br>Controls access to <a href="/mesosphere/dcos/1.13/api/master-routes/#system">System logs API</a>.</td>
+</tr>
+<tr>
+<td><code>dcos:adminrouter:ops:system-metrics</code><br> Controls access to <a href="/mesosphere/dcos/1.13/api/master-routes/#system">System metrics API</a>.</td>
+</tr>
+<tr>
+<td><code>dcos:adminrouter:licensing</code> <br> Controls access to the Licensing API.</td>
+</tr>
+<tr>
+<td><code>dcos:adminrouter:package</code> <br> Controls access to the <a href="/mesosphere/dcos/1.13/api/master-routes/#cosmos">Cosmos API</a>, which provides access to the DC/OS Catalog.</td>
+</tr>
+<tr>
+<td><code>dcos:adminrouter:service:&lt;service-endpoint&gt;</code><br> Controls access to the UI and API of an installed DC/OS service. See the <a href="https://github.com/dcos/dcos/blob/1.13/packages/adminrouter/extra/src/README.md#service-endpoint">Service Endpoint documentation</a> for possible values of <code>&lt;service-endpoint&gt;</code> .</td>
+</tr>
+<tr>
+<td><code>dcos:adminrouter:service:marathon</code> <br>Controls access to the native Marathon instance.</td>
+</tr>
+<tr>
+<td><code>dcos:adminrouter:service:metronome</code><br>  Controls access to <a href="/mesosphere/dcos/1.13/deploying-jobs/">DC/OS Jobs (Metronome)</a>.</td>
+</tr>
+</tbody>
+</table>
+<p><a name="mesos"></a></p>
+<h2 id="mesos-permissions"><a class="content__anchor" href="#mesos-permissions" aria-hidden="true"><i data-feather="bookmark"></i></a>Mesos permissions</h2>
+<p>Many Mesos operations require authorization.
+The necessary privileges must be assigned to the DC/OS user who issues the HTTP request to Mesos.
+This is not always the same DC/OS user who is logged into the UI or CLI.
+For example, when Alice uses the UI to create a Marathon application, Marathon performs
+authorization of the HTTP request and checks that the <code>alice</code> DC/OS user has
+<code>create</code> access to the <code>dcos:service:marathon:marathon:services:/</code> resource.
+If so, it uses <strong>its own</strong> DC/OS user, a DC/OS service account with a <code>uid</code> of <code>dcos_marathon</code>, to authenticate an HTTP request to Mesos with instruction to launch the new Mesos tasks.
+At that point, Mesos will perform the DC/OS authorization procedure and check that the <code>dcos_marathon</code> DC/OS user has been granted the <code>create</code> action on the <code>dcos:mesos:master:task:app_id</code> resource.</p>
+<p>Applications launched with Root Marathon can only receive offers for resources reserved for the <code>slave_public</code> or <code>*</code> <a href="/mesosphere/dcos/1.13/overview/concepts/#mesos-role">Mesos roles</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Resource identifier</th>
+<th>full</th>
+<th>C</th>
+<th>R</th>
+<th>U</th>
+<th>D</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dcos:mesos:agent:container:app_id[:&lt;service-or-job-group&gt;]</code><br> Controls access to the <a href="/mesosphere/dcos/1.13/monitoring/debugging/debug-perms/">debugging</a> features for a specific service or job.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:agent:container:role[:&lt;role-name&gt;]</code><br>Controls access to the <a href="/mesosphere/dcos/1.13/monitoring/debugging/debug-perms/">debugging</a> features for the given <a href="/mesosphere/dcos/1.13/overview/concepts/#mesos-role">Mesos role</a>.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:agent:endpoint:path[:&lt;endpoint&gt;]</code><br> Controls access to unprotected <a href="https://mesos.apache.org/documentation/latest/authorization/">Mesos endpoints</a>.</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:agent:executor:app_id[:&lt;service-or-job-group&gt;]</code><br> Controls view access to service and job <a href="https://mesos.apache.org/documentation/latest/app-framework-development-guide/">executor information</a>.</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:agent:flags</code><br> Controls view access to <a href="http://mesos.apache.org/documentation/latest/configuration/agent/">agent flag</a> configurations.</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:agent:framework:role[:&lt;role-name&gt;]</code><br> Controls view access to DC/OS services registered with the given <a href="/mesosphere/dcos/1.13/overview/concepts/#mesos-role">Mesos role</a>.</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:agent:log</code><br>Controls access to the <a href="/mesosphere/dcos/1.13/monitoring/logging/">agent logs</a>.</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:agent:nested_container_session:app_id[:&lt;service-or-job-group&gt;]</code><br> Controls access, by service or job group, to launching a container within a container of a service or job while <a href="/mesosphere/dcos/1.13/monitoring/debugging/">debugging</a>.</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:agent:nested_container_session:role[:&lt;role-name&gt;]</code><br> Controls access, by <a href="/mesosphere/dcos/1.13/overview/concepts/#mesos-role">Mesos role</a>, to launching a container within a container of a service or job while <a href="/mesosphere/dcos/1.13/monitoring/debugging/">debugging</a>.</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:agent:nested_container_session:user[:&lt;linux-user-name&gt;]</code><br> Controls access, by Linux user, to launching a container within a container of a service or job while <a href="/mesosphere/dcos/1.13/monitoring/debugging/">debugging</a>. The users of both nested containers must be the same.</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:agent:resource_provider</code><br> Controls view access to per-agent resource provider information.</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:agent:resource_provider_config</code><br> Controls access to changes of per-agent resource provider configurations.</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td><code>dcos:mesos:agent:sandbox:app_id[:&lt;service-or-job-group&gt;]</code><br> Controls access to the Mesos sandbox.</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:agent:task:app_id[:&lt;service-or-job-group&gt;]</code><br> Controls access to task information.</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:master:block_disk</code><br> Controls access to create and destroy block disks.</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+<td>x</td>
+</tr>
+<tr>
+<td><code>dcos:mesos:master:endpoint:path[:&lt;path&gt;]</code><br> Controls access to these unprotected <a href="https://mesos.apache.org/documentation/latest/authorization/">Mesos endpoints</a>: <code>logging/toggle</code>, <code>/metrics/snapshot</code>, and <code>/files/debug</code>.</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:master:executor:app_id[:&lt;service-or-job-group&gt;]</code><br> Controls access to <a href="https://mesos.apache.org/documentation/latest/app-framework-development-guide/">executor</a> service and job groups.</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:master:flags</code><br> Controls view access to <a href="https://mesos.apache.org/documentation/latest/endpoints/master/flags/">master flag</a> configurations.</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:master:framework:principal[:&lt;service-account-id&gt;]</code><br> Controls access, by service account ID, to the Mesos <a href="https://mesos.apache.org/documentation/latest/endpoints/master/teardown/">tear down</a> endpoint, which allows you to uninstall a DC/OS service.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>x</td>
+</tr>
+<tr>
+<td><code>dcos:mesos:master:framework:role[:&lt;role-name&gt;]</code> <br> Controls access, by <a href="/mesosphere/dcos/1.13/overview/concepts/#mesos-role">Mesos role</a>, to register as a framework with <a href="https://mesos.apache.org/documentation/latest/roles/">Mesos</a>.</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:master:log</code><br> Controls access to the Mesos <a href="/mesosphere/dcos/1.13/monitoring/logging/">master logs</a>.</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:master:mount_disk</code><br> Controls access to create and destroy mount disks.</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+<td>x</td>
+</tr>
+<tr>
+<td><code>dcos:mesos:master:quota:role[:&lt;role-name&gt;]</code> <br> Controls access, by <a href="/mesosphere/dcos/1.13/overview/concepts/#mesos-role">Mesos role</a>, to the <a href="https://mesos.apache.org/documentation/latest/quota/">resource quota</a>.</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td>x</td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:master:reservation:principal[:&lt;service-account-id&gt;]</code><br> Controls access, by user or service account, to unreserve <a href="https://mesos.apache.org/documentation/latest/reservation/">resources</a>.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>x</td>
+</tr>
+<tr>
+<td><code>dcos:mesos:master:reservation:role[:&lt;role-name&gt;]</code><br> Controls access, by <a href="/mesosphere/dcos/1.13/overview/concepts/#mesos-role">Mesos role</a>, to reserve <a href="https://mesos.apache.org/documentation/latest/reservation/">resources</a>.</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:master:task:app_id[:&lt;service-or-job-group&gt;]</code><br> Controls access to run tasks.</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:master:task:user[:&lt;linux-user-name&gt;]</code><br> Controls access to run tasks as a specific Linux user.</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:master:volume:principal[:&lt;service-account-id&gt;]</code><br> Controls access to destroy a volume.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>x</td>
+</tr>
+<tr>
+<td><code>dcos:mesos:master:volume:role[:&lt;role-name&gt;]</code><br> Controls access to create a volume for the given <a href="/mesosphere/dcos/1.13/overview/concepts/#mesos-role">Mesos role</a>.</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:mesos:master:weight:role[:&lt;role-name&gt;]</code><br> Control access to the <a href="https://mesos.apache.org/documentation/latest/weights/">weight</a> for the given <a href="/mesosphere/dcos/1.13/overview/concepts/#mesos-role">Mesos role</a>.</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td>x</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><a name="marathon-metronome"></a></p>
+<h2 id="marathon-and-metronome-permissions"><a class="content__anchor" href="#marathon-and-metronome-permissions" aria-hidden="true"><i data-feather="bookmark"></i></a>Marathon and Metronome permissions</h2>
+<p>Marathon and Metronome require that HTTP requests made to certain protected resources must be authorized. For example, a DC/OS user must be granted the <code>create</code> action on the <code>dcos:service:marathon:marathon:services:/dev</code> resource in order to create a new Marathon app in the <code>/dev</code> service group.</p>
+<table>
+<thead>
+<tr>
+<th>Resource identifier</th>
+<th>full</th>
+<th>C</th>
+<th>R</th>
+<th>U</th>
+<th>D</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dcos:service:marathon:marathon:admin:config</code><br>  Controls access to the <a href="/mesosphere/dcos/1.13/deploying-services/marathon-api/#/info/">GET /v2/info Marathon endpoint</a>.</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:service:marathon:marathon:admin:events</code> <br>Controls view access to the Marathon events endpoint <a href="/mesosphere/dcos/1.13/deploying-services/marathon-api/#/events/">GET /v2/events</a>.</td>
+<td>x</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:service:marathon:marathon:admin:leader</code> <br> Controls access to the <a href="/mesosphere/dcos/1.13/deploying-services/marathon-api/#/leader/">GET/DELETE /v2/leader</a> endpoint.</td>
+<td>x</td>
+<td></td>
+<td>x</td>
+<td>x</td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:service:marathon:marathon:services:/[&lt;service-group&gt;]</code> <br> Controls access to <a href="/mesosphere/dcos/1.13/deploying-services/">DC/OS services</a> launched by the native Marathon instance. <br> <a href="/mesosphere/dcos/1.13/deploying-services/marathon-api/#/groups/">POST /v2/group</a> requires the <code>full</code> action.</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td><code>dcos:service:metronome:metronome:jobs[:&lt;job-group&gt;]</code><br>  Controls access to <a href="/mesosphere/dcos/1.13/deploying-jobs/">jobs and job groups</a>.</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+</tbody>
+</table>
+<h2 id="secret-store-permissions"><a class="content__anchor" href="#secret-store-permissions" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="secrets"></a>Secret Store permissions</h2>
+<p>These permissions control access to the <a href="/mesosphere/dcos/1.13/security/ent/secrets/secrets-api/">Secrets API</a>. A Mesos framework must have
+permission granted to its DC/OS service account in order to access a given secret. If you are looking for information on how to launch
+Marathon applications using secrets see <a href="/mesosphere/dcos/1.13/security/ent/secrets/use-secrets/">Configuring services and pods to use secrets</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Resource identifier</th>
+<th>full</th>
+<th>C</th>
+<th>R</th>
+<th>U</th>
+<th>D</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dcos:secrets:default:[/&lt;path-name&gt;/]&lt;secret-name&gt;</code><br> Controls access to individual <a href="/mesosphere/dcos/1.13/security/ent/secrets/">secrets</a>.</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td><code>dcos:secrets:list:default:/[&lt;path&gt;]</code><br> Controls view access to the names of <a href="/mesosphere/dcos/1.13/security/ent/secrets/">secrets</a>.</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="cluster-linker-permissions"><a class="content__anchor" href="#cluster-linker-permissions" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="cluster-linker"></a> Cluster Linker permissions</h2>
+<p>A DC/OS user requires permission to link clusters.</p>
+<table>
+<thead>
+<tr>
+<th>Resource identifier</th>
+<th>full</th>
+<th>C</th>
+<th>R</th>
+<th>U</th>
+<th>D</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dcos:cluster:linker:&lt;cluster-id&gt;</code><br> Controls access to individual <a href="/mesosphere/dcos/1.13/administering-clusters/multiple-clusters/cluster-links/">cluster links</a>.</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcos:cluster:linker:*</code><br> Controls access to <a href="/mesosphere/dcos/1.13/administering-clusters/multiple-clusters/cluster-links/">cluster links</a>.</td>
+<td></td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+</tbody>
+</table>
+<h2 id="superuser-permissions"><a class="content__anchor" href="#superuser-permissions" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="superuser"></a>Superuser permissions</h2>
+<p>Similar to the Windows <code>Administrator</code> or Linux <code>root</code> accounts, DC/OS has the
+concept of the <code>superuser</code>. A user with at least one permission out of <code>create</code>, <code>read</code>, <code>update</code>, <code>delete</code> or <code>full</code> on the <code>dcos:superuser</code> resource has complete, unrestricted access to any operation
+throughout DC/OS. This is extremely powerful and this permission should be
+granted sparingly.</p>
+<table>
+<thead>
+<tr>
+<th>Resource identifier</th>
+<th>full</th>
+<th>C</th>
+<th>R</th>
+<th>U</th>
+<th>D</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dcos:superuser</code><br> Controls complete access to the DC/OS cluster.</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+</tbody>
+</table>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#enforcement">Enforcement</a></li><li class="content__sections-item content__sections-item--h1"><a href="#permissions">Permissions</a></li><li class="content__sections-item content__sections-item--h2"><a href="#admin-router-permissions">Admin Router permissions</a></li><li class="content__sections-item content__sections-item--h2"><a href="#mesos-permissions">Mesos permissions</a></li><li class="content__sections-item content__sections-item--h2"><a href="#marathon-and-metronome-permissions">Marathon and Metronome permissions</a></li><li class="content__sections-item content__sections-item--h2"><a href="#secret-store-permissions">Secret Store permissions</a></li><li class="content__sections-item content__sections-item--h2"><a href="#cluster-linker-permissions">Cluster Linker permissions</a></li><li class="content__sections-item content__sections-item--h2"><a href="#superuser-permissions">Superuser permissions</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

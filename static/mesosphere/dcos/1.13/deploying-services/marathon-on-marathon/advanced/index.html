@@ -1,0 +1,484 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Custom Marathon with Security Features - D2iQ Docs</title><meta name="description" content="Using an advanced, non-native instance of Marathon"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos/cn/1.13/deploying-services/marathon-on-marathon/advanced">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/mesosphere/dcos/2.2/deploying-services/marathon-on-marathon/advanced">Mesosphere DC/OS 2.2.0</a></li><li><a href="/mesosphere/dcos/2.1/deploying-services/marathon-on-marathon/advanced">Mesosphere DC/OS 2.1.0</a></li><li><a href="/mesosphere/dcos/2.0/deploying-services/marathon-on-marathon/advanced">Mesosphere DC/OS 2.0</a></li><li><a href="/mesosphere/dcos/1.13/deploying-services/marathon-on-marathon/advanced">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/mesosphere/dcos/1.13/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li class="active"><a class="d0" href="/mesosphere/dcos/1.13/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><ul><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/install/">Installing Services</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/marathon-parameters/">Marathon Configuration Reference</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/creating-services/"><i data-feather="chevron-right"></i>Creating Services</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/task-handling/"><i data-feather="chevron-right"></i>Task Handling</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/config-universe-service/">Configuring Services</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/fault-domain-awareness/">Fault Domain Awareness and Capacity Extension</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/service-groups/">Granting Access to Services and Groups</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/marathon-constraints/">Marathon Placement Constraints</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/monitor-services/">Monitoring Services</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/scale-service/">Scaling a Service</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/service-endpoints/">Service Endpoints</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/service-ports/">Service Ports</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/update-user-service/">Updating a User-Created Service</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/private-docker-registry/">Using a Private Docker Registry</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/deployments/">Deployments</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/expose-service/">Exposing a Service</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/uninstall/">Uninstalling Services</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/package-api/">Package Management API</a></li><li class="active"><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/marathon-on-marathon/"><i data-feather="chevron-right"></i>Using Custom Marathon</a></li><ul><li><a class="d2" href="/mesosphere/dcos/1.13/deploying-services/marathon-on-marathon/basic/">Deploying Services Using a Custom Marathon Instance</a></li><li class="active active-on"><a class="d2" href="/mesosphere/dcos/1.13/deploying-services/marathon-on-marathon/advanced/">Custom Marathon with Security Features</a></li></ul><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/marathon-api/">Marathon API</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/containerizers/"><i data-feather="chevron-right"></i>Using Containerizers</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/pods/"><i data-feather="chevron-right"></i>Pods</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/multi-tenancy-primitives/">Multi-Tenancy Primitives</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/gpu/">Using GPUs</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-services/faq/">Frequently Asked Questions</a></li></ul><li><a class="d0" href="/mesosphere/dcos/1.13/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Custom Marathon with Security Features</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">Using an advanced, non-native instance of Marathon</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/mesosphere/dcos/1.13/deploying-services/marathon-on-marathon/advanced/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>This topic describes how to deploy a non-native instance of Marathon (Marathon on Marathon) with isolated roles, reservations, quotas, and security features. The advanced non-native Marathon procedure should only be used if you require <a href="/mesosphere/dcos/1.13/security/ent/secrets/">secrets</a> or fine-grain ACLs. Otherwise, use the <a href="/mesosphere/dcos/1.13/deploying-services/marathon-on-marathon/basic/">basic procedure</a>.</p>
+<p>For this procedure, we are assuming that you have obtained an enterprise version of Marathon from a support team member. If you still need the enterprise artifact, you will want to first file a ticket via the <a href="https://support.mesosphere.com/s/">Mesosphere support portal</a>. The enterprise artifact is delivered as a Docker image file and contains Marathon plus plugins for Marathon that enable DC/OS Enterprise features - such as secrets and fine-grained access control.</p>
+<p><strong>Prerequisites:</strong></p>
+<ul>
+<li>DC/OS and DC/OS CLI <a href="/mesosphere/dcos/1.13/installing/">installed</a>.</li>
+<li><a href="/mesosphere/dcos/1.13/cli/enterprise-cli/#ent-cli-install">DC/OS Enterprise CLI 0.4.14 or later</a>.</li>
+<li>A private Docker registry that each private DC/OS agent can access over the network. You can follow <a href="/mesosphere/dcos/1.13/deploying-services/private-docker-registry/">these</a> instructions for how to set up in Marathon, or use another option such as <a href="https://hub.docker.com/">DockerHub</a>, <a href="https://aws.amazon.com/ecr/">Amazon EC2 Container Registry</a>, and <a href="https://quay.io/">Quay</a>).</li>
+<li>Custom non-native Marathon image <a href="/mesosphere/dcos/1.13/deploying-services/private-docker-registry#tarball-instructions">deployed in your private Docker registry</a>. File a ticket with via the <a href="https://support.mesosphere.com">support portal</a> to obtain the enterprise Marathon image file.</li>
+<li>You must be logged in as a superuser.</li>
+<li>SSH access to the cluster.</li>
+</ul>
+<p><a name="variables-in-example"></a></p>
+<p><strong>Variables in this example</strong></p>
+<p>Throughout this page, you will be instructed to invoke commands or take actions that will use cluster-specific-values. We refer to these cluster-specific-values using the <code>${VARIABLE}</code> notation; please substitute in the following variables the appropriate value for your cluster.</p>
+<p>This table contains all the variables used in this page:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>${MESOS_ROLE}</code></td>
+<td>The name of the <a href="https://mesos.apache.org/documentation/latest/roles/">Mesos Role</a> that the new Marathon instance will use. This should be all lowercase, and be a valid <a href="https://mesos.apache.org/documentation/latest/roles/#invalid-role-names">Mesos role name</a>, for example <code>&quot;marathon_ee&quot;</code>.</td>
+</tr>
+<tr>
+<td><code>${SERVICE_ACCOUNT}</code></td>
+<td>The name of the <a href="/mesosphere/dcos/1.13/security/ent/service-auth/">Service Account</a> that Marathon will use to communicate with the other services in DC/OS. The name should include only letters, numbers, <code>@</code>, <code>.</code>, <code>\</code>, <code>_</code>, and <code>-</code>. For example <code>&quot;marathon_user_ee&quot;</code></td>
+</tr>
+<tr>
+<td><code>${MARATHON_INSTANCE_NAME}</code></td>
+<td>The service name of your new Marathon instance, as launched by the root Marathon instance. This should be a valid <a href="https://mesosphere.github.io/marathon/docs/application-basics.html">Marathon service name</a>, for example <code>&quot;mom_ee&quot;</code>.</td>
+</tr>
+<tr>
+<td><code>${SERVICE_ACCOUNT_SECRET}</code></td>
+<td>The path of the secret in the <a href="/mesosphere/dcos/1.13/security/ent/secrets/">Secret Store</a> to hold the private key that Marathon will use along with the <code>${SERVICE_ACCOUNT}</code> account to authenticate on DC/OS. This name <strong>must not</strong> contain a leading <code>/</code>. A valid example: <code>&quot;marathon_user_ee_secret&quot;</code></td>
+</tr>
+<tr>
+<td><code>${DOCKER_REGISTRY_SECRET}</code></td>
+<td>The name of the <a href="/mesosphere/dcos/1.13/security/ent/secrets/">Secret</a> to hold the credentials for fetching the Marathon Docker image from the private registry. This name <strong>must not</strong> contain a leading <code>/</code>. A valid example: <code>&quot;registry_secret&quot;</code>.</td>
+</tr>
+<tr>
+<td><code>${PRIVATE_KEY}</code></td>
+<td>The path to a PEM formatted private key file (in your local file system, existing or not), ideally suffixed with <code>.pem</code></td>
+</tr>
+<tr>
+<td><code>${PUBLIC_KEY}</code></td>
+<td>The path to a PEM formatted public key file (in your local file system, existing or not), ideally suffixed with <code>.pem</code></td>
+</tr>
+<tr>
+<td><code>${MARATHON_IMAGE}</code></td>
+<td>The name of the Marathon image <strong>in your private repository</strong>, for example <code>private-repo/marathon-dcos-ee</code>.</td>
+</tr>
+<tr>
+<td><code>${MARATHON_TAG}</code></td>
+<td>The Docker image tag of the Marathon version that you want to deploy. For example <code>v1.5.11_1.10.2</code> (version 0.11.0 or newer).</td>
+</tr>
+</tbody>
+</table>
+<p>If you are working on a Mac OS or Linux machine, you can pre-define most of the above variables in your terminal session and just copy and paste the snippets in your terminal:</p>
+<pre><code class="language-bash">set -a
+MESOS_ROLE=&quot;...&quot;
+SERVICE_ACCOUNT=&quot;...&quot;
+BEGIN_PORT=&quot;...&quot;
+END_PORT=&quot;...&quot;
+MARATHON_INSTANCE_NAME=&quot;...&quot;
+SERVICE_ACCOUNT_SECRET=&quot;...&quot;
+DOCKER_REGISTRY_SECRET=&quot;...&quot;
+PRIVATE_KEY=&quot;...&quot;
+PUBLIC_KEY=&quot;...&quot;
+MARATHON_IMAGE=&quot;...&quot;
+MARATHON_TAG=&quot;...&quot;
+</code></pre>
+<h1 id="step-1-preparation"><a class="content__anchor" href="#step-1-preparation" aria-hidden="true"><i data-feather="bookmark"></i></a>Step 1: Preparation</h1>
+<p>For the following steps, we are assuming that you have already:</p>
+<ol>
+<li>
+<p>Pushed the Marathon enterprise image to your private registry <a href="/mesosphere/dcos/1.13/deploying-services/private-docker-registry#tarball-instructions">(Instructions)</a>, under the name <code>${MARATHON_IMAGE}:${MARATHON_TAG}</code>.</p>
+</li>
+<li>
+<p>Stored your private Docker credentials in the secrets store <a href="/mesosphere/dcos/1.13/deploying-services/private-docker-registry/#referencing-private-docker-registry-credentials-in-the-secrets-store-enterprise">(Instructions)</a>, under the name <code>${DOCKER_REGISTRY_SECRET}</code>.</p>
+ <p class="message--warning"><strong>WARNING: </strong> The name of the secret should either be in the root path (ex. <code>/some-secret-name</code>) or prefixed with the name of your app (ex. <code>/${MARATHON_INSTANCE_NAME}/some-secret-name</code>). Failing to do so will make root Marathon unable to read the secret value and will fail to launch your custom Marathon-on-Marathon instance.</p>
+</li>
+</ol>
+<h1 id="step-2-create-a-marathon-service-account"><a class="content__anchor" href="#step-2-create-a-marathon-service-account" aria-hidden="true"><i data-feather="bookmark"></i></a>Step 2: Create a Marathon Service Account</h1>
+<p>In this step, a Marathon <a href="/mesosphere/dcos/1.13/security/ent/service-auth/">Service Account</a> is created. This account will be used by Marathon to authenticate on the rest of DC/OS components. The permissions later given to this account are going to define what Marathon is allowed to do.</p>
+<p>Depending on your <a href="/mesosphere/dcos/1.13/security/ent/#security-modes">security mode</a>, a Marathon Service Account is either optional or required.</p>
+<table>
+<thead>
+<tr>
+<th>Security Mode</th>
+<th>Marathon Service Account</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Permissive</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>Strict</td>
+<td>Required</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>Create a 2048-bit RSA private and public key pair (<code>${PRIVATE_KEY}</code> and <code>${PUBLIC_KEY}</code>) and save each value into a separate file within the current directory.</p>
+<p>With the following command, we create a pair of private and public keys. The public key will be used to create the Marathon service account. The private key we will store in the <a href="/mesosphere/dcos/1.13/security/ent/secrets/">secret store</a> and later passed to Marathon so it can authorize itself using this account.</p>
+<pre><code class="language-bash">dcos security org service-accounts keypair ${PRIVATE_KEY} ${PUBLIC_KEY}
+</code></pre>
+</li>
+<li>
+<p>Create a new service account called <code>${SERVICE_ACCOUNT}</code>, using the public key we generated (<code>${PUBLIC_KEY}</code>).</p>
+<pre><code class="language-bash">dcos security org service-accounts create -p ${PUBLIC_KEY} -d &quot;Marathon-on-Marathon User&quot; ${SERVICE_ACCOUNT}
+</code></pre>
+</li>
+</ol>
+<h1 id="step-3-create-a-service-account-secret"><a class="content__anchor" href="#step-3-create-a-service-account-secret" aria-hidden="true"><i data-feather="bookmark"></i></a>Step 3: Create a Service Account Secret</h1>
+<p>In this step, a secret is created for the Marathon service account and stored in the Secret Store.</p>
+<p>The secret created (<code>${SERVICE_ACCOUNT_SECRET}</code>) will contain the private key (<code>${PRIVATE_KEY}</code>) and the name of the service account (<code>${SERVICE_ACCOUNT}</code>). This information will be used by Marathon to authenticate against DC/OS.</p>
+<h2 class="tabs" id=""><a class="content__anchor" href="#" aria-hidden="true"><i data-feather="bookmark"></i></a></h2>
+<h3 id="permissive"><a class="content__anchor" href="#permissive" aria-hidden="true"><i data-feather="bookmark"></i></a>Permissive</h3>
+<pre><code class="language-bash">dcos security secrets create-sa-secret ${PRIVATE_KEY} ${SERVICE_ACCOUNT} ${SERVICE_ACCOUNT_SECRET}
+</code></pre>
+<h3 id="strict"><a class="content__anchor" href="#strict" aria-hidden="true"><i data-feather="bookmark"></i></a>Strict</h3>
+<pre><code class="language-bash">dcos security secrets create-sa-secret --strict ${PRIVATE_KEY} ${SERVICE_ACCOUNT} ${SERVICE_ACCOUNT_SECRET}
+</code></pre>
+<h4 id="recommendations"><a class="content__anchor" href="#recommendations" aria-hidden="true"><i data-feather="bookmark"></i></a>Recommendations</h4>
+<ul>
+<li>
+<p>Make sure that your secret is in place, using the following command:</p>
+<pre><code class="language-bash">dcos security secrets list /
+</code></pre>
+</li>
+<li>
+<p>Review your secret to ensure that it contains the correct service account ID, private key, and <code>login_endpoint</code> URL. If you’re in <code>strict</code> it should be HTTPS, in <code>permissive</code> mode it should be HTTP. If the URL is incorrect, try <a href="/mesosphere/dcos/1.13/cli/enterprise-cli/#ent-cli-upgrade">upgrading the DC/OS Enterprise CLI</a>, deleting the secret, and recreating it.</p>
+<p>You can use this commands to view the contents (requires <a href="https://stedolan.github.io/jq/download">jq 1.5 or later</a> installed):</p>
+<pre><code class="language-bash">dcos security secrets get ${SERVICE_ACCOUNT_SECRET} --json | jq -r .value | jq
+</code></pre>
+</li>
+<li>
+<p>Delete the private key file from your file system to prevent bad actors from using the private key to authenticate into DC/OS.</p>
+</li>
+</ul>
+<h1 id="step-4-assign-permissions-strict-mode-only"><a class="content__anchor" href="#step-4-assign-permissions-strict-mode-only" aria-hidden="true"><i data-feather="bookmark"></i></a>Step 4: Assign Permissions (Strict mode only)</h1>
+<p>In this step, permissions are assigned to the Marathon-on-Marathon instance. Permissions are required in strict mode and are ignored in other security modes.</p>
+<table>
+<thead>
+<tr>
+<th>Security Mode</th>
+<th>Permissions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Permissive</td>
+<td>Not available</td>
+</tr>
+<tr>
+<td>Strict</td>
+<td>Required</td>
+</tr>
+</tbody>
+</table>
+<p>All CLI commands can also be executed via the <a href="/mesosphere/dcos/1.13/security/ent/iam-api/">IAM API</a>.</p>
+<p>Grant service account <code>${SERVICE_ACCOUNT}</code> permission to launch Mesos tasks that will execute as Linux user <code>nobody</code>.</p>
+<p>To execute tasks as a different Linux user, replace <code>nobody</code> with that user’s Linux user name. For example, to launch tasks as Linux user <code>bob</code>, replace <code>nobody</code> with <code>bob</code> below.</p>
+<p>Note that the <code>nobody</code> and <code>root</code> users exist on all agents by default; if a custom user is specified (for example, <code>bob</code>), then the user <code>bob</code> will need to be manually created on every agent on which tasks can be executed (for example, using the Linux <code>adduser</code> or a similar utility).</p>
+<pre><code class="language-bash">dcos security org users grant ${SERVICE_ACCOUNT} dcos:mesos:master:task:user:nobody create --description &quot;Tasks can execute as Linux user nobody&quot;
+dcos security org users grant ${SERVICE_ACCOUNT} dcos:mesos:master:framework:role:${MESOS_ROLE} create --description &quot;Controls the ability of ${MESOS_ROLE} to register as a framework with the Mesos master&quot;
+dcos security org users grant ${SERVICE_ACCOUNT} dcos:mesos:master:reservation:role:${MESOS_ROLE} create --description &quot;Controls the ability of ${MESOS_ROLE} to reserve resources&quot;
+dcos security org users grant ${SERVICE_ACCOUNT} dcos:mesos:master:volume:role:${MESOS_ROLE} create --description &quot;Controls the ability of ${MESOS_ROLE} to access volumes&quot;
+dcos security org users grant ${SERVICE_ACCOUNT} dcos:mesos:master:reservation:principal:${SERVICE_ACCOUNT} delete --description &quot;Controls the ability of ${SERVICE_ACCOUNT} to reserve resources&quot;
+dcos security org users grant ${SERVICE_ACCOUNT} dcos:mesos:master:task:app_id:/ create --description &quot;Controls the ability to launch tasks&quot;
+dcos security org users grant ${SERVICE_ACCOUNT} dcos:mesos:master:volume:principal:${SERVICE_ACCOUNT} delete --description &quot;Controls the ability of ${SERVICE_ACCOUNT} to access volumes&quot;
+</code></pre>
+<h1 class="tabs" id="step-5-install-a-non-native-marathon-instance-with-assigned-role"><a class="content__anchor" href="#step-5-install-a-non-native-marathon-instance-with-assigned-role" aria-hidden="true"><i data-feather="bookmark"></i></a>Step 5: Install a Non-Native Marathon Instance with Assigned Role</h1>
+<p>In this step, a non-native Marathon instance is installed on DC/OS with the Mesos role assigned.</p>
+<ol>
+<li>
+<p>Create a custom JSON config that will be used to install the custom non-native Marathon instance. The JSON file contents vary according to your <a href="/mesosphere/dcos/1.13/security/ent/#security-modes">security mode</a>.</p>
+<p>Make sure you replace all the <code>${VARIABLES}</code> in the JSON file with the correct values for your case.</p>
+<p>Alternatively, if you have exported the variables in your terminal session (as explained in the <a href="#variables-in-example">Variables Section</a>), you can use the following command to automatically replace all the substitute variables with their exported value. The resulting file will be saved as <code>marathon-filled.json</code>:</p>
+<pre><code class="language-bash">perl -p -e 's/\$\{(\w+)\}/(exists $ENV{$1}?$ENV{$1}:&quot;&lt;missing-variable-$1&gt;&quot;)/eg' &lt; marathon.json &gt; marathon-filled.json
+</code></pre>
+<h2 class="tabs" id="-2"><a class="content__anchor" href="#-2" aria-hidden="true"><i data-feather="bookmark"></i></a></h2>
+<h3 id="permissive-2"><a class="content__anchor" href="#permissive-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Permissive</h3>
+<p>Use the following JSON template if you are running a cluster in <code>permissive</code> security mode. Do not forget to <strong>replace</strong> all the environment variables that follow the <code>${VARIABLES}</code> format:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;:&quot;/${MARATHON_INSTANCE_NAME}&quot;,
+  &quot;cmd&quot;:&quot;cd $MESOS_SANDBOX &amp;&amp; LIBPROCESS_PORT=$PORT1 &amp;&amp; /marathon/bin/start --default_accepted_resource_roles \&quot;*,${MESOS_ROLE}\&quot; --enable_features \&quot;vips,task_killing,external_volumes,secrets,gpu_resources\&quot; --framework_name ${MARATHON_INSTANCE_NAME} --hostname $LIBPROCESS_IP --http_port $PORT0 --master zk://master.mesos:2181/mesos --max_instances_per_offer 1 --mesos_leader_ui_url /mesos --mesos_role ${MESOS_ROLE}  --zk zk://master.mesos:2181/universe/${MARATHON_INSTANCE_NAME} --mesos_user nobody --mesos_authentication --mesos_authentication_principal ${SERVICE_ACCOUNT}&quot;,
+  &quot;user&quot;:&quot;nobody&quot;,
+  &quot;cpus&quot;:2,
+  &quot;mem&quot;:4096,
+  &quot;disk&quot;:0,
+  &quot;instances&quot;:1,
+  &quot;constraints&quot;:[
+     [
+        &quot;hostname&quot;,
+        &quot;UNIQUE&quot;
+     ]
+  ],
+  &quot;container&quot;:{
+     &quot;type&quot;: &quot;MESOS&quot;,
+     &quot;docker&quot;:{
+        &quot;image&quot;:&quot;${MARATHON_IMAGE}:${MARATHON_TAG}&quot;,
+        &quot;pullConfig&quot;: {
+            &quot;secret&quot;: &quot;docker-registry-credential&quot;
+        }
+     }
+  },
+  &quot;env&quot;:{
+     &quot;JVM_OPTS&quot;:&quot;-Xms256m -Xmx2g&quot;,
+     &quot;DCOS_STRICT_SECURITY_ENABLED&quot;:&quot;false&quot;,
+     &quot;DCOS_SERVICE_ACCOUNT_CREDENTIAL&quot;:{
+        &quot;secret&quot;:&quot;service-credential&quot;
+     },
+     &quot;MESOS_AUTHENTICATEE&quot;:&quot;com_mesosphere_dcos_ClassicRPCAuthenticatee&quot;,
+     &quot;MESOS_MODULES&quot;:&quot;{\&quot;libraries\&quot;:[{\&quot;file\&quot;:\&quot;/opt/libmesos-bundle/lib/libdcos_security.so\&quot;,\&quot;modules\&quot;:[{\&quot;name\&quot;:\&quot;com_mesosphere_dcos_ClassicRPCAuthenticatee\&quot;}]}]}&quot;,
+     &quot;MESOS_VERBOSE&quot;:&quot;true&quot;,
+     &quot;GLOG_v&quot;:&quot;2&quot;,
+     &quot;PLUGIN_ACS_URL&quot;:&quot;http://master.mesos&quot;,
+     &quot;PLUGIN_AUTHN_MODE&quot;:&quot;dcos/jwt+anonymous&quot;,
+     &quot;PLUGIN_FRAMEWORK_TYPE&quot;:&quot;marathon&quot;
+  },
+  &quot;healthChecks&quot;:[
+     {
+        &quot;path&quot;:&quot;/ping&quot;,
+        &quot;protocol&quot;:&quot;HTTP&quot;,
+        &quot;portIndex&quot;:0,
+        &quot;gracePeriodSeconds&quot;:1800,
+        &quot;intervalSeconds&quot;:10,
+        &quot;timeoutSeconds&quot;:5,
+        &quot;maxConsecutiveFailures&quot;:3,
+        &quot;ignoreHttp1xx&quot;:false
+     }
+  ],
+  &quot;secrets&quot;:{
+     &quot;service-credential&quot;:{
+        &quot;source&quot;:&quot;${SERVICE_ACCOUNT_SECRET}&quot;
+     },
+     &quot;docker-registry-credential&quot;: {
+        &quot;source&quot;:&quot;${DOCKER_REGISTRY_SECRET}&quot;
+     }
+  },
+  &quot;labels&quot;:{
+     &quot;DCOS_SERVICE_NAME&quot;:&quot;${MARATHON_INSTANCE_NAME}&quot;,
+     &quot;DCOS_SERVICE_PORT_INDEX&quot;:&quot;0&quot;,
+     &quot;DCOS_SERVICE_SCHEME&quot;:&quot;http&quot;
+  },
+  &quot;portDefinitions&quot;:[
+     {
+        &quot;port&quot;:0,
+        &quot;name&quot;:&quot;http&quot;
+     },
+     {
+        &quot;port&quot;:0,
+        &quot;name&quot;:&quot;libprocess&quot;
+     }
+  ]
+}
+</code></pre>
+<h3 id="strict-2"><a class="content__anchor" href="#strict-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Strict</h3>
+<p>Use the following JSON template if you are running a cluster in <code>strict</code> security mode. Don’t forget to <strong>replace</strong> all the environment variables that follow the <code>${VARIABLES}</code> format:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;:&quot;/${MARATHON_INSTANCE_NAME}&quot;,
+  &quot;cmd&quot;:&quot;cd $MESOS_SANDBOX &amp;&amp; LIBPROCESS_PORT=$PORT1 &amp;&amp; /marathon/bin/start --default_accepted_resource_roles \&quot;*,${MESOS_ROLE}\&quot; --enable_features \&quot;vips,task_killing,external_volumes,secrets,gpu_resources\&quot; --framework_name ${MARATHON_INSTANCE_NAME} --hostname $LIBPROCESS_IP --http_port $PORT0 --master zk://master.mesos:2181/mesos --max_instances_per_offer 1 --mesos_leader_ui_url /mesos --mesos_role ${MESOS_ROLE}  --zk zk://master.mesos:2181/universe/${MARATHON_INSTANCE_NAME} --mesos_user nobody --mesos_authentication --mesos_authentication_principal ${SERVICE_ACCOUNT}&quot;,
+  &quot;user&quot;:&quot;nobody&quot;,
+  &quot;cpus&quot;:2,
+  &quot;mem&quot;:4096,
+  &quot;disk&quot;:0,
+  &quot;instances&quot;:1,
+  &quot;constraints&quot;:[
+     [
+        &quot;hostname&quot;,
+        &quot;UNIQUE&quot;
+     ]
+  ],
+  &quot;container&quot;:{
+     &quot;type&quot;: &quot;MESOS&quot;,
+     &quot;docker&quot;:{
+        &quot;image&quot;:&quot;${MARATHON_IMAGE}:${MARATHON_TAG}&quot;,
+        &quot;pullConfig&quot;: {
+            &quot;secret&quot;: &quot;docker-registry-credential&quot;
+        }
+     }
+  },
+  &quot;env&quot;:{
+     &quot;JVM_OPTS&quot;:&quot;-Xms256m -Xmx2g&quot;,
+     &quot;DCOS_STRICT_SECURITY_ENABLED&quot;:&quot;true&quot;,
+     &quot;DCOS_SERVICE_ACCOUNT_CREDENTIAL&quot;:{
+        &quot;secret&quot;:&quot;service-credential&quot;
+     },
+     &quot;MESOS_AUTHENTICATEE&quot;:&quot;com_mesosphere_dcos_ClassicRPCAuthenticatee&quot;,
+     &quot;MESOS_MODULES&quot;:&quot;{\&quot;libraries\&quot;:[{\&quot;file\&quot;:\&quot;/opt/libmesos-bundle/lib/libdcos_security.so\&quot;,\&quot;modules\&quot;:[{\&quot;name\&quot;:\&quot;com_mesosphere_dcos_ClassicRPCAuthenticatee\&quot;}]}]}&quot;,
+     &quot;MESOS_VERBOSE&quot;:&quot;true&quot;,
+     &quot;GLOG_v&quot;:&quot;2&quot;,
+     &quot;PLUGIN_ACS_URL&quot;:&quot;https://master.mesos&quot;,
+     &quot;PLUGIN_AUTHN_MODE&quot;:&quot;dcos/jwt&quot;,
+     &quot;PLUGIN_FRAMEWORK_TYPE&quot;:&quot;marathon&quot;
+  },
+  &quot;healthChecks&quot;:[
+     {
+        &quot;path&quot;:&quot;/&quot;,
+        &quot;protocol&quot;:&quot;HTTP&quot;,
+        &quot;portIndex&quot;:0,
+        &quot;gracePeriodSeconds&quot;:1800,
+        &quot;intervalSeconds&quot;:10,
+        &quot;timeoutSeconds&quot;:5,
+        &quot;maxConsecutiveFailures&quot;:3,
+        &quot;ignoreHttp1xx&quot;:false
+     }
+  ],
+  &quot;secrets&quot;:{
+     &quot;service-credential&quot;:{
+        &quot;source&quot;:&quot;${SERVICE_ACCOUNT_SECRET}&quot;
+     },
+     &quot;docker-registry-credential&quot;: {
+        &quot;source&quot;:&quot;${DOCKER_REGISTRY_SECRET}&quot;
+     }
+  },
+  &quot;labels&quot;:{
+     &quot;DCOS_SERVICE_NAME&quot;:&quot;${MARATHON_INSTANCE_NAME}&quot;,
+     &quot;DCOS_SERVICE_PORT_INDEX&quot;:&quot;0&quot;,
+     &quot;DCOS_SERVICE_SCHEME&quot;:&quot;http&quot;
+  },
+  &quot;portDefinitions&quot;:[
+     {
+        &quot;port&quot;:0,
+        &quot;name&quot;:&quot;http&quot;
+     },
+     {
+        &quot;port&quot;:0,
+        &quot;name&quot;:&quot;libprocess&quot;
+     }
+  ]
+}
+</code></pre>
+</li>
+<li>
+<p>Deploy the Marathon instance, passing the JSON file you created in the previous step.</p>
+<pre><code class="language-bash">dcos marathon app add marathon-filled.json
+</code></pre>
+</li>
+</ol>
+<h1 id="step-6-grant-user-access-to-non-native-marathon"><a class="content__anchor" href="#step-6-grant-user-access-to-non-native-marathon" aria-hidden="true"><i data-feather="bookmark"></i></a>Step 6: Grant User Access to Non-Native Marathon</h1>
+<p>By now, your new Marathon instance is accessible only by the DC/OS superusers. In order to give access to regular users, you need to explicitly give them access permissions, according to your cluster security mode:</p>
+<h2 class="tabs" id="-3"><a class="content__anchor" href="#-3" aria-hidden="true"><i data-feather="bookmark"></i></a></h2>
+<h3 id="permissive-3"><a class="content__anchor" href="#permissive-3" aria-hidden="true"><i data-feather="bookmark"></i></a>Permissive</h3>
+<p>For each <code>${USER_ACCOUNT}</code> that you want to give access, if you are running a cluster in <code>permissive</code> security mode, depending on what kind of permissions you want to give:</p>
+<ul>
+<li>
+<p>To give <strong>full</strong> permissions to any service (or a group) that runs on the newly created Marathon:</p>
+<pre><code class="language-bash"># Access to the new Marathon service under `/service/&lt;name&gt;` URL
+dcos security org users grant ${USER_ACCOUNT} dcos:adminrouter:service:${MARATHON_INSTANCE_NAME} full
+dcos security org users grant ${USER_ACCOUNT} dcos:service:marathon:${MARATHON_INSTANCE_NAME}:services:/ full
+
+# Access to the Mesos tasks and their sandbox
+dcos security org users grant ${USER_ACCOUNT} dcos:adminrouter:ops:mesos full
+dcos security org users grant ${USER_ACCOUNT} dcos:adminrouter:ops:slave full
+
+# (Optionally) Access to the Marathon instance that runs on the root
+# Marathon and can be controlled via the DC/OS UI
+dcos security org users grant ${USER_ACCOUNT} dcos:adminrouter:service:marathon full
+dcos security org users grant ${USER_ACCOUNT} dcos:service:marathon:marathon:services:/${MARATHON_INSTANCE_NAME} full
+</code></pre>
+</li>
+<li>
+<p>To give permissions to an <strong>individual</strong> service (or a group) that runs on the newly created Marathon and is named <code>${CHILD_SERVICE_NAME}</code>:</p>
+<pre><code class="language-bash"># Access to the new Marathon service under `/service/&lt;name&gt;` URL
+dcos security org users grant ${USER_ACCOUNT} dcos:adminrouter:service:${MARATHON_INSTANCE_NAME} full
+dcos security org users grant ${USER_ACCOUNT} dcos:service:marathon:${MARATHON_INSTANCE_NAME}:services:/${CHILD_SERVICE_NAME} full
+
+# Access to the Mesos tasks and their sandbox
+dcos security org users grant ${USER_ACCOUNT} dcos:adminrouter:ops:mesos full
+dcos security org users grant ${USER_ACCOUNT} dcos:adminrouter:ops:slave full
+
+# (Optionally) Access to the Marathon instance that runs on the root
+# Marathon and can be controlled via the DC/OS UI
+dcos security org users grant ${USER_ACCOUNT} dcos:adminrouter:service:marathon full
+dcos security org users grant ${USER_ACCOUNT} dcos:service:marathon:marathon:services:/${MARATHON_INSTANCE_NAME} full
+</code></pre>
+</li>
+</ul>
+<h3 id="strict-3"><a class="content__anchor" href="#strict-3" aria-hidden="true"><i data-feather="bookmark"></i></a>Strict</h3>
+<p>For each <code>${USER_ACCOUNT}</code> that you want to give access, if you are running a cluster in <code>strict</code> security mode, depending on what kind of permissions you want to give:</p>
+<ul>
+<li>
+<p>To give <strong>full</strong> permissions to any service (or a group) that runs on the newly created Marathon:</p>
+<pre><code class="language-bash"># Access to the new Marathon service under `/service/&lt;name&gt;` URL
+dcos security org users grant ${USER_ACCOUNT} dcos:adminrouter:service:${MARATHON_INSTANCE_NAME} full
+dcos security org users grant ${USER_ACCOUNT} dcos:service:marathon:${MARATHON_INSTANCE_NAME}:services:/ full
+
+# Access to the Mesos tasks and their sandbox
+dcos security org users grant ${USER_ACCOUNT} dcos:adminrouter:ops:mesos full
+dcos security org users grant ${USER_ACCOUNT} dcos:adminrouter:ops:slave full
+dcos security org users grant ${USER_ACCOUNT} dcos:mesos:agent:executor:app_id:/ read
+dcos security org users grant ${USER_ACCOUNT} dcos:mesos:agent:framework:role:${MESOS_ROLE} read
+dcos security org users grant ${USER_ACCOUNT} dcos:mesos:agent:sandbox:app_id:/ read
+dcos security org users grant ${USER_ACCOUNT} dcos:mesos:agent:task:app_id:/ read
+dcos security org users grant ${USER_ACCOUNT} dcos:mesos:master:executor:app_id:/ read
+dcos security org users grant ${USER_ACCOUNT} dcos:mesos:master:framework:role:${MESOS_ROLE} read
+dcos security org users grant ${USER_ACCOUNT} dcos:mesos:master:task:app_id:/ read
+
+# (Optionally) Access to the Marathon instance that runs on the root
+# Marathon and can be controlled via the DC/OS UI
+dcos security org users grant ${USER_ACCOUNT} dcos:adminrouter:service:marathon full
+dcos security org users grant ${USER_ACCOUNT} dcos:service:marathon:marathon:services:/${MARATHON_INSTANCE_NAME} full
+</code></pre>
+</li>
+<li>
+<p>To give permissions to an <strong>individual</strong> service (or a group) that runs on the newly created Marathon and is named <code>${CHILD_SERVICE_NAME}</code>:</p>
+<pre><code class="language-bash"># Access to the new Marathon service under `/service/&lt;name&gt;` URL
+dcos security org users grant ${USER_ACCOUNT} dcos:adminrouter:service:${MARATHON_INSTANCE_NAME} full
+dcos security org users grant ${USER_ACCOUNT} dcos:service:marathon:${MARATHON_INSTANCE_NAME}:services:/${CHILD_SERVICE_NAME} full
+
+# Access to the Mesos tasks and their sandbox
+dcos security org users grant ${USER_ACCOUNT} dcos:adminrouter:ops:mesos full
+dcos security org users grant ${USER_ACCOUNT} dcos:adminrouter:ops:slave full
+dcos security org users grant ${USER_ACCOUNT} dcos:mesos:agent:executor:app_id:/${CHILD_SERVICE_NAME} read
+dcos security org users grant ${USER_ACCOUNT} dcos:mesos:agent:framework:role:${MESOS_ROLE} read
+dcos security org users grant ${USER_ACCOUNT} dcos:mesos:agent:sandbox:app_id:/${CHILD_SERVICE_NAME} read
+dcos security org users grant ${USER_ACCOUNT} dcos:mesos:agent:task:app_id:/${CHILD_SERVICE_NAME} read
+dcos security org users grant ${USER_ACCOUNT} dcos:mesos:master:executor:app_id:/${CHILD_SERVICE_NAME} read
+dcos security org users grant ${USER_ACCOUNT} dcos:mesos:master:framework:role:${MESOS_ROLE} read
+dcos security org users grant ${USER_ACCOUNT} dcos:mesos:master:task:app_id:/${CHILD_SERVICE_NAME} read
+
+# (Optionally) Access to the Marathon instance that runs on the root
+# Marathon and can be controlled via the DC/OS UI
+dcos security org users grant ${USER_ACCOUNT} dcos:adminrouter:service:marathon full
+dcos security org users grant ${USER_ACCOUNT} dcos:service:marathon:marathon:services:/${MARATHON_INSTANCE_NAME} full
+</code></pre>
+</li>
+</ul>
+<h1 id="step-7-access-the-non-native-marathon-instance"><a class="content__anchor" href="#step-7-access-the-non-native-marathon-instance" aria-hidden="true"><i data-feather="bookmark"></i></a>Step 7: Access the Non-Native Marathon Instance</h1>
+<p>In this step, you log in as a authorized user to the non-native Marathon DC/OS service.</p>
+<ol>
+<li>
+<p>Launch the non-native Marathon interface at: <code>http://&lt;master-public-ip&gt;/service/${SERVICE_ACCOUNT}/</code>.</p>
+</li>
+<li>
+<p>Enter your username and password and click <strong>LOG IN</strong>.</p>
+<p><img src="/mesosphere/dcos/1.13/img/LOGIN-EE-Modal_View-1_12.png" alt="Log in DC/OS"></p>
+<p>Figure 4. You are done!</p>
+<p><img src="/mesosphere/dcos/1.13/img/mom-marathon-gui.png" alt="Marathon on Marathon"></p>
+</li>
+</ol>
+<h1 id="next-steps"><a class="content__anchor" href="#next-steps" aria-hidden="true"><i data-feather="bookmark"></i></a>Next Steps</h1>
+<ul>
+<li>
+<p>You can configure the DC/OS CLI to interact with your non-native Marathon instance using the following command:</p>
+<pre><code class="language-sh">dcos config set marathon.url \
+  $(dcos config show core.dcos_url)/service/${MARATHON_INSTANCE_NAME}
+</code></pre>
+<p>Now any future <code>dcos marathon ...</code> commands will target your new marathon instance.</p>
+<p>To undo this change, use the following command:</p>
+<pre><code class="language-sh">dcos config unset marathon.url
+</code></pre>
+</li>
+</ul>
+<h1 id="known-issues"><a class="content__anchor" href="#known-issues" aria-hidden="true"><i data-feather="bookmark"></i></a>Known issues</h1>
+<ul>
+<li>
+<p>When launching docker containers, the user <code>nobody</code> may not have enough rights to successfully run. For example, starting an <code>nginx</code> Docker container as the user <code>nobody</code> will fail because <code>nobody</code> does not have write permissions to <code>/var/log</code>, which <code>nginx</code> needs.</p>
+</li>
+<li>
+<p>User <code>nobody</code> has different UIDs on different systems (the default is usually 65534). Depending on the agent’s distribution, you may need to modify the container image so that UIDs match! The same goes if you use the user <code>bob</code>.</p>
+</li>
+<li>
+<p>When using custom users (for example, <code>bob</code>), the user must exist on the agent, or in the case of using containers, within the container.</p>
+</li>
+<li>
+<p>When using a new user (for example, <code>bob</code>), remember to give the Marathon service account permissions to run tasks as this user.</p>
+</li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#step-1-preparation">Step 1: Preparation</a></li><li class="content__sections-item content__sections-item--h1"><a href="#step-2-create-a-marathon-service-account">Step 2: Create a Marathon Service Account</a></li><li class="content__sections-item content__sections-item--h1"><a href="#step-3-create-a-service-account-secret">Step 3: Create a Service Account Secret</a></li><li class="content__sections-item content__sections-item--h2"><a href="#"></a></li><li class="content__sections-item content__sections-item--h1"><a href="#step-4-assign-permissions-strict-mode-only">Step 4: Assign Permissions (Strict mode only)</a></li><li class="content__sections-item content__sections-item--h1"><a href="#step-5-install-a-non-native-marathon-instance-with-assigned-role">Step 5: Install a Non-Native Marathon Instance with Assigned Role</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-2"></a></li><li class="content__sections-item content__sections-item--h1"><a href="#step-6-grant-user-access-to-non-native-marathon">Step 6: Grant User Access to Non-Native Marathon</a></li><li class="content__sections-item content__sections-item--h2"><a href="#-3"></a></li><li class="content__sections-item content__sections-item--h1"><a href="#step-7-access-the-non-native-marathon-instance">Step 7: Access the Non-Native Marathon Instance</a></li><li class="content__sections-item content__sections-item--h1"><a href="#next-steps">Next Steps</a></li><li class="content__sections-item content__sections-item--h1"><a href="#known-issues">Known issues</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

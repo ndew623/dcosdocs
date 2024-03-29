@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>The Azure Container Service - D2iQ Docs</title><meta name="description" content="Understanding how DC/OS implements the Azure Container Service"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos/cn/1.13/overview/design/azure-container-service">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/mesosphere/dcos/2.2/overview/design/azure-container-service">Mesosphere DC/OS 2.2.0</a></li><li><a href="/mesosphere/dcos/2.1/overview/design/azure-container-service">Mesosphere DC/OS 2.1.0</a></li><li><a href="/mesosphere/dcos/2.0/overview/design/azure-container-service">Mesosphere DC/OS 2.0</a></li><li><a href="/mesosphere/dcos/1.13/overview/design/azure-container-service">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/mesosphere/dcos/1.13/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li class="active"><a class="d0" href="/mesosphere/dcos/1.13/overview/"><i data-feather="chevron-right"></i>Overview</a></li><ul><li><a class="d1" href="/mesosphere/dcos/1.13/overview/what-is-dcos/">What is DC/OS</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/overview/architecture/"><i data-feather="chevron-right"></i>Architecture</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/overview/features/">Features</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/overview/concepts/">Concepts</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/overview/high-availability/">High Availability</a></li><li class="active"><a class="d1" href="/mesosphere/dcos/1.13/overview/design/"><i data-feather="chevron-right"></i>Design</a></li><ul><li><a class="d2" href="/mesosphere/dcos/1.13/overview/design/auth-flow/">Authentication Architecture</a></li><li class="active active-on"><a class="d2" href="/mesosphere/dcos/1.13/overview/design/azure-container-service/">ACS</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/overview/design/dns-proxy/">Distributed DNS</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/overview/design/installation/">Installation</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/overview/design/overlay/">Overlay</a></li></ul><li><a class="d1" href="/mesosphere/dcos/1.13/overview/feature-maturity/">Feature Maturity</a></li></ul><li><a class="d0" href="/mesosphere/dcos/1.13/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">The Azure Container Service</h1></div><h4 class="content__header-description">Understanding how DC/OS implements the Azure Container Service</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/mesosphere/dcos/1.13/overview/design/azure-container-service/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>The <a href="https://azure.microsoft.com/documentation/articles/container-service-deployment/">Azure Container Service</a> is a reference implementation of DC/OS optimized to take advantage of the features of Microsoft Azure infrastructure. If you already have an Azure account, you can try out a reference implementation of DC/OS built on Microsoft Azure by <a href="https://aka.ms/acscreate">creating an Azure Container Service cluster</a>. (Obtain a <a href="https://azure.microsoft.com/pricing/free-trial/">free Azure trial account</a> first if you do not have one.)</p>
+<p class="message--warning"><strong>WARNING: </strong>Mesosphere does not support Ubuntu as an operating system for DC/OS, even when using Microsoft Azure.</p>
+<p>This document describes:</p>
+<ul>
+<li>Advantages of using DC/OS</li>
+<li>Azure infrastructure and the implementation architecture</li>
+<li>Bill of materials used to construct DC/OS and the ACS clusters</li>
+</ul>
+<h2 id="benefits-of-dcos"><a class="content__anchor" href="#benefits-of-dcos" aria-hidden="true"><i data-feather="bookmark"></i></a>Benefits of DC/OS</h2>
+<p>DC/OS is powered by Apache Mesos, used as the distributed kernel of a set of computers that you can treat as one unit, though you retain control of each one. In DC/OS, the kernel of the system is any number of Mesos masters and agents both publicly available and private; failed Mesos masters are replaced by a standby master transparently, and handles leader election. Masters handle failed agents and processes.</p>
+<p>DC/OS applications function as system components in its distributed user space. The system Marathon component is the distributed <code>init</code> for DC/OS; but this also includes the Admin Router service, the Mesos-DNS service, Exhibitor, and other system-wide components that are used by user processes and manage the masters and agents.</p>
+<p>For a more comprehensive architectural description of DC/OS, see <a href="/mesosphere/dcos/1.13/overview/architecture/">DC/OS Architecture</a>.</p>
+<p>For a more complete discussion of components, see <a href="/mesosphere/dcos/1.13/overview/architecture/components/">DC/OS Components</a>.</p>
+<h3 id="why-dcos-and-not-mesos"><a class="content__anchor" href="#why-dcos-and-not-mesos" aria-hidden="true"><i data-feather="bookmark"></i></a>Why DC/OS and not Mesos?</h3>
+<p>Many companies <a href="https://mesos.apache.org/documentation/latest/powered-by-mesos/">use Mesos directly with success</a>. However, DC/OS has several important features that distinguish it from the open-source features of Mesos, and add functionality to your deployment.</p>
+<ol>
+<li>Deploying and managing Mesos can be complex, precisely because it can manage very complex environments; DC/OS makes that complexity straightforward to use and supported by the community.</li>
+<li>DC/OS implements fault tolerance not just on an industrial but on an internet scale.</li>
+<li>The DC/OS Catalog of packages for easy installation supports developers, data scientists, and system administrators with all their favorite open source packages.</li>
+<li>The real-time metrics “firehouse” is open for use by your favorite diagnostics and analytics packages.</li>
+<li>DC/OS has three ways to administer your distributed OS: a CLI, a graphical UI, and an API.</li>
+</ol>
+<h3 id="the-catalog-of-packages"><a class="content__anchor" href="#the-catalog-of-packages" aria-hidden="true"><i data-feather="bookmark"></i></a>The Catalog of packages</h3>
+<p>Here is a list of what is in the Catalog on Day 1 of DC/OS, categorized by the type of license.</p>
+<h4 id="apache-license-v2"><a class="content__anchor" href="#apache-license-v2" aria-hidden="true"><i data-feather="bookmark"></i></a>Apache License V2</h4>
+<ul>
+<li>ArangoDB</li>
+<li>Apache Cassandra</li>
+<li>Crate</li>
+<li>Elastic Search</li>
+<li>Etcd</li>
+<li>Exhibitor</li>
+<li>Apache Hadoop</li>
+<li>Hue</li>
+<li>Jenkins</li>
+<li>Apache Kafka</li>
+<li>Linkerd</li>
+<li>Mr Redis</li>
+<li>Namerd</li>
+<li>Quobyte</li>
+<li>Riak</li>
+<li>Spark Notebook</li>
+<li>Apache Spark</li>
+<li>Apache Storm</li>
+<li>Docker Swarm</li>
+<li>Apache Zeppelin</li>
+</ul>
+<h4 id="simplified-bsd"><a class="content__anchor" href="#simplified-bsd" aria-hidden="true"><i data-feather="bookmark"></i></a>Simplified BSD</h4>
+<ul>
+<li>Datadog</li>
+<li>Nginx</li>
+</ul>
+<h4 id="mit"><a class="content__anchor" href="#mit" aria-hidden="true"><i data-feather="bookmark"></i></a>MIT</h4>
+<ul>
+<li>OpenVPN Admin</li>
+<li>OpenVPN</li>
+<li>Ruxit</li>
+</ul>
+<p>Not only may you use the Catalog of packages available with the DC/OS packaging system, you can also publish there to give your skills back to the community. You may also want to deploy DC/OS yourself; you can start with a reference implementation of DC/OS in “the cloud” with the Azure Container Service.</p>
+<h2 id="azure-container-service-infrastructure-and-optimizations"><a class="content__anchor" href="#azure-container-service-infrastructure-and-optimizations" aria-hidden="true"><i data-feather="bookmark"></i></a>Azure Container Service infrastructure and optimizations</h2>
+<p>The Azure Container Service is built with DC/OS as one of the critical orchestration options. The DC/OS implementation is optimized for easy creation and use on Microsoft Azure and on-premise, eventually with Azure Stack. It is one of the best ways to get started with DC/OS, Mesos, and a distributed cluster that can be managed like one large system, whether in your datacenter or in Azure.</p>
+<p>The Azure Container Service implementation brings several more benefits to you:</p>
+<ol>
+<li>It is the easiest way to get started with DC/OS. You only need to click a few buttons and provide a few parameters, then you are ready to deploy your apps. If you have an Azure account, <a href="https://aka.ms/acscreate">try it</a>.</li>
+<li>DC/OS deployments are vetted and optimize specifically for Azure: all VMs, storage, networks, load balancers, and so on are created and configured for a highly available DC/OS cluster.</li>
+<li>You have the ability to increase integration with Azure services if you decide it would benefit your deployments as the system moves forward.</li>
+<li>ACS brings Microsoft support to the infrastructure to complement Mesosphere’s support of DC/OS.</li>
+</ol>
+<p>The default ACS architecture looks like this:</p>
+<p><img src="/mesosphere/dcos/1.13/img/dcos-acs.png" alt="Azure Container Service architecture using DC/OS."></p>
+<p>Figure 1 - Azure Container Service architecture using DC/OS</p>
+<h2 id="dcos-component-list"><a class="content__anchor" href="#dcos-component-list" aria-hidden="true"><i data-feather="bookmark"></i></a>DC/OS component list</h2>
+<p>The following list shows the components used by DC/OS itself. You will note that the core components center around Mesos, Marathon, Python, and so on.</p>
+<ul>
+<li>adminrouter</li>
+<li>boost-system</li>
+<li>boto</li>
+<li>bouncer</li>
+<li>cosmos</li>
+<li>curl</li>
+<li>dcos-cluster-id</li>
+<li>dcos-diagnostics</li>
+<li>dcos-history-service (deprecated)</li>
+<li>dcos-image</li>
+<li>dcos-image-deps</li>
+<li>dcos-installer</li>
+<li>dcos-installer-ui</li>
+<li>dcos-metrics</li>
+<li>dcos-oauth</li>
+<li>dcos-signal</li>
+<li>dcos-ui</li>
+<li>dnspython</li>
+<li>erlang</li>
+<li>exhibitor</li>
+<li>flask</li>
+<li>hadoop</li>
+<li>hdfs-mesos</li>
+<li>java</li>
+<li>libevent</li>
+<li>logrotate</li>
+<li>marathon</li>
+<li>mesos</li>
+<li>mesos-buildenv</li>
+<li>mesos-dns</li>
+<li>mesos-metrics-module</li>
+<li>mesos-modules-private</li>
+<li>minuteman</li>
+<li>ncurses</li>
+<li>networking_api</li>
+<li>openssl</li>
+<li>python</li>
+<li>python-dateutil</li>
+<li>python-docopt</li>
+<li>python-jinja2</li>
+<li>python-kazoo</li>
+<li>python-markupsafe</li>
+<li>python-passlib</li>
+<li>python-pyyaml</li>
+<li>python-requests</li>
+<li>python-retrying</li>
+<li>six</li>
+<li>spartan</li>
+<li>strace</li>
+<li>toybox</li>
+<li>treeinfo.json</li>
+<li>zk-value-consensus</li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#benefits-of-dcos">Benefits of DC/OS</a></li><li class="content__sections-item content__sections-item--h2"><a href="#azure-container-service-infrastructure-and-optimizations">Azure Container Service infrastructure and optimizations</a></li><li class="content__sections-item content__sections-item--h2"><a href="#dcos-component-list">DC/OS component list</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

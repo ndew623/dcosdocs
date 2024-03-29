@@ -1,0 +1,202 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Using dcos task exec - D2iQ Docs</title><meta name="description" content="Using the dcos task exec command inside a task container"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos/cn/1.13/monitoring/debugging/task-exec">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/mesosphere/dcos/2.2/monitoring/debugging/task-exec">Mesosphere DC/OS 2.2.0</a></li><li><a href="/mesosphere/dcos/2.1/monitoring/debugging/task-exec">Mesosphere DC/OS 2.1.0</a></li><li><a href="/mesosphere/dcos/2.0/monitoring/debugging/task-exec">Mesosphere DC/OS 2.0</a></li><li><a href="/mesosphere/dcos/1.13/monitoring/debugging/task-exec">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/mesosphere/dcos/1.13/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li class="active"><a class="d0" href="/mesosphere/dcos/1.13/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><ul><li><a class="d1" href="/mesosphere/dcos/1.13/monitoring/performance-monitoring/"><i data-feather="chevron-right"></i>Performance Monitoring</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/monitoring/logging/"><i data-feather="chevron-right"></i>Logging</a></li><li class="active"><a class="d1" href="/mesosphere/dcos/1.13/monitoring/debugging/"><i data-feather="chevron-right"></i>Debugging</a></li><ul><li><a class="d2" href="/mesosphere/dcos/1.13/monitoring/debugging/gui-debugging/">Debugging from the DC/OS UI</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/monitoring/debugging/debug-perms/">Granting Access to dcos task exec</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/monitoring/debugging/cli-debugging/">Debugging from the DC/OS CLI</a></li><li class="active active-on"><a class="d2" href="/mesosphere/dcos/1.13/monitoring/debugging/task-exec/">Using dcos task exec</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/monitoring/debugging/stuck-deployment/">Stuck Deployments</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/monitoring/debugging/slow-docker/">Slow Docker Apps and Deployments</a></li></ul></ul><li><a class="d0" href="/mesosphere/dcos/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Using dcos task exec</h1></div><h4 class="content__header-description">Using the dcos task exec command inside a task container</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/mesosphere/dcos/1.13/monitoring/debugging/task-exec/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- The source repo for this topic is https://github.com/dcos/dcos-docs-site -->
+<p>The <code>dcos task exec</code> command allows you to execute an arbitrary command inside of a task’s container and stream its output back to your local terminal to learn more about how a given task is behaving. It offers an experience very similar to <a href="https://docs.docker.com/engine/reference/commandline/exec/"><code>docker exec</code></a>, without any need for SSH keys.</p>
+<p>To use the debugging feature, the service or job must be launched using either the Mesos container runtime or the Universal container runtime. Debugging cannot be used on containers launched with the Docker runtime. See <a href="/mesosphere/dcos/1.13/deploying-services/containerizers/">Using Mesos Containerizers</a> for more information.</p>
+<p>You can execute this command in the following modes.</p>
+<ul>
+<li>
+<p><code>dcos task exec &lt;task-id&gt; &lt;command&gt;</code> (no flags): streams STDOUT and STDERR from the remote terminal to your local terminal as raw bytes.</p>
+</li>
+<li>
+<p><code>dcos task exec --tty &lt;task-id&gt; &lt;command&gt;</code>: streams STDOUT and STDERR from the remote terminal to your local terminal, but not as raw bytes. Instead, this option puts your local terminal into raw mode, allocates a remote pseudo terminal (PTY), and streams the STDOUT and STDERR through the remote PTY.</p>
+</li>
+<li>
+<p><code>dcos task exec --interactive &lt;task-id&gt; &lt;command&gt;</code> streams STDOUT and STDERR from the remote terminal to your local terminal and streams STDIN from your local terminal to the remote command.</p>
+</li>
+<li>
+<p><code>dcos task exec --interactive --tty &lt;task-id&gt; &lt;command&gt;</code>: streams STDOUT and STDERR from the remote terminal to your local terminal and streams STDIN from your local terminal to the remote terminal. Also puts your local terminal into raw mode; allocates a remote pseudo terminal (PTY); and streams STDOUT, STDERR, and STDIN through the remote PTY. This mode offers the maximum functionality.</p>
+</li>
+</ul>
+<p>For more information on the <code>dcos task exec</code> commands, see the <a href="/mesosphere/dcos/1.13/cli/command-reference/dcos-task/dcos-task-exec/">CLI Reference section</a>.</p>
+<h3 id="tips"><a class="content__anchor" href="#tips" aria-hidden="true"><i data-feather="bookmark"></i></a>Tips</h3>
+<ul>
+<li>We have included the text of the full flags above for readability, but each one can be shortened. Instead of typing <code>--interactive</code>, you can just type <code>-i</code>. Likewise, instead of typing <code>--tty</code>, you can just type <code>-t</code>.</li>
+<li>If your mode streams raw bytes, you will not be able to launch programs like <code>vim</code>, because these programs require the use of control characters.</li>
+</ul>
+<h1 id="quick-start"><a class="content__anchor" href="#quick-start" aria-hidden="true"><i data-feather="bookmark"></i></a>Quick start</h1>
+<p>Use this guide to get started with the <code>dcos task exec</code> debugging command.</p>
+<p><strong>Prerequisite:</strong></p>
+<ul>
+<li>A container launched by using the <a href="/mesosphere/dcos/1.13/deploying-services/containerizers/">DC/OS Universal container runtime</a></li>
+</ul>
+<h1 id="pipe-output-from-a-command-running-inside-a-container"><a class="content__anchor" href="#pipe-output-from-a-command-running-inside-a-container" aria-hidden="true"><i data-feather="bookmark"></i></a>Pipe output from a command running inside a container</h1>
+<p>You can run commands inside a container by using the <code>dcos task exec</code> command. In this example, a long running Marathon app is launched and then the <code>dcos task exec</code> command is used to get the hostname of the node running the app.</p>
+<ol>
+<li>
+<p>Create a Marathon app definition and name it <code>my-app.json</code> with the following contents:</p>
+<pre><code class="language-bash">{
+   &quot;id&quot;: &quot;/my-app&quot;,
+   &quot;cmd&quot;: &quot;sleep 100000000&quot;,
+   &quot;cpus&quot;: 1,
+   &quot;instances&quot;: 1
+ }
+</code></pre>
+</li>
+<li>
+<p>Deploy the service on DC/OS:</p>
+<pre><code class="language-bash">dcos marathon app add my-app.json
+</code></pre>
+</li>
+<li>
+<p>Get the task ID of the job with this CLI command:</p>
+<pre><code class="language-bash">dcos task
+</code></pre>
+<p>The output should look similar to this:</p>
+<pre><code class="language-bash">NAME        HOST        USER  STATE  ID                                               
+my-app      10.0.1.106  root    R    &lt;task_id&gt;
+</code></pre>
+</li>
+<li>
+<p>Run this command to show the hostname of the container running your app, where <code>&lt;task-ID&gt;</code> is your task ID.</p>
+<pre><code class="language-bash">dcos task exec &lt;task_id&gt; hostname
+</code></pre>
+<p>The output should look similar to this:</p>
+<pre><code class="language-bash">ip-10-0-1-105.us-west-2.compute.internal
+</code></pre>
+</li>
+</ol>
+<p>For more information on the <code>dcos task exec</code> commands, see the <a href="/mesosphere/dcos/1.13/cli/command-reference/dcos-task/dcos-task-exec/">CLI Reference section</a>.</p>
+<h1 id="run-an-interactive-command-inside-a-tasks-container"><a class="content__anchor" href="#run-an-interactive-command-inside-a-tasks-container" aria-hidden="true"><i data-feather="bookmark"></i></a>Run an interactive command inside a task’s container</h1>
+<p>You can run interactive commands on machines in your cluster by using the <code>dcos task exec</code> command. In this example, the <code>dcos task exec</code> command is used to copy a simple script from your local machine to the task container on the node. The script is then administered locally by using the <code>dcos task exec</code> command.</p>
+<ol>
+<li>
+<p>Create a Marathon app definition and name it <code>my-interactive-app.json</code> with the following contents:</p>
+<pre><code class="language-bash">{
+   &quot;id&quot;: &quot;/my-interactive-app&quot;,
+   &quot;cmd&quot;: &quot;sleep 100000000&quot;,
+   &quot;cpus&quot;: 1,
+   &quot;instances&quot;: 1
+}
+</code></pre>
+</li>
+<li>
+<p>Deploy the app on DC/OS:</p>
+<pre><code class="language-bash">dcos marathon app add my-interactive-app.json
+</code></pre>
+</li>
+<li>
+<p>Get the task ID of the app with this CLI command:</p>
+<pre><code class="language-bash">dcos task
+</code></pre>
+<p>The output should look similar to this:</p>
+<pre><code class="language-bash">NAME                HOST        USER  STATE  ID                                               
+my-interactive-app  10.0.1.106  root    R    &lt;task_id&gt;
+</code></pre>
+</li>
+<li>
+<p>Write a script called <code>hello-world.sh</code> with the following contents:</p>
+<pre><code class="language-bash">echo &quot;Hello World&quot;
+</code></pre>
+</li>
+<li>
+<p>Upload the script to your task container:</p>
+<pre><code class="language-bash">cat hello-world.sh | dcos task exec -i &lt;task_id&gt; bash -c &quot;cat &gt; hello-world.sh&quot;
+</code></pre>
+</li>
+<li>
+<p>Give the file executable permissions:</p>
+<pre><code class="language-bash">dcos task exec &lt;task_id&gt; chmod a+x hello-world.sh
+</code></pre>
+</li>
+<li>
+<p>Run the script inside of the container:</p>
+<pre><code class="language-bash">dcos task exec &lt;task_id&gt; ./hello-world.sh
+</code></pre>
+<p>The output should look similar to this:</p>
+<pre><code class="language-bash">Hello World
+</code></pre>
+</li>
+</ol>
+<h1 id="launch-a-long-running-interactive-bash-session"><a class="content__anchor" href="#launch-a-long-running-interactive-bash-session" aria-hidden="true"><i data-feather="bookmark"></i></a>Launch a long running interactive Bash session</h1>
+<p>In this example, a long running <a href="/mesosphere/dcos/1.13/deploying-jobs/">job</a> is launched by using the <code>dcos job run</code> command, and the <code>dcos task exec</code> command is used to launch an interactive Bash shell inside the container of that job.</p>
+<ol>
+<li>
+<p>Deploy and run a job with the DC/OS CLI:</p>
+<ol>
+<li>
+<p>Create the following job definition and save as <code>my-job.json</code>. This specifies a sleep job that runs for <code>10000000</code> seconds.</p>
+<pre><code class="language-bash">{
+  &quot;id&quot;: &quot;my-job&quot;,
+  &quot;labels&quot;: {},
+  &quot;run&quot;: {
+    &quot;artifacts&quot;: [],
+    &quot;cmd&quot;: &quot;sleep 100000000&quot;,
+    &quot;cpus&quot;: 0.01,
+    &quot;disk&quot;: 0,
+    &quot;env&quot;: {},
+    &quot;maxLaunchDelaySeconds&quot;: 300,
+    &quot;mem&quot;: 32,
+    &quot;placement&quot;: {
+      &quot;constraints&quot;: []
+    },
+    &quot;restart&quot;: {
+      &quot;policy&quot;: &quot;NEVER&quot;
+    },
+    &quot;volumes&quot;: []
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>Deploy the job with this CLI command:</p>
+<pre><code class="language-bash">dcos job add my-job.json
+</code></pre>
+</li>
+<li>
+<p>Verify that the job has been successfully deployed:</p>
+<pre><code class="language-bash">dcos job list
+</code></pre>
+<p>The output should resemble:</p>
+<pre><code class="language-bash">ID      DESCRIPTION  STATUS       LAST SUCCESFUL RUN        
+my-job               Unscheduled         None
+</code></pre>
+</li>
+<li>
+<p>Run the job:</p>
+<pre><code class="language-bash">dcos job run my-job
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p>Get the task ID of the job with this CLI command:</p>
+<pre><code class="language-bash">dcos task
+</code></pre>
+<p>The output should look similar to this:</p>
+<pre><code class="language-bash">NAME                          HOST       USER  STATE  ID                                                                       
+20161209183121nz2F5.my-job    10.0.2.53  root    R    &lt;task_id&gt;
+</code></pre>
+</li>
+<li>
+<p>Launch a process inside of the container with the task ID (<code>&lt;task_id&gt;</code>) specified and attach a TTY to it. This will launch an interactive Bash session.</p>
+<pre><code class="language-bash">dcos task exec --interactive --tty &lt;task_id&gt; bash
+</code></pre>
+<p>You should now be inside the container running an interactive Bash session.</p>
+<pre><code class="language-bash">root@ip-10-0-2-53 / #
+</code></pre>
+</li>
+<li>
+<p>Run a command from the interactive Bash session. For example, the <code>ls</code> command:</p>
+<pre><code class="language-bash">root@ip-10-0-1-104 / # ls
+bin   dev  home  lib64	     media  opt   root	sbin  sys  usr
+boot  etc  lib	 lost+found  mnt    proc  run	srv   tmp  var
+</code></pre>
+</li>
+</ol>
+<p><strong>Tip</strong></p>
+<p>You can use shorthand such as <code>-i</code> for <code>--interactive</code> or <code>-t</code> for <code>--tty</code>. Also, only the beginning unique characters of the <code>&lt;task_id&gt;</code> are required. For example, if your task ID is <code>exec-test_20161214195</code> and there are no other task IDs that begin with the letter <code>e</code>, this is valid command syntax: <code>dcos task exec -i -t e bash</code>. For more information, see the CLI command <a href="/mesosphere/dcos/1.13/cli/command-reference/">reference</a>.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#quick-start">Quick start</a></li><li class="content__sections-item content__sections-item--h1"><a href="#pipe-output-from-a-command-running-inside-a-container">Pipe output from a command running inside a container</a></li><li class="content__sections-item content__sections-item--h1"><a href="#run-an-interactive-command-inside-a-tasks-container">Run an interactive command inside a task’s container</a></li><li class="content__sections-item content__sections-item--h1"><a href="#launch-a-long-running-interactive-bash-session">Launch a long running interactive Bash session</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

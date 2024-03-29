@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Adding external users - D2iQ Docs</title><meta name="description" content="Adding an external user to DC/OS"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos/cn/1.13/security/ent/users-groups/add-external-user">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/mesosphere/dcos/2.2/security/ent/users-groups/add-external-user">Mesosphere DC/OS 2.2.0</a></li><li><a href="/mesosphere/dcos/2.1/security/ent/users-groups/add-external-user">Mesosphere DC/OS 2.1.0</a></li><li><a href="/mesosphere/dcos/2.0/security/ent/users-groups/add-external-user">Mesosphere DC/OS 2.0</a></li><li><a href="/mesosphere/dcos/1.13/security/ent/users-groups/add-external-user">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/mesosphere/dcos/1.13/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li class="active"><a class="d0" href="/mesosphere/dcos/1.13/security/"><i data-feather="chevron-right"></i>Security</a></li><ul><li class="active"><a class="d1" href="/mesosphere/dcos/1.13/security/ent/"><i data-feather="chevron-right"></i>DC/OS Enterprise Security</a></li><ul><li class="active"><a class="d2" href="/mesosphere/dcos/1.13/security/ent/users-groups/"><i data-feather="chevron-right"></i>Managing users and groups</a></li><ul><li><a class="d3" href="/mesosphere/dcos/1.13/security/ent/users-groups/add-local-user/">Adding local users</a></li><li class="active active-on"><a class="d3" href="/mesosphere/dcos/1.13/security/ent/users-groups/add-external-user/">Adding external users</a></li><li><a class="d3" href="/mesosphere/dcos/1.13/security/ent/users-groups/reset-superuser/">Resetting the Superuser</a></li><li><a class="d3" href="/mesosphere/dcos/1.13/security/ent/users-groups/config-linux-user/">Overriding the default Linux user</a></li></ul><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/gui-permissions/"><i data-feather="chevron-right"></i>Granting Access to the UI</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/perms-management/">Permissions Management</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/perms-reference/">Permissions Reference</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/ldap/"><i data-feather="chevron-right"></i>LDAP authentication</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/secrets/"><i data-feather="chevron-right"></i>Secrets</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/sso/"><i data-feather="chevron-right"></i>Identity provider-based authentication</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/service-auth/"><i data-feather="chevron-right"></i>Service Authentication</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/restrict-service-access/">Restricting Access to DC/OS Service Groups</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/hardening/">Hardening</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/iam-api/">Identity and Access Management API</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/security/ent/tls-ssl/"><i data-feather="chevron-right"></i>Securing Communication with TLS</a></li></ul><li><a class="d1" href="/mesosphere/dcos/1.13/security/oss/"><i data-feather="chevron-right"></i>DC/OS Open Source Security</a></li></ul><li><a class="d0" href="/mesosphere/dcos/1.13/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Adding external users</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">Adding an external user to DC/OS</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/mesosphere/dcos/1.13/security/ent/users-groups/add-external-user/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><!-- The source repository for this topic is https://github.com/dcos/dcos-docs-site -->
+<p>After you have configured a directory service or an identity provider, you can add the users to DC/OS so that you can assign permissions.</p>
+<h1 id="prerequisites"><a class="content__anchor" href="#prerequisites" aria-hidden="true"><i data-feather="bookmark"></i></a>Prerequisites</h1>
+<ul>
+<li>An external <a href="/mesosphere/dcos/1.13/security/ent/ldap/">LDAP directory</a>.</li>
+<li>An <a href="/mesosphere/dcos/1.13/security/ent/sso/">OpenID Connect or SAML provider</a>.</li>
+</ul>
+<h1 id="adding-external-users-via-logon-attempt"><a class="content__anchor" href="#adding-external-users-via-logon-attempt" aria-hidden="true"><i data-feather="bookmark"></i></a>Adding external users via logon attempt</h1>
+<p>By default, users have no DC/OS permissions. Any attempts to access DC/OS without permissions will fail. However, if you have successfully configured an LDAP directory or an identity provider and the user provides valid credentials, the logon attempt will cause the user’s account to be added to DC/OS.</p>
+<p><strong>Requirement</strong>: The user’s name and password must be correct.</p>
+<p>Because you will need the user account in DC/OS before you can add any permissions, you may find it easiest to ask each of the users to try to log on to DC/OS. Though their attempts will fail, this will serve to populate DC/OS with their accounts.</p>
+<h1 id="importing-external-ldap-users-individually-from-the-web-interface"><a class="content__anchor" href="#importing-external-ldap-users-individually-from-the-web-interface" aria-hidden="true"><i data-feather="bookmark"></i></a>Importing external LDAP users individually from the web interface</h1>
+<p>Use the following instructions to import an external user:</p>
+<ol>
+<li>
+<p>Select <strong>Organization &gt; Users</strong> and create a new user.</p>
+</li>
+<li>
+<p>Select <strong>Import LDAP User</strong>.</p>
+</li>
+<li>
+<p>Type the user’s user name or ID in the <strong>User Name</strong> box.</p>
+</li>
+<li>
+<p>Click <strong>Add</strong>.</p>
+</li>
+<li>
+<p>When you have finished adding all of your users, click the <strong>Close</strong> button.</p>
+</li>
+</ol>
+<h1 id="importing-groups-of-ldap-users"><a class="content__anchor" href="#importing-groups-of-ldap-users" aria-hidden="true"><i data-feather="bookmark"></i></a>Importing groups of LDAP users</h1>
+<h2 id="about-importing-ldap-groups"><a class="content__anchor" href="#about-importing-ldap-groups" aria-hidden="true"><i data-feather="bookmark"></i></a>About importing LDAP groups</h2>
+<p>You can import existing LDAP user groups into DC/OS. Starting in DC/OS Enterprise 1.12, imported LDAP groups are supported by LDAP sync. DC/OS periodically synchronizes the external LDAP directory, by default this is set to every 1800 seconds (30 mins).</p>
+<p><strong>Requirement:</strong> Group entries in the LDAP directory must list their members with the <code>member</code>, <code>uniquemember</code>, or <code>memberuid</code> attribute.</p>
+<p>Group size is limited to 100 users. To increase this limit, contact Mesosphere customer support. If the user name matches an existing user, it is not reimported. You can check the logs to determine if this has occurred.</p>
+<h2 id="configuring-ldap-group-import"><a class="content__anchor" href="#configuring-ldap-group-import" aria-hidden="true"><i data-feather="bookmark"></i></a>Configuring LDAP group import</h2>
+<p>Use the following instructions to configure LDAP group import:</p>
+<ol>
+<li>
+<p>Open the <strong>Settings</strong> -&gt; <strong>LDAP Directories</strong> tab.</p>
+</li>
+<li>
+<p>Click <strong>ADD DIRECTORY</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Group Import (Optional)</strong>.</p>
+</li>
+<li>
+<p>Provide the DN for the subset of the directory tree that should be searched in the <strong>GROUP SEARCH BASE</strong> field. Example: <code>(cn=Users,dc=mesosphere,dc=com)</code>.</p>
+</li>
+<li>
+<p>Provide a template to be used to translate a group name to a valid LDAP search filter in the <strong>GROUP SEARCH FILTER TEMPLATE</strong> field. The string must contain <code>%(groupname)</code>. Example: <code>(&amp;(objectclass=group)(sAMAccountName=%(groupname)s))</code>.</p>
+</li>
+<li>
+<p>When completed, the LDAP group import configuration dialog appears as shown in Figure 1.</p>
+<p><img src="/mesosphere/dcos/1.13/img/ldap-group-import.png" alt="LDAP Group Import Configuration"></p>
+<p>Figure 1. LDAP group import configuration</p>
+</li>
+<li>
+<p>Click <strong>ADD DIRECTORY</strong>.</p>
+</li>
+</ol>
+<h2 id="importing-ldap-groups-using-the-web-interface"><a class="content__anchor" href="#importing-ldap-groups-using-the-web-interface" aria-hidden="true"><i data-feather="bookmark"></i></a>Importing LDAP groups using the web interface</h2>
+<ol>
+<li>
+<p>In the <strong>Organization</strong> -&gt; <strong>Groups</strong> tab, click the <strong>+</strong> icon in the top right and select <strong>Import LDAP Group</strong>.</p>
+</li>
+<li>
+<p>Type the LDAP group name in the <strong>Name</strong> box. The group name must not match the name of an existing group.</p>
+</li>
+<li>
+<p>Click <strong>Add Group</strong>. This creates a user group in DC/OS with the same name as the LDAP group and imports all of the users in the LDAP group into DC/OS.</p>
+</li>
+<li>
+<p>When you have finished adding all of your groups, click the <strong>Close</strong> button.</p>
+</li>
+</ol>
+<h2 id="importing-ldap-groups-using-the-api"><a class="content__anchor" href="#importing-ldap-groups-using-the-api" aria-hidden="true"><i data-feather="bookmark"></i></a>Importing LDAP groups using the API</h2>
+<p>You can import a group of LDAP users by using the <code>/ldap/importuser</code> <a href="/mesosphere/dcos/1.13/security/ent/iam-api/">IAM API</a> endpoint.</p>
+<p><strong>Prerequisites:</strong></p>
+<ul>
+<li>The <code>group-search</code> configuration key must be set, as discussed in <a href="#Configuring-LDAP-group-import">Configuring LDAP group import</a>.</li>
+<li>The existing group entries must list their members by using the <code>member</code>, <code>uniquemember</code>, or <code>memberuid</code> attribute.</li>
+<li>You must follow the steps in <a href="/mesosphere/dcos/1.13/security/ent/tls-ssl/get-cert/">Obtaining the root certificate of your DC/OS CA</a> before issuing the curl commands in this section.</li>
+</ul>
+<p>In this example, a group named <code>johngroup</code> is imported.</p>
+<ol>
+<li>
+<p>Log in to the CLI to ensure that you can reference the cluster URL as shown in the following code samples.</p>
+</li>
+<li>
+<p>Initiate import using the following command.</p>
+<pre><code class="language-bash">curl -i -X POST --cacert dcos-ca.crt -H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; --data '{&quot;groupname&quot;: &quot;johngroup&quot;}' --header &quot;Content-Type: application/json&quot; $(dcos config show core.dcos_url)/acs/api/v1/ldap/importgroup
+</code></pre>
+</li>
+<li>
+<p>Confirm that <code>johngroup</code> is added.</p>
+<pre><code class="language-bash">curl --cacert dcos-ca.crt -H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; $(dcos config show core.dcos_url)/acs/api/v1/groups/johngroup
+</code></pre>
+<pre><code class="language-bash">curl --cacert dcos-ca.crt -H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; $(dcos config show core.dcos_url)/acs/api/v1/groups/johngroup/users
+</code></pre>
+</li>
+</ol>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#prerequisites">Prerequisites</a></li><li class="content__sections-item content__sections-item--h1"><a href="#adding-external-users-via-logon-attempt">Adding external users via logon attempt</a></li><li class="content__sections-item content__sections-item--h1"><a href="#importing-external-ldap-users-individually-from-the-web-interface">Importing external LDAP users individually from the web interface</a></li><li class="content__sections-item content__sections-item--h1"><a href="#importing-groups-of-ldap-users">Importing groups of LDAP users</a></li><li class="content__sections-item content__sections-item--h2"><a href="#about-importing-ldap-groups">About importing LDAP groups</a></li><li class="content__sections-item content__sections-item--h2"><a href="#configuring-ldap-group-import">Configuring LDAP group import</a></li><li class="content__sections-item content__sections-item--h2"><a href="#importing-ldap-groups-using-the-web-interface">Importing LDAP groups using the web interface</a></li><li class="content__sections-item content__sections-item--h2"><a href="#importing-ldap-groups-using-the-api">Importing LDAP groups using the API</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

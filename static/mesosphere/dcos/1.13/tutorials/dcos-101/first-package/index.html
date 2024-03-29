@@ -1,0 +1,258 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Install the first package - D2iQ Docs</title><meta name="description" content="Illustrates how to install a sample service package (part 3)"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos/cn/1.13/tutorials/dcos-101/first-package">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/mesosphere/dcos/2.2/tutorials/dcos-101">Mesosphere DC/OS 2.2.0</a></li><li><a href="/mesosphere/dcos/2.1/tutorials/dcos-101">Mesosphere DC/OS 2.1.0</a></li><li><a href="/mesosphere/dcos/2.0/tutorials/dcos-101">Mesosphere DC/OS 2.0</a></li><li><a href="/mesosphere/dcos/1.13/tutorials/dcos-101/first-package">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/mesosphere/dcos/1.13/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li class="active"><a class="d0" href="/mesosphere/dcos/1.13/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><ul><li class="active"><a class="d1" href="/mesosphere/dcos/1.13/tutorials/dcos-101/"><i data-feather="chevron-right"></i>Introducing DC/OS</a></li><ul><li><a class="d2" href="/mesosphere/dcos/1.13/tutorials/dcos-101/start-here/">Create a cluster</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/tutorials/dcos-101/cli/">Install the command-line interface</a></li><li class="active active-on"><a class="d2" href="/mesosphere/dcos/1.13/tutorials/dcos-101/first-package/">Install the first package</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/tutorials/dcos-101/first-app/">Deploy the first application</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/tutorials/dcos-101/create-service/">Create and run custom apps</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/tutorials/dcos-101/schedule-jobs/">Create and schedule jobs</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/tutorials/dcos-101/service-discovery/">Discover deployed services</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/tutorials/dcos-101/native-app/">Deploy and expose native applications</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/tutorials/dcos-101/resources/">Allocate and scale resources</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/tutorials/dcos-101/loadbalancing/">Load balancing workload</a></li></ul><li><a class="d1" href="/mesosphere/dcos/1.13/tutorials/stateful-services/">Running stateful services on DC/OS</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/tutorials/autoscaling/"><i data-feather="chevron-right"></i>Autoscaling with Marathon</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/tutorials/iot_pipeline/">Deploying a load-balanced data pipeline</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/tutorials/deploy-on-marathon/">Deploying Marathon apps with Jenkins</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/tutorials/task-labels/">Labeling tasks and jobs</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/tutorials/dcos-debug/"><i data-feather="chevron-right"></i>Debugging applications on DC/OS</a></li></ul><li><a class="d0" href="/mesosphere/dcos/1.13/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Install the first package</h1></div><h4 class="content__header-description">Illustrates how to install a sample service package (part 3)</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/mesosphere/dcos/1.13/tutorials/dcos-101/first-package/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>Now that you have a DC/OS cluster installed and running on master and agent nodes and have installed the DC/OS command-line interface (CLI) to work with your cluster, you are ready to begin adding packages and applications to the cluster.</p>
+<h1 id="before-you-begin"><a class="content__anchor" href="#before-you-begin" aria-hidden="true"><i data-feather="bookmark"></i></a>Before you begin</h1>
+<p>Before starting this tutorial, you should verify the following:</p>
+<ul>
+<li>You have access to a running <a href="../start-here/">DC/OS cluster</a> with at least at least one master node and three agent nodes.</li>
+<li>You have access to a computer where the <a href="../cli/">DC/OS CLI</a> is installed.</li>
+<li>You can open a command-line shell on the computer hosting the CLI.</li>
+<li>You can open secure shell (SSH) sessions on remote cluster nodes.</li>
+</ul>
+<!--
+To perform some steps in this tutorial, you also need access to the `jq` language JSON processor to simplify some of the commands and output format.
+- Download [jq](https://stedolan.github.io/jq/download/) and follow the instructions to install JQ for your operating system.-->
+<h1 id="learning-objectives"><a class="content__anchor" href="#learning-objectives" aria-hidden="true"><i data-feather="bookmark"></i></a>Learning objectives</h1>
+<p>By completing this tutorial, you will learn:</p>
+<ul>
+<li>How to search for services in the DC/OS package repository.</li>
+<li>How to install a service you want available in the DC/OS cluster.</li>
+<li>How to run a few basic commands for working with your first service.</li>
+</ul>
+<h1 id="search-for-a-package"><a class="content__anchor" href="#search-for-a-package" aria-hidden="true"><i data-feather="bookmark"></i></a>Search for a package</h1>
+<p>For this tutorial, you are going to install <a href="https://redislabs.com/">Redis</a>. Redis is an open source key-value data structure store. It is commonly used as a database, cache manager, and message broker. It supports in-memory data retrieval, on-disk persistence, and high availability.</p>
+<p>You can search for packages you want to install on the DC/OS cluster by using the DC/OS web-based administrative console or by running DC/OS command-line programs.</p>
+<h2 id="search-using-the-dcos-web-based-console"><a class="content__anchor" href="#search-using-the-dcos-web-based-console" aria-hidden="true"><i data-feather="bookmark"></i></a>Search using the DC/OS web-based console</h2>
+<p>To search for Redis using the DC/OS web-based administrative console:</p>
+<ol>
+<li>
+<p>Open a web browser and navigate to the URL for the DC/OS web-based administrative console.</p>
+</li>
+<li>
+<p>Click <strong>Catalog</strong>.</p>
+<p>The Catalog provides a package repository for services that are available for DC/OS clusters. If you have an Internet connection, the Catalog makes easy to install services with minimal manual configuration from a centralized location.</p>
+<p>The packages in the Catalog are developed and maintained by many different contributors and include both <strong>Certified</strong> packages and that have been tested and validated by Mesosphere and <strong>Community</strong> that have been contributed to the package repository but in many cases have not been thoroughly tested.</p>
+</li>
+<li>
+<p>Type a search string to locate the package you want to install.</p>
+<p>For example, type “redis” to find the package names that match the package you are going to install for this tutorial.</p>
+<p><img src="/mesosphere/dcos/1.13/img/tutorial-redis-search.png" alt="Search for packages in the Catalog"></p>
+<p>In this case, more than one package matches your search string. For this tutorial, however, you are only interested in the <strong>redis</strong> package. This package installs a single Redis instance in a Docker container.</p>
+</li>
+<li>
+<p>Select the Redis package in the search results.</p>
+<p>If you are ready to install using the DC/OS web-based administrative console, continue to <a href="#install-redis-gui">Install using the DC/OS web-based console</a>.</p>
+</li>
+</ol>
+<!--
+1. Click **Review & Run**.
+
+1. Verify the default service name.
+
+    You can modify the service name, if needed. For example, you might want to name this service redis-tutorial.
+
+1. Click **Redis** and verify the CPU and memory settings.
+
+    ![Redis configuration settings](/mesosphere/dcos/1.13/img/tutorial-redis-config.png)
+
+1. Click **Review & Run** to verify your Redis configuration, then click **Run Service**.
+
+    ![Redis configuration settings](/mesosphere/dcos/1.13/img/tutorial-redis-run.png)
+
+1. Click **Open Service** to view the status of the Redis deployment.
+
+    ![Redis configuration settings](/mesosphere/dcos/1.13/img/tutorial-redis-open-service.png)
+-->
+<h2 id="search-using-the-dcos-cli"><a class="content__anchor" href="#search-using-the-dcos-cli" aria-hidden="true"><i data-feather="bookmark"></i></a>Search using the DC/OS CLI</h2>
+<p>To search for Redis by running DC/OS CLI commands:</p>
+<ol>
+<li>
+<p>Open a terminal shell on the computer where you have access to the DC/OS command-line interface (CLI).</p>
+</li>
+<li>
+<p>Search for the package by running the following command:</p>
+<pre><code class="language-bash">dcos package search redis
+</code></pre>
+</li>
+<li>
+<p>Review the output for the command.</p>
+<p>For example, this command returns the following entries:</p>
+<pre><code>NAME      VERSION    SELECTED  FRAMEWORK  DESCRIPTION                                                                       
+mr-redis  0.0.1      False     True       Redis is the fastest in-memory KV-Cache and Datatstructure store                  
+redis     4.0-0.0.1  False     False      This is a single redis container, which is NOT suited for HA setups. Redis is...  
+</code></pre>
+</li>
+</ol>
+<h1 id="install-the-package"><a class="content__anchor" href="#install-the-package" aria-hidden="true"><i data-feather="bookmark"></i></a>Install the package</h1>
+<p>For this tutorial, you are only interested in the <strong>redis</strong> package. This package installs a single Redis instance in a Docker container. You can install this package using the DC/OS web-based administrative console or by running command-line program.</p>
+<p><a name="install-redis-gui"></a></p>
+<h2 id="install-using-the-dcos-web-based-console"><a class="content__anchor" href="#install-using-the-dcos-web-based-console" aria-hidden="true"><i data-feather="bookmark"></i></a>Install using the DC/OS web-based console</h2>
+<p>To install the Redis package using the DC/OS web-based administrative console:</p>
+<ol>
+<li>
+<p>Open a web browser and navigate to the URL for the DC/OS web-based administrative console.</p>
+</li>
+<li>
+<p>Click <strong>Catalog</strong>.</p>
+</li>
+<li>
+<p>Scroll or search to locate the Redis package you want to install.</p>
+<p>For this tutorial, select the <strong>redis</strong> package. This package installs a single Redis instance in a Docker container.</p>
+</li>
+<li>
+<p>Click <strong>Review &amp; Run</strong>.</p>
+</li>
+<li>
+<p>Verify the default service name.</p>
+<p>You can modify the service name, if needed. For example, you might want to name this service <strong>redis-tutorial</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Redis</strong> and verify the CPU and memory settings.</p>
+<p><img src="/mesosphere/dcos/1.13/img/tutorial-redis-config.png" alt="Redis configuration settings"></p>
+</li>
+<li>
+<p>Click <strong>Review &amp; Run</strong> to verify your Redis configuration, then click <strong>Run Service</strong>.</p>
+<p><img src="/mesosphere/dcos/1.13/img/tutorial-redis-run.png" alt="Redis configuration settings"></p>
+</li>
+<li>
+<p>Click <strong>Open Service</strong> to view the status of the Redis deployment.</p>
+<p><img src="/mesosphere/dcos/1.13/img/tutorial-redis-open-service.png" alt="Redis configuration settings"></p>
+</li>
+</ol>
+<h2 id="install-using-the-dcos-cli"><a class="content__anchor" href="#install-using-the-dcos-cli" aria-hidden="true"><i data-feather="bookmark"></i></a>Install using the DC/OS CLI</h2>
+<ol>
+<li>
+<p>Open a terminal shell on the computer where you have access to the DC/OS command-line interface (CLI).</p>
+</li>
+<li>
+<p>Install the Redis package by running the following command:</p>
+<pre><code class="language-bash">dcos package install redis --yes 
+</code></pre>
+</li>
+</ol>
+<h1 id="verify-the-service-is-installed-and-running"><a class="content__anchor" href="#verify-the-service-is-installed-and-running" aria-hidden="true"><i data-feather="bookmark"></i></a>Verify the service is installed and running</h1>
+<p>You can verify that the Redis service is currently running and reporting a Healthy status using the DC/OS web-based administrative console or by running command-line programs.</p>
+<h2 id="check-redis-status-in-the-dcos-web-based-console"><a class="content__anchor" href="#check-redis-status-in-the-dcos-web-based-console" aria-hidden="true"><i data-feather="bookmark"></i></a>Check Redis status in the DC/OS web-based console</h2>
+<ol>
+<li>
+<p>Open the DC/OS web-based administrative console.</p>
+</li>
+<li>
+<p>Click <strong>Services</strong> to view the list of deployed services.</p>
+</li>
+<li>
+<p>Verify the Status column for Redis displays Running.</p>
+<p><img src="/mesosphere/dcos/1.13/img/tutorial-redis-status.png" alt="Checking the Redis service status"></p>
+</li>
+<li>
+<p>Click the service name to display task-level details.</p>
+<p><img src="/mesosphere/dcos/1.13/img/tutorial-redis-details.png" alt="Checking the Redis details"></p>
+</li>
+</ol>
+<h2 id="check-redis-status-using-dcos-commands"><a class="content__anchor" href="#check-redis-status-using-dcos-commands" aria-hidden="true"><i data-feather="bookmark"></i></a>Check Redis status using DC/OS commands</h2>
+<ol>
+<li>
+<p>Open a terminal shell on the computer where you have access to the DC/OS command-line interface (CLI).</p>
+</li>
+<li>
+<p>Check DC/OS task information by running the following command:</p>
+<pre><code class="language-bash">dcos task
+</code></pre>
+<p>This command displays basic information for all running DC/OS tasks. For example:</p>
+<pre><code>NAME            HOST        USER  STATE  ID                                                                   MESOS ID                                     REGION          ZONE       
+redis-tutorial  10.0.1.192  root    R    redis-tutorial.instance-f4adfcf2-830c-11e9-9380-d281e1886025._app.1  da7a5a1b-ee52-4127-baf2-4989ba6fffea-S1  aws/us-west-2  aws/us-west-2a 
+</code></pre>
+</li>
+<li>
+<p>Review information for all deployed Marathon apps by running the following command:</p>
+<pre><code class="language-bash">dcos marathon app list
+</code></pre>
+<p>Because Marathon is used to start the Redis service, Redis is listed in the output for this command. Notice that the Health column indicates that Redis is configured to run one instance and one instance is currently running (1/1).</p>
+<pre><code class="language-bash">ID               MEM   CPUS  TASKS  HEALTH  DEPLOYMENT  WAITING  CONTAINER  CMD  
+/redis-tutorial  1024   1     1/1    1/1       ---      False      DOCKER   N/A  
+</code></pre>
+</li>
+<li>
+<p>Check the Redis log file by running the following command:</p>
+<pre><code class="language-bash">dcos task log redis
+</code></pre>
+<p>This command displays the standard output (stdout) and standard error (stderr) logs for the Redis task. The log file output enables you to check whether the actual startup was successful. By default, the command displays the last 10 lines of logged activity. You can change the number of log lines displayed by specifying the <code>--lines=</code> argument. For example, if you run <code>dcos task log redis --lines=5</code>, you might see output similar to the following:</p>
+<pre><code class="language-bash">1:M 27 Jun 18:17:31.449 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+1:M 27 Jun 18:17:31.449 # Server initialized
+1:M 27 Jun 18:17:31.449 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+1:M 27 Jun 18:17:31.449 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never &gt; /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+1:M 27 Jun 18:17:31.449 * Ready to accept connections
+</code></pre>
+</li>
+</ol>
+<h1 id="test-service-operations"><a class="content__anchor" href="#test-service-operations" aria-hidden="true"><i data-feather="bookmark"></i></a>Test service operations</h1>
+<p>Now that you have installed the Redis package, deployed the service on the cluster, and verified that the service is healthy, you can complete this tutorial by using Redis to store a key-value pair manually using the <code>redis-cli</code> command.</p>
+<ol>
+<li>
+<p>Open a terminal shell on a computer with network access to the cluster.</p>
+</li>
+<li>
+<p>Open a secure shell ([SSH])(/1.13/administering-clusters/sshcluster/) session on the cluster node where the Redis service is running.</p>
+<p>There are several ways you can determine the cluster node address and Mesos task identifier for the Redis service running on that node.</p>
+<p>For example, if you know the host name or IP address, have the appropriate login credentials, and are authorized to use SSH to connect to the computer, you can access the node by running a command similar to the following:</p>
+<pre><code class="language-bash">ssh &lt;agent-node-ip&gt; -l &lt;authorized-user&gt;
+</code></pre>
+<p>You can also use <code>dcos task</code> to look up the Mesos ID for the Redis service, then open a secure shell using a command similar to the following:</p>
+<pre><code class="language-bash">dcos node ssh --master-proxy --mesos-id=dedbb786-feb7-47f2-ae69-27bf86ba53fb-S0
+</code></pre>
+<p>If you are prompted to confirm connecting to the host, type <code>yes</code>.</p>
+</li>
+<li>
+<p>List the Docker containers to get the <code>ContainerID</code> for the container running the Redis service by running the following command:</p>
+<pre><code class="language-bash">sudo docker ps
+</code></pre>
+<p>This command returns output similar to the following:</p>
+<pre><code>CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+296b18087535        redis:4.0           &quot;docker-entrypoint.s…&quot;   About an hour ago   Up About an hour    0.0.0.0:3617-&gt;6379/tcp   mesos-6e81fd7b-9fa8-470d-9378-49b4a01b2d11
+</code></pre>
+</li>
+<li>
+<p>Start a shell session in the running container by running the following command and substituting the CONTAINER_ID argument with the container ID you got from running the <code>docker ps</code> command:</p>
+<pre><code class="language-bash">sudo docker exec -i -t CONTAINER_ID  /bin/bash
+</code></pre>
+</li>
+<li>
+<p>Start the Redis CLI client by running the following command:</p>
+<pre><code class="language-bash">redis-cli
+</code></pre>
+</li>
+<li>
+<p>Set a key with a value by running the following command:</p>
+<pre><code class="language-bash">set tutorial my-tutorial-key-value
+</code></pre>
+</li>
+<li>
+<p>Verify the key-value pair by running the following command:</p>
+<pre><code class="language-bash">get tutorial
+</code></pre>
+</li>
+<li>
+<p>Add additional keys using the <code>redis-cli</code>, if needed.</p>
+<p>In the next tutorial, you will deploy a simple application that connects to the Redis service and retrieves the number of keys defined.</p>
+</li>
+<li>
+<p>Exit the <code>redis-cli</code> client, close the Redis connection, and end the secure shell session.</p>
+</li>
+</ol>
+<h1 id="next-steps"><a class="content__anchor" href="#next-steps" aria-hidden="true"><i data-feather="bookmark"></i></a>Next steps</h1>
+<p>You have successfully installed your first service from the package repository and verified it is running.</p>
+<p>The next tutorials explore additional getting started tasks that you can perform using the DC/OS web-based administrative console or command-line interface:</p>
+<ul>
+<li><a href="../first-app/">Deploy your first sample application</a></li>
+<li><a href="../create-service/">Create and run custom apps</a></li>
+<li><a href="../service-discovery/">Discover deployed services</a></li>
+<li><a href="../native-app/">Deploy native containerized applications</a></li>
+</ul>
+<h1 id="related-topics"><a class="content__anchor" href="#related-topics" aria-hidden="true"><i data-feather="bookmark"></i></a>Related topics</h1>
+<p>The DC/OS <a href="/mesosphere/dcos/1.13/gui/catalog/">Catalog</a> (or <a href="https://github.com/mesosphere/universe">Universe</a> in previous versions of DC/OS) is a package repository for services that are available for installation on DC/OS clusters.</p>
+<p>The package repository enables you to easily install certified or community-contributed services, such as Apache Spark or Apache Cassandra, in your cluster without having to locate, download, and configure independent packages manually. If your cluster runs on an isolated network without an internet connection, you can create and manage your own site-specific package repository.</p>
+<p>For information about creating your own package repository that includes your custom packages, see <a href="../../../administering-clusters/deploying-a-local-dcos-universe/">Deploying a local Universe</a> for details.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#before-you-begin">Before you begin</a></li><li class="content__sections-item content__sections-item--h1"><a href="#learning-objectives">Learning objectives</a></li><li class="content__sections-item content__sections-item--h1"><a href="#search-for-a-package">Search for a package</a></li><li class="content__sections-item content__sections-item--h2"><a href="#search-using-the-dcos-web-based-console">Search using the DC/OS web-based console</a></li><li class="content__sections-item content__sections-item--h2"><a href="#search-using-the-dcos-cli">Search using the DC/OS CLI</a></li><li class="content__sections-item content__sections-item--h1"><a href="#install-the-package">Install the package</a></li><li class="content__sections-item content__sections-item--h2"><a href="#install-using-the-dcos-web-based-console">Install using the DC/OS web-based console</a></li><li class="content__sections-item content__sections-item--h2"><a href="#install-using-the-dcos-cli">Install using the DC/OS CLI</a></li><li class="content__sections-item content__sections-item--h1"><a href="#verify-the-service-is-installed-and-running">Verify the service is installed and running</a></li><li class="content__sections-item content__sections-item--h2"><a href="#check-redis-status-in-the-dcos-web-based-console">Check Redis status in the DC/OS web-based console</a></li><li class="content__sections-item content__sections-item--h2"><a href="#check-redis-status-using-dcos-commands">Check Redis status using DC/OS commands</a></li><li class="content__sections-item content__sections-item--h1"><a href="#test-service-operations">Test service operations</a></li><li class="content__sections-item content__sections-item--h1"><a href="#next-steps">Next steps</a></li><li class="content__sections-item content__sections-item--h1"><a href="#related-topics">Related topics</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

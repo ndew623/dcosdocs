@@ -1,0 +1,113 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Logging API Examples - D2iQ Docs</title><meta name="description" content="Examples for the Logging API"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos/cn/1.13/monitoring/logging/logging-api-examples">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/mesosphere/dcos/2.2/monitoring/logging/logging-api-examples">Mesosphere DC/OS 2.2.0</a></li><li><a href="/mesosphere/dcos/2.1/monitoring/logging/logging-api-examples">Mesosphere DC/OS 2.1.0</a></li><li><a href="/mesosphere/dcos/2.0/monitoring/logging/logging-api-examples">Mesosphere DC/OS 2.0</a></li><li><a href="/mesosphere/dcos/1.13/monitoring/logging/logging-api-examples">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/mesosphere/dcos/1.13/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li class="active"><a class="d0" href="/mesosphere/dcos/1.13/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><ul><li><a class="d1" href="/mesosphere/dcos/1.13/monitoring/performance-monitoring/"><i data-feather="chevron-right"></i>Performance Monitoring</a></li><li class="active"><a class="d1" href="/mesosphere/dcos/1.13/monitoring/logging/"><i data-feather="chevron-right"></i>Logging</a></li><ul><li><a class="d2" href="/mesosphere/dcos/1.13/monitoring/logging/quickstart/">Quick Start</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/monitoring/logging/access-component-logs/">Accessing system and component logs</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/monitoring/logging/configure-task-logs/">Configuring Task Log Output and Retention</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/monitoring/logging/access-task-logs/">Controlling Access to Task Logs</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/monitoring/logging/aggregating/"><i data-feather="chevron-right"></i>Log Aggregation</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/monitoring/logging/logging-reference/">Logging Reference</a></li><li class="active active-on"><a class="d2" href="/mesosphere/dcos/1.13/monitoring/logging/logging-api-examples/">Logging API Examples</a></li></ul><li><a class="d1" href="/mesosphere/dcos/1.13/monitoring/debugging/"><i data-feather="chevron-right"></i>Debugging</a></li></ul><li><a class="d0" href="/mesosphere/dcos/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Logging API Examples</h1></div><h4 class="content__header-description">Examples for the Logging API</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/mesosphere/dcos/1.13/monitoring/logging/logging-api-examples/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>Here are some common usage examples for the Logging API.</p>
+<p><strong>Prerequisites:</strong></p>
+<ul>
+<li>
+<p><a href="https://www.gnu.org/software/bash/">Bash</a></p>
+</li>
+<li>
+<p><a href="https://curl.haxx.se/">Curl</a></p>
+</li>
+<li>
+<p><a href="https://stedolan.github.io/jq/">jq</a></p>
+</li>
+<li>
+<p><a href="/mesosphere/dcos/1.13/installing/">DC/OS</a></p>
+</li>
+<li>
+<p><a href="/mesosphere/dcos/1.13/cli/">DC/OS CLI</a> must be installed, configured, and logged in.</p>
+</li>
+<li>
+<p>Extract <code>DCOS_URL</code> and <code>DCOS_AUTH_TOKEN</code> from the DC/OS CLI:</p>
+<pre><code>DCOS_URL=&quot;$(dcos config show core.dcos_url)&quot;
+DCOS_URL=&quot;${DCOS_URL%/}&quot; # strip trailing slash, if present
+DCOS_AUTH_TOKEN=&quot;$(dcos config show core.dcos_acs_token)&quot;
+</code></pre>
+</li>
+</ul>
+<h1 id="node-logs"><a class="content__anchor" href="#node-logs" aria-hidden="true"><i data-feather="bookmark"></i></a>Node Logs</h1>
+<p>Get the last 100 journal entries from a single node:</p>
+<pre><code>curl -k -H &quot;Authorization: token=${DCOS_AUTH_TOKEN}&quot; &quot;${DCOS_URL}/system/v1/logs/v1/range/?skip_prev=100&quot;
+</code></pre>
+<h1 id="component-logs"><a class="content__anchor" href="#component-logs" aria-hidden="true"><i data-feather="bookmark"></i></a>Component Logs</h1>
+<p>Get the last 100 journal entries from a single component service:</p>
+<p><strong>Leading Mesos Master:</strong></p>
+<pre><code>curl -k -H &quot;Authorization: token=${DCOS_AUTH_TOKEN}&quot; &quot;${DCOS_URL}/system/v1/leader/mesos/logs/v1/range/?skip_prev=100&amp;filter=_SYSTEMD_UNIT:dcos-mesos-master.service&quot;
+</code></pre>
+<p><strong>Leading Marathon:</strong></p>
+<pre><code>curl -k -H &quot;Authorization: token=${DCOS_AUTH_TOKEN}&quot; &quot;${DCOS_URL}/system/v1/leader/marathon/logs/v1/range/?skip_prev=100&amp;filter=_SYSTEMD_UNIT:dcos-mesos-master.service&quot;
+</code></pre>
+<p><strong>Agent DNS Forwarder (Spartan):</strong></p>
+<pre><code># select an agent ID
+AGENT_ID=&quot;$(dcos node --json | jq -r '.[0].id)')&quot;
+curl -k -H &quot;Authorization: token=${DCOS_AUTH_TOKEN}&quot; &quot;${DCOS_URL}/system/v1/agent/${AGENT_ID}/logs/v1/range/?skip_prev=1&amp;filter=_SYSTEMD_UNIT:dcos-spartan.service&quot;
+</code></pre>
+<h1 id="container-logs"><a class="content__anchor" href="#container-logs" aria-hidden="true"><i data-feather="bookmark"></i></a>Container Logs</h1>
+<p class="message--important"><strong>IMPORTANT: </strong>The following example requires journald task logging, which by default is [disabled](/mesosphere/dcos/1.13/monitoring/logging/logging-reference/#compatibility).</p>
+<p>Get the last 100 journal entries from a single service container:</p>
+<pre><code>FRAMEWORK_NAME=&quot;marathon&quot;
+APP_ID=&quot;nginx&quot;
+
+# get the mesos task state json
+MESOS_STATE=&quot;$(curl -k -H &quot;Authorization: token=${DCOS_AUTH_TOKEN}&quot; ${DCOS_URL}/mesos/state)&quot;
+TASK_STATE=&quot;$(echo &quot;${MESOS_STATE}&quot; | jq &quot;.frameworks[] | select(.name == \&quot;${FRAMEWORK_NAME}\&quot;) | .tasks[] | select(.name == \&quot;${APP_ID}\&quot;)&quot;)&quot;
+
+# extract values from the task json
+AGENT_ID=&quot;$(echo &quot;${TASK_STATE}&quot; | jq -r '.slave_id')&quot;
+TASK_ID=&quot;$(echo &quot;${TASK_STATE}&quot; | jq -r '.id')&quot;
+FRAMEWORK_ID=&quot;$(echo &quot;${TASK_STATE}&quot; | jq -r '.framework_id')&quot;
+EXECUTOR_ID=&quot;$(echo &quot;${TASK_STATE}&quot; | jq -r '.executor_id')&quot;
+CONTAINER_ID=&quot;$(echo &quot;${TASK_STATE}&quot; | jq -r '.statuses[0].container_status.container_id.value')&quot;
+
+# default to container ID when executor ID is empty
+EXECUTOR_ID=&quot;${EXECUTOR_ID:-${TASK_ID}}&quot;
+
+# get container/task logs
+curl -k -H &quot;Authorization: token=${DCOS_AUTH_TOKEN}&quot; &quot;${DCOS_URL}/system/v1/agent/${AGENT_ID}/logs/v1/range/framework/${FRAMEWORK_ID}/executor/${EXECUTOR_ID}/container/${CONTAINER_ID}?skip_prev=100&quot;
+</code></pre>
+<h1 id="tail"><a class="content__anchor" href="#tail" aria-hidden="true"><i data-feather="bookmark"></i></a>Tail</h1>
+<p>Get the last 10 journal entries and follow new events:</p>
+<pre><code>curl -k -H &quot;Authorization: token=${DCOS_AUTH_TOKEN}&quot; &quot;${DCOS_URL}/system/v1/logs/v1/stream/?skip_prev=10&quot;
+</code></pre>
+<h1 id="range"><a class="content__anchor" href="#range" aria-hidden="true"><i data-feather="bookmark"></i></a>Range</h1>
+<p>Skip 100 entries from the beginning of the journal and return the next 10 entries:</p>
+<pre><code>curl -k -H &quot;Authorization: token=${DCOS_AUTH_TOKEN}&quot; &quot;${DCOS_URL}/system/v1/logs/v1/range/?skip_next=100&amp;limit=10&quot;
+</code></pre>
+<h1 id="plain-text"><a class="content__anchor" href="#plain-text" aria-hidden="true"><i data-feather="bookmark"></i></a>Plain Text</h1>
+<p>Skip 200 entries from the beginning of the journal and return the next entry in plain text:</p>
+<pre><code>curl -k -H &quot;Accept: text/plain&quot; -H &quot;Authorization: token=${DCOS_AUTH_TOKEN}&quot; &quot;${DCOS_URL}/system/v1/logs/v1/range/?skip_next=200&amp;limit=1&quot;
+</code></pre>
+<h1 id="json"><a class="content__anchor" href="#json" aria-hidden="true"><i data-feather="bookmark"></i></a>JSON</h1>
+<p>Skip 200 entries from the beginning of the journal and return the next entry in JSON:</p>
+<pre><code>curl -k -H &quot;Accept: application/json&quot; -H &quot;Authorization: token=${DCOS_AUTH_TOKEN}&quot; &quot;${DCOS_URL}/system/v1/logs/v1/range/?skip_next=200&amp;limit=1&quot;
+</code></pre>
+<h1 id="event-stream"><a class="content__anchor" href="#event-stream" aria-hidden="true"><i data-feather="bookmark"></i></a>Event Stream</h1>
+<p>Skip 200 entries from the beginning of the journal and return the next entry as an event stream:</p>
+<pre><code>curl -k -H &quot;Accept: text/event-stream&quot; -H &quot;Authorization: token=${DCOS_AUTH_TOKEN}&quot; &quot;${DCOS_URL}/system/v1/logs/v1/range/?skip_next=200&amp;limit=1&quot;
+</code></pre>
+<h1 id="event-stream-cursor"><a class="content__anchor" href="#event-stream-cursor" aria-hidden="true"><i data-feather="bookmark"></i></a>Event Stream Cursor</h1>
+<p>Get all journal entries after a specific cursor and stream new entries:</p>
+<pre><code># Get the 10th line in json and parse its cursor
+CURSOR=&quot;$(curl -k -H &quot;Accept: application/json&quot; -H &quot;Authorization: token=${DCOS_AUTH_TOKEN}&quot; &quot;${DCOS_URL}/system/v1/logs/v1/range/?skip_next=9&amp;limit=1&quot; | jq -r &quot;.cursor&quot;)&quot;
+
+# Follow the stream in plain text starting at the 11th line using the cursor
+curl -k -H &quot;Authorization: token=${DCOS_AUTH_TOKEN}&quot; &quot;${DCOS_URL}/system/v1/logs/v1/stream/&quot; --get --data-urlencode &quot;cursor=${CURSOR}&quot;
+</code></pre>
+<p>The cursor must be URL encoded.</p>
+<h1 id="range-cursor"><a class="content__anchor" href="#range-cursor" aria-hidden="true"><i data-feather="bookmark"></i></a>Range Cursor</h1>
+<p>Get 1,000 journal entries, 100 at a time:</p>
+<pre><code>TIMES=10 # number of times to call the endpoint
+LINES=100 # number of log lines to retrieve per call
+CURSOR=&quot;&quot; # first call uses an empty cursor to start from the beginning
+for i in $(seq 1 ${TIMES}); do
+  BUFFER=&quot;$(curl -k -H &quot;Accept: application/json&quot; -H &quot;Authorization: token=${DCOS_AUTH_TOKEN}&quot; &quot;${DCOS_URL}/system/v1/logs/v1/range/?limit=${LINES}&quot; --get --data-urlencode &quot;cursor=${CURSOR}&quot;)&quot;
+  echo &quot;${BUFFER}&quot;
+  CURSOR=&quot;$(echo &quot;${BUFFER}&quot; | jq -r &quot;.cursor&quot; | tail -1)&quot;
+done
+</code></pre>
+<p>Each call uses the cursor of the last entry from the previous call. The cursor must be URL encoded.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#node-logs">Node Logs</a></li><li class="content__sections-item content__sections-item--h1"><a href="#component-logs">Component Logs</a></li><li class="content__sections-item content__sections-item--h1"><a href="#container-logs">Container Logs</a></li><li class="content__sections-item content__sections-item--h1"><a href="#tail">Tail</a></li><li class="content__sections-item content__sections-item--h1"><a href="#range">Range</a></li><li class="content__sections-item content__sections-item--h1"><a href="#plain-text">Plain Text</a></li><li class="content__sections-item content__sections-item--h1"><a href="#json">JSON</a></li><li class="content__sections-item content__sections-item--h1"><a href="#event-stream">Event Stream</a></li><li class="content__sections-item content__sections-item--h1"><a href="#event-stream-cursor">Event Stream Cursor</a></li><li class="content__sections-item content__sections-item--h1"><a href="#range-cursor">Range Cursor</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

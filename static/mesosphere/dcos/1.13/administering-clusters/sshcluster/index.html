@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>SSHing into Nodes - D2iQ Docs</title><meta name="description" content="Setting up an SSH connection into your DC/OS cluster"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos/cn/1.13/administering-clusters/sshcluster">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/mesosphere/dcos/2.2/administering-clusters/sshcluster">Mesosphere DC/OS 2.2.0</a></li><li><a href="/mesosphere/dcos/2.1/administering-clusters/sshcluster">Mesosphere DC/OS 2.1.0</a></li><li><a href="/mesosphere/dcos/2.0/administering-clusters/sshcluster">Mesosphere DC/OS 2.0</a></li><li><a href="/mesosphere/dcos/1.13/administering-clusters/sshcluster">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/mesosphere/dcos/1.13/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li class="active"><a class="d0" href="/mesosphere/dcos/1.13/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><ul><li class="active active-on"><a class="d1" href="/mesosphere/dcos/1.13/administering-clusters/sshcluster/">SSHing into Nodes</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/administering-clusters/locate-public-agent/">Finding a Public Agent IP</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/administering-clusters/multiple-clusters/"><i data-feather="chevron-right"></i>Multiple Clusters</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/administering-clusters/component-management/">Component Management</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/administering-clusters/backup-and-restore/"><i data-feather="chevron-right"></i>Backup and Restore</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/administering-clusters/securing-your-cluster/">Securing a cluster</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/administering-clusters/managing-aws/">Managing AWS</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/administering-clusters/package-registry/">Package Registry</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/administering-clusters/convert-agent-type/">Converting Agent Node Types</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/administering-clusters/add-a-node/">Adding Agent Nodes</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/administering-clusters/replacing-a-master-node/">Replace a master node</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/administering-clusters/update-a-node/">Updating Nodes</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/administering-clusters/delete-node/">Shut Down and Decommission Nodes</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/administering-clusters/recovering-agent-disk-space/">Recovering Agent Disk Space</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/administering-clusters/deploying-a-local-dcos-universe/">Deploying a Local Catalog</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/administering-clusters/licenses/"><i data-feather="chevron-right"></i>Licenses</a></li></ul><li><a class="d0" href="/mesosphere/dcos/1.13/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">SSHing into Nodes</h1></div><h4 class="content__header-description">Setting up an SSH connection into your DC/OS cluster</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/mesosphere/dcos/1.13/administering-clusters/sshcluster/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>If you are on the same network as your cluster or connected by a VPN, you can use the <code>dcos node ssh</code> command to SSH into your cluster. For more information, see the <a href="/mesosphere/dcos/1.13/cli/command-reference/">dcos node section</a> of the CLI reference.</p>
+<ul>
+<li><a href="#unix">SSH to your DC/OS cluster on Unix/Linux (macOS, Ubuntu, etc)</a></li>
+<li><a href="#windows">SSH to your DC/OS cluster on Windows</a></li>
+</ul>
+<p><strong>Prerequisite:</strong></p>
+<ul>
+<li>An unencrypted SSH key that can be used to authenticate with the cluster nodes over SSH. Encrypted SSH keys are not supported.</li>
+</ul>
+<h2 id="ssh-to-your-dcos-cluster-on-unixlinux-macos-ubuntu-etc"><a class="content__anchor" href="#ssh-to-your-dcos-cluster-on-unixlinux-macos-ubuntu-etc" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="unix"></a>SSH to your DC/OS cluster on Unix/Linux (macOS, Ubuntu, etc)</h2>
+<p class="message--warning"><strong>WARNING: </strong>Mesosphere does not support Ubuntu as an operating system for DC/OS, even when using Microsoft Azure.</p>
+<ol>
+<li>
+<p>Change the permissions on the <code>.pem</code> file to owner read/write using the <code>chmod</code> command.</p>
+<p class="message--important"><strong>IMPORTANT: </strong>Your .pem file must be located in the <code>~/.ssh</code> directory.</p>
+<pre><code class="language-bash">chmod 600 &lt;private-key&gt;.pem
+</code></pre>
+</li>
+<li>
+<p>SSH into the cluster.</p>
+<p>From your terminal, add your new configuration to the <code>.pem</code> file, where <code>&lt;private-key&gt;</code> is your <code>.pem</code> file.</p>
+<pre><code class="language-bash">ssh-add ~/.ssh/&lt;private-key&gt;.pem
+Identity added: /Users/&lt;yourdir&gt;/.ssh/&lt;private-key&gt;.pem (/Users/&lt;yourdir&gt;/.ssh/&lt;private-key&gt;.pem)
+</code></pre>
+<p><strong>To SSH to a master node:</strong></p>
+<p>From the DC/OS CLI, enter the following command:</p>
+<pre><code class="language-bash">dcos node ssh --master-proxy --leader
+</code></pre>
+<p>The default user is dependant on your OS. If you are using CentOS, enter:</p>
+<pre><code class="language-bash">dcos node ssh --master-proxy --leader --user=centos
+</code></pre>
+<p><strong>To SSH to an agent node:</strong></p>
+<p>From the DC/OS CLI, enter the following command, where <code>&lt;mesos-id&gt;</code> is your agent ID.</p>
+<pre><code class="language-bash">dcos node ssh --master-proxy --mesos-id=&lt;mesos-id&gt;
+</code></pre>
+<p>To find the agent ID, select the <strong>Nodes</strong> tab in the DC/OS <a href="/mesosphere/dcos/1.13/gui/">UI</a> and click <strong>Details</strong>.</p>
+<p><img src="/mesosphere/dcos/1.13/img/GUI-Nodes-Selected_Node_Detail_View-1_12.png" alt="Web interface node ID"></p>
+<p>Figure 1. UI Node ID screen</p>
+</li>
+</ol>
+<h2 id="ssh-to-your-dcos-cluster-on-windows"><a class="content__anchor" href="#ssh-to-your-dcos-cluster-on-windows" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="windows"></a>SSH to your DC/OS cluster on Windows</h2>
+<p><strong>Requirements:</strong></p>
+<ul>
+<li>PuTTY SSH client or equivalent. (These instructions assume you are using PuTTY, but almost any SSH client will work.)</li>
+<li>PuTTYgen RSA and DSA key generation utility</li>
+<li>Pageant SSH authentication agent</li>
+</ul>
+<p>To install these programs, download the Windows installer <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html" target="_blank">from the official PuTTY download page.</a></p>
+<ol>
+<li>
+<p>Convert the <code>.pem</code> file type to <code>.ppk</code> by using PuTTYgen:</p>
+<ol>
+<li>
+<p>Open PuTTYgen, select <strong>File &gt; Load Private Key</strong>, and choose your <code>.pem</code> file.</p>
+</li>
+<li>
+<p>Select <strong>SSH-2 RSA</strong> as the key type, click <strong>Save private key</strong>, then choose the name and location to save your new .ppk key.</p>
+<p><img src="/mesosphere/dcos/1.13/img/windowsputtykey.png" alt="Windows"></p>
+<p>Figure 2. Windows PuTTY key</p>
+</li>
+<li>
+<p>Close <code>PuTTYgen</code>.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>SSH into the cluster.</p>
+<ul>
+<li>
+<p><strong>To SSH to a master node:</strong></p>
+<ol>
+<li>
+<p>From the DC/OS web interface, copy the IP address of the master node. It will be the IP address that you used to connect to the GUI.</p>
+</li>
+<li>
+<p>Open PuTTY and enter the master node IP address in the <strong>Host Name (or IP address)</strong> field.</p>
+<p><img src="/mesosphere/dcos/1.13/img/windowsputtybasic.png" alt="Putty Configuration"></p>
+<p>Figure 3. PuTTY configuration</p>
+</li>
+<li>
+<p>In the <strong>Category</strong> pane on the left side of the PuTTY window, choose <strong>Connection &gt; SSH &gt; Auth</strong>, click <strong>Browse</strong>, locate and select your <code>.ppk</code> file, then click <strong>Open</strong>.</p>
+<p><img src="/mesosphere/dcos/1.13/img/windowsputtysshopt.png" alt="Putty SSH Options"></p>
+<p>Figure 4. PuTTY SSH options</p>
+</li>
+<li>
+<p>Log in as user “centos” if you are running CentOS. The default user will differ based on your OS.</p>
+<p><img src="/mesosphere/dcos/1.13/img/windowscore.png" alt="Windows Login"></p>
+<p>Figure 5. Windows login</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>To SSH to an agent node</strong></p>
+<p class="message--warning"><strong>WARNING: </strong>SSH agent forwarding has security implications. Only add servers that you trust and that you intend to use with agent forwarding. For more information on agent forwarding, see <a href="https://developer.github.com/guides/using-ssh-agent-forwarding/" target="_blank">Using SSH agent forwarding.</a></p>
+<p><strong>Prerequisite:</strong> You must be logged out of your master node.</p>
+<ol>
+<li>
+<p>Enable agent forwarding in PuTTY.</p>
+<ol>
+<li>
+<p>Open PuTTY. In the <strong>Category</strong> pane on the left side of the PuTTY window, choose <strong>Connection &gt; SSH &gt; Auth</strong> and check the <strong>Allow agent forwarding</strong> box.</p>
+</li>
+<li>
+<p>Click the <strong>Browse</strong> button and locate the <code>.ppk</code> file that you created previously using PuTTYgen.</p>
+<p><img src="/mesosphere/dcos/1.13/img/windowsforwarding.png" alt="Windows Forwarding"></p>
+<p>Figure 6. Windows forwarding</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Add the <code>.ppk</code> file to Pageant.</p>
+<ol>
+<li>
+<p>Open Pageant. If the Pageant window does not appear, look for the Pageant icon in the notification area in the lower right area of the screen next to the clock and double-click it to open Pageant’s main window.</p>
+</li>
+<li>
+<p>Click the <strong>Add Key</strong> button.</p>
+</li>
+<li>
+<p>Locate the <code>.ppk</code> file that you created using PuTTYgen and click <strong>Open</strong> to add your key to Pageant.</p>
+<p><img src="/mesosphere/dcos/1.13/img/windowspageant.png" alt="Windows Pageant"></p>
+<p>Figure 7. Windows Pageant</p>
+</li>
+<li>
+<p>Click the <strong>Close</strong> button to close the Pageant window.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>SSH into the master node.</p>
+<ol>
+<li>
+<p>From the DC/OS web interface, copy the IP address of the master node. The IP address is displayed beneath your cluster name.</p>
+</li>
+<li>
+<p>In the <strong>Category</strong> pane on the left side of the PuTTY window, choose <strong>Session</strong> and enter the master node IP address in the <strong>Host Name (or IP address)</strong> field.</p>
+</li>
+<li>
+<p>Log in as user “centos” if you are running CentOS. The default user will differ based on your OS.</p>
+<p><img src="/mesosphere/dcos/1.13/img/windowscore.png" alt="Windows Login"></p>
+<p>Figure 8. Windows login</p>
+</li>
+</ol>
+</li>
+<li>
+<p>From the master node, SSH into the agent node.</p>
+<ol>
+<li>
+<p>From the Mesos web interface, copy the agent node hostname. You can find hostnames on the <strong>Frameworks</strong> (<code>&lt;master-node-IPaddress&gt;/mesos/#/frameworks</code>) or <strong>Slaves</strong> page (<code>&lt;master-node-IPaddress&gt;/mesos/#/slaves</code>).</p>
+</li>
+<li>
+<p>SSH into the agent node as the user <code>core</code> with the agent node hostname specified:</p>
+<pre><code>ssh core@&lt;agent-node-hostname&gt;
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#ssh-to-your-dcos-cluster-on-unixlinux-macos-ubuntu-etc">SSH to your DC/OS cluster on Unix/Linux (macOS, Ubuntu, etc)</a></li><li class="content__sections-item content__sections-item--h2"><a href="#ssh-to-your-dcos-cluster-on-windows">SSH to your DC/OS cluster on Windows</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

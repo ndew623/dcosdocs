@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Job Examples - D2iQ Docs</title><meta name="description" content="Examples of common usage scenarios for jobs."><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos/cn/1.13/deploying-jobs/examples">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/mesosphere/dcos/2.2/deploying-jobs/examples">Mesosphere DC/OS 2.2.0</a></li><li><a href="/mesosphere/dcos/2.1/deploying-jobs/examples">Mesosphere DC/OS 2.1.0</a></li><li><a href="/mesosphere/dcos/2.0/deploying-jobs/examples">Mesosphere DC/OS 2.0</a></li><li><a href="/mesosphere/dcos/1.13/deploying-jobs/examples">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/mesosphere/dcos/1.13/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li class="active"><a class="d0" href="/mesosphere/dcos/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><ul><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-jobs/metronome-constraints/">Metronome Placement Constraints</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-jobs/running-jobs-in-remote-regions/">Running Jobs in Remote Regions</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-jobs/quickstart/">Creating Jobs</a></li><li class="active active-on"><a class="d1" href="/mesosphere/dcos/1.13/deploying-jobs/examples/">Examples</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/deploying-jobs/job-groups/">Granting Access to Jobs</a></li></ul><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Job Examples</h1><p class="badge badge--content-header badge--enterprise">ENTERPRISE</p></div><h4 class="content__header-description">Examples of common usage scenarios for jobs.</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/mesosphere/dcos/1.13/deploying-jobs/examples/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>These examples provide common usage scenarios for jobs.</p>
+<p><strong>Prerequisite:</strong></p>
+<ul>
+<li><a href="/mesosphere/dcos/1.13/installing/">DC/OS</a> and the <a href="/mesosphere/dcos/1.13/cli/install/">DC/OS CLI</a> installed.</li>
+</ul>
+<p><a name="create-job"></a></p>
+<h1 id="creating-a-simple-job"><a class="content__anchor" href="#creating-a-simple-job" aria-hidden="true"><i data-feather="bookmark"></i></a>Creating a Simple Job</h1>
+<p>This JSON file creates a simple job with no schedule.</p>
+<ol>
+<li>
+<p>Create a JSON file with the following contents.</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;my-job&quot;,
+  &quot;description&quot;: &quot;A job that sleeps&quot;,
+  &quot;run&quot;: {
+    &quot;cmd&quot;: &quot;sleep 1000&quot;,
+    &quot;cpus&quot;: 0.01,
+    &quot;mem&quot;: 32,
+    &quot;disk&quot;: 0
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>Add the job from the DC/OS CLI.</p>
+<pre><code class="language-bash">dcos job add &lt;my-job&gt;.json
+</code></pre>
+<p>Alternatively, add the job using the API.</p>
+<pre><code class="language-bash">curl -X POST -H &quot;Content-Type: application/json&quot; -H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; $(dcos config show core.dcos_url)/service/metronome/v1/jobs -d@/Users/&lt;your-username&gt;/&lt;myjob&gt;.json
+</code></pre>
+</li>
+</ol>
+<p><a name="create-job-schedule"></a></p>
+<h1 id="creating-a-job-with-a-schedule"><a class="content__anchor" href="#creating-a-job-with-a-schedule" aria-hidden="true"><i data-feather="bookmark"></i></a>Creating a Job with a Schedule</h1>
+<p class="message--note"><strong>NOTE: </strong>This example JSON only works when you add the job from the DC/OS CLI or the UI. </p>
+<ol>
+<li>
+<p>Create a JSON file with the following contents.</p>
+<pre><code class="language-json">{
+    &quot;id&quot;: &quot;my-scheduled-job&quot;,
+    &quot;description&quot;: &quot;A job that sleeps on a schedule&quot;,
+    &quot;run&quot;: {
+        &quot;cmd&quot;: &quot;sleep 20000&quot;,
+        &quot;cpus&quot;: 0.01,
+        &quot;mem&quot;: 32,
+        &quot;disk&quot;: 0
+    },
+    &quot;schedules&quot;: [
+        {
+            &quot;id&quot;: &quot;sleep-nightly&quot;,
+            &quot;enabled&quot;: true,
+            &quot;cron&quot;: &quot;20 0 * * *&quot;,
+            &quot;concurrencyPolicy&quot;: &quot;ALLOW&quot;
+        }
+    ]
+}
+</code></pre>
+</li>
+<li>
+<p>Add the job.</p>
+<pre><code class="language-bash">dcos job add &lt;my-scheduled-job&gt;.json
+</code></pre>
+</li>
+</ol>
+<p><a name="schedule-with-api"></a></p>
+<h1 id="creating-a-job-and-associating-a-schedule-using-the-api"><a class="content__anchor" href="#creating-a-job-and-associating-a-schedule-using-the-api" aria-hidden="true"><i data-feather="bookmark"></i></a>Creating a Job and Associating a Schedule using the API</h1>
+<ol>
+<li>
+<p>Add a job without a schedule using the <a href="#create-job">instructions above</a>.</p>
+</li>
+<li>
+<p>Create a JSON file with the following contents. This is the schedule for your job.</p>
+<pre><code class="language-json">{
+    &quot;concurrencyPolicy&quot;: &quot;ALLOW&quot;,
+    &quot;cron&quot;: &quot;20 0 * * *&quot;,
+    &quot;enabled&quot;: true,
+    &quot;id&quot;: &quot;nightly&quot;,
+    &quot;nextRunAt&quot;: &quot;2016-07-26T00:20:00.000+0000&quot;,
+    &quot;startingDeadlineSeconds&quot;: 900,
+    &quot;timezone&quot;: &quot;UTC&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>Add the schedule and associate it with the job.</p>
+<p>Via the DC/OS CLI:</p>
+<pre><code class="language-bash">dcos job schedule add &lt;job-id&gt; &lt;schedule-file&gt;.json
+</code></pre>
+<p>Via the API:</p>
+<pre><code class="language-bash">curl -X POST -H &quot;Content-Type: application/json&quot; -H &quot;Authorization: token=$(dcos config show core.dcos_acs_token)&quot; $(dcos config show core.dcos_url)/service/metronome/v1/jobs/&lt;job-id&gt;/schedules -d@/Users/&lt;your-username&gt;/&lt;schedule-file&gt;.json
+</code></pre>
+</li>
+</ol>
+<p>You can associate a schedule with more than one job.</p>
+<p><a name="partitioned-jobs"></a></p>
+<h1 id="creating-a-partitioned-jobs-environment"><a class="content__anchor" href="#creating-a-partitioned-jobs-environment" aria-hidden="true"><i data-feather="bookmark"></i></a>Creating a Partitioned Jobs Environment</h1>
+<p>In this example, a partitioned jobs environment is created with the DC/OS UI. This allows you to restrict user access per job, or per job group. The jobs are created in a jobs group named <code>batch</code>, which is a child of a jobs group named <code>dev</code>.</p>
+<pre><code>├── dev
+    ├── batch
+        ├── job1
+        ├── job2
+</code></pre>
+<p>The jobs groups are then assigned permissions to users <code>Cory</code> and <code>Alice</code> to restrict access.</p>
+<p><strong>Prerequisites:</strong></p>
+<ul>
+<li>You must be logged in as a <code>superuser</code>.</li>
+</ul>
+<ol>
+<li>
+<p>Log into the DC/OS UI as a user with the <code>superuser</code> permission.</p>
+<p><img src="/mesosphere/dcos/1.13/img/LOGIN-EE-Modal_View-1_12.png" alt="Login"></p>
+<p>Figure 1. DC/OS Enterprise login</p>
+</li>
+<li>
+<p>Create the partitioned jobs.</p>
+<ol>
+<li>
+<p>Select <strong>Jobs</strong> and click <strong>CREATE A JOB</strong>.</p>
+</li>
+<li>
+<p>In the <strong>ID</strong> field, type <code>dev.batch.job1</code>.</p>
+</li>
+<li>
+<p>In the <strong>Command</strong> field, type <code>sleep 1000</code> (or another valid shell command) and click <strong>CREATE A JOB</strong>.</p>
+<p><img src="/mesosphere/dcos/1.13/img/GUI-Jobs-New_Job_Modal_w_devbatchjob-1_12.png" alt="Create job"></p>
+<p>Figure 2. New job screen</p>
+<p>This creates a job in this directory structure in DC/OS: <strong>Jobs &gt; dev &gt; batch &gt; job1</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>+</strong> icon in the top right corner to create another job.</p>
+<p><img src="/mesosphere/dcos/1.13/img/GUI-Jobs-Jobs_Table-1_12.png" alt="Create another job"></p>
+<p>Figure 3. Create another job</p>
+</li>
+<li>
+<p>In the <strong>ID</strong> field, type <code>dev.batch.job2</code>.</p>
+</li>
+<li>
+<p>In the <strong>Command</strong> field, type <code>sleep 1000</code> (or another valid shell command) and click <strong>CREATE A JOB</strong>. You should have two jobs:</p>
+<p><img src="/mesosphere/dcos/1.13/img/GUI-Jobs-Partitioned_Job_Env_Detail-1_12.png" alt="create job"></p>
+<p>Figure 4. Jobs &gt; dev &gt; batch screen</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Run the jobs.</p>
+<ol>
+<li>
+<p>Click <strong>Jobs &gt; dev &gt; batch &gt; job1</strong> and click <strong>Run Now</strong>.</p>
+<p><img src="/mesosphere/dcos/1.13/img/GUI-Jobs-Job_View-Run_Now_Menu-1_12.png" alt="Run job"></p>
+<p>Figure 5. <strong>Run now</strong> menu</p>
+</li>
+<li>
+<p>Click <strong>Jobs &gt; dev &gt; batch &gt; job2</strong> and click <strong>Run Now</strong>.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Assign permissions to the jobs.</p>
+<ol>
+<li>
+<p>Select <strong>Organization &gt; Users</strong> and create new users named <code>Cory</code> and <code>Alice</code>.</p>
+<p><img src="/mesosphere/dcos/1.13/img/GUI-Organization-Users-Create_User_Cory-1_12.png" alt="Create user Cory"></p>
+<p>Figure 6. Create a new user</p>
+</li>
+<li>
+<p>Select the user <strong>Cory</strong> and grant access to <code>job1</code>.</p>
+</li>
+<li>
+<p>From the <strong>Permissions</strong> tab, click <strong>ADD PERMISSION</strong> and toggle the <strong>INSERT PERMISSION STRING</strong> button to manually enter the permissions.</p>
+<p><img src="/mesosphere/dcos/1.13/img/GUI-Organization-Users-Successful_Perms_Add_Cory_DeplJobs-1_12.png" alt="Add permissions cory"></p>
+<p>Figure 7. Add permissions for user ‘Cory’</p>
+</li>
+<li>
+<p>Copy and paste the permissions in the <strong>Permissions Strings</strong> field. Specify your job group (<code>dev/batch</code>), job name (<code>job1</code>), and action (<code>read</code>). Actions can be either <code>create</code>, <code>read</code>, <code>update</code>, <code>delete</code>, or <code>full</code>. To permit more than one operation, use a comma to separate them, for example: <code>dcos:service:metronome:metronome:jobs:/dev.batch.job1 read,update</code>.</p>
+<pre><code class="language-bash">dcos:adminrouter:service:metronome full
+dcos:service:metronome:metronome:jobs:dev.batch.job1 read
+dcos:adminrouter:ops:mesos full
+dcos:adminrouter:ops:slave full
+dcos:mesos:master:framework:role:* read
+dcos:mesos:master:executor:app_id:/dev/batch/job1 read
+dcos:mesos:master:task:app_id:/dev/batch/job1 read
+dcos:mesos:agent:framework:role:* read
+dcos:mesos:agent:executor:app_id:/dev/batch/job1 read
+dcos:mesos:agent:task:app_id:/dev/batch/job1 read
+dcos:mesos:agent:sandbox:app_id:/dev/batch/job1 read
+</code></pre>
+</li>
+<li>
+<p>Click <strong>ADD PERMISSIONS</strong> and then <strong>Close</strong>.</p>
+</li>
+<li>
+<p>Repeat these steps for user <strong>Alice</strong>, replacing <code>job1</code> with <code>job2</code> in the permissions.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Log out and log back in as your new user to verify the permissions. The user should now have the designated level of access to <code>dev/batch/job1</code> and <code>dev/batch/job2</code> inside the <strong>Jobs</strong> tab. For example, if you log in as <strong>Alice</strong>, you should only see <strong>jobs2</strong>:</p>
+<p><img src="/mesosphere/dcos/1.13/img/GUI-Restricted_User-Jobs_View_Alice-1_12.png" alt="Alice job view"></p>
+<p>Figure 8. Restricted view for ‘Alice’</p>
+</li>
+</ol>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#creating-a-simple-job">Creating a Simple Job</a></li><li class="content__sections-item content__sections-item--h1"><a href="#creating-a-job-with-a-schedule">Creating a Job with a Schedule</a></li><li class="content__sections-item content__sections-item--h1"><a href="#creating-a-job-and-associating-a-schedule-using-the-api">Creating a Job and Associating a Schedule using the API</a></li><li class="content__sections-item content__sections-item--h1"><a href="#creating-a-partitioned-jobs-environment">Creating a Partitioned Jobs Environment</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

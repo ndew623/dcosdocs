@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Filtering Logs with ELK - D2iQ Docs</title><meta name="description" content="Filtering log output for specific tasks"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos/cn/1.13/monitoring/logging/aggregating/filter-elk">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/mesosphere/dcos/2.2/monitoring/logging/aggregating/filter-elk">Mesosphere DC/OS 2.2.0</a></li><li><a href="/mesosphere/dcos/2.1/monitoring/logging/aggregating/filter-elk">Mesosphere DC/OS 2.1.0</a></li><li><a href="/mesosphere/dcos/2.0/monitoring/logging/aggregating/filter-elk">Mesosphere DC/OS 2.0</a></li><li><a href="/mesosphere/dcos/1.13/monitoring/logging/aggregating/filter-elk">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/mesosphere/dcos/1.13/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li class="active"><a class="d0" href="/mesosphere/dcos/1.13/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><ul><li><a class="d1" href="/mesosphere/dcos/1.13/monitoring/performance-monitoring/"><i data-feather="chevron-right"></i>Performance Monitoring</a></li><li class="active"><a class="d1" href="/mesosphere/dcos/1.13/monitoring/logging/"><i data-feather="chevron-right"></i>Logging</a></li><ul><li><a class="d2" href="/mesosphere/dcos/1.13/monitoring/logging/quickstart/">Quick Start</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/monitoring/logging/access-component-logs/">Accessing system and component logs</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/monitoring/logging/configure-task-logs/">Configuring Task Log Output and Retention</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/monitoring/logging/access-task-logs/">Controlling Access to Task Logs</a></li><li class="active"><a class="d2" href="/mesosphere/dcos/1.13/monitoring/logging/aggregating/"><i data-feather="chevron-right"></i>Log Aggregation</a></li><ul><li><a class="d3" href="/mesosphere/dcos/1.13/monitoring/logging/aggregating/elk/">Log Management with ELK</a></li><li class="active active-on"><a class="d3" href="/mesosphere/dcos/1.13/monitoring/logging/aggregating/filter-elk/">Filtering Logs with ELK</a></li><li><a class="d3" href="/mesosphere/dcos/1.13/monitoring/logging/aggregating/splunk/">Log Management with Splunk</a></li><li><a class="d3" href="/mesosphere/dcos/1.13/monitoring/logging/aggregating/filter-splunk/">Filtering Logs with Splunk</a></li></ul><li><a class="d2" href="/mesosphere/dcos/1.13/monitoring/logging/logging-reference/">Logging Reference</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/monitoring/logging/logging-api-examples/">Logging API Examples</a></li></ul><li><a class="d1" href="/mesosphere/dcos/1.13/monitoring/debugging/"><i data-feather="chevron-right"></i>Debugging</a></li></ul><li><a class="d0" href="/mesosphere/dcos/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Filtering Logs with ELK</h1></div><h4 class="content__header-description">Filtering log output for specific tasks</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/mesosphere/dcos/1.13/monitoring/logging/aggregating/filter-elk/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>The file system paths of DC/OS task logs contain information such as the agent ID, framework ID, and executor ID. You can use this information to filter the log output for specific tasks, applications, or agents.</p>
+<p><strong>Prerequisite</strong></p>
+<ul>
+<li><a href="../elk/">An Elasticsearch installation that aggregates DC/OS logs</a></li>
+</ul>
+<h1 id="install-configure-and-start-logstash"><a class="content__anchor" href="#install-configure-and-start-logstash" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="configuration"></a>Install, configure, and start Logstash</h1>
+<ol>
+<li>
+<p>Install <a href="https://www.elastic.co/guide/en/logstash/current/installing-logstash.html">Logstash</a>.</p>
+</li>
+<li>
+<p>Create the following <code>dcos</code> pattern file in your custom patterns directory, located at <code>$PATTERNS_DIR</code>:</p>
+<pre><code>PATHELEM [^/]+
+TASKPATH ^/var/lib/mesos/slave/slaves/%{PATHELEM:agent}/frameworks/%{PATHELEM:framework}/executors/%{PATHELEM:executor}/runs/%{PATHELEM:run}
+</code></pre>
+</li>
+<li>
+<p>Update the configuration file for your Logstash instance to include the following <code>grok</code> filter, where <code>$PATTERNS_DIR</code> is replaced with your custom patterns directory:</p>
+<pre><code>filter {
+    grok {
+        patterns_dir =&gt; &quot;$PATTERNS_DIR&quot;
+        match =&gt; { &quot;file&quot; =&gt; &quot;%{TASKPATH}&quot; }
+    }
+}
+</code></pre>
+</li>
+<li>
+<p>Start Logstash.</p>
+<p>Logstash will extract the <code>agent</code>, <code>framework</code>, <code>executor</code>, and <code>run</code> fields. These fields are shown in the metadata of all Mesos task log events. Elasticsearch queries will also show results from those fields.</p>
+</li>
+</ol>
+<h1 id="usage-example"><a class="content__anchor" href="#usage-example" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="usage"></a>Usage example</h1>
+<p>In the screenshots below, we are using Kibana hosted by <a href="http://logz.io">logz.io</a>, but your Kibana interface will look similar.</p>
+<ol>
+<li>
+<p>Type <code>framework:*</code> into the Search field. This will show all of the events where the <code>framework</code> field is defined:</p>
+<p><img src="/mesosphere/dcos/1.13/img/logstash-framework-exists.png" alt="Logstash Example"></p>
+<p>Figure 1. Logstash events</p>
+</li>
+<li>
+<p>Click the disclosure triangle next to one of these events to view the details. This will show all of the fields extracted from the task log file path:</p>
+<p><img src="/mesosphere/dcos/1.13/img/logstash-fields.png" alt="Logstash Example2"></p>
+<p>Figure 2. Event details</p>
+</li>
+<li>
+<p>Search for all of the events that reference the framework ID of the event shown in the screenshot above, but that do not contain the chosen <code>framework</code> field. This will show only non-task results:</p>
+<p><img src="/mesosphere/dcos/1.13/img/logstash-framework-search.png" alt="Logstash Framework Search"></p>
+<p>Figure 3. Search results</p>
+</li>
+</ol>
+<h1 id="template-examples"><a class="content__anchor" href="#template-examples" aria-hidden="true"><i data-feather="bookmark"></i></a><a name="templates"></a>Template examples</h1>
+<p>Here are some example query templates. Replace the template parameters <code>$executor1</code>, <code>$framework2</code>, and any others with the actual values from your cluster.</p>
+<table class=“table” bgcolor=#858585>
+<tr> 
+  <td align=justify style=color:white><strong>Caution:</strong> Do not change the quotation marks in these examples or the queries will not work. If you create custom queries, be careful with the placement of quotation marks. </td> 
+</tr> 
+</table>
+<ul>
+<li>
+<p>Logs related to a specific executor <code>$executor1</code>, including logs for tasks run from that executor:</p>
+<pre><code>&quot;$executor1&quot;
+</code></pre>
+</li>
+<li>
+<p>Non-task logs related to a specific executor <code>$executor1</code>:</p>
+<pre><code>&quot;$executor1&quot; AND NOT executor:$executor1
+</code></pre>
+</li>
+<li>
+<p>Logs (including task logs) for a framework <code>$framework1</code>, if <code>$executor1</code> and <code>$executor2</code> are that framework’s executors:</p>
+<pre><code>&quot;$framework1&quot; OR &quot;$executor1&quot; OR &quot;$executor2&quot;
+</code></pre>
+</li>
+<li>
+<p>Non-task logs for a framework <code>$framework1</code>, if <code>$executor1</code> and <code>$executor2</code> are that framework’s executors:</p>
+<pre><code>(&quot;$framework1&quot; OR &quot;$executor1&quot; OR &quot;$executor2&quot;) AND NOT (framework:$framework1 OR executor:$executor1 OR executor:$executor2)
+</code></pre>
+</li>
+<li>
+<p>Logs for a framework <code>$framework1</code> on a specific agent host <code>$agent_host1</code>:</p>
+<pre><code>host:$agent_host1 AND (&quot;$framework1&quot; OR &quot;$executor1&quot; OR &quot;$executor2&quot;)
+</code></pre>
+</li>
+<li>
+<p>Non-task logs for a framework <code>$framework1</code> on a specific agent <code>$agent1</code> with host <code>$agent_host1</code>:</p>
+<pre><code>host:$agent_host1 AND (&quot;$framework1&quot; OR &quot;$executor1&quot; OR &quot;$executor2&quot;) AND NOT agent:$agent
+</code></pre>
+</li>
+</ul>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#install-configure-and-start-logstash">Install, configure, and start Logstash</a></li><li class="content__sections-item content__sections-item--h1"><a href="#usage-example">Usage example</a></li><li class="content__sections-item content__sections-item--h1"><a href="#template-examples">Template examples</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

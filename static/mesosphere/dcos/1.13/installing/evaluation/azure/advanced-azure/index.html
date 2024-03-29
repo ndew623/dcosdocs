@@ -1,0 +1,1133 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>Configuration Reference - Azure - D2iQ Docs</title><meta name="description" content="Configuring your DC/OS installation on Azure using the Mesosphere Universal Installer"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="spherer"><div class="chooser-current"><a class="chooser-title">Mesosphere</a><svg class="chooser-svg" id="spherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="spherer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="chooser-list-item"><a href="/mesosphere/dcos/services">DC/OS Services</a></li></ul></div><div class="chooser" id="ks"><div class="chooser-current"><a class="chooser-title">DKP</a><svg class="chooser-svg" id="kspherer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="kspherer-list"><li class="chooser-list-item"><a href="/dkp/konvoy">Konvoy</a></li><li class="chooser-list-item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="chooser-list-item"><a href="/dkp/kommander">Kommander</a></li><li class="chooser-list-item"><a href="/dkp/dispatch">Dispatch</a></li><li class="chooser-list-item"><a href="/dkp/kaptain">Kaptain</a></li><li class="chooser-list-item"><a href="/dkp/conductor">Conductor</a></li></ul></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos/cn/1.13/installing/evaluation/azure/advanced-azure">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/konvoy/partner-solutions">Partner Solutions</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__item"><a href="/dkp/conductor">Conductor</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/mesosphere/dcos/2.2/installing/evaluation">Mesosphere DC/OS 2.2.0</a></li><li><a href="/mesosphere/dcos/2.1/installing/evaluation">Mesosphere DC/OS 2.1.0</a></li><li><a href="/mesosphere/dcos/2.0/installing/evaluation/azure/advanced-azure">Mesosphere DC/OS 2.0</a></li><li><a href="/mesosphere/dcos/1.13/installing/evaluation/azure/advanced-azure">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/mesosphere/dcos/1.13/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li class="active"><a class="d0" href="/mesosphere/dcos/1.13/installing/"><i data-feather="chevron-right"></i>Installing</a></li><ul><li class="active"><a class="d1" href="/mesosphere/dcos/1.13/installing/evaluation/"><i data-feather="chevron-right"></i>Cloud Installation</a></li><ul><li><a class="d2" href="/mesosphere/dcos/1.13/installing/evaluation/aws/"><i data-feather="chevron-right"></i>AWS</a></li><li class="active"><a class="d2" href="/mesosphere/dcos/1.13/installing/evaluation/azure/"><i data-feather="chevron-right"></i>Azure</a></li><ul><li><a class="d3" href="/mesosphere/dcos/1.13/installing/evaluation/azure/azure-remote-region/">Azure Multi-Region Support</a></li><li class="active active-on"><a class="d3" href="/mesosphere/dcos/1.13/installing/evaluation/azure/advanced-azure/">Configuration Reference</a></li></ul><li><a class="d2" href="/mesosphere/dcos/1.13/installing/evaluation/gcp/"><i data-feather="chevron-right"></i>GCP</a></li><li><a class="d2" href="/mesosphere/dcos/1.13/installing/evaluation/community-supported-methods/"><i data-feather="chevron-right"></i>Other Installation methods</a></li></ul><li><a class="d1" href="/mesosphere/dcos/1.13/installing/production/"><i data-feather="chevron-right"></i>On-Prem Installation</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/installing/installation-faq/">Frequently Asked Questions</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/installing/troubleshooting/">Troubleshooting</a></li></ul><li><a class="d0" href="/mesosphere/dcos/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/security/"><i data-feather="chevron-right"></i>Security</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/storage/"><i data-feather="chevron-right"></i>Storage</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2021 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">Configuration Reference - Azure</h1></div><h4 class="content__header-description">Configuring your DC/OS installation on Azure using the Mesosphere Universal Installer</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/mesosphere/dcos/1.13/installing/evaluation/azure/advanced-azure/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li><li class="actions__item"><a class="actions__link" href="https://jira.d2iq.com/secure/CreateIssueDetails!init.jspa?pid=14105&amp;issuetype=1&amp;summary=Feedback+for+Configuration+Reference+-+Azure&amp;description=Source:%20https://docs.d2iq.com/mesosphere/dcos/1.13/installing/evaluation/azure/advanced-azure&amp;labels=documentation&amp;labels=needs_triage&amp;components=19804&amp;priority=3&amp;customfield_12300=44" target="_blank"><i class="actions__icon" data-feather="message-square"></i><span class="actions__text">Feedback</span></a></li></ul></div></div><article class="content__article"><p>The Mesosphere Universal Installer supports a wide range of inputs/variables to add to your <code>main.tf</code> and enable you to customize your DC/OS cluster to your needs. These inputs/variables include everything from specifying the operating system (CentOS, Ubuntu, RHEL, Oracle Linux) to setting the garbage collection time of your DC/OS cluster.</p>
+<p>The Terraform-based Universal Installer is designed to be flexible with configuration. Below is an example of a custom <code>main.tf</code> that provisions a customized DC/OS 1.13.3 cluster on Azure.</p>
+<pre><code class="language-hcl">provider &quot;azure&quot; {}
+
+# Used to determine your public IP for forwarding rules
+data &quot;http&quot; &quot;whatismyip&quot; {
+  url = &quot;http://whatismyip.akamai.com/&quot;
+}
+
+module &quot;dcos&quot; {
+  source  = &quot;dcos-terraform/dcos/azurerm&quot;
+  version = &quot;~&gt; 0.2.0&quot;
+
+  providers = {
+    azure = &quot;azure&quot;
+  }
+
+  cluster_name                      = &quot;my-dcos-demo&quot;
+  ssh_public_key_file               = &quot;&lt;path-to-public-key-file&gt;&quot;
+  admin_ips                         = [&quot;${data.http.whatismyip.body}/32&quot;]
+  location                          = &quot;West US&quot;
+  avset_platform_fault_domain_count = 3
+
+  num_masters        = &quot;3&quot;
+  num_private_agents = &quot;2&quot;
+  num_public_agents  = &quot;1&quot;
+
+  dcos_version = &quot;1.13.3&quot;
+
+  # dcos_variant              = &quot;ee&quot;
+  # dcos_license_key_contents = &quot;${file(&quot;./license.txt&quot;)}&quot;
+  # Make sure to set your credentials if you do not want the default EE
+  # dcos_superuser_username      = &quot;superuser-name&quot;
+  # dcos_superuser_password_hash = &quot;${file(&quot;./dcos_superuser_password_hash.sha512&quot;)}&quot;
+  dcos_variant = &quot;open&quot;
+
+  dcos_cluster_docker_credentials_enabled =  &quot;true&quot;
+  dcos_cluster_docker_credentials_write_to_etc = &quot;true&quot;
+  dcos_cluster_docker_credentials_dcos_owned = &quot;false&quot;
+  dcos_cluster_docker_registry_url = &quot;https://index.docker.io&quot;
+  dcos_use_proxy = &quot;yes&quot;
+  dcos_http_proxy = &quot;example.com&quot;
+  dcos_https_proxy = &quot;example.com&quot;
+  dcos_no_proxy = &lt;&lt;EOF
+  # YAML
+   - &quot;internal.net&quot;
+   - &quot;169.254.169.253&quot;
+  EOF
+  dcos_overlay_network = &lt;&lt;EOF
+  # YAML
+      vtep_subnet: 44.128.0.0/20
+      vtep_mac_oui: 70:B3:D5:00:00:00
+      overlays:
+        - name: dcos
+          subnet: 12.0.0.0/8
+          prefix: 26
+  EOF
+  dcos_rexray_config = &lt;&lt;EOF
+  # YAML
+    rexray:
+      loglevel: warn
+      modules:
+        default-admin:
+          host: tcp://127.0.0.1:61003
+      storageDrivers:
+      - ec2
+      volume:
+        unmount:
+          ignoreusedcount: true
+  EOF
+  dcos_cluster_docker_credentials = &lt;&lt;EOF
+  # YAML
+    auths:
+      'https://index.docker.io/v1/':
+        auth: Ze9ja2VyY3licmljSmVFOEJrcTY2eTV1WHhnSkVuVndjVEE=
+  EOF
+}
+
+output &quot;cluster-address&quot; {
+  value = &quot;${module.dcos.masters-loadbalancer}&quot;
+}
+</code></pre>
+<h2 id="supported-dcos-versions"><a class="content__anchor" href="#supported-dcos-versions" aria-hidden="true"><i data-feather="bookmark"></i></a>Supported DC/OS Versions</h2>
+<p>Currently, the Universal Installer defaults to <code>1.11.4</code> when using <code>v0.1.0</code> modules and <code>1.13.3</code> for <code>v0.2.0</code> modules. The following versions of DC/OS are currently supported. It is always recommended to specify a version.</p>
+<pre><code class="language-json">dcos_version: &quot;1.13.3&quot;
+</code></pre>
+<table style="text-align: center" >
+  <tr>
+    <th style="font-weight: bold"> DC/OS Release </th><th>1.13</th><th>1.12</th><th>1.11</th><th>1.10</th>
+  </tr>
+  <tr><td>Latest</td><td> "1.13.3" </td><td> "1.12.4" </td><td> “1.11.11” </td><td> “1.10.11” </td></tr>
+  <tr><td> - </td><td> "1.13.2" </td><td> "1.12.3" </td><td> “1.11.10” </td><td> “1.10.10” </td></tr>
+  <tr><td> - </td><td> "1.13.1" </td><td> "1.12.2" </td><td> “1.11.9” </td><td> “1.10.9” </td></tr>
+  <tr><td> - </td><td> "1.13.0" </td><td> "1.12.1" </td><td> “1.11.8” </td><td> “1.10.8” </td></tr>
+  <tr><td> - </td><td> - </td><td> "1.12.0" </td><td> “1.11.7” </td><td> “1.10.7” </td></tr>
+  <tr><td> - </td><td> - </td><td> - </td><td> “1.11.6” </td><td> “1.10.6” </td></tr>
+  <tr><td> - </td><td> - </td><td> - </td><td> “1.11.5” </td><td> “1.10.5” </td></tr>
+  <tr><td> - </td><td> - </td><td> - </td><td> “1.11.4” </td><td> “1.10.4” </td></tr>
+  <tr><td> - </td><td> - </td><td> - </td><td> “1.11.3” </td><td> “1.10.3” </td></tr>
+  <tr><td> - </td><td> - </td><td> - </td><td> “1.11.2” </td><td> “1.10.2” </td></tr>
+  <tr><td> - </td><td> - </td><td> - </td><td> “1.11.1” </td><td> “1.10.1” </td></tr>
+  <tr><td> - </td><td> - </td><td> - </td><td> 1.11.0 </td><td> “1.10.0” </td></tr>
+</table>
+<h2 id="supported-instance-node-os-versions"><a class="content__anchor" href="#supported-instance-node-os-versions" aria-hidden="true"><i data-feather="bookmark"></i></a>Supported Instance (Node) OS Versions</h2>
+<p>The default instance OS is currently <code>centos_7.5</code>, and will be applied unless specified in the configuration. The following instance operating systems are supported by DC/OS. To change the default OS, the following paramaters can be changed:</p>
+<pre><code class="language-hcl">dcos_instance_os = &quot;centos_7.5&quot;
+</code></pre>
+<table style="width: 50%; text-align: center" >
+    <tr><th>Instance OS Version</th><th>Value</th></tr>
+    <tr><td>CentOS 7.6</td><td>“centos_7.6”</td></tr>
+    <tr><td>CentOS 7.5</td><td>“centos_7.5”</td></tr>
+    <tr><td>CentOS 7.4</td><td>“centos_7.4”</td></tr>
+    <tr><td>RHEL</td><td>“rhel_7.6”</td></tr>
+    <tr><td>RHEL</td><td>“rhel_7.5”</td></tr>
+    <tr><td>RHEL</td><td>“rhel_7.4”</td></tr>
+</table>
+<p>Here is a list of all the variables that are currently supported on the Universal Installer and available for you to customize your cluster.</p>
+<h2 id="inputs"><a class="content__anchor" href="#inputs" aria-hidden="true"><i data-feather="bookmark"></i></a>Inputs</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th style="text-align:center">Type</th>
+<th style="text-align:center">Default</th>
+<th style="text-align:center">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>admin_ips</td>
+<td>List of CIDR admin IPs</td>
+<td style="text-align:center">list</td>
+<td style="text-align:center">n/a</td>
+<td style="text-align:center">yes</td>
+</tr>
+<tr>
+<td>location</td>
+<td>Azure Region</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">n/a</td>
+<td style="text-align:center">yes</td>
+</tr>
+<tr>
+<td>ssh_public_key_file</td>
+<td>Path to SSH public key. This is mandatory but can be set to an empty string if you want to use ssh_public_key with the key as string.</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">n/a</td>
+<td style="text-align:center">yes</td>
+</tr>
+<tr>
+<td>additional_private_agent_ips</td>
+<td>Additional private agent IPs.</td>
+<td style="text-align:center">list</td>
+<td style="text-align:center"><code>[]</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>additional_public_agent_ips</td>
+<td>Additional public agent IPs.</td>
+<td style="text-align:center">list</td>
+<td style="text-align:center"><code>[]</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>ansible_additional_config</td>
+<td>Add additional config options to ansible. This is getting merged with generated defaults. Do not specify <code>dcos:</code></td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>ansible_bundled_container</td>
+<td>Docker container with bundled dcos-ansible and ansible executables</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;mesosphere/dcos-ansible-bundle:latest&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>avset_platform_fault_domain_count</td>
+<td>Availability set platform fault domain count, differs from location to location</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;3&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>bootstrap_image</td>
+<td>[BOOTSTRAP] Image to be used</td>
+<td style="text-align:center">map</td>
+<td style="text-align:center"><code>{}</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>bootstrap_os</td>
+<td>[BOOTSTRAP] Operating system to use. Instead of using your own AMI you could use a provided OS.</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>bootstrap_private_ip</td>
+<td>Private IP bootstrap nginx is listening on. Used to build the bootstrap URL.</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>bootstrap_root_volume_size</td>
+<td>[BOOTSTRAP] Root volume size in GB</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;80&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>bootstrap_root_volume_type</td>
+<td>[BOOTSTRAP] Root volume type</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;Standard_LRS&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>bootstrap_vm_size</td>
+<td>[BOOTSTRAP] Azure virtual machine size</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;Standard_B4ms&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>cluster_name</td>
+<td>Name of the DC/OS cluster</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;dcos-example&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>cluster_name_random_string</td>
+<td>Add a random string to the cluster name</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;false&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>custom_dcos_download_path</td>
+<td>insert location of dcos installer script (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_adminrouter_tls_1_0_enabled</td>
+<td>Indicates whether to enable TLSv1 support in Admin Router. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_adminrouter_tls_1_1_enabled</td>
+<td>Indicates whether to enable TLSv1.1 support in Admin Router. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_adminrouter_tls_1_2_enabled</td>
+<td>Indicates whether to enable TLSv1.2 support in Admin Router. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_adminrouter_tls_cipher_suite</td>
+<td>[Enterprise DC/OS] Indicates whether to allow web browsers to send the DC/OS authentication cookie through a non-HTTPS connection. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_agent_list</td>
+<td>used to list the agents in the config.yaml (optional)</td>
+<td style="text-align:center">list</td>
+<td style="text-align:center"><code>[]</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_audit_logging</td>
+<td>[Enterprise DC/OS] enable security decisions are logged for Mesos, Marathon, and Jobs. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_auth_cookie_secure_flag</td>
+<td>[Enterprise DC/OS] allow web browsers to send the DC/OS authentication cookie through a non-HTTPS connection. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_aws_access_key_id</td>
+<td>AWS key ID for exhibitor storage (optional but required with dcos_exhibitor_address)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_aws_region</td>
+<td>AWS region for exhibitor storage (optional but required with dcos_exhibitor_address)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_aws_secret_access_key</td>
+<td>AWS secret key for exhibitor storage (optional but required with dcos_exhibitor_address)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_aws_template_storage_access_key_id</td>
+<td>AWS key ID for CloudFormation template storage (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_aws_template_storage_bucket</td>
+<td>AWS CloudFormation bucket name (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_aws_template_storage_bucket_path</td>
+<td>AWS CloudFormation bucket path (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_aws_template_storage_region_name</td>
+<td>AWS CloudFormation region name (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_aws_template_storage_secret_access_key</td>
+<td>AWS secret key for the CloudFormation template (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_aws_template_upload</td>
+<td>To automatically upload the customized advanced templates to your S3 bucket. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_bootstrap_port</td>
+<td>Port of the bootstrap URL</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;8080&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_bouncer_expiration_auth_token_days</td>
+<td>[Enterprise DC/OS] Sets the auth token time-to-live (TTL) for Identity and Access Management. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_ca_certificate_chain_path</td>
+<td>[Enterprise DC/OS] Path (relative to the $DCOS_INSTALL_DIR) to a file containing the complete CA certification chain required for end-entity certificate verification, in the OpenSSL PEM format. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_ca_certificate_key_path</td>
+<td>[Enterprise DC/OS] Path (relative to the $DCOS_INSTALL_DIR) to a file containing a single X.509 certificate private key in the OpenSSL PEM format. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_ca_certificate_path</td>
+<td>[Enterprise DC/OS] Path (relative to the $DCOS_INSTALL_DIR) to a file containing a single X.509 CA certificate in the OpenSSL PEM format. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_check_time</td>
+<td>Check if Network Time Protocol (NTP) is enabled during DC/OS startup. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_cluster_docker_credentials</td>
+<td>Dictionary of Docker credentials to pass. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_cluster_docker_credentials_dcos_owned</td>
+<td>Indicates whether to store the credentials file in /opt/mesosphere or /etc/mesosphere/docker_credentials. A sysadmin cannot edit /opt/mesosphere directly (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_cluster_docker_credentials_enabled</td>
+<td>Indicates whether to pass the Mesos --docker_config option to Mesos. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_cluster_docker_credentials_write_to_etc</td>
+<td>Indicates whether to write a cluster credentials file. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_cluster_docker_registry_enabled</td>
+<td>DC/OS cluster docker registry enabled</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_cluster_docker_registry_url</td>
+<td>The custom URL that Mesos uses to pull Docker images from. If set, it will configure the Mesos --docker_registry flag to the specified URL. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_cluster_name</td>
+<td>sets the DC/OS cluster name</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_config</td>
+<td>used to add any extra arguments in the config.yaml that are not specified here. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_custom_checks</td>
+<td>Custom installation checks that are added to the default check configuration process. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_customer_key</td>
+<td>[Enterprise DC/OS] sets the customer key (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_dns_bind_ip_blacklist</td>
+<td>A list of IP addresses that DC/OS DNS resolvers cannot bind to. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_dns_forward_zones</td>
+<td>Allow to forward DNS to certain domain requests to specific server. The following syntax must be used in combination with Terraform string heredoc. (optional) (:warning: DC/OS 1.10+)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_dns_search</td>
+<td>A space-separated list of domains that are tried when an unqualified domain is entered. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_docker_remove_delay</td>
+<td>The amount of time to wait before removing stale Docker images stored on the agent nodes and the Docker image generated by the installer. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_enable_docker_gc</td>
+<td>Indicates whether to run the docker-gc script, a simple Docker container and image garbage collection script, once every hour to clean up stray Docker containers. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_enable_gpu_isolation</td>
+<td>Indicates whether to enable GPU support in DC/OS. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_enable_mesos_input_plugin</td>
+<td>Indicates whether to enable Telegraf’s Mesos input plugin to collect Mesos metrics from Mesos masters and agents. Options: <code>true</code> or <code>false</code> (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_exhibitor_address</td>
+<td>The address of the load balancer in front of the masters (recommended)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_exhibitor_azure_account_key</td>
+<td>the azure account key for exhibitor storage (optional but required with dcos_exhibitor_address)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_exhibitor_azure_account_name</td>
+<td>the azure account name for exhibitor storage (optional but required with dcos_exhibitor_address)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_exhibitor_azure_prefix</td>
+<td>the azure account name for exhibitor storage (optional but required with dcos_exhibitor_address)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_exhibitor_explicit_keys</td>
+<td>set whether you are using AWS API keys to grant Exhibitor access to S3. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_exhibitor_storage_backend</td>
+<td>options are static, aws_s3, azure, or zookeeper (recommended)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;static&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_exhibitor_zk_hosts</td>
+<td>a comma-separated list of one or more ZooKeeper node IP and port addresses to use for configuring the internal Exhibitor instances. (not recommended but required with exhibitor_storage_backend set to ZooKeeper. Use aws_s3 or azure instead. Assumes external ZooKeeper is already online.)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_exhibitor_zk_path</td>
+<td>the filepath that Exhibitor uses to store data (not recommended but required with exhibitor_storage_backend set to zookeeper. Use aws_s3 or azureinstead. Assumes external ZooKeeper is already online.)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_fault_domain_detect_contents</td>
+<td>[Enterprise DC/OS] fault domain script contents. Optional but required if no fault-domain-detect script present.</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_fault_domain_enabled</td>
+<td>[Enterprise DC/OS] used to control if fault domain is enabled</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_gc_delay</td>
+<td>The maximum amount of time to wait before cleaning up the executor directories (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_gpus_are_scarce</td>
+<td>Indicates whether to treat GPUs as a scarce resource in the cluster. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_http_proxy</td>
+<td>http proxy (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_https_proxy</td>
+<td>https proxy (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_install_mode</td>
+<td>Type of command to execute. Options: install or upgrade</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;install&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_instance_os</td>
+<td>Operating system to use. Instead of using your own AMI you could use a provided OS.</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;centos_7.6&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_ip_detect_contents</td>
+<td>Allows DC/OS to detect your private address. Use this to pass this as an input to the module rather than a file in side your bootstrap node. (recommended)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_ip_detect_public_contents</td>
+<td>Allows DC/OS to be aware of your publicly routeable address for ease of use (recommended)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_ip_detect_public_filename</td>
+<td>statically set your detect-ip-public path</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;genconf/ip-detect-public&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_l4lb_enable_ipv6</td>
+<td>A boolean that indicates if layer 4 load balancing is available for IPv6 networks. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_license_key_contents</td>
+<td>[Enterprise DC/OS] used to privide the license key of DC/OS for Enterprise Edition. Optional if license.txt is present on bootstrap node.</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_log_directory</td>
+<td>The path to the installer host logs from the SSH processes. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_master_discovery</td>
+<td>The Mesos master discovery method. The available options are static or master_http_loadbalancer. (recommend the use of master_http_loadbalancer)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;static&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_master_dns_bindall</td>
+<td>Indicates whether the master DNS port is open. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_master_external_loadbalancer</td>
+<td>Allows DC/OS to configure certs around the External Load Balancer name. If not used SSL verfication issues will arrise. EE only. (recommended)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_master_list</td>
+<td>statically set your master nodes (not recommended but required with exhibitor_storage_backend set to static. Use aws_s3 or azure instead, that way you can replace masters in the cloud.)</td>
+<td style="text-align:center">list</td>
+<td style="text-align:center"><code>[]</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_mesos_container_log_sink</td>
+<td>The log manager for containers (tasks). The options are to send logs to: ‘journald’, ‘logrotate’, ‘journald+logrotate’. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_mesos_dns_set_truncate_bit</td>
+<td>Indicates whether to set the truncate bit if the response is too large to fit in a single packet. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_mesos_max_completed_tasks_per_framework</td>
+<td>The number of completed tasks for each framework that the Mesos master will retain in memory. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_no_proxy</td>
+<td>A YAML nested list (-) of addresses to exclude from the proxy. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_num_masters</td>
+<td>set the num of master nodes (required with exhibitor_storage_backend set to aws_s3, azure, ZooKeeper)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_oauth_enabled</td>
+<td>[Open DC/OS Only] Indicates whether to enable authentication for your cluster. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_overlay_config_attempts</td>
+<td>Specifies how many failed configuration attempts are allowed before the overlay configuration modules stop trying to configure an virtual network. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_overlay_enable</td>
+<td>Enable to disable overlay (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_overlay_mtu</td>
+<td>The maximum transmission unit (MTU) of the Virtual Ethernet (vEth) on the containers that are launched on the overlay. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_overlay_network</td>
+<td>This group of parameters define an virtual network for DC/OS. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_package_storage_uri</td>
+<td>Where to permanently store DC/OS packages. The value must be a file URL. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_previous_version</td>
+<td>DC/OS 1.9+ requires users to set this value to ensure users know the version. Terraform helps populate this value, but users can override it here. (recommended)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_previous_version_master_index</td>
+<td>Used to track the index of master for quering the previous DC/OS version during upgrading. (optional) applicable: 1.9+</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;0&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_process_timeout</td>
+<td>The allowable amount of time, in seconds, for an action to begin after the process forks. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_public_agent_list</td>
+<td>statically set your public agents (not recommended)</td>
+<td style="text-align:center">list</td>
+<td style="text-align:center"><code>[]</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_resolvers</td>
+<td>A YAML nested list (-) of DNS resolvers for your DC/OS cluster nodes. (recommended)</td>
+<td style="text-align:center">list</td>
+<td style="text-align:center"><code>[ &quot;168.63.129.16&quot; ]</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_rexray_config</td>
+<td>The REX-Ray configuration method for enabling external persistent volumes in Marathon. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_rexray_config_filename</td>
+<td>The REX-Ray configuration filename for enabling external persistent volumes in Marathon. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_rexray_config_method</td>
+<td>The REX-Ray configuration method for enabling external persistent volumes in Marathon. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_s3_bucket</td>
+<td>name of the s3 bucket for the exhibitor backend (recommended but required with dcos_exhibitor_address)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_s3_prefix</td>
+<td>name of the s3 prefix for the exhibitor backend (recommended but required with dcos_exhibitor_address)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_security</td>
+<td>[Enterprise DC/OS] set the security level of DC/OS, either ‘strict’ or ‘permissive’. Default is ‘permissive’. (recommended)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_skip_checks</td>
+<td>Upgrade option: Used to skip all dcos checks that may block an upgrade if any DC/OS component is unhealthly. (optional) applicable: 1.10+</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;false&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_staged_package_storage_uri</td>
+<td>Where to temporarily store DC/OS packages while they are being added. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_superuser_password_hash</td>
+<td>[Enterprise DC/OS] set the superuser password hash (recommended)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_superuser_username</td>
+<td>[Enterprise DC/OS] set the superuser username (recommended)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_telemetry_enabled</td>
+<td>Change the telemetry option (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_ucr_default_bridge_subnet</td>
+<td>IPv4 subnet allocated to the mesos-bridge CNI network for UCR bridge-mode networking. (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_use_proxy</td>
+<td>To enable use of proxy for internal routing (optional)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_variant</td>
+<td>Specifies which DC/OS variant it should be: <code>open</code> (Open Source) or <code>ee</code> (Enterprise Edition)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;open&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_version</td>
+<td>Specifies which DC/OS version instruction to use. Options: 1.13.3, 1.12.4, 1.11.10, etc. See dcos_download_path or dcos_version tree for a full list.</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;1.13.3&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_zk_agent_credentials</td>
+<td>[Enterprise DC/OS] set the ZooKeeper agent credentials (recommended)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_zk_master_credentials</td>
+<td>[Enterprise DC/OS] set the ZooKeeper master credentials (recommended)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>dcos_zk_super_credentials</td>
+<td>[Enterprise DC/OS] set the zk super credentials (recommended)</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>masters_image</td>
+<td>[MASTERS] Image to be used</td>
+<td style="text-align:center">map</td>
+<td style="text-align:center"><code>{}</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>masters_os</td>
+<td>[MASTERS] Operating system to use. Instead of using your own AMI you could use a provided OS.</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>masters_root_volume_size</td>
+<td>[MASTERS] Root volume size in GB</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;120&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>masters_vm_size</td>
+<td>[MASTERS] Azure virtual machine size</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;Standard_D4s_v3&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>num_masters</td>
+<td>Specify the amount of masters. For redundancy you should have at least 3</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;3&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>num_of_private_agents</td>
+<td>Specify the amount of private agents. These agents will provide your main resources</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>num_of_public_agents</td>
+<td>Specify the amount of public agents. These agents will host marathon-lb and edgelb</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>num_private_agents</td>
+<td>Specify the amount of private agents. These agents will provide your main resources</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;2&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>num_public_agents</td>
+<td>Specify the amount of public agents. These agents will host marathon-lb and edgelb</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;1&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>private_agents_image</td>
+<td>[PRIVATE AGENTS] Image to be used</td>
+<td style="text-align:center">map</td>
+<td style="text-align:center"><code>{}</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>private_agents_os</td>
+<td>[PRIVATE AGENTS] Operating system to use. Instead of using your own AMI you could use a provided OS.</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>private_agents_root_volume_size</td>
+<td>[PRIVATE AGENTS] Root volume size in GB</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;120&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>private_agents_root_volume_type</td>
+<td>[PRIVATE AGENTS] Root volume type</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;Standard_LRS&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>private_agents_vm_size</td>
+<td>[PRIVATE AGENTS] Azure virtual machine size</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;Standard_D4s_v3&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>public_agents_additional_ports</td>
+<td>List of additional ports allowed for public access on public agents (80 and 443 open by default)</td>
+<td style="text-align:center">list</td>
+<td style="text-align:center"><code>[]</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>public_agents_image</td>
+<td>[PUBLIC AGENTS] Image to be used</td>
+<td style="text-align:center">map</td>
+<td style="text-align:center"><code>{}</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>public_agents_os</td>
+<td>[PUBLIC AGENTS] Operating system to use. Instead of using your own AMI you could use a provided OS.</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>public_agents_root_volume_size</td>
+<td>[PUBLIC AGENTS] Root volume size</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;120&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>public_agents_root_volume_type</td>
+<td>[PUBLIC AGENTS] Specify the root volume type.</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;Standard_LRS&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>public_agents_vm_size</td>
+<td>[PUBLIC AGENTS] Azure virtual machine size</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;Standard_D4s_v3&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>ssh_public_key</td>
+<td>SSH public key in authorized keys format (e.g. ‘ssh-rsa …’) to be used with the instances. Make sure you added this key to your ssh-agent.</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>subnet_range</td>
+<td>Private IP space to be used in CIDR format</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center"><code>&quot;172.12.0.0/16&quot;</code></td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>Add custom tags to all resources</td>
+<td style="text-align:center">map</td>
+<td style="text-align:center"><code>{}</code></td>
+<td style="text-align:center">no</td>
+</tr>
+</tbody>
+</table>
+<h2 id="outputs"><a class="content__anchor" href="#outputs" aria-hidden="true"><i data-feather="bookmark"></i></a>Outputs</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>masters-ips</td>
+<td>Master IP addresses.</td>
+</tr>
+<tr>
+<td>masters-loadbalancer</td>
+<td>This is the load balancer address to access the DC/OS UI.</td>
+</tr>
+<tr>
+<td>public-agents-loadbalancer</td>
+<td>This is the load balancer address to access the DC/OS public agents.</td>
+</tr>
+</tbody>
+</table>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h2"><a href="#supported-dcos-versions">Supported DC/OS Versions</a></li><li class="content__sections-item content__sections-item--h2"><a href="#supported-instance-node-os-versions">Supported Instance (Node) OS Versions</a></li><li class="content__sections-item content__sections-item--h2"><a href="#inputs">Inputs</a></li><li class="content__sections-item content__sections-item--h2"><a href="#outputs">Outputs</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no"><title>External Persistent Volumes - D2iQ Docs</title><meta name="description" content="Using external persistent volumes with Marathon"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="stylesheet" type="text/css" href="/css/styles.css"><link rel="search" type="application/opensearchdescription+xml" href="/assets/opensearch.xml" title="Search"><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"><script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script><script>window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+window.analytics.load("7sgtwqvuai");
+window.analytics.page();</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBJ84KX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJ84KX');</script></head><body><div class="layout"><header class="header"><a class="header__drawer"><i class="header__icon" data-feather="menu"></i></a><a class="header__logo" href="/"><img class="header__logo--mobile" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"><img class="header__logo--desktop" src="/assets/D2iQ_Logotype_Color_Positive_Documentation.svg" alt="D2IQ"></a><div class="header__main"><div class="header__dropdown"><img class="header__dropdown-icon" src="/assets/D2IQ_Logotype_Color_Positive.png" alt="D2iQ"><strong>DC/OS Documentation</strong><i data-feather="chevron-down"></i></div><nav class="header__menu"><ul class="header__menu-list"><li class="header__menu-item"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header__menu-item"><a href="/mesosphere/dcos/services">Services</a></li><li class="header__menu-item"><a href="https://support.d2iq.com">Support</a></li></ul></nav></div><div class="chooser" id="localizer"><div class="chooser-current"><a class="chooser-title">English</a><svg class="chooser-svg" id="localizer-svg"><path class="pointer" d="m 13,6 -5,5 -5,-5 z" fill="#858585"></path></svg></div><ul class="chooser-list" id="localizer-list"><li class="chooser-list-item"><a href="/mesosphere/dcos/cn/1.13/storage/external-storage">中文 (简体)</a></li></ul></div><section class="header__search" role="search"><form class="header__search-form" action="/search/"><input class="header__search-input" id="header-search-input" tabindex="1" type="text" name="q" placeholder="Search"><input type="hidden" name="hFR[scope][0]" value="DC/OS 1.13"><label class="header__search-label" for="header-search-input"><i class="header__icon" data-feather="search"></i></label></form></section></header><div class="header-dropdown"><ul class="header-dropdown__list"><li class="header-dropdown__top-item"><div>DKP</div></li><li class="header-dropdown__item"><a href="/dkp/konvoy">Konvoy</a></li><li class="header-dropdown__item"><a href="/dkp/kommander">Kommander</a></li><li class="header-dropdown__item"><a href="/dkp/dispatch">Dispatch</a></li><li class="header-dropdown__item"><a href="/dkp/kaptain">Kaptain</a></li><li class="header-dropdown__top-item"><div>Mesosphere</div></li><li class="header-dropdown__item header-dropdown__item--active"><a href="/mesosphere/dcos">DC/OS</a></li><li class="header-dropdown__item"><a href="/mesosphere/dcos/services">DC/OS Services</a></li><li class="header-dropdown__item"><a href="https://support.d2iq.com">Support</a></li></ul></div><div class="layout__sidebar layout__drawer"><section class="sidebar"><header class="sidebar__header"><div class="sidebar__dropdown"><ul><li><a href="/mesosphere/dcos/2.2/storage/external-storage">Mesosphere DC/OS 2.2.0</a></li><li><a href="/mesosphere/dcos/2.1/storage/external-storage">Mesosphere DC/OS 2.1.0</a></li><li><a href="/mesosphere/dcos/2.0/storage/external-storage">Mesosphere DC/OS 2.0</a></li><li><a href="/mesosphere/dcos/1.13/storage/external-storage">Mesosphere DC/OS 1.13</a></li></ul><div class="toggle"><p><span class="title">DC/OS</span><span class="version"> 1.13</span></p><i data-feather="chevron-down"></i></div></div></header><nav class="sidebar_nav" role="navigation"><ul><li><a class="d0" href="/mesosphere/dcos/1.13/release-notes/"><i data-feather="chevron-right"></i>Release Notes</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/overview/"><i data-feather="chevron-right"></i>Overview</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/installing/"><i data-feather="chevron-right"></i>Installing</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/gui/"><i data-feather="chevron-right"></i>GUI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/cli/"><i data-feather="chevron-right"></i>CLI</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/administering-clusters/"><i data-feather="chevron-right"></i>Administering Clusters</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/networking/"><i data-feather="chevron-right"></i>Networking</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/security/"><i data-feather="chevron-right"></i>Security</a></li><li class="active"><a class="d0" href="/mesosphere/dcos/1.13/storage/"><i data-feather="chevron-right"></i>Storage</a></li><ul><li><a class="d1" href="/mesosphere/dcos/1.13/storage/mount-disk-resources/">Mount Disk Resources</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/storage/nfs/">NFS Server</a></li><li><a class="d1" href="/mesosphere/dcos/1.13/storage/persistent-volume/">Local Persistent Volumes</a></li><li class="active active-on"><a class="d1" href="/mesosphere/dcos/1.13/storage/external-storage/">External Persistent Volumes</a></li></ul><li><a class="d0" href="/mesosphere/dcos/1.13/metrics/"><i data-feather="chevron-right"></i>Metrics</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/monitoring/"><i data-feather="chevron-right"></i>Monitoring, Logging, and Debugging</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/hybrid-cloud/"><i data-feather="chevron-right"></i>Hybrid Cloud</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-jobs/"><i data-feather="chevron-right"></i>Deploying Jobs</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/deploying-services/"><i data-feather="chevron-right"></i>Deploying Services and Pods</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/tutorials/"><i data-feather="chevron-right"></i>Tutorials</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/api/"><i data-feather="chevron-right"></i>API Reference</a></li><li><a class="d0" href="/mesosphere/dcos/1.13/developing-services/"><i data-feather="chevron-right"></i>Developing DC/OS Services</a></li></ul></nav><footer class="sidebar__footer"><div class="sidebar__footer-links"><a href="https://d2iq.com/terms/">Terms of Service</a><a href="https://d2iq.com/privacy/">Privacy Policy</a></div><a class="sidebar__footer-copyright" href="https://d2iq.com/">&copy; 2022 D2iQ, Inc. All rights reserved.</a></footer></section></div><div class="layout__content" role="main"><main class="content"><div class="content__container content__container--with-sections"><div class="content__header"><div class="content__header__row"><h1 class="content__header-title">External Persistent Volumes</h1></div><h4 class="content__header-description">Using external persistent volumes with Marathon</h4><div class="actions"><ul class="actions__list"><li class="actions__item"><button class="actions__link" onclick="javascript:window.print()"><i class="actions__icon" data-feather="printer"></i><span class="actions__text">Print</span></button></li><li class="actions__item"><a class="actions__link" href="https://github.com/mesosphere/dcos-docs-site/tree/main/pages/mesosphere/dcos/1.13/storage/external-storage/index.md" target="_blank"><i class="actions__icon" data-feather="github"></i><span class="actions__text">Contribute</span></a></li></ul></div></div><article class="content__article"><p>Use external volumes when fault tolerance is crucial for your app. If a host fails, the native Marathon instance reschedules your app on another host, along with its associated data, without user intervention. External volumes also typically offer a larger amount of storage.</p>
+<p>Marathon applications normally lose their state when they terminate and are relaunched. In some contexts, for instance, if your application uses MySQL, you’ll want your application to preserve its state. You can use an external storage service, such as Amazon’s Elastic Block Store (EBS), to create a persistent volume that follows your application instance.</p>
+<p>Note that volume sizes are specified in gibibyte (GiB) units.</p>
+<h1 id="creating-an-application-with-an-external-persistent-volume"><a class="content__anchor" href="#creating-an-application-with-an-external-persistent-volume" aria-hidden="true"><i data-feather="bookmark"></i></a>Creating an application with an external persistent volume</h1>
+<h2 id="marathon-app-definition"><a class="content__anchor" href="#marathon-app-definition" aria-hidden="true"><i data-feather="bookmark"></i></a>Marathon app definition</h2>
+<p>You can specify an external volume in your <a href="/mesosphere/dcos/1.13/deploying-services/creating-services/">Marathon app definition</a>.</p>
+<h3 id="using-the-universal-container-runtime"><a class="content__anchor" href="#using-the-universal-container-runtime" aria-hidden="true"><i data-feather="bookmark"></i></a>Using the Universal Container Runtime</h3>
+<p>The <code>cmd</code> in this app definition appends the output of the <code>date</code> command to <code>test.txt</code>. You will know that the external volume is being used correctly if you see that the logs of successive runs of the application show more and more lines of <code>date</code> output.</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;hello&quot;,
+  &quot;instances&quot;: 1,
+  &quot;cpus&quot;: 0.1,
+  &quot;mem&quot;: 32,
+  &quot;cmd&quot;: &quot;date &gt;&gt; test-rexray-volume/test.txt; cat test-rexray-volume/test.txt&quot;,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;MESOS&quot;,
+    &quot;volumes&quot;: [
+      {
+        &quot;containerPath&quot;: &quot;test-rexray-volume&quot;,
+        &quot;external&quot;: {
+          &quot;size&quot;: 100,
+          &quot;name&quot;: &quot;my-test-vol&quot;,
+          &quot;provider&quot;: &quot;dvdi&quot;,
+          &quot;options&quot;: { &quot;dvdi/driver&quot;: &quot;rexray&quot; }
+          },
+        &quot;mode&quot;: &quot;RW&quot;
+      }
+    ]
+  },
+  &quot;upgradeStrategy&quot;: {
+    &quot;minimumHealthCapacity&quot;: 0,
+    &quot;maximumOverCapacity&quot;: 0
+  }
+}
+</code></pre>
+<h4 id="volume-configuration-options"><a class="content__anchor" href="#volume-configuration-options" aria-hidden="true"><i data-feather="bookmark"></i></a>Volume configuration options</h4>
+<ul>
+<li><code>containerPath</code>: The path where the volume is mounted inside the container. For Mesos external volumes, this must be a single-level path relative to the container; it cannot contain a forward slash (<code>/</code>). For more information, see <a href="https://rexray.readthedocs.io/en/v0.9.0/user-guide/config/#data-directories">the REX-Ray documentation on data directories</a>.</li>
+<li><code>mode</code>: The access mode of the volume. Currently, <code>&quot;RW&quot;</code> is the only possible value and will let your application read from and write to the volume.</li>
+<li><code>external.size</code>: The size of the volume in <strong>GiB</strong>.</li>
+<li><code>external.name</code>: The name that your volume driver uses to look up your volume. When your task is staged on an agent, the volume driver queries the storage service for a volume with this name. If one does not exist, it is <a href="#implicit-vol">created implicitly</a>. Otherwise, the existing volume is reused.</li>
+<li><code>external.options[&quot;dvdi/driver&quot;]</code>: which Docker volume driver to use for storage. The only Docker volume driver provided with DC/OS is <code>rexray</code>. Learn more about <a href="https://rexray.readthedocs.io/en/v0.9.0/user-guide/schedulers/">REX-Ray</a>.</li>
+<li>You can specify additional options with <code>container.volumes[x].external.options[optionName]</code>. The dvdi provider for Mesos containers uses <code>dvdcli</code>, which offers the following <a href="https://github.com/emccode/dvdcli#extra-options">options</a>. The availability of any option depends on your volume driver.</li>
+<li>Create multiple volumes by adding additional items in the <code>container.volumes</code> array.</li>
+<li>You cannot change volume parameters after you create the application.</li>
+<li>Marathon will not launch apps with external volumes if <code>upgradeStrategy.minimumHealthCapacity</code> is greater than 0.5, or if <code>upgradeStrategy.maximumOverCapacity</code> does not equal 0.</li>
+</ul>
+<h3 id="using-a-docker-engine"><a class="content__anchor" href="#using-a-docker-engine" aria-hidden="true"><i data-feather="bookmark"></i></a>Using a Docker Engine</h3>
+<p>Below is a sample app definition that uses a Docker Engine and specifies an external volume. The <code>cmd</code> in this app definition appends the output of the <code>date</code> command to <code>test.txt</code>. You can verify that the external volume is being used correctly if you see that the logs of successive runs of the application show more and more lines of <code>date</code> output.</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;/test-docker&quot;,
+  &quot;instances&quot;: 1,
+  &quot;cpus&quot;: 0.1,
+  &quot;mem&quot;: 32,
+  &quot;cmd&quot;: &quot;date &gt;&gt; /data/test-rexray-volume/test.txt; cat /data/test-rexray-volume/test.txt&quot;,
+  &quot;container&quot;: {
+    &quot;type&quot;: &quot;DOCKER&quot;,
+    &quot;docker&quot;: {
+      &quot;image&quot;: &quot;alpine:3.1&quot;,
+      &quot;network&quot;: &quot;HOST&quot;,
+      &quot;forcePullImage&quot;: true
+    },
+    &quot;volumes&quot;: [
+      {
+        &quot;containerPath&quot;: &quot;/data/test-rexray-volume&quot;,
+        &quot;external&quot;: {
+          &quot;name&quot;: &quot;my-test-vol&quot;,
+          &quot;provider&quot;: &quot;dvdi&quot;,
+          &quot;options&quot;: { &quot;dvdi/driver&quot;: &quot;rexray&quot; }
+        },
+        &quot;mode&quot;: &quot;RW&quot;
+      }
+    ]
+  },
+  &quot;upgradeStrategy&quot;: {
+    &quot;minimumHealthCapacity&quot;: 0,
+    &quot;maximumOverCapacity&quot;: 0
+  }
+}
+</code></pre>
+<h4 id="volume-configuration-options-2"><a class="content__anchor" href="#volume-configuration-options-2" aria-hidden="true"><i data-feather="bookmark"></i></a>Volume configuration options</h4>
+<ul>
+<li><code>containerPath</code> must be absolute.</li>
+<li>Only certain versions of Docker are compatible with the REX-Ray volume driver. Refer to the <a href="https://rexray.readthedocs.io/en/v0.9.0/user-guide/schedulers/#docker-containerizer-with-marathon">REX-Ray documentation</a>.</li>
+</ul>
+<h2 id="create-an-application-from-the-dcos-ui"><a class="content__anchor" href="#create-an-application-from-the-dcos-ui" aria-hidden="true"><i data-feather="bookmark"></i></a>Create an application from the DC/OS UI</h2>
+<ol>
+<li>Click the <strong>Services</strong> tab, then <strong>RUN A SERVICE</strong>.</li>
+<li>If you are using a Docker container, click <strong>Container Settings</strong> and configure your container runtime.</li>
+<li>Click <strong>Volumes</strong> and enter your Volume Name and Container Path.</li>
+<li>Click <strong>Deploy</strong>.</li>
+</ol>
+<p><a name="implicit-vol"></a></p>
+<h1 id="implicit-volumes"><a class="content__anchor" href="#implicit-volumes" aria-hidden="true"><i data-feather="bookmark"></i></a>Implicit volumes</h1>
+<p>The default implicit volume size is 16 GiB. If you are using the Universal Container Runtime, you can modify this default for a particular volume by setting <code>volumes[x].external.size</code>. You cannot modify this default for a particular volume if you are using the Docker Engine. For both runtimes, however, you can modify the default size for all implicit volumes by modifying the <a href="https://rexray.readthedocs.io/en/v0.9.0/user-guide/config/">REX-Ray configuration</a>.</p>
+<h1 id="scaling-your-app"><a class="content__anchor" href="#scaling-your-app" aria-hidden="true"><i data-feather="bookmark"></i></a>Scaling your app</h1>
+<p>Apps that use external volumes can only be scaled to a single instance because a volume can only attach to a single task at a time.</p>
+<p>If you scale your app down to 0 instances, the volume is detached from the agent where it was mounted, but it is not deleted. If you scale your app up again, the data that was associated with it is still be available.</p>
+<h1 id="using-3rd-party-docker-volume-driver"><a class="content__anchor" href="#using-3rd-party-docker-volume-driver" aria-hidden="true"><i data-feather="bookmark"></i></a>Using 3rd party Docker volume driver</h1>
+<p>If you want to use a 3rd party Docker volume driver rather than REX-Ray (e.g., <a href="https://github.com/NetApp/trident">NetApp Trident</a>), you will need to take the following steps on each agent node (Trident is used as an example in the steps below):</p>
+<ol>
+<li>
+<p>Install the volume driver as a Docker plugin.</p>
+<pre><code>$ docker plugin install netapp/trident-plugin:19.10 --alias netapp --grant-all-permissions
+</code></pre>
+</li>
+<li>
+<p>Register the volume driver to Docker plugin directory. Refer to <a href="https://docs.docker.com/engine/extend/plugin_api/#plugin-discovery">Docker Plugin API</a> to learn how Docker discovers plugins.</p>
+<pre><code>$ sudo mkdir -p /etc/docker/plugins/
+$ sudo bash -c 'echo &quot;unix:///run/docker/plugins/&lt;plugin-id&gt;/netapp.sock&quot; &gt; /etc/docker/plugins/netapp.spec'
+</code></pre>
+</li>
+</ol>
+<p>Now the volume driver is ready for you to use it in DC/OS. When you create an application, you need to set the option <code>external.options[&quot;dvdi/driver&quot;]</code> to the name of the volume driver (e.g., <code>netapp</code>).</p>
+<h1 id="potential-issues"><a class="content__anchor" href="#potential-issues" aria-hidden="true"><i data-feather="bookmark"></i></a>Potential issues</h1>
+<ul>
+<li>You can assign only one task per volume. Your storage provider might have other limitations.</li>
+<li>The volumes you create are not automatically cleaned up. If you delete your cluster, you must go to your storage provider and delete the volumes you no longer need. If you’re using EBS, find them by searching by the <code>container.volumes.external.name</code> that you set in your Marathon app definition. This name corresponds to an EBS volume <code>Name</code> tag.</li>
+<li>Volumes are namespaced by their storage provider. Choose unique volume names to avoid conflicts.</li>
+<li>If you are using Docker, you must use a compatible Docker version. Refer to the <a href="https://rexray.readthedocs.io/en/v0.9.0/user-guide/schedulers/#docker-containerizer-with-marathon">REX-Ray documentation</a> to learn which versions of Docker are compatible with the REX-Ray volume driver.</li>
+<li>Launch time might increase for applications that create volumes implicitly. The amount of the increase depends on several factors which include the size and type of the volume. Your storage provider’s method of handling volumes can also influence launch time for implicitly created volumes.</li>
+</ul>
+<h2 id="ebs-specific"><a class="content__anchor" href="#ebs-specific" aria-hidden="true"><i data-feather="bookmark"></i></a>EBS specific</h2>
+<p>Volumes created on the same AWS account share a namespace. Choose unique volume names to avoid conflicts when multiple clusters are launched under the same account.</p>
+<p>EBS volumes are also namespaced by their availability zone (AZ), and an EBS volume <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html">can only be attached to an EC2 instance in the same AZ</a>. As a result, attempts to launch a task in an agent running in a different AZ will lead to the creation of a new volume of the same name. If you create a cluster in one AZ, destroy it, be sure to create your cluster in the same AZ if you wish to reuse any external volumes. If a cluster spans multiple AZs, use Marathon constraints to only launch an instance in the same AZ.</p>
+<p>REX-Ray by default will fail after 13 EBS volumes are attached. Use the <a href="https://rexray.readthedocs.io/en/v0.11.0/user-guide/storage-providers/aws/#configuration-notes">config option useLargeDeviceRange to extend this limit</a>, which was introduced in RexRay v0.11.4.</p>
+<p>EBS volumes present as non-volatile memory express (NVMe) devices on certain newer EC2 instance types. Support for NVMe was only added to RexRay in v0.11.4. You will need to take the following prerequisite steps for RexRay to work with NVMe devices on CentOS (on newer AMIs this may be unnecessary):</p>
+<ol>
+<li>
+<p>Install the NVMe CLI command.</p>
+<pre><code class="language-bash">$ yum install -y nvme-cli
+</code></pre>
+</li>
+<li>
+<p>Install the necessary udev rule and helper script. These are taken from the <a href="https://github.com/rexray/rexray/blob/362035816046e87f7bc5a6ca745760d09a69a40c/.docs/user-guide/storage-providers/aws.md#nvme-support">RexRay user guide</a>.</p>
+<pre><code class="language-bash">$ cat &lt;&lt;EOF &gt; /etc/udev/rules.d/999-aws-ebs-nvme.rules
+KERNEL==&quot;nvme[0-9]*n[0-9]*&quot;, ENV{DEVTYPE}==&quot;disk&quot;, ATTRS{model}==&quot;Amazon Elastic Block Store&quot;, PROGRAM=&quot;/usr/local/bin/ebs-nvme-mapping /dev/%k&quot;, SYMLINK+=&quot;%c&quot;
+EOF
+</code></pre>
+</li>
+<li>
+<p>Create the helper script.</p>
+<pre><code class="language-bash">$ cat &lt;&lt;EOF &gt; /usr/local/bin/ebs-nvme-mapping
+#!/bin/bash
+#/usr/local/bin/ebs-nvme-mapping
+vol=$(/usr/sbin/nvme id-ctrl --raw-binary &quot;${1}&quot; | \
+      cut -c3073-3104 | tr -s ' ' | sed 's/ $//g')
+vol=${vol#/dev/}
+[ -n &quot;${vol}&quot; ] &amp;&amp; echo &quot;${vol/xvd/sd} ${vol/sd/xvd}&quot;
+EOF
+</code></pre>
+</li>
+<li>
+<p>Set the file permissions on the scripts and reload the udev rules.</p>
+<pre><code class="language-bash">$ chown root:root /usr/local/bin/ebs-nvme-mapping
+$ chmod 700 /usr/local/bin/ebs-nvme-mapping
+$ udevadm control --reload
+</code></pre>
+</li>
+</ol>
+<h2 id="external-volumes"><a class="content__anchor" href="#external-volumes" aria-hidden="true"><i data-feather="bookmark"></i></a>External volumes</h2>
+<p>To troubleshoot external volumes, consult the agent or system logs. If you are using REX-Ray on DC/OS, you can also consult the <code>systemd</code> journal for the <code>dcos-rexray.service</code> unit logs.</p>
+</article></div><aside class="content__sections"><div class="content__sections-list-container"><ul class="content__sections-list"><li class="content__sections-item content__sections-item--h1"><a href="#creating-an-application-with-an-external-persistent-volume">Creating an application with an external persistent volume</a></li><li class="content__sections-item content__sections-item--h2"><a href="#marathon-app-definition">Marathon app definition</a></li><li class="content__sections-item content__sections-item--h2"><a href="#create-an-application-from-the-dcos-ui">Create an application from the DC/OS UI</a></li><li class="content__sections-item content__sections-item--h1"><a href="#implicit-volumes">Implicit volumes</a></li><li class="content__sections-item content__sections-item--h1"><a href="#scaling-your-app">Scaling your app</a></li><li class="content__sections-item content__sections-item--h1"><a href="#using-3rd-party-docker-volume-driver">Using 3rd party Docker volume driver</a></li><li class="content__sections-item content__sections-item--h1"><a href="#potential-issues">Potential issues</a></li><li class="content__sections-item content__sections-item--h2"><a href="#ebs-specific">EBS specific</a></li><li class="content__sections-item content__sections-item--h2"><a href="#external-volumes">External volumes</a></li></ul></div></aside></main></div></div><script src="/assets/js/jquery-3.2.1.js"></script><script src="/assets/js/clipboard.js"></script><script src="/assets/js/prism.js"></script><script src="/js/main.js"></script></body></html>
